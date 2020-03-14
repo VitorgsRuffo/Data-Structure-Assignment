@@ -6,6 +6,9 @@ struct parameter{
     char* geoFileName;
     char* qryFileName;
     char* outputDir;
+
+    char* geoFullPath;
+    char* qryFullPath;
 };
 
 typedef struct parameter Parameter;
