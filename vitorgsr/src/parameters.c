@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 #include "parameters.h"
 
@@ -59,5 +60,7 @@ void deal_with_parameters(int paraNum, char* parameters[], Parameter *parameter)
 
         i++;
     }
+
+    printf("%s\n%s\n%s\n%s\n", parameter->inputDir, parameter->geoFileName, parameter->qryFileName, parameter->outputDir);
 
 }
