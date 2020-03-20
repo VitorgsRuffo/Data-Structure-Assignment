@@ -1,5 +1,4 @@
-c 1 50.00 20.0 60.00 grey magenta
-c 2 40.00 30.0 90.00 grey magenta
-c 3 30.00 40.0 50.00 grey magenta
-c 4 20.00 50.0 30.00 grey magenta
-c 5 10.00 150.0 130.00 grey magenta
+c 1 50.00 10.0 10.00 grey magenta
+r 6 100.0 100.0 250.0 250.0 cyan yellow
+r 4 100.0 100.0 50.0 50.0 cyan yellow
+c 5 15.0 200.0 200.0 grey magenta
