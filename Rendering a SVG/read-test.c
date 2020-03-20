@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-//implement, instead, a logic to count how many lines actually there are.
-#define file_lines_count 4
 
 void svg_interpret_command(char* *command, char* *commandElements);
 
@@ -17,6 +15,9 @@ void svg_draw_circ(char* *command, char* *svgFinalDocument);
 
 void svg_build_circ_tag(char* *tag, char* i, char* rad, char* x, char* y, char* corb, char* corp);
 
+int count_file_lines(FILE *file);
+
+
 
 
 int main (void){
@@ -29,6 +30,11 @@ int main (void){
         printf("File error!");
         exit(1);
     }
+
+    //precisamos contar quantas linhas (comandos) temos no arquivo de entrada .geo:
+    int file_lines_count = count_file_lines(file);
+
+    printf("%d\n",file_lines_count );
 
     //vetor de strings onde cada string é um comando lido do arquivo;
     char* commands[file_lines_count];
@@ -128,6 +134,28 @@ int main (void){
 
     return 0;
 }
+
+
+int count_file_lines(FILE *file){
+
+    char ch;
+    int lines_count = 0;
+
+    while(!feof(file)){
+
+        ch = fgetc(file);
+
+        if(ch == '\n'){
+            ++lines_count;
+        }
+    }
+
+    fseek(file, 0, SEEK_SET);
+
+    return lines_count;
+
+}
+
 
 
 
