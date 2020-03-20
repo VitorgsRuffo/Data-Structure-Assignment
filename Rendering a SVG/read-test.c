@@ -9,13 +9,16 @@ void svg_append_tag_to_final_document(char* *finalTag, char* *svgFinalDocument, 
 
 void svg_finalize_final_document(char* *svgFinalDocument);
 
-void svg_draw_shape(char* *command, char* *svgFinalDocument, int commandNum);
+void svg_draw(char* *command, char* *svgFinalDocument, int commandNum);
+
 
 
 
 void svg_build_circ_tag(char* *tag, char* i, char* rad, char* x, char* y, char* corb, char* corp);
 
 void svg_build_rect_tag(char* *tag, char* i, char* w, char* h, char* x, char* y, char* corb, char* corp);
+
+void svg_build_txt_tag(char* *tag, char* i, char* x, char* y, char* corb, char* corp, char* txt);
 
 
 
@@ -42,9 +45,9 @@ int main (void){
     //vetor de strings onde cada string é um comando lido do arquivo;
     char* commands[file_lines_count];
     
-   
+    //***
     for(int j = 0; j<file_lines_count; j++){
-        commands[j] = (char*) malloc(100 * sizeof(char));  //100 == tamanho maximo de um comando
+        commands[j] = (char*) malloc(110 * sizeof(char));  //110 == tamanho maximo de um comando
 
         if(commands[j] == NULL){
             printf("Error allocating memory for commands string array.\nFinishing execution..");
@@ -59,7 +62,7 @@ int main (void){
 
     while(!feof(file)){
         
-        if(fgets(commands[i], 100, file)){
+        if(fgets(commands[i], 110, file)){
 
             //remover \n do final:
             commLen = strlen(commands[i]);
@@ -96,16 +99,19 @@ int main (void){
 
         switch(commands[j][0]){
             case 'c':
-                svg_draw_shape(&commands[j], &svgFinalDocument, 7); 
+                svg_draw(&commands[j], &svgFinalDocument, 7); 
                 break;
             case 'r':
-                svg_draw_shape(&commands[j], &svgFinalDocument, 8);
+                svg_draw(&commands[j], &svgFinalDocument, 8);
                 break;
             case 't':
-                //svg_draw_txt(commands[j);
+                svg_draw(&commands[j], &svgFinalDocument, 7);
                 break;
             case 'n':
                 //svg_nx_command(commands[j);
+                break;
+            default:
+                printf("%d.o command is invalid.\n", j + 1);
                 break;
         }
     
@@ -216,6 +222,10 @@ int count_file_lines(FILE *file){
 
             sscanf(*command, "%s %s %s %s %s %s %s %s", commandElements[0], commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6], commandElements[7]);
 
+        }else if(*(command[0]) == 't'){
+            
+            sscanf(*command, "%s %s %s %s %s %s %s", commandElements[0], commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
+
         }
 
         for(int j = 0; j<commandNum; ++j){
@@ -224,22 +234,44 @@ int count_file_lines(FILE *file){
 
     }
 
-    void svg_draw_shape(char* *command, char* *svgFinalDocument, int commandNum){
+    void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
 
         //Separando as partes do comando:
 
             //recebemos o comando. Agora devemos dividir suas partes.
             
             //matriz de strings onde cada string é uma parte do comando:
-            char* commandElements[commandNum]; //commandNum == 7 para circulos e 8 para retangulos
+            char* commandElements[commandNum]; //commandNum == 7 para circulos e texto e 8 para retangulos
 
-            for(int j = 0; j<commandNum; ++j){
-                commandElements[j] = (char*) malloc(15*sizeof(char)); //Supomos que 15 == tamanho máx de um pedaço do comando
+            if(*(command[0]) == 'c' || *(command[0]) == 'r'){
 
-                if(commandElements[j] == NULL){
-                    printf("Error allocating memory for commandElements array.\nFinishing execution..");
-                    exit(1);
+                for(int j = 0; j<commandNum; ++j){
+
+                    commandElements[j] = (char*) malloc(15*sizeof(char)); //Supomos que 15 == tamanho máx de um pedaço do comando
+
+                    if(commandElements[j] == NULL){
+                        printf("Error allocating memory for commandElements array.\nFinishing execution..");
+                        exit(1);
+                    }
                 }
+            
+            }else if(*(command[0]) == 't'){
+
+                for(int j = 0; j<commandNum; ++j){
+
+                    if(j != commandNum-1){
+                        commandElements[j] = (char*) malloc(15*sizeof(char)); //Supomos que 15 == tamanho máx de um pedaço do comando
+                    }else{
+                        commandElements[j] = (char*) malloc(50*sizeof(char)); //aloca 50 bytes para o texto a ser desenhado.
+                    }
+
+
+                    if(commandElements[j] == NULL){
+                        printf("Error allocating memory for commandElements array.\nFinishing execution..");
+                        exit(1);
+                    }
+                }
+
             }
 
             //Separando, de fato, as partes do comando:
@@ -265,6 +297,11 @@ int count_file_lines(FILE *file){
 
                 svg_build_rect_tag(&tag, commandElements[1], commandElements[2], commandElements[3], commandElements[4],commandElements[5], commandElements[6], commandElements[7]);
             
+            //lidando com texto:
+            }else if(*(command[0]) == 't'){
+
+                svg_build_txt_tag(&tag, commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
+
             }
 
             int tagSize = strlen(tag);
@@ -282,25 +319,40 @@ int count_file_lines(FILE *file){
 
             free(tag);
 
+        //Criando a tag do ID da figura:
 
-        //Anexando a tag da figura na string final:
+           // char* IDtag;
+
+
+
+
+        //Anexando a tag da figura e a tag do ID da figura na string final:
             
             char* svgFinalDocument2 = NULL;
             
             svg_append_tag_to_final_document(&finalTag, svgFinalDocument, &svgFinalDocument2);
 
 
+       
         //Limpando o resto de memoria:
             
             free(svgFinalDocument2);
 
-            for(int j = 0; j<7; ++j){
+            for(int j = 0; j<commandNum; ++j){
 
                 free(commandElements[j]);
             }
 
             free(finalTag);
     }
+
+//SHAPE FUNCTIONS:
+
+    //void svg_build_shapeID_tag(){
+
+
+
+   // }
 
 
 
@@ -323,6 +375,16 @@ int count_file_lines(FILE *file){
         //example: <rect width="100" height="100" x="130.00" y="90.9" fill="rgb(0,0,255)" stroke-width="3" stroke="rgb(0,0,0)" />
         
         sprintf(*tag, " <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> ", w, h, x, y, corb, corp);
+
+    }
+
+//TEXT FUNCTIONS:
+
+    void svg_build_txt_tag(char* *tag, char* i, char* x, char* y, char* corb, char* corp, char* txt){
+
+        //example: <text x="0" y="15" stroke="blue" stroke-width="0.3" fill="red">I love SVG!</text>
+
+        sprintf(*tag, " <text x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"0.3\" fill=\"%s\" > %s </text> ", x, y, corb, corp, txt);
 
     }
 
