@@ -13,12 +13,11 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum);
 
 
 
-
 void svg_build_circ_tag(char* *tag, char* i, char* rad, char* x, char* y, char* corb, char* corp);
 
 void svg_build_rect_tag(char* *tag, char* i, char* w, char* h, char* x, char* y, char* corb, char* corp);
 
-void svg_build_txt_tag(char* *tag, char* i, char* x, char* y, char* corb, char* corp, char* txt);
+void svg_build_txt_tag(char* *tag, char* x, char* y, char* corb, char* corp, char* txt);
 
 
 
@@ -45,7 +44,7 @@ int main (void){
     //vetor de strings onde cada string é um comando lido do arquivo;
     char* commands[file_lines_count];
     
-    //***
+    
     for(int j = 0; j<file_lines_count; j++){
         commands[j] = (char*) malloc(110 * sizeof(char));  //110 == tamanho maximo de um comando
 
@@ -278,7 +277,7 @@ int count_file_lines(FILE *file){
             svg_interpret_command(command, commandElements, commandNum);
 
 
-        //Criando a tag da figura a partir do comando:
+        //Criando a tag da figura e a tag do ID da figura a partir do comando:
 
             char* tag = (char*) malloc(300 * sizeof(char)); //aqui estamos supondo que o tamanho de uma tag vai ser até 300 bytes.
 
@@ -286,6 +285,7 @@ int count_file_lines(FILE *file){
                 printf("Error! could not allocate memory for tag..");
                 exit(1);
             }
+
             
             //lidando com circulos:
             if(*(command[0]) == 'c'){
@@ -300,7 +300,7 @@ int count_file_lines(FILE *file){
             //lidando com texto:
             }else if(*(command[0]) == 't'){
 
-                svg_build_txt_tag(&tag, commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
+                svg_build_txt_tag(&tag, commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
 
             }
 
@@ -319,13 +319,9 @@ int count_file_lines(FILE *file){
 
             free(tag);
 
-        //Criando a tag do ID da figura:
-
-           // char* IDtag;
 
 
-
-
+            
         //Anexando a tag da figura e a tag do ID da figura na string final:
             
             char* svgFinalDocument2 = NULL;
@@ -344,15 +340,11 @@ int count_file_lines(FILE *file){
             }
 
             free(finalTag);
+
+            
     }
 
-//SHAPE FUNCTIONS:
 
-    //void svg_build_shapeID_tag(){
-
-
-
-   // }
 
 
 
@@ -362,7 +354,7 @@ int count_file_lines(FILE *file){
 
         //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
         
-        sprintf(*tag, " <circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"2.0\" fill=\"%s\" /> ", x, y, rad, corb, corp);
+        sprintf(*tag, " <circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"2.0\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> ", x, y, rad, corb, corp, x, y, i);
 
     }
 
@@ -374,13 +366,13 @@ int count_file_lines(FILE *file){
 
         //example: <rect width="100" height="100" x="130.00" y="90.9" fill="rgb(0,0,255)" stroke-width="3" stroke="rgb(0,0,0)" />
         
-        sprintf(*tag, " <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> ", w, h, x, y, corb, corp);
+        sprintf(*tag, " <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> ", w, h, x, y, corb, corp, x, y, i);
 
     }
 
 //TEXT FUNCTIONS:
 
-    void svg_build_txt_tag(char* *tag, char* i, char* x, char* y, char* corb, char* corp, char* txt){
+    void svg_build_txt_tag(char* *tag, char* x, char* y, char* corb, char* corp, char* txt){
 
         //example: <text x="0" y="15" stroke="blue" stroke-width="0.3" fill="red">I love SVG!</text>
 
