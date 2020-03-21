@@ -58,7 +58,15 @@ void deal_with_parameters(int paraNum, char* parameters[], Parameter *parameter)
 
         }
 
+
+
         i++;
+    }
+
+    //se um diretorio de entrada não for especificado, usaremos o diretorio atual:
+    if(parameter->inputDir == NULL){ 
+        parameter->inputDir = (char*) malloc(3 * sizeof(char));     
+        strcpy(parameter->inputDir, "./");  
     }
 
     printf("%s\n%s\n%s\n%s\n", parameter->inputDir, parameter->geoFileName, parameter->qryFileName, parameter->outputDir);

@@ -13,7 +13,7 @@ int buildQryPath(Parameter *parameter, FILE *qry){
 
     //printf("%d %d", lenInDir, lenQryName);
 
-    parameter->qryFullPath = (char*) malloc((lenInDir + lenQryName + 10) * sizeof(char));
+    parameter->qryFullPath = (char*) malloc((lenInDir + lenQryName + 2) * sizeof(char));
     //obs: precisamos do '+2' para garantir espaço para o character nulo '\0' no final e
     //para um possivel charactere extra oriundo de um dos tratamentos de erro de path abaixo.
 
