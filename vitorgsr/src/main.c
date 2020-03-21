@@ -135,7 +135,9 @@ int main (int argc, char* argv[]){
         //Criando .svg:
         FILE *svg;
 
-        svg = fopen(parameter.outputDir, "w");
+        buildSvgPath(&parameter);
+
+        svg = fopen(parameter.svgFullPath, "w");
         if(svg == NULL){
             printf("Error: opening svg.\n");
         }

@@ -17,4 +17,6 @@ void svg_interpret_command(char* *command, char* *commandElements, int commandNu
 
 void svg_draw(char* *command, char* *svgFinalDocument, int commandNum);
 
+void buildSvgPath(Parameter *parameter);
+
 #endif

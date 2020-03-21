@@ -206,3 +206,48 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
         free(finalTag);
     
 }
+
+
+void buildSvgPath(Parameter *parameter){
+
+    int outputDirLen = strlen(parameter->outputDir);
+    int svgFileNameLen = strlen(parameter->geoFileName);
+
+    char* svgFileName  = (char*) malloc((svgFileNameLen + 1) * sizeof(char));
+
+    strcpy(svgFileName, parameter->geoFileName);
+
+    int aux = 0;
+
+    for(int i = 0; i<svgFileNameLen; ++i){
+
+        if(svgFileName[i] == '.')
+            aux = 1;
+
+        if(aux){
+            
+            if(svgFileName[i] == 'g'){
+                svgFileName[i] = 's';
+            }else if(svgFileName[i] == 'e'){
+                svgFileName[i] = 'v';
+            }else if(svgFileName[i] == 'o'){
+                svgFileName[i] = 'g';
+            }
+        }
+    }
+    
+    parameter->svgFullPath = (char*) malloc((outputDirLen + svgFileNameLen + 1) * sizeof(char));
+
+    if(parameter->outputDir[outputDirLen-1] == '/'){
+
+        sprintf(parameter->svgFullPath, "%s%s", parameter->outputDir, svgFileName);
+
+    }else{
+
+        sprintf(parameter->svgFullPath, "%s/%s", parameter->outputDir, svgFileName);
+
+    }
+
+    printf("%s\n", parameter->svgFullPath);
+
+}

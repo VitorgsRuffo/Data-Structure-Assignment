@@ -9,6 +9,7 @@ struct parameter{
 
     char* geoFullPath;
     char* qryFullPath;
+    char* svgFullPath;
 };
 
 typedef struct parameter Parameter;
