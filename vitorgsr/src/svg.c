@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "parameters.h"
 
@@ -129,7 +130,7 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
                 if(j != commandNum-1){
                     commandElements[j] = (char*) malloc(15*sizeof(char)); //Supomos que 15 == tamanho máx de um pedaço do comando
                 }else{
-                    commandElements[j] = (char*) malloc(50*sizeof(char)); //aloca 50 bytes para o texto a ser desenhado.
+                    commandElements[j] = (char*) malloc(20*sizeof(char)); //aloca 20 bytes para o texto a ser desenhado.
                 }
 
 
@@ -248,6 +249,122 @@ void buildSvgPath(Parameter *parameter){
 
     }
 
-    printf("%s\n", parameter->svgFullPath);
+    free(svgFileName);
+
+    printf("\n%s\n", parameter->svgFullPath);
+
+}
+
+
+
+//void buildSvgQryPath(Parameter *parameter){
+
+//}
+
+
+
+void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count){
+
+    //Conseguindo o ID das figuras a serem testadas:
+    char J = qryCommand[0][3];
+    char K = qryCommand[0][5];
+
+    char* jShape[8];
+    char* kShape[8];
+
+    int isThereCollision;
+
+
+    //extraindo as informaçoes de cada uma das duas figuras:
+    for(int i = 0; i < geo_lines_count; ++i){
+        
+        if(*commands[i][1] == J){
+            
+            for(int y = 0; y<8; ++y){
+
+                jShape[y] = (char*) malloc((strlen(commands[i][y]) + 1) * sizeof(char));  
+
+                strcpy(jShape[y], commands[i][y]);
+
+                printf("\n%s\n", jShape[y]);
+            }
+
+        }else if(*commands[i][1] == K){
+            
+            for(int y = 0; y<8; ++y){
+
+                kShape[y] = (char*) malloc((strlen(commands[i][y]) + 1) * sizeof(char));
+
+                strcpy(kShape[y], commands[i][y]);
+
+                printf("\n%s\n", kShape[y]);
+            }
+
+        }
+
+    }
+
+    //Temos 3 possibilidades, podemos estar testando:  
+
+    //dois circulos:
+    //Eles vão se sobrepor quando a distancia entre os centros dos circulos for menor que a soma dos seus raios.
+    if(*jShape[0] == 'c' && *kShape[0] == 'c'){
+
+        float jRadius = strtof(jShape[2], NULL); 
+        float kRadius = strtof(kShape[2], NULL);
+        
+        //printf("\njR:%f kR:%f\n", jRadius, kRadius);
+
+        float jX = strtof(jShape[3], NULL), jY = strtof(jShape[4], NULL);
+        float kX = strtof(kShape[3], NULL), kY = strtof(kShape[4], NULL);
+
+        //printf("\njX:%f jY:%f\nkX:%f kY:%f\n", jX, jY, kX, kY);
+
+
+        //distancia entre os centros dos circulos:
+        float D = sqrt(pow((kX - jX), 2) + pow((kY - jY), 2));
+
+        //Se sobrepõem:
+        if(D < jRadius + kRadius){
+            isThereCollision = 1;
+        //Não se sobrepõem:
+        }else if (D >= jRadius + kRadius){
+            isThereCollision = 0;
+        }
+
+        printf("\nOs circulos se sobrepoem? %d.\n", isThereCollision);
+
+    //dois retangulos:
+    }else if(*jShape[0] == 'r' && *kShape[0] == 'r'){
+
+    //um circulo e um retangulo:
+    }else if((*jShape[0] == 'c' && *kShape[0] == 'r') || (*jShape[0] == 'r' && *kShape[0] == 'c')){
+
+    }
+
+
+
+    
+    
+
+}
+
+
+void svg_qry_i(){
+    
+}
+
+
+void  svg_qry_pnt(){
+
+}
+
+
+void svg_qry_delf(){
+
+}
+
+
+void svg_qry_delf2(){
 
 }

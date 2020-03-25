@@ -19,4 +19,8 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum);
 
 void buildSvgPath(Parameter *parameter);
 
+//void buildSvgQryPath(Parameter *parameter);
+
+void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count);
+
 #endif
