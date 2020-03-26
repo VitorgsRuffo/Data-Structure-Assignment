@@ -41,6 +41,7 @@ void svg_build_circ_tag(char* *tag, char* i, char* rad, char* x, char* y, char* 
     //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
         
     sprintf(*tag, " <circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"2.0\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> ", x, y, rad, corb, corp, x, y, i);
+    //sprintf(*tag, " <circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"2.0\" fill=\"%s\" /> ", x, y, rad, corb, corp);
 
 }
 
@@ -49,7 +50,8 @@ void svg_build_rect_tag(char* *tag, char* i, char* w, char* h, char* x, char* y,
 
     //example: <rect width="100" height="100" x="130.00" y="90.9" fill="rgb(0,0,255)" stroke-width="3" stroke="rgb(0,0,0)" />
         
-    sprintf(*tag, " <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> ", w, h, x, y, corb, corp, x, y, i);
+   sprintf(*tag, " <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> ", w, h, x, y, corb, corp, x, y, i);
+    //sprintf(*tag, " <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> ", w, h, x, y, corb, corp);
 
 }
 
@@ -59,7 +61,7 @@ void svg_build_txt_tag(char* *tag, char* x, char* y, char* corb, char* corp, cha
     //example: <text x="0" y="15" stroke="blue" stroke-width="0.3" fill="red">I love SVG!</text>
 
     sprintf(*tag, " <text x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"0.3\" fill=\"%s\" > %s </text> ", x, y, corb, corp, txt);
-
+    
 }
 
 
@@ -130,7 +132,7 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
                 if(j != commandNum-1){
                     commandElements[j] = (char*) malloc(15*sizeof(char)); //Supomos que 15 == tamanho máx de um pedaço do comando
                 }else{
-                    commandElements[j] = (char*) malloc(20*sizeof(char)); //aloca 20 bytes para o texto a ser desenhado.
+                    commandElements[j] = (char*) malloc(80*sizeof(char)); //aloca 20 bytes para o texto a ser desenhado.
                 }
 
 
@@ -261,88 +263,163 @@ void buildSvgPath(Parameter *parameter){
 
 //}
 
+float svg_rect_point_next_to_circ_center(float min, float max, float value){
 
+    if(value < min){
+        return min;
+    }else if(value > max){
+        return max;
+    }else{
+        return value;
+    }
+
+}
 
 void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count){
 
     //Conseguindo o ID das figuras a serem testadas:
-    char J = qryCommand[0][3];
-    char K = qryCommand[0][5];
 
-    char* jShape[8];
-    char* kShape[8];
-
-    int isThereCollision;
-
+        char J = qryCommand[0][3];
+        char K = qryCommand[0][5];
 
     //extraindo as informaçoes de cada uma das duas figuras:
-    for(int i = 0; i < geo_lines_count; ++i){
+
+        char* jShape[8];
+        char* kShape[8];
         
-        if(*commands[i][1] == J){
+        for(int i = 0; i < geo_lines_count; ++i){
             
-            for(int y = 0; y<8; ++y){
+            if(*commands[i][1] == J){
+                
+                for(int y = 0; y<8; ++y){
 
-                jShape[y] = (char*) malloc((strlen(commands[i][y]) + 1) * sizeof(char));  
+                    jShape[y] = (char*) malloc((strlen(commands[i][y]) + 1) * sizeof(char));  
 
-                strcpy(jShape[y], commands[i][y]);
+                    strcpy(jShape[y], commands[i][y]);
 
-                printf("\n%s\n", jShape[y]);
-            }
+                    printf("\n%s\n", jShape[y]);
+                }
 
-        }else if(*commands[i][1] == K){
-            
-            for(int y = 0; y<8; ++y){
+            }else if(*commands[i][1] == K){
+                
+                for(int y = 0; y<8; ++y){
 
-                kShape[y] = (char*) malloc((strlen(commands[i][y]) + 1) * sizeof(char));
+                    kShape[y] = (char*) malloc((strlen(commands[i][y]) + 1) * sizeof(char));
 
-                strcpy(kShape[y], commands[i][y]);
+                    strcpy(kShape[y], commands[i][y]);
 
-                printf("\n%s\n", kShape[y]);
+                    printf("\n%s\n", kShape[y]);
+                }
+
             }
 
         }
 
-    }
+    //determinando se ha uma sopreposiçao:
 
-    //Temos 3 possibilidades, podemos estar testando:  
+        int isThereCollision;
 
-    //dois circulos:
-    //Eles vão se sobrepor quando a distancia entre os centros dos circulos for menor que a soma dos seus raios.
-    if(*jShape[0] == 'c' && *kShape[0] == 'c'){
+        //Temos 4 possibilidades, podemos estar testando:  
 
-        float jRadius = strtof(jShape[2], NULL); 
-        float kRadius = strtof(kShape[2], NULL);
+        //dois circulos:
+        //Eles vão se sobrepor quando a distancia entre os centros dos circulos for menor que a soma dos seus raios.
+        if(*jShape[0] == 'c' && *kShape[0] == 'c'){
+
+            float jRadius = strtof(jShape[2], NULL); 
+            float kRadius = strtof(kShape[2], NULL);
+            
+            //printf("\njR:%f kR:%f\n", jRadius, kRadius);
+
+            float jX = strtof(jShape[3], NULL), jY = strtof(jShape[4], NULL);
+            float kX = strtof(kShape[3], NULL), kY = strtof(kShape[4], NULL);
+
+            //printf("\njX:%f jY:%f\nkX:%f kY:%f\n", jX, jY, kX, kY);
+
+
+            //distancia entre os centros dos circulos:
+            float D = sqrt(pow((kX - jX), 2) + pow((kY - jY), 2));
+
+            //Se sobrepõem:
+            if(D < jRadius + kRadius){
+                isThereCollision = 1;
+            //Não se sobrepõem:
+            }else if (D >= jRadius + kRadius){
+                isThereCollision = 0;
+            }
+
+            printf("\nOs circulos se sobrepoem? %d.\n", isThereCollision);
+
+        //dois retangulos:
+        }else if(*jShape[0] == 'r' && *kShape[0] == 'r'){
+
+            float jW = strtof(jShape[2], NULL), jH = strtof(jShape[3], NULL);
+            float kW = strtof(kShape[2], NULL), kH = strtof(kShape[3], NULL);
+
+            float jX = strtof(jShape[4], NULL), jY = strtof(jShape[5], NULL);
+            float kX = strtof(kShape[4], NULL), kY = strtof(kShape[5], NULL);
+
+            //Eles vão se sobrepor quando pelo menos umas das condiçoes abaixo forem satisfeitas: 
+            if( ((kY + kH > jY) && (kY < jY + jH)) ||
+                ((kY < jY + jH) && (kY + kH > jY)) ||
+                ((kX + kW > jX) && (kX < jX + jW)) ||
+                ((kX < jX + jW) && (kX + kW > jX)) ){
+
+                isThereCollision = 1;
+            }else{
+                isThereCollision = 0;
+            }
+
+        //um circulo e um retangulo: para determinarmos isso precisamos, primeiramente, encontrar
+        //o ponto do retangulo mais proximo do centro do circulo. Depois calculamos a distancia entre
+        //esses dois pontos e se ela for menor que o raio do circulo entao ha sobreposição.
+        }else if((*jShape[0] == 'c' && *kShape[0] == 'r')){
+
+            float jRadius = strtof(jShape[2], NULL);
+            float jX = strtof(jShape[3], NULL), jY = strtof(jShape[4], NULL);
+
+            float kW = strtof(kShape[2], NULL), kH = strtof(kShape[3], NULL);
+            float kX = strtof(kShape[4], NULL), kY = strtof(kShape[5], NULL);
+
+            float rectPointX = svg_rect_point_next_to_circ_center(kX, kX + kW, jX);
+            float rectPointY = svg_rect_point_next_to_circ_center(kY, kY + kH, jY);
+
+            //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
+            float D = sqrt(pow((rectPointX - jX), 2) + pow((rectPointY - jY), 2));
+
+            if(D < jRadius){
+                isThereCollision = 1;
+            }else if(D >= jRadius){
+                isThereCollision = 0;
+            }
+
         
-        //printf("\njR:%f kR:%f\n", jRadius, kRadius);
 
-        float jX = strtof(jShape[3], NULL), jY = strtof(jShape[4], NULL);
-        float kX = strtof(kShape[3], NULL), kY = strtof(kShape[4], NULL);
+        //um retangulo e um ciculo:
+        }else if((*jShape[0] == 'r' && *kShape[0] == 'c')){
 
-        //printf("\njX:%f jY:%f\nkX:%f kY:%f\n", jX, jY, kX, kY);
+            float jW = strtof(jShape[2], NULL), jH = strtof(jShape[3], NULL);
+            float jX = strtof(jShape[4], NULL), jY = strtof(jShape[5], NULL);
 
+            float kRadius = strtof(kShape[2], NULL);
+            float kX = strtof(kShape[3], NULL), kY = strtof(kShape[4], NULL);
+            
+            float rectPointX = svg_rect_point_next_to_circ_center(jX, jX + jW, kX);
+            float rectPointY = svg_rect_point_next_to_circ_center(jY, jY + jH, kY);
 
-        //distancia entre os centros dos circulos:
-        float D = sqrt(pow((kX - jX), 2) + pow((kY - jY), 2));
+            //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
+            float D = sqrt(pow((rectPointX - kX), 2) + pow((rectPointY - kY), 2));
 
-        //Se sobrepõem:
-        if(D < jRadius + kRadius){
-            isThereCollision = 1;
-        //Não se sobrepõem:
-        }else if (D >= jRadius + kRadius){
-            isThereCollision = 0;
+            if(D < kRadius){
+                isThereCollision = 1;
+            }else if(D >= kRadius){
+                isThereCollision = 0;
+            }
+
         }
 
-        printf("\nOs circulos se sobrepoem? %d.\n", isThereCollision);
+        printf("\n\nisThereCollision: %d\n\n", isThereCollision);
 
-    //dois retangulos:
-    }else if(*jShape[0] == 'r' && *kShape[0] == 'r'){
-
-    //um circulo e um retangulo:
-    }else if((*jShape[0] == 'c' && *kShape[0] == 'r') || (*jShape[0] == 'r' && *kShape[0] == 'c')){
-
-    }
-
-
+    //Criando a tag para mostrar visualmente o resultado desta consulta:
 
     
     
