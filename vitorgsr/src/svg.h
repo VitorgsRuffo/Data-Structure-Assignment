@@ -25,4 +25,7 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count);
 
 float svg_rect_point_next_to_circ_center(float min, float max, float value);
 
+void svg_build_o_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision);
+
+
 #endif
