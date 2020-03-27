@@ -569,9 +569,126 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count){
 
 }
 
+void svg_build_i_dot_line_tag(char* *tag, float pX, float pY, float cmX, float cmY, int isInside){
 
-void svg_qry_i(){
-    
+    //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /> 
+    //                                          <line x1="0" y1="0" x2="200" y2="200" stroke="rgb(255,100,110)" stroke-width="2" />
+
+    if(isInside){
+
+        sprintf(*tag," <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"blue\" stroke-width=\"3\" fill=\"blue\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"blue\" stroke-width=\"0.8\" /> " , pX, pY, pX, pY, cmX, cmY);
+
+    }else{
+
+        sprintf(*tag," <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"magenta\" stroke-width=\"3\" fill=\"magenta\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"magenta\" stroke-width=\"0.8\" /> " , pX, pY, pX, pY, cmX, cmY); 
+
+    }  
+}
+
+
+void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count){
+
+    //printf("\ni? - j: %c\n", qryCommand[0][3]);
+
+    //Conseguindo o ID da figura e as coordenadas do ponto:
+        
+        char J;
+        float pX, pY;
+
+        sscanf(&qryCommand[0][3], "%s %f %f", &J, &pX, &pY);
+
+        //printf("J, pX, pY: %c %f %f", J, pX, pY);
+
+    //Extraindo as informaçoes da figura:
+
+        char* jShape[8];
+
+        for(int i = 0; i < geo_lines_count; ++i){
+
+            if(commands[i][1][0] == J){
+
+                printf("J: %c", J);
+
+                for(int k = 0; k<6; ++k){
+
+                    jShape[k] = (char*) malloc((strlen(commands[i][k]) + 1) * sizeof(char));
+
+                    strcpy(jShape[k], commands[i][k]);
+
+                    printf("\njShape[%d]:%s\n", k, jShape[k]);
+
+                } 
+
+            }
+
+        }
+
+    //Determinando se o ponto é interno a figura:
+
+        int isInside;
+        float cmX, cmY;
+
+        //Se J for um circulo: 
+        //(Sera interno se a distancia entre o ponto e o centro do circulo for menor que o raio.)
+        if(*jShape[0] == 'c'){
+
+            float jRadius = strtof(jShape[2], NULL);
+            float jX = strtof(jShape[3], NULL);
+            float jY = strtof(jShape[4], NULL);
+        
+            //printf("\njR:%f jX:%f jY:%f\n", jRadius, jX, jY);
+
+            //distancia entre o centro dos circulo e o ponto:
+            float D = sqrt(pow((pX - jX), 2) + pow((pY - jY), 2));
+
+            if(D < jRadius){
+                isInside = 1;
+            }else if (D >= jRadius){
+                isInside = 0;
+            }
+
+            //determinando o centro de massa da figura:
+            cmX = jX; cmY = jY;
+
+
+        //Se J for um retangulo:
+        }else if(*jShape[0] == 'r'){
+
+            float jW = strtof(jShape[2], NULL);
+            float jH = strtof(jShape[3], NULL);
+            float jX = strtof(jShape[4], NULL);
+            float jY = strtof(jShape[5], NULL);
+
+            //printf("\njW:%f jH:%f jX:%f jY:%f\n", jW, jH, jX, jY);
+
+            //sera interno se as condiçoes a seguir forem atendidas:
+            if(pX < jX + jW && pX > jX && pY < jY + jH && pY > jY){
+                isInside = 1;
+            }else{
+                isInside = 0;
+            }
+
+            //determinando o centro de massa da figura:
+            cmX = jX + (jW / 2.0); cmY = jY + (jH / 2.0); 
+
+        }
+
+    //Criando a tag para mostrar visualmente o resultado desta consulta:
+
+        char* tag = (char*) malloc(300 * sizeof(char));
+
+        svg_build_i_dot_line_tag(&tag, pX, pY, cmX, cmY, isInside);
+
+        int tagSize = strlen(tag);
+
+        char* dotLineTag = (char*) malloc((tagSize + 1) * sizeof(char));
+
+        strcpy(dotLineTag, tag);
+
+        free(tag);
+
+        printf("\ndotLine tag:\n%s\n", dotLineTag);
+
 }
 
 

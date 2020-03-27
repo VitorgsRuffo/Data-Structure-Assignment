@@ -130,7 +130,7 @@ int main (int argc, char* argv[]){
     
 
 
-    //Tratando o arquivo .qry (se necessário):
+    //Tratando o arquivo .qry (se necessário):   (limpar memoria!!!)
 
         if(parameter.qryFileName != NULL){
 
@@ -233,7 +233,7 @@ int main (int argc, char* argv[]){
                         svg_qry_o(&qryCommand[j], commands, geo_lines_count);
                         break;
                     case 'i':
-                        //svg_qry_i();
+                        svg_qry_i(&qryCommand[j], commands, geo_lines_count);
                         break;
                     case 'p':
 
