@@ -248,7 +248,7 @@ int main (int argc, char* argv[]){
                     case 'd':
 
                         if(qryCommand[j][4] == '*'){
-                            //svg_qry_delf2();
+                            svg_qry_delf2(&qryCommand[j], &svgFinalDocumentQry);
                         }else{
                             svg_qry_delf(&qryCommand[j], &svgFinalDocumentQry);
                         }

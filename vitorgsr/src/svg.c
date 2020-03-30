@@ -712,15 +712,6 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 }
 
 
-void  svg_qry_pnt(){
-
-}
-
-void  svg_qry_pnt2(){
-
-}
-
-
 void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry){
     
     //Conseguindo o ID da figura/texto que sera excluida: 
@@ -772,6 +763,59 @@ void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry){
 }
 
 
-void svg_qry_delf2(){
+void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry){
+
+    //Conseguindo o intevalo de IDs das figuras/textos que seram excluidas: 
+
+        char* J = (char*) malloc(6 * sizeof(char));
+        char* K = (char*) malloc(6 * sizeof(char));
+
+        sscanf(&qryCommand[0][6], "%s %s", J, K);
+
+        printf("%s %s", J, K);
+
+    //Buscando pelas(os) figuras/textos a serem excluidas e excluindo-as(os):
+
+        int stringLen = strlen(*svgFinalDocumentQry);
+
+        char* searchId = (char*) malloc(6 * sizeof(char));
+
+
+        for(int i = 11; i<stringLen; ++i){
+
+            if((*svgFinalDocumentQry)[i - 1] == '/' && (*svgFinalDocumentQry)[i - 2] == '-'){
+                
+
+                sscanf(&((*svgFinalDocumentQry)[i]), "%s", searchId);
+
+
+                if(strtof(searchId, NULL) >= strtof(J, NULL) && strtof(searchId, NULL) <= strtof(K, NULL)){
+                    
+                    for(int j = i + 1; j<stringLen; ++j){
+                        
+                        if((*svgFinalDocumentQry)[j] == '\n'){
+
+                            (*svgFinalDocumentQry)[j+1] = '<';
+                            (*svgFinalDocumentQry)[j+2] = '!';
+                            (*svgFinalDocumentQry)[j+3] = '-';
+                            (*svgFinalDocumentQry)[j+4] = '-';
+
+                            break;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    printf("\nafter delf*:\n%s\n", *svgFinalDocumentQry);
+}
+
+
+void  svg_qry_pnt(){
+
+}
+
+void  svg_qry_pnt2(){
 
 }
