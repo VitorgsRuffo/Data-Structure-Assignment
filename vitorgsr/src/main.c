@@ -239,9 +239,9 @@ int main (int argc, char* argv[]){
                     case 'p':
 
                         if(qryCommand[j][3] == '*'){
-                            //svg_qry_pnt2();
+                            svg_qry_pnt2(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry);
                         }else{
-                            //svg_qry_pnt();
+                            svg_qry_pnt(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry);
                         }
                         
                         break;

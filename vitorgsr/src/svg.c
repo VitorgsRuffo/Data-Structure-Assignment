@@ -602,7 +602,7 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
     //Conseguindo o ID da figura e as coordenadas do ponto:  (concertar)(concertar)(concertar)(concertar)
         
-        char J;
+        char J;    ///CONCERTAR!!!!!!!!1
         float pX, pY;
 
         sscanf(&qryCommand[0][3], "%s %f %f", &J, &pX, &pY);
@@ -812,10 +812,111 @@ void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry){
 }
 
 
-void  svg_qry_pnt(){
+void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
+
+    //Interpretar o comando query:
+
+        char* J = (char*) malloc(8 * sizeof(char));
+        char* newCorb = (char*) malloc(8 * sizeof(char));
+        char* newCorp = (char*) malloc(8 * sizeof(char));
+
+        sscanf(&qryCommand[0][4], "%s %s %s", J, newCorb, newCorp);
+
+        //printf("\npnt: %s %s %s\n", J, newCorb, newCorp);
+
+    //Extrair os dados da figura/txt a ser pintada:
+
+        char* jDrawing[8];
+
+        for(int i = 0; i < geo_lines_count; ++i){
+
+            if(strcmp(commands[i][1], J) == 0){
+
+                printf("J: %s", J);
+
+                for(int k = 0; k<8; ++k){
+
+                    jDrawing[k] = (char*) malloc((strlen(commands[i][k]) + 1) * sizeof(char));
+
+                    strcpy(jDrawing[k], commands[i][k]);
+
+                    printf("\njDrawing[%d]:%s\n", k, jDrawing[k]);
+
+                } 
+
+            }
+
+        }
+
+
+    //Excluir a figura/txt do svgFinalDocumentQry:
+
+        char* delfCommand = (char*) malloc(15 * sizeof(char));
+
+        sprintf(delfCommand, "delf %s", J);
+
+        svg_qry_delf(&delfCommand, svgFinalDocumentQry);
+
+        free(delfCommand);
+
+
+    //Construir uma nova tag para essa figura/txt com a nova cor de borda e preenchimento:
+
+        char* tag = (char*) malloc(200 * sizeof(char));
+
+
+        if(*jDrawing[0] == 'c'){
+            svg_build_circ_tag(&tag, jDrawing[1], jDrawing[2], jDrawing[3], jDrawing[4], newCorb, newCorp);
+        }else if(*jDrawing[0] == 'r'){
+            svg_build_rect_tag(&tag, jDrawing[1], jDrawing[2], jDrawing[3], jDrawing[4], jDrawing[5], newCorb, newCorp);
+        }else if(*jDrawing[0] == 't'){
+            svg_build_txt_tag(&tag, jDrawing[1], jDrawing[2], jDrawing[3], newCorb, newCorp ,jDrawing[6]);
+        }
+
+        int tagSize = strlen(tag);
+
+        char* newTag = (char*) malloc((tagSize + 1) * sizeof(char));
+
+        strcpy(newTag, tag);
+
+        free(tag);
+
+        printf("\nnewTag:\n%s\n", newTag);
+
+    //Anexar a nova figura no svgFinalDocumentQry:
+
+        char* svgFinalDocumentQry2 = NULL;
+                
+        svg_append_tag_to_final_document(&newTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
+
+        free(svgFinalDocumentQry2);
+
+    //Limpando a de memoria:
+
+
+    printf("\nafter pnt:\n%s\n", *svgFinalDocumentQry);
 
 }
 
-void  svg_qry_pnt2(){
+
+void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
+    
+    //Interpretar o comando query:
+
+
+    //Extrair os dados da figura/txt a ser pintada:
+
+
+    //Excluir a figura/txt do svgFinalDocumentQry:
+
+
+    //Construir uma nova tag para essa figura/txt com a nova cor de borda e preenchimento:
+
+
+    //Anexar a nova figura no svgFinalDocumentQry:
+        
+
+    //Limpando a de memoria:
+
 
 }

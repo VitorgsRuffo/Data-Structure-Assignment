@@ -37,5 +37,9 @@ void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry);
 
 void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry);
 
+void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry);
+
+void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry);
+
 
 #endif
