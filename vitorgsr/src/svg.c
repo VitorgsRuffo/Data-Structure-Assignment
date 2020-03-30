@@ -903,6 +903,40 @@ void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, c
     
     //Interpretar o comando query:
 
+        char* J = (char*) malloc(8 * sizeof(char));
+        char* K = (char*) malloc(8 * sizeof(char));
+        char* newCorb = (char*) malloc(8 * sizeof(char));
+        char* newCorp = (char*) malloc(8 * sizeof(char));
+
+        sscanf(&qryCommand[0][5], "%s %s %s %s", J, K, newCorb, newCorp);
+
+        //printf("\npnt*: %s %s %s %s\n", J, K, newCorb, newCorp);
+
+    //Chamar a funçao svg_qry_pnt para casa uma das entidades cujo id esta entre J e K:
+
+        int aux = 0;
+
+        char* pntCommand = (char*) malloc(30 * sizeof(char));
+
+        for(int i = strtol(J, NULL, 10); i<=strtol(K, NULL, 10); ++i){
+            //verificar se o id i(que esta entre J e K) existe antes de chamar a funçao:
+            for(int z = 0; z<geo_lines_count; ++z){
+
+                if(strtol(commands[z][1], NULL, 10) == i){
+                    
+                    sprintf(pntCommand, "pnt %d %s %s", i, newCorb, newCorp);
+
+                    svg_qry_pnt(&pntCommand, commands, geo_lines_count, svgFinalDocumentQry);
+
+                    break;
+                }
+            }
+
+        }
+
+}
+
+
 
     //Extrair os dados da figura/txt a ser pintada:
 
@@ -917,6 +951,3 @@ void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, c
         
 
     //Limpando a de memoria:
-
-
-}
