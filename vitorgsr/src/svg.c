@@ -40,7 +40,7 @@ void svg_build_circ_tag(char* *tag, char* i, char* rad, char* x, char* y, char* 
 
     //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
         
-    sprintf(*tag, " <circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"2.0\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> ", x, y, rad, corb, corp, x, y, i);
+    sprintf(*tag, "<!--/%s -->\n     <circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"2.0\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> -->\n", i, x, y, rad, corb, corp, x, y, i);
 
 }
 
@@ -49,16 +49,16 @@ void svg_build_rect_tag(char* *tag, char* i, char* w, char* h, char* x, char* y,
 
     //example: <rect width="100" height="100" x="130.00" y="90.9" fill="rgb(0,0,255)" stroke-width="3" stroke="rgb(0,0,0)" />
         
-    sprintf(*tag, " <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> ", w, h, x, y, corb, corp, x, y, i);
+    sprintf(*tag, "<!--/%s -->\n     <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> -->\n", i, w, h, x, y, corb, corp, x, y, i);
    
 }
 
 
-void svg_build_txt_tag(char* *tag, char* x, char* y, char* corb, char* corp, char* txt){
+void svg_build_txt_tag(char* *tag, char* i, char* x, char* y, char* corb, char* corp, char* txt){
 
     //example: <text x="0" y="15" stroke="blue" stroke-width="0.3" fill="red">I love SVG!</text>
 
-    sprintf(*tag, " <text x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"0.3\" fill=\"%s\" > %s </text> ", x, y, corb, corp, txt);
+    sprintf(*tag, "<!--/%s -->\n     <text x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"0.3\" fill=\"%s\" > %s </text> -->\n", i, x, y, corb, corp, txt);
     
 }
 
@@ -169,7 +169,7 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
         //lidando com texto:
         }else if(*(command[0]) == 't'){
 
-            svg_build_txt_tag(&tag, commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
+            svg_build_txt_tag(&tag, commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
 
         }
 
@@ -261,14 +261,14 @@ void buildSvgPath(Parameter *parameter){
 
 //}
 
-void svg_build_o_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision){
+void svg_o_build_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision){
 
     //example: <rect width="100" height="100" x="130.00" y="90.9" fill="#044B94" fill-opacity="0.0" stroke-width="1.5" stroke="rgb(0,0,0)" stroke-dasharray="5,5" />
 
     if(isThereCollision){
-        sprintf(*tag, " <rect width=\"%g\" height=\"%g\" x=\"%g\" y=\"%g\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" /> ", w, h, x, y);
+        sprintf(*tag, "     <rect width=\"%g\" height=\"%g\" x=\"%g\" y=\"%g\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" /> \n", w, h, x, y);
     }else{
-        sprintf(*tag, " <rect width=\"%g\" height=\"%g\" x=\"%g\" y=\"%g\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" stroke-dasharray=\"5,5\" /> ", w, h, x, y);
+        sprintf(*tag, "     <rect width=\"%g\" height=\"%g\" x=\"%g\" y=\"%g\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" stroke-dasharray=\"5,5\" /> \n", w, h, x, y);
     }  
 
 }
@@ -285,9 +285,9 @@ float svg_rect_point_next_to_circ_center(float min, float max, float value){
 
 }
 
-void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count){
+void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
 
-    //Conseguindo o ID das figuras a serem testadas:
+    //Conseguindo o ID das figuras a serem testadas: (concertar)(concertar)(concertar)(concertar)
 
         char J = qryCommand[0][3];
         char K = qryCommand[0][5];
@@ -555,7 +555,7 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count){
 
         char* tag = (char*) malloc(150 * sizeof(char));
 
-        svg_build_o_rect_tag(&tag, rectW, rectH, rectX, rectY, isThereCollision);
+        svg_o_build_rect_tag(&tag, rectW, rectH, rectX, rectY, isThereCollision);
 
         int tagSize = strlen(tag);
 
@@ -567,30 +567,40 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count){
 
         printf("\nrect tag:\n%s\n", rectTag);
 
+        //Anexando a tag do retangulo na string final:
+            
+            char* svgFinalDocumentQry2 = NULL;
+                
+            svg_append_tag_to_final_document(&rectTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
+
+            free(svgFinalDocumentQry2);
+
+    //Limpando a de memoria:
+
 }
 
-void svg_build_i_dot_line_tag(char* *tag, float pX, float pY, float cmX, float cmY, int isInside){
+void svg_i_build_dot_line_tag(char* *tag, float pX, float pY, float cmX, float cmY, int isInside){
 
     //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /> 
     //                                          <line x1="0" y1="0" x2="200" y2="200" stroke="rgb(255,100,110)" stroke-width="2" />
 
     if(isInside){
 
-        sprintf(*tag," <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"blue\" stroke-width=\"3\" fill=\"blue\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"blue\" stroke-width=\"0.8\" /> " , pX, pY, pX, pY, cmX, cmY);
+        sprintf(*tag,"     <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"blue\" stroke-width=\"3\" fill=\"blue\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"blue\" stroke-width=\"0.8\" /> \n" , pX, pY, pX, pY, cmX, cmY);
 
     }else{
 
-        sprintf(*tag," <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"magenta\" stroke-width=\"3\" fill=\"magenta\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"magenta\" stroke-width=\"0.8\" /> " , pX, pY, pX, pY, cmX, cmY); 
+        sprintf(*tag,"     <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"magenta\" stroke-width=\"3\" fill=\"magenta\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"magenta\" stroke-width=\"0.8\" /> \n" , pX, pY, pX, pY, cmX, cmY); 
 
     }  
 }
 
 
-void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count){
+void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
 
     //printf("\ni? - j: %c\n", qryCommand[0][3]);
 
-    //Conseguindo o ID da figura e as coordenadas do ponto:
+    //Conseguindo o ID da figura e as coordenadas do ponto:  (concertar)(concertar)(concertar)(concertar)
         
         char J;
         float pX, pY;
@@ -677,7 +687,7 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count){
 
         char* tag = (char*) malloc(300 * sizeof(char));
 
-        svg_build_i_dot_line_tag(&tag, pX, pY, cmX, cmY, isInside);
+        svg_i_build_dot_line_tag(&tag, pX, pY, cmX, cmY, isInside);
 
         int tagSize = strlen(tag);
 
@@ -689,6 +699,16 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count){
 
         printf("\ndotLine tag:\n%s\n", dotLineTag);
 
+        //Anexando a tag do ponto(mini circulo) e da linha na string final:
+            
+            char* svgFinalDocumentQry2 = NULL;
+                
+            svg_append_tag_to_final_document(&dotLineTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
+
+            free(svgFinalDocumentQry2);
+
+    //Limpando a de memoria:
+
 }
 
 
@@ -696,9 +716,59 @@ void  svg_qry_pnt(){
 
 }
 
+void  svg_qry_pnt2(){
 
-void svg_qry_delf(){
+}
 
+
+void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry){
+    
+    //Conseguindo o ID da figura/texto que sera excluida: 
+
+        char* J =  (char*) malloc((strlen(&qryCommand[0][5]) + 1) * sizeof(char));
+
+        sscanf(&qryCommand[0][5], "%s", J);
+
+
+    //Buscando pela(o) figura/texto a ser excluida e excluindo-a(o):
+    //OBS: a(o) figura/texto sera excluida(o) porque vamos comentar a sua tag. Assim, ela nao vai ser renderizada.
+
+        int stringLen = strlen(*svgFinalDocumentQry);
+
+        char* searchJ = (char*) malloc((strlen(J) + 1) * sizeof(char));
+
+
+        for(int i = 11; i<stringLen; ++i){
+
+            if((*svgFinalDocumentQry)[i - 1] == '/' && (*svgFinalDocumentQry)[i - 2] == '-'){
+                
+
+                sscanf(&((*svgFinalDocumentQry)[i]), "%s", searchJ);
+
+
+                if(strcmp(J, searchJ) == 0){
+                    
+                    for(int j = i + 1; j<stringLen; ++j){
+                        
+                        if((*svgFinalDocumentQry)[j] == '\n'){
+
+                            (*svgFinalDocumentQry)[j+1] = '<';
+                            (*svgFinalDocumentQry)[j+2] = '!';
+                            (*svgFinalDocumentQry)[j+3] = '-';
+                            (*svgFinalDocumentQry)[j+4] = '-';
+
+                            break;
+                        }
+                    }
+
+                    break;
+                }
+            }
+        }
+
+
+    printf("after delf:\n%s\n", *svgFinalDocumentQry);
+  
 }
 
 

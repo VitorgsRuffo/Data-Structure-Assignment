@@ -101,9 +101,9 @@ int main (int argc, char* argv[]){
 
 
         //String que vai conter todas as tags referentes aos comandos do arquivo e que vai ser printada em um arquivo svg.
-        char* svgFinalDocument = (char*) malloc((strlen("<svg></svg>") + 1) * sizeof(char));
+        char* svgFinalDocument = (char*) malloc((strlen("<svg>\n</svg>") + 1) * sizeof(char));
 
-        strcpy(svgFinalDocument, "<svg>");
+        strcpy(svgFinalDocument, "<svg>\n");
 
         //Tratando um comando por vez: construir a tag relativa ao comando e anexa-la a string final.
         for(int j = 0; j<geo_lines_count; ++j){
@@ -164,6 +164,7 @@ int main (int argc, char* argv[]){
 
                     printf("\n");
             }
+            /*
 
             //Vetor para guardar o ID dos elementos excluidos por delf / delf*, ou sobrepostos na operaçao de pintura (pnt/pnt*):
             int delKeepTracker[geo_lines_count];
@@ -176,7 +177,7 @@ int main (int argc, char* argv[]){
                 delKeepTracker[j] = -1;
                 qryKeepTracker[j] = -1;
             }
-        
+            */    
 
             int qry_lines_count = count_file_lines(qry);
         
@@ -220,9 +221,9 @@ int main (int argc, char* argv[]){
 
 
             //String que vai conter todas as tags referentes aos comandos do arquivo e que vai ser printada em um arquivo svg.
-            char* svgFinalDocumentQry = (char*) malloc((strlen("<svg></svg>") + 1) * sizeof(char));
+            char* svgFinalDocumentQry = (char*) malloc((strlen(svgFinalDocument) + 1) * sizeof(char));
 
-            strcpy(svgFinalDocumentQry, "<svg>");
+            strcpy(svgFinalDocumentQry, svgFinalDocument);
 
 
             //Tratando um comando por vez.
@@ -230,10 +231,10 @@ int main (int argc, char* argv[]){
 
                 switch(qryCommand[j][0]){
                     case 'o':
-                        svg_qry_o(&qryCommand[j], commands, geo_lines_count);
+                        svg_qry_o(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry);
                         break;
                     case 'i':
-                        svg_qry_i(&qryCommand[j], commands, geo_lines_count);
+                        svg_qry_i(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry);
                         break;
                     case 'p':
 
@@ -249,7 +250,7 @@ int main (int argc, char* argv[]){
                         if(qryCommand[j][4] == '*'){
                             //svg_qry_delf2();
                         }else{
-                            //svg_qry_delf();
+                            svg_qry_delf(&qryCommand[j], &svgFinalDocumentQry);
                         }
                         
                         break;
