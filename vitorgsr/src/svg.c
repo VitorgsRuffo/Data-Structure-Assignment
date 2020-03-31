@@ -287,10 +287,12 @@ float svg_rect_point_next_to_circ_center(float min, float max, float value){
 
 void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
 
-    //Conseguindo o ID das figuras a serem testadas: (concertar)(concertar)(concertar)(concertar)
+    //Conseguindo o ID das figuras a serem testadas: 
 
-        char J = qryCommand[0][3];
-        char K = qryCommand[0][5];
+        char* J = (char*) malloc((6) * sizeof(char));
+        char* K = (char*) malloc((6) * sizeof(char));
+
+        sscanf(&qryCommand[0][3], "%s %s", J, K);
 
     //extraindo as informaçoes de cada uma das duas figuras:
 
@@ -299,7 +301,7 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
         
         for(int i = 0; i < geo_lines_count; ++i){
             
-            if(*commands[i][1] == J){
+            if(strcmp(commands[i][1], J) == 0){
                 
                 for(int y = 0; y<8; ++y){
 
@@ -310,7 +312,7 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
                     printf("\n%s\n", jShape[y]);
                 }
 
-            }else if(*commands[i][1] == K){
+            }else if(strcmp(commands[i][1], K) == 0){
                 
                 for(int y = 0; y<8; ++y){
 
@@ -598,16 +600,16 @@ void svg_i_build_dot_line_tag(char* *tag, float pX, float pY, float cmX, float c
 
 void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
 
-    //printf("\ni? - j: %c\n", qryCommand[0][3]);
 
-    //Conseguindo o ID da figura e as coordenadas do ponto:  (concertar)(concertar)(concertar)(concertar)
+    //Conseguindo o ID da figura e as coordenadas do ponto:  
         
-        char J;    ///CONCERTAR!!!!!!!!1
+       
+        char* J = (char*) malloc(6 * sizeof(char));
         float pX, pY;
 
-        sscanf(&qryCommand[0][3], "%s %f %f", &J, &pX, &pY);
+        sscanf(&qryCommand[0][3], "%s %f %f", J, &pX, &pY);
 
-        //printf("J, pX, pY: %c %f %f", J, pX, pY);
+        printf("J, pX, pY: %s %f %f", J, pX, pY);
 
     //Extraindo as informaçoes da figura:
 
@@ -615,9 +617,9 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
         for(int i = 0; i < geo_lines_count; ++i){
 
-            if(commands[i][1][0] == J){
+            if(strcmp(commands[i][1], J) == 0){
 
-                printf("J: %c", J);
+                printf("J: %s", J);
 
                 for(int k = 0; k<6; ++k){
 
@@ -935,19 +937,3 @@ void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, c
         }
 
 }
-
-
-
-    //Extrair os dados da figura/txt a ser pintada:
-
-
-    //Excluir a figura/txt do svgFinalDocumentQry:
-
-
-    //Construir uma nova tag para essa figura/txt com a nova cor de borda e preenchimento:
-
-
-    //Anexar a nova figura no svgFinalDocumentQry:
-        
-
-    //Limpando a de memoria:
