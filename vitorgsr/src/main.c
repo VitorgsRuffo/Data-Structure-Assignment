@@ -127,7 +127,7 @@ int main (int argc, char* argv[]){
             }
     
         }
-    
+ 
 
 
     //Tratando o arquivo .qry (se necessário):   (limpar memoria!!!)
@@ -164,21 +164,7 @@ int main (int argc, char* argv[]){
 
                     printf("\n");
             }
-            /*
-
-            //Vetor para guardar o ID dos elementos excluidos por delf / delf*, ou sobrepostos na operaçao de pintura (pnt/pnt*):
-            int delKeepTracker[geo_lines_count];
-
-            //Vetor para guardar o ID dos elementos que forem afetados por um comando qry:
-            int qryKeepTracker[geo_lines_count];
-
-            //inicializando os vetores:
-            for(int j = 0; j<geo_lines_count; ++j){
-                delKeepTracker[j] = -1;
-                qryKeepTracker[j] = -1;
-            }
-            */    
-
+                
             int qry_lines_count = count_file_lines(qry);
         
             printf("\n.qry commands(lines) number: %d\n", qry_lines_count);
@@ -261,13 +247,11 @@ int main (int argc, char* argv[]){
     
             }
 
-            /*
 
             //Finalizando .svg referente ao .qry:
 
                 //Terminando a string para então podermos printa-la em um .svg:
                 svg_finalize_final_document(&svgFinalDocumentQry);
-
 
                 //Criando .svg:
                 FILE *svgQry;
@@ -281,12 +265,7 @@ int main (int argc, char* argv[]){
 
                 fprintf(svgQry, "%s", svgFinalDocumentQry);
 
-            //Criando .txt:
-
-            */
-
         }
-
 
     //Finalizando .svg referente ao .geo:
 

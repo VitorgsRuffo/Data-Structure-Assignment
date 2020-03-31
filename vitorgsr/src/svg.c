@@ -236,7 +236,8 @@ void buildSvgPath(Parameter *parameter){
             }
         }
     }
-    
+
+   
     parameter->svgFullPath = (char*) malloc((outputDirLen + svgFileNameLen + 1) * sizeof(char));
 
     if(parameter->outputDir[outputDirLen-1] == '/'){
@@ -249,17 +250,64 @@ void buildSvgPath(Parameter *parameter){
 
     }
 
-    free(svgFileName);
-
     printf("\n%s\n", parameter->svgFullPath);
-
+    
+    
+    free(svgFileName);
 }
 
 
 
-//void buildSvgQryPath(Parameter *parameter){
+void buildSvgQryPath(Parameter *parameter){
 
-//}
+    int outputDirLen = strlen(parameter->outputDir);
+    int svgQryFileNameLen = strlen(parameter->geoFileName) + 2; //os 2 bytes extras sao pra acrescentar -q no nome do arquivo.
+
+    char* svgQryFileName  = (char*) malloc((svgQryFileNameLen + 1) * sizeof(char));
+
+    sprintf(svgQryFileName,"%s  ", parameter->geoFileName);
+
+
+    for(int i = 0; i<svgQryFileNameLen; ++i){
+        
+        if(svgQryFileName[i] == '.'){
+            svgQryFileName[i] = '-';
+            svgQryFileName[i+1] = 'q';
+            svgQryFileName[i+2] = '.';
+            svgQryFileName[i+3] = 'q';
+            svgQryFileName[i+4] = 'r';
+            svgQryFileName[i+5] = 'y';
+
+            break;
+        }
+
+    }
+
+    parameter->svgQryFullPath = (char*) malloc((outputDirLen + svgQryFileNameLen + 1) * sizeof(char));
+
+    if(parameter->outputDir[outputDirLen-1] == '/'){
+
+        sprintf(parameter->svgQryFullPath, "%s%s", parameter->outputDir, svgQryFileName);
+
+    }else{
+
+        sprintf(parameter->svgQryFullPath, "%s/%s", parameter->outputDir, svgQryFileName);
+
+    }
+
+    printf("\n%s\n", parameter->svgQryFullPath);
+    
+    
+    free(svgQryFileName);
+}
+
+void svg_build_o_txt_path(){
+
+}
+
+void svg_create_o_txt(){
+
+}
 
 void svg_o_build_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision){
 
@@ -293,6 +341,9 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
         char* K = (char*) malloc((6) * sizeof(char));
 
         sscanf(&qryCommand[0][3], "%s %s", J, K);
+
+        char* jType = (char*) malloc(10 * sizeof(char));
+        char* kType = (char*) malloc(10 * sizeof(char));
 
     //extraindo as informaçoes de cada uma das duas figuras:
 
@@ -338,6 +389,9 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
         //dois circulos:
         //Eles vão se sobrepor quando a distancia entre os centros dos circulos for menor que a soma dos seus raios.
         if(*jShape[0] == 'c' && *kShape[0] == 'c'){
+
+            strcpy(jType, "Circulo");
+            strcpy(kType, "Circulo");
 
             float jRadius = strtof(jShape[2], NULL); 
             float kRadius = strtof(kShape[2], NULL);
@@ -395,6 +449,9 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
         //dois retangulos:
         }else if(*jShape[0] == 'r' && *kShape[0] == 'r'){
 
+            strcpy(jType, "Retangulo");
+            strcpy(kType, "Retangulo");
+
             float jW = strtof(jShape[2], NULL), jH = strtof(jShape[3], NULL);
             float kW = strtof(kShape[2], NULL), kH = strtof(kShape[3], NULL);
 
@@ -448,6 +505,10 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
         //esses dois pontos e se ela for menor que o raio do circulo entao ha sobreposição.
         }else if((*jShape[0] == 'c' && *kShape[0] == 'r')){
 
+            strcpy(jType, "Circulo");
+            strcpy(kType, "Retangulo");
+            
+
             float jRadius = strtof(jShape[2], NULL);
             float jX = strtof(jShape[3], NULL), jY = strtof(jShape[4], NULL);
 
@@ -500,6 +561,9 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
         //um retangulo e um ciculo:
         }else if((*jShape[0] == 'r' && *kShape[0] == 'c')){
+
+            strcpy(jType, "Retangulo");
+            strcpy(kType, "Circulo");
 
             float jW = strtof(jShape[2], NULL), jH = strtof(jShape[3], NULL);
             float jX = strtof(jShape[4], NULL), jY = strtof(jShape[5], NULL);
@@ -576,6 +640,25 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
             svg_append_tag_to_final_document(&rectTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
 
             free(svgFinalDocumentQry2);
+
+
+    //Criando arquivo txt:
+
+        char* result;
+
+        if(isThereCollision){
+            result = "SIM";
+        }else{
+            result = "NAO";
+        }
+
+        char* txtContent = (char*) malloc(70 * sizeof(char));
+
+        sprintf(txtContent,"%s\n%s: %s  %s: %s  %s", *qryCommand, J, jType, K, kType, result);
+
+        //svg_create_o_txt(txtContent, parameter);
+
+        free(txtContent);
 
     //Limpando a de memoria:
 
@@ -709,7 +792,13 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
             free(svgFinalDocumentQry2);
 
+
+    //Criando arquivo txt:
+
+
+
     //Limpando a de memoria:
+
 
 }
 

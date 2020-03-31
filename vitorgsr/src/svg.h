@@ -17,9 +17,13 @@ void svg_interpret_command(char* *command, char* *commandElements, int commandNu
 
 void svg_draw(char* *command, char* *svgFinalDocument, int commandNum);
 
+
+
 void buildSvgPath(Parameter *parameter);
 
-//void buildSvgQryPath(Parameter *parameter);
+void buildSvgQryPath(Parameter *parameter);
+
+
 
 void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry);
 
@@ -28,14 +32,18 @@ float svg_rect_point_next_to_circ_center(float min, float max, float value);
 void svg_o_build_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision);
 
 
+
 void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry);
 
 void svg_i_build_dot_line_tag(char* *tag, float pX, float pY, float cmX, float cmY, int isInside);
 
 
+
 void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry);
 
 void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry);
+
+
 
 void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry);
 
