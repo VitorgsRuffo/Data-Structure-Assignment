@@ -301,11 +301,65 @@ void buildSvgQryPath(Parameter *parameter){
     free(svgQryFileName);
 }
 
-void svg_build_o_txt_path(){
 
+void svg_qry_create_txt(char* *txtFinalContent, Parameter *parameter){
+    
+    //contruindo o path do txt:
+
+        int txtPathLen = strlen(parameter->svgQryFullPath);
+
+        char* txtPath = (char*) malloc((txtPathLen + 1) * sizeof(char));
+
+        sprintf(txtPath, "%s", parameter->svgQryFullPath);
+
+        printf("\ntxt path: %s\n", txtPath);
+
+        for(int i = 0; i<txtPathLen; i++){
+
+            if(txtPath[i] == '.'){
+                txtPath[i+1] = 't';
+                txtPath[i+2] = 'x';
+                txtPath[i+3] = 't';
+                break;
+            }
+
+        }
+
+    //criando o arquivo:
+
+        FILE *txt;
+
+        txt = fopen(txtPath, "w");
+
+        if(!txt){
+            printf("It was not possible to create o qry txt file.\nFinishing execution..\n");
+            exit(1);
+        }
+
+        fprintf(txt, "%s", *txtFinalContent);
+
+        fclose(txt);
+
+    
 }
 
-void svg_create_o_txt(){
+
+void svg_append_txt_content(char* *txtContent, char* *txtFinalContent, char* *txtFinalContent2){
+
+    //Vamos precisar de mais espaço na string txtFinalContent, pois vamos anexar mais conteudo nela:
+    int txtFinalContentLen = strlen(*txtFinalContent);
+    int txtContentLen = strlen(*txtContent);
+
+    
+    *txtFinalContent2 = (char*) malloc((txtFinalContentLen + txtContentLen + 1) * sizeof(char));
+
+    sprintf(*txtFinalContent2, "%s%s", *txtFinalContent, *txtContent);
+
+    char* aux = *txtFinalContent;
+
+    *txtFinalContent = *txtFinalContent2;
+
+    *txtFinalContent2 = aux;
 
 }
 
@@ -333,7 +387,7 @@ float svg_rect_point_next_to_circ_center(float min, float max, float value){
 
 }
 
-void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
+void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent){
 
     //Conseguindo o ID das figuras a serem testadas: 
 
@@ -642,23 +696,29 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
             free(svgFinalDocumentQry2);
 
 
-    //Criando arquivo txt:
+    //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
 
-        char* result;
+        char* result = (char*) malloc(5*sizeof(char));
 
         if(isThereCollision){
-            result = "SIM";
+            strcpy(result, "SIM");
         }else{
-            result = "NAO";
+            strcpy(result, "NAO");
         }
 
         char* txtContent = (char*) malloc(70 * sizeof(char));
 
-        sprintf(txtContent,"%s\n%s: %s  %s: %s  %s", *qryCommand, J, jType, K, kType, result);
+        sprintf(txtContent,"%s\n%s: %s  %s: %s  %s\n\n", *qryCommand, J, jType, K, kType, result);
 
-        //svg_create_o_txt(txtContent, parameter);
+        char* txtFinalContent2 = NULL;
+
+        svg_append_txt_content(&txtContent, txtFinalContent, &txtFinalContent2);
+
+        free(result);
 
         free(txtContent);
+
+        free(txtFinalContent2);
 
     //Limpando a de memoria:
 
@@ -681,7 +741,7 @@ void svg_i_build_dot_line_tag(char* *tag, float pX, float pY, float cmX, float c
 }
 
 
-void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
+void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent){
 
 
     //Conseguindo o ID da figura e as coordenadas do ponto:  
@@ -803,7 +863,7 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 }
 
 
-void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry){
+void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent){
     
     //Conseguindo o ID da figura/texto que sera excluida: 
 
@@ -854,7 +914,7 @@ void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry){
 }
 
 
-void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry){
+void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent){
 
     //Conseguindo o intevalo de IDs das figuras/textos que seram excluidas: 
 
@@ -903,7 +963,7 @@ void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry){
 }
 
 
-void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
+void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent){
 
     //Interpretar o comando query:
 
@@ -946,7 +1006,7 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
 
         sprintf(delfCommand, "delf %s", J);
 
-        svg_qry_delf(&delfCommand, svgFinalDocumentQry);
+        svg_qry_delf(&delfCommand, svgFinalDocumentQry, NULL);
 
         free(delfCommand);
 
@@ -990,7 +1050,7 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
 }
 
 
-void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry){
+void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent){
     
     //Interpretar o comando query:
 
@@ -1017,7 +1077,7 @@ void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, c
                     
                     sprintf(pntCommand, "pnt %d %s %s", i, newCorb, newCorp);
 
-                    svg_qry_pnt(&pntCommand, commands, geo_lines_count, svgFinalDocumentQry);
+                    svg_qry_pnt(&pntCommand, commands, geo_lines_count, svgFinalDocumentQry, NULL);
 
                     break;
                 }

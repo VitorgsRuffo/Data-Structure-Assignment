@@ -212,31 +212,38 @@ int main (int argc, char* argv[]){
             strcpy(svgFinalDocumentQry, svgFinalDocument);
 
 
+            buildSvgQryPath(&parameter);
+
+
+            //String que vai conter todos textos referentes aos comandos do arquivo e que vai ser printada em um arquivo de saida txt.
+            char* txtFinalContent = (char*) malloc(2 * sizeof(char));
+
+
             //Tratando um comando por vez.
             for(int j = 0; j<qry_lines_count; ++j){
 
                 switch(qryCommand[j][0]){
                     case 'o':
-                        svg_qry_o(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry);
+                        svg_qry_o(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry, &txtFinalContent);
                         break;
                     case 'i':
-                        svg_qry_i(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry);
+                        svg_qry_i(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry, &txtFinalContent);
                         break;
                     case 'p':
 
                         if(qryCommand[j][3] == '*'){
-                            svg_qry_pnt2(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry);
+                            svg_qry_pnt2(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry, &txtFinalContent);
                         }else{
-                            svg_qry_pnt(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry);
+                            svg_qry_pnt(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry, &txtFinalContent);
                         }
                         
                         break;
                     case 'd':
 
                         if(qryCommand[j][4] == '*'){
-                            svg_qry_delf2(&qryCommand[j], &svgFinalDocumentQry);
+                            svg_qry_delf2(&qryCommand[j], &svgFinalDocumentQry, &txtFinalContent);
                         }else{
-                            svg_qry_delf(&qryCommand[j], &svgFinalDocumentQry);
+                            svg_qry_delf(&qryCommand[j], &svgFinalDocumentQry, &txtFinalContent);
                         }
                         
                         break;
@@ -256,7 +263,6 @@ int main (int argc, char* argv[]){
                 //Criando .svg:
                 FILE *svgQry;
 
-                buildSvgQryPath(&parameter);
 
                 svgQry = fopen(parameter.svgQryFullPath, "w");
                 if(svgQry == NULL){
@@ -264,6 +270,10 @@ int main (int argc, char* argv[]){
                 }
 
                 fprintf(svgQry, "%s", svgFinalDocumentQry);
+            
+            //Criando txt:
+
+            svg_qry_create_txt(&txtFinalContent, &parameter);
 
         }
 
