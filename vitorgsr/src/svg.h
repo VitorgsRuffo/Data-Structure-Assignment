@@ -39,13 +39,13 @@ void svg_i_build_dot_line_tag(char* *tag, float pX, float pY, float cmX, float c
 
 
 
-void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent);
+void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent, char* commands[][8], int geo_lines_count);
 
-void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent);
+void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent, char* commands[][8], int geo_lines_count);
 
 
 
-void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent);
+void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent, char* *pnt2);
 
 void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent);
 

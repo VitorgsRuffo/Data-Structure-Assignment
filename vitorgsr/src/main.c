@@ -234,16 +234,16 @@ int main (int argc, char* argv[]){
                         if(qryCommand[j][3] == '*'){
                             svg_qry_pnt2(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry, &txtFinalContent);
                         }else{
-                            svg_qry_pnt(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry, &txtFinalContent);
+                            svg_qry_pnt(&qryCommand[j], commands, geo_lines_count, &svgFinalDocumentQry, &txtFinalContent, NULL);
                         }
                         
                         break;
                     case 'd':
 
                         if(qryCommand[j][4] == '*'){
-                            svg_qry_delf2(&qryCommand[j], &svgFinalDocumentQry, &txtFinalContent);
+                            svg_qry_delf2(&qryCommand[j], &svgFinalDocumentQry, &txtFinalContent, commands, geo_lines_count);
                         }else{
-                            svg_qry_delf(&qryCommand[j], &svgFinalDocumentQry, &txtFinalContent);
+                            svg_qry_delf(&qryCommand[j], &svgFinalDocumentQry, &txtFinalContent, commands, geo_lines_count);
                         }
                         
                         break;
