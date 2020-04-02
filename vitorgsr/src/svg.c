@@ -29,7 +29,7 @@ void svg_build_circ_tag(char* *tag, char* i, char* rad, char* x, char* y, char* 
 
     //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
         
-    sprintf(*tag, "<!--/%s -->\n     <circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"2.0\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> -->\n", i, x, y, rad, corb, corp, x, y, i);
+    sprintf(*tag, "<!--/%s -->\n     <circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"2.0\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"red\" > %s </text> -->\n", i, x, y, rad, corb, corp, x, y, i);
 
 }
 
@@ -38,7 +38,7 @@ void svg_build_rect_tag(char* *tag, char* i, char* w, char* h, char* x, char* y,
 
     //example: <rect width="100" height="100" x="130.00" y="90.9" fill="rgb(0,0,255)" stroke-width="3" stroke="rgb(0,0,0)" />
         
-    sprintf(*tag, "<!--/%s -->\n     <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"blue\" > %s </text> -->\n", i, w, h, x, y, corb, corp, x, y, i);
+    sprintf(*tag, "<!--/%s -->\n     <rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" stroke=\"%s\" stroke-width=\"1.5\" fill=\"%s\" /> <text x=\"%s\" y=\"%s\" fill=\"red\" > %s </text> -->\n", i, w, h, x, y, corb, corp, x, y, i);
    
 }
 
@@ -80,7 +80,7 @@ void svg_interpret_command(char* *command, char* *commandElements, int commandNu
 
     }else if(*(command[0]) == 't'){
             
-        sscanf(*command, "%s %s %s %s %s %s %s", commandElements[0], commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
+        sscanf(*command, "%s %s %s %s %s %s %[^\n]s", commandElements[0], commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
 
     }
 
@@ -104,7 +104,7 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
 
             for(int j = 0; j<commandNum; ++j){
 
-                commandElements[j] = (char*) malloc(15*sizeof(char)); //Supomos que 15 == tamanho máx de um pedaço do comando
+                commandElements[j] = (char*) malloc(30*sizeof(char)); //Supomos que 30 == tamanho máx de um pedaço do comando
 
                 if(commandElements[j] == NULL){
                     printf("Error allocating memory for commandElements array.\nFinishing execution..");
@@ -119,7 +119,7 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
                 if(j != commandNum-1){
                     commandElements[j] = (char*) malloc(15*sizeof(char)); //Supomos que 15 == tamanho máx de um pedaço do comando
                 }else{
-                    commandElements[j] = (char*) malloc(80*sizeof(char)); //aloca 20 bytes para o texto a ser desenhado.
+                    commandElements[j] = (char*) malloc(80*sizeof(char)); //aloca 80 bytes para o texto a ser desenhado.
                 }
 
 
@@ -360,9 +360,9 @@ void svg_o_build_rect_tag(char* *tag, float w, float h, float x, float y, int is
     //example: <rect width="100" height="100" x="130.00" y="90.9" fill="#044B94" fill-opacity="0.0" stroke-width="1.5" stroke="rgb(0,0,0)" stroke-dasharray="5,5" />
 
     if(isThereCollision){
-        sprintf(*tag, "     <rect width=\"%g\" height=\"%g\" x=\"%g\" y=\"%g\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" /> \n", w, h, x, y);
+        sprintf(*tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" /> \n", w, h, x, y);
     }else{
-        sprintf(*tag, "     <rect width=\"%g\" height=\"%g\" x=\"%g\" y=\"%g\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" stroke-dasharray=\"5,5\" /> \n", w, h, x, y);
+        sprintf(*tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" stroke-dasharray=\"5,5\" /> \n", w, h, x, y);
     }  
 
 }
@@ -654,9 +654,9 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
                 //H:
                 if(jY + jH > kY + kRadius){
-                    rectH = (jY + jH + 10) - rectX;
+                    rectH = (jY + jH + 10) - rectY;
                 }else{
-                    rectH = (kY + kRadius + 10) - rectX;
+                    rectH = (kY + kRadius + 10) - rectY;
                 }
 
         }
@@ -665,7 +665,7 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
     //Criando a tag para mostrar visualmente o resultado desta consulta:
 
-        char* tag = (char*) malloc(150 * sizeof(char));
+        char* tag = (char*) malloc(250 * sizeof(char));
 
         svg_o_build_rect_tag(&tag, rectW, rectH, rectX, rectY, isThereCollision);
 

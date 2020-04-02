@@ -74,7 +74,7 @@ int main (int argc, char* argv[]){
         printf(".geo commands(lines) number: %d\n", geo_lines_count);
     
         for(int j = 0; j<geo_lines_count; j++){
-            command[j] = (char*) malloc(110 * sizeof(char));  //Supomos que 110 == tamanho maximo de um comando (linha)
+            command[j] = (char*) malloc(240 * sizeof(char));  //Supomos que 240 == tamanho maximo de um comando (linha)
 
             if(command[j] == NULL){
                 printf("Error allocating memory for commands array.\nFinishing execution..\n");
@@ -150,12 +150,12 @@ int main (int argc, char* argv[]){
 
             for(int i = 0; i<geo_lines_count; ++i){
                 for(int j = 0; j<8; ++j){
-                    commands[i][j] = (char*) malloc(20 * sizeof(char)); //fica determinado, portanto, que cada parte de comando pode ter até 20 bytes.
+                    commands[i][j] = (char*) malloc(30 * sizeof(char)); //fica determinado, portanto, que cada parte de comando pode ter até 50 bytes.
                 }
             }
 
             //prenchendo a matriz corretamente:
-            for(int i = 0; i<geo_lines_count; ++i){
+            for(int i = 0; i<geo_lines_count; ++i){ //!! ///tratar para quando for um commando de texto porque ele vai precisar de um tipo diferente de leitura %[^\n]s na posicao commands[i][6]
 
                 sscanf(command[i], "%s %s %s %s %s %s %s %s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6], commands[i][7]);
 
@@ -385,6 +385,7 @@ int get_nx(FILE *file){
         return strtol(&nxCommand[3], NULL, 10);
 
     }else{
+
 
         //como não temos um comando nx na primeira linha vamos usar o valor 1000 como default para nx.
         return 1000;
