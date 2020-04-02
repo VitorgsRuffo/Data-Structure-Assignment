@@ -61,7 +61,7 @@ int main (int argc, char* argv[]){
 
         //conseguindo o valor de nx no arquivo geo (se nao existir usaremos 1000 como default):
         int nx = get_nx(geo);
-    
+        
         printf("\nnx: %d\n", nx);
 
         //vetor de strings onde cada string é um comando lido do arquivo:
@@ -109,9 +109,11 @@ int main (int argc, char* argv[]){
 
 
         //String que vai conter todas as tags referentes aos comandos do arquivo e que vai ser printada em um arquivo svg.
-        char* svgFinalDocument = (char*) malloc((strlen("<svg>\n</svg>") + 1) * sizeof(char));
-
+        char* svgFinalDocument = (char*) malloc((strlen("<svg>\n") + 1) * sizeof(char));
         strcpy(svgFinalDocument, "<svg>\n");
+
+        char* closeTag = (char*) malloc((strlen("</svg>") + 1) * sizeof(char));
+        strcpy(closeTag, "</svg>");
 
         //Tratando um comando por vez: construir a tag relativa ao comando e anexa-la a string final.
         for(int j = 0; j<geo_lines_count; ++j){
@@ -266,7 +268,14 @@ int main (int argc, char* argv[]){
             //Finalizando .svg referente ao .qry:
 
                 //Terminando a string para então podermos printa-la em um .svg:
-                svg_finalize_final_document(&svgFinalDocumentQry);
+
+                char* svgFinalDocumentQry2 = NULL;
+
+                svg_append_tag_to_final_document(&closeTag, &svgFinalDocumentQry, &svgFinalDocumentQry2);
+
+                printf("\n.svgQry content:\n");
+                printf("%s\n", svgFinalDocumentQry);
+
 
                 //Criando .svg:
                 FILE *svgQry;
@@ -288,8 +297,13 @@ int main (int argc, char* argv[]){
     //Finalizando .svg referente ao .geo:
 
         //Terminando a string para então podermos printa-la em um .svg:
-        svg_finalize_final_document(&svgFinalDocument);
+ 
+        char* svgFinalDocument2 = NULL;
 
+        svg_append_tag_to_final_document(&closeTag, &svgFinalDocument, &svgFinalDocument2);
+
+        printf("\n.svg content:\n");
+        printf("%s\n", svgFinalDocument);
 
         //Criando .svg:
         FILE *svg;

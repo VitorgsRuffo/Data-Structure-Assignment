@@ -25,17 +25,6 @@ void svg_append_tag_to_final_document(char* *finalTag, char* *svgFinalDocument, 
 }
 
 
-void svg_finalize_final_document(char* *svgFinalDocument){
-
-    strcat(*svgFinalDocument, "</svg>");
-
-    printf("\n.svg content:\n");
-    printf("%s\n", *svgFinalDocument);
-
-}
-
-
-
 void svg_build_circ_tag(char* *tag, char* i, char* rad, char* x, char* y, char* corb, char* corp){
 
     //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />

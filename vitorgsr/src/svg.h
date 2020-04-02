@@ -3,8 +3,6 @@
 
 void svg_append_tag_to_final_document(char* *finalTag, char* *svgFinalDocument, char* *svgFinalDocument2);
 
-void svg_finalize_final_document(char* *svgFinalDocument);
-
 
 void svg_build_circ_tag(char* *tag, char* i, char* rad, char* x, char* y, char* corb, char* corp);
 
