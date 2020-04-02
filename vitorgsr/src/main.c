@@ -13,6 +13,8 @@ void freeMemory(FILE *geo, FILE* qry, Parameter *parameter, char* *commands, int
 
 int count_file_lines(FILE *file);
 
+int get_nx(FILE *file);
+
 
 int main (int argc, char* argv[]){
 
@@ -57,13 +59,19 @@ int main (int argc, char* argv[]){
     
     //Tratando o arquivo .geo:
 
+        //conseguindo o valor de nx no arquivo geo (se nao existir usaremos 1000 como default):
+        int nx = get_nx(geo);
+    
+        printf("\nnx: %d\n", nx);
+
+        //vetor de strings onde cada string é um comando lido do arquivo:
+        char* command[nx];
+
+
         //precisamos contar quantas comandos (linhas) temos no arquivo de entrada .geo:
         int geo_lines_count = count_file_lines(geo);
 
         printf(".geo commands(lines) number: %d\n", geo_lines_count);
-    
-        //vetor de strings onde cada string é um comando lido do arquivo:
-        char* command[geo_lines_count];
     
         for(int j = 0; j<geo_lines_count; j++){
             command[j] = (char*) malloc(110 * sizeof(char));  //Supomos que 110 == tamanho maximo de um comando (linha)
@@ -119,7 +127,7 @@ int main (int argc, char* argv[]){
                     svg_draw(&command[j], &svgFinalDocument, 7);
                     break;
                 case 'n':
-                    //svg_nx_command(commands[j);
+
                     break;
                 default:
                     printf("%d.o command is invalid.\n", j + 1);
@@ -135,7 +143,7 @@ int main (int argc, char* argv[]){
         if(parameter.qryFileName != NULL){
 
             //Matriz dos comandos geo: cada linha representa um comando e cada coluna uma parte daquele comando.
-            char* commands[geo_lines_count][8]; //file_lines_count == numero de comandos (figuras) 
+            char* commands[nx][8]; //nx == numero maximo de  comandos (figuras/textos) 
                                                 //8 == numero maximo de partes de um comando. (informacoes da figura)
 
             for(int i = 0; i<geo_lines_count; ++i){
@@ -348,3 +356,25 @@ int count_file_lines(FILE *file){
     return lines_count;
 }
 
+
+
+int get_nx(FILE *file){
+
+    char* nxCommand = (char*) malloc(100 * sizeof(char));
+
+    fgets(nxCommand, 100, file);
+
+    fseek(file, 0, SEEK_SET);
+
+    if(nxCommand[0] == 'n'){
+
+        return strtol(&nxCommand[3], NULL, 10);
+
+    }else{
+
+        //como não temos um comando nx na primeira linha vamos usar o valor 1000 como default para nx.
+        return 1000;
+        
+    }
+
+}
