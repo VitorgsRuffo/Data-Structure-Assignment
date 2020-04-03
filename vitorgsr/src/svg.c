@@ -68,7 +68,7 @@ void svg_interpret_command(char* *command, char* *commandElements, int commandNu
             magenta
     */
 
-    //lidando com circulos:
+    //lidando com circulos:    //(REPETIÇÃO 1)
     if(*(command[0]) == 'c'){
 
         sscanf(*command, "%s %s %s %s %s %s %s", commandElements[0], commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
@@ -137,7 +137,7 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
 
     //Criando a tag da figura e a tag do ID da figura a partir do comando:
 
-        char* tag = (char*) malloc(300 * sizeof(char)); //aqui estamos supondo que o tamanho de uma tag vai ser até 50 bytes.
+        char* tag = (char*) malloc(300 * sizeof(char)); //aqui estamos supondo que o tamanho de uma tag vai ser até 300 bytes.
 
         if(tag == NULL){
             printf("Error! could not allocate memory for tag..");
@@ -297,7 +297,14 @@ void svg_qry_create_txt(char* *txtFinalContent, Parameter *parameter){
 
         int txtPathLen = strlen(parameter->svgQryFullPath);
 
+        //char* svgQryFullPath = (char*) malloc(30 * sizeof(char));
+        //strcpy(svgQryFullPath, "svgQry.svg");
+        //int txtPathLen = strlen(svgQryFullPath);
+
+
         char* txtPath = (char*) malloc((txtPathLen + 1) * sizeof(char));
+
+        //sprintf(txtPath, "%s", svgQryFullPath);
 
         sprintf(txtPath, "%s", parameter->svgQryFullPath);
 
@@ -326,13 +333,13 @@ void svg_qry_create_txt(char* *txtFinalContent, Parameter *parameter){
             exit(1);
         }
 
-        printf("\ntxt content:\n%s\n", *txtFinalContent);
+        //printf("\ntxt content:\n%s\n", *txtFinalContent);
 
         fprintf(txt, "%s", *txtFinalContent);
 
         fclose(txt);
 
-   
+        free(txtPath);
 }
 
 
@@ -687,6 +694,8 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
             free(svgFinalDocumentQry2);
 
+            free(rectTag);
+
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
 
@@ -698,7 +707,7 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
             strcpy(result, "NAO");
         }
 
-        char* txtContent = (char*) malloc(70 * sizeof(char));
+        char* txtContent = (char*) malloc(100 * sizeof(char));
 
         sprintf(txtContent,"%s\n%s: %s  %s: %s  %s\n\n", *qryCommand, J, jType, K, kType, result);
 
@@ -706,14 +715,17 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
         svg_append_txt_content(&txtContent, txtFinalContent, &txtFinalContent2);
 
-        free(result);
 
-        free(txtContent);
-
-        free(txtFinalContent2);
+        free(result); free(txtContent); free(txtFinalContent2);
 
     //Limpando a de memoria:
 
+        free(J); free(K); free(jType); free(kType);
+
+        for(int i = 0; i<8; ++i){
+            free(jShape[i]);
+            free(kShape[i]);
+        }
 }
 
 void svg_i_build_dot_line_tag(char* *tag, float pX, float pY, float cmX, float cmY, int isInside){
@@ -752,7 +764,7 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
     //Extraindo as informaçoes da figura:
 
-        char* jShape[8];
+        char* jShape[6];
 
         for(int i = 0; i < geo_lines_count; ++i){
 
@@ -851,7 +863,7 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
                 
             svg_append_tag_to_final_document(&dotLineTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
 
-            free(svgFinalDocumentQry2);
+            free(svgFinalDocumentQry2);  free(dotLineTag);
 
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
@@ -864,7 +876,7 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
             strcpy(result, "NAO INTERNO");
         }    
 
-        char* txtContent = (char*) malloc(50 * sizeof(char));
+        char* txtContent = (char*) malloc(100 * sizeof(char));
 
         sprintf(txtContent, "%s\n%s: %s %s\n\n", *qryCommand, J, jType, result);
 
@@ -874,15 +886,15 @@ void svg_qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
         svg_append_txt_content(&txtContent, txtFinalContent, &txtFinalContent2);
 
-        free(result);
-
-        free(txtContent);
-
-        free(txtFinalContent2);
+        free(result);  free(txtContent);  free(txtFinalContent2);
 
     //Limpando a de memoria:
 
+        free(J); free(jType);
 
+        for(int i = 0; i<6; ++i){
+            free(jShape[i]);
+        }
 }
 
 
@@ -971,7 +983,7 @@ void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinal
     }
 
     //Limpando a de memoria:
-
+        free(J); free(searchJ);
 }
 
 
@@ -1060,10 +1072,8 @@ void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFina
         free(txtContent);
         free(txtFinalContent2);
 
-
     //Limpar memoria:
-
-
+        free(J); free(K); free(searchId);
 }
 
 
@@ -1082,7 +1092,6 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
         //essas variaveis vao guardar as cores originais da borda e preenchimento. (Para mais tarde imprimirmos-as no txt do pnt)
         char* originalCorb = (char*) malloc(15 * sizeof(char));
         char* originalCorp = (char*) malloc(15 * sizeof(char));
-
 
     //Extrair os dados da figura/txt a ser pintada:
 
@@ -1108,9 +1117,6 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
 
         }
 
-    
-
-
     //Excluir a figura/txt do svgFinalDocumentQry:
 
         char* delfCommand = (char*) malloc(15 * sizeof(char));
@@ -1125,7 +1131,6 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
     //Construir uma nova tag para essa figura/txt com a nova cor de borda e preenchimento:
 
         char* tag = (char*) malloc(200 * sizeof(char));
-
 
         if(*jDrawing[0] == 'c'){
 
@@ -1165,7 +1170,7 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
                 
         svg_append_tag_to_final_document(&newTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
 
-        free(svgFinalDocumentQry2);
+        free(svgFinalDocumentQry2); free(newTag);
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
 
@@ -1179,7 +1184,6 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
 
             sprintf(txtContent, "%s\ni: %s, corb original: %s, corp original: %s\n\n", *pnt2, J, originalCorb, originalCorp);
 
-
         }
 
         printf("\npnt txt content:\n%s\n", txtContent);
@@ -1188,18 +1192,17 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
 
         svg_append_txt_content(&txtContent, txtFinalContent, &txtFinalContent2);
 
-        free(txtContent);
+        free(txtContent); free(txtFinalContent2);
 
-        free(txtFinalContent2);
+        printf("\nafter pnt:\n%s\n", *svgFinalDocumentQry);
 
     //Limpando a de memoria:
 
-
-
-
-
-    printf("\nafter pnt:\n%s\n", *svgFinalDocumentQry);
-
+        free(J); free(newCorb); free(newCorp); free(originalCorb); free(originalCorp);
+        
+        for(int i = 0; i<8; ++i){
+            free(jDrawing[i]);
+        }
 }
 
 
@@ -1213,8 +1216,6 @@ void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, c
         char* newCorp = (char*) malloc(8 * sizeof(char));
 
         sscanf(&qryCommand[0][5], "%s %s %s %s", J, K, newCorb, newCorp);
-
-        //printf("\npnt*: %s %s %s %s\n", J, K, newCorb, newCorp);
 
     //Chamar a funçao svg_qry_pnt para casa uma das entidades cujo id esta entre J e K:
 
@@ -1238,4 +1239,5 @@ void svg_qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, c
 
         }
 
+        free(pntCommand); free(J); free(K); free(newCorb); free(newCorp);
 }

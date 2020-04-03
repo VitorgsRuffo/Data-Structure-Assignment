@@ -7,6 +7,8 @@
 #include "qry.h"
 #include "svg.h"
 
+#define command_max_length 100
+
 
 //refactor note: to build a struct containing all the vars that are created and used in main :
 void freeMemory(FILE *geo, FILE* qry, Parameter *parameter, char* *commands, int file_lines_count, char* svgFinalDocument, FILE* svg);
@@ -74,7 +76,7 @@ int main (int argc, char* argv[]){
         printf(".geo commands(lines) number: %d\n", geo_lines_count);
     
         for(int j = 0; j<geo_lines_count; j++){
-            command[j] = (char*) malloc(240 * sizeof(char));  //Supomos que 240 == tamanho maximo de um comando (linha)
+            command[j] = (char*) malloc(command_max_length * sizeof(char));  //Supomos que 100 == tamanho maximo de um comando (linha)
 
             if(command[j] == NULL){
                 printf("Error allocating memory for commands array.\nFinishing execution..\n");
@@ -150,15 +152,33 @@ int main (int argc, char* argv[]){
 
             for(int i = 0; i<geo_lines_count; ++i){
                 for(int j = 0; j<8; ++j){
-                    commands[i][j] = (char*) malloc(30 * sizeof(char)); //fica determinado, portanto, que cada parte de comando pode ter até 50 bytes.
+                    if(j == 6){
+                        //deixamos um espaço extra na posicao 6, pois é la que vai ser guardado o texto caso o comando seja do tipo textual.
+                        commands[i][j] = (char*) malloc(50 * sizeof(char)); //fica determinado, portanto, que esta parte de comando pode ter até 50 bytes.
+
+                    }else{
+                        commands[i][j] = (char*) malloc(30 * sizeof(char)); //fica determinado, portanto, que cada parte de comando pode ter até 30 bytes.
+
+                    }
                 }
             }
 
             //prenchendo a matriz corretamente:
-            for(int i = 0; i<geo_lines_count; ++i){ //!! ///tratar para quando for um commando de texto porque ele vai precisar de um tipo diferente de leitura %[^\n]s na posicao commands[i][6]
+            for(int i = 0; i<geo_lines_count; ++i){   //(REPETIÇÃO 1: svg interpret command)
+                //tratar para quando for um commando de texto porque ele vai precisar de um tipo diferente de leitura %[^\n]s na posicao commands[i][6]
+                if(command[i][0] == 't'){
 
-                sscanf(command[i], "%s %s %s %s %s %s %s %s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6], commands[i][7]);
+                    sscanf(command[i], "%s %s %s %s %s %s %[^\n]s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
+                
+                }else if(command[i][0] == 'c'){
+                    
+                    sscanf(command[i], "%s %s %s %s %s %s %s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
+                
+                }else if(command[i][0] == 'r'){
 
+                    sscanf(command[i], "%s %s %s %s %s %s %s %s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6], commands[i][7]);
+
+                }
             }
 
             printf("\n\nMatriz content:\n");
@@ -168,11 +188,9 @@ int main (int argc, char* argv[]){
                 for(int j = 0; j<8; ++j){
             
                     printf("%s ", commands[i][j]);
-
-        
                 }
 
-                    printf("\n");
+                printf("\n");
             }
                 
             int qry_lines_count = count_file_lines(qry);
@@ -183,7 +201,7 @@ int main (int argc, char* argv[]){
             char* qryCommand[qry_lines_count];
 
             for(int j = 0; j<qry_lines_count; j++){
-                qryCommand[j] = (char*) malloc(20 * sizeof(char));  //Supomos que 20 == tamanho maximo de um comando (linha)
+                qryCommand[j] = (char*) malloc(40 * sizeof(char));  //Supomos que 40 == tamanho maximo de um comando (linha)
 
                 if(qryCommand[j] == NULL){
                     printf("Error allocating memory for commands array.\nFinishing execution..\n");
@@ -198,7 +216,7 @@ int main (int argc, char* argv[]){
             
             while(!feof(qry)){
             
-                if(fgets(qryCommand[i], 110, qry)){
+                if(fgets(qryCommand[i], 100, qry)){
 
                     //remover \n do final de cada comando:
                     commandLen = strlen(qryCommand[i]);
@@ -223,7 +241,7 @@ int main (int argc, char* argv[]){
 
 
             buildSvgQryPath(&parameter);
-
+            
 
             //String que vai conter todos textos referentes aos comandos do arquivo e que vai ser printada em um arquivo de saida txt.
             char* txtFinalContent = (char*) malloc(2 * sizeof(char));
@@ -264,6 +282,15 @@ int main (int argc, char* argv[]){
     
             }
 
+            for(int i = 0; i<geo_lines_count; ++i){
+                for(int j = 0; j<8; ++j){
+                    free(commands[i][j]);
+                }
+            }
+
+            for(int j = 0; j<qry_lines_count; j++){
+                free(qryCommand[j]);
+            }
 
             //Finalizando .svg referente ao .qry:
 
@@ -273,24 +300,29 @@ int main (int argc, char* argv[]){
 
                 svg_append_tag_to_final_document(&closeTag, &svgFinalDocumentQry, &svgFinalDocumentQry2);
 
+                free(svgFinalDocumentQry2);
+
                 printf("\n.svgQry content:\n");
-                printf("%s\n", svgFinalDocumentQry);
+                //printf("%s\n", svgFinalDocumentQry);
 
 
                 //Criando .svg:
                 FILE *svgQry;
 
+                printf("\nsvgQryFullPath: %s\n", parameter.svgQryFullPath);
 
                 svgQry = fopen(parameter.svgQryFullPath, "w");
                 if(svgQry == NULL){
-                    printf("Error: opening svgQry.\n");
-                }
+                   printf("Error: opening svgQry file.\n");
+                    }
 
                 fprintf(svgQry, "%s", svgFinalDocumentQry);
             
             //Criando txt:
 
             svg_qry_create_txt(&txtFinalContent, &parameter);
+
+            free(txtFinalContent);
 
         }
 
@@ -302,13 +334,19 @@ int main (int argc, char* argv[]){
 
         svg_append_tag_to_final_document(&closeTag, &svgFinalDocument, &svgFinalDocument2);
 
+        free(svgFinalDocument2);
+        free(closeTag);
+
+
         printf("\n.svg content:\n");
-        printf("%s\n", svgFinalDocument);
+        //printf("%s\n", svgFinalDocument);
 
         //Criando .svg:
         FILE *svg;
 
         buildSvgPath(&parameter);
+        printf("\nsvgFullPath: %s\n", parameter.svgFullPath);
+
 
         svg = fopen(parameter.svgFullPath, "w");
         if(svg == NULL){
@@ -346,7 +384,7 @@ void freeMemory(FILE *geo, FILE* qry, Parameter *parameter, char* *command, int 
     }
 
     free(svgFinalDocument);
-    free(parameter->svgFullPath);
+    //free(parameter->svgFullPath);
     fclose(svg);
 }
 
@@ -374,18 +412,23 @@ int count_file_lines(FILE *file){
 
 int get_nx(FILE *file){
 
-    char* nxCommand = (char*) malloc(100 * sizeof(char));
+    char* nxCommand = (char*) malloc(command_max_length * sizeof(char));
 
-    fgets(nxCommand, 100, file);
+    fgets(nxCommand, command_max_length, file);
 
     fseek(file, 0, SEEK_SET);
 
     if(nxCommand[0] == 'n'){
 
-        return strtol(&nxCommand[3], NULL, 10);
+        int nx = strtol(&nxCommand[3], NULL, 10);
+
+        free(nxCommand);
+
+        return nx;
 
     }else{
 
+        free(nxCommand);
 
         //como não temos um comando nx na primeira linha vamos usar o valor 1000 como default para nx.
         return 1000;
