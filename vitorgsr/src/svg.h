@@ -1,6 +1,8 @@
 #ifndef SVG_H
 #define SVG_H
 
+void svg_set_view_box(float* X, float* Y, float* W, float* H);
+
 void svg_append_tag_to_final_document(char* *finalTag, char* *svgFinalDocument, char* *svgFinalDocument2);
 
 

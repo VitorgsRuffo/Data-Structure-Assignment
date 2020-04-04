@@ -109,13 +109,31 @@ int main (int argc, char* argv[]){
         
         }
 
+        //Refinando os nossos dados para facilitar o acesso:
+        //(Os dados do geo serao organizados da seguinte maneira: matriz de ponteiros.
+        // Cala linha representa um comando, cada coluna uma parte deste comando.)
+
+            
+
+        //Precisamos configurar a view box do svg que vai ser gerado para evitarmos que algumas figuras aparecam cortadas:
+            float X = 1000.0, Y = 1000.0, W = 0, H = 0;
+
+            svg_set_view_box(&X, &Y, &W, &H);
+
+            char* openingSvgTag = (char*) malloc(100 * sizeof(char));
+
+            sprintf(openingSvgTag, "<svg viewBox=\"%f %f %f %f\">\n", X, Y, W, H);
 
         //String que vai conter todas as tags referentes aos comandos do arquivo e que vai ser printada em um arquivo svg.
-        char* svgFinalDocument = (char*) malloc((strlen("<svg>\n") + 1) * sizeof(char));
-        strcpy(svgFinalDocument, "<svg>\n");
+        char* svgFinalDocument = (char*) malloc((strlen(openingSvgTag) + 1) * sizeof(char));
+        strcpy(svgFinalDocument, openingSvgTag);
+
+        free(openingSvgTag);
+
 
         char* closeTag = (char*) malloc((strlen("</svg>") + 1) * sizeof(char));
         strcpy(closeTag, "</svg>");
+
 
         //Tratando um comando por vez: construir a tag relativa ao comando e anexa-la a string final.
         for(int j = 0; j<geo_lines_count; ++j){
@@ -147,7 +165,7 @@ int main (int argc, char* argv[]){
         if(parameter.qryFileName != NULL){
 
             //Matriz dos comandos geo: cada linha representa um comando e cada coluna uma parte daquele comando.
-            char* commands[nx][8]; //nx == numero maximo de  comandos (figuras/textos) 
+            char* commands[geo_lines_count][8]; //nx == numero maximo de  comandos (figuras/textos) 
                                                 //8 == numero maximo de partes de um comando. (informacoes da figura)
 
             for(int i = 0; i<geo_lines_count; ++i){

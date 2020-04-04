@@ -5,6 +5,14 @@
 
 #include "parameters.h"
 
+
+void svg_set_view_box(float* X, float* Y, float* W, float* H){
+
+
+
+}
+
+
 void svg_append_tag_to_final_document(char* *finalTag, char* *svgFinalDocument, char* *svgFinalDocument2){
 
     //Vamos precisar de mais espaço na string svgFinalDocument, pois vamos anexar a circle tag nela:
@@ -85,8 +93,10 @@ void svg_interpret_command(char* *command, char* *commandElements, int commandNu
     }
 
     for(int j = 0; j<commandNum; ++j){
-        printf("%s\n", commandElements[j]);
+        printf("%s ", commandElements[j]);
     }
+
+    printf("\n");
 
 }
 
