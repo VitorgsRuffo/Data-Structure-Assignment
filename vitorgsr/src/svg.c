@@ -198,14 +198,38 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
 }
 
 
-void buildSvgPath(Parameter *parameter){
+void buildSvgPath(Parameter *parameter){ //erros de path se a opção -f tiver um diretorio ou + antes do arquivo geo.
 
     int outputDirLen = strlen(parameter->outputDir);
-    int svgFileNameLen = strlen(parameter->geoFileName);
+
+    //ha a possibilidade de o nome do arquivo geo for um caminho relativo (e.g, testes/g.geo). O trecho de cod abaixo trata o problema que isso causa.
+        int j = 0;
+
+        char* geoFileName;
+
+        int len = strlen(parameter->geoFileName);
+
+        for(int i = 0; i<len; ++i){
+
+            if(parameter->geoFileName[i] == '/'){
+                j = i + 1;
+            }
+
+            if(parameter->geoFileName[i] == '.'){
+                geoFileName = (char*) malloc((strlen(&parameter->geoFileName[j]) + 1) * sizeof(char));
+
+                sscanf(&parameter->geoFileName[j],"%s", geoFileName);
+    
+                break;
+            }
+
+        }
+
+    int svgFileNameLen = strlen(geoFileName);
 
     char* svgFileName  = (char*) malloc((svgFileNameLen + 1) * sizeof(char));
 
-    strcpy(svgFileName, parameter->geoFileName);
+    strcpy(svgFileName, geoFileName);
 
     int aux = 0;
 
@@ -242,7 +266,7 @@ void buildSvgPath(Parameter *parameter){
     printf("\n%s\n", parameter->svgFullPath);
     
     
-    free(svgFileName);
+    free(svgFileName); free(geoFileName);
 }
 
 
@@ -250,27 +274,58 @@ void buildSvgPath(Parameter *parameter){
 void buildSvgQryPath(Parameter *parameter){
 
     int outputDirLen = strlen(parameter->outputDir);
-    int svgQryFileNameLen = strlen(parameter->geoFileName) + 2; //os 2 bytes extras sao pra acrescentar -q no nome do arquivo.
-
-    char* svgQryFileName  = (char*) malloc((svgQryFileNameLen + 1) * sizeof(char));
-
-    sprintf(svgQryFileName,"%s  ", parameter->geoFileName);
 
 
-    for(int i = 0; i<svgQryFileNameLen; ++i){
-        
-        if(svgQryFileName[i] == '.'){
-            svgQryFileName[i] = '-';
-            svgQryFileName[i+1] = 'q';
-            svgQryFileName[i+2] = '.';
-            svgQryFileName[i+3] = 's';
-            svgQryFileName[i+4] = 'v';
-            svgQryFileName[i+5] = 'g';
+    int geoFileNameLen = strlen(parameter->geoFileName); 
+    int qryFileNameLen = strlen(parameter->qryFileName);
+    int svgQryFileNameLen = (geoFileNameLen + qryFileNameLen) + 5; // + 5 pois precisamos de espaço para o '-' e para '.svg'. //-8 pois estamos desconsiderando o .geo e o .qry
 
+    char* geoFileName = (char*) malloc((geoFileNameLen + 1) * sizeof(char));
+    char* qryFileName = (char*) malloc((qryFileNameLen + 1) * sizeof(char));
+
+    int j = 0;
+
+    for(int i = 0; i<geoFileNameLen; ++i){
+
+        if(parameter->geoFileName[i] == '/'){
+            j = i + 1;
+        }
+
+        if(parameter->geoFileName[i] == '.'){
+            parameter->geoFileName[i] = ' ';
+
+            sscanf(&parameter->geoFileName[j],"%s", geoFileName);
+
+            parameter->geoFileName[i] = '.';
+            
             break;
         }
 
     }
+
+    j = 0;
+
+    for(int i = 0; i<qryFileNameLen; ++i){
+
+        if(parameter->qryFileName[i] == '/'){
+            j = i + 1;
+        }
+
+        if(parameter->qryFileName[i] == '.'){
+            parameter->qryFileName[i] = ' ';
+
+            sscanf(&parameter->qryFileName[j],"%s", qryFileName);
+
+            parameter->qryFileName[i] = '.';
+            
+            break;
+        }
+
+    }
+
+    char* svgQryFileName = (char*) malloc((svgQryFileNameLen + 1) * sizeof(char));
+    sprintf(svgQryFileName, "%s-%s.svg", geoFileName, qryFileName);
+
 
     parameter->svgQryFullPath = (char*) malloc((outputDirLen + svgQryFileNameLen + 1) * sizeof(char));
 
@@ -287,7 +342,7 @@ void buildSvgQryPath(Parameter *parameter){
     printf("\n%s\n", parameter->svgQryFullPath);
     
     
-    free(svgQryFileName);
+    free(svgQryFileName); free(geoFileName); free(qryFileName);
 }
 
 
@@ -297,14 +352,7 @@ void svg_qry_create_txt(char* *txtFinalContent, Parameter *parameter){
 
         int txtPathLen = strlen(parameter->svgQryFullPath);
 
-        //char* svgQryFullPath = (char*) malloc(30 * sizeof(char));
-        //strcpy(svgQryFullPath, "svgQry.svg");
-        //int txtPathLen = strlen(svgQryFullPath);
-
-
         char* txtPath = (char*) malloc((txtPathLen + 1) * sizeof(char));
-
-        //sprintf(txtPath, "%s", svgQryFullPath);
 
         sprintf(txtPath, "%s", parameter->svgQryFullPath);
 

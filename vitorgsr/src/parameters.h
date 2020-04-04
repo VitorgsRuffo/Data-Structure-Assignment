@@ -5,11 +5,10 @@ struct parameter{
     char* inputDir;
     char* geoFileName;
     char* qryFileName;
-    char* outputDir;
-
     char* geoFullPath;
     char* qryFullPath;
-    
+
+    char* outputDir;
     char* svgFullPath;
     char* svgQryFullPath;
 };
