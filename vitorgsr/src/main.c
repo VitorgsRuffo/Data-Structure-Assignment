@@ -73,7 +73,7 @@ int main (int argc, char* argv[]){
         //precisamos contar quantas comandos (linhas) temos no arquivo de entrada .geo:
         int geo_lines_count = count_file_lines(geo);
 
-        printf(".geo commands(lines) number: %d\n", geo_lines_count);
+        printf("\n.geo commands(lines) number: %d\n", geo_lines_count);
     
         for(int j = 0; j<geo_lines_count; j++){
             command[j] = (char*) malloc(command_max_length * sizeof(char));  //Supomos que 100 == tamanho maximo de um comando (linha)
@@ -85,40 +85,61 @@ int main (int argc, char* argv[]){
         }
 
         //Lendo o arquivo:
-        printf(".geo content:\n");
+            printf("\n.geo content:\n");
 
-        int i = 0;
-        int commandLen;
+            int x = 0;
+            int commandLen;
 
-        while(!feof(geo)){
-        
-            if(fgets(command[i], 110, geo)){
+            while(!feof(geo)){
+            
+                if(fgets(command[x], 110, geo)){
 
-                //remover \n do final de cada comando:
-                commandLen = strlen(command[i]);
+                    //remover \n do final de cada comando:
+                    commandLen = strlen(command[x]);
 
-                command[i][commandLen-1] = '\0';
+                    command[x][commandLen-1] = '\0';
 
-                printf("%s\n", command[i]);
+                    printf("%s\n", command[x]);
 
-                if(i < geo_lines_count){
-                    ++i;
+                    if(x < geo_lines_count){
+                        ++x;
+                    }
+
                 }
-
+            
             }
-        
-        }
 
         //Refinando os nossos dados para facilitar o acesso:
         //(Os dados do geo serao organizados da seguinte maneira: matriz de ponteiros.
         // Cala linha representa um comando, cada coluna uma parte deste comando.)
+           
+            char* commands[geo_lines_count][8]; //geo_lines_count == numero exato de comandos (figuras/textos) 
+                                                //8 == numero maximo de partes de um comando. (informacoes da figura)
 
-            
+            for(int i = 0; i<geo_lines_count; ++i){
+                for(int j = 0; j<8; ++j){
+                    if(j == 6){
+                        //deixamos um espaço extra na posicao 6, pois é la que vai ser guardado o texto caso o comando seja do tipo textual.
+                        commands[i][j] = (char*) malloc(50 * sizeof(char)); //fica determinado, portanto, que esta parte de comando pode ter até 50 bytes.
+
+                    }else{
+                        commands[i][j] = (char*) malloc(30 * sizeof(char)); //fica determinado, portanto, que cada parte de comando pode ter até 30 bytes.
+
+                    }
+                }
+            }
+
+            printf("\nmatrix content: \n");
+            //preenchendo a matriz:
+            for(int i = 0; i<geo_lines_count; ++i){
+                svg_interpret_command(command[i], commands, i);
+            }
+
 
         //Precisamos configurar a view box do svg que vai ser gerado para evitarmos que algumas figuras aparecam cortadas:
-            float X = 1000.0, Y = 1000.0, W = 0, H = 0;
+            float X = 1000, Y = 1000, W = 0, H = 0;
 
-            svg_set_view_box(&X, &Y, &W, &H);
+            svg_set_view_box(&X, &Y, &W, &H, commands, geo_lines_count);
 
             char* openingSvgTag = (char*) malloc(100 * sizeof(char));
 
@@ -136,23 +157,23 @@ int main (int argc, char* argv[]){
 
 
         //Tratando um comando por vez: construir a tag relativa ao comando e anexa-la a string final.
-        for(int j = 0; j<geo_lines_count; ++j){
+        for(int i = 0; i<geo_lines_count; ++i){
 
-            switch(command[j][0]){
+            switch(commands[i][0][0]){
                 case 'c':
-                    svg_draw(&command[j], &svgFinalDocument, 7); 
+                    svg_draw(commands, i, &svgFinalDocument); 
                     break;
                 case 'r':
-                    svg_draw(&command[j], &svgFinalDocument, 8);
+                    svg_draw(commands, i, &svgFinalDocument);
                     break;
                 case 't':
-                    svg_draw(&command[j], &svgFinalDocument, 7);
+                    svg_draw(commands, i, &svgFinalDocument);
                     break;
                 case 'n':
 
                     break;
                 default:
-                    printf("%d.o command is invalid.\n", j + 1);
+                    printf("%d.o command is invalid.\n", i + 1);
                     break;
             }
     
@@ -160,56 +181,9 @@ int main (int argc, char* argv[]){
  
 
 
-    //Tratando o arquivo .qry (se necessário):   (limpar memoria!!!)
+    //Tratando o arquivo .qry (se necessário):  
 
         if(parameter.qryFileName != NULL){
-
-            //Matriz dos comandos geo: cada linha representa um comando e cada coluna uma parte daquele comando.
-            char* commands[geo_lines_count][8]; //nx == numero maximo de  comandos (figuras/textos) 
-                                                //8 == numero maximo de partes de um comando. (informacoes da figura)
-
-            for(int i = 0; i<geo_lines_count; ++i){
-                for(int j = 0; j<8; ++j){
-                    if(j == 6){
-                        //deixamos um espaço extra na posicao 6, pois é la que vai ser guardado o texto caso o comando seja do tipo textual.
-                        commands[i][j] = (char*) malloc(50 * sizeof(char)); //fica determinado, portanto, que esta parte de comando pode ter até 50 bytes.
-
-                    }else{
-                        commands[i][j] = (char*) malloc(30 * sizeof(char)); //fica determinado, portanto, que cada parte de comando pode ter até 30 bytes.
-
-                    }
-                }
-            }
-
-            //prenchendo a matriz corretamente:
-            for(int i = 0; i<geo_lines_count; ++i){   //(REPETIÇÃO 1: svg interpret command)
-                //tratar para quando for um commando de texto porque ele vai precisar de um tipo diferente de leitura %[^\n]s na posicao commands[i][6]
-                if(command[i][0] == 't'){
-
-                    sscanf(command[i], "%s %s %s %s %s %s %[^\n]s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
-                
-                }else if(command[i][0] == 'c'){
-                    
-                    sscanf(command[i], "%s %s %s %s %s %s %s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
-                
-                }else if(command[i][0] == 'r'){
-
-                    sscanf(command[i], "%s %s %s %s %s %s %s %s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6], commands[i][7]);
-
-                }
-            }
-
-            printf("\n\nMatriz content:\n");
-
-            for(int i = 0; i<geo_lines_count; ++i){
-        
-                for(int j = 0; j<8; ++j){
-            
-                    printf("%s ", commands[i][j]);
-                }
-
-                printf("\n");
-            }
                 
             int qry_lines_count = count_file_lines(qry);
         
@@ -230,7 +204,7 @@ int main (int argc, char* argv[]){
             //Lendo o arquivo:
             printf("\n.qry content:\n");
 
-            i = 0;
+            int i = 0;
             
             while(!feof(qry)){
             

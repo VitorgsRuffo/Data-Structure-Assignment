@@ -6,10 +6,85 @@
 #include "parameters.h"
 
 
-void svg_set_view_box(float* X, float* Y, float* W, float* H){
+void svg_set_view_box(float* X, float* Y, float* W, float* H, char* commands[][8], int geo_lines_count){
 
+    float commX, commY;
+    float commRadius; float commW, commH; 
 
+    float largerW = 0, largerH = 0;
+    
+    for(int i = 0; i<geo_lines_count; ++i){
+                
+        if(commands[i][0][0] == 'c'){ // r 2  x 3  y 4
 
+            commRadius = strtof(commands[i][2], NULL);
+            commX = strtof(commands[i][3], NULL);
+            commY = strtof(commands[i][4], NULL);
+
+            if(commX - commRadius < *X ){
+                *X = commX - commRadius ;
+            }
+
+            if(commY - commRadius < *Y ){ 
+                *Y = commY - commRadius;
+            }
+
+            if(commX + commRadius > largerW ){
+                largerW = commX + commRadius;
+
+            }
+
+            if(commY + commRadius > largerH){
+                largerH = commY + commRadius;
+            }
+            
+
+       
+        }else if(commands[i][0][0] == 'r'){ // w 2 h 3 x 4 y 5
+
+            commW = strtof(commands[i][2], NULL);
+            commH = strtof(commands[i][3], NULL);
+            commX = strtof(commands[i][4], NULL);
+            commY = strtof(commands[i][5], NULL);         
+        
+            if(commX < *X){
+                *X = commX;
+            }
+
+            if(commY < *Y){ 
+                *Y = commY;
+            }
+
+            if(commX + commW > largerW){
+                largerW = commX + commW;
+            }
+
+            if(commY + commH > largerH){
+                largerH = commY + commH;
+            }
+
+        }else if(commands[i][0][0] == 't'){ //x 2 y 3
+            
+            commX = strtof(commands[i][2], NULL);
+            commY = strtof(commands[i][3], NULL);
+
+            if(commX < *X){ 
+                *X = commX;
+            }
+
+            if(commY < *Y){ 
+                *Y = commY;
+            }
+
+            largerW = 500;
+
+            largerH = 500;
+
+        }
+    }
+
+    *W = largerW + (-1*(*X));
+    *H = largerH + (-1*(*Y));
 }
 
 
@@ -61,39 +136,31 @@ void svg_build_txt_tag(char* *tag, char* i, char* x, char* y, char* corb, char* 
 
 
 
-void svg_interpret_command(char* *command, char* *commandElements, int commandNum){
+void svg_interpret_command(char* command, char* commands[][8], int i){
         
     //ex of circ command:   c 1 50.00 50.00 30.00 grey magenta
 
     //ex of rect command:   r 4 10.0 150.0 90.0 40.0 cyan yellow
 
-    /*ex of command elements:
-            c 
-            50.00 
-            50.0
-            30.00
-            grey 
-            magenta
-    */
+    //lidando com circulo:    
+    if(command[0] == 'c'){
 
-    //lidando com circulos:    //(REPETIÇÃO 1)
-    if(*(command[0]) == 'c'){
+        sscanf(command, "%s %s %s %s %s %s %s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
 
-        sscanf(*command, "%s %s %s %s %s %s %s", commandElements[0], commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
+    //lidando com retangulo:
+    }else if(command[0] == 'r'){
 
-    //lidando com retangulos:
-    }else if(*(command[0]) == 'r'){
+        sscanf(command, "%s %s %s %s %s %s %s %s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6], commands[i][7]);
 
-        sscanf(*command, "%s %s %s %s %s %s %s %s", commandElements[0], commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6], commandElements[7]);
-
-    }else if(*(command[0]) == 't'){
+    //lidando com texto:
+    }else if(command[0] == 't'){
             
-        sscanf(*command, "%s %s %s %s %s %s %[^\n]s", commandElements[0], commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
+        sscanf(command, "%s %s %s %s %s %s %[^\n]s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
 
     }
 
-    for(int j = 0; j<commandNum; ++j){
-        printf("%s ", commandElements[j]);
+    for(int j = 0; j<8; ++j){
+        printf("%s ", commands[i][j]);
     }
 
     printf("\n");
@@ -101,50 +168,8 @@ void svg_interpret_command(char* *command, char* *commandElements, int commandNu
 }
 
 
-void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
-
-    //Separando as partes do comando:
-
-        //recebemos o comando. Agora devemos dividir suas partes.
-            
-        //matriz de strings onde cada string é uma parte do comando:
-        char* commandElements[commandNum]; //commandNum == 7 para circulos e texto e 8 para retangulos
-
-        if(*(command[0]) == 'c' || *(command[0]) == 'r'){
-
-            for(int j = 0; j<commandNum; ++j){
-
-                commandElements[j] = (char*) malloc(30*sizeof(char)); //Supomos que 30 == tamanho máx de um pedaço do comando
-
-                if(commandElements[j] == NULL){
-                    printf("Error allocating memory for commandElements array.\nFinishing execution..");
-                    exit(1);
-                }
-            }
-            
-        }else if(*(command[0]) == 't'){
-
-            for(int j = 0; j<commandNum; ++j){
-
-                if(j != commandNum-1){
-                    commandElements[j] = (char*) malloc(15*sizeof(char)); //Supomos que 15 == tamanho máx de um pedaço do comando
-                }else{
-                    commandElements[j] = (char*) malloc(80*sizeof(char)); //aloca 80 bytes para o texto a ser desenhado.
-                }
-
-
-                if(commandElements[j] == NULL){
-                    printf("Error allocating memory for commandElements array.\nFinishing execution..");
-                    exit(1);
-                }
-            }
-
-        }
-
-        //Separando, de fato, as partes do comando:
-        svg_interpret_command(command, commandElements, commandNum);
-
-
+void svg_draw(char* commands[][8], int i, char* *svgFinalDocument){
+ 
     //Criando a tag da figura e a tag do ID da figura a partir do comando:
 
         char* tag = (char*) malloc(300 * sizeof(char)); //aqui estamos supondo que o tamanho de uma tag vai ser até 300 bytes.
@@ -153,22 +178,21 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
             printf("Error! could not allocate memory for tag..");
             exit(1);
         }
-
             
         //lidando com circulos:
-        if(*(command[0]) == 'c'){
+        if(commands[i][0][0] == 'c'){
 
-            svg_build_circ_tag(&tag, commandElements[1], commandElements[2], commandElements[3], commandElements[4],commandElements[5], commandElements[6]);
+            svg_build_circ_tag(&tag, commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
 
         //lidando com retangulos:
-        }else if(*(command[0]) == 'r'){
+        }else if(commands[i][0][0] == 'r'){
 
-            svg_build_rect_tag(&tag, commandElements[1], commandElements[2], commandElements[3], commandElements[4],commandElements[5], commandElements[6], commandElements[7]);
+            svg_build_rect_tag(&tag, commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6], commands[i][7]);
             
         //lidando com texto:
-        }else if(*(command[0]) == 't'){
+        }else if(commands[i][0][0] == 't'){
 
-            svg_build_txt_tag(&tag, commandElements[1], commandElements[2], commandElements[3], commandElements[4], commandElements[5], commandElements[6]);
+            svg_build_txt_tag(&tag, commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
 
         }
 
@@ -187,7 +211,6 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
 
         free(tag);
 
-            
     //Anexando a tag da figura e a tag do ID da figura na string final:
             
         char* svgFinalDocument2 = NULL;
@@ -196,15 +219,7 @@ void svg_draw(char* *command, char* *svgFinalDocument, int commandNum){
 
     //Limpando o resto de memoria:
             
-        free(svgFinalDocument2);
-
-        for(int j = 0; j<commandNum; ++j){
-
-            free(commandElements[j]);
-        }
-
-        free(finalTag);
-    
+        free(svgFinalDocument2); free(finalTag);  
 }
 
 

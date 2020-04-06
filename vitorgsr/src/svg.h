@@ -1,7 +1,7 @@
 #ifndef SVG_H
 #define SVG_H
 
-void svg_set_view_box(float* X, float* Y, float* W, float* H);
+void svg_set_view_box(float* X, float* Y, float* W, float* H, char* commands[][8], int geo_lines_count);
 
 void svg_append_tag_to_final_document(char* *finalTag, char* *svgFinalDocument, char* *svgFinalDocument2);
 
@@ -13,10 +13,10 @@ void svg_build_rect_tag(char* *tag, char* i, char* w, char* h, char* x, char* y,
 void svg_build_txt_tag(char* *tag, char* i, char* x, char* y, char* corb, char* corp, char* txt);
 
 
-void svg_interpret_command(char* *command, char* *commandElements, int commandNum);
+void svg_interpret_command(char* command, char* commands[][8], int i);
 
-void svg_draw(char* *command, char* *svgFinalDocument, int commandNum);
-
+//void svg_draw(char* *command, char* *svgFinalDocument, int commandNum);
+void svg_draw(char* commands[][8], int i, char* *svgFinalDocument);
 
 
 void buildSvgPath(Parameter *parameter);
