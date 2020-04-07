@@ -238,6 +238,7 @@ int main (int argc, char* argv[]){
             //String que vai conter todos textos referentes aos comandos do arquivo e que vai ser printada em um arquivo de saida txt.
             char* txtFinalContent = (char*) malloc(2 * sizeof(char));
 
+            strcpy(txtFinalContent, "");
 
             //Tratando um comando por vez.
             for(int j = 0; j<qry_lines_count; ++j){
@@ -311,6 +312,7 @@ int main (int argc, char* argv[]){
                 fprintf(svgQry, "%s", svgFinalDocumentQry);
             
             //Criando txt:
+            printf("\nfinal txt: %s\n", txtFinalContent);
 
             svg_qry_create_txt(&txtFinalContent, &parameter);
 
@@ -331,7 +333,7 @@ int main (int argc, char* argv[]){
 
 
         printf("\n.svg content:\n");
-        //printf("%s\n", svgFinalDocument);
+        printf("%s\n", svgFinalDocument);
 
         //Criando .svg:
         FILE *svg;

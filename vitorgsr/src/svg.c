@@ -83,8 +83,11 @@ void svg_set_view_box(float* X, float* Y, float* W, float* H, char* commands[][8
         }
     }
 
-    *W = largerW + (-1*(*X));
-    *H = largerH + (-1*(*Y));
+    *X -= 50;
+    *Y -= 50;
+
+    *W = largerW + (-1*(*X)) + 50;
+    *H = largerH + (-1*(*Y)) + 50;
 }
 
 
@@ -276,7 +279,7 @@ void buildSvgPath(Parameter *parameter){ //erros de path se a opção -f tiver u
     }
 
    
-    parameter->svgFullPath = (char*) malloc((outputDirLen + svgFileNameLen + 1) * sizeof(char));
+    parameter->svgFullPath = (char*) malloc((outputDirLen + svgFileNameLen + 2) * sizeof(char));
 
     if(parameter->outputDir[outputDirLen-1] == '/'){
 
@@ -287,9 +290,6 @@ void buildSvgPath(Parameter *parameter){ //erros de path se a opção -f tiver u
         sprintf(parameter->svgFullPath, "%s/%s", parameter->outputDir, svgFileName);
 
     }
-
-    printf("\n%s\n", parameter->svgFullPath);
-    
     
     free(svgFileName); free(geoFileName);
 }
@@ -782,7 +782,10 @@ void svg_qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char
 
         char* txtContent = (char*) malloc(100 * sizeof(char));
 
+        
+
         sprintf(txtContent,"%s\n%s: %s  %s: %s  %s\n\n", *qryCommand, J, jType, K, kType, result);
+
 
         char* txtFinalContent2 = NULL;
 
@@ -1027,6 +1030,15 @@ void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinal
 
         char* txtFinalContent2 = NULL;
 
+        int j = (int) strtof(J, NULL);
+        int k;
+
+        if(j % 2 == 0){
+            k = 0;
+        }else if (j % 2 == 1){
+            k = 1;
+        }
+
         for(int i = 0; i < geo_lines_count; ++i){
 
             if(strcmp(commands[i][1], J) == 0){
@@ -1040,6 +1052,11 @@ void svg_qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinal
 
                     sprintf(txtContent, "%s\ntipo: retangulo, id: %s, w: %s, h: %s, x: %s, y: %s, corb: %s, corp: %s\n\n", 
                                         *qryCommand, commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6], commands[i][7]);
+
+                }else if(commands[i][0][0] == 't'){
+
+                    sprintf(txtContent, "%s\ntipo: texto, id: %s, x: %s, y: %s, corb: %s, corp: %s, texto: %s\n\n", 
+                                        *qryCommand, commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);                    
 
                 }
 
@@ -1109,7 +1126,7 @@ void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFina
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
 
-        char* txtContent = (char*) malloc(100 * sizeof(char));
+        char* txtContent = (char*) malloc(300 * sizeof(char));
 
         char* txtFinalContent2 = NULL;
 
@@ -1130,6 +1147,11 @@ void svg_qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFina
 
                     sprintf(txtContent, "tipo: retangulo, id: %s, w: %s, h: %s, x: %s, y: %s, corb: %s, corp: %s\n\n", 
                                          commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6], commands[i][7]);
+
+                }else if(commands[i][0][0] == 't'){
+
+                    sprintf(txtContent, "tipo: texto, id: %s, x: %s, y: %s, corb: %s, corp: %s, texto: %s\n\n", 
+                                         commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);                    
 
                 }
 
@@ -1170,7 +1192,17 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
 
         char* jDrawing[8];
 
-        for(int i = 0; i < geo_lines_count; ++i){
+        int j = (int) strtof(J, NULL);
+        int k;
+
+        if(j % 2 == 0){
+            k = 0;
+        }else if (j % 2 == 1){
+            k = 1;
+        }
+
+
+        for(int i = k; i < geo_lines_count; i += 2){
 
             if(strcmp(commands[i][1], J) == 0){
 
@@ -1186,19 +1218,20 @@ void svg_qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, ch
 
                 } 
 
+                break;
             }
 
         }
 
     //Excluir a figura/txt do svgFinalDocumentQry:
 
-        char* delfCommand = (char*) malloc(15 * sizeof(char));
+        //char* delfCommand = (char*) malloc(15 * sizeof(char));
 
-        sprintf(delfCommand, "delf %s", J);
+        //sprintf(delfCommand, "delf %s", J);
 
-        svg_qry_delf(&delfCommand, svgFinalDocumentQry, NULL, NULL, 0);
+        //svg_qry_delf(&delfCommand, svgFinalDocumentQry, NULL, NULL, 0);
 
-        free(delfCommand);
+        //free(delfCommand);
 
 
     //Construir uma nova tag para essa figura/txt com a nova cor de borda e preenchimento:
