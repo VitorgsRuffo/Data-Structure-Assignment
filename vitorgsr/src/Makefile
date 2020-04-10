@@ -1,6 +1,6 @@
 CC = gcc
 
-flags = -std=c99 -fstack-protector-all  
+flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
 obj = main.o parameters.o geo.o qry.o svg.o
 

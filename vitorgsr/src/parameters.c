@@ -17,8 +17,7 @@ void deal_with_parameters(int paraNum, char* parameters[], Parameter *parameter)
 
         if(strcmp("-e", parameters[i]) == 0){
 
-            //A proxima string vai ser o caminho para o diretório base de entrada:
-            ++i;
+            ++i; //A proxima string vai ser o caminho para o diretório base de entrada:
 
             //Alocando memória para guardar a string referente ao nome diretório base de entrada:
             parameter->inputDir = (char*) malloc((strlen(parameters[i]) + 1) * sizeof(char));
@@ -28,37 +27,26 @@ void deal_with_parameters(int paraNum, char* parameters[], Parameter *parameter)
 
         }else if(strcmp("-f", parameters[i]) == 0){
             
-            //A proxima string vai ser o nome do arquivo .geo:
-            ++i;
+            ++i; //A proxima string vai ser o nome do arquivo .geo:
 
             //Alocando memória para guardar a string referente ao nome do arquivo .geo:
             parameter->geoFileName = (char*) malloc((strlen(parameters[i]) + 1) * sizeof(char));
-
             strcpy(parameter->geoFileName, parameters[i]);
 
         }else if(strcmp("-q", parameters[i]) == 0){
 
-            //A proxima string vai ser o nome do arquivo .qry:
-            ++i;
+            ++i;  //A proxima string vai ser o nome do arquivo .qry:
 
-            // ''    ''    ''
             parameter->qryFileName = (char*) malloc((strlen(parameters[i]) + 1) * sizeof(char)); 
-
             strcpy(parameter->qryFileName, parameters[i]);
 
         }else if(strcmp("-o", parameters[i]) == 0){
 
-            //A proxima string vai ser o nome do diretorio de arquivos de saida:
-            ++i;
+            ++i;  //A proxima string vai ser o nome do diretorio de arquivos de saida:
 
-            // ''    ''   ''
             parameter->outputDir = (char*) malloc((strlen(parameters[i]) + 1) * sizeof(char)); 
-
             strcpy(parameter->outputDir, parameters[i]);
-
         }
-
-
 
         i++;
     }
@@ -68,7 +56,56 @@ void deal_with_parameters(int paraNum, char* parameters[], Parameter *parameter)
         parameter->inputDir = (char*) malloc(3 * sizeof(char));     
         strcpy(parameter->inputDir, "./");  
     }
+}
 
-    printf("%s\n%s\n%s\n%s\n", parameter->inputDir, parameter->geoFileName, parameter->qryFileName, parameter->outputDir);
+void buildInputFilePath(Parameter *parameter, char* which){
 
+    int lenInDir = strlen(parameter->inputDir);
+    char* inputFileName;
+    int lenInputFileName;
+
+    //building geo full path
+    if(strcmp(which, "geo") == 0){
+
+        lenInputFileName = strlen(parameter->geoFileName);
+        inputFileName = (char*) malloc((lenInputFileName + 1) * sizeof(char));
+        strcpy(inputFileName, parameter->geoFileName);
+
+    //building qry full path
+    }else if(strcmp(which, "qry") == 0){
+
+        lenInputFileName = strlen(parameter->qryFileName);
+        inputFileName = (char*) malloc((lenInputFileName + 1) * sizeof(char));
+        strcpy(inputFileName, parameter->qryFileName);
+
+    }
+
+    char* inputFileFullPath = (char*) malloc((lenInDir + lenInputFileName + 2) * sizeof(char)); //obs: precisamos do '+2' para garantir espaço para o character nulo '\0' no final e para um possivel charactere extra oriundo de um dos tratamentos de erro de path abaixo.
+
+    //Tratando possiveis erros de path:
+            
+        if((parameter->inputDir[lenInDir-1] != '/') && (inputFileName[0] != '/') //corrige o seguinte erro:  /home/ed/testes001.geo
+            && (inputFileName[0] != '.') ){
+
+            sprintf(inputFileFullPath, "%s/%s", parameter->inputDir, inputFileName);
+
+        }else if((parameter->inputDir[lenInDir-1] != '/') && (inputFileName[0] == '.')){ //corrige o seguinte erro: /home/ed/testes./001.geo
+
+            sprintf(inputFileFullPath, "%s/%s", parameter->inputDir, inputFileName);
+
+        }else if((parameter->inputDir[lenInDir-1] == '/') && (inputFileName[0] == '/')){  //corrige o seguinte erro: /home/ed/testes//001.geo
+
+            sprintf(inputFileFullPath, "%s.%s", parameter->inputDir, inputFileName);
+
+        }else{ //caso o path seja inserido corretamente:
+            sprintf(inputFileFullPath, "%s%s", parameter->inputDir, inputFileName);
+        }
+
+        if(strcmp(which, "geo") == 0){
+            parameter->geoFullPath = inputFileFullPath;
+        }else if(strcmp(which, "qry") == 0){
+            parameter->qryFullPath = inputFileFullPath;
+        }
+        
+        free(inputFileName);    
 }
