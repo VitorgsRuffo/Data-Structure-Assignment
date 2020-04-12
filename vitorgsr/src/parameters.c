@@ -64,15 +64,13 @@ void buildInputFilePath(Parameter *parameter, char* which){
     char* inputFileName;
     int lenInputFileName;
 
-    //building geo full path
-    if(strcmp(which, "geo") == 0){
+    if(strcmp(which, "geo") == 0){ //building geo full path
 
         lenInputFileName = strlen(parameter->geoFileName);
         inputFileName = (char*) malloc((lenInputFileName + 1) * sizeof(char));
         strcpy(inputFileName, parameter->geoFileName);
 
-    //building qry full path
-    }else if(strcmp(which, "qry") == 0){
+    }else if(strcmp(which, "qry") == 0){//building qry full path
 
         lenInputFileName = strlen(parameter->qryFileName);
         inputFileName = (char*) malloc((lenInputFileName + 1) * sizeof(char));
@@ -101,11 +99,11 @@ void buildInputFilePath(Parameter *parameter, char* which){
             sprintf(inputFileFullPath, "%s%s", parameter->inputDir, inputFileName);
         }
 
-        if(strcmp(which, "geo") == 0){
-            parameter->geoFullPath = inputFileFullPath;
-        }else if(strcmp(which, "qry") == 0){
-            parameter->qryFullPath = inputFileFullPath;
-        }
+    if(strcmp(which, "geo") == 0){
+        parameter->geoFullPath = inputFileFullPath;
+    }else if(strcmp(which, "qry") == 0){
+        parameter->qryFullPath = inputFileFullPath;
+    }
         
-        free(inputFileName);    
+    free(inputFileName);    
 }

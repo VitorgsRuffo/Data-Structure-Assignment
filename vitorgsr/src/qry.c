@@ -6,6 +6,7 @@
 #include "parameters.h"
 #include "svg.h"
 #include "geo.h"
+#include "qry.h"
 
 
 void qry_create_txt(char* *txtFinalContent, Parameter *parameter){
@@ -44,15 +45,25 @@ void qry_create_txt(char* *txtFinalContent, Parameter *parameter){
         fclose(txt); free(txtPath);
 }
 
-//example: <rect width="100" height="100" x="130.00" y="90.9" fill="#044B94" fill-opacity="0.0" stroke-width="1.5" stroke="rgb(0,0,0)" stroke-dasharray="5,5" />
-void qry_build_o_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision){
-   
-    if(isThereCollision){
-        sprintf(*tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" /> \n", w, h, x, y);
-    }else{
-        sprintf(*tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" stroke-dasharray=\"5,5\" /> \n", w, h, x, y);
-    }  
+void getDrawingInfo(char* jDrawing[], char* kDrawing[], char* commands[][8], int geo_lines_count, char* J, char* K){
+
+    for(int i = 0; i < geo_lines_count; ++i){
+                
+        if(strcmp(commands[i][1], J) == 0){
+                
+            for(int y = 0; y<8; ++y){
+                jDrawing[y] = commands[i][y];
+            }
+
+        }else if(strcmp(commands[i][1], K) == 0){
+                
+            for(int y = 0; y<8; ++y){
+                kDrawing[y] = commands[i][y];
+            }
+        }
+    }    
 }
+
 
 float qry_rect_point_next_to_circ_center(float min, float max, float value){
 
@@ -63,6 +74,187 @@ float qry_rect_point_next_to_circ_center(float min, float max, float value){
     }else{
         return value;
     }
+}
+
+
+int qry_o_circ_circ_collision(float jRadius, float jX, float jY, float kRadius, float kX, float kY){
+    //Eles vão se sobrepor quando a distancia entre os centros dos circulos for menor que a soma dos seus raios.
+
+    float D = sqrt(pow((kX - jX), 2) + pow((kY - jY), 2)); //distancia entre os centros dos circulos:
+
+    if(D < jRadius + kRadius){ //Se sobrepõem:
+        return 1;
+    }else{ //Não se sobrepõem:
+        return 0;
+    }    
+}
+
+void qry_o_get_circCirc_rect_info(float jRadius, float jX, float jY, float kRadius, float kX, float kY, float *rectX, float *rectY, float *rectW, float *rectH){
+
+    //X:
+    if(jX - jRadius < kX - kRadius){
+        *rectX = (jX - jRadius) - 10; //os 10px são para dar uma "folginha" entre o rect e os dois circulos.
+    }else{
+        *rectX = (kX - kRadius) - 10;
+    }
+
+    //Y:
+    if(jY - jRadius < kY - kRadius){
+        *rectY = (jY - jRadius) - 10;
+    }else{
+        *rectY = (kY - kRadius) - 10;
+    }
+
+    //W:
+    if(jX + jRadius > kX + kRadius){
+        *rectW = (jX + jRadius + 10) - *rectX;
+    }else{
+        *rectW = (kX + kRadius + 10) - *rectX;
+    }
+
+    //H:
+    if(jY + jRadius > kY + kRadius){
+        *rectH = (jY + jRadius + 10) - *rectY;
+    }else{
+        *rectH = (kY + kRadius + 10) - *rectY;
+    }    
+}
+
+
+int qry_o_rect_rect_collision(float jX, float jY, float jW, float jH, float kX, float kY, float kW, float kH){
+    
+    //Eles vão se sobrepor quando pelo menos umas das condiçoes abaixo forem satisfeitas: 
+    if( ((kY + kH > jY) && (kY < jY + jH)) ||
+        ((kY < jY + jH) && (kY + kH > jY)) ||
+        ((kX + kW > jX) && (kX < jX + jW)) ||
+        ((kX < jX + jW) && (kX + kW > jX)) ){
+
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+void qry_o_get_rectRect_rect_info(float jX, float jY, float jW, float jH, float kX, float kY, float kW, float kH, float *rectX, float *rectY, float *rectW, float *rectH){
+    
+    if(jX < kX){//X:
+        *rectX = jX - 10; //os 10px são para dar uma "folginha" entre o rect e os dois rect.
+    }else{
+        *rectX = kX - 10;
+    }
+
+    if(jY < kY){ //Y:
+        *rectY = jY - 10;
+    }else{
+        *rectY = kY - 10;
+    }
+
+    if(jX + jW > kX + kW){ //W:
+        *rectW = (jX + jW + 10) - *rectX;
+    }else{
+        *rectW = (kX + kW + 10) - *rectX;
+    }
+
+    if(jY + jH > kY + kH){ //H:
+        *rectH = (jY + jH + 10) - *rectY;
+    }else{
+        *rectH = (kY + kH + 10) - *rectY;
+    }
+}
+
+//um circulo e um retangulo: para determinarmos isso precisamos, primeiramente, encontrar //o ponto do retangulo mais proximo do centro do circulo. Depois calculamos a distancia entre
+int qry_o_circ_rect_collision(float jRadius, float jX, float jY, float kX, float kY, float kW, float kH){ //esses dois pontos e se ela for menor que o raio do circulo entao ha sobreposição.
+                              
+    float rectPointX = qry_rect_point_next_to_circ_center(kX, kX + kW, jX);
+    float rectPointY = qry_rect_point_next_to_circ_center(kY, kY + kH, jY);                                                        
+
+    //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
+    float D = sqrt(pow((rectPointX - jX), 2) + pow((rectPointY - jY), 2));
+
+    if(D < jRadius){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+void qry_o_get_circRect_rect_info(float jRadius, float jX, float jY, float kX, float kY, float kW, float kH, float *rectX, float *rectY, float *rectW, float *rectH){
+
+    if(jX - jRadius < kX){ //X:
+        *rectX = (jX - jRadius) - 10; //os 10px são para dar uma "folginha" entre o rect e os dois rect.
+    }else{
+        *rectX = kX - 10;
+    }
+
+    if(jY - jRadius < kY){ //Y:
+        *rectY = (jY - jRadius) - 10;
+    }else{
+        *rectY = kY - 10;
+    }
+
+    if(jX + jRadius > kX + kW){//W:
+        *rectW = (jX + jRadius + 10) - *rectX;
+    }else{
+        *rectW = (kX + kW + 10) - *rectX;
+    }
+
+    if(jY + jRadius > kY + kH){//H:
+        *rectH = (jY + jRadius + 10) - *rectY;
+    }else{
+        *rectH = (kY + kH + 10) - *rectY;
+    }
+}
+
+int qry_o_rect_circ_collision(float jX, float jY, float jW, float jH, float kRadius, float kX, float kY){
+        
+    float rectPointX = qry_rect_point_next_to_circ_center(jX, jX + jW, kX);
+    float rectPointY = qry_rect_point_next_to_circ_center(jY, jY + jH, kY);
+
+    float D = sqrt(pow((rectPointX - kX), 2) + pow((rectPointY - kY), 2)); //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
+
+    if(D < kRadius){
+        return 1;
+    }else{
+        return 0;
+    }    
+}
+
+void qry_o_get_rectCirc_rect_info(float jX, float jY, float jW, float jH, float kRadius, float kX, float kY, float *rectX, float *rectY, float *rectW, float *rectH){
+
+    if(jX < kX - kRadius){  //X:
+        *rectX = jX - 10; //os 10px são para dar uma "folginha" entre o rect e os dois rect.
+    }else{
+        *rectX = (kX - kRadius) - 10;
+    }
+
+    if(jY < kY - kRadius){ //Y:
+        *rectY = jY - 10;
+    }else{
+        *rectY = (kY - kRadius) - 10;
+    }
+
+    if(jX + jW > kX + kRadius){ //W:
+        *rectW = (jX + jW + 10) - *rectX;
+    }else{
+        *rectW = (kX + kRadius + 10) - *rectX;
+    }
+
+    if(jY + jH > kY + kRadius){ //H:
+        *rectH = (jY + jH + 10) - *rectY;
+    }else{
+        *rectH = (kY + kRadius + 10) - *rectY;
+    }
+}
+
+
+//example: <rect width="100" height="100" x="130.00" y="90.9" fill="#044B94" fill-opacity="0.0" stroke-width="1.5" stroke="rgb(0,0,0)" stroke-dasharray="5,5" />
+void qry_build_o_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision){
+   
+    if(isThereCollision){
+        sprintf(*tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" /> \n", w, h, x, y);
+    }else{
+        sprintf(*tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" stroke-dasharray=\"5,5\" /> \n", w, h, x, y);
+    }  
 }
 
 void qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent){
@@ -81,224 +273,67 @@ void qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
 
         char* jShape[8]; char* kShape[8];
         
-        for(int i = 0; i < geo_lines_count; ++i){
-            
-            if(strcmp(commands[i][1], J) == 0){
-
-                for(int y = 0; y<8; ++y){
-                    jShape[y] = commands[i][y];
-                }
-
-            }else if(strcmp(commands[i][1], K) == 0){
-                
-                for(int y = 0; y<8; ++y){
-                    kShape[y] = commands[i][y];
-                }
-            }
-        }
+        getDrawingInfo(jShape, kShape, commands, geo_lines_count, J, K);
 
     //determinando se ha uma sopreposiçao:
 
         int isThereCollision;  float rectX, rectY, rectW, rectH;
 
         if(*jShape[0] == 'c' && *kShape[0] == 'c'){ //dois circulos:
-        //(ABSTRAIR)
-            //Eles vão se sobrepor quando a distancia entre os centros dos circulos for menor que a soma dos seus raios.
-            strcpy(jType, "Circulo");
-            strcpy(kType, "Circulo");
+            
+            strcpy(jType, "Circulo");  strcpy(kType, "Circulo");
 
             float jRadius = strtof(jShape[2], NULL); 
             float kRadius = strtof(kShape[2], NULL);
-
             float jX = strtof(jShape[3], NULL), jY = strtof(jShape[4], NULL);
             float kX = strtof(kShape[3], NULL), kY = strtof(kShape[4], NULL);
 
-            //distancia entre os centros dos circulos:
-            float D = sqrt(pow((kX - jX), 2) + pow((kY - jY), 2));
-
-            if(D < jRadius + kRadius){ //Se sobrepõem:
-                isThereCollision = 1;
-            }else if (D >= jRadius + kRadius){ //Não se sobrepõem:
-                isThereCollision = 0;
-            }
+            isThereCollision = qry_o_circ_circ_collision(jRadius, jX, jY, kRadius, kX, kY);
 
             //calculando as informaçoes do retangulo que vai envolve-los:
-                //X:
-                if(jX - jRadius < kX - kRadius){
-                    rectX = (jX - jRadius) - 10; //os 10px são para dar uma "folginha" entre o rect e os dois circulos.
-                }else{
-                    rectX = (kX - kRadius) - 10;
-                }
-
-                //Y:
-                if(jY - jRadius < kY - kRadius){
-                    rectY = (jY - jRadius) - 10;
-                }else{
-                    rectY = (kY - kRadius) - 10;
-                }
-
-                //W:
-                if(jX + jRadius > kX + kRadius){
-                    rectW = (jX + jRadius + 10) - rectX;
-                }else{
-                    rectW = (kX + kRadius + 10) - rectX;
-                }
-
-                //H:
-                if(jY + jRadius > kY + kRadius){
-                    rectH = (jY + jRadius + 10) - rectY;
-                }else{
-                    rectH = (kY + kRadius + 10) - rectY;
-                }
+                qry_o_get_circCirc_rect_info(jRadius, jX, jY, kRadius, kX, kY, &rectX, &rectY, &rectW, &rectH);
 
         }else if(*jShape[0] == 'r' && *kShape[0] == 'r'){  //dois retangulos:
-        //(ABSTRAIR)
-            strcpy(jType, "Retangulo");
-            strcpy(kType, "Retangulo");
-
+            
+            strcpy(jType, "Retangulo");  strcpy(kType, "Retangulo");
+            
             float jW = strtof(jShape[2], NULL), jH = strtof(jShape[3], NULL);
             float kW = strtof(kShape[2], NULL), kH = strtof(kShape[3], NULL);
-
             float jX = strtof(jShape[4], NULL), jY = strtof(jShape[5], NULL);
             float kX = strtof(kShape[4], NULL), kY = strtof(kShape[5], NULL);
-
-            //Eles vão se sobrepor quando pelo menos umas das condiçoes abaixo forem satisfeitas: 
-            if( ((kY + kH > jY) && (kY < jY + jH)) ||
-                ((kY < jY + jH) && (kY + kH > jY)) ||
-                ((kX + kW > jX) && (kX < jX + jW)) ||
-                ((kX < jX + jW) && (kX + kW > jX)) ){
-
-                isThereCollision = 1;
-            }else{
-                isThereCollision = 0;
-            }
+            
+            isThereCollision = qry_o_rect_rect_collision(jX, jY, jW, jH, kX, kY, kW, kH);
 
             //calculando as informaçoes do retangulo que vai envolve-los:
-    
-                if(jX < kX){//X:
-                    rectX = jX - 10; //os 10px são para dar uma "folginha" entre o rect e os dois rect.
-                }else{
-                    rectX = kX - 10;
-                }
-
-                if(jY < kY){ //Y:
-                    rectY = jY - 10;
-                }else{
-                    rectY = kY - 10;
-                }
-            
-                if(jX + jW > kX + kW){ //W:
-                    rectW = (jX + jW + 10) - rectX;
-                }else{
-                    rectW = (kX + kW + 10) - rectX;
-                }
-
-                if(jY + jH > kY + kH){ //H:
-                    rectH = (jY + jH + 10) - rectY;
-                }else{
-                    rectH = (kY + kH + 10) - rectY;
-                }
-
-        //um circulo e um retangulo: para determinarmos isso precisamos, primeiramente, encontrar
-        //o ponto do retangulo mais proximo do centro do circulo. Depois calculamos a distancia entre
-        //esses dois pontos e se ela for menor que o raio do circulo entao ha sobreposição.
+                qry_o_get_rectRect_rect_info(jX, jY, jW, jH, kX, kY, kW, kH, &rectX, &rectY, &rectW, &rectH);
+                
         }else if((*jShape[0] == 'c' && *kShape[0] == 'r')){ 
-        //(ABSTRAIR)
-            strcpy(jType, "Circulo");
-            strcpy(kType, "Retangulo");
             
-            float jRadius = strtof(jShape[2], NULL);
+            strcpy(jType, "Circulo");  strcpy(kType, "Retangulo");
+            
+            float jRadius = strtof(jShape[2], NULL);                
             float jX = strtof(jShape[3], NULL), jY = strtof(jShape[4], NULL);
-
             float kW = strtof(kShape[2], NULL), kH = strtof(kShape[3], NULL);
             float kX = strtof(kShape[4], NULL), kY = strtof(kShape[5], NULL);
 
-            float rectPointX = qry_rect_point_next_to_circ_center(kX, kX + kW, jX);
-            float rectPointY = qry_rect_point_next_to_circ_center(kY, kY + kH, jY);
-
-            //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
-            float D = sqrt(pow((rectPointX - jX), 2) + pow((rectPointY - jY), 2));
-
-            if(D < jRadius){
-                isThereCollision = 1;
-            }else if(D >= jRadius){
-                isThereCollision = 0;
-            }
+            isThereCollision = qry_o_circ_rect_collision(jRadius, jX, jY, kX, kY, kW, kH);
 
             //calculando as informaçoes do retangulo que vai envolve-los:
-            
-                if(jX - jRadius < kX){ //X:
-                    rectX = (jX - jRadius) - 10; //os 10px são para dar uma "folginha" entre o rect e os dois rect.
-                }else{
-                    rectX = kX - 10;
-                }
-
-                if(jY - jRadius < kY){ //Y:
-                    rectY = (jY - jRadius) - 10;
-                }else{
-                    rectY = kY - 10;
-                }
-
-                if(jX + jRadius > kX + kW){//W:
-                    rectW = (jX + jRadius + 10) - rectX;
-                }else{
-                    rectW = (kX + kW + 10) - rectX;
-                }
-
-                if(jY + jRadius > kY + kH){//H:
-                    rectH = (jY + jRadius + 10) - rectY;
-                }else{
-                    rectH = (kY + kH + 10) - rectY;
-                }
+                qry_o_get_circRect_rect_info(jRadius, jX, jY, kX, kY, kW, kH, &rectX, &rectY, &rectW, &rectH);
 
         }else if((*jShape[0] == 'r' && *kShape[0] == 'c')){ //um retangulo e um ciculo:
-        //(ABSTRAIR)
-            strcpy(jType, "Retangulo");
-            strcpy(kType, "Circulo");
 
+            strcpy(jType, "Retangulo");  strcpy(kType, "Circulo");
+ 
             float jW = strtof(jShape[2], NULL), jH = strtof(jShape[3], NULL);
             float jX = strtof(jShape[4], NULL), jY = strtof(jShape[5], NULL);
-
             float kRadius = strtof(kShape[2], NULL);
             float kX = strtof(kShape[3], NULL), kY = strtof(kShape[4], NULL);
-            
-            float rectPointX = qry_rect_point_next_to_circ_center(jX, jX + jW, kX);
-            float rectPointY = qry_rect_point_next_to_circ_center(jY, jY + jH, kY);
 
-            //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
-            float D = sqrt(pow((rectPointX - kX), 2) + pow((rectPointY - kY), 2));
-
-            if(D < kRadius){
-                isThereCollision = 1;
-            }else if(D >= kRadius){
-                isThereCollision = 0;
-            }
+            isThereCollision = qry_o_rect_circ_collision(jX, jY, jW, jH, kRadius, kX, kY);
 
             //calculando as informaçoes do retangulo que vai envolve-los:
-
-                if(jX < kX - kRadius){  //X:
-                    rectX = jX - 10; //os 10px são para dar uma "folginha" entre o rect e os dois rect.
-                }else{
-                    rectX = (kX - kRadius) - 10;
-                }
-
-                if(jY < kY - kRadius){ //Y:
-                    rectY = jY - 10;
-                }else{
-                    rectY = (kY - kRadius) - 10;
-                }
-
-                if(jX + jW > kX + kRadius){ //W:
-                    rectW = (jX + jW + 10) - rectX;
-                }else{
-                    rectW = (kX + kRadius + 10) - rectX;
-                }
-
-                if(jY + jH > kY + kRadius){ //H:
-                    rectH = (jY + jH + 10) - rectY;
-                }else{
-                    rectH = (kY + kRadius + 10) - rectY;
-                }
+                qry_o_get_rectCirc_rect_info(jX, jY, jW, jH, kRadius, kX, kY, &rectX, &rectY, &rectW, &rectH);
         }
 
     //Criando a tag para mostrar visualmente o resultado desta consulta:
@@ -356,27 +391,15 @@ void qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
 
         sscanf(&qryCommand[0][3], "%s %f %f", J, &pX, &pY);
 
-        char* jType = (char*) malloc(10 * sizeof(char));
-
     //Extraindo as informaçoes da figura:
 
-        char* jShape[6];
+        char* jShape[8];
 
-        for(int i = 0; i < geo_lines_count; ++i){
-
-            if(strcmp(commands[i][1], J) == 0){
-
-                for(int k = 0; k<6; ++k){
-
-                    jShape[k] = commands[i][k];
-                    printf("\njShape[%d]:%s\n", k, jShape[k]);
-                } 
-            }
-        }
+        getDrawingInfo(jShape, NULL, commands, geo_lines_count, J, NULL);
 
     //Determinando se o ponto é interno a figura:
 
-        int isInside;   float cmX, cmY;
+        int isInside;   float cmX, cmY;    char* jType = (char*) malloc(10 * sizeof(char));
        
         if(*jShape[0] == 'c'){  //Se J for um circulo: 
                                //(Sera interno se a distancia entre o ponto e o centro do circulo for menor que o raio.)
@@ -619,14 +642,14 @@ void qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* 
 
         char* jDrawing[8];
 
+        //getDrawingInfo(jDrawing, NULL, commands, geo_lines_count, J, NULL);
+
         for(int i = 0; i < geo_lines_count; i++){
     
             if(strcmp(commands[i][1], J) == 0){
 
                 for(int k = 0; k<8; ++k){
-
                     jDrawing[k] = commands[i][k];
-                    //printf("\njDrawing[%d]:%s\n", k, jDrawing[k]);
                 } 
 
                 break;

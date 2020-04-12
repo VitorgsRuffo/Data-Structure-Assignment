@@ -98,31 +98,40 @@ void svg_append_content_to_final_document(char* *content, char* *finalDocument, 
     *auxFinalDocument = aux;
 }
 
+void getFileName(char* fileName, int fileNameLen, char* *fileFinalName, int stopAtDot){
+    
+    int j = 0;
+
+    for(int i = 0; i<fileNameLen; ++i){  //REP2
+
+        if(fileName[i] == '/'){
+            j = i + 1;
+        }
+
+        if(fileName[i] == '.'){
+            if(stopAtDot)
+                fileName[i] = ' ';
+
+            sscanf(&fileName[j],"%s", *fileFinalName);
+
+            fileName[i] = '.';
+            
+            break;
+        }
+    }
+}
+
 void buildSvgPath(Parameter *parameter){ //erros de path se a opção -f tiver um diretorio ou + antes do arquivo geo.
 
     int outputDirLen = strlen(parameter->outputDir);
 
-    //Ha a possibilidade de o nome do arquivo geo for um caminho relativo (e.g, testes/g.geo). O trecho de cod abaixo trata o problema que isso causa.
-        int j = 0;
+    int geoFileNameLen = strlen(parameter->geoFileName);
 
-        char* geoFileName;
-
-        int len = strlen(parameter->geoFileName);
-
-        for(int i = 0; i<len; ++i){
-
-            if(parameter->geoFileName[i] == '/'){
-                j = i + 1;
-            }
-
-            if(parameter->geoFileName[i] == '.'){
-                geoFileName = (char*) malloc((strlen(&parameter->geoFileName[j]) + 1) * sizeof(char));
-
-                sscanf(&parameter->geoFileName[j],"%s", geoFileName);
+    char* geoFileName = (char*) malloc((geoFileNameLen + 1) * sizeof(char));
     
-                break;
-            }
-        }
+    //Ha a possibilidade de o nome do arquivo geo for um caminho relativo (e.g, testes/g.geo). O trecho de cod abaixo trata o problema que isso causa retornando apenas o nome do .geo.  
+        getFileName(parameter->geoFileName, geoFileNameLen, &geoFileName, 0);
+
 
     int svgFileNameLen = strlen(geoFileName);
 
@@ -156,7 +165,7 @@ void buildSvgPath(Parameter *parameter){ //erros de path se a opção -f tiver u
     }else{
         sprintf(parameter->svgFullPath, "%s/%s", parameter->outputDir, svgFileName);
     }
-    
+
     free(svgFileName); free(geoFileName);
 }
 
@@ -171,43 +180,10 @@ void buildSvgQryPath(Parameter *parameter){
     char* geoFileName = (char*) malloc((geoFileNameLen + 1) * sizeof(char));
     char* qryFileName = (char*) malloc((qryFileNameLen + 1) * sizeof(char));
 
-    int j = 0;
+    //Ha a possibilidade de o nome do arquivo geo/qry for um caminho relativo (e.g, testes/g.geo). O trecho de cod abaixo trata o problema que isso causa retornando apenas o nome do .geo/.qry.
+        getFileName(parameter->geoFileName, geoFileNameLen, &geoFileName, 1);
+        getFileName(parameter->qryFileName, qryFileNameLen, &qryFileName, 1);
 
-    for(int i = 0; i<geoFileNameLen; ++i){
-
-        if(parameter->geoFileName[i] == '/'){
-            j = i + 1;
-        }
-
-        if(parameter->geoFileName[i] == '.'){
-            parameter->geoFileName[i] = ' ';
-
-            sscanf(&parameter->geoFileName[j],"%s", geoFileName);
-
-            parameter->geoFileName[i] = '.';
-            
-            break;
-        }
-    }
-
-    j = 0;
-
-    for(int i = 0; i<qryFileNameLen; ++i){
-
-        if(parameter->qryFileName[i] == '/'){
-            j = i + 1;
-        }
-
-        if(parameter->qryFileName[i] == '.'){
-            parameter->qryFileName[i] = ' ';
-
-            sscanf(&parameter->qryFileName[j],"%s", qryFileName);
-
-            parameter->qryFileName[i] = '.';
-            
-            break;
-        }
-    }
 
     char* svgQryFileName = (char*) malloc((svgQryFileNameLen + 1) * sizeof(char));
     sprintf(svgQryFileName, "%s-%s.svg", geoFileName, qryFileName);

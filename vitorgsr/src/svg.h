@@ -5,6 +5,8 @@ void svg_set_view_box(float* X, float* Y, float* W, float* H, char* commands[][8
 
 void svg_append_content_to_final_document(char* *content, char* *finalDocument, char* *auxFinalDocument);
 
+void getFileName(char* fileName, int fileNameLen, char* *fileFinalName, int stopAtDot);
+
 void buildSvgPath(Parameter *parameter);
 
 void buildSvgQryPath(Parameter *parameter);
