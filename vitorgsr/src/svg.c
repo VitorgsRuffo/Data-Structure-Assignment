@@ -12,7 +12,7 @@ void svg_set_view_box(float* X, float* Y, float* W, float* H, char* commands[][8
     float largerW = 0, largerH = 0;
     
     for(int i = 0; i<geo_lines_count; ++i){
-                
+
         if(commands[i][0][0] == 'c'){ // r 2  x 3  y 4
 
             commRadius = strtof(commands[i][2], NULL);
@@ -96,6 +96,8 @@ void svg_append_content_to_final_document(char* *content, char* *finalDocument, 
     *finalDocument = *auxFinalDocument;
 
     *auxFinalDocument = aux;
+    
+    free(*auxFinalDocument);
 }
 
 void getFileName(char* fileName, int fileNameLen, char* *fileFinalName, int stopAtDot){

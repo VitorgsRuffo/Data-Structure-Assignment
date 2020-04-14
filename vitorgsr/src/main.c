@@ -44,7 +44,6 @@ int main (int argc, char* argv[]){
     
         for(int j = 0; j<geo_lines_count; j++){
             command[j] = (char*) malloc(command_max_length * sizeof(char));  //Supomos que 100 == tamanho maximo de um comando (linha)
-
             if(command[j] == NULL){
                 printf("Error allocating memory for command array.\nFinishing execution..\n");
                 exit(1);
@@ -54,18 +53,15 @@ int main (int argc, char* argv[]){
         //Lendo o arquivo:
             int x = 0, commandLen;
 
-            while(!feof(geo)){
-            
-                if(fgets(command[x], 110, geo)){
+            while(x < geo_lines_count){
 
-                    commandLen = strlen(command[x]); //remover \n do final de cada comando:
+                fgets(command[x], 110, geo);
 
-                    command[x][commandLen-1] = '\0';
+                commandLen = strlen(command[x]); //remover \n do final de cada comando:
 
-                    if(x < geo_lines_count){
-                        ++x;
-                    }
-                }
+                command[x][commandLen-1] = '\0';
+ 
+                ++x;  
             }
 
         //Refinando os nossos dados para facilitar o acesso: (Os dados do geo serao organizados da seguinte maneira: matriz de ponteiros. Cala linha representa um comando, cada coluna uma parte deste comando.)
@@ -85,9 +81,9 @@ int main (int argc, char* argv[]){
             //printf("\nmatrix content: \n");
             for(int i = 0; i<geo_lines_count; ++i){
                 geo_interpret_command(command[i], commands, i);
-                free(command[i]);
+                free(command[i]); 
             }
-
+            
         //Precisamos configurar a view box do svg que vai ser gerado para evitarmos que algumas figuras aparecam cortadas:
             float X = 1000, Y = 1000, W = 0, H = 0;
 
@@ -141,22 +137,17 @@ int main (int argc, char* argv[]){
             }
 
             //Lendo o arquivo:
-                int i = 0;
+                int y = 0; 
                 
-                while(!feof(qry)){
+                while(y < qry_lines_count){
                 
-                    if(fgets(qryCommand[i], 100, qry)){
+                    fgets(qryCommand[y], 100, qry);
 
-                        commandLen = strlen(qryCommand[i]); //remover \n do final de cada comando:
+                    commandLen = strlen(qryCommand[y]); //remover \n do final de cada comando:
 
-                        qryCommand[i][commandLen-1] = '\0';
+                    qryCommand[y][commandLen-1] = '\0';
 
-                        if(i < qry_lines_count){
-                            ++i;
-                        }
-
-                    }
-            
+                    ++y;
                 }
 
             //String que vai conter todas as tags referentes aos comandos do arquivo e que vai ser printada em um arquivo svg.
@@ -219,8 +210,7 @@ int main (int argc, char* argv[]){
 
                 char* svgFinalDocumentQry2 = NULL;
                 svg_append_content_to_final_document(&closeTag, &svgFinalDocumentQry, &svgFinalDocumentQry2);
-                free(svgFinalDocumentQry2);
-
+            
                 //Criando .svg:
                     FILE *svgQry;
 
@@ -235,7 +225,7 @@ int main (int argc, char* argv[]){
                 qry_create_txt(&txtFinalContent, &parameter);
 
             free(txtFinalContent);  fclose(qry);  fclose(svgQry);  free(parameter.svgQryFullPath);
-            free(parameter.qryFileName);  free(parameter.qryFullPath);
+            free(parameter.qryFileName);  free(parameter.qryFullPath); free(svgFinalDocumentQry);
         }
 
     //Finalizando .svg referente ao .geo:
@@ -244,7 +234,7 @@ int main (int argc, char* argv[]){
 
         svg_append_content_to_final_document(&closeTag, &svgFinalDocument, &svgFinalDocument2);
 
-        free(svgFinalDocument2);   free(closeTag);
+        free(closeTag);
 
         //Criando .svg:
             FILE *svg;

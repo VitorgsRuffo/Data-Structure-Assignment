@@ -38,12 +38,21 @@ void geo_interpret_command(char* command, char* commands[][8], int i){
     }else if(command[0] == 't'){ //lidando com texto:
             
         sscanf(command, "%s %s %s %s %s %s %[^\n]s", commands[i][0], commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);
+    
+    }else if(command[0] == 'n'){
+        strcpy(commands[i][0], " "); strcpy(commands[i][1], ""); strcpy(commands[i][2], ""); strcpy(commands[i][3], ""); strcpy(commands[i][4], ""); strcpy(commands[i][5], ""); strcpy(commands[i][6], ""); strcpy(commands[i][7], "");
     }
 }
 
 void geo_draw(char* commands[][8], int geo_lines_count, char* *svgFinalDocument){
+    
+    int k;
+    //se houver nx no .geo vamos ignorar o primeiro comando iniciando o i em 1:
+    if(commands[0][0][0] == ' ') k = 1; else k = 0;
 
-    for(int i = 0; i<geo_lines_count; ++i){
+    printf("%d", k);
+
+    for(int i = k; i<geo_lines_count; ++i){
 
         //Criando a tag da figura/txt e a tag do ID da figura/txt a partir do comando atual:
 
@@ -73,6 +82,6 @@ void geo_draw(char* commands[][8], int geo_lines_count, char* *svgFinalDocument)
                 
             svg_append_content_to_final_document(&tag, svgFinalDocument, &svgFinalDocument2);
 
-            free(svgFinalDocument2); free(tag); 
+            free(tag); 
     } 
 }

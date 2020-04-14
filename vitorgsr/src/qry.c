@@ -55,10 +55,11 @@ void getDrawingInfo(char* jDrawing[], char* kDrawing[], char* commands[][8], int
                 jDrawing[y] = commands[i][y];
             }
 
-        }else if(strcmp(commands[i][1], K) == 0){
-                
-            for(int y = 0; y<8; ++y){
-                kDrawing[y] = commands[i][y];
+        }else if(K != NULL){
+            if(strcmp(commands[i][1], K) == 0){  
+                for(int y = 0; y<8; ++y){
+                    kDrawing[y] = commands[i][y];
+                }
             }
         }
     }    
@@ -348,7 +349,7 @@ void qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
                 
             svg_append_content_to_final_document(&rectTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
 
-            free(svgFinalDocumentQry2);  free(rectTag);
+            free(rectTag);
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
     //(ABSTRAIR)
@@ -369,7 +370,7 @@ void qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
         svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
 
 
-    free(J);  free(K);  free(jType);  free(kType);  free(result);  free(txtContent);  free(txtFinalContent2);
+    free(J);  free(K);  free(jType);  free(kType);  free(result);  free(txtContent);
 }
 
 //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />     <line x1="0" y1="0" x2="200" y2="200" stroke="rgb(255,100,110)" stroke-width="2" />
@@ -450,7 +451,7 @@ void qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
                 
             svg_append_content_to_final_document(&dotLineTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
 
-            free(svgFinalDocumentQry2);  free(dotLineTag);
+            free(dotLineTag);
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
     //(ABSTRAIR)
@@ -470,7 +471,7 @@ void qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
 
         svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
 
-        free(J); free(jType); free(result);  free(txtContent);  free(txtFinalContent2);
+        free(J); free(jType); free(result);  free(txtContent); 
 }
 
 void qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent, char* commands[][8], int geo_lines_count){
@@ -486,7 +487,7 @@ void qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalCont
 
         int stringLen = strlen(*svgFinalDocumentQry);
 
-        char* searchJ = (char*) malloc((strlen(J) + 1) * sizeof(char));
+        char* searchJ = (char*) malloc((strlen(J) + 2) * sizeof(char));
 
         for(int i = 11; i<stringLen; ++i){
 
@@ -543,7 +544,7 @@ void qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalCont
             }
         }
 
-    free(J); free(searchJ); free(txtContent); free(txtFinalContent2);
+    free(J); free(searchJ); free(txtContent); 
 }
 
 void qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent, char* commands[][8], int geo_lines_count){
@@ -623,7 +624,7 @@ void qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalCon
             }
         }
 
-        free(txtContent); free(txtFinalContent2);
+        free(txtContent); 
     
         free(J); free(K); free(searchId);
 }
@@ -642,9 +643,9 @@ void qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* 
 
         char* jDrawing[8];
 
-        //getDrawingInfo(jDrawing, NULL, commands, geo_lines_count, J, NULL);
+        getDrawingInfo(jDrawing, NULL, commands, geo_lines_count, J, NULL);
 
-        for(int i = 0; i < geo_lines_count; i++){
+        /*for(int i = 0; i < geo_lines_count; i++){
     
             if(strcmp(commands[i][1], J) == 0){
 
@@ -654,7 +655,7 @@ void qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* 
 
                 break;
             }
-        }
+        }*/
 
     //Construir uma nova tag para essa figura/txt com a nova cor de borda e preenchimento (ela sera printada por cima da antiga), e anexa-la na string final.
 
@@ -686,7 +687,7 @@ void qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* 
                 
         svg_append_content_to_final_document(&tag, svgFinalDocumentQry, &svgFinalDocumentQry2);
 
-        free(svgFinalDocumentQry2); free(tag);
+        free(tag);
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
     //(ABSTRAIR)
@@ -702,7 +703,7 @@ void qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* 
 
         svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
 
-        free(txtContent); free(txtFinalContent2);
+        free(txtContent); 
 
         free(J); free(newCorb); free(newCorp); free(originalCorb); free(originalCorp);       
 }

@@ -65,7 +65,6 @@ void buildInputFilePath(Parameter *parameter, char* which){
     int lenInputFileName;
 
     if(strcmp(which, "geo") == 0){ //building geo full path
-
         lenInputFileName = strlen(parameter->geoFileName);
         inputFileName = (char*) malloc((lenInputFileName + 1) * sizeof(char));
         strcpy(inputFileName, parameter->geoFileName);
