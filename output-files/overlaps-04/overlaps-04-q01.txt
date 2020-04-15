@@ -1,0 +1,72 @@
+o? 1 2
+1: Circulo  2: Retangulo  NAO
+
+o? 1 3
+1: Circulo  3: Retangulo  NAO
+
+o? 1 4
+1: Circulo  4: Retangulo  NAO
+
+o? 1 5
+1: Circulo  5: Retangulo  NAO
+
+o? 1 6
+1: Circulo  6: Retangulo  NAO
+
+o? 1 7
+1: Circulo  7: Retangulo  NAO
+
+o? 1 8
+1: Circulo  8: Retangulo  NAO
+
+o? 1 9
+1: Circulo  9: Retangulo  NAO
+
+o? 1 10
+1: Circulo  10: Retangulo  NAO
+
+o? 1 11
+1: Circulo  11: Retangulo  NAO
+
+o? 1 12
+1: Circulo  12: Retangulo  NAO
+
+o? 1 13
+1: Circulo  13: Retangulo  NAO
+
+o? 1 14
+1: Circulo  14: Retangulo  NAO
+
+o? 1 15
+1: Circulo  15: Retangulo  NAO
+
+o? 1 16
+1: Circulo  16: Retangulo  NAO
+
+o? 1 17
+1: Circulo  17: Retangulo  NAO
+
+o? 1 18
+1: Circulo  18: Retangulo  SIM
+
+o? 1 19
+1: Circulo  19: Retangulo  NAO
+
+o? 1 20
+1: Circulo  20: Retangulo  NAO
+
+o? 1 21
+1: Circulo  21: Retangulo  NAO
+
+o? 1 22
+1: Circulo  22: Retangulo  NAO
+
+o? 1 23
+1: Circulo  23: Retangulo  NAO
+
+o? 1 24
+1: Circulo  24: Retangulo  NAO
+
+o? 1 25
+1: Circulo  25: Retangulo  NAO
+

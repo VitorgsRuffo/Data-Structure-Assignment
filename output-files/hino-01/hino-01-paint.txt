@@ -1,0 +1,1725 @@
+pnt 1140 red red
+corb original: black, corp original: dimgray
+
+pnt 825 red red
+corb original: black, corp original: dimgray
+
+pnt 1358 red red
+corb original: black, corp original: dimgray
+
+pnt 1797 red red
+corb original: black, corp original: dimgray
+
+pnt 17 red red
+corb original: black, corp original: dimgray
+
+pnt 138 red red
+corb original: black, corp original: dimgray
+
+pnt 761 red red
+corb original: black, corp original: dimgray
+
+pnt 1790 red red
+corb original: black, corp original: dimgray
+
+pnt 622 red red
+corb original: black, corp original: dimgray
+
+pnt 1620 red red
+corb original: black, corp original: dimgray
+
+pnt 154 red red
+corb original: black, corp original: dimgray
+
+pnt 252 red red
+corb original: black, corp original: dimgray
+
+pnt 601 red red
+corb original: black, corp original: dimgray
+
+pnt 31 red red
+corb original: black, corp original: dimgray
+
+pnt 491 red red
+corb original: black, corp original: dimgray
+
+pnt 1188 red red
+corb original: black, corp original: dimgray
+
+pnt 704 red red
+corb original: black, corp original: dimgray
+
+pnt 1681 red red
+corb original: black, corp original: dimgray
+
+pnt 2149 red red
+corb original: black, corp original: dimgray
+
+pnt 1825 red red
+corb original: black, corp original: dimgray
+
+pnt 89 red red
+corb original: black, corp original: dimgray
+
+pnt 194 red red
+corb original: black, corp original: dimgray
+
+pnt 1132 red red
+corb original: black, corp original: dimgray
+
+pnt 785 red red
+corb original: black, corp original: dimgray
+
+pnt 531 red red
+corb original: black, corp original: dimgray
+
+pnt 1924 red red
+corb original: black, corp original: dimgray
+
+pnt 1674 red red
+corb original: black, corp original: dimgray
+
+pnt 1021 red red
+corb original: black, corp original: dimgray
+
+pnt 873 red red
+corb original: black, corp original: dimgray
+
+pnt 1796 red red
+corb original: black, corp original: dimgray
+
+pnt 48 red red
+corb original: black, corp original: dimgray
+
+pnt 1511 red red
+corb original: black, corp original: dimgray
+
+pnt 1822 red red
+corb original: black, corp original: dimgray
+
+pnt 441 red red
+corb original: black, corp original: dimgray
+
+pnt 1033 red red
+corb original: black, corp original: dimgray
+
+pnt 801 red red
+corb original: black, corp original: dimgray
+
+pnt 2195 red red
+corb original: black, corp original: dimgray
+
+pnt 1785 red red
+corb original: black, corp original: dimgray
+
+pnt 862 red red
+corb original: black, corp original: dimgray
+
+pnt 1645 red red
+corb original: black, corp original: dimgray
+
+pnt 1200 red red
+corb original: black, corp original: dimgray
+
+pnt 1799 red red
+corb original: black, corp original: dimgray
+
+pnt 1951 red red
+corb original: black, corp original: dimgray
+
+pnt 1411 red red
+corb original: black, corp original: dimgray
+
+pnt 1166 red red
+corb original: black, corp original: dimgray
+
+pnt 1154 red red
+corb original: black, corp original: dimgray
+
+pnt 2109 red red
+corb original: black, corp original: dimgray
+
+pnt 262 red red
+corb original: black, corp original: dimgray
+
+pnt 314 red red
+corb original: black, corp original: dimgray
+
+pnt 2297 red red
+corb original: black, corp original: dimgray
+
+pnt 305 red red
+corb original: black, corp original: dimgray
+
+pnt 1912 red red
+corb original: black, corp original: dimgray
+
+pnt 3 red red
+corb original: black, corp original: dimgray
+
+pnt 589 red red
+corb original: black, corp original: dimgray
+
+pnt 684 red red
+corb original: black, corp original: dimgray
+
+pnt 2153 red red
+corb original: black, corp original: dimgray
+
+pnt 2242 red red
+corb original: black, corp original: dimgray
+
+pnt 2029 red red
+corb original: black, corp original: dimgray
+
+pnt 153 red red
+corb original: black, corp original: dimgray
+
+pnt 1977 red red
+corb original: black, corp original: dimgray
+
+pnt 1785 red red
+corb original: black, corp original: dimgray
+
+pnt 718 red red
+corb original: black, corp original: dimgray
+
+pnt 593 red red
+corb original: black, corp original: dimgray
+
+pnt 1778 red red
+corb original: black, corp original: dimgray
+
+pnt 209 red red
+corb original: black, corp original: dimgray
+
+pnt 1601 red red
+corb original: black, corp original: dimgray
+
+pnt 1742 red red
+corb original: black, corp original: dimgray
+
+pnt 1350 red red
+corb original: black, corp original: dimgray
+
+pnt 2284 red red
+corb original: black, corp original: dimgray
+
+pnt 2230 red red
+corb original: black, corp original: dimgray
+
+pnt 1912 red red
+corb original: black, corp original: dimgray
+
+pnt 38 red red
+corb original: black, corp original: dimgray
+
+pnt 51 red red
+corb original: black, corp original: dimgray
+
+pnt 1984 red red
+corb original: black, corp original: dimgray
+
+pnt 1000 red red
+corb original: black, corp original: dimgray
+
+pnt 1722 red red
+corb original: black, corp original: dimgray
+
+pnt 348 red red
+corb original: black, corp original: dimgray
+
+pnt 1001 red red
+corb original: black, corp original: dimgray
+
+pnt 943 red red
+corb original: black, corp original: dimgray
+
+pnt 830 red red
+corb original: black, corp original: dimgray
+
+pnt 293 red red
+corb original: black, corp original: dimgray
+
+pnt 1556 red red
+corb original: black, corp original: dimgray
+
+pnt 557 red red
+corb original: black, corp original: dimgray
+
+pnt 9 red red
+corb original: black, corp original: dimgray
+
+pnt 1806 red red
+corb original: black, corp original: dimgray
+
+pnt 357 red red
+corb original: black, corp original: dimgray
+
+pnt 2173 red red
+corb original: black, corp original: dimgray
+
+pnt 1086 red red
+corb original: black, corp original: dimgray
+
+pnt 194 red red
+corb original: black, corp original: dimgray
+
+pnt 2074 red red
+corb original: black, corp original: dimgray
+
+pnt 1325 red red
+corb original: black, corp original: dimgray
+
+pnt 1879 red red
+corb original: black, corp original: dimgray
+
+pnt 10 red red
+corb original: black, corp original: dimgray
+
+pnt 1430 red red
+corb original: black, corp original: dimgray
+
+pnt 409 red red
+corb original: black, corp original: dimgray
+
+pnt 1767 red red
+corb original: black, corp original: dimgray
+
+pnt 1507 red red
+corb original: black, corp original: dimgray
+
+pnt 700 red red
+corb original: black, corp original: dimgray
+
+pnt 2200 red red
+corb original: black, corp original: dimgray
+
+pnt 1516 red red
+corb original: black, corp original: dimgray
+
+pnt 1335 red red
+corb original: black, corp original: dimgray
+
+pnt 2082 red red
+corb original: black, corp original: dimgray
+
+pnt 1787 red red
+corb original: black, corp original: dimgray
+
+pnt 1928 red red
+corb original: black, corp original: dimgray
+
+pnt 89 red red
+corb original: black, corp original: dimgray
+
+pnt 1093 red red
+corb original: black, corp original: dimgray
+
+pnt 174 red red
+corb original: black, corp original: dimgray
+
+pnt 2080 red red
+corb original: black, corp original: dimgray
+
+pnt 1674 red red
+corb original: black, corp original: dimgray
+
+pnt 561 red red
+corb original: black, corp original: dimgray
+
+pnt 1827 red red
+corb original: black, corp original: dimgray
+
+pnt 136 red red
+corb original: black, corp original: dimgray
+
+pnt 2187 red red
+corb original: black, corp original: dimgray
+
+pnt 420 red red
+corb original: black, corp original: dimgray
+
+pnt 734 red red
+corb original: black, corp original: dimgray
+
+pnt 1956 red red
+corb original: black, corp original: dimgray
+
+pnt 2245 red red
+corb original: black, corp original: dimgray
+
+pnt 354 red red
+corb original: black, corp original: dimgray
+
+pnt 198 red red
+corb original: black, corp original: dimgray
+
+pnt 2099 red red
+corb original: black, corp original: dimgray
+
+pnt 1672 red red
+corb original: black, corp original: dimgray
+
+pnt 846 red red
+corb original: black, corp original: dimgray
+
+pnt 1977 red red
+corb original: black, corp original: dimgray
+
+pnt 338 red red
+corb original: black, corp original: dimgray
+
+pnt 1534 red red
+corb original: black, corp original: dimgray
+
+pnt 532 red red
+corb original: black, corp original: dimgray
+
+pnt 394 red red
+corb original: black, corp original: dimgray
+
+pnt 1732 red red
+corb original: black, corp original: dimgray
+
+pnt 2170 red red
+corb original: black, corp original: dimgray
+
+pnt 949 red red
+corb original: black, corp original: dimgray
+
+pnt 1653 red red
+corb original: black, corp original: dimgray
+
+pnt 1823 red red
+corb original: black, corp original: dimgray
+
+pnt 2215 red red
+corb original: black, corp original: dimgray
+
+pnt 1090 red red
+corb original: black, corp original: dimgray
+
+pnt 2015 red red
+corb original: black, corp original: dimgray
+
+pnt 557 red red
+corb original: black, corp original: dimgray
+
+pnt 2114 red red
+corb original: black, corp original: dimgray
+
+pnt 1921 red red
+corb original: black, corp original: dimgray
+
+pnt 1672 red red
+corb original: black, corp original: dimgray
+
+pnt 738 red red
+corb original: black, corp original: dimgray
+
+pnt 2139 red red
+corb original: black, corp original: dimgray
+
+pnt 1957 red red
+corb original: black, corp original: dimgray
+
+pnt 495 red red
+corb original: black, corp original: dimgray
+
+pnt 1546 red red
+corb original: black, corp original: dimgray
+
+pnt 470 red red
+corb original: black, corp original: dimgray
+
+pnt 1718 red red
+corb original: black, corp original: dimgray
+
+pnt 473 red red
+corb original: black, corp original: dimgray
+
+pnt 958 red red
+corb original: black, corp original: dimgray
+
+pnt 1662 red red
+corb original: black, corp original: dimgray
+
+pnt 893 red red
+corb original: black, corp original: dimgray
+
+pnt 403 red red
+corb original: black, corp original: dimgray
+
+pnt 2203 red red
+corb original: black, corp original: dimgray
+
+pnt 1320 red red
+corb original: black, corp original: dimgray
+
+pnt 1296 red red
+corb original: black, corp original: dimgray
+
+pnt 1536 red red
+corb original: black, corp original: dimgray
+
+pnt 1478 red red
+corb original: black, corp original: dimgray
+
+pnt 1689 red red
+corb original: black, corp original: dimgray
+
+pnt 1157 red red
+corb original: black, corp original: dimgray
+
+pnt 901 red red
+corb original: black, corp original: dimgray
+
+pnt 1481 red red
+corb original: black, corp original: dimgray
+
+pnt 1883 red red
+corb original: black, corp original: dimgray
+
+pnt 1465 red red
+corb original: black, corp original: dimgray
+
+pnt 1199 red red
+corb original: black, corp original: dimgray
+
+pnt 1 red red
+corb original: black, corp original: dimgray
+
+pnt 2139 red red
+corb original: black, corp original: dimgray
+
+pnt 214 red red
+corb original: black, corp original: dimgray
+
+pnt 659 red red
+corb original: black, corp original: dimgray
+
+pnt 2090 red red
+corb original: black, corp original: dimgray
+
+pnt 2272 red red
+corb original: black, corp original: dimgray
+
+pnt 1106 red red
+corb original: black, corp original: dimgray
+
+pnt 2252 red red
+corb original: black, corp original: dimgray
+
+pnt 1391 red red
+corb original: black, corp original: dimgray
+
+pnt 1633 red red
+corb original: black, corp original: dimgray
+
+pnt 2270 red red
+corb original: black, corp original: dimgray
+
+pnt 2289 red red
+corb original: black, corp original: dimgray
+
+pnt 271 red red
+corb original: black, corp original: dimgray
+
+pnt 117 red red
+corb original: black, corp original: dimgray
+
+pnt 852 red red
+corb original: black, corp original: dimgray
+
+pnt 774 red red
+corb original: black, corp original: dimgray
+
+pnt 1381 red red
+corb original: black, corp original: dimgray
+
+pnt 2273 red red
+corb original: black, corp original: dimgray
+
+pnt 616 red red
+corb original: black, corp original: dimgray
+
+pnt 2237 red red
+corb original: black, corp original: dimgray
+
+pnt 1556 red red
+corb original: black, corp original: dimgray
+
+pnt 879 red red
+corb original: black, corp original: dimgray
+
+pnt 1034 red red
+corb original: black, corp original: dimgray
+
+pnt 2176 red red
+corb original: black, corp original: dimgray
+
+pnt 1779 red red
+corb original: black, corp original: dimgray
+
+pnt 700 red red
+corb original: black, corp original: dimgray
+
+pnt 15 red red
+corb original: black, corp original: dimgray
+
+pnt 2067 red red
+corb original: black, corp original: dimgray
+
+pnt 2125 red red
+corb original: black, corp original: dimgray
+
+pnt 1820 red red
+corb original: black, corp original: dimgray
+
+pnt 638 red red
+corb original: black, corp original: dimgray
+
+pnt 297 red red
+corb original: black, corp original: dimgray
+
+pnt 1448 red red
+corb original: black, corp original: dimgray
+
+pnt 508 red red
+corb original: black, corp original: dimgray
+
+pnt 1907 red red
+corb original: black, corp original: dimgray
+
+pnt 1139 red red
+corb original: black, corp original: dimgray
+
+pnt 400 red red
+corb original: black, corp original: dimgray
+
+pnt 1599 red red
+corb original: black, corp original: dimgray
+
+pnt 8 red red
+corb original: black, corp original: dimgray
+
+pnt 1299 red red
+corb original: black, corp original: dimgray
+
+pnt 373 red red
+corb original: black, corp original: dimgray
+
+pnt 340 red red
+corb original: black, corp original: dimgray
+
+pnt 2031 red red
+corb original: black, corp original: dimgray
+
+pnt 1111 red red
+corb original: black, corp original: dimgray
+
+pnt 1812 red red
+corb original: black, corp original: dimgray
+
+pnt 606 red red
+corb original: black, corp original: dimgray
+
+pnt 2132 red red
+corb original: black, corp original: dimgray
+
+pnt 1663 red red
+corb original: black, corp original: dimgray
+
+pnt 448 red red
+corb original: black, corp original: dimgray
+
+pnt 2240 red red
+corb original: black, corp original: dimgray
+
+pnt 2080 red red
+corb original: black, corp original: dimgray
+
+pnt 663 red red
+corb original: black, corp original: dimgray
+
+pnt 1493 red red
+corb original: black, corp original: dimgray
+
+pnt 89 red red
+corb original: black, corp original: dimgray
+
+pnt 2132 red red
+corb original: black, corp original: dimgray
+
+pnt 1986 red red
+corb original: black, corp original: dimgray
+
+pnt 471 red red
+corb original: black, corp original: dimgray
+
+pnt 2211 red red
+corb original: black, corp original: dimgray
+
+pnt 360 red red
+corb original: black, corp original: dimgray
+
+pnt 1396 red red
+corb original: black, corp original: dimgray
+
+pnt 2040 red red
+corb original: black, corp original: dimgray
+
+pnt 1743 red red
+corb original: black, corp original: dimgray
+
+pnt 1669 red red
+corb original: black, corp original: dimgray
+
+pnt 233 red red
+corb original: black, corp original: dimgray
+
+pnt 873 red red
+corb original: black, corp original: dimgray
+
+pnt 1571 red red
+corb original: black, corp original: dimgray
+
+pnt 2084 red red
+corb original: black, corp original: dimgray
+
+pnt 1445 red red
+corb original: black, corp original: dimgray
+
+pnt 1623 red red
+corb original: black, corp original: dimgray
+
+pnt 1062 red red
+corb original: black, corp original: dimgray
+
+pnt 79 red red
+corb original: black, corp original: dimgray
+
+pnt 1966 red red
+corb original: black, corp original: dimgray
+
+pnt 2130 red red
+corb original: black, corp original: dimgray
+
+pnt 1730 red red
+corb original: black, corp original: dimgray
+
+pnt 586 red red
+corb original: black, corp original: dimgray
+
+pnt 1095 red red
+corb original: black, corp original: dimgray
+
+pnt 2281 red red
+corb original: black, corp original: dimgray
+
+pnt 1699 red red
+corb original: black, corp original: dimgray
+
+pnt 452 red red
+corb original: black, corp original: dimgray
+
+pnt 1874 red red
+corb original: black, corp original: dimgray
+
+pnt 1633 red red
+corb original: black, corp original: dimgray
+
+pnt 1037 red red
+corb original: black, corp original: dimgray
+
+pnt 2043 red red
+corb original: black, corp original: dimgray
+
+pnt 785 red red
+corb original: black, corp original: dimgray
+
+pnt 2176 red red
+corb original: black, corp original: dimgray
+
+pnt 10 red red
+corb original: black, corp original: dimgray
+
+pnt 1112 red red
+corb original: black, corp original: dimgray
+
+pnt 2194 red red
+corb original: black, corp original: dimgray
+
+pnt 24 red red
+corb original: black, corp original: dimgray
+
+pnt 83 red red
+corb original: black, corp original: dimgray
+
+pnt 847 red red
+corb original: black, corp original: dimgray
+
+pnt 2207 red red
+corb original: black, corp original: dimgray
+
+pnt 872 red red
+corb original: black, corp original: dimgray
+
+pnt 416 red red
+corb original: black, corp original: dimgray
+
+pnt 1120 red red
+corb original: black, corp original: dimgray
+
+pnt 604 red red
+corb original: black, corp original: dimgray
+
+pnt 542 red red
+corb original: black, corp original: dimgray
+
+pnt 759 red red
+corb original: black, corp original: dimgray
+
+pnt 694 red red
+corb original: black, corp original: dimgray
+
+pnt 1660 red red
+corb original: black, corp original: dimgray
+
+pnt 1671 red red
+corb original: black, corp original: dimgray
+
+pnt 65 red red
+corb original: black, corp original: dimgray
+
+pnt 1368 red red
+corb original: black, corp original: dimgray
+
+pnt 1816 red red
+corb original: black, corp original: dimgray
+
+pnt 1227 red red
+corb original: black, corp original: dimgray
+
+pnt 1591 red red
+corb original: black, corp original: dimgray
+
+pnt 60 red red
+corb original: black, corp original: dimgray
+
+pnt 1558 red red
+corb original: black, corp original: dimgray
+
+pnt 1604 red red
+corb original: black, corp original: dimgray
+
+pnt 1564 red red
+corb original: black, corp original: dimgray
+
+pnt 2228 red red
+corb original: black, corp original: dimgray
+
+pnt 639 red red
+corb original: black, corp original: dimgray
+
+pnt 635 red red
+corb original: black, corp original: dimgray
+
+pnt 879 red red
+corb original: black, corp original: dimgray
+
+pnt 2034 red red
+corb original: black, corp original: dimgray
+
+pnt 2028 red red
+corb original: black, corp original: dimgray
+
+pnt 596 red red
+corb original: black, corp original: dimgray
+
+pnt 17 red red
+corb original: black, corp original: dimgray
+
+pnt 1442 red red
+corb original: black, corp original: dimgray
+
+pnt 1048 red red
+corb original: black, corp original: dimgray
+
+pnt 693 red red
+corb original: black, corp original: dimgray
+
+pnt 2093 red red
+corb original: black, corp original: dimgray
+
+pnt 1001 red red
+corb original: black, corp original: dimgray
+
+pnt 684 red red
+corb original: black, corp original: dimgray
+
+pnt 2150 red red
+corb original: black, corp original: dimgray
+
+pnt 2289 red red
+corb original: black, corp original: dimgray
+
+pnt 28 red red
+corb original: black, corp original: dimgray
+
+pnt 1351 red red
+corb original: black, corp original: dimgray
+
+pnt 1616 red red
+corb original: black, corp original: dimgray
+
+pnt 433 red red
+corb original: black, corp original: dimgray
+
+pnt 1234 red red
+corb original: black, corp original: dimgray
+
+pnt 52 red red
+corb original: black, corp original: dimgray
+
+pnt 81 red red
+corb original: black, corp original: dimgray
+
+pnt 2094 red red
+corb original: black, corp original: dimgray
+
+pnt 804 red red
+corb original: black, corp original: dimgray
+
+pnt 2002 red red
+corb original: black, corp original: dimgray
+
+pnt 1600 red red
+corb original: black, corp original: dimgray
+
+pnt 218 red red
+corb original: black, corp original: dimgray
+
+pnt 711 red red
+corb original: black, corp original: dimgray
+
+pnt 83 red red
+corb original: black, corp original: dimgray
+
+pnt 1955 red red
+corb original: black, corp original: dimgray
+
+pnt 269 red red
+corb original: black, corp original: dimgray
+
+pnt 2113 red red
+corb original: black, corp original: dimgray
+
+pnt 645 red red
+corb original: black, corp original: dimgray
+
+pnt 873 red red
+corb original: black, corp original: dimgray
+
+pnt 1102 red red
+corb original: black, corp original: dimgray
+
+pnt 1941 red red
+corb original: black, corp original: dimgray
+
+pnt 2103 red red
+corb original: black, corp original: dimgray
+
+pnt 2030 red red
+corb original: black, corp original: dimgray
+
+pnt 2037 red red
+corb original: black, corp original: dimgray
+
+pnt 1452 red red
+corb original: black, corp original: dimgray
+
+pnt 1094 red red
+corb original: black, corp original: dimgray
+
+pnt 2099 red red
+corb original: black, corp original: dimgray
+
+pnt 63 red red
+corb original: black, corp original: dimgray
+
+pnt 599 red red
+corb original: black, corp original: dimgray
+
+pnt 1376 red red
+corb original: black, corp original: dimgray
+
+pnt 195 red red
+corb original: black, corp original: dimgray
+
+pnt 417 red red
+corb original: black, corp original: dimgray
+
+pnt 1649 red red
+corb original: black, corp original: dimgray
+
+pnt 634 red red
+corb original: black, corp original: dimgray
+
+pnt 1735 red red
+corb original: black, corp original: dimgray
+
+pnt 257 red red
+corb original: black, corp original: dimgray
+
+pnt 49 red red
+corb original: black, corp original: dimgray
+
+pnt 2265 red red
+corb original: black, corp original: dimgray
+
+pnt 471 red red
+corb original: black, corp original: dimgray
+
+pnt 969 red red
+corb original: black, corp original: dimgray
+
+pnt 1993 red red
+corb original: black, corp original: dimgray
+
+pnt 1134 red red
+corb original: black, corp original: dimgray
+
+pnt 463 red red
+corb original: black, corp original: dimgray
+
+pnt 43 red red
+corb original: black, corp original: dimgray
+
+pnt 1025 red red
+corb original: black, corp original: dimgray
+
+pnt 317 red red
+corb original: black, corp original: dimgray
+
+pnt 491 red red
+corb original: black, corp original: dimgray
+
+pnt 127 red red
+corb original: black, corp original: dimgray
+
+pnt 970 red red
+corb original: black, corp original: dimgray
+
+pnt 837 red red
+corb original: black, corp original: dimgray
+
+pnt 1538 red red
+corb original: black, corp original: dimgray
+
+pnt 981 red red
+corb original: black, corp original: dimgray
+
+pnt 1819 red red
+corb original: black, corp original: dimgray
+
+pnt 1220 red red
+corb original: black, corp original: dimgray
+
+pnt 1933 red red
+corb original: black, corp original: dimgray
+
+pnt 793 red red
+corb original: black, corp original: dimgray
+
+pnt 1830 red red
+corb original: black, corp original: dimgray
+
+pnt 681 red red
+corb original: black, corp original: dimgray
+
+pnt 123 red red
+corb original: black, corp original: dimgray
+
+pnt 1615 red red
+corb original: black, corp original: dimgray
+
+pnt 615 red red
+corb original: black, corp original: dimgray
+
+pnt 950 red red
+corb original: black, corp original: dimgray
+
+pnt 254 red red
+corb original: black, corp original: dimgray
+
+pnt 888 red red
+corb original: black, corp original: dimgray
+
+pnt 357 red red
+corb original: black, corp original: dimgray
+
+pnt 2260 red red
+corb original: black, corp original: dimgray
+
+pnt 2121 red red
+corb original: black, corp original: dimgray
+
+pnt 610 red red
+corb original: black, corp original: dimgray
+
+pnt 724 red red
+corb original: black, corp original: dimgray
+
+pnt 343 red red
+corb original: black, corp original: dimgray
+
+pnt 1554 red red
+corb original: black, corp original: dimgray
+
+pnt 1453 red red
+corb original: black, corp original: dimgray
+
+pnt 85 red red
+corb original: black, corp original: dimgray
+
+pnt 1385 red red
+corb original: black, corp original: dimgray
+
+pnt 823 red red
+corb original: black, corp original: dimgray
+
+pnt 1926 red red
+corb original: black, corp original: dimgray
+
+pnt 496 red red
+corb original: black, corp original: dimgray
+
+pnt 777 red red
+corb original: black, corp original: dimgray
+
+pnt 2193 red red
+corb original: black, corp original: dimgray
+
+pnt 1436 red red
+corb original: black, corp original: dimgray
+
+pnt 1398 red red
+corb original: black, corp original: dimgray
+
+pnt 1766 red red
+corb original: black, corp original: dimgray
+
+pnt 447 red red
+corb original: black, corp original: dimgray
+
+pnt 1049 red red
+corb original: black, corp original: dimgray
+
+pnt 870 red red
+corb original: black, corp original: dimgray
+
+pnt 1446 red red
+corb original: black, corp original: dimgray
+
+pnt 490 red red
+corb original: black, corp original: dimgray
+
+pnt 295 red red
+corb original: black, corp original: dimgray
+
+pnt 1994 red red
+corb original: black, corp original: dimgray
+
+pnt 2065 red red
+corb original: black, corp original: dimgray
+
+pnt 1463 red red
+corb original: black, corp original: dimgray
+
+pnt 2032 red red
+corb original: black, corp original: dimgray
+
+pnt 986 red red
+corb original: black, corp original: dimgray
+
+pnt 333 red red
+corb original: black, corp original: dimgray
+
+pnt 1629 red red
+corb original: black, corp original: dimgray
+
+pnt 1066 red red
+corb original: black, corp original: dimgray
+
+pnt 640 red red
+corb original: black, corp original: dimgray
+
+pnt 484 red red
+corb original: black, corp original: dimgray
+
+pnt 588 red red
+corb original: black, corp original: dimgray
+
+pnt 158 red red
+corb original: black, corp original: dimgray
+
+pnt 1981 red red
+corb original: black, corp original: dimgray
+
+pnt 1914 red red
+corb original: black, corp original: dimgray
+
+pnt 191 red red
+corb original: black, corp original: dimgray
+
+pnt 416 red red
+corb original: black, corp original: dimgray
+
+pnt 2117 red red
+corb original: black, corp original: dimgray
+
+pnt 29 red red
+corb original: black, corp original: dimgray
+
+pnt 1152 red red
+corb original: black, corp original: dimgray
+
+pnt 1229 red red
+corb original: black, corp original: dimgray
+
+pnt 2056 red red
+corb original: black, corp original: dimgray
+
+pnt 1022 red red
+corb original: black, corp original: dimgray
+
+pnt 2145 red red
+corb original: black, corp original: dimgray
+
+pnt 1824 red red
+corb original: black, corp original: dimgray
+
+pnt 876 red red
+corb original: black, corp original: dimgray
+
+pnt 1948 red red
+corb original: black, corp original: dimgray
+
+pnt 895 red red
+corb original: black, corp original: dimgray
+
+pnt 1406 red red
+corb original: black, corp original: dimgray
+
+pnt 1355 red red
+corb original: black, corp original: dimgray
+
+pnt 20 red red
+corb original: black, corp original: dimgray
+
+pnt 700 red red
+corb original: black, corp original: dimgray
+
+pnt 411 red red
+corb original: black, corp original: dimgray
+
+pnt 2252 red red
+corb original: black, corp original: dimgray
+
+pnt 2228 red red
+corb original: black, corp original: dimgray
+
+pnt 1331 red red
+corb original: black, corp original: dimgray
+
+pnt 1864 red red
+corb original: black, corp original: dimgray
+
+pnt 494 red red
+corb original: black, corp original: dimgray
+
+pnt 183 red red
+corb original: black, corp original: dimgray
+
+pnt 1929 red red
+corb original: black, corp original: dimgray
+
+pnt 109 red red
+corb original: black, corp original: dimgray
+
+pnt 2203 red red
+corb original: black, corp original: dimgray
+
+pnt 629 red red
+corb original: black, corp original: dimgray
+
+pnt 159 red red
+corb original: black, corp original: dimgray
+
+pnt 1109 red red
+corb original: black, corp original: dimgray
+
+pnt 272 red red
+corb original: black, corp original: dimgray
+
+pnt 1627 red red
+corb original: black, corp original: dimgray
+
+pnt 202 red red
+corb original: black, corp original: dimgray
+
+pnt 1481 red red
+corb original: black, corp original: dimgray
+
+pnt 720 red red
+corb original: black, corp original: dimgray
+
+pnt 915 red red
+corb original: black, corp original: dimgray
+
+pnt 89 red red
+corb original: black, corp original: dimgray
+
+pnt 2285 red red
+corb original: black, corp original: dimgray
+
+pnt 1873 red red
+corb original: black, corp original: dimgray
+
+pnt 954 red red
+corb original: black, corp original: dimgray
+
+pnt 1609 red red
+corb original: black, corp original: dimgray
+
+pnt 615 red red
+corb original: black, corp original: dimgray
+
+pnt 651 red red
+corb original: black, corp original: dimgray
+
+pnt 1305 red red
+corb original: black, corp original: dimgray
+
+pnt 1960 red red
+corb original: black, corp original: dimgray
+
+pnt 266 red red
+corb original: black, corp original: dimgray
+
+pnt 1752 red red
+corb original: black, corp original: dimgray
+
+pnt 534 red red
+corb original: black, corp original: dimgray
+
+pnt 1710 red red
+corb original: black, corp original: dimgray
+
+pnt 1810 red red
+corb original: black, corp original: dimgray
+
+pnt 839 red red
+corb original: black, corp original: dimgray
+
+pnt 1220 red red
+corb original: black, corp original: dimgray
+
+pnt 1218 red red
+corb original: black, corp original: dimgray
+
+pnt 564 red red
+corb original: black, corp original: dimgray
+
+pnt 1493 red red
+corb original: black, corp original: dimgray
+
+pnt 1760 red red
+corb original: black, corp original: dimgray
+
+pnt 2204 red red
+corb original: black, corp original: dimgray
+
+pnt 202 red red
+corb original: black, corp original: dimgray
+
+pnt 970 red red
+corb original: black, corp original: dimgray
+
+pnt 1404 red red
+corb original: black, corp original: dimgray
+
+pnt 238 red red
+corb original: black, corp original: dimgray
+
+pnt 1555 red red
+corb original: black, corp original: dimgray
+
+pnt 1084 red red
+corb original: black, corp original: dimgray
+
+pnt 2050 red red
+corb original: black, corp original: dimgray
+
+pnt 1230 red red
+corb original: black, corp original: dimgray
+
+pnt 2276 red red
+corb original: black, corp original: dimgray
+
+pnt 255 red red
+corb original: black, corp original: dimgray
+
+pnt 265 red red
+corb original: black, corp original: dimgray
+
+pnt 1962 red red
+corb original: black, corp original: dimgray
+
+pnt 1043 red red
+corb original: black, corp original: dimgray
+
+pnt 635 red red
+corb original: black, corp original: dimgray
+
+pnt 1558 red red
+corb original: black, corp original: dimgray
+
+pnt 813 red red
+corb original: black, corp original: dimgray
+
+pnt 38 red red
+corb original: black, corp original: dimgray
+
+pnt 1652 red red
+corb original: black, corp original: dimgray
+
+pnt 1907 red red
+corb original: black, corp original: dimgray
+
+pnt 987 red red
+corb original: black, corp original: dimgray
+
+pnt 1035 red red
+corb original: black, corp original: dimgray
+
+pnt 2032 red red
+corb original: black, corp original: dimgray
+
+pnt 1155 red red
+corb original: black, corp original: dimgray
+
+pnt 55 red red
+corb original: black, corp original: dimgray
+
+pnt 1352 red red
+corb original: black, corp original: dimgray
+
+pnt 1137 red red
+corb original: black, corp original: dimgray
+
+pnt 750 red red
+corb original: black, corp original: dimgray
+
+pnt 1274 red red
+corb original: black, corp original: dimgray
+
+pnt 1715 red red
+corb original: black, corp original: dimgray
+
+pnt 717 red red
+corb original: black, corp original: dimgray
+
+pnt 1243 red red
+corb original: black, corp original: dimgray
+
+pnt 596 red red
+corb original: black, corp original: dimgray
+
+pnt 1109 red red
+corb original: black, corp original: dimgray
+
+pnt 791 red red
+corb original: black, corp original: dimgray
+
+pnt 989 red red
+corb original: black, corp original: dimgray
+
+pnt 968 red red
+corb original: black, corp original: dimgray
+
+pnt 1232 red red
+corb original: black, corp original: dimgray
+
+pnt 1881 red red
+corb original: black, corp original: dimgray
+
+pnt 643 red red
+corb original: black, corp original: dimgray
+
+pnt 766 red red
+corb original: black, corp original: dimgray
+
+pnt 563 red red
+corb original: black, corp original: dimgray
+
+pnt 1624 red red
+corb original: black, corp original: dimgray
+
+pnt 1455 red red
+corb original: black, corp original: dimgray
+
+pnt 655 red red
+corb original: black, corp original: dimgray
+
+pnt 479 red red
+corb original: black, corp original: dimgray
+
+pnt 1745 red red
+corb original: black, corp original: dimgray
+
+pnt 924 red red
+corb original: black, corp original: dimgray
+
+pnt 492 red red
+corb original: black, corp original: dimgray
+
+pnt 2178 red red
+corb original: black, corp original: dimgray
+
+pnt 691 red red
+corb original: black, corp original: dimgray
+
+pnt 479 red red
+corb original: black, corp original: dimgray
+
+pnt 630 red red
+corb original: black, corp original: dimgray
+
+pnt 1719 red red
+corb original: black, corp original: dimgray
+
+pnt 1706 red red
+corb original: black, corp original: dimgray
+
+pnt 1407 red red
+corb original: black, corp original: dimgray
+
+pnt 1519 red red
+corb original: black, corp original: dimgray
+
+pnt 1750 red red
+corb original: black, corp original: dimgray
+
+pnt 437 red red
+corb original: black, corp original: dimgray
+
+pnt 952 red red
+corb original: black, corp original: dimgray
+
+pnt 1064 red red
+corb original: black, corp original: dimgray
+
+pnt 1308 red red
+corb original: black, corp original: dimgray
+
+pnt 941 red red
+corb original: black, corp original: dimgray
+
+pnt 1996 red red
+corb original: black, corp original: dimgray
+
+pnt 666 red red
+corb original: black, corp original: dimgray
+
+pnt 1672 red red
+corb original: black, corp original: dimgray
+
+pnt 547 red red
+corb original: black, corp original: dimgray
+
+pnt 760 red red
+corb original: black, corp original: dimgray
+
+pnt 1003 red red
+corb original: black, corp original: dimgray
+
+pnt 593 red red
+corb original: black, corp original: dimgray
+
+pnt 865 red red
+corb original: black, corp original: dimgray
+
+pnt 311 red red
+corb original: black, corp original: dimgray
+
+pnt 1726 red red
+corb original: black, corp original: dimgray
+
+pnt 1371 red red
+corb original: black, corp original: dimgray
+
+pnt 1738 red red
+corb original: black, corp original: dimgray
+
+pnt 31 red red
+corb original: black, corp original: dimgray
+
+pnt 2111 red red
+corb original: black, corp original: dimgray
+
+pnt 26 red red
+corb original: black, corp original: dimgray
+
+pnt 950 red red
+corb original: black, corp original: dimgray
+
+pnt 731 red red
+corb original: black, corp original: dimgray
+
+pnt 436 red red
+corb original: black, corp original: dimgray
+
+pnt 2292 red red
+corb original: black, corp original: dimgray
+
+pnt 672 red red
+corb original: black, corp original: dimgray
+
+pnt 280 red red
+corb original: black, corp original: dimgray
+
+pnt 2116 red red
+corb original: black, corp original: dimgray
+
+pnt 1942 red red
+corb original: black, corp original: dimgray
+
+pnt 370 red red
+corb original: black, corp original: dimgray
+
+pnt 1046 red red
+corb original: black, corp original: dimgray
+
+pnt 356 red red
+corb original: black, corp original: dimgray
+
+pnt 1672 red red
+corb original: black, corp original: dimgray
+
+pnt 794 red red
+corb original: black, corp original: dimgray
+
+pnt 841 red red
+corb original: black, corp original: dimgray
+
+pnt 1411 red red
+corb original: black, corp original: dimgray
+
+pnt 2253 red red
+corb original: black, corp original: dimgray
+
+pnt 1357 red red
+corb original: black, corp original: dimgray
+
+pnt 1103 red red
+corb original: black, corp original: dimgray
+
+pnt 1581 red red
+corb original: black, corp original: dimgray
+
+pnt 2142 red red
+corb original: black, corp original: dimgray
+
+pnt 889 red red
+corb original: black, corp original: dimgray
+
+pnt 1275 red red
+corb original: black, corp original: dimgray
+
+pnt 299 red red
+corb original: black, corp original: dimgray
+
+pnt 881 red red
+corb original: black, corp original: dimgray
+
+pnt 2202 red red
+corb original: black, corp original: dimgray
+
+pnt 1654 red red
+corb original: black, corp original: dimgray
+
+pnt 511 red red
+corb original: black, corp original: dimgray
+
+pnt 2153 red red
+corb original: black, corp original: dimgray
+
+pnt 2113 red red
+corb original: black, corp original: dimgray
+
+pnt 349 red red
+corb original: black, corp original: dimgray
+
+pnt 651 red red
+corb original: black, corp original: dimgray
+
+pnt 1788 red red
+corb original: black, corp original: dimgray
+
+pnt 1725 red red
+corb original: black, corp original: dimgray
+
+pnt 537 red red
+corb original: black, corp original: dimgray
+
+pnt 1277 red red
+corb original: black, corp original: dimgray
+
+pnt 838 red red
+corb original: black, corp original: dimgray
+
+pnt 593 red red
+corb original: black, corp original: dimgray
+
+pnt 1863 red red
+corb original: black, corp original: dimgray
+
+pnt 1798 red red
+corb original: black, corp original: dimgray
+
+pnt 867 red red
+corb original: black, corp original: dimgray
+
+pnt 918 red red
+corb original: black, corp original: dimgray
+
+pnt 579 red red
+corb original: black, corp original: dimgray
+
+pnt 149 red red
+corb original: black, corp original: dimgray
+
+pnt 1538 red red
+corb original: black, corp original: dimgray
+
+pnt 811 red red
+corb original: black, corp original: dimgray
+
+pnt 2176 red red
+corb original: black, corp original: dimgray
+
+pnt 2195 red red
+corb original: black, corp original: dimgray
+
+pnt 1002 red red
+corb original: black, corp original: dimgray
+
+pnt 885 red red
+corb original: black, corp original: dimgray
+
+pnt 58 red red
+corb original: black, corp original: dimgray
+

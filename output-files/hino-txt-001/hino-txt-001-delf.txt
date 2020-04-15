@@ -1,0 +1,21 @@
+delf 8
+tipo: texto, id: 8, x: 5.000000, y: 127.000000, corb: orange, corp: lightyellow, texto: Clube bem amado
+
+delf 10
+tipo: texto, id: 10, x: 5.000000, y: 159.000000, corb: orange, corp: lightyellow, texto: Sao teus guias brasileiros
+
+delf 13
+tipo: texto, id: 13, x: 5.000000, y: 207.000000, corb: orange, corp: lightyellow, texto: Que ostentas dignamente
+
+delf 2
+tipo: texto, id: 2, x: 5.000000, y: 31.000000, corb: orange, corp: lightyellow, texto: Amado clube brasileiro
+
+delf 14
+tipo: texto, id: 14, x: 5.000000, y: 223.000000, corb: orange, corp: lightyellow, texto: De São Paulo tens o nome
+
+delf 1
+tipo: texto, id: 1, x: 5.000000, y: 15.000000, corb: orange, corp: lightyellow, texto: Salve o tricolor paulista
+
+delf 6
+tipo: texto, id: 6, x: 5.000000, y: 95.000000, corb: orange, corp: lightyellow, texto: Dentre os grandes es o primeiro
+

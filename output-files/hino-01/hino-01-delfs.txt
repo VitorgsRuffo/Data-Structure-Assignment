@@ -1,0 +1,2363 @@
+delf* 214 1394
+tipo: circulo, id: 214, raio: 2.500000, x: 548.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 215, raio: 2.500000, x: 554.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 216, raio: 2.500000, x: 530.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 217, raio: 2.500000, x: 548.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 218, raio: 2.500000, x: 554.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 219, raio: 2.500000, x: 572.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 220, raio: 2.500000, x: 530.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 221, raio: 2.500000, x: 536.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 222, raio: 2.500000, x: 542.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 223, raio: 2.500000, x: 548.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 224, raio: 2.500000, x: 554.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 225, raio: 2.500000, x: 560.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 226, raio: 2.500000, x: 566.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 227, raio: 2.500000, x: 572.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 228, raio: 2.500000, x: 582.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 229, raio: 2.500000, x: 588.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 230, raio: 2.500000, x: 594.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 231, raio: 2.500000, x: 600.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 232, raio: 2.500000, x: 606.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 233, raio: 2.500000, x: 612.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 234, raio: 2.500000, x: 618.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 235, raio: 2.500000, x: 624.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 236, raio: 2.500000, x: 582.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 237, raio: 2.500000, x: 582.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 238, raio: 2.500000, x: 582.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 239, raio: 2.500000, x: 582.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 240, raio: 2.500000, x: 582.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 241, raio: 2.500000, x: 582.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 242, raio: 2.500000, x: 582.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 243, raio: 2.500000, x: 588.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 244, raio: 2.500000, x: 594.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 245, raio: 2.500000, x: 600.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 246, raio: 2.500000, x: 606.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 247, raio: 2.500000, x: 612.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 248, raio: 2.500000, x: 618.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 249, raio: 2.500000, x: 624.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 250, raio: 2.500000, x: 640.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 251, raio: 2.500000, x: 646.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 252, raio: 2.500000, x: 652.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 253, raio: 2.500000, x: 658.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 254, raio: 2.500000, x: 664.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 255, raio: 2.500000, x: 670.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 256, raio: 2.500000, x: 634.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 257, raio: 2.500000, x: 676.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 258, raio: 2.500000, x: 634.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 259, raio: 2.500000, x: 676.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 260, raio: 2.500000, x: 634.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 261, raio: 2.500000, x: 676.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 262, raio: 2.500000, x: 634.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 263, raio: 2.500000, x: 676.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 264, raio: 2.500000, x: 634.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 265, raio: 2.500000, x: 676.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 266, raio: 2.500000, x: 634.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 267, raio: 2.500000, x: 676.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 268, raio: 2.500000, x: 640.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 269, raio: 2.500000, x: 646.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 270, raio: 2.500000, x: 652.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 271, raio: 2.500000, x: 658.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 272, raio: 2.500000, x: 664.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 273, raio: 2.500000, x: 670.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 274, raio: 2.500000, x: 686.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 275, raio: 2.500000, x: 692.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 276, raio: 2.500000, x: 686.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 277, raio: 2.500000, x: 692.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 278, raio: 2.500000, x: 686.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 279, raio: 2.500000, x: 692.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 280, raio: 2.500000, x: 686.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 281, raio: 2.500000, x: 692.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 282, raio: 2.500000, x: 686.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 283, raio: 2.500000, x: 692.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 284, raio: 2.500000, x: 686.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 285, raio: 2.500000, x: 692.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 286, raio: 2.500000, x: 728.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 287, raio: 2.500000, x: 686.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 288, raio: 2.500000, x: 692.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 289, raio: 2.500000, x: 722.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 290, raio: 2.500000, x: 728.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 291, raio: 2.500000, x: 686.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 292, raio: 2.500000, x: 692.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 293, raio: 2.500000, x: 698.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 294, raio: 2.500000, x: 704.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 295, raio: 2.500000, x: 710.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 296, raio: 2.500000, x: 716.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 297, raio: 2.500000, x: 722.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 298, raio: 2.500000, x: 728.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 299, raio: 2.500000, x: 744.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 300, raio: 2.500000, x: 750.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 301, raio: 2.500000, x: 756.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 302, raio: 2.500000, x: 762.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 303, raio: 2.500000, x: 768.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 304, raio: 2.500000, x: 774.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 305, raio: 2.500000, x: 738.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 306, raio: 2.500000, x: 780.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 307, raio: 2.500000, x: 738.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 308, raio: 2.500000, x: 780.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 309, raio: 2.500000, x: 738.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 310, raio: 2.500000, x: 780.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 311, raio: 2.500000, x: 738.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 312, raio: 2.500000, x: 780.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 313, raio: 2.500000, x: 738.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 314, raio: 2.500000, x: 780.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 315, raio: 2.500000, x: 738.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 316, raio: 2.500000, x: 780.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 317, raio: 2.500000, x: 744.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 318, raio: 2.500000, x: 750.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 319, raio: 2.500000, x: 756.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 320, raio: 2.500000, x: 762.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 321, raio: 2.500000, x: 768.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 322, raio: 2.500000, x: 774.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 323, raio: 2.500000, x: 790.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 324, raio: 2.500000, x: 796.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 325, raio: 2.500000, x: 802.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 326, raio: 2.500000, x: 808.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 327, raio: 2.500000, x: 814.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 328, raio: 2.500000, x: 820.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 329, raio: 2.500000, x: 826.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 330, raio: 2.500000, x: 790.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 331, raio: 2.500000, x: 832.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 332, raio: 2.500000, x: 790.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 333, raio: 2.500000, x: 832.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 334, raio: 2.500000, x: 790.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 335, raio: 2.500000, x: 796.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 336, raio: 2.500000, x: 802.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 337, raio: 2.500000, x: 808.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 338, raio: 2.500000, x: 814.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 339, raio: 2.500000, x: 820.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 340, raio: 2.500000, x: 826.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 341, raio: 2.500000, x: 790.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 342, raio: 2.500000, x: 814.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 343, raio: 2.500000, x: 790.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 344, raio: 2.500000, x: 820.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 345, raio: 2.500000, x: 790.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 346, raio: 2.500000, x: 826.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 347, raio: 2.500000, x: 790.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 348, raio: 2.500000, x: 832.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 349, raio: 2.500000, x: 900.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 350, raio: 2.500000, x: 906.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 351, raio: 2.500000, x: 912.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 352, raio: 2.500000, x: 918.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 353, raio: 2.500000, x: 924.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 354, raio: 2.500000, x: 930.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 355, raio: 2.500000, x: 894.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 356, raio: 2.500000, x: 936.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 357, raio: 2.500000, x: 894.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 358, raio: 2.500000, x: 936.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 359, raio: 2.500000, x: 894.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 360, raio: 2.500000, x: 936.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 361, raio: 2.500000, x: 894.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 362, raio: 2.500000, x: 900.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 363, raio: 2.500000, x: 906.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 364, raio: 2.500000, x: 912.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 365, raio: 2.500000, x: 918.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 366, raio: 2.500000, x: 924.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 367, raio: 2.500000, x: 930.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 368, raio: 2.500000, x: 894.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 369, raio: 2.500000, x: 894.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 370, raio: 2.500000, x: 894.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 371, raio: 2.500000, x: 952.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 372, raio: 2.500000, x: 958.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 373, raio: 2.500000, x: 964.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 374, raio: 2.500000, x: 970.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 375, raio: 2.500000, x: 976.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 376, raio: 2.500000, x: 982.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 377, raio: 2.500000, x: 946.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 378, raio: 2.500000, x: 988.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 379, raio: 2.500000, x: 946.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 380, raio: 2.500000, x: 988.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 381, raio: 2.500000, x: 946.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 382, raio: 2.500000, x: 988.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 383, raio: 2.500000, x: 946.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 384, raio: 2.500000, x: 952.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 385, raio: 2.500000, x: 958.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 386, raio: 2.500000, x: 964.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 387, raio: 2.500000, x: 970.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 388, raio: 2.500000, x: 976.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 389, raio: 2.500000, x: 982.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 390, raio: 2.500000, x: 988.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 391, raio: 2.500000, x: 946.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 392, raio: 2.500000, x: 988.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 393, raio: 2.500000, x: 946.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 394, raio: 2.500000, x: 988.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 395, raio: 2.500000, x: 946.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 396, raio: 2.500000, x: 988.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 397, raio: 2.500000, x: 998.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 398, raio: 2.500000, x: 1040.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 399, raio: 2.500000, x: 998.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 400, raio: 2.500000, x: 1040.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 401, raio: 2.500000, x: 998.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 402, raio: 2.500000, x: 1040.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 403, raio: 2.500000, x: 998.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 404, raio: 2.500000, x: 1040.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 405, raio: 2.500000, x: 998.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 406, raio: 2.500000, x: 1040.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 407, raio: 2.500000, x: 998.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 408, raio: 2.500000, x: 1040.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 409, raio: 2.500000, x: 998.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 410, raio: 2.500000, x: 1040.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 411, raio: 2.500000, x: 1004.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 412, raio: 2.500000, x: 1010.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 413, raio: 2.500000, x: 1016.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 414, raio: 2.500000, x: 1022.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 415, raio: 2.500000, x: 1028.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 416, raio: 2.500000, x: 1034.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 417, raio: 2.500000, x: 1050.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 418, raio: 2.500000, x: 1056.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 419, raio: 2.500000, x: 1050.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 420, raio: 2.500000, x: 1056.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 421, raio: 2.500000, x: 1050.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 422, raio: 2.500000, x: 1056.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 423, raio: 2.500000, x: 1050.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 424, raio: 2.500000, x: 1056.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 425, raio: 2.500000, x: 1050.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 426, raio: 2.500000, x: 1056.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 427, raio: 2.500000, x: 1050.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 428, raio: 2.500000, x: 1056.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 429, raio: 2.500000, x: 1092.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 430, raio: 2.500000, x: 1050.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 431, raio: 2.500000, x: 1056.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 432, raio: 2.500000, x: 1086.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 433, raio: 2.500000, x: 1092.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 434, raio: 2.500000, x: 1050.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 435, raio: 2.500000, x: 1056.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 436, raio: 2.500000, x: 1062.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 437, raio: 2.500000, x: 1068.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 438, raio: 2.500000, x: 1074.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 439, raio: 2.500000, x: 1080.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 440, raio: 2.500000, x: 1086.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 441, raio: 2.500000, x: 1092.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 442, raio: 2.500000, x: 1102.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 443, raio: 2.500000, x: 1108.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 444, raio: 2.500000, x: 1114.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 445, raio: 2.500000, x: 1120.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 446, raio: 2.500000, x: 1126.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 447, raio: 2.500000, x: 1132.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 448, raio: 2.500000, x: 1138.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 449, raio: 2.500000, x: 1144.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 450, raio: 2.500000, x: 1102.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 451, raio: 2.500000, x: 1120.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 452, raio: 2.500000, x: 1126.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 453, raio: 2.500000, x: 1144.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 454, raio: 2.500000, x: 1120.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 455, raio: 2.500000, x: 1126.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 456, raio: 2.500000, x: 1120.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 457, raio: 2.500000, x: 1126.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 458, raio: 2.500000, x: 1120.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 459, raio: 2.500000, x: 1126.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 460, raio: 2.500000, x: 1120.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 461, raio: 2.500000, x: 1126.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 462, raio: 2.500000, x: 1102.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 463, raio: 2.500000, x: 1120.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 464, raio: 2.500000, x: 1126.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 465, raio: 2.500000, x: 1144.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 466, raio: 2.500000, x: 1102.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 467, raio: 2.500000, x: 1108.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 468, raio: 2.500000, x: 1114.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 469, raio: 2.500000, x: 1120.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 470, raio: 2.500000, x: 1126.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 471, raio: 2.500000, x: 1132.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 472, raio: 2.500000, x: 1138.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 473, raio: 2.500000, x: 1144.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 474, raio: 2.500000, x: 1160.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 475, raio: 2.500000, x: 1166.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 476, raio: 2.500000, x: 1172.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 477, raio: 2.500000, x: 1178.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 478, raio: 2.500000, x: 1184.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 479, raio: 2.500000, x: 1190.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 480, raio: 2.500000, x: 1196.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 481, raio: 2.500000, x: 1154.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 482, raio: 2.500000, x: 1154.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 483, raio: 2.500000, x: 1160.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 484, raio: 2.500000, x: 1166.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 485, raio: 2.500000, x: 1172.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 486, raio: 2.500000, x: 1178.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 487, raio: 2.500000, x: 1184.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 488, raio: 2.500000, x: 1190.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 489, raio: 2.500000, x: 1196.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 490, raio: 2.500000, x: 1196.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 491, raio: 2.500000, x: 1196.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 492, raio: 2.500000, x: 1154.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 493, raio: 2.500000, x: 1160.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 494, raio: 2.500000, x: 1166.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 495, raio: 2.500000, x: 1172.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 496, raio: 2.500000, x: 1178.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 497, raio: 2.500000, x: 1184.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 498, raio: 2.500000, x: 1190.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 499, raio: 2.500000, x: 1206.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 500, raio: 2.500000, x: 1212.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 501, raio: 2.500000, x: 1218.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 502, raio: 2.500000, x: 1224.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 503, raio: 2.500000, x: 1230.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 504, raio: 2.500000, x: 1236.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 505, raio: 2.500000, x: 1242.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 506, raio: 2.500000, x: 1248.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 507, raio: 2.500000, x: 1206.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 508, raio: 2.500000, x: 1224.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 509, raio: 2.500000, x: 1230.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 510, raio: 2.500000, x: 1248.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 511, raio: 2.500000, x: 1224.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 512, raio: 2.500000, x: 1230.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 513, raio: 2.500000, x: 1224.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 514, raio: 2.500000, x: 1230.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 515, raio: 2.500000, x: 1224.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 516, raio: 2.500000, x: 1230.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 517, raio: 2.500000, x: 1224.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 518, raio: 2.500000, x: 1230.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 519, raio: 2.500000, x: 1224.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 520, raio: 2.500000, x: 1230.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 521, raio: 2.500000, x: 1224.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 522, raio: 2.500000, x: 1230.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 523, raio: 2.500000, x: 1264.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 524, raio: 2.500000, x: 1270.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 525, raio: 2.500000, x: 1276.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 526, raio: 2.500000, x: 1282.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 527, raio: 2.500000, x: 1288.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 528, raio: 2.500000, x: 1294.000000, y: 10.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 529, raio: 2.500000, x: 1258.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 530, raio: 2.500000, x: 1300.000000, y: 16.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 531, raio: 2.500000, x: 1258.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 532, raio: 2.500000, x: 1300.000000, y: 22.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 533, raio: 2.500000, x: 1258.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 534, raio: 2.500000, x: 1300.000000, y: 28.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 535, raio: 2.500000, x: 1258.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 536, raio: 2.500000, x: 1264.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 537, raio: 2.500000, x: 1270.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 538, raio: 2.500000, x: 1276.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 539, raio: 2.500000, x: 1282.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 540, raio: 2.500000, x: 1288.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 541, raio: 2.500000, x: 1294.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 542, raio: 2.500000, x: 1300.000000, y: 35.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 543, raio: 2.500000, x: 1258.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 544, raio: 2.500000, x: 1300.000000, y: 41.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 545, raio: 2.500000, x: 1258.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 546, raio: 2.500000, x: 1300.000000, y: 47.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 547, raio: 2.500000, x: 1258.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 548, raio: 2.500000, x: 1300.000000, y: 53.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 549, raio: 2.500000, x: 16.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 550, raio: 2.500000, x: 22.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 551, raio: 2.500000, x: 28.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 552, raio: 2.500000, x: 34.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 553, raio: 2.500000, x: 40.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 554, raio: 2.500000, x: 46.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 555, raio: 2.500000, x: 10.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 556, raio: 2.500000, x: 52.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 557, raio: 2.500000, x: 10.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 558, raio: 2.500000, x: 52.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 559, raio: 2.500000, x: 10.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 560, raio: 2.500000, x: 52.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 561, raio: 2.500000, x: 10.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 562, raio: 2.500000, x: 16.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 563, raio: 2.500000, x: 22.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 564, raio: 2.500000, x: 28.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 565, raio: 2.500000, x: 34.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 566, raio: 2.500000, x: 40.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 567, raio: 2.500000, x: 46.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 568, raio: 2.500000, x: 52.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 569, raio: 2.500000, x: 10.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 570, raio: 2.500000, x: 52.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 571, raio: 2.500000, x: 10.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 572, raio: 2.500000, x: 52.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 573, raio: 2.500000, x: 10.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 574, raio: 2.500000, x: 52.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 575, raio: 2.500000, x: 62.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 576, raio: 2.500000, x: 68.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 577, raio: 2.500000, x: 98.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 578, raio: 2.500000, x: 104.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 579, raio: 2.500000, x: 62.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 580, raio: 2.500000, x: 68.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 581, raio: 2.500000, x: 98.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 582, raio: 2.500000, x: 104.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 583, raio: 2.500000, x: 62.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 584, raio: 2.500000, x: 74.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 585, raio: 2.500000, x: 92.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 586, raio: 2.500000, x: 104.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 587, raio: 2.500000, x: 62.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 588, raio: 2.500000, x: 80.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 589, raio: 2.500000, x: 86.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 590, raio: 2.500000, x: 104.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 591, raio: 2.500000, x: 62.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 592, raio: 2.500000, x: 104.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 593, raio: 2.500000, x: 62.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 594, raio: 2.500000, x: 104.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 595, raio: 2.500000, x: 62.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 596, raio: 2.500000, x: 104.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 597, raio: 2.500000, x: 62.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 598, raio: 2.500000, x: 104.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 599, raio: 2.500000, x: 120.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 600, raio: 2.500000, x: 126.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 601, raio: 2.500000, x: 132.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 602, raio: 2.500000, x: 138.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 603, raio: 2.500000, x: 144.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 604, raio: 2.500000, x: 150.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 605, raio: 2.500000, x: 114.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 606, raio: 2.500000, x: 156.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 607, raio: 2.500000, x: 114.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 608, raio: 2.500000, x: 156.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 609, raio: 2.500000, x: 114.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 610, raio: 2.500000, x: 156.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 611, raio: 2.500000, x: 114.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 612, raio: 2.500000, x: 120.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 613, raio: 2.500000, x: 126.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 614, raio: 2.500000, x: 132.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 615, raio: 2.500000, x: 138.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 616, raio: 2.500000, x: 144.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 617, raio: 2.500000, x: 150.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 618, raio: 2.500000, x: 156.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 619, raio: 2.500000, x: 114.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 620, raio: 2.500000, x: 156.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 621, raio: 2.500000, x: 114.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 622, raio: 2.500000, x: 156.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 623, raio: 2.500000, x: 114.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 624, raio: 2.500000, x: 156.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 625, raio: 2.500000, x: 166.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 626, raio: 2.500000, x: 172.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 627, raio: 2.500000, x: 178.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 628, raio: 2.500000, x: 184.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 629, raio: 2.500000, x: 190.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 630, raio: 2.500000, x: 196.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 631, raio: 2.500000, x: 202.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 632, raio: 2.500000, x: 172.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 633, raio: 2.500000, x: 208.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 634, raio: 2.500000, x: 172.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 635, raio: 2.500000, x: 208.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 636, raio: 2.500000, x: 172.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 637, raio: 2.500000, x: 208.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 638, raio: 2.500000, x: 172.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 639, raio: 2.500000, x: 208.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 640, raio: 2.500000, x: 172.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 641, raio: 2.500000, x: 208.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 642, raio: 2.500000, x: 172.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 643, raio: 2.500000, x: 208.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 644, raio: 2.500000, x: 166.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 645, raio: 2.500000, x: 172.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 646, raio: 2.500000, x: 178.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 647, raio: 2.500000, x: 184.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 648, raio: 2.500000, x: 190.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 649, raio: 2.500000, x: 196.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 650, raio: 2.500000, x: 202.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 651, raio: 2.500000, x: 224.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 652, raio: 2.500000, x: 230.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 653, raio: 2.500000, x: 236.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 654, raio: 2.500000, x: 242.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 655, raio: 2.500000, x: 248.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 656, raio: 2.500000, x: 254.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 657, raio: 2.500000, x: 218.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 658, raio: 2.500000, x: 260.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 659, raio: 2.500000, x: 218.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 660, raio: 2.500000, x: 260.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 661, raio: 2.500000, x: 218.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 662, raio: 2.500000, x: 260.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 663, raio: 2.500000, x: 218.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 664, raio: 2.500000, x: 260.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 665, raio: 2.500000, x: 218.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 666, raio: 2.500000, x: 260.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 667, raio: 2.500000, x: 218.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 668, raio: 2.500000, x: 260.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 669, raio: 2.500000, x: 224.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 670, raio: 2.500000, x: 230.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 671, raio: 2.500000, x: 236.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 672, raio: 2.500000, x: 242.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 673, raio: 2.500000, x: 248.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 674, raio: 2.500000, x: 254.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 675, raio: 2.500000, x: 322.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 676, raio: 2.500000, x: 328.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 677, raio: 2.500000, x: 334.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 678, raio: 2.500000, x: 340.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 679, raio: 2.500000, x: 346.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 680, raio: 2.500000, x: 352.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 681, raio: 2.500000, x: 358.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 682, raio: 2.500000, x: 364.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 683, raio: 2.500000, x: 322.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 684, raio: 2.500000, x: 322.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 685, raio: 2.500000, x: 322.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 686, raio: 2.500000, x: 322.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 687, raio: 2.500000, x: 322.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 688, raio: 2.500000, x: 322.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 689, raio: 2.500000, x: 322.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 690, raio: 2.500000, x: 328.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 691, raio: 2.500000, x: 334.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 692, raio: 2.500000, x: 340.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 693, raio: 2.500000, x: 346.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 694, raio: 2.500000, x: 352.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 695, raio: 2.500000, x: 358.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 696, raio: 2.500000, x: 364.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 697, raio: 2.500000, x: 374.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 698, raio: 2.500000, x: 380.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 699, raio: 2.500000, x: 374.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 700, raio: 2.500000, x: 380.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 701, raio: 2.500000, x: 374.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 702, raio: 2.500000, x: 380.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 703, raio: 2.500000, x: 374.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 704, raio: 2.500000, x: 380.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 705, raio: 2.500000, x: 374.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 706, raio: 2.500000, x: 380.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 707, raio: 2.500000, x: 374.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 708, raio: 2.500000, x: 380.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 709, raio: 2.500000, x: 416.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 710, raio: 2.500000, x: 374.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 711, raio: 2.500000, x: 380.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 712, raio: 2.500000, x: 410.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 713, raio: 2.500000, x: 416.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 714, raio: 2.500000, x: 374.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 715, raio: 2.500000, x: 380.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 716, raio: 2.500000, x: 386.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 717, raio: 2.500000, x: 392.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 718, raio: 2.500000, x: 398.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 719, raio: 2.500000, x: 404.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 720, raio: 2.500000, x: 410.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 721, raio: 2.500000, x: 416.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 722, raio: 2.500000, x: 426.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 723, raio: 2.500000, x: 468.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 724, raio: 2.500000, x: 426.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 725, raio: 2.500000, x: 468.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 726, raio: 2.500000, x: 426.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 727, raio: 2.500000, x: 468.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 728, raio: 2.500000, x: 426.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 729, raio: 2.500000, x: 468.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 730, raio: 2.500000, x: 426.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 731, raio: 2.500000, x: 468.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 732, raio: 2.500000, x: 426.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 733, raio: 2.500000, x: 468.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 734, raio: 2.500000, x: 426.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 735, raio: 2.500000, x: 468.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 736, raio: 2.500000, x: 432.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 737, raio: 2.500000, x: 438.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 738, raio: 2.500000, x: 444.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 739, raio: 2.500000, x: 450.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 740, raio: 2.500000, x: 456.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 741, raio: 2.500000, x: 462.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 742, raio: 2.500000, x: 478.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 743, raio: 2.500000, x: 484.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 744, raio: 2.500000, x: 490.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 745, raio: 2.500000, x: 496.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 746, raio: 2.500000, x: 502.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 747, raio: 2.500000, x: 508.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 748, raio: 2.500000, x: 514.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 749, raio: 2.500000, x: 484.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 750, raio: 2.500000, x: 520.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 751, raio: 2.500000, x: 484.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 752, raio: 2.500000, x: 520.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 753, raio: 2.500000, x: 484.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 754, raio: 2.500000, x: 520.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 755, raio: 2.500000, x: 484.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 756, raio: 2.500000, x: 490.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 757, raio: 2.500000, x: 496.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 758, raio: 2.500000, x: 502.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 759, raio: 2.500000, x: 508.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 760, raio: 2.500000, x: 514.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 761, raio: 2.500000, x: 484.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 762, raio: 2.500000, x: 520.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 763, raio: 2.500000, x: 484.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 764, raio: 2.500000, x: 520.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 765, raio: 2.500000, x: 478.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 766, raio: 2.500000, x: 484.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 767, raio: 2.500000, x: 490.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 768, raio: 2.500000, x: 496.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 769, raio: 2.500000, x: 502.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 770, raio: 2.500000, x: 508.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 771, raio: 2.500000, x: 514.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 772, raio: 2.500000, x: 530.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 773, raio: 2.500000, x: 536.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 774, raio: 2.500000, x: 542.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 775, raio: 2.500000, x: 548.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 776, raio: 2.500000, x: 554.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 777, raio: 2.500000, x: 560.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 778, raio: 2.500000, x: 566.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 779, raio: 2.500000, x: 572.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 780, raio: 2.500000, x: 530.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 781, raio: 2.500000, x: 572.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 782, raio: 2.500000, x: 530.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 783, raio: 2.500000, x: 530.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 784, raio: 2.500000, x: 536.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 785, raio: 2.500000, x: 542.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 786, raio: 2.500000, x: 548.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 787, raio: 2.500000, x: 530.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 788, raio: 2.500000, x: 536.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 789, raio: 2.500000, x: 542.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 790, raio: 2.500000, x: 548.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 791, raio: 2.500000, x: 530.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 792, raio: 2.500000, x: 530.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 793, raio: 2.500000, x: 572.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 794, raio: 2.500000, x: 530.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 795, raio: 2.500000, x: 536.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 796, raio: 2.500000, x: 542.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 797, raio: 2.500000, x: 548.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 798, raio: 2.500000, x: 554.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 799, raio: 2.500000, x: 560.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 800, raio: 2.500000, x: 566.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 801, raio: 2.500000, x: 572.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 802, raio: 2.500000, x: 634.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 803, raio: 2.500000, x: 640.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 804, raio: 2.500000, x: 646.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 805, raio: 2.500000, x: 652.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 806, raio: 2.500000, x: 658.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 807, raio: 2.500000, x: 664.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 808, raio: 2.500000, x: 670.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 809, raio: 2.500000, x: 640.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 810, raio: 2.500000, x: 676.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 811, raio: 2.500000, x: 640.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 812, raio: 2.500000, x: 676.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 813, raio: 2.500000, x: 640.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 814, raio: 2.500000, x: 676.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 815, raio: 2.500000, x: 640.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 816, raio: 2.500000, x: 646.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 817, raio: 2.500000, x: 652.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 818, raio: 2.500000, x: 658.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 819, raio: 2.500000, x: 664.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 820, raio: 2.500000, x: 670.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 821, raio: 2.500000, x: 640.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 822, raio: 2.500000, x: 676.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 823, raio: 2.500000, x: 640.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 824, raio: 2.500000, x: 676.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 825, raio: 2.500000, x: 634.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 826, raio: 2.500000, x: 640.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 827, raio: 2.500000, x: 646.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 828, raio: 2.500000, x: 652.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 829, raio: 2.500000, x: 658.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 830, raio: 2.500000, x: 664.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 831, raio: 2.500000, x: 670.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 832, raio: 2.500000, x: 686.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 833, raio: 2.500000, x: 692.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 834, raio: 2.500000, x: 698.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 835, raio: 2.500000, x: 704.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 836, raio: 2.500000, x: 710.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 837, raio: 2.500000, x: 716.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 838, raio: 2.500000, x: 722.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 839, raio: 2.500000, x: 686.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 840, raio: 2.500000, x: 728.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 841, raio: 2.500000, x: 686.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 842, raio: 2.500000, x: 728.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 843, raio: 2.500000, x: 686.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 844, raio: 2.500000, x: 692.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 845, raio: 2.500000, x: 698.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 846, raio: 2.500000, x: 704.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 847, raio: 2.500000, x: 710.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 848, raio: 2.500000, x: 716.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 849, raio: 2.500000, x: 722.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 850, raio: 2.500000, x: 686.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 851, raio: 2.500000, x: 710.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 852, raio: 2.500000, x: 686.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 853, raio: 2.500000, x: 716.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 854, raio: 2.500000, x: 686.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 855, raio: 2.500000, x: 722.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 856, raio: 2.500000, x: 686.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 857, raio: 2.500000, x: 728.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 858, raio: 2.500000, x: 744.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 859, raio: 2.500000, x: 750.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 860, raio: 2.500000, x: 756.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 861, raio: 2.500000, x: 762.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 862, raio: 2.500000, x: 768.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 863, raio: 2.500000, x: 774.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 864, raio: 2.500000, x: 738.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 865, raio: 2.500000, x: 780.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 866, raio: 2.500000, x: 738.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 867, raio: 2.500000, x: 780.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 868, raio: 2.500000, x: 738.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 869, raio: 2.500000, x: 780.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 870, raio: 2.500000, x: 738.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 871, raio: 2.500000, x: 744.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 872, raio: 2.500000, x: 750.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 873, raio: 2.500000, x: 756.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 874, raio: 2.500000, x: 762.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 875, raio: 2.500000, x: 768.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 876, raio: 2.500000, x: 774.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 877, raio: 2.500000, x: 780.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 878, raio: 2.500000, x: 738.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 879, raio: 2.500000, x: 780.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 880, raio: 2.500000, x: 738.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 881, raio: 2.500000, x: 780.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 882, raio: 2.500000, x: 738.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 883, raio: 2.500000, x: 780.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 884, raio: 2.500000, x: 796.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 885, raio: 2.500000, x: 802.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 886, raio: 2.500000, x: 808.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 887, raio: 2.500000, x: 814.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 888, raio: 2.500000, x: 820.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 889, raio: 2.500000, x: 826.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 890, raio: 2.500000, x: 832.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 891, raio: 2.500000, x: 790.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 892, raio: 2.500000, x: 790.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 893, raio: 2.500000, x: 796.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 894, raio: 2.500000, x: 802.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 895, raio: 2.500000, x: 808.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 896, raio: 2.500000, x: 814.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 897, raio: 2.500000, x: 820.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 898, raio: 2.500000, x: 826.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 899, raio: 2.500000, x: 832.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 900, raio: 2.500000, x: 832.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 901, raio: 2.500000, x: 832.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 902, raio: 2.500000, x: 790.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 903, raio: 2.500000, x: 796.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 904, raio: 2.500000, x: 802.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 905, raio: 2.500000, x: 808.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 906, raio: 2.500000, x: 814.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 907, raio: 2.500000, x: 820.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 908, raio: 2.500000, x: 826.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 909, raio: 2.500000, x: 842.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 910, raio: 2.500000, x: 848.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 911, raio: 2.500000, x: 854.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 912, raio: 2.500000, x: 860.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 913, raio: 2.500000, x: 866.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 914, raio: 2.500000, x: 872.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 915, raio: 2.500000, x: 878.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 916, raio: 2.500000, x: 884.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 917, raio: 2.500000, x: 842.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 918, raio: 2.500000, x: 860.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 919, raio: 2.500000, x: 866.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 920, raio: 2.500000, x: 884.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 921, raio: 2.500000, x: 860.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 922, raio: 2.500000, x: 866.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 923, raio: 2.500000, x: 860.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 924, raio: 2.500000, x: 866.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 925, raio: 2.500000, x: 860.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 926, raio: 2.500000, x: 866.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 927, raio: 2.500000, x: 860.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 928, raio: 2.500000, x: 866.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 929, raio: 2.500000, x: 842.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 930, raio: 2.500000, x: 860.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 931, raio: 2.500000, x: 866.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 932, raio: 2.500000, x: 884.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 933, raio: 2.500000, x: 842.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 934, raio: 2.500000, x: 848.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 935, raio: 2.500000, x: 854.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 936, raio: 2.500000, x: 860.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 937, raio: 2.500000, x: 866.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 938, raio: 2.500000, x: 872.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 939, raio: 2.500000, x: 878.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 940, raio: 2.500000, x: 884.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 941, raio: 2.500000, x: 894.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 942, raio: 2.500000, x: 900.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 943, raio: 2.500000, x: 894.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 944, raio: 2.500000, x: 900.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 945, raio: 2.500000, x: 894.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 946, raio: 2.500000, x: 900.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 947, raio: 2.500000, x: 894.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 948, raio: 2.500000, x: 900.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 949, raio: 2.500000, x: 894.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 950, raio: 2.500000, x: 900.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 951, raio: 2.500000, x: 894.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 952, raio: 2.500000, x: 900.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 953, raio: 2.500000, x: 936.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 954, raio: 2.500000, x: 894.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 955, raio: 2.500000, x: 900.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 956, raio: 2.500000, x: 930.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 957, raio: 2.500000, x: 936.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 958, raio: 2.500000, x: 894.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 959, raio: 2.500000, x: 900.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 960, raio: 2.500000, x: 906.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 961, raio: 2.500000, x: 912.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 962, raio: 2.500000, x: 918.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 963, raio: 2.500000, x: 924.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 964, raio: 2.500000, x: 930.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 965, raio: 2.500000, x: 936.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 966, raio: 2.500000, x: 946.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 967, raio: 2.500000, x: 952.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 968, raio: 2.500000, x: 958.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 969, raio: 2.500000, x: 964.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 970, raio: 2.500000, x: 970.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 971, raio: 2.500000, x: 976.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 972, raio: 2.500000, x: 982.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 973, raio: 2.500000, x: 988.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 974, raio: 2.500000, x: 946.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 975, raio: 2.500000, x: 988.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 976, raio: 2.500000, x: 946.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 977, raio: 2.500000, x: 946.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 978, raio: 2.500000, x: 952.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 979, raio: 2.500000, x: 958.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 980, raio: 2.500000, x: 964.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 981, raio: 2.500000, x: 946.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 982, raio: 2.500000, x: 952.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 983, raio: 2.500000, x: 958.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 984, raio: 2.500000, x: 964.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 985, raio: 2.500000, x: 946.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 986, raio: 2.500000, x: 946.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 987, raio: 2.500000, x: 988.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 988, raio: 2.500000, x: 946.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 989, raio: 2.500000, x: 952.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 990, raio: 2.500000, x: 958.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 991, raio: 2.500000, x: 964.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 992, raio: 2.500000, x: 970.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 993, raio: 2.500000, x: 976.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 994, raio: 2.500000, x: 982.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 995, raio: 2.500000, x: 988.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 996, raio: 2.500000, x: 998.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 997, raio: 2.500000, x: 1004.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 998, raio: 2.500000, x: 1010.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 999, raio: 2.500000, x: 1016.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1000, raio: 2.500000, x: 1022.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1001, raio: 2.500000, x: 1028.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1002, raio: 2.500000, x: 1034.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1003, raio: 2.500000, x: 1040.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1004, raio: 2.500000, x: 998.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1005, raio: 2.500000, x: 1016.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1006, raio: 2.500000, x: 1022.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1007, raio: 2.500000, x: 1040.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1008, raio: 2.500000, x: 1016.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1009, raio: 2.500000, x: 1022.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1010, raio: 2.500000, x: 1016.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1011, raio: 2.500000, x: 1022.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1012, raio: 2.500000, x: 1016.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1013, raio: 2.500000, x: 1022.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1014, raio: 2.500000, x: 1016.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1015, raio: 2.500000, x: 1022.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1016, raio: 2.500000, x: 998.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1017, raio: 2.500000, x: 1016.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1018, raio: 2.500000, x: 1022.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1019, raio: 2.500000, x: 1040.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1020, raio: 2.500000, x: 998.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1021, raio: 2.500000, x: 1004.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1022, raio: 2.500000, x: 1010.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1023, raio: 2.500000, x: 1016.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1024, raio: 2.500000, x: 1022.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1025, raio: 2.500000, x: 1028.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1026, raio: 2.500000, x: 1034.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1027, raio: 2.500000, x: 1040.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1028, raio: 2.500000, x: 1050.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1029, raio: 2.500000, x: 1056.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1030, raio: 2.500000, x: 1062.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1031, raio: 2.500000, x: 1068.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1032, raio: 2.500000, x: 1074.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1033, raio: 2.500000, x: 1080.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1034, raio: 2.500000, x: 1086.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1035, raio: 2.500000, x: 1050.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1036, raio: 2.500000, x: 1092.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1037, raio: 2.500000, x: 1050.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1038, raio: 2.500000, x: 1092.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1039, raio: 2.500000, x: 1050.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1040, raio: 2.500000, x: 1056.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1041, raio: 2.500000, x: 1062.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1042, raio: 2.500000, x: 1068.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1043, raio: 2.500000, x: 1074.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1044, raio: 2.500000, x: 1080.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1045, raio: 2.500000, x: 1086.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1046, raio: 2.500000, x: 1050.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1047, raio: 2.500000, x: 1074.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1048, raio: 2.500000, x: 1050.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1049, raio: 2.500000, x: 1080.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1050, raio: 2.500000, x: 1050.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1051, raio: 2.500000, x: 1086.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1052, raio: 2.500000, x: 1050.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1053, raio: 2.500000, x: 1092.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1054, raio: 2.500000, x: 1108.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1055, raio: 2.500000, x: 1114.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1056, raio: 2.500000, x: 1120.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1057, raio: 2.500000, x: 1126.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1058, raio: 2.500000, x: 1132.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1059, raio: 2.500000, x: 1138.000000, y: 62.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1060, raio: 2.500000, x: 1102.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1061, raio: 2.500000, x: 1144.000000, y: 68.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1062, raio: 2.500000, x: 1102.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1063, raio: 2.500000, x: 1144.000000, y: 75.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1064, raio: 2.500000, x: 1102.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1065, raio: 2.500000, x: 1144.000000, y: 81.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1066, raio: 2.500000, x: 1102.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1067, raio: 2.500000, x: 1144.000000, y: 87.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1068, raio: 2.500000, x: 1102.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1069, raio: 2.500000, x: 1144.000000, y: 93.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1070, raio: 2.500000, x: 1102.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1071, raio: 2.500000, x: 1144.000000, y: 100.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1072, raio: 2.500000, x: 1108.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1073, raio: 2.500000, x: 1114.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1074, raio: 2.500000, x: 1120.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1075, raio: 2.500000, x: 1126.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1076, raio: 2.500000, x: 1132.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1077, raio: 2.500000, x: 1138.000000, y: 106.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1078, raio: 2.500000, x: 10.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1079, raio: 2.500000, x: 16.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1080, raio: 2.500000, x: 22.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1081, raio: 2.500000, x: 28.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1082, raio: 2.500000, x: 34.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1083, raio: 2.500000, x: 40.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1084, raio: 2.500000, x: 46.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1085, raio: 2.500000, x: 52.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1086, raio: 2.500000, x: 10.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1087, raio: 2.500000, x: 28.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1088, raio: 2.500000, x: 34.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1089, raio: 2.500000, x: 52.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1090, raio: 2.500000, x: 28.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1091, raio: 2.500000, x: 34.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1092, raio: 2.500000, x: 28.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1093, raio: 2.500000, x: 34.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1094, raio: 2.500000, x: 28.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1095, raio: 2.500000, x: 34.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1096, raio: 2.500000, x: 28.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1097, raio: 2.500000, x: 34.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1098, raio: 2.500000, x: 28.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1099, raio: 2.500000, x: 34.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1100, raio: 2.500000, x: 28.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1101, raio: 2.500000, x: 34.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1102, raio: 2.500000, x: 62.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1103, raio: 2.500000, x: 104.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1104, raio: 2.500000, x: 62.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1105, raio: 2.500000, x: 104.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1106, raio: 2.500000, x: 62.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1107, raio: 2.500000, x: 104.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1108, raio: 2.500000, x: 62.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1109, raio: 2.500000, x: 104.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1110, raio: 2.500000, x: 62.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1111, raio: 2.500000, x: 104.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1112, raio: 2.500000, x: 62.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1113, raio: 2.500000, x: 104.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1114, raio: 2.500000, x: 62.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1115, raio: 2.500000, x: 104.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1116, raio: 2.500000, x: 68.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1117, raio: 2.500000, x: 74.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1118, raio: 2.500000, x: 80.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1119, raio: 2.500000, x: 86.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1120, raio: 2.500000, x: 92.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1121, raio: 2.500000, x: 98.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1122, raio: 2.500000, x: 166.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1123, raio: 2.500000, x: 172.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1124, raio: 2.500000, x: 178.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1125, raio: 2.500000, x: 184.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1126, raio: 2.500000, x: 190.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1127, raio: 2.500000, x: 196.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1128, raio: 2.500000, x: 202.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1129, raio: 2.500000, x: 208.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1130, raio: 2.500000, x: 166.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1131, raio: 2.500000, x: 208.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1132, raio: 2.500000, x: 166.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1133, raio: 2.500000, x: 166.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1134, raio: 2.500000, x: 172.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1135, raio: 2.500000, x: 178.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1136, raio: 2.500000, x: 184.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1137, raio: 2.500000, x: 166.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1138, raio: 2.500000, x: 172.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1139, raio: 2.500000, x: 178.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1140, raio: 2.500000, x: 184.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1141, raio: 2.500000, x: 166.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1142, raio: 2.500000, x: 166.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1143, raio: 2.500000, x: 208.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1144, raio: 2.500000, x: 166.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1145, raio: 2.500000, x: 172.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1146, raio: 2.500000, x: 178.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1147, raio: 2.500000, x: 184.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1148, raio: 2.500000, x: 190.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1149, raio: 2.500000, x: 196.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1150, raio: 2.500000, x: 202.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1151, raio: 2.500000, x: 208.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1152, raio: 2.500000, x: 224.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1153, raio: 2.500000, x: 230.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1154, raio: 2.500000, x: 236.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1155, raio: 2.500000, x: 242.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1156, raio: 2.500000, x: 248.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1157, raio: 2.500000, x: 254.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1158, raio: 2.500000, x: 260.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1159, raio: 2.500000, x: 218.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1160, raio: 2.500000, x: 218.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1161, raio: 2.500000, x: 224.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1162, raio: 2.500000, x: 230.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1163, raio: 2.500000, x: 236.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1164, raio: 2.500000, x: 242.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1165, raio: 2.500000, x: 248.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1166, raio: 2.500000, x: 254.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1167, raio: 2.500000, x: 260.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1168, raio: 2.500000, x: 260.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1169, raio: 2.500000, x: 260.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1170, raio: 2.500000, x: 218.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1171, raio: 2.500000, x: 224.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1172, raio: 2.500000, x: 230.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1173, raio: 2.500000, x: 236.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1174, raio: 2.500000, x: 242.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1175, raio: 2.500000, x: 248.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1176, raio: 2.500000, x: 254.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1177, raio: 2.500000, x: 322.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1178, raio: 2.500000, x: 328.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1179, raio: 2.500000, x: 334.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1180, raio: 2.500000, x: 340.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1181, raio: 2.500000, x: 346.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1182, raio: 2.500000, x: 352.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1183, raio: 2.500000, x: 358.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1184, raio: 2.500000, x: 364.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1185, raio: 2.500000, x: 322.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1186, raio: 2.500000, x: 364.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1187, raio: 2.500000, x: 322.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1188, raio: 2.500000, x: 322.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1189, raio: 2.500000, x: 328.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1190, raio: 2.500000, x: 334.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1191, raio: 2.500000, x: 340.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1192, raio: 2.500000, x: 322.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1193, raio: 2.500000, x: 328.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1194, raio: 2.500000, x: 334.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1195, raio: 2.500000, x: 340.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1196, raio: 2.500000, x: 322.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1197, raio: 2.500000, x: 322.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1198, raio: 2.500000, x: 322.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1199, raio: 2.500000, x: 380.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1200, raio: 2.500000, x: 386.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1201, raio: 2.500000, x: 392.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1202, raio: 2.500000, x: 398.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1203, raio: 2.500000, x: 404.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1204, raio: 2.500000, x: 410.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1205, raio: 2.500000, x: 374.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1206, raio: 2.500000, x: 416.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1207, raio: 2.500000, x: 374.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1208, raio: 2.500000, x: 416.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1209, raio: 2.500000, x: 374.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1210, raio: 2.500000, x: 416.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1211, raio: 2.500000, x: 374.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1212, raio: 2.500000, x: 416.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1213, raio: 2.500000, x: 374.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1214, raio: 2.500000, x: 416.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1215, raio: 2.500000, x: 374.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1216, raio: 2.500000, x: 416.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1217, raio: 2.500000, x: 380.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1218, raio: 2.500000, x: 386.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1219, raio: 2.500000, x: 392.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1220, raio: 2.500000, x: 398.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1221, raio: 2.500000, x: 404.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1222, raio: 2.500000, x: 410.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1223, raio: 2.500000, x: 426.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1224, raio: 2.500000, x: 432.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1225, raio: 2.500000, x: 438.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1226, raio: 2.500000, x: 444.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1227, raio: 2.500000, x: 450.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1228, raio: 2.500000, x: 456.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1229, raio: 2.500000, x: 462.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1230, raio: 2.500000, x: 426.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1231, raio: 2.500000, x: 468.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1232, raio: 2.500000, x: 426.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1233, raio: 2.500000, x: 468.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1234, raio: 2.500000, x: 426.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1235, raio: 2.500000, x: 432.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1236, raio: 2.500000, x: 438.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1237, raio: 2.500000, x: 444.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1238, raio: 2.500000, x: 450.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1239, raio: 2.500000, x: 456.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1240, raio: 2.500000, x: 462.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1241, raio: 2.500000, x: 426.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1242, raio: 2.500000, x: 450.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1243, raio: 2.500000, x: 426.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1244, raio: 2.500000, x: 456.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1245, raio: 2.500000, x: 426.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1246, raio: 2.500000, x: 462.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1247, raio: 2.500000, x: 426.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1248, raio: 2.500000, x: 468.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1249, raio: 2.500000, x: 478.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1250, raio: 2.500000, x: 484.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1251, raio: 2.500000, x: 490.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1252, raio: 2.500000, x: 496.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1253, raio: 2.500000, x: 502.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1254, raio: 2.500000, x: 508.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1255, raio: 2.500000, x: 514.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1256, raio: 2.500000, x: 520.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1257, raio: 2.500000, x: 478.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1258, raio: 2.500000, x: 496.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1259, raio: 2.500000, x: 502.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1260, raio: 2.500000, x: 520.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1261, raio: 2.500000, x: 496.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1262, raio: 2.500000, x: 502.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1263, raio: 2.500000, x: 496.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1264, raio: 2.500000, x: 502.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1265, raio: 2.500000, x: 496.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1266, raio: 2.500000, x: 502.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1267, raio: 2.500000, x: 496.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1268, raio: 2.500000, x: 502.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1269, raio: 2.500000, x: 496.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1270, raio: 2.500000, x: 502.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1271, raio: 2.500000, x: 496.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1272, raio: 2.500000, x: 502.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1273, raio: 2.500000, x: 530.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1274, raio: 2.500000, x: 536.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1275, raio: 2.500000, x: 542.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1276, raio: 2.500000, x: 548.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1277, raio: 2.500000, x: 554.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1278, raio: 2.500000, x: 560.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1279, raio: 2.500000, x: 566.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1280, raio: 2.500000, x: 572.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1281, raio: 2.500000, x: 530.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1282, raio: 2.500000, x: 572.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1283, raio: 2.500000, x: 530.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1284, raio: 2.500000, x: 530.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1285, raio: 2.500000, x: 536.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1286, raio: 2.500000, x: 542.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1287, raio: 2.500000, x: 548.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1288, raio: 2.500000, x: 530.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1289, raio: 2.500000, x: 536.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1290, raio: 2.500000, x: 542.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1291, raio: 2.500000, x: 548.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1292, raio: 2.500000, x: 530.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1293, raio: 2.500000, x: 530.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1294, raio: 2.500000, x: 572.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1295, raio: 2.500000, x: 530.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1296, raio: 2.500000, x: 536.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1297, raio: 2.500000, x: 542.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1298, raio: 2.500000, x: 548.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1299, raio: 2.500000, x: 554.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1300, raio: 2.500000, x: 560.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1301, raio: 2.500000, x: 566.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1302, raio: 2.500000, x: 572.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1303, raio: 2.500000, x: 634.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1304, raio: 2.500000, x: 640.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1305, raio: 2.500000, x: 646.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1306, raio: 2.500000, x: 652.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1307, raio: 2.500000, x: 658.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1308, raio: 2.500000, x: 664.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1309, raio: 2.500000, x: 670.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1310, raio: 2.500000, x: 676.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1311, raio: 2.500000, x: 634.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1312, raio: 2.500000, x: 652.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1313, raio: 2.500000, x: 658.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1314, raio: 2.500000, x: 676.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1315, raio: 2.500000, x: 652.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1316, raio: 2.500000, x: 658.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1317, raio: 2.500000, x: 652.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1318, raio: 2.500000, x: 658.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1319, raio: 2.500000, x: 652.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1320, raio: 2.500000, x: 658.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1321, raio: 2.500000, x: 652.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1322, raio: 2.500000, x: 658.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1323, raio: 2.500000, x: 652.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1324, raio: 2.500000, x: 658.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1325, raio: 2.500000, x: 652.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1326, raio: 2.500000, x: 658.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1327, raio: 2.500000, x: 686.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1328, raio: 2.500000, x: 728.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1329, raio: 2.500000, x: 686.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1330, raio: 2.500000, x: 728.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1331, raio: 2.500000, x: 686.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1332, raio: 2.500000, x: 728.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1333, raio: 2.500000, x: 686.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1334, raio: 2.500000, x: 728.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1335, raio: 2.500000, x: 686.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1336, raio: 2.500000, x: 728.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1337, raio: 2.500000, x: 686.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1338, raio: 2.500000, x: 728.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1339, raio: 2.500000, x: 686.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1340, raio: 2.500000, x: 728.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1341, raio: 2.500000, x: 692.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1342, raio: 2.500000, x: 698.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1343, raio: 2.500000, x: 704.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1344, raio: 2.500000, x: 710.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1345, raio: 2.500000, x: 716.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1346, raio: 2.500000, x: 722.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1347, raio: 2.500000, x: 790.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1348, raio: 2.500000, x: 796.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1349, raio: 2.500000, x: 802.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1350, raio: 2.500000, x: 808.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1351, raio: 2.500000, x: 814.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1352, raio: 2.500000, x: 820.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1353, raio: 2.500000, x: 826.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1354, raio: 2.500000, x: 832.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1355, raio: 2.500000, x: 790.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1356, raio: 2.500000, x: 832.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1357, raio: 2.500000, x: 790.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1358, raio: 2.500000, x: 790.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1359, raio: 2.500000, x: 796.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1360, raio: 2.500000, x: 802.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1361, raio: 2.500000, x: 808.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1362, raio: 2.500000, x: 790.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1363, raio: 2.500000, x: 796.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1364, raio: 2.500000, x: 802.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1365, raio: 2.500000, x: 808.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1366, raio: 2.500000, x: 790.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1367, raio: 2.500000, x: 790.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1368, raio: 2.500000, x: 832.000000, y: 152.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1369, raio: 2.500000, x: 790.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1370, raio: 2.500000, x: 796.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1371, raio: 2.500000, x: 802.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1372, raio: 2.500000, x: 808.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1373, raio: 2.500000, x: 814.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1374, raio: 2.500000, x: 820.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1375, raio: 2.500000, x: 826.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1376, raio: 2.500000, x: 832.000000, y: 158.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1377, raio: 2.500000, x: 848.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1378, raio: 2.500000, x: 854.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1379, raio: 2.500000, x: 860.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1380, raio: 2.500000, x: 866.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1381, raio: 2.500000, x: 872.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1382, raio: 2.500000, x: 878.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1383, raio: 2.500000, x: 884.000000, y: 115.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1384, raio: 2.500000, x: 842.000000, y: 121.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1385, raio: 2.500000, x: 842.000000, y: 127.500000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1386, raio: 2.500000, x: 848.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1387, raio: 2.500000, x: 854.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1388, raio: 2.500000, x: 860.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1389, raio: 2.500000, x: 866.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1390, raio: 2.500000, x: 872.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1391, raio: 2.500000, x: 878.000000, y: 133.750000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1392, raio: 2.500000, x: 884.000000, y: 140.000000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1393, raio: 2.500000, x: 884.000000, y: 146.250000, corb: black, corp: dimgray
+
+tipo: circulo, id: 1394, raio: 2.500000, x: 884.000000, y: 152.500000, corb: black, corp: dimgray
+

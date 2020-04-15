@@ -1,0 +1,19 @@
+delf* 4 12
+tipo: texto, id: 4, x: 20.000000, y: 39.000000, corb: blue, corp: magenta, texto: Dentre os grandes es o primeiro
+
+tipo: texto, id: 5, x: 25.000000, y: 47.000000, corb: blue, corp: magenta, texto: Tu es forte, tu es grande
+
+tipo: texto, id: 6, x: 30.000000, y: 55.000000, corb: blue, corp: magenta, texto: Dentre os grandes es o primeiro
+
+tipo: texto, id: 7, x: 35.000000, y: 63.000000, corb: blue, corp: magenta, texto: Oh, Tricolor
+
+tipo: texto, id: 8, x: 40.000000, y: 71.000000, corb: blue, corp: magenta, texto: Clube bem amado
+
+tipo: texto, id: 9, x: 45.000000, y: 79.000000, corb: blue, corp: magenta, texto: As tuas gloriasVem do passado
+
+tipo: texto, id: 10, x: 50.000000, y: 87.000000, corb: blue, corp: magenta, texto: Sao teus guias brasileiros
+
+tipo: texto, id: 11, x: 55.000000, y: 95.000000, corb: blue, corp: magenta, texto: Que te amam eternamente
+
+tipo: texto, id: 12, x: 60.000000, y: 103.000000, corb: blue, corp: magenta, texto: De São Paulo tens o nome
+

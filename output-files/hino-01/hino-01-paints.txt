@@ -1,0 +1,1053 @@
+pnt* 233 583 red red
+i: 233, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 234, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 235, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 236, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 237, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 238, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 239, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 240, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 241, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 242, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 243, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 244, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 245, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 246, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 247, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 248, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 249, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 250, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 251, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 252, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 253, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 254, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 255, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 256, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 257, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 258, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 259, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 260, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 261, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 262, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 263, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 264, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 265, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 266, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 267, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 268, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 269, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 270, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 271, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 272, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 273, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 274, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 275, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 276, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 277, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 278, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 279, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 280, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 281, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 282, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 283, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 284, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 285, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 286, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 287, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 288, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 289, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 290, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 291, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 292, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 293, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 294, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 295, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 296, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 297, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 298, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 299, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 300, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 301, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 302, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 303, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 304, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 305, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 306, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 307, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 308, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 309, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 310, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 311, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 312, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 313, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 314, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 315, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 316, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 317, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 318, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 319, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 320, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 321, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 322, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 323, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 324, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 325, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 326, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 327, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 328, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 329, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 330, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 331, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 332, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 333, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 334, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 335, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 336, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 337, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 338, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 339, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 340, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 341, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 342, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 343, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 344, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 345, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 346, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 347, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 348, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 349, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 350, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 351, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 352, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 353, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 354, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 355, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 356, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 357, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 358, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 359, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 360, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 361, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 362, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 363, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 364, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 365, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 366, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 367, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 368, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 369, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 370, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 371, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 372, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 373, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 374, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 375, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 376, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 377, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 378, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 379, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 380, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 381, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 382, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 383, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 384, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 385, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 386, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 387, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 388, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 389, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 390, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 391, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 392, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 393, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 394, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 395, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 396, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 397, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 398, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 399, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 400, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 401, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 402, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 403, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 404, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 405, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 406, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 407, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 408, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 409, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 410, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 411, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 412, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 413, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 414, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 415, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 416, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 417, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 418, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 419, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 420, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 421, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 422, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 423, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 424, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 425, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 426, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 427, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 428, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 429, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 430, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 431, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 432, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 433, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 434, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 435, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 436, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 437, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 438, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 439, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 440, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 441, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 442, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 443, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 444, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 445, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 446, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 447, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 448, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 449, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 450, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 451, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 452, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 453, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 454, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 455, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 456, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 457, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 458, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 459, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 460, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 461, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 462, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 463, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 464, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 465, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 466, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 467, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 468, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 469, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 470, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 471, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 472, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 473, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 474, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 475, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 476, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 477, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 478, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 479, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 480, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 481, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 482, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 483, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 484, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 485, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 486, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 487, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 488, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 489, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 490, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 491, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 492, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 493, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 494, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 495, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 496, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 497, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 498, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 499, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 500, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 501, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 502, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 503, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 504, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 505, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 506, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 507, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 508, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 509, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 510, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 511, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 512, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 513, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 514, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 515, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 516, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 517, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 518, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 519, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 520, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 521, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 522, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 523, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 524, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 525, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 526, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 527, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 528, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 529, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 530, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 531, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 532, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 533, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 534, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 535, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 536, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 537, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 538, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 539, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 540, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 541, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 542, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 543, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 544, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 545, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 546, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 547, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 548, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 549, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 550, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 551, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 552, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 553, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 554, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 555, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 556, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 557, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 558, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 559, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 560, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 561, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 562, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 563, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 564, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 565, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 566, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 567, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 568, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 569, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 570, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 571, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 572, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 573, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 574, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 575, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 576, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 577, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 578, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 579, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 580, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 581, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 582, corb original: black, corp original: dimgray
+
+pnt* 233 583 red red
+i: 583, corb original: black, corp original: dimgray
+

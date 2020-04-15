@@ -1,0 +1,450 @@
+o? 35 17
+35: Retangulo  17: Retangulo  NAO
+
+o? 11 5
+11: Retangulo  5: Retangulo  NAO
+
+o? 36 4
+36: Circulo  4: Retangulo  NAO
+
+o? 3 27
+3: Circulo  27: Circulo  NAO
+
+o? 24 17
+24: Circulo  17: Retangulo  NAO
+
+o? 20 38
+20: Retangulo  38: Retangulo  NAO
+
+o? 22 0
+22: Retangulo  0: Circulo  NAO
+
+o? 19 13
+19: Circulo  13: Circulo  NAO
+
+o? 16 15
+16: Retangulo  15: Circulo  NAO
+
+o? 37 11
+37: Circulo  11: Retangulo  NAO
+
+o? 24 2
+24: Circulo  2: Retangulo  NAO
+
+o? 11 5
+11: Retangulo  5: Retangulo  NAO
+
+o? 27 22
+27: Circulo  22: Retangulo  NAO
+
+o? 32 14
+32: Retangulo  14: Retangulo  NAO
+
+o? 17 14
+17: Retangulo  14: Retangulo  NAO
+
+o? 3 7
+3: Circulo  7: Circulo  NAO
+
+o? 33 32
+33: Circulo  32: Retangulo  SIM
+
+o? 32 3
+32: Retangulo  3: Circulo  NAO
+
+o? 37 23
+37: Circulo  23: Retangulo  NAO
+
+o? 25 12
+25: Circulo  12: Circulo  NAO
+
+o? 19 17
+19: Circulo  17: Retangulo  NAO
+
+o? 37 29
+37: Circulo  29: Retangulo  NAO
+
+o? 39 5
+39: Circulo  5: Retangulo  NAO
+
+o? 34 24
+34: Retangulo  24: Circulo  NAO
+
+o? 12 2
+12: Circulo  2: Retangulo  NAO
+
+o? 19 30
+19: Circulo  30: Circulo  NAO
+
+o? 32 31
+32: Retangulo  31: Circulo  NAO
+
+o? 9 17
+9: Circulo  17: Retangulo  NAO
+
+o? 2 11
+2: Retangulo  11: Retangulo  NAO
+
+o? 35 2
+35: Retangulo  2: Retangulo  NAO
+
+o? 9 39
+9: Circulo  39: Circulo  NAO
+
+o? 5 15
+5: Retangulo  15: Circulo  NAO
+
+o? 3 28
+3: Circulo  28: Retangulo  NAO
+
+o? 1 24
+1: Circulo  24: Circulo  NAO
+
+o? 4 27
+4: Retangulo  27: Circulo  NAO
+
+o? 0 3
+0: Circulo  3: Circulo  NAO
+
+o? 31 11
+31: Circulo  11: Retangulo  NAO
+
+o? 36 33
+36: Circulo  33: Circulo  NAO
+
+o? 26 3
+26: Retangulo  3: Circulo  NAO
+
+o? 15 14
+15: Circulo  14: Retangulo  SIM
+
+o? 31 10
+31: Circulo  10: Retangulo  NAO
+
+o? 1 26
+1: Circulo  26: Retangulo  NAO
+
+o? 23 7
+23: Retangulo  7: Circulo  NAO
+
+o? 11 39
+11: Retangulo  39: Circulo  NAO
+
+o? 29 30
+29: Retangulo  30: Circulo  NAO
+
+o? 13 5
+13: Circulo  5: Retangulo  NAO
+
+o? 21 6
+21: Circulo  6: Circulo  NAO
+
+o? 31 34
+31: Circulo  34: Retangulo  NAO
+
+o? 28 21
+28: Retangulo  21: Circulo  NAO
+
+o? 0 17
+0: Circulo  17: Retangulo  NAO
+
+o? 29 1
+29: Retangulo  1: Circulo  NAO
+
+o? 24 14
+24: Circulo  14: Retangulo  NAO
+
+o? 28 19
+28: Retangulo  19: Circulo  NAO
+
+o? 27 21
+27: Circulo  21: Circulo  NAO
+
+o? 1 8
+1: Circulo  8: Retangulo  NAO
+
+o? 36 25
+36: Circulo  25: Circulo  NAO
+
+o? 6 23
+6: Circulo  23: Retangulo  NAO
+
+o? 19 3
+19: Circulo  3: Circulo  NAO
+
+o? 34 27
+34: Retangulo  27: Circulo  NAO
+
+o? 12 11
+12: Circulo  11: Retangulo  NAO
+
+o? 24 30
+24: Circulo  30: Circulo  NAO
+
+o? 24 26
+24: Circulo  26: Retangulo  NAO
+
+o? 15 36
+15: Circulo  36: Circulo  NAO
+
+o? 19 30
+19: Circulo  30: Circulo  NAO
+
+o? 28 9
+28: Retangulo  9: Circulo  NAO
+
+o? 30 11
+30: Circulo  11: Retangulo  NAO
+
+o? 13 38
+13: Circulo  38: Retangulo  NAO
+
+o? 36 9
+36: Circulo  9: Circulo  NAO
+
+o? 1 14
+1: Circulo  14: Retangulo  NAO
+
+o? 24 37
+24: Circulo  37: Circulo  NAO
+
+o? 0 5
+0: Circulo  5: Retangulo  NAO
+
+o? 34 27
+34: Retangulo  27: Circulo  NAO
+
+o? 13 10
+13: Circulo  10: Retangulo  NAO
+
+o? 11 7
+11: Retangulo  7: Circulo  NAO
+
+o? 27 33
+27: Circulo  33: Circulo  NAO
+
+o? 0 36
+0: Circulo  36: Circulo  NAO
+
+o? 3 31
+3: Circulo  31: Circulo  NAO
+
+o? 29 3
+29: Retangulo  3: Circulo  NAO
+
+o? 18 28
+18: Circulo  28: Retangulo  NAO
+
+o? 37 1
+37: Circulo  1: Circulo  NAO
+
+o? 22 4
+22: Retangulo  4: Retangulo  NAO
+
+o? 15 11
+15: Circulo  11: Retangulo  NAO
+
+o? 7 11
+7: Circulo  11: Retangulo  NAO
+
+o? 9 23
+9: Circulo  23: Retangulo  NAO
+
+o? 39 34
+39: Circulo  34: Retangulo  NAO
+
+o? 29 23
+29: Retangulo  23: Retangulo  NAO
+
+o? 25 11
+25: Circulo  11: Retangulo  NAO
+
+o? 9 8
+9: Circulo  8: Retangulo  SIM
+
+o? 32 6
+32: Retangulo  6: Circulo  NAO
+
+o? 1 38
+1: Circulo  38: Retangulo  NAO
+
+o? 28 5
+28: Retangulo  5: Retangulo  NAO
+
+o? 18 6
+18: Circulo  6: Circulo  NAO
+
+o? 27 32
+27: Circulo  32: Retangulo  NAO
+
+o? 37 21
+37: Circulo  21: Circulo  NAO
+
+o? 20 14
+20: Retangulo  14: Retangulo  NAO
+
+o? 0 39
+0: Circulo  39: Circulo  NAO
+
+o? 20 35
+20: Retangulo  35: Retangulo  NAO
+
+o? 15 16
+15: Circulo  16: Retangulo  NAO
+
+o? 24 12
+24: Circulo  12: Circulo  NAO
+
+o? 4 17
+4: Retangulo  17: Retangulo  NAO
+
+o? 5 10
+5: Retangulo  10: Retangulo  NAO
+
+o? 37 33
+37: Circulo  33: Circulo  NAO
+
+o? 8 27
+8: Retangulo  27: Circulo  NAO
+
+o? 25 3
+25: Circulo  3: Circulo  NAO
+
+o? 2 29
+2: Retangulo  29: Retangulo  SIM
+
+o? 16 36
+16: Retangulo  36: Circulo  NAO
+
+o? 13 1
+13: Circulo  1: Circulo  NAO
+
+o? 37 19
+37: Circulo  19: Circulo  NAO
+
+o? 22 9
+22: Retangulo  9: Circulo  NAO
+
+o? 34 21
+34: Retangulo  21: Circulo  NAO
+
+o? 39 13
+39: Circulo  13: Circulo  NAO
+
+o? 0 22
+0: Circulo  22: Retangulo  NAO
+
+o? 20 32
+20: Retangulo  32: Retangulo  NAO
+
+o? 2 4
+2: Retangulo  4: Retangulo  SIM
+
+o? 38 11
+38: Retangulo  11: Retangulo  NAO
+
+o? 12 15
+12: Circulo  15: Circulo  NAO
+
+o? 17 15
+17: Retangulo  15: Circulo  NAO
+
+o? 28 4
+28: Retangulo  4: Retangulo  NAO
+
+o? 5 1
+5: Retangulo  1: Circulo  NAO
+
+o? 3 28
+3: Circulo  28: Retangulo  NAO
+
+o? 17 21
+17: Retangulo  21: Circulo  NAO
+
+o? 35 13
+35: Retangulo  13: Circulo  NAO
+
+o? 8 31
+8: Retangulo  31: Circulo  NAO
+
+o? 4 6
+4: Retangulo  6: Circulo  NAO
+
+o? 12 21
+12: Circulo  21: Circulo  NAO
+
+o? 13 32
+13: Circulo  32: Retangulo  NAO
+
+o? 6 31
+6: Circulo  31: Circulo  NAO
+
+o? 25 36
+25: Circulo  36: Circulo  NAO
+
+o? 6 39
+6: Circulo  39: Circulo  NAO
+
+o? 15 32
+15: Circulo  32: Retangulo  NAO
+
+o? 39 19
+39: Circulo  19: Circulo  NAO
+
+o? 4 26
+4: Retangulo  26: Retangulo  NAO
+
+o? 0 31
+0: Circulo  31: Circulo  NAO
+
+o? 6 34
+6: Circulo  34: Retangulo  NAO
+
+o? 39 35
+39: Circulo  35: Retangulo  NAO
+
+o? 10 3
+10: Retangulo  3: Circulo  NAO
+
+o? 17 9
+17: Retangulo  9: Circulo  NAO
+
+o? 13 24
+13: Circulo  24: Circulo  NAO
+
+o? 17 28
+17: Retangulo  28: Retangulo  NAO
+
+o? 26 7
+26: Retangulo  7: Circulo  NAO
+
+o? 38 16
+38: Retangulo  16: Retangulo  NAO
+
+o? 24 9
+24: Circulo  9: Circulo  NAO
+
+o? 35 18
+35: Retangulo  18: Circulo  NAO
+
+o? 12 8
+12: Circulo  8: Retangulo  NAO
+
+o? 38 24
+38: Retangulo  24: Circulo  NAO
+
+o? 22 12
+22: Retangulo  12: Circulo  NAO
+
+o? 25 13
+25: Circulo  13: Circulo  NAO
+
+o? 15 5
+15: Circulo  5: Retangulo  NAO
+
+o? 32 25
+32: Retangulo  25: Circulo  NAO
+
+o? 5 33
+5: Retangulo  33: Circulo  NAO
+

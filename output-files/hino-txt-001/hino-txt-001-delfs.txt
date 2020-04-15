@@ -1,0 +1,27 @@
+delf* 2 14
+tipo: texto, id: 2, x: 5.000000, y: 31.000000, corb: orange, corp: lightyellow, texto: Amado clube brasileiro
+
+tipo: texto, id: 3, x: 5.000000, y: 47.000000, corb: orange, corp: lightyellow, texto: Tu es forte, tu es grande
+
+tipo: texto, id: 4, x: 5.000000, y: 63.000000, corb: orange, corp: lightyellow, texto: Dentre os grandes es o primeiro
+
+tipo: texto, id: 5, x: 5.000000, y: 79.000000, corb: orange, corp: lightyellow, texto: Tu es forte, tu es grande
+
+tipo: texto, id: 6, x: 5.000000, y: 95.000000, corb: orange, corp: lightyellow, texto: Dentre os grandes es o primeiro
+
+tipo: texto, id: 7, x: 5.000000, y: 111.000000, corb: orange, corp: lightyellow, texto: Oh, Tricolor
+
+tipo: texto, id: 8, x: 5.000000, y: 127.000000, corb: orange, corp: lightyellow, texto: Clube bem amado
+
+tipo: texto, id: 9, x: 5.000000, y: 143.000000, corb: orange, corp: lightyellow, texto: As tuas gloriasVem do passado
+
+tipo: texto, id: 10, x: 5.000000, y: 159.000000, corb: orange, corp: lightyellow, texto: Sao teus guias brasileiros
+
+tipo: texto, id: 11, x: 5.000000, y: 175.000000, corb: orange, corp: lightyellow, texto: Que te amam eternamente
+
+tipo: texto, id: 12, x: 5.000000, y: 191.000000, corb: orange, corp: lightyellow, texto: De São Paulo tens o nome
+
+tipo: texto, id: 13, x: 5.000000, y: 207.000000, corb: orange, corp: lightyellow, texto: Que ostentas dignamente
+
+tipo: texto, id: 14, x: 5.000000, y: 223.000000, corb: orange, corp: lightyellow, texto: De São Paulo tens o nome
+

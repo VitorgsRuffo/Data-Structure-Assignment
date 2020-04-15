@@ -1,0 +1,774 @@
+pnt* 9 266 red red
+i: 9, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 10, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 11, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 12, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 13, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 14, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 15, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 16, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 17, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 18, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 19, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 20, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 21, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 22, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 23, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 24, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 25, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 26, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 27, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 28, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 29, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 30, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 31, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 32, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 33, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 34, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 35, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 36, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 37, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 38, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 39, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 40, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 41, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 42, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 43, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 44, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 45, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 46, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 47, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 48, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 49, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 50, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 51, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 52, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 53, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 54, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 55, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 56, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 57, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 58, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 59, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 60, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 61, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 62, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 63, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 64, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 65, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 66, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 67, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 68, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 69, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 70, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 71, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 72, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 73, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 74, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 75, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 76, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 77, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 78, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 79, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 80, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 81, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 82, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 83, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 84, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 85, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 86, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 87, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 88, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 89, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 90, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 91, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 92, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 93, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 94, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 95, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 96, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 97, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 98, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 99, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 100, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 101, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 102, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 103, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 104, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 105, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 106, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 107, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 108, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 109, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 110, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 111, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 112, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 113, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 114, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 115, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 116, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 117, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 118, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 119, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 120, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 121, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 122, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 123, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 124, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 125, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 126, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 127, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 128, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 129, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 130, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 131, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 132, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 133, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 134, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 135, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 136, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 137, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 138, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 139, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 140, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 141, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 142, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 143, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 144, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 145, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 146, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 147, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 148, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 149, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 150, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 151, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 152, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 153, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 154, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 155, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 156, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 157, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 158, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 159, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 160, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 161, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 162, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 163, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 164, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 165, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 166, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 167, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 168, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 169, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 170, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 171, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 172, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 173, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 174, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 175, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 176, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 177, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 178, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 179, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 180, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 181, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 182, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 183, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 184, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 185, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 186, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 187, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 188, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 189, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 190, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 191, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 192, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 193, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 194, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 195, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 196, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 197, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 198, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 199, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 200, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 201, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 202, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 203, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 204, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 205, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 206, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 207, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 208, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 209, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 210, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 211, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 212, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 213, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 214, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 215, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 216, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 217, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 218, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 219, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 220, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 221, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 222, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 223, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 224, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 225, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 226, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 227, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 228, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 229, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 230, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 231, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 232, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 233, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 234, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 235, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 236, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 237, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 238, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 239, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 240, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 241, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 242, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 243, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 244, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 245, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 246, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 247, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 248, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 249, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 250, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 251, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 252, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 253, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 254, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 255, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 256, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 257, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 258, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 259, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 260, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 261, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 262, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 263, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 264, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 265, corb original: black, corp original: tomato
+
+pnt* 9 266 red red
+i: 266, corb original: black, corp original: tomato
+

@@ -1,0 +1,60 @@
+o? 123 196
+123: Circulo  196: Retangulo  NAO
+
+o? 189 145
+189: Circulo  145: Circulo  NAO
+
+o? 56 40
+56: Retangulo  40: Retangulo  NAO
+
+o? 118 50
+118: Retangulo  50: Retangulo  SIM
+
+o? 105 48
+105: Circulo  48: Circulo  NAO
+
+o? 84 119
+84: Circulo  119: Retangulo  NAO
+
+o? 62 65
+62: Retangulo  65: Retangulo  NAO
+
+o? 128 67
+128: Retangulo  67: Circulo  NAO
+
+o? 27 150
+27: Circulo  150: Circulo  NAO
+
+o? 65 141
+65: Retangulo  141: Circulo  NAO
+
+o? 5 179
+5: Retangulo  179: Retangulo  NAO
+
+o? 129 177
+129: Circulo  177: Circulo  NAO
+
+o? 43 148
+43: Circulo  148: Retangulo  NAO
+
+o? 168 27
+168: Circulo  27: Circulo  NAO
+
+o? 96 121
+96: Circulo  121: Circulo  NAO
+
+o? 147 173
+147: Circulo  173: Retangulo  NAO
+
+o? 39 150
+39: Circulo  150: Circulo  NAO
+
+o? 8 78
+8: Retangulo  78: Circulo  NAO
+
+o? 154 163
+154: Retangulo  163: Circulo  NAO
+
+o? 132 192
+132: Circulo  192: Circulo  NAO
+

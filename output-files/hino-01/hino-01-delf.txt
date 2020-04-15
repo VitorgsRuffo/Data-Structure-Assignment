@@ -1,0 +1,1725 @@
+delf 1753
+tipo: circulo, id: 1753, raio: 2.500000, x: 300.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1633
+tipo: circulo, id: 1633, raio: 2.500000, x: 92.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 437
+tipo: circulo, id: 437, raio: 2.500000, x: 1068.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1643
+tipo: circulo, id: 1643, raio: 2.500000, x: 150.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 1117
+tipo: circulo, id: 1117, raio: 2.500000, x: 74.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 2201
+tipo: circulo, id: 2201, raio: 2.500000, x: 1414.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 2237
+tipo: circulo, id: 2237, raio: 2.500000, x: 1484.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1168
+tipo: circulo, id: 1168, raio: 2.500000, x: 260.000000, y: 146.250000, corb: black, corp: dimgray
+
+delf 1854
+tipo: circulo, id: 1854, raio: 2.500000, x: 606.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 309
+tipo: circulo, id: 309, raio: 2.500000, x: 738.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 2250
+tipo: circulo, id: 2250, raio: 2.500000, x: 1496.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1140
+tipo: circulo, id: 1140, raio: 2.500000, x: 184.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 368
+tipo: circulo, id: 368, raio: 2.500000, x: 894.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 909
+tipo: circulo, id: 909, raio: 2.500000, x: 842.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 310
+tipo: circulo, id: 310, raio: 2.500000, x: 780.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 848
+tipo: circulo, id: 848, raio: 2.500000, x: 716.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 2216
+tipo: circulo, id: 2216, raio: 2.500000, x: 1432.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 504
+tipo: circulo, id: 504, raio: 2.500000, x: 1236.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1105
+tipo: circulo, id: 1105, raio: 2.500000, x: 104.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 774
+tipo: circulo, id: 774, raio: 2.500000, x: 542.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 570
+tipo: circulo, id: 570, raio: 2.500000, x: 52.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 2175
+tipo: circulo, id: 2175, raio: 2.500000, x: 1362.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 1385
+tipo: circulo, id: 1385, raio: 2.500000, x: 842.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 1286
+tipo: circulo, id: 1286, raio: 2.500000, x: 542.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 429
+tipo: circulo, id: 429, raio: 2.500000, x: 1092.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 901
+tipo: circulo, id: 901, raio: 2.500000, x: 832.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 1184
+tipo: circulo, id: 1184, raio: 2.500000, x: 364.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 35
+tipo: circulo, id: 35, raio: 2.500000, x: 62.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 2285
+tipo: circulo, id: 2285, raio: 2.500000, x: 1570.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 597
+tipo: circulo, id: 597, raio: 2.500000, x: 62.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1006
+tipo: circulo, id: 1006, raio: 2.500000, x: 1022.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 553
+tipo: circulo, id: 553, raio: 2.500000, x: 40.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 228
+tipo: circulo, id: 228, raio: 2.500000, x: 582.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 992
+tipo: circulo, id: 992, raio: 2.500000, x: 970.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1735
+tipo: circulo, id: 1735, raio: 2.500000, x: 312.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 2159
+tipo: circulo, id: 2159, raio: 2.500000, x: 1310.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1568
+tipo: circulo, id: 1568, raio: 2.500000, x: 1224.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 1264
+tipo: circulo, id: 1264, raio: 2.500000, x: 502.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 684
+tipo: circulo, id: 684, raio: 2.500000, x: 322.000000, y: 75.000000, corb: black, corp: dimgray
+
+delf 1100
+tipo: circulo, id: 1100, raio: 2.500000, x: 28.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 1877
+tipo: circulo, id: 1877, raio: 2.500000, x: 658.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 106
+tipo: circulo, id: 106, raio: 2.500000, x: 236.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 489
+tipo: circulo, id: 489, raio: 2.500000, x: 1196.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 1368
+tipo: circulo, id: 1368, raio: 2.500000, x: 832.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 1601
+tipo: circulo, id: 1601, raio: 2.500000, x: 22.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 595
+tipo: circulo, id: 595, raio: 2.500000, x: 62.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 2202
+tipo: circulo, id: 2202, raio: 2.500000, x: 1414.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1217
+tipo: circulo, id: 1217, raio: 2.500000, x: 380.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 227
+tipo: circulo, id: 227, raio: 2.500000, x: 572.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 588
+tipo: circulo, id: 588, raio: 2.500000, x: 80.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1164
+tipo: circulo, id: 1164, raio: 2.500000, x: 242.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 977
+tipo: circulo, id: 977, raio: 2.500000, x: 946.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 408
+tipo: circulo, id: 408, raio: 2.500000, x: 1040.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 860
+tipo: circulo, id: 860, raio: 2.500000, x: 756.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 721
+tipo: circulo, id: 721, raio: 2.500000, x: 416.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 289
+tipo: circulo, id: 289, raio: 2.500000, x: 722.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 637
+tipo: circulo, id: 637, raio: 2.500000, x: 208.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1925
+tipo: circulo, id: 1925, raio: 2.500000, x: 722.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1157
+tipo: circulo, id: 1157, raio: 2.500000, x: 254.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1533
+tipo: circulo, id: 1533, raio: 2.500000, x: 1160.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 1964
+tipo: circulo, id: 1964, raio: 2.500000, x: 790.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 131
+tipo: circulo, id: 131, raio: 2.500000, x: 364.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 1293
+tipo: circulo, id: 1293, raio: 2.500000, x: 530.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 204
+tipo: circulo, id: 204, raio: 2.500000, x: 530.000000, y: 16.250000, corb: black, corp: dimgray
+
+delf 1039
+tipo: circulo, id: 1039, raio: 2.500000, x: 1050.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 754
+tipo: circulo, id: 754, raio: 2.500000, x: 520.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 595
+tipo: circulo, id: 595, raio: 2.500000, x: 62.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 756
+tipo: circulo, id: 756, raio: 2.500000, x: 490.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 1334
+tipo: circulo, id: 1334, raio: 2.500000, x: 728.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 2264
+tipo: circulo, id: 2264, raio: 2.500000, x: 1518.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 425
+tipo: circulo, id: 425, raio: 2.500000, x: 1050.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 1830
+tipo: circulo, id: 1830, raio: 2.500000, x: 548.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1097
+tipo: circulo, id: 1097, raio: 2.500000, x: 34.000000, y: 146.250000, corb: black, corp: dimgray
+
+delf 712
+tipo: circulo, id: 712, raio: 2.500000, x: 410.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 1210
+tipo: circulo, id: 1210, raio: 2.500000, x: 416.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 2264
+tipo: circulo, id: 2264, raio: 2.500000, x: 1518.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 581
+tipo: circulo, id: 581, raio: 2.500000, x: 98.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 1414
+tipo: circulo, id: 1414, raio: 2.500000, x: 946.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 670
+tipo: circulo, id: 670, raio: 2.500000, x: 230.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1666
+tipo: circulo, id: 1666, raio: 2.500000, x: 156.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 880
+tipo: circulo, id: 880, raio: 2.500000, x: 738.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 1817
+tipo: circulo, id: 1817, raio: 2.500000, x: 530.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 39
+tipo: circulo, id: 39, raio: 2.500000, x: 74.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 167
+tipo: circulo, id: 167, raio: 2.500000, x: 450.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 677
+tipo: circulo, id: 677, raio: 2.500000, x: 334.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1022
+tipo: circulo, id: 1022, raio: 2.500000, x: 1010.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 574
+tipo: circulo, id: 574, raio: 2.500000, x: 52.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 906
+tipo: circulo, id: 906, raio: 2.500000, x: 814.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1087
+tipo: circulo, id: 1087, raio: 2.500000, x: 28.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1441
+tipo: circulo, id: 1441, raio: 2.500000, x: 998.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 1638
+tipo: circulo, id: 1638, raio: 2.500000, x: 150.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 473
+tipo: circulo, id: 473, raio: 2.500000, x: 1144.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1569
+tipo: circulo, id: 1569, raio: 2.500000, x: 1206.000000, y: 146.250000, corb: black, corp: dimgray
+
+delf 1294
+tipo: circulo, id: 1294, raio: 2.500000, x: 572.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 426
+tipo: circulo, id: 426, raio: 2.500000, x: 1056.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 1877
+tipo: circulo, id: 1877, raio: 2.500000, x: 658.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 692
+tipo: circulo, id: 692, raio: 2.500000, x: 340.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 868
+tipo: circulo, id: 868, raio: 2.500000, x: 738.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1485
+tipo: circulo, id: 1485, raio: 2.500000, x: 1108.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1902
+tipo: circulo, id: 1902, raio: 2.500000, x: 686.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 292
+tipo: circulo, id: 292, raio: 2.500000, x: 692.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 724
+tipo: circulo, id: 724, raio: 2.500000, x: 426.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 672
+tipo: circulo, id: 672, raio: 2.500000, x: 242.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1649
+tipo: circulo, id: 1649, raio: 2.500000, x: 150.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 1633
+tipo: circulo, id: 1633, raio: 2.500000, x: 92.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 715
+tipo: circulo, id: 715, raio: 2.500000, x: 380.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 714
+tipo: circulo, id: 714, raio: 2.500000, x: 374.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1120
+tipo: circulo, id: 1120, raio: 2.500000, x: 92.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 1455
+tipo: circulo, id: 1455, raio: 2.500000, x: 1034.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 1905
+tipo: circulo, id: 1905, raio: 2.500000, x: 710.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1582
+tipo: circulo, id: 1582, raio: 2.500000, x: 22.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1386
+tipo: circulo, id: 1386, raio: 2.500000, x: 848.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 2163
+tipo: circulo, id: 2163, raio: 2.500000, x: 1334.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1989
+tipo: circulo, id: 1989, raio: 2.500000, x: 884.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1279
+tipo: circulo, id: 1279, raio: 2.500000, x: 566.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1019
+tipo: circulo, id: 1019, raio: 2.500000, x: 1040.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 1387
+tipo: circulo, id: 1387, raio: 2.500000, x: 854.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 611
+tipo: circulo, id: 611, raio: 2.500000, x: 114.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 2211
+tipo: circulo, id: 2211, raio: 2.500000, x: 1414.000000, y: 205.000000, corb: black, corp: dimgray
+
+delf 2085
+tipo: circulo, id: 2085, raio: 2.500000, x: 1132.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1949
+tipo: circulo, id: 1949, raio: 2.500000, x: 756.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1694
+tipo: circulo, id: 1694, raio: 2.500000, x: 184.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 2253
+tipo: circulo, id: 2253, raio: 2.500000, x: 1518.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 789
+tipo: circulo, id: 789, raio: 2.500000, x: 542.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 1159
+tipo: circulo, id: 1159, raio: 2.500000, x: 218.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1159
+tipo: circulo, id: 1159, raio: 2.500000, x: 218.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1598
+tipo: circulo, id: 1598, raio: 2.500000, x: 52.000000, y: 205.000000, corb: black, corp: dimgray
+
+delf 51
+tipo: circulo, id: 51, raio: 2.500000, x: 114.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 422
+tipo: circulo, id: 422, raio: 2.500000, x: 1056.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 2177
+tipo: circulo, id: 2177, raio: 2.500000, x: 1392.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 96
+tipo: circulo, id: 96, raio: 2.500000, x: 242.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 629
+tipo: circulo, id: 629, raio: 2.500000, x: 190.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 973
+tipo: circulo, id: 973, raio: 2.500000, x: 988.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1448
+tipo: circulo, id: 1448, raio: 2.500000, x: 1028.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 321
+tipo: circulo, id: 321, raio: 2.500000, x: 768.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 477
+tipo: circulo, id: 477, raio: 2.500000, x: 1178.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 779
+tipo: circulo, id: 779, raio: 2.500000, x: 572.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 965
+tipo: circulo, id: 965, raio: 2.500000, x: 936.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1293
+tipo: circulo, id: 1293, raio: 2.500000, x: 530.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 1719
+tipo: circulo, id: 1719, raio: 2.500000, x: 242.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1287
+tipo: circulo, id: 1287, raio: 2.500000, x: 548.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 652
+tipo: circulo, id: 652, raio: 2.500000, x: 230.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 218
+tipo: circulo, id: 218, raio: 2.500000, x: 554.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 906
+tipo: circulo, id: 906, raio: 2.500000, x: 814.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1901
+tipo: circulo, id: 1901, raio: 2.500000, x: 728.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 1210
+tipo: circulo, id: 1210, raio: 2.500000, x: 416.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 337
+tipo: circulo, id: 337, raio: 2.500000, x: 808.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 1696
+tipo: circulo, id: 1696, raio: 2.500000, x: 184.000000, y: 205.000000, corb: black, corp: dimgray
+
+delf 49
+tipo: circulo, id: 49, raio: 2.500000, x: 62.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1144
+tipo: circulo, id: 1144, raio: 2.500000, x: 166.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 1638
+tipo: circulo, id: 1638, raio: 2.500000, x: 150.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1928
+tipo: circulo, id: 1928, raio: 2.500000, x: 744.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1056
+tipo: circulo, id: 1056, raio: 2.500000, x: 1120.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 814
+tipo: circulo, id: 814, raio: 2.500000, x: 676.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1480
+tipo: circulo, id: 1480, raio: 2.500000, x: 1050.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 2047
+tipo: circulo, id: 2047, raio: 2.500000, x: 1004.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 966
+tipo: circulo, id: 966, raio: 2.500000, x: 946.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1014
+tipo: circulo, id: 1014, raio: 2.500000, x: 1016.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 307
+tipo: circulo, id: 307, raio: 2.500000, x: 738.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 243
+tipo: circulo, id: 243, raio: 2.500000, x: 588.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 262
+tipo: circulo, id: 262, raio: 2.500000, x: 634.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 1253
+tipo: circulo, id: 1253, raio: 2.500000, x: 502.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 271
+tipo: circulo, id: 271, raio: 2.500000, x: 658.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1645
+tipo: circulo, id: 1645, raio: 2.500000, x: 114.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 583
+tipo: circulo, id: 583, raio: 2.500000, x: 62.000000, y: 75.000000, corb: black, corp: dimgray
+
+delf 1768
+tipo: circulo, id: 1768, raio: 2.500000, x: 374.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 977
+tipo: circulo, id: 977, raio: 2.500000, x: 946.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1873
+tipo: circulo, id: 1873, raio: 2.500000, x: 634.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1487
+tipo: circulo, id: 1487, raio: 2.500000, x: 1144.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1707
+tipo: circulo, id: 1707, raio: 2.500000, x: 218.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 109
+tipo: circulo, id: 109, raio: 2.500000, x: 230.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 1503
+tipo: circulo, id: 1503, raio: 2.500000, x: 1138.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 1934
+tipo: circulo, id: 1934, raio: 2.500000, x: 744.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 766
+tipo: circulo, id: 766, raio: 2.500000, x: 484.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 376
+tipo: circulo, id: 376, raio: 2.500000, x: 982.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 2023
+tipo: circulo, id: 2023, raio: 2.500000, x: 946.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1542
+tipo: circulo, id: 1542, raio: 2.500000, x: 1196.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 2224
+tipo: circulo, id: 2224, raio: 2.500000, x: 1484.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 856
+tipo: circulo, id: 856, raio: 2.500000, x: 686.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 488
+tipo: circulo, id: 488, raio: 2.500000, x: 1190.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 507
+tipo: circulo, id: 507, raio: 2.500000, x: 1206.000000, y: 16.250000, corb: black, corp: dimgray
+
+delf 1704
+tipo: circulo, id: 1704, raio: 2.500000, x: 242.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1434
+tipo: circulo, id: 1434, raio: 2.500000, x: 1010.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 2078
+tipo: circulo, id: 2078, raio: 2.500000, x: 1144.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 1383
+tipo: circulo, id: 1383, raio: 2.500000, x: 884.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 636
+tipo: circulo, id: 636, raio: 2.500000, x: 172.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1128
+tipo: circulo, id: 1128, raio: 2.500000, x: 202.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 2136
+tipo: circulo, id: 2136, raio: 2.500000, x: 1316.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1064
+tipo: circulo, id: 1064, raio: 2.500000, x: 1102.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1739
+tipo: circulo, id: 1739, raio: 2.500000, x: 282.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1545
+tipo: circulo, id: 1545, raio: 2.500000, x: 1166.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 1436
+tipo: circulo, id: 1436, raio: 2.500000, x: 1022.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 392
+tipo: circulo, id: 392, raio: 2.500000, x: 988.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 432
+tipo: circulo, id: 432, raio: 2.500000, x: 1086.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 5
+tipo: circulo, id: 5, raio: 2.500000, x: 46.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 125
+tipo: circulo, id: 125, raio: 2.500000, x: 346.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 212
+tipo: circulo, id: 212, raio: 2.500000, x: 548.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 109
+tipo: circulo, id: 109, raio: 2.500000, x: 230.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 2248
+tipo: circulo, id: 2248, raio: 2.500000, x: 1484.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1899
+tipo: circulo, id: 1899, raio: 2.500000, x: 704.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 777
+tipo: circulo, id: 777, raio: 2.500000, x: 560.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 780
+tipo: circulo, id: 780, raio: 2.500000, x: 530.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 371
+tipo: circulo, id: 371, raio: 2.500000, x: 952.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 272
+tipo: circulo, id: 272, raio: 2.500000, x: 664.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 82
+tipo: circulo, id: 82, raio: 2.500000, x: 172.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 1273
+tipo: circulo, id: 1273, raio: 2.500000, x: 530.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1716
+tipo: circulo, id: 1716, raio: 2.500000, x: 248.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1376
+tipo: circulo, id: 1376, raio: 2.500000, x: 832.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 99
+tipo: circulo, id: 99, raio: 2.500000, x: 260.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 181
+tipo: circulo, id: 181, raio: 2.500000, x: 478.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 1219
+tipo: circulo, id: 1219, raio: 2.500000, x: 392.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 373
+tipo: circulo, id: 373, raio: 2.500000, x: 964.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1840
+tipo: circulo, id: 1840, raio: 2.500000, x: 612.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1461
+tipo: circulo, id: 1461, raio: 2.500000, x: 1074.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1783
+tipo: circulo, id: 1783, raio: 2.500000, x: 450.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 974
+tipo: circulo, id: 974, raio: 2.500000, x: 946.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 449
+tipo: circulo, id: 449, raio: 2.500000, x: 1144.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 500
+tipo: circulo, id: 500, raio: 2.500000, x: 1212.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 467
+tipo: circulo, id: 467, raio: 2.500000, x: 1108.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 2034
+tipo: circulo, id: 2034, raio: 2.500000, x: 970.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1299
+tipo: circulo, id: 1299, raio: 2.500000, x: 554.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 2013
+tipo: circulo, id: 2013, raio: 2.500000, x: 976.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 2206
+tipo: circulo, id: 2206, raio: 2.500000, x: 1414.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1206
+tipo: circulo, id: 1206, raio: 2.500000, x: 416.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1526
+tipo: circulo, id: 1526, raio: 2.500000, x: 1166.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 345
+tipo: circulo, id: 345, raio: 2.500000, x: 790.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 2131
+tipo: circulo, id: 2131, raio: 2.500000, x: 1258.000000, y: 205.000000, corb: black, corp: dimgray
+
+delf 302
+tipo: circulo, id: 302, raio: 2.500000, x: 762.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1337
+tipo: circulo, id: 1337, raio: 2.500000, x: 686.000000, y: 146.250000, corb: black, corp: dimgray
+
+delf 2239
+tipo: circulo, id: 2239, raio: 2.500000, x: 1484.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 1004
+tipo: circulo, id: 1004, raio: 2.500000, x: 998.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 1142
+tipo: circulo, id: 1142, raio: 2.500000, x: 166.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 133
+tipo: circulo, id: 133, raio: 2.500000, x: 364.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 1575
+tipo: circulo, id: 1575, raio: 2.500000, x: 1224.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 312
+tipo: circulo, id: 312, raio: 2.500000, x: 780.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 275
+tipo: circulo, id: 275, raio: 2.500000, x: 692.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 2014
+tipo: circulo, id: 2014, raio: 2.500000, x: 982.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 144
+tipo: circulo, id: 144, raio: 2.500000, x: 352.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 472
+tipo: circulo, id: 472, raio: 2.500000, x: 1138.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 904
+tipo: circulo, id: 904, raio: 2.500000, x: 802.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 836
+tipo: circulo, id: 836, raio: 2.500000, x: 710.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 2268
+tipo: circulo, id: 2268, raio: 2.500000, x: 1542.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 2104
+tipo: circulo, id: 2104, raio: 2.500000, x: 1236.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 250
+tipo: circulo, id: 250, raio: 2.500000, x: 640.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 166
+tipo: circulo, id: 166, raio: 2.500000, x: 444.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 53
+tipo: circulo, id: 53, raio: 2.500000, x: 114.000000, y: 16.250000, corb: black, corp: dimgray
+
+delf 2274
+tipo: circulo, id: 2274, raio: 2.500000, x: 1548.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 1285
+tipo: circulo, id: 1285, raio: 2.500000, x: 536.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 405
+tipo: circulo, id: 405, raio: 2.500000, x: 998.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 528
+tipo: circulo, id: 528, raio: 2.500000, x: 1294.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1535
+tipo: circulo, id: 1535, raio: 2.500000, x: 1160.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 1384
+tipo: circulo, id: 1384, raio: 2.500000, x: 842.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1256
+tipo: circulo, id: 1256, raio: 2.500000, x: 520.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 658
+tipo: circulo, id: 658, raio: 2.500000, x: 260.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 20
+tipo: circulo, id: 20, raio: 2.500000, x: 22.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1205
+tipo: circulo, id: 1205, raio: 2.500000, x: 374.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1478
+tipo: circulo, id: 1478, raio: 2.500000, x: 1050.000000, y: 146.250000, corb: black, corp: dimgray
+
+delf 2245
+tipo: circulo, id: 2245, raio: 2.500000, x: 1466.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1270
+tipo: circulo, id: 1270, raio: 2.500000, x: 502.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 1888
+tipo: circulo, id: 1888, raio: 2.500000, x: 692.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1336
+tipo: circulo, id: 1336, raio: 2.500000, x: 728.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 1666
+tipo: circulo, id: 1666, raio: 2.500000, x: 156.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 776
+tipo: circulo, id: 776, raio: 2.500000, x: 554.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1633
+tipo: circulo, id: 1633, raio: 2.500000, x: 92.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1430
+tipo: circulo, id: 1430, raio: 2.500000, x: 982.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 755
+tipo: circulo, id: 755, raio: 2.500000, x: 484.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 2037
+tipo: circulo, id: 2037, raio: 2.500000, x: 988.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 2252
+tipo: circulo, id: 2252, raio: 2.500000, x: 1508.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 659
+tipo: circulo, id: 659, raio: 2.500000, x: 218.000000, y: 75.000000, corb: black, corp: dimgray
+
+delf 2125
+tipo: circulo, id: 2125, raio: 2.500000, x: 1288.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 884
+tipo: circulo, id: 884, raio: 2.500000, x: 796.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1580
+tipo: circulo, id: 1580, raio: 2.500000, x: 10.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1528
+tipo: circulo, id: 1528, raio: 2.500000, x: 1178.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1003
+tipo: circulo, id: 1003, raio: 2.500000, x: 1040.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 612
+tipo: circulo, id: 612, raio: 2.500000, x: 120.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 716
+tipo: circulo, id: 716, raio: 2.500000, x: 386.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1852
+tipo: circulo, id: 1852, raio: 2.500000, x: 618.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1346
+tipo: circulo, id: 1346, raio: 2.500000, x: 722.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 2064
+tipo: circulo, id: 2064, raio: 2.500000, x: 1114.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 227
+tipo: circulo, id: 227, raio: 2.500000, x: 572.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1825
+tipo: circulo, id: 1825, raio: 2.500000, x: 530.000000, y: 205.000000, corb: black, corp: dimgray
+
+delf 535
+tipo: circulo, id: 535, raio: 2.500000, x: 1258.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 139
+tipo: circulo, id: 139, raio: 2.500000, x: 364.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 1997
+tipo: circulo, id: 1997, raio: 2.500000, x: 878.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 2134
+tipo: circulo, id: 2134, raio: 2.500000, x: 1300.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1251
+tipo: circulo, id: 1251, raio: 2.500000, x: 490.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1658
+tipo: circulo, id: 1658, raio: 2.500000, x: 120.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1716
+tipo: circulo, id: 1716, raio: 2.500000, x: 248.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1669
+tipo: circulo, id: 1669, raio: 2.500000, x: 144.000000, y: 205.000000, corb: black, corp: dimgray
+
+delf 1584
+tipo: circulo, id: 1584, raio: 2.500000, x: 34.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 985
+tipo: circulo, id: 985, raio: 2.500000, x: 946.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 405
+tipo: circulo, id: 405, raio: 2.500000, x: 998.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 1928
+tipo: circulo, id: 1928, raio: 2.500000, x: 744.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 2005
+tipo: circulo, id: 2005, raio: 2.500000, x: 866.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1576
+tipo: circulo, id: 1576, raio: 2.500000, x: 1230.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 1093
+tipo: circulo, id: 1093, raio: 2.500000, x: 34.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 1947
+tipo: circulo, id: 1947, raio: 2.500000, x: 744.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1883
+tipo: circulo, id: 1883, raio: 2.500000, x: 634.000000, y: 205.000000, corb: black, corp: dimgray
+
+delf 410
+tipo: circulo, id: 410, raio: 2.500000, x: 1040.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 1065
+tipo: circulo, id: 1065, raio: 2.500000, x: 1144.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 169
+tipo: circulo, id: 169, raio: 2.500000, x: 450.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 859
+tipo: circulo, id: 859, raio: 2.500000, x: 750.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 581
+tipo: circulo, id: 581, raio: 2.500000, x: 98.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 104
+tipo: circulo, id: 104, raio: 2.500000, x: 224.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 514
+tipo: circulo, id: 514, raio: 2.500000, x: 1230.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 764
+tipo: circulo, id: 764, raio: 2.500000, x: 520.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 113
+tipo: circulo, id: 113, raio: 2.500000, x: 260.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 268
+tipo: circulo, id: 268, raio: 2.500000, x: 640.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1767
+tipo: circulo, id: 1767, raio: 2.500000, x: 416.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1517
+tipo: circulo, id: 1517, raio: 2.500000, x: 1132.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 1562
+tipo: circulo, id: 1562, raio: 2.500000, x: 1212.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 1843
+tipo: circulo, id: 1843, raio: 2.500000, x: 624.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 1771
+tipo: circulo, id: 1771, raio: 2.500000, x: 416.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 1682
+tipo: circulo, id: 1682, raio: 2.500000, x: 202.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 259
+tipo: circulo, id: 259, raio: 2.500000, x: 676.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 1449
+tipo: circulo, id: 1449, raio: 2.500000, x: 1034.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 528
+tipo: circulo, id: 528, raio: 2.500000, x: 1294.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1442
+tipo: circulo, id: 1442, raio: 2.500000, x: 1040.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 1203
+tipo: circulo, id: 1203, raio: 2.500000, x: 404.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1548
+tipo: circulo, id: 1548, raio: 2.500000, x: 1184.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 291
+tipo: circulo, id: 291, raio: 2.500000, x: 686.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1478
+tipo: circulo, id: 1478, raio: 2.500000, x: 1050.000000, y: 146.250000, corb: black, corp: dimgray
+
+delf 1055
+tipo: circulo, id: 1055, raio: 2.500000, x: 1114.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1246
+tipo: circulo, id: 1246, raio: 2.500000, x: 462.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 175
+tipo: circulo, id: 175, raio: 2.500000, x: 508.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1164
+tipo: circulo, id: 1164, raio: 2.500000, x: 242.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 99
+tipo: circulo, id: 99, raio: 2.500000, x: 260.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1185
+tipo: circulo, id: 1185, raio: 2.500000, x: 322.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 635
+tipo: circulo, id: 635, raio: 2.500000, x: 208.000000, y: 75.000000, corb: black, corp: dimgray
+
+delf 488
+tipo: circulo, id: 488, raio: 2.500000, x: 1190.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 1505
+tipo: circulo, id: 1505, raio: 2.500000, x: 1102.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 85
+tipo: circulo, id: 85, raio: 2.500000, x: 196.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 91
+tipo: circulo, id: 91, raio: 2.500000, x: 190.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1823
+tipo: circulo, id: 1823, raio: 2.500000, x: 530.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 1044
+tipo: circulo, id: 1044, raio: 2.500000, x: 1080.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1792
+tipo: circulo, id: 1792, raio: 2.500000, x: 450.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1961
+tipo: circulo, id: 1961, raio: 2.500000, x: 790.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 1439
+tipo: circulo, id: 1439, raio: 2.500000, x: 998.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 2066
+tipo: circulo, id: 2066, raio: 2.500000, x: 1126.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1801
+tipo: circulo, id: 1801, raio: 2.500000, x: 444.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 2225
+tipo: circulo, id: 2225, raio: 2.500000, x: 1490.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1853
+tipo: circulo, id: 1853, raio: 2.500000, x: 582.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 84
+tipo: circulo, id: 84, raio: 2.500000, x: 178.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 2051
+tipo: circulo, id: 2051, raio: 2.500000, x: 1028.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 122
+tipo: circulo, id: 122, raio: 2.500000, x: 328.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 2102
+tipo: circulo, id: 2102, raio: 2.500000, x: 1224.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1150
+tipo: circulo, id: 1150, raio: 2.500000, x: 202.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 639
+tipo: circulo, id: 639, raio: 2.500000, x: 208.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 135
+tipo: circulo, id: 135, raio: 2.500000, x: 364.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 97
+tipo: circulo, id: 97, raio: 2.500000, x: 248.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1812
+tipo: circulo, id: 1812, raio: 2.500000, x: 572.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 978
+tipo: circulo, id: 978, raio: 2.500000, x: 952.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 970
+tipo: circulo, id: 970, raio: 2.500000, x: 970.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 270
+tipo: circulo, id: 270, raio: 2.500000, x: 652.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1372
+tipo: circulo, id: 1372, raio: 2.500000, x: 808.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 1434
+tipo: circulo, id: 1434, raio: 2.500000, x: 1010.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 2041
+tipo: circulo, id: 2041, raio: 2.500000, x: 1022.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1517
+tipo: circulo, id: 1517, raio: 2.500000, x: 1132.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 483
+tipo: circulo, id: 483, raio: 2.500000, x: 1160.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 920
+tipo: circulo, id: 920, raio: 2.500000, x: 884.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 576
+tipo: circulo, id: 576, raio: 2.500000, x: 68.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1108
+tipo: circulo, id: 1108, raio: 2.500000, x: 62.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 334
+tipo: circulo, id: 334, raio: 2.500000, x: 790.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 909
+tipo: circulo, id: 909, raio: 2.500000, x: 842.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1156
+tipo: circulo, id: 1156, raio: 2.500000, x: 248.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 779
+tipo: circulo, id: 779, raio: 2.500000, x: 572.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1438
+tipo: circulo, id: 1438, raio: 2.500000, x: 1034.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1046
+tipo: circulo, id: 1046, raio: 2.500000, x: 1050.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 283
+tipo: circulo, id: 283, raio: 2.500000, x: 692.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 1153
+tipo: circulo, id: 1153, raio: 2.500000, x: 230.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1578
+tipo: circulo, id: 1578, raio: 2.500000, x: 1242.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 20
+tipo: circulo, id: 20, raio: 2.500000, x: 22.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 915
+tipo: circulo, id: 915, raio: 2.500000, x: 878.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 2183
+tipo: circulo, id: 2183, raio: 2.500000, x: 1362.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1230
+tipo: circulo, id: 1230, raio: 2.500000, x: 426.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1370
+tipo: circulo, id: 1370, raio: 2.500000, x: 796.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 2237
+tipo: circulo, id: 2237, raio: 2.500000, x: 1484.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1847
+tipo: circulo, id: 1847, raio: 2.500000, x: 588.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1399
+tipo: circulo, id: 1399, raio: 2.500000, x: 866.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 2092
+tipo: circulo, id: 2092, raio: 2.500000, x: 1242.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 491
+tipo: circulo, id: 491, raio: 2.500000, x: 1196.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 200
+tipo: circulo, id: 200, raio: 2.500000, x: 554.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 2054
+tipo: circulo, id: 2054, raio: 2.500000, x: 1040.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 30
+tipo: circulo, id: 30, raio: 2.500000, x: 98.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1081
+tipo: circulo, id: 1081, raio: 2.500000, x: 28.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1194
+tipo: circulo, id: 1194, raio: 2.500000, x: 334.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 52
+tipo: circulo, id: 52, raio: 2.500000, x: 120.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 2256
+tipo: circulo, id: 2256, raio: 2.500000, x: 1536.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1095
+tipo: circulo, id: 1095, raio: 2.500000, x: 34.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 1704
+tipo: circulo, id: 1704, raio: 2.500000, x: 242.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1207
+tipo: circulo, id: 1207, raio: 2.500000, x: 374.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 314
+tipo: circulo, id: 314, raio: 2.500000, x: 780.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 503
+tipo: circulo, id: 503, raio: 2.500000, x: 1230.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1729
+tipo: circulo, id: 1729, raio: 2.500000, x: 288.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 821
+tipo: circulo, id: 821, raio: 2.500000, x: 640.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 1470
+tipo: circulo, id: 1470, raio: 2.500000, x: 1050.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 2005
+tipo: circulo, id: 2005, raio: 2.500000, x: 866.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 278
+tipo: circulo, id: 278, raio: 2.500000, x: 686.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 2179
+tipo: circulo, id: 2179, raio: 2.500000, x: 1362.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 702
+tipo: circulo, id: 702, raio: 2.500000, x: 380.000000, y: 75.000000, corb: black, corp: dimgray
+
+delf 288
+tipo: circulo, id: 288, raio: 2.500000, x: 692.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 711
+tipo: circulo, id: 711, raio: 2.500000, x: 380.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 14
+tipo: circulo, id: 14, raio: 2.500000, x: 46.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 668
+tipo: circulo, id: 668, raio: 2.500000, x: 260.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 111
+tipo: circulo, id: 111, raio: 2.500000, x: 218.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 1133
+tipo: circulo, id: 1133, raio: 2.500000, x: 166.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 2282
+tipo: circulo, id: 2282, raio: 2.500000, x: 1594.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1831
+tipo: circulo, id: 1831, raio: 2.500000, x: 554.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1784
+tipo: circulo, id: 1784, raio: 2.500000, x: 456.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 985
+tipo: circulo, id: 985, raio: 2.500000, x: 946.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 2074
+tipo: circulo, id: 2074, raio: 2.500000, x: 1144.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 2025
+tipo: circulo, id: 2025, raio: 2.500000, x: 958.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 258
+tipo: circulo, id: 258, raio: 2.500000, x: 634.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 926
+tipo: circulo, id: 926, raio: 2.500000, x: 866.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 804
+tipo: circulo, id: 804, raio: 2.500000, x: 646.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1823
+tipo: circulo, id: 1823, raio: 2.500000, x: 530.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 129
+tipo: circulo, id: 129, raio: 2.500000, x: 364.000000, y: 16.250000, corb: black, corp: dimgray
+
+delf 2129
+tipo: circulo, id: 2129, raio: 2.500000, x: 1258.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 1542
+tipo: circulo, id: 1542, raio: 2.500000, x: 1196.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 2089
+tipo: circulo, id: 2089, raio: 2.500000, x: 1224.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1230
+tipo: circulo, id: 1230, raio: 2.500000, x: 426.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 529
+tipo: circulo, id: 529, raio: 2.500000, x: 1258.000000, y: 16.250000, corb: black, corp: dimgray
+
+delf 2027
+tipo: circulo, id: 2027, raio: 2.500000, x: 946.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 869
+tipo: circulo, id: 869, raio: 2.500000, x: 780.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 849
+tipo: circulo, id: 849, raio: 2.500000, x: 722.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1534
+tipo: circulo, id: 1534, raio: 2.500000, x: 1196.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 673
+tipo: circulo, id: 673, raio: 2.500000, x: 248.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1503
+tipo: circulo, id: 1503, raio: 2.500000, x: 1138.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 787
+tipo: circulo, id: 787, raio: 2.500000, x: 530.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 938
+tipo: circulo, id: 938, raio: 2.500000, x: 872.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1088
+tipo: circulo, id: 1088, raio: 2.500000, x: 34.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1805
+tipo: circulo, id: 1805, raio: 2.500000, x: 530.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1864
+tipo: circulo, id: 1864, raio: 2.500000, x: 658.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 889
+tipo: circulo, id: 889, raio: 2.500000, x: 826.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 2088
+tipo: circulo, id: 2088, raio: 2.500000, x: 1218.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 2130
+tipo: circulo, id: 2130, raio: 2.500000, x: 1288.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 1283
+tipo: circulo, id: 1283, raio: 2.500000, x: 530.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 2072
+tipo: circulo, id: 2072, raio: 2.500000, x: 1144.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 702
+tipo: circulo, id: 702, raio: 2.500000, x: 380.000000, y: 75.000000, corb: black, corp: dimgray
+
+delf 25
+tipo: circulo, id: 25, raio: 2.500000, x: 68.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 1951
+tipo: circulo, id: 1951, raio: 2.500000, x: 768.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1332
+tipo: circulo, id: 1332, raio: 2.500000, x: 728.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 718
+tipo: circulo, id: 718, raio: 2.500000, x: 398.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1994
+tipo: circulo, id: 1994, raio: 2.500000, x: 860.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1689
+tipo: circulo, id: 1689, raio: 2.500000, x: 190.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 1351
+tipo: circulo, id: 1351, raio: 2.500000, x: 814.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 172
+tipo: circulo, id: 172, raio: 2.500000, x: 490.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 647
+tipo: circulo, id: 647, raio: 2.500000, x: 184.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 120
+tipo: circulo, id: 120, raio: 2.500000, x: 254.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1791
+tipo: circulo, id: 1791, raio: 2.500000, x: 444.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 2146
+tipo: circulo, id: 2146, raio: 2.500000, x: 1352.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 2013
+tipo: circulo, id: 2013, raio: 2.500000, x: 976.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 694
+tipo: circulo, id: 694, raio: 2.500000, x: 352.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 392
+tipo: circulo, id: 392, raio: 2.500000, x: 988.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 498
+tipo: circulo, id: 498, raio: 2.500000, x: 1190.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 2140
+tipo: circulo, id: 2140, raio: 2.500000, x: 1340.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 2281
+tipo: circulo, id: 2281, raio: 2.500000, x: 1588.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1659
+tipo: circulo, id: 1659, raio: 2.500000, x: 138.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 2230
+tipo: circulo, id: 2230, raio: 2.500000, x: 1484.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 620
+tipo: circulo, id: 620, raio: 2.500000, x: 156.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 420
+tipo: circulo, id: 420, raio: 2.500000, x: 1056.000000, y: 16.250000, corb: black, corp: dimgray
+
+delf 1639
+tipo: circulo, id: 1639, raio: 2.500000, x: 156.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 950
+tipo: circulo, id: 950, raio: 2.500000, x: 900.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 62
+tipo: circulo, id: 62, raio: 2.500000, x: 120.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 2228
+tipo: circulo, id: 2228, raio: 2.500000, x: 1508.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1919
+tipo: circulo, id: 1919, raio: 2.500000, x: 692.000000, y: 205.000000, corb: black, corp: dimgray
+
+delf 2124
+tipo: circulo, id: 2124, raio: 2.500000, x: 1282.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 654
+tipo: circulo, id: 654, raio: 2.500000, x: 242.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1235
+tipo: circulo, id: 1235, raio: 2.500000, x: 432.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 571
+tipo: circulo, id: 571, raio: 2.500000, x: 10.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 1511
+tipo: circulo, id: 1511, raio: 2.500000, x: 1108.000000, y: 146.250000, corb: black, corp: dimgray
+
+delf 582
+tipo: circulo, id: 582, raio: 2.500000, x: 104.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 10
+tipo: circulo, id: 10, raio: 2.500000, x: 22.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 1378
+tipo: circulo, id: 1378, raio: 2.500000, x: 854.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 258
+tipo: circulo, id: 258, raio: 2.500000, x: 634.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 990
+tipo: circulo, id: 990, raio: 2.500000, x: 958.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 210
+tipo: circulo, id: 210, raio: 2.500000, x: 548.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 25
+tipo: circulo, id: 25, raio: 2.500000, x: 68.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 55
+tipo: circulo, id: 55, raio: 2.500000, x: 114.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 1455
+tipo: circulo, id: 1455, raio: 2.500000, x: 1034.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 1529
+tipo: circulo, id: 1529, raio: 2.500000, x: 1184.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 88
+tipo: circulo, id: 88, raio: 2.500000, x: 184.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 784
+tipo: circulo, id: 784, raio: 2.500000, x: 536.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1798
+tipo: circulo, id: 1798, raio: 2.500000, x: 426.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 2143
+tipo: circulo, id: 2143, raio: 2.500000, x: 1310.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 1737
+tipo: circulo, id: 1737, raio: 2.500000, x: 270.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 2067
+tipo: circulo, id: 2067, raio: 2.500000, x: 1132.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1140
+tipo: circulo, id: 1140, raio: 2.500000, x: 184.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 2200
+tipo: circulo, id: 2200, raio: 2.500000, x: 1456.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 533
+tipo: circulo, id: 533, raio: 2.500000, x: 1258.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 168
+tipo: circulo, id: 168, raio: 2.500000, x: 444.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 733
+tipo: circulo, id: 733, raio: 2.500000, x: 468.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 1358
+tipo: circulo, id: 1358, raio: 2.500000, x: 790.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 137
+tipo: circulo, id: 137, raio: 2.500000, x: 364.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 368
+tipo: circulo, id: 368, raio: 2.500000, x: 894.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 683
+tipo: circulo, id: 683, raio: 2.500000, x: 322.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 2260
+tipo: circulo, id: 2260, raio: 2.500000, x: 1518.000000, y: 173.750000, corb: black, corp: dimgray
+
+delf 1446
+tipo: circulo, id: 1446, raio: 2.500000, x: 1016.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 1315
+tipo: circulo, id: 1315, raio: 2.500000, x: 652.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 1743
+tipo: circulo, id: 1743, raio: 2.500000, x: 282.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1266
+tipo: circulo, id: 1266, raio: 2.500000, x: 502.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 908
+tipo: circulo, id: 908, raio: 2.500000, x: 826.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1314
+tipo: circulo, id: 1314, raio: 2.500000, x: 676.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1549
+tipo: circulo, id: 1549, raio: 2.500000, x: 1190.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 825
+tipo: circulo, id: 825, raio: 2.500000, x: 634.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 1035
+tipo: circulo, id: 1035, raio: 2.500000, x: 1050.000000, y: 68.750000, corb: black, corp: dimgray
+
+delf 1157
+tipo: circulo, id: 1157, raio: 2.500000, x: 254.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 506
+tipo: circulo, id: 506, raio: 2.500000, x: 1248.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 2197
+tipo: circulo, id: 2197, raio: 2.500000, x: 1450.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 1195
+tipo: circulo, id: 1195, raio: 2.500000, x: 340.000000, y: 140.000000, corb: black, corp: dimgray
+
+delf 1403
+tipo: circulo, id: 1403, raio: 2.500000, x: 952.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 162
+tipo: circulo, id: 162, raio: 2.500000, x: 444.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 2178
+tipo: circulo, id: 2178, raio: 2.500000, x: 1404.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 2201
+tipo: circulo, id: 2201, raio: 2.500000, x: 1414.000000, y: 180.000000, corb: black, corp: dimgray
+
+delf 1666
+tipo: circulo, id: 1666, raio: 2.500000, x: 156.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 1676
+tipo: circulo, id: 1676, raio: 2.500000, x: 166.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 705
+tipo: circulo, id: 705, raio: 2.500000, x: 374.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 264
+tipo: circulo, id: 264, raio: 2.500000, x: 634.000000, y: 41.250000, corb: black, corp: dimgray
+
+delf 99
+tipo: circulo, id: 99, raio: 2.500000, x: 260.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 823
+tipo: circulo, id: 823, raio: 2.500000, x: 640.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 660
+tipo: circulo, id: 660, raio: 2.500000, x: 260.000000, y: 75.000000, corb: black, corp: dimgray
+
+delf 1785
+tipo: circulo, id: 1785, raio: 2.500000, x: 462.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 457
+tipo: circulo, id: 457, raio: 2.500000, x: 1126.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 1073
+tipo: circulo, id: 1073, raio: 2.500000, x: 1114.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 993
+tipo: circulo, id: 993, raio: 2.500000, x: 976.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 878
+tipo: circulo, id: 878, raio: 2.500000, x: 738.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 1977
+tipo: circulo, id: 1977, raio: 2.500000, x: 802.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 643
+tipo: circulo, id: 643, raio: 2.500000, x: 208.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 120
+tipo: circulo, id: 120, raio: 2.500000, x: 254.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 2191
+tipo: circulo, id: 2191, raio: 2.500000, x: 1414.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 350
+tipo: circulo, id: 350, raio: 2.500000, x: 906.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 2120
+tipo: circulo, id: 2120, raio: 2.500000, x: 1258.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1577
+tipo: circulo, id: 1577, raio: 2.500000, x: 1236.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 1317
+tipo: circulo, id: 1317, raio: 2.500000, x: 652.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 2115
+tipo: circulo, id: 2115, raio: 2.500000, x: 1294.000000, y: 167.500000, corb: black, corp: dimgray
+
+delf 733
+tipo: circulo, id: 733, raio: 2.500000, x: 468.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 243
+tipo: circulo, id: 243, raio: 2.500000, x: 588.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1561
+tipo: circulo, id: 1561, raio: 2.500000, x: 1206.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 119
+tipo: circulo, id: 119, raio: 2.500000, x: 248.000000, y: 53.750000, corb: black, corp: dimgray
+
+delf 1350
+tipo: circulo, id: 1350, raio: 2.500000, x: 808.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 823
+tipo: circulo, id: 823, raio: 2.500000, x: 640.000000, y: 100.000000, corb: black, corp: dimgray
+
+delf 1311
+tipo: circulo, id: 1311, raio: 2.500000, x: 634.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 671
+tipo: circulo, id: 671, raio: 2.500000, x: 236.000000, y: 106.250000, corb: black, corp: dimgray
+
+delf 662
+tipo: circulo, id: 662, raio: 2.500000, x: 260.000000, y: 81.250000, corb: black, corp: dimgray
+
+delf 1057
+tipo: circulo, id: 1057, raio: 2.500000, x: 1126.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 15
+tipo: circulo, id: 15, raio: 2.500000, x: 52.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 558
+tipo: circulo, id: 558, raio: 2.500000, x: 52.000000, y: 75.000000, corb: black, corp: dimgray
+
+delf 2163
+tipo: circulo, id: 2163, raio: 2.500000, x: 1334.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 950
+tipo: circulo, id: 950, raio: 2.500000, x: 900.000000, y: 87.500000, corb: black, corp: dimgray
+
+delf 967
+tipo: circulo, id: 967, raio: 2.500000, x: 952.000000, y: 62.500000, corb: black, corp: dimgray
+
+delf 1397
+tipo: circulo, id: 1397, raio: 2.500000, x: 854.000000, y: 158.750000, corb: black, corp: dimgray
+
+delf 34
+tipo: circulo, id: 34, raio: 2.500000, x: 104.000000, y: 22.500000, corb: black, corp: dimgray
+
+delf 76
+tipo: circulo, id: 76, raio: 2.500000, x: 166.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 545
+tipo: circulo, id: 545, raio: 2.500000, x: 1258.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 505
+tipo: circulo, id: 505, raio: 2.500000, x: 1242.000000, y: 10.000000, corb: black, corp: dimgray
+
+delf 163
+tipo: circulo, id: 163, raio: 2.500000, x: 450.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 1130
+tipo: circulo, id: 1130, raio: 2.500000, x: 166.000000, y: 121.250000, corb: black, corp: dimgray
+
+delf 1454
+tipo: circulo, id: 1454, raio: 2.500000, x: 998.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 1099
+tipo: circulo, id: 1099, raio: 2.500000, x: 34.000000, y: 152.500000, corb: black, corp: dimgray
+
+delf 1122
+tipo: circulo, id: 1122, raio: 2.500000, x: 166.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 1661
+tipo: circulo, id: 1661, raio: 2.500000, x: 156.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 1551
+tipo: circulo, id: 1551, raio: 2.500000, x: 1212.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 193
+tipo: circulo, id: 193, raio: 2.500000, x: 514.000000, y: 47.500000, corb: black, corp: dimgray
+
+delf 1619
+tipo: circulo, id: 1619, raio: 2.500000, x: 74.000000, y: 186.250000, corb: black, corp: dimgray
+
+delf 1388
+tipo: circulo, id: 1388, raio: 2.500000, x: 860.000000, y: 133.750000, corb: black, corp: dimgray
+
+delf 161
+tipo: circulo, id: 161, raio: 2.500000, x: 450.000000, y: 28.750000, corb: black, corp: dimgray
+
+delf 1924
+tipo: circulo, id: 1924, raio: 2.500000, x: 692.000000, y: 211.250000, corb: black, corp: dimgray
+
+delf 1493
+tipo: circulo, id: 1493, raio: 2.500000, x: 1102.000000, y: 127.500000, corb: black, corp: dimgray
+
+delf 1941
+tipo: circulo, id: 1941, raio: 2.500000, x: 780.000000, y: 192.500000, corb: black, corp: dimgray
+
+delf 666
+tipo: circulo, id: 666, raio: 2.500000, x: 260.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 1200
+tipo: circulo, id: 1200, raio: 2.500000, x: 386.000000, y: 115.000000, corb: black, corp: dimgray
+
+delf 666
+tipo: circulo, id: 666, raio: 2.500000, x: 260.000000, y: 93.750000, corb: black, corp: dimgray
+
+delf 2294
+tipo: circulo, id: 2294, raio: 2.500000, x: 1612.000000, y: 198.750000, corb: black, corp: dimgray
+
+delf 134
+tipo: circulo, id: 134, raio: 2.500000, x: 322.000000, y: 35.000000, corb: black, corp: dimgray
+
+delf 189
+tipo: circulo, id: 189, raio: 2.500000, x: 502.000000, y: 35.000000, corb: black, corp: dimgray
+

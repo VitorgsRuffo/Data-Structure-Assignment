@@ -1,0 +1,3 @@
+delf 4
+tipo: texto, id: 4, x: 20.000000, y: 39.000000, corb: blue, corp: magenta, texto: Dentre os grandes es o primeiro
+

@@ -1,0 +1,9 @@
+pnt* 11 13 red red
+i: 11, corb original: orange, corp original: lightyellow
+
+pnt* 11 13 red red
+i: 12, corb original: orange, corp original: lightyellow
+
+pnt* 11 13 red red
+i: 13, corb original: orange, corp original: lightyellow
+

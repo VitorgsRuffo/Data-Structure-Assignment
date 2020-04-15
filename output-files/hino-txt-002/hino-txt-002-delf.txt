@@ -1,0 +1,9 @@
+delf 15
+tipo: texto, id: 15, x: 285.000000, y: 239.000000, corb: orange, corp: lightyellow, texto: Que ostentas dignamente
+
+delf 10
+tipo: texto, id: 10, x: 185.000000, y: 159.000000, corb: orange, corp: lightyellow, texto: Sao teus guias brasileiros
+
+delf 11
+tipo: texto, id: 11, x: 205.000000, y: 175.000000, corb: orange, corp: lightyellow, texto: Que te amam eternamente
+

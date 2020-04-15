@@ -1,0 +1,6 @@
+pnt* 10 11 red red
+i: 10, corb original: blue, corp original: magenta
+
+pnt* 10 11 red red
+i: 11, corb original: blue, corp original: magenta
+

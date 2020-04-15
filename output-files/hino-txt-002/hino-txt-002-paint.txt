@@ -1,0 +1,12 @@
+pnt 2 red red
+corb original: orange, corp original: lightyellow
+
+pnt 15 red red
+corb original: orange, corp original: lightyellow
+
+pnt 4 red red
+corb original: orange, corp original: lightyellow
+
+pnt 10 red red
+corb original: orange, corp original: lightyellow
+

@@ -1,0 +1,213 @@
+delf* 1085 1190
+tipo: circulo, id: 1085, raio: 2.500000, x: 52.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1086, raio: 2.500000, x: 10.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1087, raio: 2.500000, x: 28.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1088, raio: 2.500000, x: 34.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1089, raio: 2.500000, x: 52.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1090, raio: 2.500000, x: 28.000000, y: 127.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1091, raio: 2.500000, x: 34.000000, y: 127.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1092, raio: 2.500000, x: 28.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1093, raio: 2.500000, x: 34.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1094, raio: 2.500000, x: 28.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1095, raio: 2.500000, x: 34.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1096, raio: 2.500000, x: 28.000000, y: 146.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1097, raio: 2.500000, x: 34.000000, y: 146.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1098, raio: 2.500000, x: 28.000000, y: 152.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1099, raio: 2.500000, x: 34.000000, y: 152.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1100, raio: 2.500000, x: 28.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1101, raio: 2.500000, x: 34.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1102, raio: 2.500000, x: 62.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1103, raio: 2.500000, x: 104.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1104, raio: 2.500000, x: 62.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1105, raio: 2.500000, x: 104.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1106, raio: 2.500000, x: 62.000000, y: 127.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1107, raio: 2.500000, x: 104.000000, y: 127.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1108, raio: 2.500000, x: 62.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1109, raio: 2.500000, x: 104.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1110, raio: 2.500000, x: 62.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1111, raio: 2.500000, x: 104.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1112, raio: 2.500000, x: 62.000000, y: 146.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1113, raio: 2.500000, x: 104.000000, y: 146.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1114, raio: 2.500000, x: 62.000000, y: 152.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1115, raio: 2.500000, x: 104.000000, y: 152.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1116, raio: 2.500000, x: 68.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1117, raio: 2.500000, x: 74.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1118, raio: 2.500000, x: 80.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1119, raio: 2.500000, x: 86.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1120, raio: 2.500000, x: 92.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1121, raio: 2.500000, x: 98.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1122, raio: 2.500000, x: 166.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1123, raio: 2.500000, x: 172.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1124, raio: 2.500000, x: 178.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1125, raio: 2.500000, x: 184.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1126, raio: 2.500000, x: 190.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1127, raio: 2.500000, x: 196.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1128, raio: 2.500000, x: 202.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1129, raio: 2.500000, x: 208.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1130, raio: 2.500000, x: 166.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1131, raio: 2.500000, x: 208.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1132, raio: 2.500000, x: 166.000000, y: 127.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1133, raio: 2.500000, x: 166.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1134, raio: 2.500000, x: 172.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1135, raio: 2.500000, x: 178.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1136, raio: 2.500000, x: 184.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1137, raio: 2.500000, x: 166.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1138, raio: 2.500000, x: 172.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1139, raio: 2.500000, x: 178.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1140, raio: 2.500000, x: 184.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1141, raio: 2.500000, x: 166.000000, y: 146.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1142, raio: 2.500000, x: 166.000000, y: 152.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1143, raio: 2.500000, x: 208.000000, y: 152.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1144, raio: 2.500000, x: 166.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1145, raio: 2.500000, x: 172.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1146, raio: 2.500000, x: 178.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1147, raio: 2.500000, x: 184.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1148, raio: 2.500000, x: 190.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1149, raio: 2.500000, x: 196.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1150, raio: 2.500000, x: 202.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1151, raio: 2.500000, x: 208.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1152, raio: 2.500000, x: 224.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1153, raio: 2.500000, x: 230.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1154, raio: 2.500000, x: 236.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1155, raio: 2.500000, x: 242.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1156, raio: 2.500000, x: 248.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1157, raio: 2.500000, x: 254.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1158, raio: 2.500000, x: 260.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1159, raio: 2.500000, x: 218.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1160, raio: 2.500000, x: 218.000000, y: 127.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1161, raio: 2.500000, x: 224.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1162, raio: 2.500000, x: 230.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1163, raio: 2.500000, x: 236.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1164, raio: 2.500000, x: 242.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1165, raio: 2.500000, x: 248.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1166, raio: 2.500000, x: 254.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1167, raio: 2.500000, x: 260.000000, y: 140.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1168, raio: 2.500000, x: 260.000000, y: 146.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1169, raio: 2.500000, x: 260.000000, y: 152.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1170, raio: 2.500000, x: 218.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1171, raio: 2.500000, x: 224.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1172, raio: 2.500000, x: 230.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1173, raio: 2.500000, x: 236.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1174, raio: 2.500000, x: 242.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1175, raio: 2.500000, x: 248.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1176, raio: 2.500000, x: 254.000000, y: 158.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1177, raio: 2.500000, x: 322.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1178, raio: 2.500000, x: 328.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1179, raio: 2.500000, x: 334.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1180, raio: 2.500000, x: 340.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1181, raio: 2.500000, x: 346.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1182, raio: 2.500000, x: 352.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1183, raio: 2.500000, x: 358.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1184, raio: 2.500000, x: 364.000000, y: 115.000000, corb: black, corp: tomato
+
+tipo: circulo, id: 1185, raio: 2.500000, x: 322.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1186, raio: 2.500000, x: 364.000000, y: 121.250000, corb: black, corp: tomato
+
+tipo: circulo, id: 1187, raio: 2.500000, x: 322.000000, y: 127.500000, corb: black, corp: tomato
+
+tipo: circulo, id: 1188, raio: 2.500000, x: 322.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1189, raio: 2.500000, x: 328.000000, y: 133.750000, corb: black, corp: tomato
+
+tipo: circulo, id: 1190, raio: 2.500000, x: 334.000000, y: 133.750000, corb: black, corp: tomato
+

@@ -1,0 +1,1725 @@
+delf 753
+tipo: circulo, id: 753, raio: 2.500000, x: 484.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 1107
+tipo: circulo, id: 1107, raio: 2.500000, x: 104.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 1319
+tipo: circulo, id: 1319, raio: 2.500000, x: 652.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 689
+tipo: circulo, id: 689, raio: 2.500000, x: 322.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 295
+tipo: circulo, id: 295, raio: 2.500000, x: 710.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1897
+tipo: circulo, id: 1897, raio: 2.500000, x: 692.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 526
+tipo: circulo, id: 526, raio: 2.500000, x: 1282.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1028
+tipo: circulo, id: 1028, raio: 2.500000, x: 1050.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 150
+tipo: circulo, id: 150, raio: 2.500000, x: 450.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1544
+tipo: circulo, id: 1544, raio: 2.500000, x: 1160.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 334
+tipo: circulo, id: 334, raio: 2.500000, x: 790.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 109
+tipo: circulo, id: 109, raio: 2.500000, x: 230.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 1709
+tipo: circulo, id: 1709, raio: 2.500000, x: 218.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 1178
+tipo: circulo, id: 1178, raio: 2.500000, x: 328.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 84
+tipo: circulo, id: 84, raio: 2.500000, x: 178.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 1803
+tipo: circulo, id: 1803, raio: 2.500000, x: 456.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1949
+tipo: circulo, id: 1949, raio: 2.500000, x: 756.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 176
+tipo: circulo, id: 176, raio: 2.500000, x: 514.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 481
+tipo: circulo, id: 481, raio: 2.500000, x: 1154.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 82
+tipo: circulo, id: 82, raio: 2.500000, x: 172.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 1190
+tipo: circulo, id: 1190, raio: 2.500000, x: 334.000000, y: 133.750000, corb: black, corp: tomato
+
+delf 1492
+tipo: circulo, id: 1492, raio: 2.500000, x: 1144.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 1751
+tipo: circulo, id: 1751, raio: 2.500000, x: 288.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1913
+tipo: circulo, id: 1913, raio: 2.500000, x: 686.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 1578
+tipo: circulo, id: 1578, raio: 2.500000, x: 1242.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1781
+tipo: circulo, id: 1781, raio: 2.500000, x: 438.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 2093
+tipo: circulo, id: 2093, raio: 2.500000, x: 1206.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 1045
+tipo: circulo, id: 1045, raio: 2.500000, x: 1086.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 495
+tipo: circulo, id: 495, raio: 2.500000, x: 1172.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 70
+tipo: circulo, id: 70, raio: 2.500000, x: 126.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 962
+tipo: circulo, id: 962, raio: 2.500000, x: 918.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 235
+tipo: circulo, id: 235, raio: 2.500000, x: 624.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 2087
+tipo: circulo, id: 2087, raio: 2.500000, x: 1212.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 245
+tipo: circulo, id: 245, raio: 2.500000, x: 600.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1600
+tipo: circulo, id: 1600, raio: 2.500000, x: 16.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 199
+tipo: circulo, id: 199, raio: 2.500000, x: 548.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 2036
+tipo: circulo, id: 2036, raio: 2.500000, x: 982.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 158
+tipo: circulo, id: 158, raio: 2.500000, x: 444.000000, y: 22.500000, corb: black, corp: tomato
+
+delf 949
+tipo: circulo, id: 949, raio: 2.500000, x: 894.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1983
+tipo: circulo, id: 1983, raio: 2.500000, x: 848.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 2024
+tipo: circulo, id: 2024, raio: 2.500000, x: 952.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 888
+tipo: circulo, id: 888, raio: 2.500000, x: 820.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 336
+tipo: circulo, id: 336, raio: 2.500000, x: 802.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 1200
+tipo: circulo, id: 1200, raio: 2.500000, x: 386.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1914
+tipo: circulo, id: 1914, raio: 2.500000, x: 692.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 1260
+tipo: circulo, id: 1260, raio: 2.500000, x: 520.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 538
+tipo: circulo, id: 538, raio: 2.500000, x: 1276.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 1082
+tipo: circulo, id: 1082, raio: 2.500000, x: 34.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1393
+tipo: circulo, id: 1393, raio: 2.500000, x: 884.000000, y: 146.250000, corb: black, corp: tomato
+
+delf 1091
+tipo: circulo, id: 1091, raio: 2.500000, x: 34.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 395
+tipo: circulo, id: 395, raio: 2.500000, x: 946.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1866
+tipo: circulo, id: 1866, raio: 2.500000, x: 670.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 66
+tipo: circulo, id: 66, raio: 2.500000, x: 150.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 1749
+tipo: circulo, id: 1749, raio: 2.500000, x: 276.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1638
+tipo: circulo, id: 1638, raio: 2.500000, x: 150.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1428
+tipo: circulo, id: 1428, raio: 2.500000, x: 970.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1163
+tipo: circulo, id: 1163, raio: 2.500000, x: 236.000000, y: 133.750000, corb: black, corp: tomato
+
+delf 1560
+tipo: circulo, id: 1560, raio: 2.500000, x: 1206.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 755
+tipo: circulo, id: 755, raio: 2.500000, x: 484.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1609
+tipo: circulo, id: 1609, raio: 2.500000, x: 80.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 2101
+tipo: circulo, id: 2101, raio: 2.500000, x: 1218.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 529
+tipo: circulo, id: 529, raio: 2.500000, x: 1258.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 45
+tipo: circulo, id: 45, raio: 2.500000, x: 62.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 1657
+tipo: circulo, id: 1657, raio: 2.500000, x: 114.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1789
+tipo: circulo, id: 1789, raio: 2.500000, x: 432.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1020
+tipo: circulo, id: 1020, raio: 2.500000, x: 998.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 981
+tipo: circulo, id: 981, raio: 2.500000, x: 946.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 894
+tipo: circulo, id: 894, raio: 2.500000, x: 802.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 1778
+tipo: circulo, id: 1778, raio: 2.500000, x: 404.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 535
+tipo: circulo, id: 535, raio: 2.500000, x: 1258.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 1090
+tipo: circulo, id: 1090, raio: 2.500000, x: 28.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 913
+tipo: circulo, id: 913, raio: 2.500000, x: 866.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 2121
+tipo: circulo, id: 2121, raio: 2.500000, x: 1264.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 653
+tipo: circulo, id: 653, raio: 2.500000, x: 236.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 2291
+tipo: circulo, id: 2291, raio: 2.500000, x: 1570.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 907
+tipo: circulo, id: 907, raio: 2.500000, x: 820.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1076
+tipo: circulo, id: 1076, raio: 2.500000, x: 1132.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 2179
+tipo: circulo, id: 2179, raio: 2.500000, x: 1362.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 185
+tipo: circulo, id: 185, raio: 2.500000, x: 502.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 944
+tipo: circulo, id: 944, raio: 2.500000, x: 900.000000, y: 68.750000, corb: black, corp: tomato
+
+delf 2100
+tipo: circulo, id: 2100, raio: 2.500000, x: 1212.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 751
+tipo: circulo, id: 751, raio: 2.500000, x: 484.000000, y: 75.000000, corb: black, corp: tomato
+
+delf 1256
+tipo: circulo, id: 1256, raio: 2.500000, x: 520.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1506
+tipo: circulo, id: 1506, raio: 2.500000, x: 1108.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 438
+tipo: circulo, id: 438, raio: 2.500000, x: 1074.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 742
+tipo: circulo, id: 742, raio: 2.500000, x: 478.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 1940
+tipo: circulo, id: 1940, raio: 2.500000, x: 744.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 2270
+tipo: circulo, id: 2270, raio: 2.500000, x: 1554.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1878
+tipo: circulo, id: 1878, raio: 2.500000, x: 664.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1554
+tipo: circulo, id: 1554, raio: 2.500000, x: 1230.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1976
+tipo: circulo, id: 1976, raio: 2.500000, x: 796.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 733
+tipo: circulo, id: 733, raio: 2.500000, x: 468.000000, y: 93.750000, corb: black, corp: tomato
+
+delf 465
+tipo: circulo, id: 465, raio: 2.500000, x: 1144.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 1864
+tipo: circulo, id: 1864, raio: 2.500000, x: 658.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 546
+tipo: circulo, id: 546, raio: 2.500000, x: 1300.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 1943
+tipo: circulo, id: 1943, raio: 2.500000, x: 780.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 591
+tipo: circulo, id: 591, raio: 2.500000, x: 62.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1123
+tipo: circulo, id: 1123, raio: 2.500000, x: 172.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 967
+tipo: circulo, id: 967, raio: 2.500000, x: 952.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 1065
+tipo: circulo, id: 1065, raio: 2.500000, x: 1144.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 956
+tipo: circulo, id: 956, raio: 2.500000, x: 930.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 725
+tipo: circulo, id: 725, raio: 2.500000, x: 468.000000, y: 68.750000, corb: black, corp: tomato
+
+delf 136
+tipo: circulo, id: 136, raio: 2.500000, x: 322.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 1536
+tipo: circulo, id: 1536, raio: 2.500000, x: 1196.000000, y: 133.750000, corb: black, corp: tomato
+
+delf 654
+tipo: circulo, id: 654, raio: 2.500000, x: 242.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 2289
+tipo: circulo, id: 2289, raio: 2.500000, x: 1570.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1013
+tipo: circulo, id: 1013, raio: 2.500000, x: 1022.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 767
+tipo: circulo, id: 767, raio: 2.500000, x: 490.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 762
+tipo: circulo, id: 762, raio: 2.500000, x: 520.000000, y: 93.750000, corb: black, corp: tomato
+
+delf 929
+tipo: circulo, id: 929, raio: 2.500000, x: 842.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 1603
+tipo: circulo, id: 1603, raio: 2.500000, x: 34.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1917
+tipo: circulo, id: 1917, raio: 2.500000, x: 728.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 789
+tipo: circulo, id: 789, raio: 2.500000, x: 542.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1990
+tipo: circulo, id: 1990, raio: 2.500000, x: 842.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 2098
+tipo: circulo, id: 2098, raio: 2.500000, x: 1248.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1176
+tipo: circulo, id: 1176, raio: 2.500000, x: 254.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 588
+tipo: circulo, id: 588, raio: 2.500000, x: 80.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 13
+tipo: circulo, id: 13, raio: 2.500000, x: 40.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 2297
+tipo: circulo, id: 2297, raio: 2.500000, x: 1576.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1828
+tipo: circulo, id: 1828, raio: 2.500000, x: 536.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 881
+tipo: circulo, id: 881, raio: 2.500000, x: 780.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 1312
+tipo: circulo, id: 1312, raio: 2.500000, x: 652.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 792
+tipo: circulo, id: 792, raio: 2.500000, x: 530.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 387
+tipo: circulo, id: 387, raio: 2.500000, x: 970.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 1462
+tipo: circulo, id: 1462, raio: 2.500000, x: 1080.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1072
+tipo: circulo, id: 1072, raio: 2.500000, x: 1108.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 794
+tipo: circulo, id: 794, raio: 2.500000, x: 530.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 2256
+tipo: circulo, id: 2256, raio: 2.500000, x: 1536.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 467
+tipo: circulo, id: 467, raio: 2.500000, x: 1108.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 256
+tipo: circulo, id: 256, raio: 2.500000, x: 634.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 1053
+tipo: circulo, id: 1053, raio: 2.500000, x: 1092.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1112
+tipo: circulo, id: 1112, raio: 2.500000, x: 62.000000, y: 146.250000, corb: black, corp: tomato
+
+delf 1480
+tipo: circulo, id: 1480, raio: 2.500000, x: 1050.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 1137
+tipo: circulo, id: 1137, raio: 2.500000, x: 166.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 1643
+tipo: circulo, id: 1643, raio: 2.500000, x: 150.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 432
+tipo: circulo, id: 432, raio: 2.500000, x: 1086.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 1601
+tipo: circulo, id: 1601, raio: 2.500000, x: 22.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 769
+tipo: circulo, id: 769, raio: 2.500000, x: 502.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1272
+tipo: circulo, id: 1272, raio: 2.500000, x: 502.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1419
+tipo: circulo, id: 1419, raio: 2.500000, x: 988.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 2167
+tipo: circulo, id: 2167, raio: 2.500000, x: 1362.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1288
+tipo: circulo, id: 1288, raio: 2.500000, x: 530.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 2148
+tipo: circulo, id: 2148, raio: 2.500000, x: 1334.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 2086
+tipo: circulo, id: 2086, raio: 2.500000, x: 1138.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1721
+tipo: circulo, id: 1721, raio: 2.500000, x: 248.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 1905
+tipo: circulo, id: 1905, raio: 2.500000, x: 710.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 129
+tipo: circulo, id: 129, raio: 2.500000, x: 364.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 2189
+tipo: circulo, id: 2189, raio: 2.500000, x: 1362.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1120
+tipo: circulo, id: 1120, raio: 2.500000, x: 92.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 849
+tipo: circulo, id: 849, raio: 2.500000, x: 722.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 20
+tipo: circulo, id: 20, raio: 2.500000, x: 22.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1189
+tipo: circulo, id: 1189, raio: 2.500000, x: 328.000000, y: 133.750000, corb: black, corp: tomato
+
+delf 368
+tipo: circulo, id: 368, raio: 2.500000, x: 894.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 465
+tipo: circulo, id: 465, raio: 2.500000, x: 1144.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 926
+tipo: circulo, id: 926, raio: 2.500000, x: 866.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1889
+tipo: circulo, id: 1889, raio: 2.500000, x: 722.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 2015
+tipo: circulo, id: 2015, raio: 2.500000, x: 988.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 601
+tipo: circulo, id: 601, raio: 2.500000, x: 132.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 2063
+tipo: circulo, id: 2063, raio: 2.500000, x: 1108.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1582
+tipo: circulo, id: 1582, raio: 2.500000, x: 22.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 2124
+tipo: circulo, id: 2124, raio: 2.500000, x: 1282.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1470
+tipo: circulo, id: 1470, raio: 2.500000, x: 1050.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 45
+tipo: circulo, id: 45, raio: 2.500000, x: 62.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 2132
+tipo: circulo, id: 2132, raio: 2.500000, x: 1294.000000, y: 205.000000, corb: black, corp: tomato
+
+delf 384
+tipo: circulo, id: 384, raio: 2.500000, x: 952.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 1976
+tipo: circulo, id: 1976, raio: 2.500000, x: 796.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1571
+tipo: circulo, id: 1571, raio: 2.500000, x: 1248.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 171
+tipo: circulo, id: 171, raio: 2.500000, x: 484.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 481
+tipo: circulo, id: 481, raio: 2.500000, x: 1154.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 2144
+tipo: circulo, id: 2144, raio: 2.500000, x: 1328.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 463
+tipo: circulo, id: 463, raio: 2.500000, x: 1120.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 1566
+tipo: circulo, id: 1566, raio: 2.500000, x: 1212.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 378
+tipo: circulo, id: 378, raio: 2.500000, x: 988.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 1257
+tipo: circulo, id: 1257, raio: 2.500000, x: 478.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 1475
+tipo: circulo, id: 1475, raio: 2.500000, x: 1080.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 2123
+tipo: circulo, id: 2123, raio: 2.500000, x: 1276.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 409
+tipo: circulo, id: 409, raio: 2.500000, x: 998.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 21
+tipo: circulo, id: 21, raio: 2.500000, x: 28.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 938
+tipo: circulo, id: 938, raio: 2.500000, x: 872.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1898
+tipo: circulo, id: 1898, raio: 2.500000, x: 698.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 2196
+tipo: circulo, id: 2196, raio: 2.500000, x: 1444.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1472
+tipo: circulo, id: 1472, raio: 2.500000, x: 1062.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 435
+tipo: circulo, id: 435, raio: 2.500000, x: 1056.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 261
+tipo: circulo, id: 261, raio: 2.500000, x: 676.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 931
+tipo: circulo, id: 931, raio: 2.500000, x: 866.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 1233
+tipo: circulo, id: 1233, raio: 2.500000, x: 468.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 539
+tipo: circulo, id: 539, raio: 2.500000, x: 1282.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 2074
+tipo: circulo, id: 2074, raio: 2.500000, x: 1144.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1569
+tipo: circulo, id: 1569, raio: 2.500000, x: 1206.000000, y: 146.250000, corb: black, corp: tomato
+
+delf 2170
+tipo: circulo, id: 2170, raio: 2.500000, x: 1404.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 495
+tipo: circulo, id: 495, raio: 2.500000, x: 1172.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1958
+tipo: circulo, id: 1958, raio: 2.500000, x: 820.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 631
+tipo: circulo, id: 631, raio: 2.500000, x: 202.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 310
+tipo: circulo, id: 310, raio: 2.500000, x: 780.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 1800
+tipo: circulo, id: 1800, raio: 2.500000, x: 438.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 843
+tipo: circulo, id: 843, raio: 2.500000, x: 686.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 2161
+tipo: circulo, id: 2161, raio: 2.500000, x: 1322.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 2126
+tipo: circulo, id: 2126, raio: 2.500000, x: 1294.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1456
+tipo: circulo, id: 1456, raio: 2.500000, x: 998.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 243
+tipo: circulo, id: 243, raio: 2.500000, x: 588.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1339
+tipo: circulo, id: 1339, raio: 2.500000, x: 686.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 1433
+tipo: circulo, id: 1433, raio: 2.500000, x: 1004.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1078
+tipo: circulo, id: 1078, raio: 2.500000, x: 10.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1
+tipo: circulo, id: 1, raio: 2.500000, x: 22.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1908
+tipo: circulo, id: 1908, raio: 2.500000, x: 686.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 2176
+tipo: circulo, id: 2176, raio: 2.500000, x: 1374.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 151
+tipo: circulo, id: 151, raio: 2.500000, x: 456.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1037
+tipo: circulo, id: 1037, raio: 2.500000, x: 1050.000000, y: 75.000000, corb: black, corp: tomato
+
+delf 868
+tipo: circulo, id: 868, raio: 2.500000, x: 738.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 519
+tipo: circulo, id: 519, raio: 2.500000, x: 1224.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 10
+tipo: circulo, id: 10, raio: 2.500000, x: 22.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 879
+tipo: circulo, id: 879, raio: 2.500000, x: 780.000000, y: 93.750000, corb: black, corp: tomato
+
+delf 1633
+tipo: circulo, id: 1633, raio: 2.500000, x: 92.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1084
+tipo: circulo, id: 1084, raio: 2.500000, x: 46.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 938
+tipo: circulo, id: 938, raio: 2.500000, x: 872.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1858
+tipo: circulo, id: 1858, raio: 2.500000, x: 618.000000, y: 205.000000, corb: black, corp: tomato
+
+delf 759
+tipo: circulo, id: 759, raio: 2.500000, x: 508.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 2071
+tipo: circulo, id: 2071, raio: 2.500000, x: 1102.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 1363
+tipo: circulo, id: 1363, raio: 2.500000, x: 796.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 872
+tipo: circulo, id: 872, raio: 2.500000, x: 750.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1637
+tipo: circulo, id: 1637, raio: 2.500000, x: 120.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 161
+tipo: circulo, id: 161, raio: 2.500000, x: 450.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 1777
+tipo: circulo, id: 1777, raio: 2.500000, x: 398.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1491
+tipo: circulo, id: 1491, raio: 2.500000, x: 1138.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 1354
+tipo: circulo, id: 1354, raio: 2.500000, x: 832.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 699
+tipo: circulo, id: 699, raio: 2.500000, x: 374.000000, y: 68.750000, corb: black, corp: tomato
+
+delf 438
+tipo: circulo, id: 438, raio: 2.500000, x: 1074.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 22
+tipo: circulo, id: 22, raio: 2.500000, x: 34.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1489
+tipo: circulo, id: 1489, raio: 2.500000, x: 1108.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 141
+tipo: circulo, id: 141, raio: 2.500000, x: 334.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1783
+tipo: circulo, id: 1783, raio: 2.500000, x: 450.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1081
+tipo: circulo, id: 1081, raio: 2.500000, x: 28.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 292
+tipo: circulo, id: 292, raio: 2.500000, x: 692.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 250
+tipo: circulo, id: 250, raio: 2.500000, x: 640.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1170
+tipo: circulo, id: 1170, raio: 2.500000, x: 218.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 2262
+tipo: circulo, id: 2262, raio: 2.500000, x: 1518.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 555
+tipo: circulo, id: 555, raio: 2.500000, x: 10.000000, y: 68.750000, corb: black, corp: tomato
+
+delf 652
+tipo: circulo, id: 652, raio: 2.500000, x: 230.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 907
+tipo: circulo, id: 907, raio: 2.500000, x: 820.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 740
+tipo: circulo, id: 740, raio: 2.500000, x: 456.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 2208
+tipo: circulo, id: 2208, raio: 2.500000, x: 1426.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1334
+tipo: circulo, id: 1334, raio: 2.500000, x: 728.000000, y: 133.750000, corb: black, corp: tomato
+
+delf 1096
+tipo: circulo, id: 1096, raio: 2.500000, x: 28.000000, y: 146.250000, corb: black, corp: tomato
+
+delf 2151
+tipo: circulo, id: 2151, raio: 2.500000, x: 1328.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 390
+tipo: circulo, id: 390, raio: 2.500000, x: 988.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 2100
+tipo: circulo, id: 2100, raio: 2.500000, x: 1212.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 421
+tipo: circulo, id: 421, raio: 2.500000, x: 1050.000000, y: 22.500000, corb: black, corp: tomato
+
+delf 1904
+tipo: circulo, id: 1904, raio: 2.500000, x: 704.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 53
+tipo: circulo, id: 53, raio: 2.500000, x: 114.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 1691
+tipo: circulo, id: 1691, raio: 2.500000, x: 190.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 596
+tipo: circulo, id: 596, raio: 2.500000, x: 104.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 868
+tipo: circulo, id: 868, raio: 2.500000, x: 738.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 1647
+tipo: circulo, id: 1647, raio: 2.500000, x: 126.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 831
+tipo: circulo, id: 831, raio: 2.500000, x: 670.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1058
+tipo: circulo, id: 1058, raio: 2.500000, x: 1132.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 2129
+tipo: circulo, id: 2129, raio: 2.500000, x: 1258.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 689
+tipo: circulo, id: 689, raio: 2.500000, x: 322.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1938
+tipo: circulo, id: 1938, raio: 2.500000, x: 744.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 504
+tipo: circulo, id: 504, raio: 2.500000, x: 1236.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 2152
+tipo: circulo, id: 2152, raio: 2.500000, x: 1334.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1844
+tipo: circulo, id: 1844, raio: 2.500000, x: 582.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 2254
+tipo: circulo, id: 2254, raio: 2.500000, x: 1524.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 24
+tipo: circulo, id: 24, raio: 2.500000, x: 46.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 245
+tipo: circulo, id: 245, raio: 2.500000, x: 600.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1301
+tipo: circulo, id: 1301, raio: 2.500000, x: 566.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1339
+tipo: circulo, id: 1339, raio: 2.500000, x: 686.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 302
+tipo: circulo, id: 302, raio: 2.500000, x: 762.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1914
+tipo: circulo, id: 1914, raio: 2.500000, x: 692.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 1732
+tipo: circulo, id: 1732, raio: 2.500000, x: 306.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1201
+tipo: circulo, id: 1201, raio: 2.500000, x: 392.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 986
+tipo: circulo, id: 986, raio: 2.500000, x: 946.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 547
+tipo: circulo, id: 547, raio: 2.500000, x: 1258.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1550
+tipo: circulo, id: 1550, raio: 2.500000, x: 1206.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1979
+tipo: circulo, id: 1979, raio: 2.500000, x: 814.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1231
+tipo: circulo, id: 1231, raio: 2.500000, x: 468.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 1797
+tipo: circulo, id: 1797, raio: 2.500000, x: 468.000000, y: 205.000000, corb: black, corp: tomato
+
+delf 229
+tipo: circulo, id: 229, raio: 2.500000, x: 588.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 594
+tipo: circulo, id: 594, raio: 2.500000, x: 104.000000, y: 93.750000, corb: black, corp: tomato
+
+delf 1694
+tipo: circulo, id: 1694, raio: 2.500000, x: 184.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 1632
+tipo: circulo, id: 1632, raio: 2.500000, x: 86.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1450
+tipo: circulo, id: 1450, raio: 2.500000, x: 998.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 1608
+tipo: circulo, id: 1608, raio: 2.500000, x: 74.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1732
+tipo: circulo, id: 1732, raio: 2.500000, x: 306.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1424
+tipo: circulo, id: 1424, raio: 2.500000, x: 946.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 770
+tipo: circulo, id: 770, raio: 2.500000, x: 508.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1100
+tipo: circulo, id: 1100, raio: 2.500000, x: 28.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 2050
+tipo: circulo, id: 2050, raio: 2.500000, x: 1022.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1915
+tipo: circulo, id: 1915, raio: 2.500000, x: 716.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 2283
+tipo: circulo, id: 2283, raio: 2.500000, x: 1600.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1607
+tipo: circulo, id: 1607, raio: 2.500000, x: 68.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1340
+tipo: circulo, id: 1340, raio: 2.500000, x: 728.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 90
+tipo: circulo, id: 90, raio: 2.500000, x: 184.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1425
+tipo: circulo, id: 1425, raio: 2.500000, x: 952.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 940
+tipo: circulo, id: 940, raio: 2.500000, x: 884.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1455
+tipo: circulo, id: 1455, raio: 2.500000, x: 1034.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 1514
+tipo: circulo, id: 1514, raio: 2.500000, x: 1144.000000, y: 146.250000, corb: black, corp: tomato
+
+delf 1472
+tipo: circulo, id: 1472, raio: 2.500000, x: 1062.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 1398
+tipo: circulo, id: 1398, raio: 2.500000, x: 860.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1254
+tipo: circulo, id: 1254, raio: 2.500000, x: 508.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1235
+tipo: circulo, id: 1235, raio: 2.500000, x: 432.000000, y: 133.750000, corb: black, corp: tomato
+
+delf 2043
+tipo: circulo, id: 2043, raio: 2.500000, x: 1034.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 742
+tipo: circulo, id: 742, raio: 2.500000, x: 478.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 689
+tipo: circulo, id: 689, raio: 2.500000, x: 322.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1291
+tipo: circulo, id: 1291, raio: 2.500000, x: 548.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 383
+tipo: circulo, id: 383, raio: 2.500000, x: 946.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 2046
+tipo: circulo, id: 2046, raio: 2.500000, x: 998.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 1546
+tipo: circulo, id: 1546, raio: 2.500000, x: 1172.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 2229
+tipo: circulo, id: 2229, raio: 2.500000, x: 1466.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 158
+tipo: circulo, id: 158, raio: 2.500000, x: 444.000000, y: 22.500000, corb: black, corp: tomato
+
+delf 1708
+tipo: circulo, id: 1708, raio: 2.500000, x: 260.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 1945
+tipo: circulo, id: 1945, raio: 2.500000, x: 780.000000, y: 205.000000, corb: black, corp: tomato
+
+delf 329
+tipo: circulo, id: 329, raio: 2.500000, x: 826.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1556
+tipo: circulo, id: 1556, raio: 2.500000, x: 1242.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1316
+tipo: circulo, id: 1316, raio: 2.500000, x: 658.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 2016
+tipo: circulo, id: 2016, raio: 2.500000, x: 946.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 812
+tipo: circulo, id: 812, raio: 2.500000, x: 676.000000, y: 75.000000, corb: black, corp: tomato
+
+delf 1075
+tipo: circulo, id: 1075, raio: 2.500000, x: 1126.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1509
+tipo: circulo, id: 1509, raio: 2.500000, x: 1144.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 1938
+tipo: circulo, id: 1938, raio: 2.500000, x: 744.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 2223
+tipo: circulo, id: 2223, raio: 2.500000, x: 1478.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 448
+tipo: circulo, id: 448, raio: 2.500000, x: 1138.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 529
+tipo: circulo, id: 529, raio: 2.500000, x: 1258.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 2007
+tipo: circulo, id: 2007, raio: 2.500000, x: 878.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 994
+tipo: circulo, id: 994, raio: 2.500000, x: 982.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1911
+tipo: circulo, id: 1911, raio: 2.500000, x: 722.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1751
+tipo: circulo, id: 1751, raio: 2.500000, x: 288.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 350
+tipo: circulo, id: 350, raio: 2.500000, x: 906.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1084
+tipo: circulo, id: 1084, raio: 2.500000, x: 46.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 72
+tipo: circulo, id: 72, raio: 2.500000, x: 138.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 499
+tipo: circulo, id: 499, raio: 2.500000, x: 1206.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 22
+tipo: circulo, id: 22, raio: 2.500000, x: 34.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 1220
+tipo: circulo, id: 1220, raio: 2.500000, x: 398.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1923
+tipo: circulo, id: 1923, raio: 2.500000, x: 686.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1310
+tipo: circulo, id: 1310, raio: 2.500000, x: 676.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1964
+tipo: circulo, id: 1964, raio: 2.500000, x: 790.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 1830
+tipo: circulo, id: 1830, raio: 2.500000, x: 548.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 490
+tipo: circulo, id: 490, raio: 2.500000, x: 1196.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 234
+tipo: circulo, id: 234, raio: 2.500000, x: 618.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 286
+tipo: circulo, id: 286, raio: 2.500000, x: 728.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 983
+tipo: circulo, id: 983, raio: 2.500000, x: 958.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1834
+tipo: circulo, id: 1834, raio: 2.500000, x: 572.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1928
+tipo: circulo, id: 1928, raio: 2.500000, x: 744.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 509
+tipo: circulo, id: 509, raio: 2.500000, x: 1230.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 359
+tipo: circulo, id: 359, raio: 2.500000, x: 894.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 1248
+tipo: circulo, id: 1248, raio: 2.500000, x: 468.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1726
+tipo: circulo, id: 1726, raio: 2.500000, x: 270.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1321
+tipo: circulo, id: 1321, raio: 2.500000, x: 652.000000, y: 146.250000, corb: black, corp: tomato
+
+delf 1994
+tipo: circulo, id: 1994, raio: 2.500000, x: 860.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 2299
+tipo: circulo, id: 2299, raio: 2.500000, x: 1588.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1700
+tipo: circulo, id: 1700, raio: 2.500000, x: 218.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1050
+tipo: circulo, id: 1050, raio: 2.500000, x: 1050.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 1195
+tipo: circulo, id: 1195, raio: 2.500000, x: 340.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 1418
+tipo: circulo, id: 1418, raio: 2.500000, x: 982.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 989
+tipo: circulo, id: 989, raio: 2.500000, x: 952.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1869
+tipo: circulo, id: 1869, raio: 2.500000, x: 634.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 621
+tipo: circulo, id: 621, raio: 2.500000, x: 114.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 1991
+tipo: circulo, id: 1991, raio: 2.500000, x: 842.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 1764
+tipo: circulo, id: 1764, raio: 2.500000, x: 374.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 224
+tipo: circulo, id: 224, raio: 2.500000, x: 554.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 2250
+tipo: circulo, id: 2250, raio: 2.500000, x: 1496.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1384
+tipo: circulo, id: 1384, raio: 2.500000, x: 842.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 869
+tipo: circulo, id: 869, raio: 2.500000, x: 780.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 2291
+tipo: circulo, id: 2291, raio: 2.500000, x: 1570.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1310
+tipo: circulo, id: 1310, raio: 2.500000, x: 676.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 576
+tipo: circulo, id: 576, raio: 2.500000, x: 68.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 1297
+tipo: circulo, id: 1297, raio: 2.500000, x: 542.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 595
+tipo: circulo, id: 595, raio: 2.500000, x: 62.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 1812
+tipo: circulo, id: 1812, raio: 2.500000, x: 572.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 690
+tipo: circulo, id: 690, raio: 2.500000, x: 328.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 967
+tipo: circulo, id: 967, raio: 2.500000, x: 952.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 1567
+tipo: circulo, id: 1567, raio: 2.500000, x: 1218.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 1443
+tipo: circulo, id: 1443, raio: 2.500000, x: 998.000000, y: 133.750000, corb: black, corp: tomato
+
+delf 245
+tipo: circulo, id: 245, raio: 2.500000, x: 600.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 355
+tipo: circulo, id: 355, raio: 2.500000, x: 894.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 1305
+tipo: circulo, id: 1305, raio: 2.500000, x: 646.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1270
+tipo: circulo, id: 1270, raio: 2.500000, x: 502.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 385
+tipo: circulo, id: 385, raio: 2.500000, x: 958.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 478
+tipo: circulo, id: 478, raio: 2.500000, x: 1184.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1281
+tipo: circulo, id: 1281, raio: 2.500000, x: 530.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 1522
+tipo: circulo, id: 1522, raio: 2.500000, x: 1138.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 820
+tipo: circulo, id: 820, raio: 2.500000, x: 670.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1727
+tipo: circulo, id: 1727, raio: 2.500000, x: 276.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1806
+tipo: circulo, id: 1806, raio: 2.500000, x: 536.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 464
+tipo: circulo, id: 464, raio: 2.500000, x: 1126.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 1187
+tipo: circulo, id: 1187, raio: 2.500000, x: 322.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 1026
+tipo: circulo, id: 1026, raio: 2.500000, x: 1034.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 2279
+tipo: circulo, id: 2279, raio: 2.500000, x: 1576.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 86
+tipo: circulo, id: 86, raio: 2.500000, x: 178.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 2221
+tipo: circulo, id: 2221, raio: 2.500000, x: 1466.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 37
+tipo: circulo, id: 37, raio: 2.500000, x: 62.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 2032
+tipo: circulo, id: 2032, raio: 2.500000, x: 958.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 782
+tipo: circulo, id: 782, raio: 2.500000, x: 530.000000, y: 75.000000, corb: black, corp: tomato
+
+delf 1976
+tipo: circulo, id: 1976, raio: 2.500000, x: 796.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 2224
+tipo: circulo, id: 2224, raio: 2.500000, x: 1484.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 356
+tipo: circulo, id: 356, raio: 2.500000, x: 936.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 188
+tipo: circulo, id: 188, raio: 2.500000, x: 478.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 242
+tipo: circulo, id: 242, raio: 2.500000, x: 582.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 2184
+tipo: circulo, id: 2184, raio: 2.500000, x: 1404.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1782
+tipo: circulo, id: 1782, raio: 2.500000, x: 444.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1347
+tipo: circulo, id: 1347, raio: 2.500000, x: 790.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1250
+tipo: circulo, id: 1250, raio: 2.500000, x: 484.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 468
+tipo: circulo, id: 468, raio: 2.500000, x: 1114.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 316
+tipo: circulo, id: 316, raio: 2.500000, x: 780.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 1507
+tipo: circulo, id: 1507, raio: 2.500000, x: 1126.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 2250
+tipo: circulo, id: 2250, raio: 2.500000, x: 1496.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1922
+tipo: circulo, id: 1922, raio: 2.500000, x: 728.000000, y: 205.000000, corb: black, corp: tomato
+
+delf 1927
+tipo: circulo, id: 1927, raio: 2.500000, x: 738.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 132
+tipo: circulo, id: 132, raio: 2.500000, x: 322.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 546
+tipo: circulo, id: 546, raio: 2.500000, x: 1300.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 1099
+tipo: circulo, id: 1099, raio: 2.500000, x: 34.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 1976
+tipo: circulo, id: 1976, raio: 2.500000, x: 796.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 2072
+tipo: circulo, id: 2072, raio: 2.500000, x: 1144.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 806
+tipo: circulo, id: 806, raio: 2.500000, x: 658.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 845
+tipo: circulo, id: 845, raio: 2.500000, x: 698.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 847
+tipo: circulo, id: 847, raio: 2.500000, x: 710.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 1795
+tipo: circulo, id: 1795, raio: 2.500000, x: 468.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1940
+tipo: circulo, id: 1940, raio: 2.500000, x: 744.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1028
+tipo: circulo, id: 1028, raio: 2.500000, x: 1050.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 497
+tipo: circulo, id: 497, raio: 2.500000, x: 1184.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 345
+tipo: circulo, id: 345, raio: 2.500000, x: 790.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 824
+tipo: circulo, id: 824, raio: 2.500000, x: 676.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 470
+tipo: circulo, id: 470, raio: 2.500000, x: 1126.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 2184
+tipo: circulo, id: 2184, raio: 2.500000, x: 1404.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1559
+tipo: circulo, id: 1559, raio: 2.500000, x: 1248.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 372
+tipo: circulo, id: 372, raio: 2.500000, x: 958.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1663
+tipo: circulo, id: 1663, raio: 2.500000, x: 120.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 432
+tipo: circulo, id: 432, raio: 2.500000, x: 1086.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 2058
+tipo: circulo, id: 2058, raio: 2.500000, x: 1010.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1411
+tipo: circulo, id: 1411, raio: 2.500000, x: 946.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 424
+tipo: circulo, id: 424, raio: 2.500000, x: 1056.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 2004
+tipo: circulo, id: 2004, raio: 2.500000, x: 860.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 2240
+tipo: circulo, id: 2240, raio: 2.500000, x: 1490.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 1481
+tipo: circulo, id: 1481, raio: 2.500000, x: 1092.000000, y: 152.500000, corb: black, corp: tomato
+
+delf 1785
+tipo: circulo, id: 1785, raio: 2.500000, x: 462.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1710
+tipo: circulo, id: 1710, raio: 2.500000, x: 260.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 1588
+tipo: circulo, id: 1588, raio: 2.500000, x: 52.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 881
+tipo: circulo, id: 881, raio: 2.500000, x: 780.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 791
+tipo: circulo, id: 791, raio: 2.500000, x: 530.000000, y: 93.750000, corb: black, corp: tomato
+
+delf 186
+tipo: circulo, id: 186, raio: 2.500000, x: 508.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 1944
+tipo: circulo, id: 1944, raio: 2.500000, x: 744.000000, y: 205.000000, corb: black, corp: tomato
+
+delf 104
+tipo: circulo, id: 104, raio: 2.500000, x: 224.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 1566
+tipo: circulo, id: 1566, raio: 2.500000, x: 1212.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 2191
+tipo: circulo, id: 2191, raio: 2.500000, x: 1414.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1155
+tipo: circulo, id: 1155, raio: 2.500000, x: 242.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1984
+tipo: circulo, id: 1984, raio: 2.500000, x: 854.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 456
+tipo: circulo, id: 456, raio: 2.500000, x: 1120.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 963
+tipo: circulo, id: 963, raio: 2.500000, x: 924.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 2
+tipo: circulo, id: 2, raio: 2.500000, x: 28.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1893
+tipo: circulo, id: 1893, raio: 2.500000, x: 698.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 1860
+tipo: circulo, id: 1860, raio: 2.500000, x: 624.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 505
+tipo: circulo, id: 505, raio: 2.500000, x: 1242.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 158
+tipo: circulo, id: 158, raio: 2.500000, x: 444.000000, y: 22.500000, corb: black, corp: tomato
+
+delf 887
+tipo: circulo, id: 887, raio: 2.500000, x: 814.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 1174
+tipo: circulo, id: 1174, raio: 2.500000, x: 242.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1919
+tipo: circulo, id: 1919, raio: 2.500000, x: 692.000000, y: 205.000000, corb: black, corp: tomato
+
+delf 1237
+tipo: circulo, id: 1237, raio: 2.500000, x: 444.000000, y: 133.750000, corb: black, corp: tomato
+
+delf 165
+tipo: circulo, id: 165, raio: 2.500000, x: 450.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 248
+tipo: circulo, id: 248, raio: 2.500000, x: 618.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 968
+tipo: circulo, id: 968, raio: 2.500000, x: 958.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 2165
+tipo: circulo, id: 2165, raio: 2.500000, x: 1346.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1429
+tipo: circulo, id: 1429, raio: 2.500000, x: 976.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 2210
+tipo: circulo, id: 2210, raio: 2.500000, x: 1414.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 147
+tipo: circulo, id: 147, raio: 2.500000, x: 432.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 437
+tipo: circulo, id: 437, raio: 2.500000, x: 1068.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 735
+tipo: circulo, id: 735, raio: 2.500000, x: 468.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 888
+tipo: circulo, id: 888, raio: 2.500000, x: 820.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 541
+tipo: circulo, id: 541, raio: 2.500000, x: 1294.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 2148
+tipo: circulo, id: 2148, raio: 2.500000, x: 1334.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 1171
+tipo: circulo, id: 1171, raio: 2.500000, x: 224.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 1998
+tipo: circulo, id: 1998, raio: 2.500000, x: 884.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 2200
+tipo: circulo, id: 2200, raio: 2.500000, x: 1456.000000, y: 173.750000, corb: black, corp: tomato
+
+delf 1909
+tipo: circulo, id: 1909, raio: 2.500000, x: 692.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 93
+tipo: circulo, id: 93, raio: 2.500000, x: 224.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 267
+tipo: circulo, id: 267, raio: 2.500000, x: 676.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 91
+tipo: circulo, id: 91, raio: 2.500000, x: 190.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 228
+tipo: circulo, id: 228, raio: 2.500000, x: 582.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 857
+tipo: circulo, id: 857, raio: 2.500000, x: 728.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1183
+tipo: circulo, id: 1183, raio: 2.500000, x: 358.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 57
+tipo: circulo, id: 57, raio: 2.500000, x: 114.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 481
+tipo: circulo, id: 481, raio: 2.500000, x: 1154.000000, y: 16.250000, corb: black, corp: tomato
+
+delf 1327
+tipo: circulo, id: 1327, raio: 2.500000, x: 686.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 947
+tipo: circulo, id: 947, raio: 2.500000, x: 894.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 1452
+tipo: circulo, id: 1452, raio: 2.500000, x: 998.000000, y: 146.250000, corb: black, corp: tomato
+
+delf 1607
+tipo: circulo, id: 1607, raio: 2.500000, x: 68.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 718
+tipo: circulo, id: 718, raio: 2.500000, x: 398.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 948
+tipo: circulo, id: 948, raio: 2.500000, x: 900.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 810
+tipo: circulo, id: 810, raio: 2.500000, x: 676.000000, y: 68.750000, corb: black, corp: tomato
+
+delf 1139
+tipo: circulo, id: 1139, raio: 2.500000, x: 178.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 1982
+tipo: circulo, id: 1982, raio: 2.500000, x: 832.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1963
+tipo: circulo, id: 1963, raio: 2.500000, x: 790.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 801
+tipo: circulo, id: 801, raio: 2.500000, x: 572.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1475
+tipo: circulo, id: 1475, raio: 2.500000, x: 1080.000000, y: 140.000000, corb: black, corp: tomato
+
+delf 890
+tipo: circulo, id: 890, raio: 2.500000, x: 832.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 1607
+tipo: circulo, id: 1607, raio: 2.500000, x: 68.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 719
+tipo: circulo, id: 719, raio: 2.500000, x: 404.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1720
+tipo: circulo, id: 1720, raio: 2.500000, x: 218.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 132
+tipo: circulo, id: 132, raio: 2.500000, x: 322.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 977
+tipo: circulo, id: 977, raio: 2.500000, x: 946.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 1374
+tipo: circulo, id: 1374, raio: 2.500000, x: 820.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 932
+tipo: circulo, id: 932, raio: 2.500000, x: 884.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 1061
+tipo: circulo, id: 1061, raio: 2.500000, x: 1144.000000, y: 68.750000, corb: black, corp: tomato
+
+delf 597
+tipo: circulo, id: 597, raio: 2.500000, x: 62.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1750
+tipo: circulo, id: 1750, raio: 2.500000, x: 282.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1560
+tipo: circulo, id: 1560, raio: 2.500000, x: 1206.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 1432
+tipo: circulo, id: 1432, raio: 2.500000, x: 998.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 819
+tipo: circulo, id: 819, raio: 2.500000, x: 664.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 421
+tipo: circulo, id: 421, raio: 2.500000, x: 1050.000000, y: 22.500000, corb: black, corp: tomato
+
+delf 978
+tipo: circulo, id: 978, raio: 2.500000, x: 952.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 1715
+tipo: circulo, id: 1715, raio: 2.500000, x: 242.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 264
+tipo: circulo, id: 264, raio: 2.500000, x: 634.000000, y: 41.250000, corb: black, corp: tomato
+
+delf 1379
+tipo: circulo, id: 1379, raio: 2.500000, x: 860.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 288
+tipo: circulo, id: 288, raio: 2.500000, x: 692.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 475
+tipo: circulo, id: 475, raio: 2.500000, x: 1166.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1556
+tipo: circulo, id: 1556, raio: 2.500000, x: 1242.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1608
+tipo: circulo, id: 1608, raio: 2.500000, x: 74.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 475
+tipo: circulo, id: 475, raio: 2.500000, x: 1166.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1719
+tipo: circulo, id: 1719, raio: 2.500000, x: 242.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1002
+tipo: circulo, id: 1002, raio: 2.500000, x: 1034.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 1885
+tipo: circulo, id: 1885, raio: 2.500000, x: 634.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 2043
+tipo: circulo, id: 2043, raio: 2.500000, x: 1034.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 162
+tipo: circulo, id: 162, raio: 2.500000, x: 444.000000, y: 35.000000, corb: black, corp: tomato
+
+delf 728
+tipo: circulo, id: 728, raio: 2.500000, x: 426.000000, y: 81.250000, corb: black, corp: tomato
+
+delf 597
+tipo: circulo, id: 597, raio: 2.500000, x: 62.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 663
+tipo: circulo, id: 663, raio: 2.500000, x: 218.000000, y: 87.500000, corb: black, corp: tomato
+
+delf 1854
+tipo: circulo, id: 1854, raio: 2.500000, x: 606.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1314
+tipo: circulo, id: 1314, raio: 2.500000, x: 676.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 1676
+tipo: circulo, id: 1676, raio: 2.500000, x: 166.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 595
+tipo: circulo, id: 595, raio: 2.500000, x: 62.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 251
+tipo: circulo, id: 251, raio: 2.500000, x: 646.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1953
+tipo: circulo, id: 1953, raio: 2.500000, x: 790.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1605
+tipo: circulo, id: 1605, raio: 2.500000, x: 46.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 2190
+tipo: circulo, id: 2190, raio: 2.500000, x: 1404.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 413
+tipo: circulo, id: 413, raio: 2.500000, x: 1016.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 228
+tipo: circulo, id: 228, raio: 2.500000, x: 582.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1805
+tipo: circulo, id: 1805, raio: 2.500000, x: 530.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1784
+tipo: circulo, id: 1784, raio: 2.500000, x: 456.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 699
+tipo: circulo, id: 699, raio: 2.500000, x: 374.000000, y: 68.750000, corb: black, corp: tomato
+
+delf 842
+tipo: circulo, id: 842, raio: 2.500000, x: 728.000000, y: 75.000000, corb: black, corp: tomato
+
+delf 2238
+tipo: circulo, id: 2238, raio: 2.500000, x: 1490.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 1482
+tipo: circulo, id: 1482, raio: 2.500000, x: 1050.000000, y: 158.750000, corb: black, corp: tomato
+
+delf 584
+tipo: circulo, id: 584, raio: 2.500000, x: 74.000000, y: 75.000000, corb: black, corp: tomato
+
+delf 1152
+tipo: circulo, id: 1152, raio: 2.500000, x: 224.000000, y: 115.000000, corb: black, corp: tomato
+
+delf 1032
+tipo: circulo, id: 1032, raio: 2.500000, x: 1074.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 1489
+tipo: circulo, id: 1489, raio: 2.500000, x: 1108.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 125
+tipo: circulo, id: 125, raio: 2.500000, x: 346.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 2
+tipo: circulo, id: 2, raio: 2.500000, x: 28.000000, y: 10.000000, corb: black, corp: tomato
+
+delf 1625
+tipo: circulo, id: 1625, raio: 2.500000, x: 62.000000, y: 198.750000, corb: black, corp: tomato
+
+delf 1060
+tipo: circulo, id: 1060, raio: 2.500000, x: 1102.000000, y: 68.750000, corb: black, corp: tomato
+
+delf 1493
+tipo: circulo, id: 1493, raio: 2.500000, x: 1102.000000, y: 127.500000, corb: black, corp: tomato
+
+delf 119
+tipo: circulo, id: 119, raio: 2.500000, x: 248.000000, y: 53.750000, corb: black, corp: tomato
+
+delf 791
+tipo: circulo, id: 791, raio: 2.500000, x: 530.000000, y: 93.750000, corb: black, corp: tomato
+
+delf 2072
+tipo: circulo, id: 2072, raio: 2.500000, x: 1144.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 1656
+tipo: circulo, id: 1656, raio: 2.500000, x: 156.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 570
+tipo: circulo, id: 570, raio: 2.500000, x: 52.000000, y: 93.750000, corb: black, corp: tomato
+
+delf 1955
+tipo: circulo, id: 1955, raio: 2.500000, x: 802.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 2063
+tipo: circulo, id: 2063, raio: 2.500000, x: 1108.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1775
+tipo: circulo, id: 1775, raio: 2.500000, x: 386.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1871
+tipo: circulo, id: 1871, raio: 2.500000, x: 634.000000, y: 186.250000, corb: black, corp: tomato
+
+delf 763
+tipo: circulo, id: 763, raio: 2.500000, x: 484.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 1837
+tipo: circulo, id: 1837, raio: 2.500000, x: 594.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 792
+tipo: circulo, id: 792, raio: 2.500000, x: 530.000000, y: 100.000000, corb: black, corp: tomato
+
+delf 2057
+tipo: circulo, id: 2057, raio: 2.500000, x: 1004.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 1489
+tipo: circulo, id: 1489, raio: 2.500000, x: 1108.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 1928
+tipo: circulo, id: 1928, raio: 2.500000, x: 744.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 1258
+tipo: circulo, id: 1258, raio: 2.500000, x: 496.000000, y: 121.250000, corb: black, corp: tomato
+
+delf 1817
+tipo: circulo, id: 1817, raio: 2.500000, x: 530.000000, y: 192.500000, corb: black, corp: tomato
+
+delf 337
+tipo: circulo, id: 337, raio: 2.500000, x: 808.000000, y: 28.750000, corb: black, corp: tomato
+
+delf 1647
+tipo: circulo, id: 1647, raio: 2.500000, x: 126.000000, y: 180.000000, corb: black, corp: tomato
+
+delf 882
+tipo: circulo, id: 882, raio: 2.500000, x: 738.000000, y: 106.250000, corb: black, corp: tomato
+
+delf 1729
+tipo: circulo, id: 1729, raio: 2.500000, x: 288.000000, y: 167.500000, corb: black, corp: tomato
+
+delf 241
+tipo: circulo, id: 241, raio: 2.500000, x: 582.000000, y: 47.500000, corb: black, corp: tomato
+
+delf 744
+tipo: circulo, id: 744, raio: 2.500000, x: 490.000000, y: 62.500000, corb: black, corp: tomato
+
+delf 2035
+tipo: circulo, id: 2035, raio: 2.500000, x: 976.000000, y: 211.250000, corb: black, corp: tomato
+
+delf 81
+tipo: circulo, id: 81, raio: 2.500000, x: 202.000000, y: 22.500000, corb: black, corp: tomato
+
+delf 1465
+tipo: circulo, id: 1465, raio: 2.500000, x: 1092.000000, y: 121.250000, corb: black, corp: tomato
+

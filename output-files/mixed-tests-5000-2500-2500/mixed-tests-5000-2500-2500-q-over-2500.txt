@@ -1,0 +1,7500 @@
+o? 2285 8493
+2285: Retangulo  8493: Circulo  NAO
+
+o? 9889 7329
+9889: Circulo  7329: Circulo  NAO
+
+o? 4291 2467
+4291: Circulo  2467: Circulo  NAO
+
+o? 6804 4108
+6804: Circulo  4108: Retangulo  NAO
+
+o? 7553 2275
+7553: Retangulo  2275: Circulo  NAO
+
+o? 8795 2020
+8795: Retangulo  2020: Retangulo  NAO
+
+o? 3659 977
+3659: Retangulo  977: Retangulo  NAO
+
+o? 3945 2505
+3945: Circulo  2505: Circulo  NAO
+
+o? 865 8472
+865: Circulo  8472: Circulo  NAO
+
+o? 1167 4272
+1167: Circulo  4272: Circulo  NAO
+
+o? 8645 6771
+8645: Retangulo  6771: Circulo  NAO
+
+o? 8442 7803
+8442: Circulo  7803: Circulo  NAO
+
+o? 3904 7607
+3904: Retangulo  7607: Retangulo  NAO
+
+o? 2396 383
+2396: Retangulo  383: Retangulo  NAO
+
+o? 6790 8580
+6790: Retangulo  8580: Circulo  NAO
+
+o? 685 1921
+685: Circulo  1921: Circulo  NAO
+
+o? 2740 5936
+2740: Retangulo  5936: Retangulo  NAO
+
+o? 7349 4759
+7349: Retangulo  4759: Circulo  SIM
+
+o? 6158 3966
+6158: Retangulo  3966: Circulo  NAO
+
+o? 3597 157
+3597: Circulo  157: Circulo  NAO
+
+o? 1065 2833
+1065: Circulo  2833: Circulo  NAO
+
+o? 2818 1183
+2818: Retangulo  1183: Circulo  NAO
+
+o? 928 2439
+928: Retangulo  2439: Circulo  NAO
+
+o? 2230 1810
+2230: Retangulo  1810: Retangulo  NAO
+
+o? 4048 7483
+4048: Retangulo  7483: Circulo  NAO
+
+o? 9556 7072
+9556: Retangulo  7072: Retangulo  NAO
+
+o? 6703 9191
+6703: Circulo  9191: Retangulo  NAO
+
+o? 3469 7132
+3469: Circulo  7132: Retangulo  NAO
+
+o? 4573 2774
+4573: Circulo  2774: Retangulo  NAO
+
+o? 2157 3879
+2157: Circulo  3879: Circulo  NAO
+
+o? 9993 2051
+9993: Circulo  2051: Retangulo  SIM
+
+o? 3137 9060
+3137: Retangulo  9060: Circulo  NAO
+
+o? 202 5052
+202: Retangulo  5052: Circulo  NAO
+
+o? 8671 2291
+8671: Circulo  2291: Retangulo  NAO
+
+o? 3163 4347
+3163: Circulo  4347: Circulo  NAO
+
+o? 448 9163
+448: Retangulo  9163: Circulo  NAO
+
+o? 7618 9440
+7618: Retangulo  9440: Retangulo  NAO
+
+o? 9993 2963
+9993: Circulo  2963: Retangulo  NAO
+
+o? 8647 49
+8647: Circulo  49: Circulo  NAO
+
+o? 6544 6418
+6544: Retangulo  6418: Retangulo  NAO
+
+o? 2208 163
+2208: Circulo  163: Circulo  NAO
+
+o? 8110 1687
+8110: Retangulo  1687: Circulo  NAO
+
+o? 5881 8819
+5881: Circulo  8819: Retangulo  NAO
+
+o? 5431 4415
+5431: Circulo  4415: Retangulo  NAO
+
+o? 2089 9148
+2089: Circulo  9148: Retangulo  NAO
+
+o? 1174 9863
+1174: Retangulo  9863: Retangulo  NAO
+
+o? 5240 2849
+5240: Retangulo  2849: Retangulo  SIM
+
+o? 5711 8281
+5711: Retangulo  8281: Circulo  NAO
+
+o? 1789 8477
+1789: Circulo  8477: Retangulo  NAO
+
+o? 1716 6489
+1716: Circulo  6489: Circulo  NAO
+
+o? 6619 8349
+6619: Circulo  8349: Circulo  NAO
+
+o? 4559 180
+4559: Retangulo  180: Circulo  NAO
+
+o? 2652 3581
+2652: Circulo  3581: Retangulo  NAO
+
+o? 2897 1182
+2897: Retangulo  1182: Circulo  NAO
+
+o? 17 2769
+17: Retangulo  2769: Circulo  NAO
+
+o? 3789 9227
+3789: Circulo  9227: Retangulo  NAO
+
+o? 7448 6006
+7448: Retangulo  6006: Circulo  NAO
+
+o? 6658 1184
+6658: Retangulo  1184: Retangulo  SIM
+
+o? 2429 621
+2429: Retangulo  621: Circulo  NAO
+
+o? 6914 5665
+6914: Retangulo  5665: Circulo  NAO
+
+o? 4353 1379
+4353: Circulo  1379: Retangulo  NAO
+
+o? 5833 918
+5833: Circulo  918: Circulo  NAO
+
+o? 5004 5495
+5004: Circulo  5495: Retangulo  NAO
+
+o? 6286 9073
+6286: Retangulo  9073: Circulo  NAO
+
+o? 7286 7931
+7286: Retangulo  7931: Retangulo  NAO
+
+o? 7768 1895
+7768: Retangulo  1895: Retangulo  NAO
+
+o? 5556 1757
+5556: Circulo  1757: Retangulo  NAO
+
+o? 6411 3765
+6411: Circulo  3765: Circulo  NAO
+
+o? 6653 9438
+6653: Retangulo  9438: Circulo  NAO
+
+o? 1508 1524
+1508: Retangulo  1524: Circulo  NAO
+
+o? 1460 3745
+1460: Retangulo  3745: Circulo  NAO
+
+o? 3895 2134
+3895: Circulo  2134: Retangulo  NAO
+
+o? 1573 7231
+1573: Circulo  7231: Circulo  NAO
+
+o? 1999 9933
+1999: Circulo  9933: Circulo  NAO
+
+o? 387 7281
+387: Circulo  7281: Circulo  NAO
+
+o? 790 9325
+790: Retangulo  9325: Circulo  NAO
+
+o? 1626 7319
+1626: Circulo  7319: Retangulo  NAO
+
+o? 1854 2664
+1854: Circulo  2664: Circulo  NAO
+
+o? 8519 9043
+8519: Retangulo  9043: Circulo  NAO
+
+o? 6235 9258
+6235: Circulo  9258: Circulo  NAO
+
+o? 1292 8483
+1292: Retangulo  8483: Retangulo  NAO
+
+o? 1821 997
+1821: Circulo  997: Circulo  NAO
+
+o? 2949 4767
+2949: Circulo  4767: Circulo  NAO
+
+o? 9273 438
+9273: Circulo  438: Circulo  NAO
+
+o? 1530 8239
+1530: Circulo  8239: Circulo  NAO
+
+o? 3496 4160
+3496: Retangulo  4160: Retangulo  NAO
+
+o? 9612 4979
+9612: Circulo  4979: Retangulo  NAO
+
+o? 4578 3189
+4578: Circulo  3189: Circulo  NAO
+
+o? 4860 1806
+4860: Circulo  1806: Circulo  NAO
+
+o? 1372 2919
+1372: Retangulo  2919: Circulo  NAO
+
+o? 3492 9217
+3492: Circulo  9217: Circulo  NAO
+
+o? 5476 8047
+5476: Retangulo  8047: Circulo  NAO
+
+o? 6970 956
+6970: Retangulo  956: Retangulo  NAO
+
+o? 2528 2253
+2528: Retangulo  2253: Circulo  NAO
+
+o? 1297 4883
+1297: Circulo  4883: Retangulo  NAO
+
+o? 3236 6012
+3236: Retangulo  6012: Circulo  NAO
+
+o? 7671 4184
+7671: Circulo  4184: Retangulo  NAO
+
+o? 7684 5816
+7684: Retangulo  5816: Retangulo  NAO
+
+o? 5025 7642
+5025: Circulo  7642: Retangulo  NAO
+
+o? 3974 5911
+3974: Retangulo  5911: Circulo  NAO
+
+o? 9662 6898
+9662: Retangulo  6898: Retangulo  NAO
+
+o? 5456 8214
+5456: Retangulo  8214: Circulo  NAO
+
+o? 6509 4289
+6509: Retangulo  4289: Retangulo  NAO
+
+o? 8044 6155
+8044: Retangulo  6155: Retangulo  NAO
+
+o? 8207 4121
+8207: Retangulo  4121: Retangulo  NAO
+
+o? 5625 8791
+5625: Circulo  8791: Circulo  NAO
+
+o? 3944 8633
+3944: Retangulo  8633: Retangulo  NAO
+
+o? 2805 5932
+2805: Circulo  5932: Retangulo  NAO
+
+o? 8621 1389
+8621: Retangulo  1389: Circulo  NAO
+
+o? 2439 5951
+2439: Circulo  5951: Retangulo  NAO
+
+o? 1330 5729
+1330: Retangulo  5729: Retangulo  NAO
+
+o? 5938 7283
+5938: Retangulo  7283: Retangulo  NAO
+
+o? 680 8833
+680: Retangulo  8833: Circulo  NAO
+
+o? 6254 9569
+6254: Retangulo  9569: Retangulo  NAO
+
+o? 9913 3284
+9913: Circulo  3284: Retangulo  NAO
+
+o? 687 174
+687: Circulo  174: Circulo  NAO
+
+o? 5807 6843
+5807: Retangulo  6843: Circulo  NAO
+
+o? 3160 8869
+3160: Retangulo  8869: Circulo  NAO
+
+o? 124 7674
+124: Retangulo  7674: Circulo  NAO
+
+o? 2299 8012
+2299: Circulo  8012: Retangulo  NAO
+
+o? 6453 42
+6453: Circulo  42: Circulo  NAO
+
+o? 9204 7818
+9204: Circulo  7818: Circulo  NAO
+
+o? 8719 8774
+8719: Circulo  8774: Retangulo  NAO
+
+o? 1228 8429
+1228: Retangulo  8429: Retangulo  NAO
+
+o? 635 6219
+635: Retangulo  6219: Circulo  NAO
+
+o? 8446 7873
+8446: Retangulo  7873: Circulo  NAO
+
+o? 6822 5385
+6822: Circulo  5385: Circulo  NAO
+
+o? 4833 283
+4833: Circulo  283: Circulo  NAO
+
+o? 9254 3541
+9254: Retangulo  3541: Circulo  NAO
+
+o? 9134 847
+9134: Retangulo  847: Circulo  NAO
+
+o? 5401 8909
+5401: Circulo  8909: Retangulo  NAO
+
+o? 5623 2546
+5623: Circulo  2546: Retangulo  NAO
+
+o? 3268 4510
+3268: Retangulo  4510: Retangulo  NAO
+
+o? 3110 4355
+3110: Retangulo  4355: Retangulo  NAO
+
+o? 2605 5897
+2605: Circulo  5897: Retangulo  NAO
+
+o? 3321 3981
+3321: Circulo  3981: Circulo  NAO
+
+o? 5709 4028
+5709: Circulo  4028: Retangulo  NAO
+
+o? 7228 4128
+7228: Retangulo  4128: Circulo  NAO
+
+o? 1362 723
+1362: Circulo  723: Circulo  NAO
+
+o? 9388 2625
+9388: Retangulo  2625: Circulo  NAO
+
+o? 9926 9568
+9926: Retangulo  9568: Retangulo  NAO
+
+o? 4373 8687
+4373: Retangulo  8687: Retangulo  NAO
+
+o? 920 2350
+920: Retangulo  2350: Retangulo  NAO
+
+o? 3112 406
+3112: Retangulo  406: Retangulo  NAO
+
+o? 4937 6426
+4937: Retangulo  6426: Circulo  NAO
+
+o? 6550 5673
+6550: Retangulo  5673: Circulo  NAO
+
+o? 7366 5739
+7366: Retangulo  5739: Circulo  NAO
+
+o? 6528 5391
+6528: Circulo  5391: Circulo  NAO
+
+o? 5083 3661
+5083: Circulo  3661: Circulo  NAO
+
+o? 4048 568
+4048: Retangulo  568: Retangulo  NAO
+
+o? 9477 9274
+9477: Circulo  9274: Retangulo  NAO
+
+o? 6325 8813
+6325: Circulo  8813: Retangulo  NAO
+
+o? 5989 9338
+5989: Circulo  9338: Retangulo  NAO
+
+o? 9951 6363
+9951: Circulo  6363: Circulo  NAO
+
+o? 3617 2733
+3617: Retangulo  2733: Circulo  NAO
+
+o? 4607 1293
+4607: Retangulo  1293: Circulo  NAO
+
+o? 1553 6811
+1553: Retangulo  6811: Circulo  NAO
+
+o? 5558 1352
+5558: Retangulo  1352: Retangulo  NAO
+
+o? 4899 8531
+4899: Circulo  8531: Retangulo  NAO
+
+o? 8673 764
+8673: Circulo  764: Retangulo  NAO
+
+o? 1737 2917
+1737: Circulo  2917: Circulo  NAO
+
+o? 7569 5880
+7569: Circulo  5880: Circulo  NAO
+
+o? 9331 2947
+9331: Circulo  2947: Circulo  NAO
+
+o? 2304 6383
+2304: Circulo  6383: Retangulo  NAO
+
+o? 6402 1742
+6402: Circulo  1742: Retangulo  NAO
+
+o? 3462 303
+3462: Circulo  303: Circulo  NAO
+
+o? 6501 5424
+6501: Circulo  5424: Circulo  NAO
+
+o? 3077 6505
+3077: Retangulo  6505: Circulo  NAO
+
+o? 8262 5062
+8262: Circulo  5062: Retangulo  NAO
+
+o? 1971 2313
+1971: Circulo  2313: Circulo  NAO
+
+o? 3434 584
+3434: Retangulo  584: Retangulo  NAO
+
+o? 1341 7059
+1341: Circulo  7059: Circulo  NAO
+
+o? 1448 96
+1448: Retangulo  96: Circulo  NAO
+
+o? 4440 747
+4440: Circulo  747: Circulo  NAO
+
+o? 4941 5251
+4941: Circulo  5251: Circulo  NAO
+
+o? 6529 1760
+6529: Circulo  1760: Retangulo  NAO
+
+o? 1780 8334
+1780: Retangulo  8334: Circulo  NAO
+
+o? 7990 3728
+7990: Retangulo  3728: Retangulo  NAO
+
+o? 2042 189
+2042: Retangulo  189: Circulo  NAO
+
+o? 5168 4167
+5168: Retangulo  4167: Circulo  NAO
+
+o? 6737 6409
+6737: Retangulo  6409: Circulo  NAO
+
+o? 6992 7536
+6992: Retangulo  7536: Circulo  NAO
+
+o? 3888 4674
+3888: Circulo  4674: Circulo  NAO
+
+o? 2708 8783
+2708: Retangulo  8783: Retangulo  NAO
+
+o? 9574 1198
+9574: Retangulo  1198: Retangulo  SIM
+
+o? 5267 9180
+5267: Retangulo  9180: Circulo  NAO
+
+o? 9707 3894
+9707: Retangulo  3894: Circulo  NAO
+
+o? 5588 5294
+5588: Retangulo  5294: Retangulo  NAO
+
+o? 7667 578
+7667: Retangulo  578: Retangulo  NAO
+
+o? 3442 172
+3442: Retangulo  172: Retangulo  NAO
+
+o? 5424 6081
+5424: Circulo  6081: Circulo  NAO
+
+o? 6371 1270
+6371: Retangulo  1270: Retangulo  NAO
+
+o? 7633 4119
+7633: Circulo  4119: Circulo  NAO
+
+o? 5082 4
+5082: Circulo  4: Retangulo  NAO
+
+o? 3110 2350
+3110: Retangulo  2350: Retangulo  NAO
+
+o? 4672 624
+4672: Retangulo  624: Circulo  NAO
+
+o? 7839 8224
+7839: Circulo  8224: Retangulo  NAO
+
+o? 2656 1751
+2656: Retangulo  1751: Retangulo  NAO
+
+o? 5231 5108
+5231: Retangulo  5108: Retangulo  NAO
+
+o? 5840 4224
+5840: Retangulo  4224: Circulo  NAO
+
+o? 3705 9038
+3705: Circulo  9038: Retangulo  NAO
+
+o? 662 9426
+662: Retangulo  9426: Circulo  NAO
+
+o? 9031 5787
+9031: Circulo  5787: Circulo  NAO
+
+o? 6537 8108
+6537: Circulo  8108: Retangulo  NAO
+
+o? 3987 2105
+3987: Circulo  2105: Retangulo  NAO
+
+o? 9246 2543
+9246: Circulo  2543: Retangulo  NAO
+
+o? 6815 4630
+6815: Retangulo  4630: Retangulo  NAO
+
+o? 5109 1313
+5109: Circulo  1313: Retangulo  NAO
+
+o? 9147 8400
+9147: Circulo  8400: Circulo  NAO
+
+o? 1395 2988
+1395: Circulo  2988: Circulo  NAO
+
+o? 2611 9453
+2611: Circulo  9453: Circulo  NAO
+
+o? 7271 7117
+7271: Retangulo  7117: Circulo  NAO
+
+o? 1003 6570
+1003: Circulo  6570: Circulo  NAO
+
+o? 6694 2996
+6694: Retangulo  2996: Retangulo  NAO
+
+o? 9985 8424
+9985: Circulo  8424: Circulo  NAO
+
+o? 7098 9566
+7098: Circulo  9566: Retangulo  NAO
+
+o? 6075 3876
+6075: Circulo  3876: Circulo  NAO
+
+o? 6127 94
+6127: Circulo  94: Retangulo  NAO
+
+o? 3218 8926
+3218: Retangulo  8926: Retangulo  NAO
+
+o? 4371 3224
+4371: Circulo  3224: Retangulo  NAO
+
+o? 6728 6810
+6728: Retangulo  6810: Circulo  NAO
+
+o? 1274 1252
+1274: Retangulo  1252: Retangulo  NAO
+
+o? 5821 170
+5821: Circulo  170: Retangulo  NAO
+
+o? 6375 4216
+6375: Circulo  4216: Retangulo  NAO
+
+o? 5390 8152
+5390: Retangulo  8152: Retangulo  NAO
+
+o? 842 4714
+842: Retangulo  4714: Retangulo  NAO
+
+o? 2893 5318
+2893: Circulo  5318: Retangulo  NAO
+
+o? 5301 4600
+5301: Circulo  4600: Retangulo  NAO
+
+o? 828 1794
+828: Circulo  1794: Circulo  NAO
+
+o? 9940 9067
+9940: Retangulo  9067: Circulo  NAO
+
+o? 7223 2025
+7223: Retangulo  2025: Circulo  NAO
+
+o? 1111 6714
+1111: Circulo  6714: Circulo  NAO
+
+o? 7619 9353
+7619: Retangulo  9353: Retangulo  NAO
+
+o? 3016 2080
+3016: Retangulo  2080: Retangulo  NAO
+
+o? 7940 1288
+7940: Retangulo  1288: Retangulo  NAO
+
+o? 3660 6175
+3660: Circulo  6175: Circulo  SIM
+
+o? 8067 6328
+8067: Circulo  6328: Retangulo  NAO
+
+o? 4194 140
+4194: Circulo  140: Retangulo  NAO
+
+o? 4528 4228
+4528: Retangulo  4228: Retangulo  NAO
+
+o? 5504 2783
+5504: Retangulo  2783: Retangulo  NAO
+
+o? 512 8018
+512: Retangulo  8018: Retangulo  NAO
+
+o? 7611 77
+7611: Circulo  77: Retangulo  NAO
+
+o? 100 47
+100: Retangulo  47: Retangulo  NAO
+
+o? 5586 571
+5586: Circulo  571: Circulo  NAO
+
+o? 8202 6181
+8202: Circulo  6181: Circulo  NAO
+
+o? 8666 8979
+8666: Retangulo  8979: Circulo  NAO
+
+o? 8345 6272
+8345: Retangulo  6272: Retangulo  NAO
+
+o? 3652 8201
+3652: Retangulo  8201: Retangulo  SIM
+
+o? 8789 8429
+8789: Retangulo  8429: Retangulo  NAO
+
+o? 8196 6916
+8196: Circulo  6916: Retangulo  NAO
+
+o? 7150 9579
+7150: Retangulo  9579: Circulo  NAO
+
+o? 7508 3932
+7508: Retangulo  3932: Retangulo  NAO
+
+o? 4095 1660
+4095: Circulo  1660: Retangulo  NAO
+
+o? 80 1821
+80: Retangulo  1821: Circulo  NAO
+
+o? 8536 8842
+8536: Retangulo  8842: Retangulo  NAO
+
+o? 9154 2727
+9154: Retangulo  2727: Circulo  NAO
+
+o? 8215 7910
+8215: Circulo  7910: Retangulo  NAO
+
+o? 4862 9108
+4862: Retangulo  9108: Circulo  NAO
+
+o? 6652 4297
+6652: Retangulo  4297: Circulo  NAO
+
+o? 2100 5736
+2100: Circulo  5736: Circulo  NAO
+
+o? 910 2942
+910: Retangulo  2942: Retangulo  NAO
+
+o? 7825 3677
+7825: Circulo  3677: Retangulo  NAO
+
+o? 6176 5643
+6176: Retangulo  5643: Circulo  NAO
+
+o? 4 3837
+4: Retangulo  3837: Circulo  NAO
+
+o? 3492 9216
+3492: Circulo  9216: Circulo  NAO
+
+o? 836 6242
+836: Retangulo  6242: Retangulo  NAO
+
+o? 5336 7733
+5336: Retangulo  7733: Retangulo  NAO
+
+o? 3861 2905
+3861: Circulo  2905: Circulo  NAO
+
+o? 7919 4881
+7919: Retangulo  4881: Circulo  NAO
+
+o? 5701 770
+5701: Circulo  770: Retangulo  NAO
+
+o? 4177 7682
+4177: Circulo  7682: Retangulo  NAO
+
+o? 594 9941
+594: Circulo  9941: Retangulo  NAO
+
+o? 9617 3903
+9617: Retangulo  3903: Circulo  NAO
+
+o? 2488 5271
+2488: Retangulo  5271: Circulo  NAO
+
+o? 4745 37
+4745: Retangulo  37: Circulo  NAO
+
+o? 9348 1786
+9348: Circulo  1786: Retangulo  NAO
+
+o? 7243 2022
+7243: Circulo  2022: Circulo  NAO
+
+o? 9544 2566
+9544: Retangulo  2566: Retangulo  NAO
+
+o? 1090 6308
+1090: Retangulo  6308: Retangulo  NAO
+
+o? 6327 659
+6327: Circulo  659: Retangulo  NAO
+
+o? 4464 8336
+4464: Circulo  8336: Retangulo  NAO
+
+o? 4888 2613
+4888: Retangulo  2613: Circulo  NAO
+
+o? 7962 682
+7962: Circulo  682: Retangulo  NAO
+
+o? 4083 6807
+4083: Circulo  6807: Circulo  NAO
+
+o? 8527 7730
+8527: Circulo  7730: Retangulo  NAO
+
+o? 6725 6570
+6725: Retangulo  6570: Circulo  NAO
+
+o? 6971 1074
+6971: Retangulo  1074: Circulo  NAO
+
+o? 3279 8997
+3279: Circulo  8997: Circulo  NAO
+
+o? 7792 7180
+7792: Retangulo  7180: Retangulo  SIM
+
+o? 5700 6378
+5700: Circulo  6378: Circulo  NAO
+
+o? 5005 5546
+5005: Circulo  5546: Retangulo  NAO
+
+o? 8298 74
+8298: Circulo  74: Retangulo  NAO
+
+o? 3790 972
+3790: Retangulo  972: Circulo  NAO
+
+o? 979 6391
+979: Circulo  6391: Circulo  NAO
+
+o? 5358 6318
+5358: Circulo  6318: Circulo  NAO
+
+o? 8136 4436
+8136: Circulo  4436: Retangulo  NAO
+
+o? 803 3827
+803: Retangulo  3827: Retangulo  SIM
+
+o? 2258 4069
+2258: Retangulo  4069: Circulo  NAO
+
+o? 7702 1966
+7702: Retangulo  1966: Retangulo  NAO
+
+o? 3935 7039
+3935: Retangulo  7039: Circulo  NAO
+
+o? 9318 1716
+9318: Circulo  1716: Circulo  NAO
+
+o? 8115 3445
+8115: Circulo  3445: Circulo  NAO
+
+o? 3346 8101
+3346: Retangulo  8101: Circulo  NAO
+
+o? 3672 1119
+3672: Circulo  1119: Circulo  NAO
+
+o? 842 1631
+842: Retangulo  1631: Retangulo  NAO
+
+o? 6368 5874
+6368: Retangulo  5874: Circulo  NAO
+
+o? 1758 496
+1758: Circulo  496: Retangulo  NAO
+
+o? 4329 3352
+4329: Circulo  3352: Retangulo  NAO
+
+o? 8657 7427
+8657: Retangulo  7427: Retangulo  NAO
+
+o? 9328 9611
+9328: Retangulo  9611: Retangulo  NAO
+
+o? 2683 8861
+2683: Circulo  8861: Retangulo  NAO
+
+o? 5989 6096
+5989: Circulo  6096: Circulo  NAO
+
+o? 7786 5263
+7786: Retangulo  5263: Circulo  NAO
+
+o? 2270 5953
+2270: Retangulo  5953: Circulo  NAO
+
+o? 1134 562
+1134: Circulo  562: Retangulo  NAO
+
+o? 8217 8976
+8217: Circulo  8976: Circulo  NAO
+
+o? 7323 2020
+7323: Circulo  2020: Retangulo  NAO
+
+o? 1749 6655
+1749: Circulo  6655: Circulo  NAO
+
+o? 4655 2934
+4655: Retangulo  2934: Circulo  NAO
+
+o? 8385 4208
+8385: Circulo  4208: Retangulo  NAO
+
+o? 254 9795
+254: Retangulo  9795: Circulo  NAO
+
+o? 1919 9921
+1919: Retangulo  9921: Circulo  NAO
+
+o? 5818 5937
+5818: Retangulo  5937: Circulo  NAO
+
+o? 1830 9935
+1830: Circulo  9935: Retangulo  NAO
+
+o? 9084 6184
+9084: Circulo  6184: Retangulo  NAO
+
+o? 2125 5875
+2125: Circulo  5875: Circulo  NAO
+
+o? 2094 2348
+2094: Circulo  2348: Retangulo  NAO
+
+o? 5434 939
+5434: Retangulo  939: Circulo  NAO
+
+o? 1970 1449
+1970: Retangulo  1449: Circulo  NAO
+
+o? 5503 4185
+5503: Circulo  4185: Circulo  NAO
+
+o? 7889 6617
+7889: Retangulo  6617: Retangulo  NAO
+
+o? 5057 9635
+5057: Retangulo  9635: Retangulo  NAO
+
+o? 2922 1052
+2922: Circulo  1052: Retangulo  NAO
+
+o? 4315 5304
+4315: Circulo  5304: Circulo  NAO
+
+o? 1054 3599
+1054: Retangulo  3599: Retangulo  NAO
+
+o? 9302 7930
+9302: Retangulo  7930: Retangulo  NAO
+
+o? 2520 9802
+2520: Circulo  9802: Retangulo  NAO
+
+o? 3021 984
+3021: Circulo  984: Circulo  NAO
+
+o? 9791 6648
+9791: Retangulo  6648: Circulo  NAO
+
+o? 431 103
+431: Retangulo  103: Circulo  NAO
+
+o? 867 9630
+867: Circulo  9630: Circulo  NAO
+
+o? 9115 7305
+9115: Circulo  7305: Circulo  NAO
+
+o? 9327 1078
+9327: Circulo  1078: Retangulo  NAO
+
+o? 7737 305
+7737: Circulo  305: Retangulo  NAO
+
+o? 9710 7031
+9710: Retangulo  7031: Retangulo  SIM
+
+o? 9632 1639
+9632: Retangulo  1639: Circulo  NAO
+
+o? 2374 8876
+2374: Retangulo  8876: Retangulo  NAO
+
+o? 9396 3791
+9396: Circulo  3791: Retangulo  NAO
+
+o? 7498 2982
+7498: Retangulo  2982: Circulo  NAO
+
+o? 6828 6990
+6828: Circulo  6990: Circulo  NAO
+
+o? 5552 8562
+5552: Retangulo  8562: Circulo  NAO
+
+o? 7161 4237
+7161: Circulo  4237: Circulo  NAO
+
+o? 2908 120
+2908: Retangulo  120: Circulo  NAO
+
+o? 2528 8962
+2528: Retangulo  8962: Retangulo  NAO
+
+o? 1085 4752
+1085: Retangulo  4752: Circulo  NAO
+
+o? 4201 2399
+4201: Circulo  2399: Retangulo  NAO
+
+o? 5515 5313
+5515: Circulo  5313: Circulo  NAO
+
+o? 1455 9691
+1455: Circulo  9691: Circulo  NAO
+
+o? 7655 7127
+7655: Retangulo  7127: Retangulo  NAO
+
+o? 3425 1142
+3425: Retangulo  1142: Retangulo  NAO
+
+o? 3482 8062
+3482: Retangulo  8062: Retangulo  NAO
+
+o? 2753 9171
+2753: Retangulo  9171: Circulo  NAO
+
+o? 2825 3291
+2825: Retangulo  3291: Circulo  NAO
+
+o? 1407 6170
+1407: Circulo  6170: Retangulo  NAO
+
+o? 6984 2509
+6984: Circulo  2509: Circulo  NAO
+
+o? 622 1286
+622: Retangulo  1286: Retangulo  NAO
+
+o? 3449 4032
+3449: Retangulo  4032: Circulo  NAO
+
+o? 1115 4644
+1115: Retangulo  4644: Circulo  NAO
+
+o? 4140 7999
+4140: Circulo  7999: Circulo  NAO
+
+o? 2788 8622
+2788: Retangulo  8622: Circulo  NAO
+
+o? 3505 393
+3505: Circulo  393: Circulo  NAO
+
+o? 4586 4072
+4586: Retangulo  4072: Retangulo  NAO
+
+o? 5480 9048
+5480: Retangulo  9048: Circulo  NAO
+
+o? 5806 6778
+5806: Retangulo  6778: Retangulo  SIM
+
+o? 2496 9591
+2496: Circulo  9591: Circulo  NAO
+
+o? 5618 5247
+5618: Retangulo  5247: Circulo  NAO
+
+o? 1857 1936
+1857: Circulo  1936: Retangulo  NAO
+
+o? 3410 4276
+3410: Retangulo  4276: Retangulo  NAO
+
+o? 8902 4202
+8902: Retangulo  4202: Retangulo  NAO
+
+o? 5838 7234
+5838: Circulo  7234: Retangulo  NAO
+
+o? 1690 7183
+1690: Retangulo  7183: Circulo  NAO
+
+o? 5457 2913
+5457: Circulo  2913: Circulo  NAO
+
+o? 1856 6802
+1856: Retangulo  6802: Retangulo  NAO
+
+o? 2825 6575
+2825: Retangulo  6575: Retangulo  NAO
+
+o? 1876 2824
+1876: Retangulo  2824: Retangulo  NAO
+
+o? 6518 6092
+6518: Retangulo  6092: Retangulo  NAO
+
+o? 1648 9959
+1648: Retangulo  9959: Retangulo  SIM
+
+o? 9653 534
+9653: Retangulo  534: Circulo  NAO
+
+o? 4172 158
+4172: Retangulo  158: Retangulo  NAO
+
+o? 1893 6610
+1893: Circulo  6610: Retangulo  NAO
+
+o? 7405 9752
+7405: Circulo  9752: Retangulo  NAO
+
+o? 6919 3375
+6919: Circulo  3375: Circulo  NAO
+
+o? 1896 2927
+1896: Circulo  2927: Retangulo  NAO
+
+o? 9058 2500
+9058: Retangulo  2500: Retangulo  NAO
+
+o? 4669 6539
+4669: Circulo  6539: Retangulo  NAO
+
+o? 805 5434
+805: Circulo  5434: Retangulo  NAO
+
+o? 9227 1474
+9227: Retangulo  1474: Retangulo  NAO
+
+o? 4510 5706
+4510: Retangulo  5706: Circulo  NAO
+
+o? 468 7630
+468: Circulo  7630: Retangulo  NAO
+
+o? 9283 9052
+9283: Circulo  9052: Retangulo  NAO
+
+o? 9446 9928
+9446: Retangulo  9928: Retangulo  NAO
+
+o? 6561 7826
+6561: Circulo  7826: Retangulo  NAO
+
+o? 2938 2845
+2938: Retangulo  2845: Circulo  NAO
+
+o? 846 4590
+846: Circulo  4590: Circulo  NAO
+
+o? 3183 1685
+3183: Circulo  1685: Retangulo  NAO
+
+o? 2155 9316
+2155: Circulo  9316: Retangulo  NAO
+
+o? 2324 4852
+2324: Retangulo  4852: Retangulo  NAO
+
+o? 432 6556
+432: Circulo  6556: Retangulo  NAO
+
+o? 5053 4880
+5053: Circulo  4880: Retangulo  NAO
+
+o? 8731 231
+8731: Circulo  231: Circulo  NAO
+
+o? 9764 6195
+9764: Retangulo  6195: Circulo  NAO
+
+o? 6355 457
+6355: Circulo  457: Circulo  NAO
+
+o? 3224 9312
+3224: Retangulo  9312: Circulo  NAO
+
+o? 8793 8967
+8793: Circulo  8967: Circulo  NAO
+
+o? 4339 2356
+4339: Circulo  2356: Retangulo  NAO
+
+o? 8552 8140
+8552: Retangulo  8140: Retangulo  NAO
+
+o? 9881 5497
+9881: Retangulo  5497: Circulo  NAO
+
+o? 7873 4250
+7873: Circulo  4250: Retangulo  NAO
+
+o? 6766 8013
+6766: Retangulo  8013: Circulo  NAO
+
+o? 7485 9798
+7485: Circulo  9798: Circulo  NAO
+
+o? 9113 9195
+9113: Retangulo  9195: Circulo  NAO
+
+o? 7221 3902
+7221: Circulo  3902: Retangulo  NAO
+
+o? 44 9935
+44: Retangulo  9935: Retangulo  NAO
+
+o? 3725 1146
+3725: Retangulo  1146: Circulo  NAO
+
+o? 4214 872
+4214: Retangulo  872: Retangulo  NAO
+
+o? 9912 6769
+9912: Circulo  6769: Circulo  NAO
+
+o? 1259 9776
+1259: Retangulo  9776: Retangulo  NAO
+
+o? 935 743
+935: Retangulo  743: Retangulo  NAO
+
+o? 2237 3897
+2237: Retangulo  3897: Circulo  NAO
+
+o? 4626 576
+4626: Circulo  576: Circulo  NAO
+
+o? 5407 6717
+5407: Circulo  6717: Circulo  NAO
+
+o? 6043 1403
+6043: Circulo  1403: Retangulo  NAO
+
+o? 6644 756
+6644: Retangulo  756: Circulo  NAO
+
+o? 4670 7664
+4670: Retangulo  7664: Retangulo  NAO
+
+o? 8369 5554
+8369: Retangulo  5554: Retangulo  NAO
+
+o? 8163 3760
+8163: Circulo  3760: Retangulo  NAO
+
+o? 4685 2131
+4685: Retangulo  2131: Circulo  NAO
+
+o? 7225 1248
+7225: Circulo  1248: Circulo  NAO
+
+o? 1840 993
+1840: Retangulo  993: Circulo  NAO
+
+o? 2569 8452
+2569: Circulo  8452: Retangulo  NAO
+
+o? 1433 2034
+1433: Retangulo  2034: Circulo  NAO
+
+o? 1354 9483
+1354: Retangulo  9483: Circulo  NAO
+
+o? 2193 381
+2193: Circulo  381: Circulo  NAO
+
+o? 9978 3324
+9978: Circulo  3324: Circulo  NAO
+
+o? 7389 2419
+7389: Circulo  2419: Circulo  NAO
+
+o? 9243 5322
+9243: Circulo  5322: Circulo  NAO
+
+o? 7077 8687
+7077: Circulo  8687: Retangulo  NAO
+
+o? 1473 1823
+1473: Circulo  1823: Retangulo  NAO
+
+o? 3070 2993
+3070: Retangulo  2993: Retangulo  NAO
+
+o? 6327 4316
+6327: Circulo  4316: Retangulo  NAO
+
+o? 4390 6734
+4390: Retangulo  6734: Retangulo  NAO
+
+o? 2620 9414
+2620: Retangulo  9414: Circulo  NAO
+
+o? 5670 2550
+5670: Circulo  2550: Circulo  NAO
+
+o? 2272 5383
+2272: Retangulo  5383: Circulo  NAO
+
+o? 7299 6339
+7299: Circulo  6339: Circulo  NAO
+
+o? 976 1287
+976: Retangulo  1287: Circulo  NAO
+
+o? 4614 3594
+4614: Circulo  3594: Circulo  NAO
+
+o? 3273 3520
+3273: Circulo  3520: Retangulo  NAO
+
+o? 8567 8101
+8567: Retangulo  8101: Circulo  NAO
+
+o? 3881 3561
+3881: Retangulo  3561: Circulo  NAO
+
+o? 8505 9010
+8505: Circulo  9010: Retangulo  NAO
+
+o? 6647 2747
+6647: Retangulo  2747: Retangulo  NAO
+
+o? 4892 2417
+4892: Retangulo  2417: Retangulo  NAO
+
+o? 4498 3044
+4498: Retangulo  3044: Retangulo  NAO
+
+o? 2353 2964
+2353: Circulo  2964: Circulo  NAO
+
+o? 7274 5785
+7274: Retangulo  5785: Circulo  NAO
+
+o? 1562 6463
+1562: Retangulo  6463: Circulo  NAO
+
+o? 5649 4576
+5649: Circulo  4576: Retangulo  NAO
+
+o? 1730 8618
+1730: Retangulo  8618: Retangulo  NAO
+
+o? 7110 3781
+7110: Circulo  3781: Circulo  NAO
+
+o? 5777 3925
+5777: Retangulo  3925: Circulo  NAO
+
+o? 8374 8969
+8374: Retangulo  8969: Retangulo  NAO
+
+o? 7081 7665
+7081: Circulo  7665: Circulo  SIM
+
+o? 572 8011
+572: Retangulo  8011: Circulo  NAO
+
+o? 184 2056
+184: Retangulo  2056: Retangulo  NAO
+
+o? 7145 3215
+7145: Retangulo  3215: Retangulo  NAO
+
+o? 2246 176
+2246: Retangulo  176: Retangulo  NAO
+
+o? 1703 3941
+1703: Retangulo  3941: Retangulo  SIM
+
+o? 6787 2340
+6787: Circulo  2340: Circulo  NAO
+
+o? 7681 3241
+7681: Circulo  3241: Circulo  NAO
+
+o? 3929 2620
+3929: Retangulo  2620: Retangulo  NAO
+
+o? 6176 3571
+6176: Retangulo  3571: Circulo  NAO
+
+o? 4217 7192
+4217: Retangulo  7192: Retangulo  NAO
+
+o? 6191 6344
+6191: Retangulo  6344: Retangulo  NAO
+
+o? 7466 1537
+7466: Retangulo  1537: Circulo  NAO
+
+o? 496 8703
+496: Retangulo  8703: Circulo  NAO
+
+o? 5111 3118
+5111: Retangulo  3118: Retangulo  NAO
+
+o? 6329 3350
+6329: Retangulo  3350: Retangulo  NAO
+
+o? 6061 6982
+6061: Circulo  6982: Retangulo  NAO
+
+o? 5079 2468
+5079: Circulo  2468: Retangulo  NAO
+
+o? 8662 3096
+8662: Retangulo  3096: Circulo  NAO
+
+o? 6400 1317
+6400: Retangulo  1317: Circulo  NAO
+
+o? 4201 6457
+4201: Circulo  6457: Circulo  NAO
+
+o? 11 4296
+11: Retangulo  4296: Circulo  NAO
+
+o? 9715 4863
+9715: Circulo  4863: Circulo  NAO
+
+o? 2982 8113
+2982: Circulo  8113: Circulo  NAO
+
+o? 9314 2695
+9314: Retangulo  2695: Circulo  NAO
+
+o? 7341 5290
+7341: Circulo  5290: Retangulo  NAO
+
+o? 3307 5827
+3307: Circulo  5827: Circulo  NAO
+
+o? 3122 9282
+3122: Retangulo  9282: Circulo  NAO
+
+o? 2163 167
+2163: Circulo  167: Retangulo  NAO
+
+o? 5924 1405
+5924: Retangulo  1405: Circulo  NAO
+
+o? 9397 4913
+9397: Circulo  4913: Retangulo  NAO
+
+o? 6883 6600
+6883: Circulo  6600: Circulo  NAO
+
+o? 188 9179
+188: Retangulo  9179: Retangulo  NAO
+
+o? 3481 4004
+3481: Circulo  4004: Retangulo  NAO
+
+o? 3215 4254
+3215: Retangulo  4254: Circulo  SIM
+
+o? 670 9018
+670: Retangulo  9018: Circulo  NAO
+
+o? 2976 9602
+2976: Circulo  9602: Retangulo  NAO
+
+o? 8611 4432
+8611: Circulo  4432: Retangulo  NAO
+
+o? 6483 5760
+6483: Circulo  5760: Circulo  NAO
+
+o? 9024 446
+9024: Circulo  446: Retangulo  NAO
+
+o? 8200 132
+8200: Retangulo  132: Circulo  NAO
+
+o? 9263 6125
+9263: Retangulo  6125: Retangulo  NAO
+
+o? 7101 138
+7101: Circulo  138: Circulo  NAO
+
+o? 2861 8677
+2861: Retangulo  8677: Circulo  NAO
+
+o? 5603 9639
+5603: Retangulo  9639: Circulo  NAO
+
+o? 1048 1653
+1048: Retangulo  1653: Circulo  NAO
+
+o? 5972 1825
+5972: Retangulo  1825: Circulo  NAO
+
+o? 6725 7161
+6725: Retangulo  7161: Circulo  NAO
+
+o? 3953 9037
+3953: Retangulo  9037: Circulo  NAO
+
+o? 29 6348
+29: Retangulo  6348: Circulo  NAO
+
+o? 4755 4001
+4755: Circulo  4001: Retangulo  NAO
+
+o? 2966 137
+2966: Retangulo  137: Retangulo  NAO
+
+o? 562 8153
+562: Retangulo  8153: Retangulo  NAO
+
+o? 4190 7002
+4190: Retangulo  7002: Circulo  NAO
+
+o? 533 3204
+533: Retangulo  3204: Circulo  NAO
+
+o? 2593 8365
+2593: Circulo  8365: Circulo  NAO
+
+o? 8301 9439
+8301: Circulo  9439: Circulo  NAO
+
+o? 4620 67
+4620: Circulo  67: Circulo  NAO
+
+o? 7757 2569
+7757: Retangulo  2569: Circulo  NAO
+
+o? 1898 902
+1898: Retangulo  902: Retangulo  NAO
+
+o? 771 8068
+771: Circulo  8068: Retangulo  NAO
+
+o? 7863 5559
+7863: Circulo  5559: Circulo  NAO
+
+o? 2835 8117
+2835: Circulo  8117: Retangulo  NAO
+
+o? 2490 2517
+2490: Circulo  2517: Circulo  NAO
+
+o? 5832 3137
+5832: Circulo  3137: Retangulo  NAO
+
+o? 6395 5195
+6395: Retangulo  5195: Retangulo  NAO
+
+o? 5385 9079
+5385: Circulo  9079: Circulo  NAO
+
+o? 4598 257
+4598: Retangulo  257: Retangulo  NAO
+
+o? 5132 8068
+5132: Retangulo  8068: Retangulo  NAO
+
+o? 2623 6981
+2623: Circulo  6981: Circulo  NAO
+
+o? 1894 1746
+1894: Retangulo  1746: Circulo  NAO
+
+o? 4322 3041
+4322: Retangulo  3041: Retangulo  NAO
+
+o? 8003 5190
+8003: Retangulo  5190: Circulo  NAO
+
+o? 8515 4880
+8515: Circulo  4880: Retangulo  NAO
+
+o? 253 5918
+253: Circulo  5918: Retangulo  SIM
+
+o? 3921 5599
+3921: Circulo  5599: Circulo  NAO
+
+o? 8795 9440
+8795: Retangulo  9440: Retangulo  NAO
+
+o? 7270 2250
+7270: Retangulo  2250: Circulo  NAO
+
+o? 2080 9550
+2080: Retangulo  9550: Retangulo  NAO
+
+o? 7671 8675
+7671: Circulo  8675: Retangulo  NAO
+
+o? 7421 4300
+7421: Retangulo  4300: Retangulo  NAO
+
+o? 3263 1557
+3263: Retangulo  1557: Circulo  NAO
+
+o? 4168 2269
+4168: Retangulo  2269: Circulo  NAO
+
+o? 5298 2592
+5298: Circulo  2592: Circulo  NAO
+
+o? 133 6005
+133: Circulo  6005: Retangulo  NAO
+
+o? 7542 2024
+7542: Circulo  2024: Retangulo  NAO
+
+o? 9940 8481
+9940: Retangulo  8481: Circulo  NAO
+
+o? 7482 3433
+7482: Circulo  3433: Circulo  NAO
+
+o? 6148 5645
+6148: Retangulo  5645: Retangulo  NAO
+
+o? 8033 8079
+8033: Retangulo  8079: Circulo  NAO
+
+o? 4828 6036
+4828: Retangulo  6036: Circulo  NAO
+
+o? 2837 7418
+2837: Retangulo  7418: Retangulo  NAO
+
+o? 1565 2089
+1565: Retangulo  2089: Circulo  NAO
+
+o? 3656 2313
+3656: Retangulo  2313: Circulo  NAO
+
+o? 9275 6496
+9275: Retangulo  6496: Retangulo  NAO
+
+o? 5047 2896
+5047: Circulo  2896: Retangulo  NAO
+
+o? 2962 663
+2962: Retangulo  663: Circulo  NAO
+
+o? 9570 6546
+9570: Circulo  6546: Circulo  NAO
+
+o? 1725 9976
+1725: Circulo  9976: Retangulo  NAO
+
+o? 9121 6699
+9121: Circulo  6699: Circulo  NAO
+
+o? 118 9142
+118: Retangulo  9142: Retangulo  NAO
+
+o? 6332 2847
+6332: Retangulo  2847: Circulo  NAO
+
+o? 1967 6819
+1967: Retangulo  6819: Circulo  NAO
+
+o? 6227 8357
+6227: Retangulo  8357: Retangulo  NAO
+
+o? 487 2922
+487: Circulo  2922: Circulo  NAO
+
+o? 3289 1950
+3289: Circulo  1950: Circulo  NAO
+
+o? 9426 3997
+9426: Circulo  3997: Circulo  NAO
+
+o? 8882 2400
+8882: Retangulo  2400: Circulo  NAO
+
+o? 9472 2004
+9472: Retangulo  2004: Circulo  NAO
+
+o? 8391 4938
+8391: Circulo  4938: Circulo  NAO
+
+o? 571 2651
+571: Circulo  2651: Retangulo  NAO
+
+o? 725 3343
+725: Retangulo  3343: Circulo  NAO
+
+o? 131 7009
+131: Retangulo  7009: Circulo  NAO
+
+o? 1959 1850
+1959: Circulo  1850: Retangulo  NAO
+
+o? 7903 8007
+7903: Circulo  8007: Circulo  NAO
+
+o? 7175 8455
+7175: Retangulo  8455: Circulo  NAO
+
+o? 3834 2579
+3834: Circulo  2579: Retangulo  NAO
+
+o? 8297 3511
+8297: Retangulo  3511: Circulo  NAO
+
+o? 427 9532
+427: Circulo  9532: Retangulo  NAO
+
+o? 7595 3334
+7595: Retangulo  3334: Retangulo  NAO
+
+o? 2012 1445
+2012: Retangulo  1445: Retangulo  NAO
+
+o? 7285 4315
+7285: Circulo  4315: Circulo  NAO
+
+o? 592 6499
+592: Retangulo  6499: Circulo  NAO
+
+o? 1196 4192
+1196: Retangulo  4192: Retangulo  NAO
+
+o? 3402 1421
+3402: Circulo  1421: Retangulo  NAO
+
+o? 8193 8612
+8193: Circulo  8612: Retangulo  NAO
+
+o? 2734 7390
+2734: Retangulo  7390: Retangulo  NAO
+
+o? 3540 4872
+3540: Circulo  4872: Circulo  NAO
+
+o? 1505 7028
+1505: Retangulo  7028: Retangulo  NAO
+
+o? 2845 60
+2845: Circulo  60: Circulo  NAO
+
+o? 7591 8677
+7591: Circulo  8677: Circulo  NAO
+
+o? 1113 5339
+1113: Circulo  5339: Retangulo  NAO
+
+o? 8760 5086
+8760: Circulo  5086: Retangulo  NAO
+
+o? 1096 2833
+1096: Retangulo  2833: Circulo  NAO
+
+o? 4333 1162
+4333: Circulo  1162: Retangulo  NAO
+
+o? 5277 8528
+5277: Circulo  8528: Retangulo  NAO
+
+o? 2466 3015
+2466: Circulo  3015: Circulo  NAO
+
+o? 1884 6715
+1884: Circulo  6715: Circulo  NAO
+
+o? 8724 3743
+8724: Circulo  3743: Retangulo  NAO
+
+o? 5388 79
+5388: Circulo  79: Circulo  NAO
+
+o? 8424 6420
+8424: Circulo  6420: Circulo  NAO
+
+o? 337 8720
+337: Circulo  8720: Retangulo  NAO
+
+o? 8604 8478
+8604: Circulo  8478: Circulo  NAO
+
+o? 1487 4528
+1487: Retangulo  4528: Retangulo  NAO
+
+o? 1179 7198
+1179: Circulo  7198: Retangulo  NAO
+
+o? 1266 7124
+1266: Circulo  7124: Retangulo  NAO
+
+o? 9711 1457
+9711: Circulo  1457: Retangulo  NAO
+
+o? 2715 5786
+2715: Circulo  5786: Retangulo  NAO
+
+o? 7681 3961
+7681: Circulo  3961: Circulo  NAO
+
+o? 4511 1575
+4511: Retangulo  1575: Circulo  NAO
+
+o? 9453 4830
+9453: Circulo  4830: Circulo  NAO
+
+o? 934 6561
+934: Retangulo  6561: Circulo  NAO
+
+o? 6736 1613
+6736: Retangulo  1613: Retangulo  NAO
+
+o? 5825 5033
+5825: Retangulo  5033: Retangulo  NAO
+
+o? 9943 8754
+9943: Circulo  8754: Circulo  NAO
+
+o? 5793 9743
+5793: Circulo  9743: Retangulo  NAO
+
+o? 501 2816
+501: Circulo  2816: Retangulo  NAO
+
+o? 6525 4398
+6525: Circulo  4398: Circulo  NAO
+
+o? 6008 3525
+6008: Retangulo  3525: Circulo  NAO
+
+o? 2429 391
+2429: Retangulo  391: Circulo  NAO
+
+o? 8647 3712
+8647: Circulo  3712: Retangulo  NAO
+
+o? 90 6932
+90: Circulo  6932: Retangulo  NAO
+
+o? 6573 3303
+6573: Circulo  3303: Circulo  NAO
+
+o? 2749 6824
+2749: Circulo  6824: Retangulo  NAO
+
+o? 9455 2217
+9455: Retangulo  2217: Circulo  NAO
+
+o? 255 8950
+255: Circulo  8950: Retangulo  NAO
+
+o? 8127 270
+8127: Circulo  270: Circulo  NAO
+
+o? 3290 4152
+3290: Retangulo  4152: Circulo  NAO
+
+o? 7337 7326
+7337: Retangulo  7326: Circulo  NAO
+
+o? 3023 5324
+3023: Retangulo  5324: Retangulo  SIM
+
+o? 9341 1794
+9341: Retangulo  1794: Circulo  NAO
+
+o? 6686 8254
+6686: Retangulo  8254: Retangulo  NAO
+
+o? 5233 3572
+5233: Circulo  3572: Retangulo  NAO
+
+o? 1268 5446
+1268: Retangulo  5446: Retangulo  SIM
+
+o? 5799 1238
+5799: Circulo  1238: Retangulo  NAO
+
+o? 1338 2077
+1338: Circulo  2077: Circulo  NAO
+
+o? 395 9263
+395: Retangulo  9263: Retangulo  NAO
+
+o? 7335 6856
+7335: Circulo  6856: Retangulo  NAO
+
+o? 4210 2179
+4210: Retangulo  2179: Circulo  NAO
+
+o? 9285 4409
+9285: Circulo  4409: Retangulo  NAO
+
+o? 8210 9070
+8210: Retangulo  9070: Retangulo  NAO
+
+o? 3661 7391
+3661: Circulo  7391: Retangulo  NAO
+
+o? 7528 5648
+7528: Retangulo  5648: Retangulo  SIM
+
+o? 7216 7837
+7216: Retangulo  7837: Circulo  NAO
+
+o? 9171 3297
+9171: Circulo  3297: Circulo  NAO
+
+o? 7721 5379
+7721: Retangulo  5379: Circulo  NAO
+
+o? 1713 3676
+1713: Circulo  3676: Retangulo  NAO
+
+o? 8927 2280
+8927: Retangulo  2280: Circulo  NAO
+
+o? 9617 3760
+9617: Retangulo  3760: Retangulo  NAO
+
+o? 6013 2032
+6013: Circulo  2032: Retangulo  NAO
+
+o? 8268 2346
+8268: Circulo  2346: Circulo  NAO
+
+o? 4965 6137
+4965: Circulo  6137: Retangulo  NAO
+
+o? 4389 6525
+4389: Circulo  6525: Circulo  NAO
+
+o? 3240 6657
+3240: Circulo  6657: Circulo  NAO
+
+o? 5202 3956
+5202: Circulo  3956: Retangulo  NAO
+
+o? 4488 7500
+4488: Circulo  7500: Circulo  NAO
+
+o? 899 7294
+899: Retangulo  7294: Retangulo  NAO
+
+o? 5479 2904
+5479: Circulo  2904: Circulo  NAO
+
+o? 8658 2658
+8658: Circulo  2658: Circulo  NAO
+
+o? 3288 2633
+3288: Circulo  2633: Retangulo  NAO
+
+o? 1685 6479
+1685: Retangulo  6479: Retangulo  NAO
+
+o? 9782 7228
+9782: Retangulo  7228: Retangulo  NAO
+
+o? 931 7234
+931: Circulo  7234: Retangulo  NAO
+
+o? 2846 4769
+2846: Retangulo  4769: Retangulo  NAO
+
+o? 5854 4286
+5854: Retangulo  4286: Retangulo  SIM
+
+o? 1061 5264
+1061: Retangulo  5264: Retangulo  NAO
+
+o? 2890 5083
+2890: Retangulo  5083: Circulo  NAO
+
+o? 7089 2025
+7089: Circulo  2025: Circulo  NAO
+
+o? 8209 6763
+8209: Circulo  6763: Circulo  NAO
+
+o? 7206 586
+7206: Circulo  586: Retangulo  NAO
+
+o? 5512 1399
+5512: Retangulo  1399: Circulo  NAO
+
+o? 5773 868
+5773: Circulo  868: Retangulo  NAO
+
+o? 5522 5470
+5522: Retangulo  5470: Retangulo  NAO
+
+o? 7014 1925
+7014: Circulo  1925: Retangulo  NAO
+
+o? 6724 3340
+6724: Retangulo  3340: Retangulo  NAO
+
+o? 3984 5282
+3984: Circulo  5282: Retangulo  NAO
+
+o? 170 918
+170: Retangulo  918: Circulo  NAO
+
+o? 6385 6680
+6385: Circulo  6680: Retangulo  NAO
+
+o? 927 8038
+927: Circulo  8038: Retangulo  NAO
+
+o? 6813 2327
+6813: Circulo  2327: Retangulo  NAO
+
+o? 3331 909
+3331: Circulo  909: Circulo  NAO
+
+o? 9457 5577
+9457: Circulo  5577: Circulo  NAO
+
+o? 5493 176
+5493: Circulo  176: Retangulo  NAO
+
+o? 2616 4611
+2616: Circulo  4611: Circulo  NAO
+
+o? 3125 731
+3125: Retangulo  731: Retangulo  NAO
+
+o? 5687 2317
+5687: Retangulo  2317: Circulo  NAO
+
+o? 7285 2967
+7285: Circulo  2967: Circulo  NAO
+
+o? 461 786
+461: Retangulo  786: Circulo  NAO
+
+o? 9187 9448
+9187: Circulo  9448: Retangulo  NAO
+
+o? 3595 8785
+3595: Circulo  8785: Circulo  NAO
+
+o? 1559 5653
+1559: Retangulo  5653: Circulo  NAO
+
+o? 7692 9583
+7692: Circulo  9583: Circulo  NAO
+
+o? 572 5038
+572: Retangulo  5038: Retangulo  NAO
+
+o? 5193 8128
+5193: Circulo  8128: Retangulo  NAO
+
+o? 7602 2392
+7602: Circulo  2392: Retangulo  NAO
+
+o? 5155 1640
+5155: Circulo  1640: Retangulo  NAO
+
+o? 903 4946
+903: Circulo  4946: Retangulo  NAO
+
+o? 7986 2658
+7986: Circulo  2658: Circulo  NAO
+
+o? 1343 9147
+1343: Retangulo  9147: Circulo  NAO
+
+o? 9942 9941
+9942: Circulo  9941: Retangulo  NAO
+
+o? 8311 6294
+8311: Circulo  6294: Circulo  NAO
+
+o? 1724 4602
+1724: Retangulo  4602: Circulo  NAO
+
+o? 1766 4213
+1766: Retangulo  4213: Circulo  NAO
+
+o? 4347 1658
+4347: Circulo  1658: Retangulo  NAO
+
+o? 1722 2099
+1722: Circulo  2099: Retangulo  NAO
+
+o? 8959 6756
+8959: Circulo  6756: Circulo  NAO
+
+o? 3931 5309
+3931: Circulo  5309: Retangulo  NAO
+
+o? 6624 7772
+6624: Circulo  7772: Retangulo  NAO
+
+o? 1799 2057
+1799: Retangulo  2057: Retangulo  NAO
+
+o? 7251 5741
+7251: Circulo  5741: Retangulo  NAO
+
+o? 1310 978
+1310: Retangulo  978: Circulo  NAO
+
+o? 9009 6147
+9009: Circulo  6147: Circulo  SIM
+
+o? 8654 7287
+8654: Retangulo  7287: Circulo  NAO
+
+o? 5821 4436
+5821: Circulo  4436: Retangulo  NAO
+
+o? 2576 2051
+2576: Retangulo  2051: Retangulo  NAO
+
+o? 2585 5140
+2585: Retangulo  5140: Retangulo  NAO
+
+o? 3580 8750
+3580: Retangulo  8750: Retangulo  NAO
+
+o? 8409 889
+8409: Circulo  889: Circulo  NAO
+
+o? 5216 785
+5216: Retangulo  785: Retangulo  NAO
+
+o? 1275 7561
+1275: Circulo  7561: Circulo  NAO
+
+o? 4400 4114
+4400: Retangulo  4114: Retangulo  NAO
+
+o? 3723 3367
+3723: Circulo  3367: Circulo  NAO
+
+o? 1062 2587
+1062: Circulo  2587: Circulo  NAO
+
+o? 790 5804
+790: Retangulo  5804: Retangulo  NAO
+
+o? 8922 9759
+8922: Circulo  9759: Circulo  NAO
+
+o? 275 9826
+275: Retangulo  9826: Retangulo  NAO
+
+o? 6622 8964
+6622: Retangulo  8964: Circulo  NAO
+
+o? 7609 4421
+7609: Circulo  4421: Retangulo  NAO
+
+o? 3693 192
+3693: Circulo  192: Circulo  NAO
+
+o? 4245 3639
+4245: Circulo  3639: Circulo  NAO
+
+o? 948 1012
+948: Circulo  1012: Retangulo  NAO
+
+o? 4278 1039
+4278: Circulo  1039: Circulo  NAO
+
+o? 8254 5074
+8254: Retangulo  5074: Retangulo  NAO
+
+o? 3862 2923
+3862: Retangulo  2923: Circulo  NAO
+
+o? 551 2329
+551: Retangulo  2329: Circulo  NAO
+
+o? 6731 7812
+6731: Retangulo  7812: Circulo  NAO
+
+o? 9580 7869
+9580: Retangulo  7869: Circulo  NAO
+
+o? 4830 3863
+4830: Circulo  3863: Retangulo  NAO
+
+o? 7352 2863
+7352: Retangulo  2863: Circulo  NAO
+
+o? 9618 2202
+9618: Circulo  2202: Circulo  NAO
+
+o? 7047 2895
+7047: Circulo  2895: Circulo  NAO
+
+o? 9172 3038
+9172: Retangulo  3038: Retangulo  NAO
+
+o? 4625 254
+4625: Retangulo  254: Retangulo  NAO
+
+o? 1130 7612
+1130: Retangulo  7612: Retangulo  NAO
+
+o? 8797 8905
+8797: Circulo  8905: Circulo  NAO
+
+o? 1419 2998
+1419: Circulo  2998: Retangulo  NAO
+
+o? 4897 9679
+4897: Circulo  9679: Circulo  NAO
+
+o? 418 1576
+418: Retangulo  1576: Retangulo  NAO
+
+o? 9841 3530
+9841: Circulo  3530: Retangulo  NAO
+
+o? 6647 954
+6647: Retangulo  954: Circulo  NAO
+
+o? 8119 366
+8119: Circulo  366: Circulo  NAO
+
+o? 1879 7978
+1879: Circulo  7978: Retangulo  NAO
+
+o? 662 9102
+662: Retangulo  9102: Circulo  NAO
+
+o? 8697 1406
+8697: Circulo  1406: Retangulo  NAO
+
+o? 6086 6585
+6086: Retangulo  6585: Circulo  NAO
+
+o? 3333 7255
+3333: Circulo  7255: Circulo  NAO
+
+o? 4240 7615
+4240: Retangulo  7615: Circulo  NAO
+
+o? 4760 4274
+4760: Retangulo  4274: Retangulo  NAO
+
+o? 1292 7779
+1292: Retangulo  7779: Circulo  NAO
+
+o? 473 161
+473: Retangulo  161: Retangulo  NAO
+
+o? 1059 5313
+1059: Circulo  5313: Circulo  NAO
+
+o? 9837 1553
+9837: Circulo  1553: Retangulo  NAO
+
+o? 8478 1585
+8478: Circulo  1585: Circulo  NAO
+
+o? 1552 2174
+1552: Retangulo  2174: Retangulo  NAO
+
+o? 9219 8311
+9219: Circulo  8311: Circulo  NAO
+
+o? 3486 2811
+3486: Circulo  2811: Circulo  NAO
+
+o? 7393 2011
+7393: Circulo  2011: Circulo  NAO
+
+o? 1977 9219
+1977: Circulo  9219: Circulo  NAO
+
+o? 3088 7098
+3088: Retangulo  7098: Circulo  NAO
+
+o? 685 1040
+685: Circulo  1040: Retangulo  NAO
+
+o? 4107 7777
+4107: Circulo  7777: Circulo  NAO
+
+o? 3730 826
+3730: Retangulo  826: Retangulo  NAO
+
+o? 7283 7017
+7283: Retangulo  7017: Circulo  NAO
+
+o? 7398 3715
+7398: Circulo  3715: Circulo  NAO
+
+o? 6306 5780
+6306: Circulo  5780: Retangulo  NAO
+
+o? 5074 3135
+5074: Retangulo  3135: Circulo  NAO
+
+o? 1176 1687
+1176: Circulo  1687: Circulo  NAO
+
+o? 7228 7332
+7228: Retangulo  7332: Circulo  NAO
+
+o? 1737 1841
+1737: Circulo  1841: Retangulo  SIM
+
+o? 6576 5651
+6576: Circulo  5651: Retangulo  NAO
+
+o? 656 5821
+656: Retangulo  5821: Circulo  NAO
+
+o? 9297 9992
+9297: Circulo  9992: Retangulo  NAO
+
+o? 3263 2620
+3263: Retangulo  2620: Retangulo  NAO
+
+o? 9250 8540
+9250: Retangulo  8540: Retangulo  NAO
+
+o? 4008 3804
+4008: Circulo  3804: Circulo  NAO
+
+o? 7636 6400
+7636: Retangulo  6400: Retangulo  NAO
+
+o? 6628 5179
+6628: Retangulo  5179: Circulo  NAO
+
+o? 4556 8616
+4556: Retangulo  8616: Circulo  NAO
+
+o? 6110 4494
+6110: Retangulo  4494: Circulo  NAO
+
+o? 1851 41
+1851: Circulo  41: Retangulo  NAO
+
+o? 304 1251
+304: Retangulo  1251: Circulo  NAO
+
+o? 76 9764
+76: Retangulo  9764: Retangulo  NAO
+
+o? 634 2868
+634: Retangulo  2868: Circulo  NAO
+
+o? 5988 7581
+5988: Circulo  7581: Circulo  NAO
+
+o? 4087 3520
+4087: Circulo  3520: Retangulo  NAO
+
+o? 5397 7079
+5397: Circulo  7079: Retangulo  NAO
+
+o? 1745 262
+1745: Retangulo  262: Retangulo  NAO
+
+o? 5757 7349
+5757: Circulo  7349: Retangulo  NAO
+
+o? 1927 2466
+1927: Circulo  2466: Circulo  NAO
+
+o? 7611 9680
+7611: Circulo  9680: Retangulo  NAO
+
+o? 2683 3089
+2683: Circulo  3089: Retangulo  NAO
+
+o? 3000 2848
+3000: Circulo  2848: Retangulo  NAO
+
+o? 7555 62
+7555: Circulo  62: Retangulo  NAO
+
+o? 2499 6000
+2499: Circulo  6000: Circulo  NAO
+
+o? 6488 7801
+6488: Retangulo  7801: Circulo  NAO
+
+o? 1096 7996
+1096: Retangulo  7996: Retangulo  NAO
+
+o? 9579 7451
+9579: Circulo  7451: Retangulo  NAO
+
+o? 6147 2156
+6147: Circulo  2156: Retangulo  NAO
+
+o? 1109 8946
+1109: Retangulo  8946: Circulo  NAO
+
+o? 8939 7411
+8939: Retangulo  7411: Circulo  NAO
+
+o? 8930 4754
+8930: Retangulo  4754: Retangulo  NAO
+
+o? 8932 9451
+8932: Retangulo  9451: Circulo  NAO
+
+o? 5170 2930
+5170: Retangulo  2930: Retangulo  NAO
+
+o? 3326 9647
+3326: Retangulo  9647: Retangulo  NAO
+
+o? 2857 6668
+2857: Circulo  6668: Retangulo  NAO
+
+o? 6614 6008
+6614: Retangulo  6008: Retangulo  NAO
+
+o? 9873 9006
+9873: Circulo  9006: Circulo  NAO
+
+o? 2118 7192
+2118: Circulo  7192: Retangulo  NAO
+
+o? 9502 6705
+9502: Retangulo  6705: Circulo  NAO
+
+o? 995 5557
+995: Retangulo  5557: Circulo  NAO
+
+o? 7731 3494
+7731: Circulo  3494: Retangulo  NAO
+
+o? 9312 850
+9312: Circulo  850: Retangulo  NAO
+
+o? 8953 9556
+8953: Circulo  9556: Retangulo  SIM
+
+o? 6910 4817
+6910: Retangulo  4817: Retangulo  NAO
+
+o? 5364 9226
+5364: Circulo  9226: Retangulo  NAO
+
+o? 5162 7211
+5162: Retangulo  7211: Retangulo  NAO
+
+o? 2622 811
+2622: Circulo  811: Circulo  NAO
+
+o? 2209 6261
+2209: Circulo  6261: Circulo  NAO
+
+o? 1714 5528
+1714: Retangulo  5528: Retangulo  NAO
+
+o? 4614 4071
+4614: Circulo  4071: Circulo  NAO
+
+o? 4168 452
+4168: Retangulo  452: Retangulo  NAO
+
+o? 1735 6077
+1735: Circulo  6077: Retangulo  NAO
+
+o? 92 2419
+92: Retangulo  2419: Circulo  NAO
+
+o? 5209 4035
+5209: Circulo  4035: Circulo  NAO
+
+o? 1681 6514
+1681: Circulo  6514: Retangulo  NAO
+
+o? 3856 8066
+3856: Retangulo  8066: Retangulo  NAO
+
+o? 6196 5009
+6196: Retangulo  5009: Retangulo  NAO
+
+o? 2591 8885
+2591: Retangulo  8885: Retangulo  NAO
+
+o? 2374 7238
+2374: Retangulo  7238: Retangulo  NAO
+
+o? 1580 5169
+1580: Retangulo  5169: Circulo  NAO
+
+o? 9194 3555
+9194: Retangulo  3555: Circulo  SIM
+
+o? 3121 2016
+3121: Circulo  2016: Circulo  NAO
+
+o? 788 9930
+788: Retangulo  9930: Circulo  NAO
+
+o? 3502 5374
+3502: Retangulo  5374: Retangulo  NAO
+
+o? 3515 6409
+3515: Retangulo  6409: Circulo  NAO
+
+o? 1778 9971
+1778: Retangulo  9971: Retangulo  SIM
+
+o? 9202 1952
+9202: Retangulo  1952: Retangulo  NAO
+
+o? 1241 882
+1241: Retangulo  882: Circulo  NAO
+
+o? 1401 9420
+1401: Circulo  9420: Circulo  NAO
+
+o? 8602 7418
+8602: Retangulo  7418: Retangulo  NAO
+
+o? 7112 6690
+7112: Retangulo  6690: Circulo  NAO
+
+o? 7718 1938
+7718: Retangulo  1938: Circulo  NAO
+
+o? 7196 2726
+7196: Retangulo  2726: Retangulo  NAO
+
+o? 1087 9382
+1087: Circulo  9382: Retangulo  NAO
+
+o? 5267 6101
+5267: Retangulo  6101: Retangulo  NAO
+
+o? 5758 9899
+5758: Retangulo  9899: Retangulo  NAO
+
+o? 3908 1502
+3908: Retangulo  1502: Retangulo  NAO
+
+o? 6029 8892
+6029: Retangulo  8892: Circulo  NAO
+
+o? 9766 4183
+9766: Retangulo  4183: Circulo  NAO
+
+o? 7326 5868
+7326: Circulo  5868: Circulo  NAO
+
+o? 1004 6508
+1004: Retangulo  6508: Retangulo  NAO
+
+o? 1946 195
+1946: Retangulo  195: Circulo  NAO
+
+o? 4307 5556
+4307: Retangulo  5556: Circulo  NAO
+
+o? 6102 1185
+6102: Circulo  1185: Circulo  NAO
+
+o? 1470 8585
+1470: Circulo  8585: Retangulo  NAO
+
+o? 3861 1681
+3861: Circulo  1681: Circulo  NAO
+
+o? 4271 4243
+4271: Retangulo  4243: Circulo  NAO
+
+o? 3935 2316
+3935: Retangulo  2316: Circulo  NAO
+
+o? 5287 5746
+5287: Circulo  5746: Retangulo  NAO
+
+o? 1614 4038
+1614: Circulo  4038: Circulo  NAO
+
+o? 3875 7272
+3875: Retangulo  7272: Circulo  NAO
+
+o? 7216 4331
+7216: Retangulo  4331: Retangulo  SIM
+
+o? 5886 5950
+5886: Circulo  5950: Retangulo  NAO
+
+o? 2176 2693
+2176: Retangulo  2693: Retangulo  NAO
+
+o? 3232 4951
+3232: Retangulo  4951: Circulo  NAO
+
+o? 1171 1
+1171: Circulo  1: Circulo  NAO
+
+o? 9898 7601
+9898: Retangulo  7601: Retangulo  NAO
+
+o? 7885 8231
+7885: Circulo  8231: Retangulo  NAO
+
+o? 5515 9489
+5515: Circulo  9489: Circulo  NAO
+
+o? 4210 14
+4210: Retangulo  14: Retangulo  NAO
+
+o? 8904 1063
+8904: Circulo  1063: Circulo  NAO
+
+o? 4683 9675
+4683: Circulo  9675: Circulo  NAO
+
+o? 5045 8206
+5045: Retangulo  8206: Retangulo  NAO
+
+o? 2392 7438
+2392: Retangulo  7438: Retangulo  NAO
+
+o? 8187 1244
+8187: Circulo  1244: Retangulo  NAO
+
+o? 9911 1249
+9911: Retangulo  1249: Circulo  NAO
+
+o? 8717 1077
+8717: Retangulo  1077: Circulo  NAO
+
+o? 5165 6951
+5165: Retangulo  6951: Circulo  NAO
+
+o? 5228 9103
+5228: Retangulo  9103: Circulo  NAO
+
+o? 346 6458
+346: Retangulo  6458: Retangulo  NAO
+
+o? 896 4643
+896: Retangulo  4643: Retangulo  SIM
+
+o? 5648 261
+5648: Retangulo  261: Circulo  NAO
+
+o? 2290 728
+2290: Retangulo  728: Retangulo  NAO
+
+o? 7600 6731
+7600: Retangulo  6731: Retangulo  NAO
+
+o? 8628 232
+8628: Circulo  232: Retangulo  NAO
+
+o? 8038 6973
+8038: Retangulo  6973: Circulo  NAO
+
+o? 940 2640
+940: Retangulo  2640: Circulo  NAO
+
+o? 3573 2137
+3573: Circulo  2137: Circulo  NAO
+
+o? 6683 5769
+6683: Retangulo  5769: Circulo  NAO
+
+o? 3891 946
+3891: Circulo  946: Retangulo  NAO
+
+o? 6145 480
+6145: Circulo  480: Circulo  NAO
+
+o? 5626 5139
+5626: Retangulo  5139: Circulo  NAO
+
+o? 448 3491
+448: Retangulo  3491: Retangulo  NAO
+
+o? 3733 6917
+3733: Circulo  6917: Retangulo  NAO
+
+o? 5514 5374
+5514: Circulo  5374: Retangulo  NAO
+
+o? 8754 7148
+8754: Circulo  7148: Retangulo  NAO
+
+o? 1116 275
+1116: Circulo  275: Retangulo  NAO
+
+o? 2446 6128
+2446: Retangulo  6128: Retangulo  SIM
+
+o? 7399 9284
+7399: Circulo  9284: Retangulo  NAO
+
+o? 1929 5712
+1929: Circulo  5712: Circulo  NAO
+
+o? 6769 2437
+6769: Circulo  2437: Circulo  NAO
+
+o? 6831 4586
+6831: Circulo  4586: Retangulo  NAO
+
+o? 7015 8818
+7015: Circulo  8818: Retangulo  NAO
+
+o? 1124 4489
+1124: Retangulo  4489: Circulo  NAO
+
+o? 7088 6329
+7088: Retangulo  6329: Retangulo  NAO
+
+o? 7042 4172
+7042: Retangulo  4172: Retangulo  NAO
+
+o? 4110 4393
+4110: Circulo  4393: Circulo  NAO
+
+o? 3713 2051
+3713: Retangulo  2051: Retangulo  NAO
+
+o? 2398 659
+2398: Retangulo  659: Retangulo  NAO
+
+o? 2730 3137
+2730: Circulo  3137: Retangulo  NAO
+
+o? 5184 1968
+5184: Circulo  1968: Circulo  NAO
+
+o? 6624 7569
+6624: Circulo  7569: Circulo  NAO
+
+o? 1439 3418
+1439: Retangulo  3418: Retangulo  NAO
+
+o? 9594 7228
+9594: Circulo  7228: Retangulo  NAO
+
+o? 5846 8650
+5846: Retangulo  8650: Retangulo  NAO
+
+o? 9592 9038
+9592: Retangulo  9038: Retangulo  NAO
+
+o? 7250 770
+7250: Retangulo  770: Retangulo  NAO
+
+o? 7188 357
+7188: Circulo  357: Circulo  NAO
+
+o? 8359 9422
+8359: Circulo  9422: Retangulo  NAO
+
+o? 5894 7461
+5894: Retangulo  7461: Circulo  NAO
+
+o? 4697 9420
+4697: Retangulo  9420: Circulo  NAO
+
+o? 209 7968
+209: Retangulo  7968: Circulo  NAO
+
+o? 7658 915
+7658: Retangulo  915: Circulo  NAO
+
+o? 7860 7532
+7860: Circulo  7532: Retangulo  NAO
+
+o? 8094 8018
+8094: Circulo  8018: Retangulo  NAO
+
+o? 7920 2596
+7920: Circulo  2596: Retangulo  NAO
+
+o? 5321 3656
+5321: Retangulo  3656: Retangulo  NAO
+
+o? 97 5359
+97: Circulo  5359: Circulo  NAO
+
+o? 7634 2784
+7634: Retangulo  2784: Circulo  NAO
+
+o? 3507 2986
+3507: Circulo  2986: Retangulo  NAO
+
+o? 7223 5615
+7223: Retangulo  5615: Retangulo  NAO
+
+o? 1461 3398
+1461: Circulo  3398: Retangulo  NAO
+
+o? 4758 4373
+4758: Circulo  4373: Retangulo  NAO
+
+o? 5141 4627
+5141: Retangulo  4627: Circulo  NAO
+
+o? 5731 4160
+5731: Circulo  4160: Retangulo  NAO
+
+o? 3861 522
+3861: Circulo  522: Circulo  NAO
+
+o? 9358 4750
+9358: Retangulo  4750: Retangulo  NAO
+
+o? 3179 5710
+3179: Retangulo  5710: Retangulo  NAO
+
+o? 1866 402
+1866: Circulo  402: Circulo  NAO
+
+o? 9911 7803
+9911: Retangulo  7803: Circulo  NAO
+
+o? 1337 8640
+1337: Retangulo  8640: Circulo  NAO
+
+o? 8325 3373
+8325: Circulo  3373: Circulo  NAO
+
+o? 7392 5215
+7392: Circulo  5215: Circulo  NAO
+
+o? 3851 4615
+3851: Retangulo  4615: Circulo  NAO
+
+o? 7946 6557
+7946: Retangulo  6557: Retangulo  NAO
+
+o? 5647 2213
+5647: Circulo  2213: Retangulo  NAO
+
+o? 3461 506
+3461: Retangulo  506: Retangulo  NAO
+
+o? 6292 3938
+6292: Retangulo  3938: Retangulo  NAO
+
+o? 6144 8595
+6144: Circulo  8595: Circulo  NAO
+
+o? 4326 3333
+4326: Circulo  3333: Circulo  NAO
+
+o? 7113 862
+7113: Circulo  862: Retangulo  NAO
+
+o? 2053 1564
+2053: Circulo  1564: Retangulo  NAO
+
+o? 5280 6004
+5280: Circulo  6004: Retangulo  NAO
+
+o? 7294 6430
+7294: Retangulo  6430: Retangulo  NAO
+
+o? 8076 4452
+8076: Circulo  4452: Circulo  NAO
+
+o? 1232 3849
+1232: Retangulo  3849: Circulo  NAO
+
+o? 1353 7807
+1353: Circulo  7807: Circulo  NAO
+
+o? 8746 4493
+8746: Retangulo  4493: Retangulo  NAO
+
+o? 4959 4043
+4959: Circulo  4043: Retangulo  NAO
+
+o? 7394 3776
+7394: Retangulo  3776: Retangulo  NAO
+
+o? 6925 4687
+6925: Circulo  4687: Circulo  NAO
+
+o? 4599 8539
+4599: Circulo  8539: Circulo  NAO
+
+o? 9579 5697
+9579: Circulo  5697: Circulo  NAO
+
+o? 1506 3203
+1506: Circulo  3203: Retangulo  NAO
+
+o? 7322 6723
+7322: Retangulo  6723: Circulo  NAO
+
+o? 5753 3801
+5753: Retangulo  3801: Circulo  NAO
+
+o? 5115 4451
+5115: Circulo  4451: Retangulo  NAO
+
+o? 5299 6975
+5299: Circulo  6975: Circulo  NAO
+
+o? 900 1704
+900: Circulo  1704: Circulo  NAO
+
+o? 4513 8700
+4513: Circulo  8700: Circulo  NAO
+
+o? 5350 8949
+5350: Retangulo  8949: Circulo  NAO
+
+o? 9731 3295
+9731: Retangulo  3295: Circulo  NAO
+
+o? 2680 6347
+2680: Retangulo  6347: Retangulo  NAO
+
+o? 9178 8532
+9178: Retangulo  8532: Circulo  NAO
+
+o? 47 1822
+47: Retangulo  1822: Retangulo  NAO
+
+o? 9779 4370
+9779: Retangulo  4370: Retangulo  NAO
+
+o? 8606 3136
+8606: Retangulo  3136: Retangulo  NAO
+
+o? 4838 6696
+4838: Retangulo  6696: Circulo  NAO
+
+o? 8051 244
+8051: Retangulo  244: Retangulo  NAO
+
+o? 8129 9726
+8129: Retangulo  9726: Circulo  NAO
+
+o? 6636 5374
+6636: Circulo  5374: Retangulo  NAO
+
+o? 4934 6592
+4934: Retangulo  6592: Retangulo  NAO
+
+o? 9039 6910
+9039: Circulo  6910: Retangulo  NAO
+
+o? 3012 9979
+3012: Circulo  9979: Circulo  NAO
+
+o? 4353 2571
+4353: Circulo  2571: Circulo  NAO
+
+o? 5999 2931
+5999: Retangulo  2931: Circulo  NAO
+
+o? 2822 1451
+2822: Retangulo  1451: Retangulo  NAO
+
+o? 3338 2047
+3338: Retangulo  2047: Circulo  NAO
+
+o? 3720 1029
+3720: Circulo  1029: Circulo  NAO
+
+o? 3154 6044
+3154: Retangulo  6044: Retangulo  NAO
+
+o? 6630 446
+6630: Circulo  446: Retangulo  NAO
+
+o? 3983 8898
+3983: Retangulo  8898: Circulo  NAO
+
+o? 9151 2562
+9151: Circulo  2562: Circulo  NAO
+
+o? 7396 3143
+7396: Retangulo  3143: Retangulo  NAO
+
+o? 880 5491
+880: Retangulo  5491: Circulo  NAO
+
+o? 6269 9323
+6269: Retangulo  9323: Retangulo  NAO
+
+o? 9755 9059
+9755: Retangulo  9059: Retangulo  NAO
+
+o? 5410 7726
+5410: Retangulo  7726: Retangulo  NAO
+
+o? 7786 4310
+7786: Retangulo  4310: Retangulo  NAO
+
+o? 8321 6515
+8321: Retangulo  6515: Retangulo  NAO
+
+o? 7256 3439
+7256: Retangulo  3439: Circulo  NAO
+
+o? 5701 5501
+5701: Circulo  5501: Retangulo  NAO
+
+o? 5087 8098
+5087: Retangulo  8098: Retangulo  NAO
+
+o? 2167 6156
+2167: Circulo  6156: Circulo  NAO
+
+o? 7282 9600
+7282: Retangulo  9600: Circulo  NAO
+
+o? 6146 4419
+6146: Retangulo  4419: Circulo  NAO
+
+o? 4811 4161
+4811: Retangulo  4161: Circulo  NAO
+
+o? 8177 2169
+8177: Retangulo  2169: Circulo  NAO
+
+o? 5379 934
+5379: Circulo  934: Retangulo  NAO
+
+o? 6432 2231
+6432: Circulo  2231: Retangulo  NAO
+
+o? 3057 9176
+3057: Circulo  9176: Retangulo  NAO
+
+o? 9092 9720
+9092: Retangulo  9720: Circulo  NAO
+
+o? 3184 8843
+3184: Retangulo  8843: Retangulo  NAO
+
+o? 707 1264
+707: Retangulo  1264: Retangulo  NAO
+
+o? 2710 6667
+2710: Retangulo  6667: Circulo  NAO
+
+o? 4778 6856
+4778: Retangulo  6856: Retangulo  SIM
+
+o? 7782 299
+7782: Circulo  299: Retangulo  NAO
+
+o? 3460 9171
+3460: Retangulo  9171: Circulo  NAO
+
+o? 7641 6887
+7641: Circulo  6887: Retangulo  NAO
+
+o? 1754 2615
+1754: Retangulo  2615: Retangulo  NAO
+
+o? 1257 2406
+1257: Circulo  2406: Circulo  NAO
+
+o? 5512 200
+5512: Retangulo  200: Retangulo  NAO
+
+o? 6125 4768
+6125: Retangulo  4768: Retangulo  NAO
+
+o? 8070 9462
+8070: Circulo  9462: Circulo  NAO
+
+o? 5639 5362
+5639: Retangulo  5362: Retangulo  NAO
+
+o? 2241 7240
+2241: Circulo  7240: Retangulo  NAO
+
+o? 3504 9905
+3504: Circulo  9905: Retangulo  NAO
+
+o? 1324 340
+1324: Retangulo  340: Retangulo  NAO
+
+o? 1692 2340
+1692: Circulo  2340: Circulo  SIM
+
+o? 5093 9975
+5093: Retangulo  9975: Circulo  NAO
+
+o? 5385 9104
+5385: Circulo  9104: Retangulo  NAO
+
+o? 7542 7654
+7542: Circulo  7654: Retangulo  NAO
+
+o? 9076 2932
+9076: Retangulo  2932: Retangulo  NAO
+
+o? 9223 3677
+9223: Circulo  3677: Retangulo  NAO
+
+o? 9996 7347
+9996: Circulo  7347: Circulo  NAO
+
+o? 7598 3085
+7598: Retangulo  3085: Circulo  NAO
+
+o? 9909 6291
+9909: Circulo  6291: Circulo  NAO
+
+o? 4891 4294
+4891: Circulo  4294: Retangulo  NAO
+
+o? 6253 544
+6253: Circulo  544: Retangulo  NAO
+
+o? 7033 8870
+7033: Circulo  8870: Retangulo  NAO
+
+o? 4168 88
+4168: Retangulo  88: Retangulo  NAO
+
+o? 9500 2847
+9500: Retangulo  2847: Circulo  NAO
+
+o? 6604 698
+6604: Retangulo  698: Retangulo  NAO
+
+o? 4819 9854
+4819: Circulo  9854: Retangulo  NAO
+
+o? 6120 8335
+6120: Circulo  8335: Circulo  NAO
+
+o? 7776 1228
+7776: Circulo  1228: Retangulo  NAO
+
+o? 7192 3694
+7192: Retangulo  3694: Retangulo  NAO
+
+o? 2524 410
+2524: Retangulo  410: Retangulo  NAO
+
+o? 8064 6082
+8064: Circulo  6082: Retangulo  NAO
+
+o? 7304 4811
+7304: Retangulo  4811: Retangulo  NAO
+
+o? 381 9730
+381: Circulo  9730: Retangulo  NAO
+
+o? 5984 5196
+5984: Retangulo  5196: Circulo  NAO
+
+o? 3579 1374
+3579: Circulo  1374: Circulo  NAO
+
+o? 7702 937
+7702: Retangulo  937: Circulo  NAO
+
+o? 5821 8291
+5821: Circulo  8291: Retangulo  NAO
+
+o? 8207 7517
+8207: Retangulo  7517: Retangulo  NAO
+
+o? 2409 1792
+2409: Circulo  1792: Retangulo  NAO
+
+o? 8850 9352
+8850: Circulo  9352: Retangulo  NAO
+
+o? 1250 3322
+1250: Retangulo  3322: Retangulo  SIM
+
+o? 2416 785
+2416: Retangulo  785: Retangulo  NAO
+
+o? 1005 2355
+1005: Circulo  2355: Circulo  NAO
+
+o? 8503 2684
+8503: Circulo  2684: Retangulo  NAO
+
+o? 3167 5890
+3167: Retangulo  5890: Retangulo  NAO
+
+o? 725 4264
+725: Retangulo  4264: Retangulo  NAO
+
+o? 5373 971
+5373: Circulo  971: Retangulo  NAO
+
+o? 6112 1653
+6112: Retangulo  1653: Circulo  NAO
+
+o? 9849 8243
+9849: Circulo  8243: Retangulo  NAO
+
+o? 697 1907
+697: Circulo  1907: Retangulo  NAO
+
+o? 214 1391
+214: Retangulo  1391: Retangulo  NAO
+
+o? 54 326
+54: Circulo  326: Retangulo  NAO
+
+o? 5620 1286
+5620: Retangulo  1286: Retangulo  NAO
+
+o? 4902 7082
+4902: Circulo  7082: Retangulo  NAO
+
+o? 4956 660
+4956: Circulo  660: Circulo  NAO
+
+o? 8239 7443
+8239: Circulo  7443: Circulo  NAO
+
+o? 1105 4878
+1105: Circulo  4878: Circulo  NAO
+
+o? 5903 9104
+5903: Retangulo  9104: Retangulo  NAO
+
+o? 8299 5376
+8299: Circulo  5376: Circulo  NAO
+
+o? 9032 5263
+9032: Retangulo  5263: Circulo  NAO
+
+o? 2909 1007
+2909: Retangulo  1007: Retangulo  SIM
+
+o? 1091 425
+1091: Retangulo  425: Retangulo  NAO
+
+o? 2034 9616
+2034: Circulo  9616: Retangulo  NAO
+
+o? 9786 836
+9786: Circulo  836: Retangulo  NAO
+
+o? 6587 701
+6587: Retangulo  701: Retangulo  NAO
+
+o? 4363 3367
+4363: Circulo  3367: Circulo  NAO
+
+o? 9124 2018
+9124: Retangulo  2018: Retangulo  NAO
+
+o? 2456 7366
+2456: Retangulo  7366: Retangulo  NAO
+
+o? 367 28
+367: Circulo  28: Retangulo  NAO
+
+o? 7159 9753
+7159: Circulo  9753: Circulo  NAO
+
+o? 236 9873
+236: Retangulo  9873: Circulo  NAO
+
+o? 3828 3675
+3828: Circulo  3675: Circulo  NAO
+
+o? 5999 4655
+5999: Retangulo  4655: Retangulo  NAO
+
+o? 1432 2023
+1432: Retangulo  2023: Circulo  NAO
+
+o? 81 3037
+81: Circulo  3037: Circulo  NAO
+
+o? 6983 6244
+6983: Retangulo  6244: Retangulo  NAO
+
+o? 5536 2043
+5536: Retangulo  2043: Circulo  NAO
+
+o? 3324 1037
+3324: Circulo  1037: Retangulo  NAO
+
+o? 3225 6610
+3225: Circulo  6610: Retangulo  NAO
+
+o? 5641 2007
+5641: Circulo  2007: Circulo  NAO
+
+o? 5526 5112
+5526: Circulo  5112: Circulo  NAO
+
+o? 3407 594
+3407: Retangulo  594: Circulo  NAO
+
+o? 1158 937
+1158: Circulo  937: Circulo  NAO
+
+o? 4619 9714
+4619: Retangulo  9714: Circulo  NAO
+
+o? 7791 5703
+7791: Circulo  5703: Circulo  NAO
+
+o? 3272 9205
+3272: Retangulo  9205: Circulo  NAO
+
+o? 5158 7682
+5158: Retangulo  7682: Retangulo  NAO
+
+o? 5999 8193
+5999: Retangulo  8193: Circulo  NAO
+
+o? 8257 2591
+8257: Circulo  2591: Retangulo  NAO
+
+o? 1521 4050
+1521: Circulo  4050: Circulo  NAO
+
+o? 3621 5759
+3621: Circulo  5759: Retangulo  NAO
+
+o? 8129 4581
+8129: Retangulo  4581: Circulo  NAO
+
+o? 4875 3073
+4875: Circulo  3073: Circulo  NAO
+
+o? 205 6729
+205: Circulo  6729: Circulo  NAO
+
+o? 117 7937
+117: Circulo  7937: Retangulo  NAO
+
+o? 5338 160
+5338: Retangulo  160: Retangulo  NAO
+
+o? 4289 7413
+4289: Retangulo  7413: Circulo  NAO
+
+o? 7766 5227
+7766: Retangulo  5227: Circulo  NAO
+
+o? 2500 4054
+2500: Retangulo  4054: Retangulo  SIM
+
+o? 3627 9023
+3627: Circulo  9023: Retangulo  NAO
+
+o? 3314 6808
+3314: Retangulo  6808: Retangulo  NAO
+
+o? 9740 6942
+9740: Retangulo  6942: Circulo  NAO
+
+o? 8532 2183
+8532: Circulo  2183: Retangulo  NAO
+
+o? 7432 713
+7432: Retangulo  713: Retangulo  NAO
+
+o? 5445 5626
+5445: Circulo  5626: Retangulo  NAO
+
+o? 7859 4113
+7859: Retangulo  4113: Circulo  NAO
+
+o? 1146 2675
+1146: Circulo  2675: Retangulo  NAO
+
+o? 1289 3141
+1289: Retangulo  3141: Circulo  NAO
+
+o? 629 2577
+629: Retangulo  2577: Circulo  NAO
+
+o? 6256 2042
+6256: Retangulo  2042: Retangulo  NAO
+
+o? 8501 5986
+8501: Retangulo  5986: Retangulo  NAO
+
+o? 876 9586
+876: Circulo  9586: Retangulo  NAO
+
+o? 4902 3451
+4902: Circulo  3451: Circulo  NAO
+
+o? 7440 2885
+7440: Circulo  2885: Retangulo  NAO
+
+o? 3311 7899
+3311: Retangulo  7899: Circulo  NAO
+
+o? 100 1301
+100: Retangulo  1301: Retangulo  NAO
+
+o? 1447 451
+1447: Circulo  451: Circulo  NAO
+
+o? 4180 3753
+4180: Retangulo  3753: Circulo  NAO
+
+o? 5097 5937
+5097: Circulo  5937: Circulo  NAO
+
+o? 3947 6690
+3947: Retangulo  6690: Circulo  NAO
+
+o? 3398 5991
+3398: Retangulo  5991: Circulo  NAO
+
+o? 9304 5208
+9304: Retangulo  5208: Circulo  NAO
+
+o? 9841 8775
+9841: Circulo  8775: Circulo  NAO
+
+o? 7335 6237
+7335: Circulo  6237: Circulo  NAO
+
+o? 6251 2485
+6251: Retangulo  2485: Circulo  NAO
+
+o? 3819 2269
+3819: Circulo  2269: Circulo  NAO
+
+o? 587 7377
+587: Retangulo  7377: Circulo  NAO
+
+o? 3278 355
+3278: Retangulo  355: Circulo  NAO
+
+o? 2850 1926
+2850: Circulo  1926: Circulo  NAO
+
+o? 962 1530
+962: Retangulo  1530: Circulo  NAO
+
+o? 3426 3858
+3426: Circulo  3858: Circulo  NAO
+
+o? 6314 8789
+6314: Retangulo  8789: Retangulo  NAO
+
+o? 9870 6553
+9870: Circulo  6553: Circulo  NAO
+
+o? 1829 1652
+1829: Retangulo  1652: Retangulo  NAO
+
+o? 7250 9088
+7250: Retangulo  9088: Retangulo  SIM
+
+o? 3678 6263
+3678: Circulo  6263: Retangulo  NAO
+
+o? 8225 3714
+8225: Retangulo  3714: Circulo  NAO
+
+o? 2946 5175
+2946: Circulo  5175: Circulo  NAO
+
+o? 2971 6412
+2971: Circulo  6412: Retangulo  NAO
+
+o? 3503 6778
+3503: Retangulo  6778: Retangulo  NAO
+
+o? 9573 653
+9573: Circulo  653: Retangulo  NAO
+
+o? 2278 7748
+2278: Retangulo  7748: Retangulo  NAO
+
+o? 9514 8493
+9514: Retangulo  8493: Circulo  NAO
+
+o? 1733 8109
+1733: Retangulo  8109: Circulo  NAO
+
+o? 1268 6057
+1268: Retangulo  6057: Circulo  NAO
+
+o? 6980 5836
+6980: Retangulo  5836: Retangulo  NAO
+
+o? 8509 612
+8509: Circulo  612: Circulo  NAO
+
+o? 6937 2770
+6937: Circulo  2770: Retangulo  NAO
+
+o? 8669 7372
+8669: Retangulo  7372: Retangulo  NAO
+
+o? 6787 1680
+6787: Circulo  1680: Circulo  NAO
+
+o? 2008 3897
+2008: Retangulo  3897: Circulo  NAO
+
+o? 4618 321
+4618: Retangulo  321: Circulo  NAO
+
+o? 6272 2112
+6272: Retangulo  2112: Circulo  NAO
+
+o? 1350 5130
+1350: Circulo  5130: Circulo  NAO
+
+o? 4140 1868
+4140: Circulo  1868: Retangulo  NAO
+
+o? 3733 5568
+3733: Circulo  5568: Circulo  NAO
+
+o? 6548 7852
+6548: Retangulo  7852: Retangulo  NAO
+
+o? 6673 8000
+6673: Circulo  8000: Retangulo  NAO
+
+o? 8354 6521
+8354: Retangulo  6521: Retangulo  NAO
+
+o? 372 5721
+372: Circulo  5721: Circulo  NAO
+
+o? 6963 4268
+6963: Circulo  4268: Retangulo  NAO
+
+o? 822 6720
+822: Circulo  6720: Circulo  NAO
+
+o? 5203 2462
+5203: Circulo  2462: Retangulo  NAO
+
+o? 8211 7572
+8211: Circulo  7572: Circulo  NAO
+
+o? 6803 5486
+6803: Retangulo  5486: Retangulo  NAO
+
+o? 442 3045
+442: Retangulo  3045: Circulo  NAO
+
+o? 5252 4162
+5252: Retangulo  4162: Retangulo  NAO
+
+o? 7671 8209
+7671: Circulo  8209: Circulo  NAO
+
+o? 3197 1329
+3197: Retangulo  1329: Circulo  NAO
+
+o? 4485 3265
+4485: Circulo  3265: Circulo  NAO
+
+o? 2495 2466
+2495: Retangulo  2466: Circulo  NAO
+
+o? 5654 7123
+5654: Retangulo  7123: Circulo  NAO
+
+o? 608 8456
+608: Retangulo  8456: Retangulo  NAO
+
+o? 4817 5811
+4817: Retangulo  5811: Circulo  NAO
+
+o? 3592 8451
+3592: Retangulo  8451: Circulo  NAO
+
+o? 9310 5143
+9310: Retangulo  5143: Circulo  NAO
+
+o? 1958 3059
+1958: Retangulo  3059: Retangulo  NAO
+
+o? 4051 8724
+4051: Circulo  8724: Circulo  NAO
+
+o? 7721 42
+7721: Retangulo  42: Circulo  NAO
+
+o? 444 3678
+444: Circulo  3678: Circulo  NAO
+
+o? 6793 5537
+6793: Circulo  5537: Retangulo  NAO
+
+o? 1758 9747
+1758: Circulo  9747: Circulo  NAO
+
+o? 6544 2674
+6544: Retangulo  2674: Retangulo  NAO
+
+o? 4501 5637
+4501: Circulo  5637: Circulo  NAO
+
+o? 8381 5719
+8381: Retangulo  5719: Circulo  NAO
+
+o? 532 2649
+532: Retangulo  2649: Circulo  NAO
+
+o? 5538 1843
+5538: Circulo  1843: Circulo  NAO
+
+o? 2078 6292
+2078: Retangulo  6292: Retangulo  NAO
+
+o? 3813 8970
+3813: Circulo  8970: Circulo  NAO
+
+o? 9914 9503
+9914: Retangulo  9503: Retangulo  NAO
+
+o? 3331 5188
+3331: Circulo  5188: Retangulo  NAO
+
+o? 4744 5950
+4744: Retangulo  5950: Retangulo  NAO
+
+o? 9200 6645
+9200: Retangulo  6645: Circulo  NAO
+
+o? 5149 7679
+5149: Circulo  7679: Retangulo  NAO
+
+o? 1090 5311
+1090: Retangulo  5311: Circulo  NAO
+
+o? 2812 1154
+2812: Retangulo  1154: Retangulo  NAO
+
+o? 7732 4252
+7732: Retangulo  4252: Retangulo  NAO
+
+o? 1701 7837
+1701: Circulo  7837: Circulo  NAO
+
+o? 9289 604
+9289: Circulo  604: Retangulo  NAO
+
+o? 6691 8175
+6691: Circulo  8175: Circulo  NAO
+
+o? 8432 8184
+8432: Retangulo  8184: Circulo  NAO
+
+o? 7139 4120
+7139: Retangulo  4120: Retangulo  NAO
+
+o? 8212 2107
+8212: Retangulo  2107: Circulo  NAO
+
+o? 4665 5937
+4665: Circulo  5937: Circulo  NAO
+
+o? 2182 6429
+2182: Retangulo  6429: Circulo  NAO
+
+o? 9449 8646
+9449: Retangulo  8646: Circulo  NAO
+
+o? 93 5748
+93: Circulo  5748: Circulo  NAO
+
+o? 3217 2757
+3217: Circulo  2757: Circulo  NAO
+
+o? 1094 8147
+1094: Retangulo  8147: Retangulo  NAO
+
+o? 2602 6830
+2602: Retangulo  6830: Retangulo  NAO
+
+o? 8004 9618
+8004: Circulo  9618: Circulo  NAO
+
+o? 2718 1138
+2718: Circulo  1138: Retangulo  NAO
+
+o? 1451 7742
+1451: Retangulo  7742: Retangulo  NAO
+
+o? 8551 7154
+8551: Circulo  7154: Retangulo  NAO
+
+o? 263 2183
+263: Retangulo  2183: Retangulo  NAO
+
+o? 763 5949
+763: Circulo  5949: Circulo  NAO
+
+o? 9821 3637
+9821: Retangulo  3637: Circulo  NAO
+
+o? 447 5907
+447: Circulo  5907: Circulo  NAO
+
+o? 2865 4790
+2865: Circulo  4790: Retangulo  NAO
+
+o? 2126 1053
+2126: Retangulo  1053: Circulo  NAO
+
+o? 7098 4150
+7098: Circulo  4150: Retangulo  NAO
+
+o? 8476 3608
+8476: Retangulo  3608: Retangulo  NAO
+
+o? 7820 3782
+7820: Retangulo  3782: Retangulo  NAO
+
+o? 9037 3015
+9037: Circulo  3015: Circulo  NAO
+
+o? 3524 2754
+3524: Retangulo  2754: Circulo  NAO
+
+o? 4449 7104
+4449: Circulo  7104: Circulo  NAO
+
+o? 9309 682
+9309: Circulo  682: Retangulo  NAO
+
+o? 4748 2253
+4748: Retangulo  2253: Circulo  NAO
+
+o? 2291 6820
+2291: Retangulo  6820: Retangulo  NAO
+
+o? 7607 8775
+7607: Retangulo  8775: Circulo  NAO
+
+o? 5837 4331
+5837: Retangulo  4331: Retangulo  NAO
+
+o? 9222 6037
+9222: Circulo  6037: Circulo  NAO
+
+o? 3737 1780
+3737: Retangulo  1780: Retangulo  NAO
+
+o? 1605 7213
+1605: Circulo  7213: Circulo  NAO
+
+o? 3624 1979
+3624: Circulo  1979: Retangulo  NAO
+
+o? 5865 5495
+5865: Circulo  5495: Retangulo  NAO
+
+o? 7291 650
+7291: Circulo  650: Retangulo  NAO
+
+o? 322 2567
+322: Retangulo  2567: Retangulo  NAO
+
+o? 4614 6115
+4614: Circulo  6115: Circulo  NAO
+
+o? 7136 5799
+7136: Retangulo  5799: Circulo  NAO
+
+o? 9776 8985
+9776: Retangulo  8985: Circulo  NAO
+
+o? 4197 5946
+4197: Circulo  5946: Circulo  NAO
+
+o? 4013 4721
+4013: Retangulo  4721: Retangulo  NAO
+
+o? 1757 8307
+1757: Retangulo  8307: Circulo  NAO
+
+o? 3351 1174
+3351: Circulo  1174: Retangulo  NAO
+
+o? 1322 6719
+1322: Retangulo  6719: Retangulo  NAO
+
+o? 9913 1895
+9913: Circulo  1895: Retangulo  NAO
+
+o? 5910 3124
+5910: Circulo  3124: Retangulo  NAO
+
+o? 1424 5533
+1424: Retangulo  5533: Circulo  NAO
+
+o? 5589 7862
+5589: Circulo  7862: Retangulo  NAO
+
+o? 6673 7922
+6673: Circulo  7922: Retangulo  NAO
+
+o? 4634 3500
+4634: Retangulo  3500: Retangulo  NAO
+
+o? 401 2076
+401: Retangulo  2076: Circulo  NAO
+
+o? 3809 5391
+3809: Retangulo  5391: Circulo  NAO
+
+o? 9267 6648
+9267: Circulo  6648: Circulo  NAO
+
+o? 1051 2987
+1051: Circulo  2987: Retangulo  NAO
+
+o? 6209 6820
+6209: Retangulo  6820: Retangulo  NAO
+
+o? 4650 255
+4650: Circulo  255: Circulo  NAO
+
+o? 9684 1291
+9684: Circulo  1291: Circulo  NAO
+
+o? 5483 2815
+5483: Retangulo  2815: Circulo  NAO
+
+o? 8017 2074
+8017: Circulo  2074: Retangulo  NAO
+
+o? 3241 922
+3241: Circulo  922: Retangulo  NAO
+
+o? 7602 2162
+7602: Circulo  2162: Retangulo  NAO
+
+o? 3837 6668
+3837: Circulo  6668: Retangulo  NAO
+
+o? 3139 2240
+3139: Circulo  2240: Retangulo  NAO
+
+o? 627 6638
+627: Circulo  6638: Retangulo  NAO
+
+o? 4397 5988
+4397: Retangulo  5988: Circulo  NAO
+
+o? 743 9401
+743: Retangulo  9401: Retangulo  SIM
+
+o? 6338 9071
+6338: Retangulo  9071: Retangulo  SIM
+
+o? 7725 9015
+7725: Circulo  9015: Circulo  NAO
+
+o? 8723 3618
+8723: Retangulo  3618: Circulo  NAO
+
+o? 2597 615
+2597: Retangulo  615: Circulo  NAO
+
+o? 7383 4692
+7383: Circulo  4692: Circulo  NAO
+
+o? 9257 4943
+9257: Retangulo  4943: Retangulo  NAO
+
+o? 3958 9736
+3958: Retangulo  9736: Retangulo  NAO
+
+o? 1970 1719
+1970: Retangulo  1719: Circulo  NAO
+
+o? 8265 1270
+8265: Circulo  1270: Retangulo  NAO
+
+o? 4993 3253
+4993: Circulo  3253: Circulo  NAO
+
+o? 9132 5825
+9132: Circulo  5825: Retangulo  NAO
+
+o? 3429 6948
+3429: Circulo  6948: Circulo  NAO
+
+o? 6994 164
+6994: Retangulo  164: Retangulo  NAO
+
+o? 1108 4293
+1108: Retangulo  4293: Circulo  NAO
+
+o? 6307 17
+6307: Circulo  17: Retangulo  NAO
+
+o? 9550 9476
+9550: Retangulo  9476: Retangulo  NAO
+
+o? 495 4965
+495: Circulo  4965: Circulo  NAO
+
+o? 6083 3128
+6083: Retangulo  3128: Retangulo  NAO
+
+o? 7539 3092
+7539: Circulo  3092: Retangulo  NAO
+
+o? 8723 5764
+8723: Retangulo  5764: Retangulo  NAO
+
+o? 3982 655
+3982: Retangulo  655: Circulo  NAO
+
+o? 9904 7879
+9904: Retangulo  7879: Circulo  NAO
+
+o? 5905 6474
+5905: Circulo  6474: Circulo  NAO
+
+o? 4811 6747
+4811: Retangulo  6747: Circulo  NAO
+
+o? 7364 4479
+7364: Retangulo  4479: Circulo  NAO
+
+o? 1135 5281
+1135: Circulo  5281: Circulo  NAO
+
+o? 9094 1103
+9094: Retangulo  1103: Retangulo  SIM
+
+o? 2566 3184
+2566: Retangulo  3184: Retangulo  NAO
+
+o? 8742 9603
+8742: Circulo  9603: Circulo  NAO
+
+o? 6016 9649
+6016: Retangulo  9649: Circulo  NAO
+
+o? 5824 8034
+5824: Retangulo  8034: Circulo  NAO
+
+o? 6755 3173
+6755: Retangulo  3173: Retangulo  NAO
+
+o? 2101 4659
+2101: Circulo  4659: Circulo  NAO
+
+o? 5598 9230
+5598: Circulo  9230: Retangulo  NAO
+
+o? 769 1004
+769: Circulo  1004: Retangulo  NAO
+
+o? 5238 6132
+5238: Circulo  6132: Circulo  NAO
+
+o? 8476 1957
+8476: Retangulo  1957: Circulo  NAO
+
+o? 4682 2999
+4682: Retangulo  2999: Retangulo  NAO
+
+o? 6649 9898
+6649: Circulo  9898: Retangulo  NAO
+
+o? 3067 6211
+3067: Circulo  6211: Circulo  NAO
+
+o? 1051 9439
+1051: Circulo  9439: Circulo  NAO
+
+o? 2004 7202
+2004: Circulo  7202: Retangulo  NAO
+
+o? 8372 8236
+8372: Retangulo  8236: Retangulo  NAO
+
+o? 9221 8962
+9221: Retangulo  8962: Retangulo  NAO
+
+o? 6267 3067
+6267: Circulo  3067: Circulo  NAO
+
+o? 6471 3520
+6471: Circulo  3520: Retangulo  NAO
+
+o? 3949 2647
+3949: Circulo  2647: Circulo  NAO
+
+o? 8137 7877
+8137: Circulo  7877: Retangulo  NAO
+
+o? 480 137
+480: Circulo  137: Retangulo  NAO
+
+o? 5858 703
+5858: Retangulo  703: Circulo  NAO
+
+o? 5105 64
+5105: Retangulo  64: Retangulo  NAO
+
+o? 6384 898
+6384: Circulo  898: Retangulo  NAO
+
+o? 7819 5699
+7819: Circulo  5699: Retangulo  NAO
+
+o? 520 960
+520: Retangulo  960: Circulo  NAO
+
+o? 7120 2333
+7120: Retangulo  2333: Retangulo  NAO
+
+o? 8440 810
+8440: Retangulo  810: Circulo  NAO
+
+o? 3194 1452
+3194: Retangulo  1452: Circulo  NAO
+
+o? 8950 6167
+8950: Retangulo  6167: Retangulo  NAO
+
+o? 9915 3228
+9915: Circulo  3228: Circulo  NAO
+
+o? 2040 7657
+2040: Circulo  7657: Circulo  NAO
+
+o? 3334 3166
+3334: Retangulo  3166: Retangulo  NAO
+
+o? 8211 8933
+8211: Circulo  8933: Retangulo  NAO
+
+o? 1498 2490
+1498: Retangulo  2490: Circulo  NAO
+
+o? 8932 8090
+8932: Retangulo  8090: Retangulo  NAO
+
+o? 112 8571
+112: Retangulo  8571: Circulo  NAO
+
+o? 9667 7748
+9667: Circulo  7748: Retangulo  NAO
+
+o? 1014 656
+1014: Circulo  656: Retangulo  NAO
+
+o? 6667 1178
+6667: Circulo  1178: Retangulo  NAO
+
+o? 2416 4567
+2416: Retangulo  4567: Circulo  NAO
+
+o? 7785 3830
+7785: Circulo  3830: Retangulo  NAO
+
+o? 7166 4686
+7166: Retangulo  4686: Circulo  NAO
+
+o? 1712 9307
+1712: Retangulo  9307: Circulo  NAO
+
+o? 7600 2119
+7600: Retangulo  2119: Circulo  NAO
+
+o? 2461 7764
+2461: Circulo  7764: Circulo  NAO
+
+o? 9603 8096
+9603: Circulo  8096: Retangulo  NAO
+
+o? 793 264
+793: Circulo  264: Circulo  NAO
+
+o? 8698 6480
+8698: Retangulo  6480: Circulo  NAO
+
+o? 123 4904
+123: Circulo  4904: Retangulo  NAO
+
+o? 3112 5454
+3112: Retangulo  5454: Circulo  NAO
+
+o? 6208 109
+6208: Retangulo  109: Circulo  NAO
+
+o? 574 6317
+574: Retangulo  6317: Retangulo  NAO
+
+o? 4486 6649
+4486: Retangulo  6649: Circulo  NAO
+
+o? 6448 3522
+6448: Retangulo  3522: Circulo  NAO
+
+o? 5849 8234
+5849: Retangulo  8234: Retangulo  NAO
+
+o? 3655 4191
+3655: Circulo  4191: Circulo  NAO
+
+o? 5031 8969
+5031: Circulo  8969: Retangulo  NAO
+
+o? 6665 1249
+6665: Retangulo  1249: Circulo  NAO
+
+o? 2003 3363
+2003: Retangulo  3363: Circulo  NAO
+
+o? 2053 1322
+2053: Circulo  1322: Retangulo  NAO
+
+o? 3733 4306
+3733: Circulo  4306: Retangulo  NAO
+
+o? 6362 7982
+6362: Retangulo  7982: Retangulo  NAO
+
+o? 3101 1569
+3101: Retangulo  1569: Circulo  NAO
+
+o? 3024 9245
+3024: Circulo  9245: Retangulo  NAO
+
+o? 9284 2989
+9284: Retangulo  2989: Circulo  NAO
+
+o? 4507 1567
+4507: Circulo  1567: Circulo  NAO
+
+o? 3484 113
+3484: Retangulo  113: Retangulo  NAO
+
+o? 5715 7029
+5715: Circulo  7029: Circulo  NAO
+
+o? 6839 2026
+6839: Retangulo  2026: Retangulo  NAO
+
+o? 3731 2904
+3731: Retangulo  2904: Circulo  NAO
+
+o? 3721 8988
+3721: Circulo  8988: Circulo  NAO
+
+o? 6621 9915
+6621: Circulo  9915: Circulo  NAO
+
+o? 3612 5627
+3612: Circulo  5627: Retangulo  NAO
+
+o? 6412 8204
+6412: Retangulo  8204: Retangulo  NAO
+
+o? 7457 1279
+7457: Retangulo  1279: Circulo  NAO
+
+o? 4755 9319
+4755: Circulo  9319: Circulo  SIM
+
+o? 4863 5362
+4863: Circulo  5362: Retangulo  NAO
+
+o? 8971 5161
+8971: Circulo  5161: Circulo  NAO
+
+o? 6542 8793
+6542: Retangulo  8793: Circulo  NAO
+
+o? 3992 8752
+3992: Retangulo  8752: Retangulo  NAO
+
+o? 899 5660
+899: Retangulo  5660: Retangulo  NAO
+
+o? 7246 6052
+7246: Retangulo  6052: Retangulo  NAO
+
+o? 7788 6807
+7788: Circulo  6807: Circulo  NAO
+
+o? 4819 6838
+4819: Circulo  6838: Retangulo  NAO
+
+o? 7869 9712
+7869: Circulo  9712: Retangulo  NAO
+
+o? 673 6545
+673: Circulo  6545: Retangulo  NAO
+
+o? 9910 3999
+9910: Retangulo  3999: Circulo  NAO
+
+o? 8164 1055
+8164: Retangulo  1055: Retangulo  NAO
+
+o? 3777 2029
+3777: Circulo  2029: Circulo  NAO
+
+o? 2371 2025
+2371: Circulo  2025: Circulo  NAO
+
+o? 8277 7704
+8277: Circulo  7704: Circulo  NAO
+
+o? 5300 7869
+5300: Retangulo  7869: Circulo  NAO
+
+o? 7670 110
+7670: Retangulo  110: Retangulo  NAO
+
+o? 7535 3400
+7535: Retangulo  3400: Retangulo  NAO
+
+o? 5557 6259
+5557: Circulo  6259: Circulo  NAO
+
+o? 5249 6389
+5249: Retangulo  6389: Retangulo  NAO
+
+o? 9640 9278
+9640: Retangulo  9278: Retangulo  NAO
+
+o? 2927 6433
+2927: Retangulo  6433: Circulo  NAO
+
+o? 2915 6102
+2915: Retangulo  6102: Circulo  NAO
+
+o? 1540 554
+1540: Retangulo  554: Retangulo  NAO
+
+o? 645 1404
+645: Circulo  1404: Circulo  NAO
+
+o? 739 9090
+739: Circulo  9090: Circulo  NAO
+
+o? 6801 1861
+6801: Circulo  1861: Circulo  NAO
+
+o? 6005 6766
+6005: Retangulo  6766: Retangulo  NAO
+
+o? 16 7682
+16: Retangulo  7682: Retangulo  NAO
+
+o? 1904 7932
+1904: Retangulo  7932: Circulo  NAO
+
+o? 4891 4049
+4891: Circulo  4049: Retangulo  NAO
+
+o? 779 9312
+779: Retangulo  9312: Circulo  NAO
+
+o? 9512 7096
+9512: Retangulo  7096: Retangulo  NAO
+
+o? 6749 1222
+6749: Retangulo  1222: Retangulo  NAO
+
+o? 3114 8157
+3114: Circulo  8157: Circulo  NAO
+
+o? 9577 2416
+9577: Circulo  2416: Retangulo  NAO
+
+o? 1124 3966
+1124: Retangulo  3966: Circulo  NAO
+
+o? 1870 1110
+1870: Retangulo  1110: Circulo  NAO
+
+o? 1679 6084
+1679: Retangulo  6084: Circulo  NAO
+
+o? 2020 3801
+2020: Retangulo  3801: Circulo  NAO
+
+o? 9054 385
+9054: Circulo  385: Circulo  NAO
+
+o? 7159 3413
+7159: Circulo  3413: Retangulo  NAO
+
+o? 4750 8675
+4750: Retangulo  8675: Retangulo  NAO
+
+o? 2396 6782
+2396: Retangulo  6782: Retangulo  NAO
+
+o? 3961 617
+3961: Circulo  617: Retangulo  NAO
+
+o? 1537 4437
+1537: Circulo  4437: Circulo  NAO
+
+o? 8268 596
+8268: Circulo  596: Retangulo  NAO
+
+o? 1134 3213
+1134: Circulo  3213: Circulo  NAO
+
+o? 5058 4899
+5058: Circulo  4899: Circulo  NAO
+
+o? 9752 318
+9752: Retangulo  318: Circulo  NAO
+
+o? 9593 2683
+9593: Retangulo  2683: Circulo  NAO
+
+o? 9381 3633
+9381: Circulo  3633: Circulo  NAO
+
+o? 4566 6984
+4566: Circulo  6984: Circulo  NAO
+
+o? 35 3547
+35: Retangulo  3547: Circulo  NAO
+
+o? 6394 8108
+6394: Retangulo  8108: Retangulo  NAO
+
+o? 4826 6552
+4826: Retangulo  6552: Circulo  NAO
+
+o? 2672 5425
+2672: Retangulo  5425: Circulo  NAO
+
+o? 6616 6549
+6616: Retangulo  6549: Circulo  NAO
+
+o? 9626 4046
+9626: Retangulo  4046: Retangulo  NAO
+
+o? 5741 3491
+5741: Retangulo  3491: Retangulo  NAO
+
+o? 6296 1293
+6296: Retangulo  1293: Circulo  NAO
+
+o? 5524 6646
+5524: Retangulo  6646: Retangulo  NAO
+
+o? 6676 1948
+6676: Retangulo  1948: Retangulo  NAO
+
+o? 4085 7944
+4085: Retangulo  7944: Circulo  NAO
+
+o? 6297 8451
+6297: Circulo  8451: Circulo  NAO
+
+o? 6831 3144
+6831: Circulo  3144: Circulo  NAO
+
+o? 2670 3260
+2670: Circulo  3260: Retangulo  NAO
+
+o? 266 6175
+266: Retangulo  6175: Circulo  NAO
+
+o? 9813 1656
+9813: Circulo  1656: Circulo  NAO
+
+o? 7552 7933
+7552: Retangulo  7933: Circulo  NAO
+
+o? 941 9739
+941: Retangulo  9739: Circulo  NAO
+
+o? 6438 5286
+6438: Circulo  5286: Circulo  NAO
+
+o? 3589 5151
+3589: Circulo  5151: Circulo  NAO
+
+o? 9426 4963
+9426: Circulo  4963: Circulo  NAO
+
+o? 1451 2093
+1451: Retangulo  2093: Retangulo  NAO
+
+o? 9165 3144
+9165: Circulo  3144: Circulo  NAO
+
+o? 590 3892
+590: Retangulo  3892: Retangulo  NAO
+
+o? 5744 7117
+5744: Retangulo  7117: Circulo  NAO
+
+o? 6272 3167
+6272: Retangulo  3167: Retangulo  NAO
+
+o? 9864 229
+9864: Circulo  229: Circulo  NAO
+
+o? 5849 8685
+5849: Retangulo  8685: Circulo  NAO
+
+o? 9092 5484
+9092: Retangulo  5484: Circulo  NAO
+
+o? 5706 2809
+5706: Circulo  2809: Circulo  NAO
+
+o? 6925 5932
+6925: Circulo  5932: Retangulo  NAO
+
+o? 6229 6981
+6229: Circulo  6981: Circulo  NAO
+
+o? 6117 1793
+6117: Circulo  1793: Retangulo  NAO
+
+o? 5825 5325
+5825: Retangulo  5325: Circulo  NAO
+
+o? 3797 1869
+3797: Retangulo  1869: Circulo  NAO
+
+o? 9484 140
+9484: Retangulo  140: Retangulo  NAO
+
+o? 4514 1528
+4514: Retangulo  1528: Retangulo  NAO
+
+o? 6748 2746
+6748: Retangulo  2746: Retangulo  NAO
+
+o? 9665 7548
+9665: Retangulo  7548: Circulo  NAO
+
+o? 4090 9718
+4090: Retangulo  9718: Retangulo  NAO
+
+o? 2099 4878
+2099: Retangulo  4878: Circulo  NAO
+
+o? 970 6988
+970: Retangulo  6988: Retangulo  SIM
+
+o? 2185 5695
+2185: Circulo  5695: Circulo  NAO
+
+o? 9060 6891
+9060: Circulo  6891: Circulo  NAO
+
+o? 4731 2478
+4731: Circulo  2478: Circulo  NAO
+
+o? 2444 5769
+2444: Retangulo  5769: Circulo  NAO
+
+o? 8301 3903
+8301: Circulo  3903: Circulo  NAO
+
+o? 7253 5497
+7253: Retangulo  5497: Circulo  NAO
+
+o? 4825 3780
+4825: Circulo  3780: Circulo  NAO
+
+o? 4489 1907
+4489: Circulo  1907: Retangulo  NAO
+
+o? 2437 5407
+2437: Circulo  5407: Circulo  NAO
+
+o? 5177 5730
+5177: Retangulo  5730: Circulo  NAO
+
+o? 455 9665
+455: Retangulo  9665: Retangulo  NAO
+
+o? 3475 3130
+3475: Circulo  3130: Retangulo  NAO
+
+o? 2263 6492
+2263: Circulo  6492: Circulo  NAO
+
+o? 3481 8027
+3481: Circulo  8027: Retangulo  NAO
+
+o? 1439 2437
+1439: Retangulo  2437: Circulo  NAO
+
+o? 7919 1385
+7919: Retangulo  1385: Retangulo  NAO
+
+o? 5219 4364
+5219: Retangulo  4364: Retangulo  NAO
+
+o? 632 7191
+632: Retangulo  7191: Circulo  NAO
+
+o? 6571 8716
+6571: Circulo  8716: Retangulo  NAO
+
+o? 1635 5573
+1635: Circulo  5573: Retangulo  NAO
+
+o? 6541 7373
+6541: Circulo  7373: Retangulo  NAO
+
+o? 4159 5618
+4159: Circulo  5618: Retangulo  NAO
+
+o? 2489 9356
+2489: Retangulo  9356: Retangulo  NAO
+
+o? 3679 3247
+3679: Circulo  3247: Circulo  NAO
+
+o? 6638 9220
+6638: Retangulo  9220: Retangulo  NAO
+
+o? 4614 5374
+4614: Circulo  5374: Retangulo  NAO
+
+o? 714 3978
+714: Circulo  3978: Circulo  NAO
+
+o? 465 376
+465: Circulo  376: Retangulo  NAO
+
+o? 1435 5132
+1435: Circulo  5132: Retangulo  NAO
+
+o? 6485 7215
+6485: Retangulo  7215: Circulo  NAO
+
+o? 3237 8132
+3237: Circulo  8132: Retangulo  NAO
+
+o? 3339 7046
+3339: Circulo  7046: Retangulo  NAO
+
+o? 6860 1450
+6860: Retangulo  1450: Retangulo  NAO
+
+o? 6146 194
+6146: Retangulo  194: Retangulo  NAO
+
+o? 1702 2212
+1702: Retangulo  2212: Retangulo  SIM
+
+o? 3376 883
+3376: Retangulo  883: Circulo  NAO
+
+o? 72 9711
+72: Circulo  9711: Circulo  NAO
+
+o? 2079 995
+2079: Circulo  995: Retangulo  NAO
+
+o? 3517 4796
+3517: Circulo  4796: Retangulo  NAO
+
+o? 8269 6483
+8269: Circulo  6483: Circulo  NAO
+
+o? 5309 4471
+5309: Retangulo  4471: Circulo  NAO
+
+o? 8992 6096
+8992: Retangulo  6096: Circulo  NAO
+
+o? 9255 406
+9255: Circulo  406: Retangulo  NAO
+
+o? 3310 5115
+3310: Retangulo  5115: Circulo  NAO
+
+o? 4601 7288
+4601: Retangulo  7288: Retangulo  NAO
+
+o? 4711 1162
+4711: Circulo  1162: Retangulo  NAO
+
+o? 5436 8615
+5436: Circulo  8615: Retangulo  NAO
+
+o? 7388 6695
+7388: Retangulo  6695: Retangulo  NAO
+
+o? 7012 9319
+7012: Retangulo  9319: Circulo  NAO
+
+o? 6908 6482
+6908: Retangulo  6482: Retangulo  NAO
+
+o? 655 3743
+655: Circulo  3743: Retangulo  NAO
+
+o? 2688 9094
+2688: Circulo  9094: Retangulo  NAO
+
+o? 5913 8370
+5913: Circulo  8370: Circulo  NAO
+
+o? 3143 2537
+3143: Retangulo  2537: Retangulo  NAO
+
+o? 9076 2869
+9076: Retangulo  2869: Circulo  NAO
+
+o? 6295 4378
+6295: Circulo  4378: Retangulo  NAO
+
+o? 568 5089
+568: Retangulo  5089: Circulo  NAO
+
+o? 2373 5430
+2373: Circulo  5430: Circulo  NAO
+
+o? 1154 2510
+1154: Retangulo  2510: Retangulo  NAO
+
+o? 4629 905
+4629: Circulo  905: Retangulo  NAO
+
+o? 9879 6694
+9879: Circulo  6694: Retangulo  NAO
+
+o? 420 917
+420: Circulo  917: Retangulo  NAO
+
+o? 6074 9283
+6074: Retangulo  9283: Circulo  NAO
+
+o? 5438 2711
+5438: Retangulo  2711: Retangulo  NAO
+
+o? 103 8629
+103: Circulo  8629: Circulo  SIM
+
+o? 3678 3410
+3678: Circulo  3410: Retangulo  NAO
+
+o? 6019 4756
+6019: Circulo  4756: Retangulo  NAO
+
+o? 9595 3580
+9595: Circulo  3580: Retangulo  NAO
+
+o? 1358 9058
+1358: Retangulo  9058: Retangulo  NAO
+
+o? 2198 1054
+2198: Retangulo  1054: Retangulo  SIM
+
+o? 4089 9140
+4089: Circulo  9140: Retangulo  NAO
+
+o? 3507 5302
+3507: Circulo  5302: Retangulo  NAO
+
+o? 895 7676
+895: Circulo  7676: Retangulo  NAO
+
+o? 7465 8214
+7465: Circulo  8214: Circulo  NAO
+
+o? 2576 3125
+2576: Retangulo  3125: Retangulo  SIM
+
+o? 6765 4432
+6765: Circulo  4432: Retangulo  NAO
+
+o? 7168 6206
+7168: Retangulo  6206: Retangulo  NAO
+
+o? 5619 4780
+5619: Circulo  4780: Retangulo  NAO
+
+o? 9151 3365
+9151: Circulo  3365: Retangulo  NAO
+
+o? 2230 4090
+2230: Retangulo  4090: Retangulo  NAO
+
+o? 7635 7815
+7635: Circulo  7815: Circulo  NAO
+
+o? 4996 9800
+4996: Retangulo  9800: Retangulo  NAO
+
+o? 6589 6792
+6589: Circulo  6792: Circulo  NAO
+
+o? 120 9201
+120: Circulo  9201: Circulo  NAO
+
+o? 9321 3553
+9321: Circulo  3553: Circulo  NAO
+
+o? 2077 8691
+2077: Circulo  8691: Circulo  NAO
+
+o? 3480 5709
+3480: Circulo  5709: Circulo  NAO
+
+o? 1700 1861
+1700: Retangulo  1861: Circulo  NAO
+
+o? 3715 4080
+3715: Circulo  4080: Circulo  NAO
+
+o? 4200 9851
+4200: Circulo  9851: Retangulo  NAO
+
+o? 5699 9702
+5699: Retangulo  9702: Circulo  NAO
+
+o? 3989 3650
+3989: Retangulo  3650: Retangulo  NAO
+
+o? 6834 9691
+6834: Circulo  9691: Circulo  NAO
+
+o? 5046 1501
+5046: Circulo  1501: Circulo  NAO
+
+o? 2473 7764
+2473: Circulo  7764: Circulo  NAO
+
+o? 4540 3916
+4540: Retangulo  3916: Retangulo  NAO
+
+o? 6322 4637
+6322: Retangulo  4637: Retangulo  NAO
+
+o? 6779 5299
+6779: Retangulo  5299: Circulo  NAO
+
+o? 6385 9804
+6385: Circulo  9804: Circulo  NAO
+
+o? 7916 7355
+7916: Retangulo  7355: Retangulo  NAO
+
+o? 4691 965
+4691: Retangulo  965: Retangulo  NAO
+
+o? 772 5899
+772: Retangulo  5899: Circulo  NAO
+
+o? 6019 7262
+6019: Circulo  7262: Retangulo  NAO
+
+o? 9609 5263
+9609: Circulo  5263: Circulo  NAO
+
+o? 9901 654
+9901: Circulo  654: Circulo  NAO
+
+o? 9506 5066
+9506: Retangulo  5066: Retangulo  NAO
+
+o? 7968 8626
+7968: Circulo  8626: Retangulo  NAO
+
+o? 9111 9410
+9111: Circulo  9410: Retangulo  NAO
+
+o? 2732 3573
+2732: Retangulo  3573: Circulo  NAO
+
+o? 3287 3074
+3287: Retangulo  3074: Retangulo  NAO
+
+o? 227 1463
+227: Retangulo  1463: Retangulo  NAO
+
+o? 6026 8890
+6026: Retangulo  8890: Retangulo  NAO
+
+o? 9921 4837
+9921: Circulo  4837: Circulo  NAO
+
+o? 7649 310
+7649: Retangulo  310: Retangulo  NAO
+
+o? 7710 2779
+7710: Circulo  2779: Circulo  NAO
+
+o? 7100 4379
+7100: Retangulo  4379: Retangulo  NAO
+
+o? 349 2810
+349: Circulo  2810: Retangulo  NAO
+
+o? 5562 943
+5562: Circulo  943: Circulo  NAO
+
+o? 9903 8293
+9903: Circulo  8293: Circulo  NAO
+
+o? 6466 402
+6466: Retangulo  402: Circulo  NAO
+
+o? 8236 7749
+8236: Retangulo  7749: Circulo  NAO
+
+o? 9301 6484
+9301: Circulo  6484: Retangulo  NAO
+
+o? 4765 7718
+4765: Circulo  7718: Retangulo  NAO
+
+o? 1812 1094
+1812: Circulo  1094: Retangulo  NAO
+
+o? 8481 404
+8481: Circulo  404: Retangulo  NAO
+
+o? 1276 3792
+1276: Retangulo  3792: Circulo  NAO
+
+o? 7789 1886
+7789: Circulo  1886: Retangulo  NAO
+
+o? 6859 2147
+6859: Circulo  2147: Retangulo  NAO
+
+o? 8758 4751
+8758: Retangulo  4751: Retangulo  NAO
+
+o? 9428 1709
+9428: Retangulo  1709: Retangulo  SIM
+
+o? 8819 2248
+8819: Retangulo  2248: Retangulo  NAO
+
+o? 6062 7830
+6062: Retangulo  7830: Circulo  NAO
+
+o? 2703 2503
+2703: Circulo  2503: Circulo  NAO
+
+o? 4489 2936
+4489: Circulo  2936: Retangulo  NAO
+
+o? 5675 1937
+5675: Retangulo  1937: Retangulo  SIM
+
+o? 4589 5715
+4589: Retangulo  5715: Circulo  NAO
+
+o? 7442 2921
+7442: Retangulo  2921: Retangulo  NAO
+
+o? 7521 2903
+7521: Circulo  2903: Retangulo  NAO
+
+o? 9308 1764
+9308: Retangulo  1764: Circulo  NAO
+
+o? 805 9131
+805: Circulo  9131: Retangulo  NAO
+
+o? 7418 8547
+7418: Retangulo  8547: Circulo  NAO
+
+o? 7021 8253
+7021: Circulo  8253: Circulo  NAO
+
+o? 4544 2814
+4544: Retangulo  2814: Circulo  NAO
+
+o? 3712 5785
+3712: Retangulo  5785: Circulo  NAO
+
+o? 628 1749
+628: Retangulo  1749: Circulo  NAO
+
+o? 8277 7928
+8277: Circulo  7928: Retangulo  NAO
+
+o? 4113 7108
+4113: Circulo  7108: Retangulo  NAO
+
+o? 7443 4641
+7443: Circulo  4641: Circulo  NAO
+
+o? 1422 7319
+1422: Circulo  7319: Retangulo  NAO
+
+o? 232 121
+232: Retangulo  121: Circulo  NAO
+
+o? 7476 1557
+7476: Circulo  1557: Circulo  NAO
+
+o? 7005 9984
+7005: Circulo  9984: Circulo  NAO
+
+o? 5400 3455
+5400: Circulo  3455: Retangulo  NAO
+
+o? 8612 990
+8612: Retangulo  990: Circulo  NAO
+
+o? 9771 9467
+9771: Circulo  9467: Retangulo  NAO
+
+o? 6863 8621
+6863: Retangulo  8621: Retangulo  NAO
+
+o? 5311 5315
+5311: Circulo  5315: Retangulo  NAO
+
+o? 6743 763
+6743: Retangulo  763: Circulo  NAO
+
+o? 8733 8332
+8733: Circulo  8332: Retangulo  NAO
+
+o? 9080 9444
+9080: Retangulo  9444: Circulo  NAO
+
+o? 1966 4575
+1966: Retangulo  4575: Circulo  NAO
+
+o? 6064 5681
+6064: Retangulo  5681: Retangulo  NAO
+
+o? 723 4541
+723: Circulo  4541: Retangulo  NAO
+
+o? 711 8861
+711: Circulo  8861: Retangulo  NAO
+
+o? 987 2011
+987: Circulo  2011: Circulo  NAO
+
+o? 9094 187
+9094: Retangulo  187: Circulo  NAO
+
+o? 1215 4470
+1215: Circulo  4470: Circulo  NAO
+
+o? 3734 1140
+3734: Retangulo  1140: Circulo  NAO
+
+o? 2109 7119
+2109: Circulo  7119: Circulo  NAO
+
+o? 554 5208
+554: Retangulo  5208: Circulo  NAO
+
+o? 4679 2069
+4679: Retangulo  2069: Retangulo  NAO
+
+o? 5209 4661
+5209: Circulo  4661: Retangulo  NAO
+
+o? 8690 3035
+8690: Retangulo  3035: Retangulo  NAO
+
+o? 9031 6921
+9031: Circulo  6921: Circulo  NAO
+
+o? 4279 6886
+4279: Circulo  6886: Retangulo  NAO
+
+o? 6735 1852
+6735: Circulo  1852: Retangulo  NAO
+
+o? 5147 3498
+5147: Retangulo  3498: Circulo  NAO
+
+o? 5701 6099
+5701: Circulo  6099: Circulo  NAO
+
+o? 4929 1794
+4929: Circulo  1794: Circulo  NAO
+
+o? 3492 3695
+3492: Circulo  3695: Retangulo  NAO
+
+o? 4957 7376
+4957: Circulo  7376: Retangulo  NAO
+
+o? 4723 6316
+4723: Circulo  6316: Retangulo  NAO
+
+o? 735 8553
+735: Circulo  8553: Circulo  NAO
+
+o? 9797 8709
+9797: Retangulo  8709: Circulo  NAO
+
+o? 3326 7385
+3326: Retangulo  7385: Retangulo  NAO
+
+o? 7955 7213
+7955: Retangulo  7213: Circulo  NAO
+
+o? 5105 5420
+5105: Retangulo  5420: Retangulo  SIM
+
+o? 6108 8534
+6108: Circulo  8534: Retangulo  NAO
+
+o? 3666 7508
+3666: Circulo  7508: Retangulo  NAO
+
+o? 721 3066
+721: Circulo  3066: Circulo  NAO
+
+o? 7692 3417
+7692: Circulo  3417: Circulo  NAO
+
+o? 3479 9522
+3479: Retangulo  9522: Circulo  NAO
+
+o? 8928 4312
+8928: Circulo  4312: Retangulo  NAO
+
+o? 4143 5806
+4143: Circulo  5806: Retangulo  NAO
+
+o? 7628 3058
+7628: Retangulo  3058: Retangulo  NAO
+
+o? 1730 5796
+1730: Retangulo  5796: Circulo  NAO
+
+o? 7240 351
+7240: Retangulo  351: Circulo  NAO
+
+o? 4485 5061
+4485: Circulo  5061: Circulo  NAO
+
+o? 8475 6142
+8475: Circulo  6142: Retangulo  NAO
+
+o? 7854 4928
+7854: Circulo  4928: Retangulo  NAO
+
+o? 9821 1879
+9821: Retangulo  1879: Circulo  NAO
+
+o? 1070 6868
+1070: Retangulo  6868: Retangulo  NAO
+
+o? 1512 7973
+1512: Circulo  7973: Retangulo  NAO
+
+o? 8136 8286
+8136: Circulo  8286: Circulo  NAO
+
+o? 9599 7788
+9599: Retangulo  7788: Circulo  NAO
+
+o? 8104 475
+8104: Retangulo  475: Circulo  NAO
+
+o? 3160 2651
+3160: Retangulo  2651: Retangulo  NAO
+
+o? 6068 1164
+6068: Retangulo  1164: Circulo  NAO
+
+o? 876 1932
+876: Circulo  1932: Circulo  NAO
+
+o? 3666 3508
+3666: Circulo  3508: Retangulo  NAO
+
+o? 9412 3260
+9412: Retangulo  3260: Retangulo  NAO
+
+o? 6116 9617
+6116: Retangulo  9617: Retangulo  NAO
+
+o? 7429 4510
+7429: Circulo  4510: Retangulo  NAO
+
+o? 5715 9543
+5715: Circulo  9543: Circulo  NAO
+
+o? 9913 1721
+9913: Circulo  1721: Retangulo  NAO
+
+o? 8010 906
+8010: Circulo  906: Circulo  NAO
+
+o? 1832 4430
+1832: Retangulo  4430: Retangulo  NAO
+
+o? 8674 2635
+8674: Retangulo  2635: Circulo  NAO
+
+o? 7171 9716
+7171: Circulo  9716: Retangulo  NAO
+
+o? 8020 6511
+8020: Retangulo  6511: Circulo  NAO
+
+o? 4163 1144
+4163: Retangulo  1144: Retangulo  NAO
+
+o? 4264 9847
+4264: Retangulo  9847: Circulo  NAO
+
+o? 1149 2600
+1149: Circulo  2600: Retangulo  NAO
+
+o? 3094 7481
+3094: Retangulo  7481: Retangulo  NAO
+
+o? 9981 511
+9981: Circulo  511: Circulo  NAO
+
+o? 8470 2379
+8470: Retangulo  2379: Circulo  NAO
+
+o? 4411 800
+4411: Circulo  800: Retangulo  NAO
+
+o? 7459 8696
+7459: Circulo  8696: Retangulo  NAO
+
+o? 8639 415
+8639: Retangulo  415: Circulo  NAO
+
+o? 1213 2549
+1213: Circulo  2549: Retangulo  NAO
+
+o? 970 7354
+970: Retangulo  7354: Retangulo  NAO
+
+o? 8596 3155
+8596: Retangulo  3155: Retangulo  NAO
+
+o? 9559 8457
+9559: Circulo  8457: Circulo  NAO
+
+o? 3742 5845
+3742: Retangulo  5845: Circulo  NAO
+
+o? 5198 2842
+5198: Retangulo  2842: Retangulo  SIM
+
+o? 7608 3011
+7608: Circulo  3011: Retangulo  NAO
+
+o? 7792 1722
+7792: Retangulo  1722: Circulo  NAO
+
+o? 5043 730
+5043: Circulo  730: Retangulo  NAO
+
+o? 2426 8796
+2426: Retangulo  8796: Circulo  NAO
+
+o? 4160 3927
+4160: Retangulo  3927: Circulo  NAO
+
+o? 3008 1685
+3008: Retangulo  1685: Retangulo  NAO
+
+o? 2563 2153
+2563: Circulo  2153: Retangulo  NAO
+
+o? 251 8253
+251: Retangulo  8253: Circulo  NAO
+
+o? 1994 6281
+1994: Retangulo  6281: Retangulo  NAO
+
+o? 6095 2473
+6095: Retangulo  2473: Circulo  NAO
+
+o? 3689 5886
+3689: Retangulo  5886: Circulo  NAO
+
+o? 3238 1548
+3238: Retangulo  1548: Circulo  NAO
+
+o? 7845 4624
+7845: Circulo  4624: Retangulo  NAO
+
+o? 4933 9888
+4933: Circulo  9888: Circulo  NAO
+
+o? 4312 6002
+4312: Retangulo  6002: Retangulo  SIM
+
+o? 3728 989
+3728: Retangulo  989: Retangulo  NAO
+
+o? 7197 5662
+7197: Circulo  5662: Retangulo  NAO
+
+o? 4337 9709
+4337: Retangulo  9709: Circulo  NAO
+
+o? 2510 6354
+2510: Retangulo  6354: Circulo  NAO
+
+o? 7641 9971
+7641: Circulo  9971: Retangulo  NAO
+
+o? 6100 6262
+6100: Retangulo  6262: Retangulo  NAO
+
+o? 6562 5319
+6562: Retangulo  5319: Circulo  NAO
+
+o? 664 1957
+664: Retangulo  1957: Circulo  NAO
+
+o? 1816 7016
+1816: Retangulo  7016: Retangulo  NAO
+
+o? 4136 1087
+4136: Retangulo  1087: Circulo  NAO
+
+o? 70 6246
+70: Retangulo  6246: Circulo  NAO
+
+o? 6392 9561
+6392: Retangulo  9561: Circulo  NAO
+
+o? 9118 7654
+9118: Retangulo  7654: Retangulo  NAO
+
+o? 2650 1760
+2650: Retangulo  1760: Retangulo  NAO
+
+o? 8871 902
+8871: Circulo  902: Retangulo  NAO
+
+o? 4743 8099
+4743: Circulo  8099: Retangulo  NAO
+
+o? 7114 1908
+7114: Retangulo  1908: Circulo  NAO
+
+o? 8534 6123
+8534: Retangulo  6123: Circulo  NAO
+
+o? 4818 6744
+4818: Circulo  6744: Circulo  NAO
+
+o? 1766 6887
+1766: Retangulo  6887: Retangulo  NAO
+
+o? 1507 3536
+1507: Circulo  3536: Retangulo  NAO
+
+o? 662 8679
+662: Retangulo  8679: Circulo  NAO
+
+o? 4293 9776
+4293: Circulo  9776: Retangulo  NAO
+
+o? 4658 6651
+4658: Retangulo  6651: Circulo  NAO
+
+o? 2404 346
+2404: Retangulo  346: Retangulo  NAO
+
+o? 7407 7443
+7407: Circulo  7443: Circulo  NAO
+
+o? 5747 5950
+5747: Retangulo  5950: Retangulo  NAO
+
+o? 4237 7487
+4237: Circulo  7487: Retangulo  NAO
+
+o? 132 141
+132: Circulo  141: Circulo  NAO
+
+o? 8250 751
+8250: Circulo  751: Circulo  NAO
+
+o? 942 9814
+942: Circulo  9814: Retangulo  NAO
+
+o? 8716 2339
+8716: Retangulo  2339: Retangulo  NAO
+
+o? 92 6662
+92: Retangulo  6662: Retangulo  NAO
+
+o? 4403 8062
+4403: Retangulo  8062: Retangulo  NAO
+
+o? 7366 661
+7366: Retangulo  661: Circulo  NAO
+
+o? 7908 9735
+7908: Circulo  9735: Circulo  NAO
+
+o? 1529 2768
+1529: Retangulo  2768: Retangulo  NAO
+
+o? 2492 3613
+2492: Retangulo  3613: Circulo  NAO
+
+o? 5479 5943
+5479: Circulo  5943: Circulo  NAO
+
+o? 9585 917
+9585: Circulo  917: Retangulo  NAO
+
+o? 5613 6731
+5613: Circulo  6731: Retangulo  NAO
+
+o? 315 8359
+315: Circulo  8359: Circulo  NAO
+
+o? 2691 5824
+2691: Circulo  5824: Retangulo  NAO
+
+o? 3992 2983
+3992: Retangulo  2983: Circulo  NAO
+
+o? 7485 5698
+7485: Circulo  5698: Retangulo  NAO
+
+o? 3101 3661
+3101: Retangulo  3661: Circulo  NAO
+
+o? 9967 5869
+9967: Circulo  5869: Circulo  NAO
+
+o? 9648 2428
+9648: Circulo  2428: Retangulo  NAO
+
+o? 7158 6737
+7158: Circulo  6737: Retangulo  NAO
+
+o? 2491 9452
+2491: Circulo  9452: Retangulo  NAO
+
+o? 1828 9157
+1828: Retangulo  9157: Circulo  NAO
+
+o? 6560 9405
+6560: Retangulo  9405: Circulo  NAO
+
+o? 4700 2347
+4700: Retangulo  2347: Circulo  NAO
+
+o? 8166 7443
+8166: Circulo  7443: Circulo  NAO
+
+o? 6628 2705
+6628: Retangulo  2705: Retangulo  NAO
+
+o? 6644 1971
+6644: Retangulo  1971: Circulo  NAO
+
+o? 9663 2669
+9663: Circulo  2669: Retangulo  NAO
+
+o? 7878 1358
+7878: Circulo  1358: Retangulo  NAO
+
+o? 9274 1983
+9274: Retangulo  1983: Circulo  NAO
+
+o? 4221 4761
+4221: Circulo  4761: Circulo  NAO
+
+o? 3192 3039
+3192: Circulo  3039: Circulo  NAO
+
+o? 5564 3215
+5564: Retangulo  3215: Retangulo  NAO
+
+o? 6412 9680
+6412: Retangulo  9680: Retangulo  NAO
+
+o? 6051 8209
+6051: Circulo  8209: Circulo  NAO
+
+o? 4709 1707
+4709: Retangulo  1707: Circulo  NAO
+
+o? 9148 459
+9148: Retangulo  459: Circulo  NAO
+
+o? 3230 6829
+3230: Retangulo  6829: Circulo  NAO
+
+o? 8096 636
+8096: Retangulo  636: Circulo  NAO
+
+o? 8916 4557
+8916: Circulo  4557: Circulo  NAO
+
+o? 2154 7676
+2154: Circulo  7676: Retangulo  NAO
+
+o? 8021 1856
+8021: Retangulo  1856: Retangulo  NAO
+
+o? 9198 4989
+9198: Circulo  4989: Circulo  NAO
+
+o? 1420 7325
+1420: Retangulo  7325: Retangulo  NAO
+
+o? 7166 8405
+7166: Retangulo  8405: Retangulo  NAO
+
+o? 3022 8949
+3022: Retangulo  8949: Circulo  NAO
+
+o? 2146 4372
+2146: Retangulo  4372: Retangulo  NAO
+
+o? 3637 1329
+3637: Circulo  1329: Circulo  NAO
+
+o? 4077 5381
+4077: Circulo  5381: Retangulo  NAO
+
+o? 2050 9337
+2050: Retangulo  9337: Circulo  NAO
+
+o? 8172 168
+8172: Circulo  168: Circulo  NAO
+
+o? 7055 5345
+7055: Retangulo  5345: Retangulo  NAO
+
+o? 1504 2084
+1504: Retangulo  2084: Retangulo  SIM
+
+o? 9998 2254
+9998: Retangulo  2254: Retangulo  NAO
+
+o? 2288 2795
+2288: Retangulo  2795: Retangulo  NAO
+
+o? 7644 8512
+7644: Circulo  8512: Retangulo  NAO
+
+o? 1224 4867
+1224: Circulo  4867: Circulo  NAO
+
+o? 454 2118
+454: Retangulo  2118: Circulo  NAO
+
+o? 7839 4300
+7839: Circulo  4300: Retangulo  NAO
+
+o? 6674 2290
+6674: Retangulo  2290: Retangulo  NAO
+
+o? 5689 4812
+5689: Circulo  4812: Circulo  NAO
+
+o? 4162 5165
+4162: Retangulo  5165: Retangulo  NAO
+
+o? 654 6013
+654: Circulo  6013: Circulo  NAO
+
+o? 4118 3357
+4118: Retangulo  3357: Circulo  NAO
+
+o? 839 7913
+839: Retangulo  7913: Retangulo  NAO
+
+o? 3120 9983
+3120: Circulo  9983: Retangulo  NAO
+
+o? 5648 2130
+5648: Retangulo  2130: Circulo  NAO
+
+o? 2185 6438
+2185: Circulo  6438: Circulo  NAO
+
+o? 2654 9644
+2654: Retangulo  9644: Retangulo  NAO
+
+o? 6694 8500
+6694: Retangulo  8500: Retangulo  SIM
+
+o? 4694 7799
+4694: Retangulo  7799: Retangulo  NAO
+
+o? 8133 3522
+8133: Circulo  3522: Circulo  NAO
+
+o? 1008 7216
+1008: Circulo  7216: Retangulo  NAO
+
+o? 370 6826
+370: Retangulo  6826: Retangulo  NAO
+
+o? 8470 4184
+8470: Retangulo  4184: Retangulo  NAO
+
+o? 5965 939
+5965: Circulo  939: Circulo  NAO
+
+o? 7227 7670
+7227: Circulo  7670: Retangulo  NAO
+
+o? 8125 8284
+8125: Circulo  8284: Retangulo  NAO
+
+o? 3717 9850
+3717: Circulo  9850: Retangulo  NAO
+
+o? 1350 9698
+1350: Circulo  9698: Retangulo  NAO
+
+o? 3982 3204
+3982: Retangulo  3204: Circulo  NAO
+
+o? 4273 3515
+4273: Circulo  3515: Retangulo  NAO
+
+o? 5228 6571
+5228: Retangulo  6571: Circulo  NAO
+
+o? 650 6998
+650: Retangulo  6998: Retangulo  SIM
+
+o? 8286 6994
+8286: Circulo  6994: Retangulo  NAO
+
+o? 9635 8425
+9635: Retangulo  8425: Circulo  NAO
+
+o? 1648 159
+1648: Retangulo  159: Circulo  NAO
+
+o? 7462 7104
+7462: Retangulo  7104: Circulo  NAO
+
+o? 5915 4957
+5915: Retangulo  4957: Circulo  NAO
+
+o? 6473 1457
+6473: Retangulo  1457: Retangulo  NAO
+
+o? 157 9589
+157: Circulo  9589: Circulo  NAO
+
+o? 6175 2595
+6175: Circulo  2595: Circulo  NAO
+
+o? 2811 4158
+2811: Circulo  4158: Circulo  NAO
+
+o? 6811 5164
+6811: Circulo  5164: Retangulo  NAO
+
+o? 3815 1407
+3815: Retangulo  1407: Circulo  NAO
+
+o? 6599 7009
+6599: Retangulo  7009: Circulo  NAO
+
+o? 185 934
+185: Retangulo  934: Retangulo  NAO
+
+o? 6740 3799
+6740: Retangulo  3799: Circulo  NAO
+
+o? 6728 4675
+6728: Retangulo  4675: Circulo  NAO
+
+o? 8801 449
+8801: Retangulo  449: Retangulo  NAO
+
+o? 4065 7051
+4065: Circulo  7051: Circulo  NAO
+
+o? 9873 3164
+9873: Circulo  3164: Retangulo  NAO
+
+o? 81 199
+81: Circulo  199: Circulo  NAO
+
+o? 6998 4232
+6998: Retangulo  4232: Retangulo  NAO
+
+o? 4474 8462
+4474: Retangulo  8462: Retangulo  NAO
+
+o? 6384 585
+6384: Circulo  585: Circulo  NAO
+
+o? 7966 9079
+7966: Retangulo  9079: Circulo  NAO
+
+o? 7819 6938
+7819: Circulo  6938: Retangulo  NAO
+
+o? 6140 5597
+6140: Retangulo  5597: Retangulo  NAO
+
+o? 8591 5364
+8591: Retangulo  5364: Circulo  NAO
+
+o? 3903 8378
+3903: Circulo  8378: Retangulo  NAO
+
+o? 7091 8300
+7091: Retangulo  8300: Retangulo  NAO
+
+o? 5652 3584
+5652: Circulo  3584: Retangulo  NAO
+
+o? 4723 6734
+4723: Circulo  6734: Retangulo  NAO
+
+o? 3145 7122
+3145: Circulo  7122: Circulo  NAO
+
+o? 7711 6546
+7711: Circulo  6546: Circulo  NAO
+
+o? 5903 1664
+5903: Retangulo  1664: Retangulo  NAO
+
+o? 3767 6997
+3767: Retangulo  6997: Circulo  NAO
+
+o? 1806 4062
+1806: Circulo  4062: Circulo  NAO
+
+o? 6656 7539
+6656: Retangulo  7539: Circulo  NAO
+
+o? 485 7477
+485: Retangulo  7477: Circulo  NAO
+
+o? 3908 265
+3908: Retangulo  265: Circulo  NAO
+
+o? 3986 1811
+3986: Retangulo  1811: Retangulo  NAO
+
+o? 2478 9019
+2478: Circulo  9019: Circulo  NAO
+
+o? 8907 7288
+8907: Circulo  7288: Retangulo  NAO
+
+o? 2413 5922
+2413: Circulo  5922: Circulo  NAO
+
+o? 6809 1389
+6809: Retangulo  1389: Circulo  NAO
+
+o? 6705 4921
+6705: Circulo  4921: Circulo  NAO
+
+o? 7868 2313
+7868: Retangulo  2313: Circulo  NAO
+
+o? 8349 8026
+8349: Circulo  8026: Retangulo  NAO
+
+o? 7245 2059
+7245: Circulo  2059: Circulo  NAO
+
+o? 7571 3998
+7571: Retangulo  3998: Retangulo  NAO
+
+o? 9280 3492
+9280: Retangulo  3492: Circulo  NAO
+
+o? 9336 8636
+9336: Circulo  8636: Retangulo  NAO
+
+o? 9093 4166
+9093: Circulo  4166: Retangulo  NAO
+
+o? 929 5404
+929: Retangulo  5404: Retangulo  NAO
+
+o? 4769 6447
+4769: Retangulo  6447: Circulo  NAO
+
+o? 5838 4691
+5838: Circulo  4691: Retangulo  NAO
+
+o? 4332 1967
+4332: Circulo  1967: Retangulo  NAO
+
+o? 877 9554
+877: Circulo  9554: Retangulo  NAO
+
+o? 6640 724
+6640: Retangulo  724: Retangulo  NAO
+
+o? 7954 9411
+7954: Retangulo  9411: Circulo  NAO
+
+o? 1583 7738
+1583: Retangulo  7738: Retangulo  NAO
+
+o? 1116 2222
+1116: Circulo  2222: Retangulo  NAO
+
+o? 7984 8985
+7984: Retangulo  8985: Circulo  NAO
+
+o? 448 7120
+448: Retangulo  7120: Retangulo  NAO
+
+o? 3333 4119
+3333: Circulo  4119: Circulo  NAO
+
+o? 3798 5385
+3798: Circulo  5385: Circulo  NAO
+
+o? 7645 8622
+7645: Circulo  8622: Circulo  NAO
+
+o? 1354 6453
+1354: Retangulo  6453: Circulo  NAO
+
+o? 8817 9242
+8817: Circulo  9242: Retangulo  NAO
+
+o? 1248 658
+1248: Circulo  658: Retangulo  NAO
+
+o? 9358 8562
+9358: Retangulo  8562: Circulo  NAO
+
+o? 8974 5661
+8974: Retangulo  5661: Circulo  NAO
+
+o? 2055 4106
+2055: Circulo  4106: Retangulo  NAO
+
+o? 8995 3627
+8995: Circulo  3627: Circulo  NAO
+
+o? 6557 6103
+6557: Retangulo  6103: Circulo  NAO
+
+o? 0 1390
+0: Circulo  1390: Retangulo  NAO
+
+o? 9679 3120
+9679: Circulo  3120: Circulo  NAO
+
+o? 545 8348
+545: Retangulo  8348: Retangulo  NAO
+
+o? 357 1060
+357: Circulo  1060: Retangulo  NAO
+
+o? 1701 156
+1701: Circulo  156: Circulo  NAO
+
+o? 8697 5804
+8697: Circulo  5804: Retangulo  NAO
+
+o? 1641 2042
+1641: Circulo  2042: Retangulo  NAO
+
+o? 801 570
+801: Circulo  570: Circulo  NAO
+
+o? 9555 9799
+9555: Circulo  9799: Circulo  NAO
+
+o? 4077 6635
+4077: Circulo  6635: Retangulo  NAO
+
+o? 914 8561
+914: Retangulo  8561: Retangulo  NAO
+
+o? 9573 6389
+9573: Circulo  6389: Retangulo  NAO
+
+o? 124 8273
+124: Retangulo  8273: Retangulo  NAO
+
+o? 9485 3679
+9485: Retangulo  3679: Circulo  NAO
+
+o? 9518 3628
+9518: Retangulo  3628: Retangulo  NAO
+
+o? 7060 1308
+7060: Retangulo  1308: Circulo  NAO
+
+o? 6748 2044
+6748: Retangulo  2044: Retangulo  NAO
+
+o? 5571 2896
+5571: Circulo  2896: Retangulo  NAO
+
+o? 1599 947
+1599: Circulo  947: Retangulo  NAO
+
+o? 2291 2569
+2291: Retangulo  2569: Circulo  NAO
+
+o? 1104 6121
+1104: Circulo  6121: Circulo  NAO
+
+o? 5926 3593
+5926: Retangulo  3593: Retangulo  NAO
+
+o? 2515 2284
+2515: Circulo  2284: Retangulo  NAO
+
+o? 9646 3902
+9646: Retangulo  3902: Retangulo  NAO
+
+o? 1900 8098
+1900: Retangulo  8098: Retangulo  NAO
+
+o? 5191 6436
+5191: Circulo  6436: Retangulo  NAO
+
+o? 8917 6897
+8917: Circulo  6897: Circulo  NAO
+
+o? 8706 2160
+8706: Circulo  2160: Circulo  NAO
+
+o? 1237 6196
+1237: Circulo  6196: Retangulo  NAO
+
+o? 556 299
+556: Retangulo  299: Retangulo  NAO
+
+o? 16 7828
+16: Retangulo  7828: Retangulo  NAO
+
+o? 3859 7795
+3859: Circulo  7795: Circulo  NAO
+
+o? 4256 2752
+4256: Retangulo  2752: Retangulo  NAO
+
+o? 3124 2181
+3124: Retangulo  2181: Circulo  NAO
+
+o? 4117 8947
+4117: Circulo  8947: Circulo  NAO
+
+o? 5655 6648
+5655: Circulo  6648: Circulo  NAO
+
+o? 3398 7178
+3398: Retangulo  7178: Retangulo  NAO
+
+o? 8043 5353
+8043: Circulo  5353: Circulo  NAO
+
+o? 1747 7177
+1747: Circulo  7177: Circulo  NAO
+
+o? 4293 668
+4293: Circulo  668: Retangulo  NAO
+
+o? 2972 3678
+2972: Retangulo  3678: Circulo  NAO
+
+o? 3352 9121
+3352: Retangulo  9121: Circulo  NAO
+
+o? 1881 5679
+1881: Circulo  5679: Circulo  NAO
+
+o? 8022 1713
+8022: Circulo  1713: Circulo  NAO
+
+o? 900 5121
+900: Circulo  5121: Circulo  NAO
+
+o? 6594 5200
+6594: Circulo  5200: Retangulo  NAO
+
+o? 8656 4236
+8656: Retangulo  4236: Circulo  NAO
+
+o? 5223 7301
+5223: Circulo  7301: Retangulo  NAO
+
+o? 8685 6646
+8685: Circulo  6646: Retangulo  NAO
+
+o? 8434 5320
+8434: Retangulo  5320: Retangulo  NAO
+
+o? 3136 751
+3136: Retangulo  751: Circulo  NAO
+
+o? 9714 9295
+9714: Circulo  9295: Circulo  NAO
+
+o? 6562 551
+6562: Retangulo  551: Retangulo  NAO
+
+o? 5186 8202
+5186: Retangulo  8202: Circulo  NAO
+
+o? 2341 6376
+2341: Circulo  6376: Retangulo  NAO
+
+o? 9622 7351
+9622: Retangulo  7351: Circulo  NAO
+
+o? 1343 3186
+1343: Retangulo  3186: Circulo  NAO
+
+o? 1364 6327
+1364: Retangulo  6327: Circulo  NAO
+
+o? 4285 4343
+4285: Circulo  4343: Retangulo  NAO
+
+o? 3166 4818
+3166: Retangulo  4818: Circulo  NAO
+
+o? 8587 5704
+8587: Circulo  5704: Retangulo  NAO
+
+o? 3268 9175
+3268: Retangulo  9175: Circulo  NAO
+
+o? 7145 3975
+7145: Retangulo  3975: Circulo  NAO
+
+o? 5757 4311
+5757: Circulo  4311: Circulo  NAO
+
+o? 1930 3633
+1930: Retangulo  3633: Circulo  NAO
+
+o? 9936 2471
+9936: Circulo  2471: Retangulo  NAO
+
+o? 1150 8362
+1150: Retangulo  8362: Retangulo  NAO
+
+o? 4058 8522
+4058: Retangulo  8522: Retangulo  NAO
+
+o? 9760 3110
+9760: Retangulo  3110: Retangulo  NAO
+
+o? 9979 2068
+9979: Circulo  2068: Retangulo  NAO
+
+o? 4999 4979
+4999: Circulo  4979: Retangulo  NAO
+
+o? 3123 9029
+3123: Circulo  9029: Retangulo  NAO
+
+o? 4610 9587
+4610: Retangulo  9587: Retangulo  NAO
+
+o? 5645 3177
+5645: Retangulo  3177: Circulo  NAO
+
+o? 208 1226
+208: Retangulo  1226: Retangulo  NAO
+
+o? 5489 3584
+5489: Retangulo  3584: Retangulo  NAO
+
+o? 382 4992
+382: Retangulo  4992: Circulo  NAO
+
+o? 7286 7521
+7286: Retangulo  7521: Circulo  NAO
+
+o? 2047 9223
+2047: Circulo  9223: Circulo  NAO
+
+o? 9857 7323
+9857: Retangulo  7323: Circulo  NAO
+
+o? 9026 8453
+9026: Retangulo  8453: Retangulo  NAO
+
+o? 5015 5265
+5015: Retangulo  5265: Circulo  NAO
+
+o? 5956 3919
+5956: Retangulo  3919: Circulo  NAO
+
+o? 3905 9198
+3905: Retangulo  9198: Circulo  NAO
+
+o? 8852 1230
+8852: Retangulo  1230: Circulo  NAO
+
+o? 6205 8789
+6205: Circulo  8789: Retangulo  NAO
+
+o? 4597 8448
+4597: Circulo  8448: Circulo  NAO
+
+o? 9790 1061
+9790: Retangulo  1061: Retangulo  SIM
+
+o? 4899 7912
+4899: Circulo  7912: Retangulo  NAO
+
+o? 5591 5675
+5591: Retangulo  5675: Retangulo  NAO
+
+o? 1040 4903
+1040: Retangulo  4903: Circulo  NAO
+
+o? 4026 8120
+4026: Circulo  8120: Retangulo  NAO
+
+o? 7608 4645
+7608: Circulo  4645: Circulo  NAO
+
+o? 8471 2800
+8471: Retangulo  2800: Retangulo  NAO
+
+o? 8531 3802
+8531: Retangulo  3802: Retangulo  NAO
+
+o? 1773 7996
+1773: Circulo  7996: Retangulo  NAO
+
+o? 9241 8203
+9241: Circulo  8203: Circulo  NAO
+
+o? 2987 2064
+2987: Retangulo  2064: Circulo  NAO
+
+o? 4853 8223
+4853: Retangulo  8223: Circulo  NAO
+
+o? 3275 4451
+3275: Retangulo  4451: Retangulo  NAO
+
+o? 631 8375
+631: Circulo  8375: Retangulo  NAO
+
+o? 3974 8280
+3974: Retangulo  8280: Circulo  NAO
+
+o? 6996 7058
+6996: Circulo  7058: Retangulo  NAO
+
+o? 1952 7704
+1952: Retangulo  7704: Circulo  NAO
+
+o? 2846 2822
+2846: Retangulo  2822: Retangulo  NAO
+
+o? 8019 9420
+8019: Circulo  9420: Circulo  NAO
+
+o? 9488 5089
+9488: Retangulo  5089: Circulo  NAO
+
+o? 6331 4615
+6331: Circulo  4615: Circulo  NAO
+
+o? 1086 142
+1086: Circulo  142: Retangulo  NAO
+
+o? 3958 234
+3958: Retangulo  234: Circulo  NAO
+
+o? 1247 6454
+1247: Retangulo  6454: Retangulo  NAO
+
+o? 1573 1606
+1573: Circulo  1606: Retangulo  NAO
+
+o? 8600 1267
+8600: Retangulo  1267: Circulo  NAO
+
+o? 9246 6009
+9246: Circulo  6009: Circulo  NAO
+
+o? 414 3734
+414: Circulo  3734: Retangulo  NAO
+
+o? 1367 8096
+1367: Retangulo  8096: Retangulo  NAO
+
+o? 1776 308
+1776: Circulo  308: Retangulo  NAO
+
+o? 161 3733
+161: Retangulo  3733: Circulo  NAO
+
+o? 1572 702
+1572: Circulo  702: Circulo  NAO
+
+o? 5642 8400
+5642: Retangulo  8400: Circulo  NAO
+
+o? 5190 941
+5190: Circulo  941: Retangulo  NAO
+
+o? 4087 4933
+4087: Circulo  4933: Circulo  NAO
+
+o? 2840 2991
+2840: Retangulo  2991: Circulo  NAO
+
+o? 8297 1310
+8297: Retangulo  1310: Retangulo  NAO
+
+o? 363 9751
+363: Circulo  9751: Circulo  NAO
+
+o? 3225 9861
+3225: Circulo  9861: Circulo  NAO
+
+o? 5666 8516
+5666: Retangulo  8516: Retangulo  SIM
+
+o? 9849 1457
+9849: Circulo  1457: Retangulo  NAO
+
+o? 6562 5464
+6562: Retangulo  5464: Retangulo  NAO
+
+o? 8014 9989
+8014: Retangulo  9989: Retangulo  NAO
+
+o? 7584 1942
+7584: Circulo  1942: Retangulo  NAO
+
+o? 1469 7315
+1469: Retangulo  7315: Circulo  NAO
+
+o? 2154 1737
+2154: Circulo  1737: Circulo  NAO
+
+o? 2224 9752
+2224: Retangulo  9752: Retangulo  NAO
+
+o? 884 1735
+884: Retangulo  1735: Circulo  NAO
+
+o? 1410 3939
+1410: Circulo  3939: Circulo  NAO
+
+o? 4167 6585
+4167: Circulo  6585: Circulo  NAO
+
+o? 1281 3047
+1281: Circulo  3047: Retangulo  NAO
+
+o? 9943 7211
+9943: Circulo  7211: Retangulo  NAO
+
+o? 2293 3513
+2293: Circulo  3513: Circulo  NAO
+
+o? 9213 6353
+9213: Circulo  6353: Retangulo  NAO
+
+o? 3260 1455
+3260: Retangulo  1455: Circulo  NAO
+
+o? 6638 8671
+6638: Retangulo  8671: Circulo  NAO
+
+o? 5021 7333
+5021: Retangulo  7333: Circulo  NAO
+
+o? 6211 5652
+6211: Circulo  5652: Circulo  NAO
+
+o? 9121 6672
+9121: Circulo  6672: Circulo  NAO
+
+o? 6164 6564
+6164: Retangulo  6564: Circulo  NAO
+
+o? 1023 1324
+1023: Circulo  1324: Retangulo  NAO
+
+o? 4526 9005
+4526: Retangulo  9005: Retangulo  NAO
+
+o? 2677 2468
+2677: Circulo  2468: Retangulo  NAO
+
+o? 1973 5053
+1973: Retangulo  5053: Circulo  NAO
+
+o? 3705 5253
+3705: Circulo  5253: Circulo  NAO
+
+o? 6070 4244
+6070: Retangulo  4244: Retangulo  NAO
+
+o? 195 896
+195: Circulo  896: Retangulo  NAO
+
+o? 9936 7979
+9936: Circulo  7979: Retangulo  NAO
+
+o? 6199 1536
+6199: Circulo  1536: Circulo  NAO
+
+o? 4799 2172
+4799: Retangulo  2172: Circulo  NAO
+
+o? 7850 1722
+7850: Retangulo  1722: Circulo  NAO
+
+o? 1383 7975
+1383: Circulo  7975: Circulo  NAO
+
+o? 3545 1306
+3545: Retangulo  1306: Retangulo  NAO
+
+o? 6979 8270
+6979: Circulo  8270: Retangulo  NAO
+
+o? 2553 6008
+2553: Circulo  6008: Retangulo  NAO
+
+o? 9518 1580
+9518: Retangulo  1580: Retangulo  NAO
+
+o? 6194 2773
+6194: Retangulo  2773: Circulo  NAO
+
+o? 69 9550
+69: Circulo  9550: Retangulo  NAO
+
+o? 2285 5835
+2285: Retangulo  5835: Circulo  NAO
+
+o? 6334 890
+6334: Retangulo  890: Retangulo  NAO
+
+o? 1877 901
+1877: Retangulo  901: Circulo  NAO
+
+o? 7873 8561
+7873: Circulo  8561: Retangulo  NAO
+
+o? 8554 2249
+8554: Retangulo  2249: Retangulo  NAO
+
+o? 7524 5794
+7524: Circulo  5794: Retangulo  NAO
+
+o? 8110 5189
+8110: Retangulo  5189: Retangulo  NAO
+
+o? 6549 4757
+6549: Circulo  4757: Retangulo  NAO
+
+o? 5480 616
+5480: Retangulo  616: Retangulo  SIM
+
+o? 6652 883
+6652: Retangulo  883: Circulo  NAO
+
+o? 7782 7639
+7782: Circulo  7639: Circulo  NAO
+
+o? 8136 2799
+8136: Circulo  2799: Circulo  NAO
+
+o? 7371 5233
+7371: Circulo  5233: Circulo  NAO
+
+o? 6632 3516
+6632: Retangulo  3516: Circulo  NAO
+
+o? 1028 1170
+1028: Retangulo  1170: Circulo  NAO
+
+o? 9036 1524
+9036: Circulo  1524: Circulo  NAO
+
+o? 8993 4848
+8993: Retangulo  4848: Circulo  NAO
+
+o? 3043 1418
+3043: Circulo  1418: Retangulo  NAO
+
+o? 8599 7930
+8599: Circulo  7930: Retangulo  NAO
+
+o? 393 3809
+393: Circulo  3809: Retangulo  NAO
+
+o? 1286 581
+1286: Retangulo  581: Retangulo  NAO
+
+o? 7286 7364
+7286: Retangulo  7364: Retangulo  NAO
+
+o? 1243 843
+1243: Circulo  843: Circulo  NAO
+
+o? 9555 7778
+9555: Circulo  7778: Retangulo  NAO
+
+o? 2906 6246
+2906: Retangulo  6246: Circulo  NAO
+
+o? 402 8042
+402: Circulo  8042: Retangulo  NAO
+
+o? 7182 1157
+7182: Circulo  1157: Retangulo  NAO
+
+o? 5298 315
+5298: Circulo  315: Circulo  NAO
+
+o? 2809 1153
+2809: Circulo  1153: Circulo  NAO
+
+o? 9165 8580
+9165: Circulo  8580: Circulo  NAO
+
+o? 8174 1173
+8174: Retangulo  1173: Circulo  NAO
+
+o? 5093 4252
+5093: Retangulo  4252: Retangulo  NAO
+
+o? 3418 3176
+3418: Retangulo  3176: Retangulo  NAO
+
+o? 471 643
+471: Circulo  643: Circulo  NAO
+
+o? 5117 6743
+5117: Retangulo  6743: Retangulo  NAO
+
+o? 4328 2689
+4328: Retangulo  2689: Circulo  NAO
+
+o? 7552 9946
+7552: Retangulo  9946: Retangulo  NAO
+
+o? 4800 9246
+4800: Circulo  9246: Circulo  NAO
+
+o? 5814 7458
+5814: Circulo  7458: Circulo  NAO
+
+o? 3702 8640
+3702: Circulo  8640: Circulo  NAO
+
+o? 6739 74
+6739: Circulo  74: Retangulo  NAO
+
+o? 4994 650
+4994: Retangulo  650: Retangulo  NAO
+
+o? 2632 6137
+2632: Retangulo  6137: Retangulo  NAO
+
+o? 5288 3152
+5288: Retangulo  3152: Retangulo  NAO
+
+o? 58 9041
+58: Retangulo  9041: Retangulo  NAO
+
+o? 7150 6942
+7150: Retangulo  6942: Circulo  NAO
+
+o? 820 9615
+820: Retangulo  9615: Circulo  NAO
+
+o? 2170 1511
+2170: Retangulo  1511: Retangulo  NAO
+
+o? 9504 2688
+9504: Circulo  2688: Circulo  NAO
+
+o? 7946 1315
+7946: Retangulo  1315: Circulo  NAO
+
+o? 8327 9338
+8327: Retangulo  9338: Retangulo  NAO
+
+o? 3054 8820
+3054: Circulo  8820: Circulo  NAO
+
+o? 6954 1917
+6954: Circulo  1917: Circulo  NAO
+
+o? 668 5817
+668: Retangulo  5817: Circulo  NAO
+
+o? 4663 6955
+4663: Circulo  6955: Circulo  NAO
+
+o? 5716 9579
+5716: Retangulo  9579: Circulo  NAO
+
+o? 4057 1246
+4057: Circulo  1246: Retangulo  NAO
+
+o? 9368 4462
+9368: Retangulo  4462: Retangulo  NAO
+
+o? 8535 6071
+8535: Circulo  6071: Retangulo  NAO
+
+o? 8909 4610
+8909: Retangulo  4610: Retangulo  NAO
+
+o? 127 4871
+127: Circulo  4871: Retangulo  NAO
+
+o? 4689 7863
+4689: Circulo  7863: Circulo  NAO
+
+o? 1065 5476
+1065: Circulo  5476: Retangulo  NAO
+
+o? 9592 3741
+9592: Retangulo  3741: Circulo  NAO
+
+o? 1493 623
+1493: Retangulo  623: Retangulo  NAO
+
+o? 4568 1775
+4568: Retangulo  1775: Retangulo  NAO
+
+o? 578 6242
+578: Retangulo  6242: Retangulo  NAO
+
+o? 1739 4193
+1739: Retangulo  4193: Retangulo  NAO
+
+o? 9903 3458
+9903: Circulo  3458: Retangulo  NAO
+
+o? 7476 8313
+7476: Circulo  8313: Circulo  NAO
+
+o? 9415 7045
+9415: Circulo  7045: Circulo  NAO
+
+o? 680 628
+680: Retangulo  628: Retangulo  NAO
+
+o? 3849 149
+3849: Circulo  149: Retangulo  NAO
+
+o? 4141 8884
+4141: Circulo  8884: Retangulo  NAO
+
+o? 4306 737
+4306: Retangulo  737: Retangulo  NAO
+
+o? 2357 4546
+2357: Retangulo  4546: Retangulo  NAO
+
+o? 1237 4086
+1237: Circulo  4086: Circulo  NAO
+
+o? 7576 3424
+7576: Retangulo  3424: Retangulo  NAO
+
+o? 2677 1601
+2677: Circulo  1601: Retangulo  NAO
+
+o? 9882 312
+9882: Circulo  312: Circulo  NAO
+
+o? 2044 5609
+2044: Retangulo  5609: Retangulo  NAO
+
+o? 2682 9341
+2682: Circulo  9341: Retangulo  NAO
+
+o? 1129 5314
+1129: Circulo  5314: Retangulo  SIM
+
+o? 9598 6409
+9598: Retangulo  6409: Circulo  NAO
+
+o? 4974 4055
+4974: Circulo  4055: Retangulo  NAO
+
+o? 8633 3165
+8633: Retangulo  3165: Circulo  NAO
+
+o? 1045 5913
+1045: Circulo  5913: Circulo  NAO
+
+o? 5299 4713
+5299: Circulo  4713: Circulo  NAO
+
+o? 8790 5371
+8790: Circulo  5371: Circulo  NAO
+
+o? 7188 2936
+7188: Circulo  2936: Retangulo  NAO
+
+o? 7567 5347
+7567: Circulo  5347: Circulo  NAO
+
+o? 2903 5161
+2903: Retangulo  5161: Circulo  NAO
+
+o? 411 5327
+411: Circulo  5327: Retangulo  NAO
+
+o? 5788 1251
+5788: Retangulo  1251: Circulo  NAO
+
+o? 2126 3977
+2126: Retangulo  3977: Retangulo  NAO
+
+o? 6667 3986
+6667: Circulo  3986: Retangulo  NAO
+
+o? 6036 283
+6036: Circulo  283: Circulo  NAO
+
+o? 5443 716
+5443: Circulo  716: Retangulo  NAO
+
+o? 4502 3913
+4502: Retangulo  3913: Circulo  NAO
+
+o? 8287 5641
+8287: Circulo  5641: Circulo  NAO
+
+o? 6891 944
+6891: Circulo  944: Retangulo  NAO
+
+o? 995 6001
+995: Retangulo  6001: Circulo  NAO
+
+o? 9482 3816
+9482: Retangulo  3816: Circulo  NAO
+
+o? 7538 7731
+7538: Retangulo  7731: Circulo  NAO
+
+o? 2152 8454
+2152: Retangulo  8454: Circulo  NAO
+
+o? 1477 773
+1477: Circulo  773: Retangulo  NAO
+
+o? 6155 1978
+6155: Retangulo  1978: Retangulo  NAO
+
+o? 4493 9636
+4493: Retangulo  9636: Circulo  NAO
+
+o? 289 5840
+289: Circulo  5840: Retangulo  NAO
+
+o? 1367 6246
+1367: Retangulo  6246: Circulo  NAO
+
+o? 7721 2340
+7721: Retangulo  2340: Circulo  NAO
+
+o? 2279 2676
+2279: Retangulo  2676: Circulo  NAO
+
+o? 8574 3407
+8574: Circulo  3407: Retangulo  NAO
+
+o? 3310 8913
+3310: Retangulo  8913: Circulo  NAO
+
+o? 8378 875
+8378: Retangulo  875: Retangulo  SIM
+
+o? 9186 4935
+9186: Circulo  4935: Circulo  NAO
+
+o? 1779 5882
+1779: Circulo  5882: Retangulo  NAO
+
+o? 270 8434
+270: Circulo  8434: Retangulo  NAO
+
+o? 8904 749
+8904: Circulo  749: Retangulo  NAO
+
+o? 8704 4957
+8704: Retangulo  4957: Circulo  NAO
+
+o? 8558 6562
+8558: Retangulo  6562: Retangulo  NAO
+
+o? 4308 3488
+4308: Circulo  3488: Retangulo  NAO
+
+o? 2747 124
+2747: Retangulo  124: Retangulo  SIM
+
+o? 1525 70
+1525: Circulo  70: Retangulo  NAO
+
+o? 7970 3907
+7970: Retangulo  3907: Circulo  NAO
+
+o? 127 7993
+127: Circulo  7993: Circulo  NAO
+
+o? 711 5411
+711: Circulo  5411: Retangulo  NAO
+
+o? 3626 6369
+3626: Retangulo  6369: Circulo  NAO
+
+o? 9348 5790
+9348: Circulo  5790: Circulo  NAO
+
+o? 8293 9319
+8293: Circulo  9319: Circulo  NAO
+
+o? 5094 8992
+5094: Circulo  8992: Retangulo  NAO
+
+o? 7036 6136
+7036: Retangulo  6136: Retangulo  NAO
+
+o? 1065 1214
+1065: Circulo  1214: Retangulo  NAO
+
+o? 5884 2534
+5884: Retangulo  2534: Retangulo  NAO
+
+o? 6115 6341
+6115: Circulo  6341: Retangulo  NAO
+
+o? 420 392
+420: Circulo  392: Retangulo  NAO
+
+o? 2964 4876
+2964: Circulo  4876: Retangulo  NAO
+
+o? 9774 1773
+9774: Circulo  1773: Circulo  NAO
+
+o? 3864 3751
+3864: Circulo  3751: Circulo  NAO
+
+o? 2868 8450
+2868: Circulo  8450: Retangulo  NAO
+
+o? 4927 4795
+4927: Circulo  4795: Circulo  NAO
+
+o? 2026 966
+2026: Retangulo  966: Circulo  NAO
+
+o? 6103 9540
+6103: Circulo  9540: Circulo  NAO
+
+o? 8208 863
+8208: Circulo  863: Retangulo  NAO
+
+o? 4909 9245
+4909: Circulo  9245: Retangulo  NAO
+
+o? 5759 9941
+5759: Retangulo  9941: Retangulo  SIM
+
+o? 3268 5753
+3268: Retangulo  5753: Retangulo  NAO
+
+o? 1116 8996
+1116: Circulo  8996: Retangulo  NAO
+
+o? 9024 9261
+9024: Circulo  9261: Circulo  NAO
+
+o? 6640 4746
+6640: Retangulo  4746: Circulo  SIM
+
+o? 3288 445
+3288: Circulo  445: Circulo  NAO
+
+o? 2587 492
+2587: Circulo  492: Circulo  NAO
+
+o? 5096 6191
+5096: Retangulo  6191: Retangulo  SIM
+
+o? 9514 1088
+9514: Retangulo  1088: Retangulo  NAO
+
+o? 1460 7460
+1460: Retangulo  7460: Retangulo  NAO
+
+o? 5847 8675
+5847: Circulo  8675: Retangulo  NAO
+
+o? 6836 7942
+6836: Retangulo  7942: Retangulo  NAO
+
+o? 5321 9376
+5321: Retangulo  9376: Retangulo  NAO
+
+o? 1055 7417
+1055: Retangulo  7417: Circulo  NAO
+
+o? 4615 4822
+4615: Circulo  4822: Retangulo  NAO
+
+o? 636 6192
+636: Circulo  6192: Circulo  NAO
+
+o? 5797 226
+5797: Circulo  226: Retangulo  NAO
+
+o? 2934 4226
+2934: Circulo  4226: Retangulo  NAO
+
+o? 1299 8844
+1299: Circulo  8844: Circulo  NAO
+
+o? 7657 2938
+7657: Circulo  2938: Retangulo  NAO
+
+o? 1481 7976
+1481: Retangulo  7976: Retangulo  NAO
+
+o? 8667 7584
+8667: Circulo  7584: Circulo  NAO
+
+o? 6853 1020
+6853: Circulo  1020: Circulo  NAO
+
+o? 7926 2078
+7926: Circulo  2078: Retangulo  NAO
+
+o? 4676 6411
+4676: Retangulo  6411: Circulo  NAO
+
+o? 8775 119
+8775: Circulo  119: Retangulo  NAO
+
+o? 8129 6537
+8129: Retangulo  6537: Circulo  NAO
+
+o? 9671 5505
+9671: Retangulo  5505: Circulo  NAO
+
+o? 2857 9929
+2857: Circulo  9929: Retangulo  NAO
+
+o? 5049 5213
+5049: Circulo  5213: Retangulo  NAO
+
+o? 6471 7016
+6471: Circulo  7016: Retangulo  NAO
+
+o? 9025 8515
+9025: Circulo  8515: Circulo  NAO
+
+o? 8889 2649
+8889: Circulo  2649: Circulo  NAO
+
+o? 2867 8956
+2867: Retangulo  8956: Retangulo  NAO
+
+o? 2387 6667
+2387: Retangulo  6667: Circulo  NAO
+
+o? 9539 3497
+9539: Retangulo  3497: Retangulo  NAO
+
+o? 4301 9589
+4301: Retangulo  9589: Circulo  NAO
+
+o? 2049 7521
+2049: Circulo  7521: Circulo  NAO
+
+o? 5005 2005
+5005: Circulo  2005: Circulo  NAO
+
+o? 5389 8694
+5389: Circulo  8694: Circulo  NAO
+
+o? 3398 6158
+3398: Retangulo  6158: Retangulo  NAO
+
+o? 6791 5911
+6791: Retangulo  5911: Circulo  NAO
+
+o? 998 7334
+998: Retangulo  7334: Retangulo  NAO
+
+o? 4102 6538
+4102: Retangulo  6538: Retangulo  NAO
+
+o? 8728 2470
+8728: Retangulo  2470: Retangulo  NAO
+
+o? 6407 9234
+6407: Retangulo  9234: Circulo  NAO
+
+o? 2240 1317
+2240: Retangulo  1317: Circulo  NAO
+
+o? 6764 4499
+6764: Retangulo  4499: Retangulo  NAO
+
+o? 6445 5869
+6445: Circulo  5869: Circulo  NAO
+
+o? 4343 4732
+4343: Retangulo  4732: Retangulo  NAO
+
+o? 3715 5537
+3715: Circulo  5537: Retangulo  NAO
+
+o? 5281 1789
+5281: Circulo  1789: Circulo  NAO
+
+o? 1714 973
+1714: Retangulo  973: Circulo  NAO
+
+o? 7113 1289
+7113: Circulo  1289: Retangulo  NAO
+
+o? 1903 8686
+1903: Circulo  8686: Retangulo  NAO
+
+o? 4841 6108
+4841: Retangulo  6108: Circulo  NAO
+
+o? 2768 2647
+2768: Retangulo  2647: Circulo  NAO
+
+o? 5316 5476
+5316: Circulo  5476: Retangulo  NAO
+
+o? 4940 2323
+4940: Retangulo  2323: Circulo  NAO
+
+o? 2366 9801
+2366: Retangulo  9801: Circulo  NAO
+
+o? 1503 2385
+1503: Circulo  2385: Circulo  NAO
+
+o? 1088 1218
+1088: Retangulo  1218: Circulo  NAO
+
+o? 714 6476
+714: Circulo  6476: Retangulo  NAO
+
+o? 7327 232
+7327: Circulo  232: Retangulo  NAO
+
+o? 6419 4034
+6419: Retangulo  4034: Retangulo  NAO
+
+o? 9940 2562
+9940: Retangulo  2562: Circulo  NAO
+
+o? 9145 3581
+9145: Circulo  3581: Retangulo  NAO
+
+o? 9734 9118
+9734: Retangulo  9118: Retangulo  NAO
+
+o? 7801 9949
+7801: Circulo  9949: Circulo  NAO
+
+o? 5432 597
+5432: Retangulo  597: Circulo  NAO
+
+o? 5340 4623
+5340: Circulo  4623: Circulo  NAO
+
+o? 6444 8916
+6444: Circulo  8916: Circulo  NAO
+
+o? 5997 1560
+5997: Circulo  1560: Circulo  NAO
+
+o? 1248 8240
+1248: Circulo  8240: Retangulo  NAO
+
+o? 2178 3055
+2178: Circulo  3055: Circulo  NAO
+
+o? 2958 1501
+2958: Circulo  1501: Circulo  NAO
+
+o? 6699 5337
+6699: Circulo  5337: Circulo  NAO
+
+o? 736 2784
+736: Retangulo  2784: Circulo  NAO
+
+o? 2300 1805
+2300: Retangulo  1805: Retangulo  NAO
+
+o? 7488 352
+7488: Circulo  352: Retangulo  NAO
+
+o? 8576 8157
+8576: Retangulo  8157: Circulo  NAO
+
+o? 8263 5377
+8263: Circulo  5377: Circulo  NAO
+
+o? 3893 5333
+3893: Retangulo  5333: Retangulo  NAO
+
+o? 441 9942
+441: Circulo  9942: Circulo  SIM
+
+o? 9583 3477
+9583: Circulo  3477: Circulo  NAO
+
+o? 5433 7006
+5433: Circulo  7006: Retangulo  NAO
+
+o? 4442 6827
+4442: Retangulo  6827: Retangulo  NAO
+
+o? 7426 277
+7426: Retangulo  277: Circulo  NAO
+
+o? 8825 5623
+8825: Retangulo  5623: Circulo  NAO
+
+o? 8480 2585
+8480: Retangulo  2585: Retangulo  NAO
+
+o? 6545 4119
+6545: Retangulo  4119: Circulo  NAO
+
+o? 7831 125
+7831: Circulo  125: Retangulo  NAO
+
+o? 1533 3707
+1533: Circulo  3707: Retangulo  NAO
+
+o? 470 373
+470: Retangulo  373: Circulo  NAO
+
+o? 5930 7510
+5930: Retangulo  7510: Retangulo  NAO
+
+o? 2830 1959
+2830: Retangulo  1959: Circulo  NAO
+
+o? 5677 3668
+5677: Circulo  3668: Retangulo  NAO
+
+o? 4147 7372
+4147: Circulo  7372: Retangulo  NAO
+
+o? 3111 7847
+3111: Circulo  7847: Retangulo  NAO
+
+o? 3138 741
+3138: Circulo  741: Circulo  NAO
+
+o? 6584 8881
+6584: Retangulo  8881: Circulo  NAO
+
+o? 2202 6173
+2202: Circulo  6173: Retangulo  NAO
+
+o? 9236 8823
+9236: Retangulo  8823: Circulo  NAO
+
+o? 9443 5009
+9443: Retangulo  5009: Retangulo  NAO
+
+o? 3692 8804
+3692: Retangulo  8804: Retangulo  NAO
+
+o? 6372 1777
+6372: Circulo  1777: Circulo  NAO
+
+o? 6671 8014
+6671: Retangulo  8014: Retangulo  NAO
+
+o? 7529 7681
+7529: Retangulo  7681: Circulo  NAO
+
+o? 2951 9184
+2951: Retangulo  9184: Retangulo  NAO
+
+o? 3356 6982
+3356: Retangulo  6982: Retangulo  NAO
+
+o? 2907 5936
+2907: Circulo  5936: Retangulo  NAO
+
+o? 569 1574
+569: Retangulo  1574: Retangulo  NAO
+
+o? 9025 2523
+9025: Circulo  2523: Circulo  NAO
+
+o? 3887 2721
+3887: Retangulo  2721: Circulo  SIM
+
+o? 821 8039
+821: Retangulo  8039: Retangulo  NAO
+
+o? 7131 1550
+7131: Circulo  1550: Retangulo  NAO
+
+o? 1832 6231
+1832: Retangulo  6231: Circulo  NAO
+
+o? 4364 5751
+4364: Retangulo  5751: Circulo  NAO
+
+o? 6553 7041
+6553: Circulo  7041: Circulo  NAO
+
+o? 3698 3955
+3698: Retangulo  3955: Circulo  NAO
+
+o? 4020 6554
+4020: Circulo  6554: Retangulo  NAO
+
+o? 7630 7915
+7630: Retangulo  7915: Circulo  NAO
+
+o? 5225 3276
+5225: Retangulo  3276: Circulo  NAO
+
+o? 9452 1436
+9452: Retangulo  1436: Retangulo  SIM
+
+o? 7993 9544
+7993: Circulo  9544: Retangulo  NAO
+
+o? 9524 867
+9524: Retangulo  867: Circulo  NAO
+
+o? 1156 3799
+1156: Retangulo  3799: Circulo  NAO
+
+o? 7721 6921
+7721: Retangulo  6921: Circulo  NAO
+
+o? 666 8565
+666: Circulo  8565: Circulo  NAO
+
+o? 6503 3962
+6503: Retangulo  3962: Retangulo  NAO
+
+o? 1868 5920
+1868: Retangulo  5920: Retangulo  NAO
+
+o? 3820 43
+3820: Retangulo  43: Circulo  NAO
+
+o? 3863 8803
+3863: Retangulo  8803: Circulo  NAO
+
+o? 1242 4429
+1242: Circulo  4429: Circulo  NAO
+
+o? 8124 8356
+8124: Circulo  8356: Retangulo  NAO
+
+o? 4724 4409
+4724: Retangulo  4409: Retangulo  NAO
+
+o? 4309 8682
+4309: Circulo  8682: Circulo  NAO
+
+o? 3803 3072
+3803: Retangulo  3072: Circulo  NAO
+
+o? 1347 5567
+1347: Circulo  5567: Retangulo  NAO
+
+o? 2724 5626
+2724: Circulo  5626: Retangulo  NAO
+
+o? 4590 9530
+4590: Circulo  9530: Retangulo  NAO
+
+o? 9972 4454
+9972: Circulo  4454: Retangulo  NAO
+
+o? 9856 6645
+9856: Retangulo  6645: Circulo  NAO
+
+o? 216 589
+216: Circulo  589: Circulo  NAO
+
+o? 124 6548
+124: Retangulo  6548: Retangulo  NAO
+
+o? 3027 5291
+3027: Circulo  5291: Retangulo  NAO
+
+o? 9928 682
+9928: Retangulo  682: Retangulo  NAO
+
+o? 7683 8920
+7683: Circulo  8920: Retangulo  NAO
+
+o? 5854 4189
+5854: Retangulo  4189: Circulo  NAO
+
+o? 6733 9956
+6733: Circulo  9956: Retangulo  NAO
+
+o? 1734 2251
+1734: Circulo  2251: Circulo  NAO
+
+o? 1268 3214
+1268: Retangulo  3214: Retangulo  NAO
+
+o? 8587 3045
+8587: Circulo  3045: Circulo  NAO
+
+o? 1072 784
+1072: Retangulo  784: Retangulo  NAO
+
+o? 6997 3117
+6997: Circulo  3117: Circulo  NAO
+
+o? 8489 2287
+8489: Retangulo  2287: Circulo  NAO
+
+o? 1303 644
+1303: Circulo  644: Retangulo  NAO
+
+o? 3433 4274
+3433: Circulo  4274: Retangulo  NAO
+
+o? 4602 138
+4602: Circulo  138: Circulo  NAO
+
+o? 5813 8029
+5813: Retangulo  8029: Circulo  NAO
+
+o? 7122 9993
+7122: Circulo  9993: Circulo  NAO
+
+o? 7593 7533
+7593: Circulo  7533: Circulo  NAO
+
+o? 2237 7480
+2237: Retangulo  7480: Retangulo  NAO
+
+o? 1339 5334
+1339: Circulo  5334: Circulo  NAO
+
+o? 899 6723
+899: Retangulo  6723: Circulo  NAO
+
+o? 9044 3134
+9044: Retangulo  3134: Retangulo  SIM
+
+o? 4344 3683
+4344: Circulo  3683: Retangulo  NAO
+
+o? 909 649
+909: Circulo  649: Circulo  NAO
+
+o? 265 8139
+265: Circulo  8139: Circulo  NAO
+
+o? 2916 1794
+2916: Circulo  1794: Circulo  NAO
+
+o? 8202 7041
+8202: Circulo  7041: Circulo  NAO
+
+o? 1010 9952
+1010: Retangulo  9952: Retangulo  NAO
+
+o? 9620 633
+9620: Retangulo  633: Circulo  NAO
+
+o? 5493 9787
+5493: Circulo  9787: Circulo  NAO
+
+o? 17 5141
+17: Retangulo  5141: Retangulo  NAO
+
+o? 5518 2572
+5518: Retangulo  2572: Retangulo  NAO
+
+o? 323 2567
+323: Retangulo  2567: Retangulo  NAO
+
+o? 8370 5238
+8370: Circulo  5238: Circulo  NAO
+
+o? 6565 4555
+6565: Circulo  4555: Circulo  NAO
+
+o? 8172 3470
+8172: Circulo  3470: Retangulo  NAO
+
+o? 5182 5283
+5182: Retangulo  5283: Circulo  NAO
+
+o? 9662 7783
+9662: Retangulo  7783: Circulo  NAO
+
+o? 5186 6411
+5186: Retangulo  6411: Circulo  NAO
+
+o? 3011 584
+3011: Retangulo  584: Retangulo  NAO
+
+o? 9988 7349
+9988: Retangulo  7349: Retangulo  NAO
+
+o? 5551 9967
+5551: Circulo  9967: Circulo  NAO
+
+o? 5262 6251
+5262: Circulo  6251: Retangulo  NAO
+
+o? 9700 57
+9700: Retangulo  57: Circulo  NAO
+
+o? 1774 8852
+1774: Retangulo  8852: Retangulo  SIM
+
+o? 7506 3233
+7506: Circulo  3233: Retangulo  NAO
+
+o? 2255 3421
+2255: Retangulo  3421: Circulo  NAO
+
+o? 4911 4803
+4911: Circulo  4803: Circulo  NAO
+
+o? 1577 4515
+1577: Retangulo  4515: Circulo  NAO
+
+o? 8380 5522
+8380: Retangulo  5522: Retangulo  NAO
+
+o? 9243 1796
+9243: Circulo  1796: Retangulo  NAO
+
+o? 8844 3164
+8844: Circulo  3164: Retangulo  NAO
+
+o? 7714 9789
+7714: Retangulo  9789: Circulo  NAO
+
+o? 8192 5568
+8192: Retangulo  5568: Circulo  NAO
+
+o? 5992 122
+5992: Retangulo  122: Retangulo  NAO
+
+o? 7979 1236
+7979: Retangulo  1236: Circulo  NAO
+
+o? 25 7040
+25: Circulo  7040: Retangulo  NAO
+
+o? 3209 9005
+3209: Retangulo  9005: Retangulo  NAO
+
+o? 7856 51
+7856: Retangulo  51: Circulo  NAO
+
+o? 8521 4129
+8521: Circulo  4129: Circulo  NAO
+
+o? 8898 6270
+8898: Circulo  6270: Circulo  NAO
+
+o? 5104 1584
+5104: Retangulo  1584: Circulo  NAO
+
+o? 2803 6457
+2803: Circulo  6457: Circulo  NAO
+
+o? 9743 3876
+9743: Retangulo  3876: Circulo  NAO
+
+o? 9662 4913
+9662: Retangulo  4913: Retangulo  NAO
+
+o? 4117 9751
+4117: Circulo  9751: Circulo  NAO
+
+o? 1087 3546
+1087: Circulo  3546: Circulo  NAO
+
+o? 6782 8013
+6782: Retangulo  8013: Circulo  NAO
+
+o? 9103 1071
+9103: Circulo  1071: Circulo  NAO
+
+o? 1195 605
+1195: Circulo  605: Retangulo  NAO
+
+o? 1113 6682
+1113: Circulo  6682: Retangulo  NAO
+
+o? 6106 452
+6106: Retangulo  452: Retangulo  NAO
+
+o? 3203 9868
+3203: Retangulo  9868: Retangulo  NAO
+
+o? 4615 1411
+4615: Circulo  1411: Circulo  NAO
+
+o? 9498 4691
+9498: Circulo  4691: Retangulo  NAO
+
+o? 6595 1601
+6595: Circulo  1601: Retangulo  NAO
+
+o? 7728 4877
+7728: Circulo  4877: Retangulo  NAO
+
+o? 2185 433
+2185: Circulo  433: Circulo  NAO
+
+o? 3876 383
+3876: Circulo  383: Retangulo  NAO
+
+o? 7890 8571
+7890: Circulo  8571: Circulo  NAO
+
+o? 5657 4881
+5657: Retangulo  4881: Circulo  NAO
+
+o? 7779 8039
+7779: Circulo  8039: Retangulo  NAO
+
+o? 7887 1440
+7887: Circulo  1440: Circulo  NAO
+
+o? 3115 1287
+3115: Circulo  1287: Circulo  NAO
+
+o? 4479 4167
+4479: Circulo  4167: Circulo  NAO
+
+o? 2896 9022
+2896: Retangulo  9022: Retangulo  NAO
+
+o? 6184 4669
+6184: Retangulo  4669: Circulo  NAO
+
+o? 4732 7777
+4732: Retangulo  7777: Circulo  NAO
+
+o? 7361 4992
+7361: Retangulo  4992: Circulo  NAO
+
+o? 3709 1248
+3709: Circulo  1248: Circulo  NAO
+
+o? 6925 3670
+6925: Circulo  3670: Retangulo  NAO
+
+o? 686 819
+686: Retangulo  819: Circulo  NAO
+
+o? 1710 3482
+1710: Circulo  3482: Retangulo  NAO
+
+o? 1211 2359
+1211: Retangulo  2359: Circulo  NAO
+
+o? 9451 1989
+9451: Circulo  1989: Circulo  NAO
+
+o? 120 6311
+120: Circulo  6311: Retangulo  NAO
+
+o? 5813 156
+5813: Retangulo  156: Circulo  NAO
+
+o? 3038 1984
+3038: Retangulo  1984: Retangulo  SIM
+
+o? 4373 7735
+4373: Retangulo  7735: Circulo  NAO
+
+o? 6120 4777
+6120: Circulo  4777: Circulo  NAO
+
+o? 858 357
+858: Circulo  357: Circulo  NAO
+
+o? 4842 6584
+4842: Circulo  6584: Retangulo  NAO
+

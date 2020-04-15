@@ -1,0 +1,24 @@
+o? 1 2
+1: Circulo  2: Retangulo  NAO
+
+o? 1 3
+1: Circulo  3: Retangulo  NAO
+
+o? 1 4
+1: Circulo  4: Retangulo  NAO
+
+o? 1 5
+1: Circulo  5: Retangulo  NAO
+
+o? 1 6
+1: Circulo  6: Retangulo  NAO
+
+o? 1 7
+1: Circulo  7: Retangulo  NAO
+
+o? 1 8
+1: Circulo  8: Retangulo  NAO
+
+o? 1 9
+1: Circulo  9: Retangulo  NAO
+

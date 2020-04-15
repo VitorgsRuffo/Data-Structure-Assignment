@@ -1,0 +1,9 @@
+o? 0 1
+0: Circulo  1: Circulo  SIM
+
+o? 2 3
+2: Retangulo  3: Circulo  SIM
+
+o? 4 5
+4: Retangulo  5: Retangulo  SIM
+
