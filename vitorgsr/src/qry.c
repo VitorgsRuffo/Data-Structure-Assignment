@@ -249,12 +249,12 @@ void qry_o_get_rectCirc_rect_info(float jX, float jY, float jW, float jH, float 
 
 
 //example: <rect width="100" height="100" x="130.00" y="90.9" fill="#044B94" fill-opacity="0.0" stroke-width="1.5" stroke="rgb(0,0,0)" stroke-dasharray="5,5" />
-void qry_build_o_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision){
+void qry_build_o_rect_tag(char* tag, float w, float h, float x, float y, int isThereCollision){
    
     if(isThereCollision){
-        sprintf(*tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" /> \n", w, h, x, y);
+        sprintf(tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" /> \n", w, h, x, y);
     }else{
-        sprintf(*tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" stroke-dasharray=\"5,5\" /> \n", w, h, x, y);
+        sprintf(tag, "     <rect width=\"%f\" height=\"%f\" x=\"%f\" y=\"%f\" fill=\"#044B94\" fill-opacity=\"0.0\" stroke-width=\"1.5\" stroke=\"rgb(0,0,0)\" stroke-dasharray=\"5,5\" /> \n", w, h, x, y);
     }  
 }
 
@@ -262,17 +262,13 @@ void qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
 
     //Conseguindo o ID das figuras a serem testadas: 
 
-        char* J = (char*) malloc((6) * sizeof(char));
-        char* K = (char*) malloc((6) * sizeof(char));
+        char J[10], K[10];
 
         sscanf(&qryCommand[0][3], "%s %s", J, K);
 
-        char* jType = (char*) malloc(10 * sizeof(char));
-        char* kType = (char*) malloc(10 * sizeof(char));
-
     //extraindo as informaçoes de cada uma das duas figuras:
 
-        char* jShape[8]; char* kShape[8];
+        char* jShape[8]; char* kShape[8]; char jType[10], kType[10];
         
         getDrawingInfo(jShape, kShape, commands, geo_lines_count, J, K);
 
@@ -334,26 +330,20 @@ void qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
             isThereCollision = qry_o_rect_circ_collision(jX, jY, jW, jH, kRadius, kX, kY);
 
             //calculando as informaçoes do retangulo que vai envolve-los:
-                qry_o_get_rectCirc_rect_info(jX, jY, jW, jH, kRadius, kX, kY, &rectX, &rectY, &rectW, &rectH);
+            qry_o_get_rectCirc_rect_info(jX, jY, jW, jH, kRadius, kX, kY, &rectX, &rectY, &rectW, &rectH);
         }
 
     //Criando a tag para mostrar visualmente o resultado desta consulta:
-    //(ABSTRAIR)
-        char* rectTag = (char*) malloc(250 * sizeof(char));
 
-        qry_build_o_rect_tag(&rectTag, rectW, rectH, rectX, rectY, isThereCollision);
+        char rectTag[250];
 
-        //Anexando a tag do retangulo na string final:
-            
-            char* svgFinalDocumentQry2 = NULL;
-                
-            svg_append_content_to_final_document(&rectTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
+        qry_build_o_rect_tag(rectTag, rectW, rectH, rectX, rectY, isThereCollision);
 
-            free(rectTag);
+        svg_append_content_to_final_document(rectTag, svgFinalDocumentQry);
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
-    //(ABSTRAIR)
-        char* result = (char*) malloc(5*sizeof(char));
+
+        char result[5];
 
         if(isThereCollision){
             strcpy(result, "SIM");
@@ -361,46 +351,38 @@ void qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
             strcpy(result, "NAO");
         }
 
-        char* txtContent = (char*) malloc(100 * sizeof(char));
+        char txtContent[100];
 
         sprintf(txtContent,"%s\n%s: %s  %s: %s  %s\n\n", *qryCommand, J, jType, K, kType, result);
 
-        char* txtFinalContent2 = NULL;
-
-        svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
-
-
-    free(J);  free(K);  free(jType);  free(kType);  free(result);  free(txtContent);
+        svg_append_content_to_final_document(txtContent, txtFinalContent);
 }
 
 //example: <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />     <line x1="0" y1="0" x2="200" y2="200" stroke="rgb(255,100,110)" stroke-width="2" />
-void qry_build_i_dot_line_tag(char* *tag, float pX, float pY, float cmX, float cmY, int isInside){
+void qry_build_i_dot_line_tag(char* tag, float pX, float pY, float cmX, float cmY, int isInside){
 
     if(isInside){
-        sprintf(*tag,"     <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"blue\" stroke-width=\"3\" fill=\"blue\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"blue\" stroke-width=\"0.8\" /> \n" , pX, pY, pX, pY, cmX, cmY);
+        sprintf(tag,"     <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"blue\" stroke-width=\"3\" fill=\"blue\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"blue\" stroke-width=\"0.8\" /> \n" , pX, pY, pX, pY, cmX, cmY);
     }else{
-        sprintf(*tag,"     <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"magenta\" stroke-width=\"3\" fill=\"magenta\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"magenta\" stroke-width=\"0.8\" /> \n" , pX, pY, pX, pY, cmX, cmY); 
+        sprintf(tag,"     <circle cx=\"%f\" cy=\"%f\" r=\"1.0\" stroke=\"magenta\" stroke-width=\"3\" fill=\"magenta\" /> <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"magenta\" stroke-width=\"0.8\" /> \n" , pX, pY, pX, pY, cmX, cmY); 
     }  
 }
 
 void qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent){
 
     //Conseguindo o ID da figura e as coordenadas do ponto:  
-        
-        char* J = (char*) malloc(6 * sizeof(char));
+        char J[10];
         float pX, pY;
-
         sscanf(&qryCommand[0][3], "%s %f %f", J, &pX, &pY);
 
     //Extraindo as informaçoes da figura:
 
         char* jShape[8];
-
         getDrawingInfo(jShape, NULL, commands, geo_lines_count, J, NULL);
 
     //Determinando se o ponto é interno a figura:
 
-        int isInside;   float cmX, cmY;    char* jType = (char*) malloc(10 * sizeof(char));
+        int isInside;  float cmX, cmY;   char jType[10];
        
         if(*jShape[0] == 'c'){  //Se J for um circulo: 
                                //(Sera interno se a distancia entre o ponto e o centro do circulo for menor que o raio.)
@@ -440,22 +422,15 @@ void qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
         }
 
     //Criando a tag para mostrar visualmente o resultado desta consulta: 
-    //(ABSTRAIR)
-        char* dotLineTag = (char*) malloc(300 * sizeof(char));
 
-        qry_build_i_dot_line_tag(&dotLineTag, pX, pY, cmX, cmY, isInside);
-
-        //Anexando a tag do ponto(mini circulo) e da linha na string final:
-            
-            char* svgFinalDocumentQry2 = NULL;
-                
-            svg_append_content_to_final_document(&dotLineTag, svgFinalDocumentQry, &svgFinalDocumentQry2);
-
-            free(dotLineTag);
+        char dotLineTag[300];
+        qry_build_i_dot_line_tag(dotLineTag, pX, pY, cmX, cmY, isInside);
+ 
+        svg_append_content_to_final_document(dotLineTag, svgFinalDocumentQry);  //Anexando a tag do ponto(mini circulo) e da linha na string final.     
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
-    //(ABSTRAIR)
-        char* result = (char*) malloc(12*sizeof(char));
+
+        char result[12];
 
         if(isInside){
             strcpy(result, "INTERNO");
@@ -463,31 +438,24 @@ void qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *s
             strcpy(result, "NAO INTERNO");
         }    
 
-        char* txtContent = (char*) malloc(100 * sizeof(char));
-
+        char txtContent[100];
         sprintf(txtContent, "%s\n%s: %s %s\n\n", *qryCommand, J, jType, result);
 
-        char* txtFinalContent2 = NULL;
-
-        svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
-
-        free(J); free(jType); free(result);  free(txtContent); 
+        svg_append_content_to_final_document(txtContent, txtFinalContent);
 }
 
 void qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent, char* commands[][8], int geo_lines_count){
     
     //Conseguindo o ID da figura/texto que sera excluida: 
-
-        char* J =  (char*) malloc((strlen(&qryCommand[0][5]) + 1) * sizeof(char));
-
+        char J[10];
         sscanf(&qryCommand[0][5], "%s", J);
 
     //Buscando pela(o) figura/texto a ser excluida e excluindo-a(o):
     //OBS: a(o) figura/texto sera excluida(o) porque vamos comentar a sua tag. Assim, ela nao vai ser renderizada.
 
         int stringLen = strlen(*svgFinalDocumentQry);
-
-        char* searchJ = (char*) malloc((strlen(J) + 2) * sizeof(char));
+        
+        char searchJ[10];
 
         for(int i = 11; i<stringLen; ++i){
 
@@ -509,17 +477,15 @@ void qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalCont
                             break;
                         }
                     }
-                    
+                
                     break;
                 }
             }
         }
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
-    //(ABSTRAIR)
-        char* txtContent = (char*) malloc(300 * sizeof(char));
 
-        char* txtFinalContent2 = NULL;
+        char txtContent[300];
 
         for(int i = 0; i < geo_lines_count; ++i){
 
@@ -539,28 +505,24 @@ void qry_delf(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalCont
                                         *qryCommand, commands[i][1], commands[i][2], commands[i][3], commands[i][4], commands[i][5], commands[i][6]);                    
                 }
 
-                svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
+                svg_append_content_to_final_document(txtContent, txtFinalContent);
                 break;
             }
         }
-
-    free(J); free(searchJ); free(txtContent); 
 }
 
 void qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalContent, char* commands[][8], int geo_lines_count){
 
     //Conseguindo o intevalo de IDs das figuras/textos que seram excluidas: 
 
-        char* J = (char*) malloc(6 * sizeof(char));
-        char* K = (char*) malloc(6 * sizeof(char));
-
+        char J[10]; char K[10];
         sscanf(&qryCommand[0][6], "%s %s", J, K);
 
     //Buscando pelas(os) figuras/textos a serem excluidas e excluindo-as(os):
 
         int stringLen = strlen(*svgFinalDocumentQry);
 
-        char* searchId = (char*) malloc(6 * sizeof(char));
+        char searchId[10];
 
         for(int i = 11; i<stringLen; ++i){
 
@@ -588,14 +550,12 @@ void qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalCon
         }
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
-    //(ABSTRAIR)
-        char* txtContent = (char*) malloc(300 * sizeof(char));
 
-        char* txtFinalContent2 = NULL;
+        char txtContent[300];
 
         sprintf(txtContent, "%s\n", *qryCommand);
 
-        svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
+        svg_append_content_to_final_document(txtContent, txtFinalContent);
 
         for(int i = 0; i < geo_lines_count; ++i){
 
@@ -618,110 +578,77 @@ void qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalCon
 
                 }
 
-                txtFinalContent2 = NULL;
-
-                svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
+                svg_append_content_to_final_document(txtContent, txtFinalContent);
             }
         }
-
-        free(txtContent); 
-    
-        free(J); free(K); free(searchId);
 }
 
-void qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent, char* *pnt2){
+void qry_pnt(char* qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent, char* *pnt2){
 
     //Interpretar o comando query:
 
-        char* J = (char*) malloc(8 * sizeof(char));
-        char* newCorb = (char*) malloc(8 * sizeof(char));
-        char* newCorp = (char*) malloc(8 * sizeof(char));
-
-        sscanf(&qryCommand[0][4], "%s %s %s", J, newCorb, newCorp);
+        char J[10]; char newCorb[10]; char newCorp[10];
+        sscanf(&qryCommand[4], "%s %s %s", J, newCorb, newCorp);
         
     //Extrair os dados da figura/txt a ser pintada:
 
         char* jDrawing[8];
-
         getDrawingInfo(jDrawing, NULL, commands, geo_lines_count, J, NULL);
-
-        /*for(int i = 0; i < geo_lines_count; i++){
-    
-            if(strcmp(commands[i][1], J) == 0){
-
-                for(int k = 0; k<8; ++k){
-                    jDrawing[k] = commands[i][k];
-                } 
-
-                break;
-            }
-        }*/
 
     //Construir uma nova tag para essa figura/txt com a nova cor de borda e preenchimento (ela sera printada por cima da antiga), e anexa-la na string final.
 
-        char* tag = (char*) malloc(200 * sizeof(char));
-        //essas variaveis vao guardar as cores originais da borda e preenchimento. (Para mais tarde imprimirmos-as no txt do pnt)
-        char* originalCorb = (char*) malloc(15 * sizeof(char));
-        char* originalCorp = (char*) malloc(15 * sizeof(char));
-
+        char tag[200];
+        
+        char originalCorb[15]; char originalCorp[15]; //essas variaveis vao guardar as cores originais da borda e preenchimento. (Para mais tarde imprimirmos-as no txt do pnt)
+     
         if(*(jDrawing[0]) == 'c'){
 
-            geo_build_circ_tag(&tag, jDrawing[1], jDrawing[2], jDrawing[3], jDrawing[4], newCorb, newCorp);
+            geo_build_circ_tag(tag, jDrawing[1], jDrawing[2], jDrawing[3], jDrawing[4], newCorb, newCorp);
             sprintf(originalCorb, "%s", jDrawing[5]);
             sprintf(originalCorp, "%s", jDrawing[6]);
         
         }else if(*(jDrawing[0]) == 'r'){
             
-            geo_build_rect_tag(&tag, jDrawing[1], jDrawing[2], jDrawing[3], jDrawing[4], jDrawing[5], newCorb, newCorp);
+            geo_build_rect_tag(tag, jDrawing[1], jDrawing[2], jDrawing[3], jDrawing[4], jDrawing[5], newCorb, newCorp);
             sprintf(originalCorb, "%s", jDrawing[6]);
             sprintf(originalCorp, "%s", jDrawing[7]);        
             
         }else if(*(jDrawing[0]) == 't'){
             
-            geo_build_txt_tag(&tag, jDrawing[1], jDrawing[2], jDrawing[3], newCorb, newCorp ,jDrawing[6]);
+            geo_build_txt_tag(tag, jDrawing[1], jDrawing[2], jDrawing[3], newCorb, newCorp ,jDrawing[6]);
             sprintf(originalCorb, "%s", jDrawing[4]);
             sprintf(originalCorp, "%s", jDrawing[5]);        
         }   
-
-        char* svgFinalDocumentQry2 = NULL;
                 
-        svg_append_content_to_final_document(&tag, svgFinalDocumentQry, &svgFinalDocumentQry2);
-
-        free(tag);
+        svg_append_content_to_final_document(tag, svgFinalDocumentQry);
 
     //Anexando o texto referente ao comando atual no conteudo final a ser escrito no arquivo txt de saida:
-    //(ABSTRAIR)
-        char* txtContent = (char*) malloc(100 * sizeof(char));
+
+        char txtContent[100];
 
         if(pnt2 == NULL){
-            sprintf(txtContent, "%s\ncorb original: %s, corp original: %s\n\n", *qryCommand, originalCorb, originalCorp);
+            sprintf(txtContent, "%s\ncorb original: %s, corp original: %s\n\n", qryCommand, originalCorb, originalCorp);
         }else{
             sprintf(txtContent, "%s\ni: %s, corb original: %s, corp original: %s\n\n", *pnt2, J, originalCorb, originalCorp);
         }
 
-        char* txtFinalContent2 = NULL;
-
-        svg_append_content_to_final_document(&txtContent, txtFinalContent, &txtFinalContent2);
-
-        free(txtContent); 
-
-        free(J); free(newCorb); free(newCorp); free(originalCorb); free(originalCorp);       
+        svg_append_content_to_final_document(txtContent, txtFinalContent);  
 }
 
 void qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent){
     
     //Interpretar o comando query:
 
-        char* J = (char*) malloc(8 * sizeof(char));
-        char* K = (char*) malloc(8 * sizeof(char));
-        char* newCorb = (char*) malloc(8 * sizeof(char));
-        char* newCorp = (char*) malloc(8 * sizeof(char));
+        char J[10]; 
+        char K[10]; 
+        char newCorb[10]; 
+        char newCorp[10];
 
         sscanf(&qryCommand[0][5], "%s %s %s %s", J, K, newCorb, newCorp);
 
     //Chamar a funçao svg_qry_pnt para casa uma das entidades cujo id esta entre J e K:
 
-        char* pntCommand = (char*) malloc(30 * sizeof(char));
+        char pntCommand[30];
 
         for(int i = strtol(J, NULL, 10); i<=strtol(K, NULL, 10); ++i){
 
@@ -731,13 +658,11 @@ void qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, char*
                     
                     sprintf(pntCommand, "pnt %d %s %s", i, newCorb, newCorp);
 
-                    qry_pnt(&pntCommand, commands, geo_lines_count, svgFinalDocumentQry, txtFinalContent, qryCommand);
+                    qry_pnt(pntCommand, commands, geo_lines_count, svgFinalDocumentQry, txtFinalContent, qryCommand);
 
                     break;
  
                 }         
             }
         }
-
-        free(pntCommand); free(J); free(K); free(newCorb); free(newCorp);
 }

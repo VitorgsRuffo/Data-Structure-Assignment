@@ -81,23 +81,9 @@ void svg_set_view_box(float* X, float* Y, float* W, float* H, char* commands[][8
     *W = largerW + (-1*(*X)) + 50;   *H = largerH + (-1*(*Y)) + 50;
 }
 
-void svg_append_content_to_final_document(char* *content, char* *finalDocument, char* *auxFinalDocument){
-
-    //Vamos precisar de mais espaço na string svgFinalDocument/txtFinalContent, pois vamos anexar uma nova tag/novo texto nela:
-    int finalDocLen = strlen(*finalDocument);
-    int contentLen = strlen(*content);
-
-    *auxFinalDocument = (char*) malloc((finalDocLen + contentLen + 1) * sizeof(char));
-
-    sprintf(*auxFinalDocument, "%s%s", *finalDocument, *content);
-
-    char* aux = *finalDocument;
-
-    *finalDocument = *auxFinalDocument;
-
-    *auxFinalDocument = aux;
-    
-    free(*auxFinalDocument);
+void svg_append_content_to_final_document(char* content, char* *finalDocument){
+   
+    strcat(*finalDocument, content);
 }
 
 void getFileName(char* fileName, int fileNameLen, char* *fileFinalName, int stopAtDot){
@@ -133,7 +119,6 @@ void buildSvgPath(Parameter *parameter){ //erros de path se a opção -f tiver u
     
     //Ha a possibilidade de o nome do arquivo geo for um caminho relativo (e.g, testes/g.geo). O trecho de cod abaixo trata o problema que isso causa retornando apenas o nome do .geo.  
         getFileName(parameter->geoFileName, geoFileNameLen, &geoFileName, 0);
-
 
     int svgFileNameLen = strlen(geoFileName);
 
@@ -185,7 +170,6 @@ void buildSvgQryPath(Parameter *parameter){
     //Ha a possibilidade de o nome do arquivo geo/qry for um caminho relativo (e.g, testes/g.geo). O trecho de cod abaixo trata o problema que isso causa retornando apenas o nome do .geo/.qry.
         getFileName(parameter->geoFileName, geoFileNameLen, &geoFileName, 1);
         getFileName(parameter->qryFileName, qryFileNameLen, &qryFileName, 1);
-
 
     char* svgQryFileName = (char*) malloc((svgQryFileNameLen + 1) * sizeof(char));
     sprintf(svgQryFileName, "%s-%s.svg", geoFileName, qryFileName);

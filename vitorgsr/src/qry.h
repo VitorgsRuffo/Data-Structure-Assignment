@@ -31,13 +31,13 @@ int qry_o_rect_circ_collision(float jX, float jY, float jW, float jH, float kRad
 void qry_o_get_rectCirc_rect_info(float jX, float jY, float jW, float jH, float kRadius, float kX, float kY, float *rectX, float *rectY, float *rectW, float *rectH);
 
 
-void qry_o_build_rect_tag(char* *tag, float w, float h, float x, float y, int isThereCollision);
+void qry_o_build_rect_tag(char* tag, float w, float h, float x, float y, int isThereCollision);
 
 void qry_o(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent);
 
 
 
-void qry_i_build_dot_line_tag(char* *tag, float pX, float pY, float cmX, float cmY, int isInside);
+void qry_i_build_dot_line_tag(char* tag, float pX, float pY, float cmX, float cmY, int isInside);
 
 void qry_i(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent);
 
@@ -49,7 +49,7 @@ void qry_delf2(char* *qryCommand, char* *svgFinalDocumentQry, char* *txtFinalCon
 
 
 
-void qry_pnt(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent, char* *pnt2);
+void qry_pnt(char* qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent, char* *pnt2);
 
 void qry_pnt2(char* *qryCommand, char* commands[][8], int geo_lines_count, char* *svgFinalDocumentQry, char* *txtFinalContent);
 
