@@ -1,2 +1,4 @@
 Tipo: hidrante, id: hneb2-10.8, x: 945.000000, y: 933.000000, sw: 1.0, cfill: red, cstrk: firebrick
 
+Tipo: hidrante, id: hneb2-10.8, x: 945.000000, y: 933.000000, sw: 1.0, cfill: red, cstrk: firebrick
+

@@ -8,7 +8,6 @@ File openInputFile(Parameters Param, char* fileType){
     char* inputDirectory = getInputDirectory(Param); 
     char* inputFileName;
 
-    //***Trocar por function pointer
     if(strcmp(fileType, "geo") == 0){
         inputFileName = getGeoName(Param); 
         
@@ -26,7 +25,6 @@ File openInputFile(Parameters Param, char* fileType){
 
     if(file == NULL){
         printf("Erro ao abrir o arquivo %s..\nFinalizando o programa..\n", fileType);
-        //***Freelar memórias alocadas até esse momento da execução***
         exit(1);
     }
     printf("O arquivo %s foi aberto..\n", fileType);  //printf("caminho: %s.\n", inputFilePath);

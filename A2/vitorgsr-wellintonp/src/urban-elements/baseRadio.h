@@ -6,7 +6,6 @@
 */
 typedef void* BaseRadio;
 
-
 /*  
 * Pré-Condição: requer os dados (strings) que compoem uma radio-base.
 * Pós-Condição: retorna o endereco de uma nova instancia de radio-base que possui as informacoes passadas.
@@ -78,7 +77,5 @@ void printBaseRadio(BaseRadio BaseR);
 * Pós-Condição: libera a memoria usada pela instancia de radio-base que foi passada.
 */
 void freeBaseRadio(BaseRadio BaseR);
-
-
 
 #endif

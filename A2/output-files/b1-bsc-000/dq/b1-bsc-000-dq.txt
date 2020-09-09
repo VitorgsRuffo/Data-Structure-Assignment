@@ -22,35 +22,25 @@ cep: b04.4
 
 cep: b04.5
 
-cep: b05.3
-
 cep: b05.4
 
 cep: b05.5
 
-b02.4 | hidrante - id: hneb02.5, x:565.000000, y: 200.000000
-
 b02.5 | hidrante - id: hneb02.5, x:565.000000, y: 200.000000
-
-b03.4 | hidrante - id: hneb02.5, x:565.000000, y: 200.000000
-
-b03.5 | hidrante - id: hneb02.5, x:565.000000, y: 200.000000
-
-cep: b01.2
-
-cep: b01.3
 
 cep: b01.4
 
-cep: b01.5
-
-cep: b02.2
-
 cep: b02.3
+
+cep: b02.4
 
 cep: b03.2
 
 cep: b03.3
+
+cep: b03.4
+
+cep: b03.5
 
 cep: b04.2
 
@@ -67,6 +57,8 @@ cep: b05.3
 cep: b05.4
 
 cep: b05.5
+
+b03.4 | radio-base - id: rbb04.4, x:490.000000, y: 350.000000
 
 b04.4 | radio-base - id: rbb04.4, x:490.000000, y: 350.000000
 

@@ -18,7 +18,6 @@ int main(int argc, char* argv[]){
     //Lendo o arquivo geo:
     readGeo(geo, drawing);
     closeInputFile(geo);
-    //printDrawing(drawing);
     
     //Criando SVG do geo:
     Svg geoSvg = NULL;

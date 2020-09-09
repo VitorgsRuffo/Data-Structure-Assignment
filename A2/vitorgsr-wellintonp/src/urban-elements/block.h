@@ -6,7 +6,6 @@
 */
 typedef void* Block;
 
-
 /*  
 * Pré-Condição: requer os dados (strings) que compoem uma quadra.
 * Pós-Condição: retorna o endereco de uma nova instancia de quadra que possui as informacoes passadas.

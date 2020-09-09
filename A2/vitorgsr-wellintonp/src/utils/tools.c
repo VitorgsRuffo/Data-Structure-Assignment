@@ -2,6 +2,11 @@
 #include "../include/utils.h"
 #include "../include/urbanElements.h"
 
+typedef struct{
+    double x;
+    double y;
+}Point;
+
 int isElementNull(Element element, char* elementName, char* functionName){
     if(element == NULL){
         printf("Erro: A instancia de %s nao existe..\n(Funcao: %s.)\n", elementName,functionName);
@@ -72,23 +77,24 @@ char* buildQryOutputPath(Parameters Param, char* extension){
     return qryOutputPath;
 }
 
-int isBlockInCircleRange(Info blockInfo, double x, double y, double radius){ /*isBlockInCircleRange*/
+int isBlockInCircleRange(Info blockInfo, double x, double y, double radius){ 
     double blockX = atof(getBlockX(blockInfo));
     double blockY = atof(getBlockY(blockInfo));
     
     double blockWidth = atof(getBlockWidth(blockInfo));
     double blockHeight = atof(getBlockHeight(blockInfo));
     
-    //os 4 pontos devem estar dentro da regiao do circulo cujo centro é o mesmo do equipamento urbano
-    int blockXIsInside = (int)((blockX < x + radius) && (blockX > x - radius));
-    int blockYIsInside = (int)((blockY < y + radius) && (blockY > y - radius));
-    int blockXPlusWidthIsInside = (int)((blockX + blockWidth < x + radius) && (blockX + blockWidth > x - radius));
-    int blockYPlusHeightIsInside = (int)((blockY + blockHeight < y + radius) && (blockY + blockHeight > y - radius));
-    
-    if((blockXIsInside && blockYIsInside) &&
-       (blockXPlusWidthIsInside && blockYIsInside) &&
-       (blockXIsInside && blockYPlusHeightIsInside) &&
-       (blockXPlusWidthIsInside && blockYPlusHeightIsInside)){
+    Point point1, point2, point3, point4;
+    point1.x = blockX; point1.y = blockY;
+    point2.x = blockX + blockWidth; point2.y = blockY;
+    point3.x = blockX; point3.y = blockY + blockHeight;
+    point4.x = blockX + blockWidth; point4.y = blockY + blockHeight;
+
+
+    if((pow(x - point1.x, 2) + pow(y - point1.y, 2) <= pow(radius, 2)) &&
+       (pow(x - point2.x, 2) + pow(y - point2.y, 2) <= pow(radius, 2)) &&
+       (pow(x - point3.x, 2) + pow(y - point3.y, 2) <= pow(radius, 2)) &&
+       (pow(x - point4.x, 2) + pow(y - point4.y, 2) <= pow(radius, 2)) ){
         
         return 1;
     }else{

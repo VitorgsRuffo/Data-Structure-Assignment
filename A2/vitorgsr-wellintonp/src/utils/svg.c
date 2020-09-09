@@ -61,16 +61,13 @@ char* buildGeoSvgPath(Parameters Param){
     return filePath;
 }
 
-Svg openSvg(char* filePath){ //Obs: se calcularmos a viewbox devemos passar os ponteiros com os seus 4 valores por parametro e printalos na tag inicial.
+Svg openSvg(char* filePath){
     
     Svg svg = fopen(filePath, "a");
 
     if(isElementNull(svg, "svg", "openSvg"))
         return NULL;
 
-    //calculateViewBox(&X, &Y, &W, &H, Dr);
-
-    //fprintf(svg, "<svg viewBox=\"-500 -500 2500 2500\">\n");
     fprintf(svg, "<svg>\n");
     return svg;
 }
@@ -151,7 +148,6 @@ void drawElementsOnSvg(Svg svg, List elementsList, void (*buildElementSvgTag)(ch
 }
 
 void buildCircleSvgTag(char* circleTag, Circle Circ){
-    //char* id = getCircleId(Circ);
     char* radius = getCircleRadius(Circ);
     char* x = getCircleX(Circ);
     char* y = getCircleY(Circ);
@@ -163,7 +159,6 @@ void buildCircleSvgTag(char* circleTag, Circle Circ){
 }
 
 void buildRectangleSvgTag(char* rectangleTag, Rectangle Rect){
-    //char* id = getRectangleId(Rect);
     char* width = getRectangleWidth(Rect);
     char* height = getRectangleHeight(Rect);
     char* x = getRectangleX(Rect);

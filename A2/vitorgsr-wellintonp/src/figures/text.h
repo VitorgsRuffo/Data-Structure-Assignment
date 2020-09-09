@@ -78,8 +78,4 @@ void printText(Text Txt);
 */
 void freeText(Text Txt);
 
-
-
-
-
 #endif
