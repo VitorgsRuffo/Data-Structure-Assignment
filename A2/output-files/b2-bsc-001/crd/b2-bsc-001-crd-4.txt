@@ -1,0 +1,2 @@
+Tipo: semaforo, id: sfb2-4.1, x: 30.000000, y: 302.400000, sw: 1.0, cfill: lightred, cstrk: yellow
+

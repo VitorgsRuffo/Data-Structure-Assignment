@@ -1,0 +1,2 @@
+Tipo: semaforo, id: sfb8-58.197, x: 25510.000000, y: 5205.600000, sw: 1.0, cfill: lightred, cstrk: yellow
+

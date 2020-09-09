@@ -1,0 +1,2 @@
+Tipo: hidrante, id: hneb4-7.24, x: 3025.000000, y: 660.600000, sw: 1.0, cfill: red, cstrk: firebrick
+
