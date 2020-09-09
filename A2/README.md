@@ -1,6 +1,6 @@
 ###This is the second part of the assignment.
 
-![output-example-for-dq-command](output-files/b1-bsc-000/dq/b1-bsc-000-dq.svg)
+![output-example-for-dq-command](dq-example.png)
 
 Obs: this assignment was made with a [partner](https://github.com/wellintonpiassa).
 
