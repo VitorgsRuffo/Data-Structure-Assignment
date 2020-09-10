@@ -1,5 +1,5 @@
 #include "../include/headers.h"
-#include "../include/utils.h"
+#include "../include/util.h"
 #include "hydrant.h"
 
 typedef struct hydrant{

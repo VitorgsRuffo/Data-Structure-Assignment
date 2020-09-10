@@ -1,5 +1,5 @@
 #include "./include/headers.h"
-#include "./include/utils.h"
+#include "./include/util.h"
 #include "./include/query.h"
 #include "drawing.h"
 #include "./include/figures.h"

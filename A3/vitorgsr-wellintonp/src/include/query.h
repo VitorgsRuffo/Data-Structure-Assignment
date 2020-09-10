@@ -1,15 +1,15 @@
 #ifndef QUERY_H
 #define QUERY_H
 
-#include "../qry/qry.h"
-#include "../qry/overlap.h"
-#include "../qry/innerPoint.h"
-#include "../qry/paint.h"
-#include "../qry/deleteFigures.h"
-#include "../qry/deleteBlocks.h"
-#include "../qry/printInfo.h"
-#include "../qry/blockBorder.h"
-#include "../qry/urbanDeletion.h"
-#include "../qry/calculateArea.h"
+#include "../query/qry.h"
+#include "../query/overlap.h"
+#include "../query/innerPoint.h"
+#include "../query/paint.h"
+#include "../query/deleteFigures.h"
+#include "../query/deleteBlocks.h"
+#include "../query/printInfo.h"
+#include "../query/blockBorder.h"
+#include "../query/urbanDeletion.h"
+#include "../query/calculateArea.h"
 
 #endif 

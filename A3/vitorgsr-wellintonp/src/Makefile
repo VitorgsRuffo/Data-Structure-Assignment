@@ -4,10 +4,10 @@ flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
 obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o svg.o tools.o circle.o rectangle.o text.o block.o hydrant.o semaphore.o baseRadio.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o
 
-utils_path = ./utils/
+util_path = ./util/
 figures_path = ./figures/
 urban_elements_path = ./urban-elements/
-qry_path = ./qry/
+qry_path = ./query/
 
 siguel: $(obj)
 	$(CC) $(obj) -o siguel -lm
@@ -23,23 +23,23 @@ customization.o: customization.c
 
 
 
-parameters.o: $(utils_path)parameters.c
-	$(CC) $(flags) -c $(utils_path)parameters.c
+parameters.o: $(util_path)parameters.c
+	$(CC) $(flags) -c $(util_path)parameters.c
 
-openInput.o: $(utils_path)openInput.c
-	$(CC) $(flags) -c $(utils_path)openInput.c
+openInput.o: $(util_path)openInput.c
+	$(CC) $(flags) -c $(util_path)openInput.c
 
-geo.o: $(utils_path)geo.c
-	$(CC) $(flags) -c $(utils_path)geo.c
+geo.o: $(util_path)geo.c
+	$(CC) $(flags) -c $(util_path)geo.c
 
-list.o: $(utils_path)list.c 
-	$(CC) $(flags) -c $(utils_path)list.c
+list.o: $(util_path)list.c 
+	$(CC) $(flags) -c $(util_path)list.c
 
-svg.o: $(utils_path)svg.c 
-	$(CC) $(flags) -c $(utils_path)svg.c
+svg.o: $(util_path)svg.c 
+	$(CC) $(flags) -c $(util_path)svg.c
 
-tools.o: $(utils_path)tools.c 
-	$(CC) $(flags) -c $(utils_path)tools.c
+tools.o: $(util_path)tools.c 
+	$(CC) $(flags) -c $(util_path)tools.c
 
 
 

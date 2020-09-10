@@ -1,7 +1,7 @@
 #include "./include/headers.h"
-#include "./include/utils.h"
+#include "./include/util.h"
 #include "drawing.h"
-#include "./qry/qry.h"
+#include "./query/qry.h"
 
 int main(int argc, char* argv[]){
     
@@ -48,3 +48,16 @@ int main(int argc, char* argv[]){
     freeDrawing(drawing);
     return 0;
 }
+
+/*EXTRAS:
+*
+* 1 - Desalocar memoria em caso de erros (e.g, chamar o metodo de um tad passando null).
+
+* 2 - Usar isElementNull dentro de todos os TADs.
+* 3 - Arrumar localizacao dos arquivos customization e drawing.
+* 4 - x Mudar nome de 'utils' para 'util'.
+* 5 - Organizar os includes (remover includes desnecessarios caso precise)
+* 6 - Refatorar os gets e o search do arquivo overlap.c
+* 7 - Calcular a viewBox dos svg's.
+* 8 - x mudar nome do diretorio qry para query.
+*/
