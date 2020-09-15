@@ -36,79 +36,75 @@ Drawing createDrawing(){
     return dr;
 }
 
+
 List getCircleList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getCircleList"))
+        return NULL;
+
     drawing *dr = (drawing*) Dr;
-    if(dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
     return dr->circleList;
 }
 
 List getRectangleList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getRectangleList"))
+        return NULL;
+    
     drawing *dr = (drawing*) Dr;
-    if(dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
     return dr->rectangleList;
 }
 
 List getTextList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getTextList"))
+        return NULL;
+
     drawing *dr = (drawing*) Dr;
-    if(dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
     return dr->textList;
 }
 
 List getBlockList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getBlockList"))
+        return NULL;
+
     drawing *dr = (drawing*) Dr;
-    if(dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
     return dr->blockList;
 }
 
 List getHydrantList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getHydrantList"))
+        return NULL;
+
     drawing *dr = (drawing*) Dr;
-    if(dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
     return dr->hydrantList;
 }
 
 List getBaseRadioList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getBaseRadioList"))
+        return NULL;
+
     drawing *dr = (drawing*) Dr;
-    if(dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
     return dr->baseRadioList;
 }
 
 List getSemaphoreList(Drawing Dr){
-    if(Dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
+    if(isElementNull(Dr, "drawing", "getSemaphoreList"))
+        return NULL;
+
     drawing *dr = (drawing*) Dr;
     return dr->semaphoreList;
 }
 
 List getQueryElementsList(Drawing Dr){
-    if(Dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
+    if(isElementNull(Dr, "drawing", "getQueryElementsList"))
+        return NULL;
+
     drawing *dr = (drawing*) Dr;
     return dr->queryElementsList;
 }
 
 List getListByElementType(Drawing Dr, char* elementType){
+    if(isElementNull(Dr, "drawing", "getListByElementType"))
+        return NULL;
+    
     List elementList = NULL;
     if(elementType[0] == 'c')
         elementList = getCircleList(Dr);
@@ -138,10 +134,9 @@ List getListByElementType(Drawing Dr, char* elementType){
 }
 
 Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char* figureElementType){
-    if(Dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
+    if(isElementNull(Dr, "drawing", "searchForFigureOrTextElementByIdentifier"))
+        return NULL;
+
     drawing *dr = (drawing*) Dr;
     Node figureElementNode;
 
@@ -168,10 +163,8 @@ Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char
 }
 
 Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urbanElementType){
-    if(Dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
+    if(isElementNull(Dr, "drawing", "searchForUrbanElementByIdentifier"))
+        return NULL;
 
     drawing *dr = (drawing*) Dr;
     Node urbanElementNode;
@@ -205,10 +198,8 @@ Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urban
 }
 
 void printDrawing(Drawing Dr){
-    if(Dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
+    if(isElementNull(Dr, "drawing", "printDrawing"))
+        return;
     
     drawing *dr = (drawing*) Dr;
 
@@ -222,6 +213,8 @@ void printDrawing(Drawing Dr){
 }
 
 void freeDrawing(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "freeDrawing"))
+        return;
 
     drawing *dr = (drawing*) Dr;
 

@@ -16,7 +16,7 @@ List createList(){
     list *li = (list*) malloc(sizeof(list));
 
     if(li == NULL){
-        printf("Erro ao alocar memória para a criação da lista\nFinalizando o programa...");
+        printf("Erro ao alocar memória para a criação da lista\nFinalizando o programa...\n");
         exit(1);
     }
 
@@ -26,10 +26,9 @@ List createList(){
 }
 
 int length(List Li){
-    if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
+    if(isElementNull(Li, "lista", "length"))
         return -1;
-    }
+    
     list *li = (list*) Li;
     if(li->first == NULL){
         return 0;
@@ -45,10 +44,12 @@ int length(List Li){
 }
 
 Node insert(List Li, Info info){
-    if(Li == NULL || info == NULL){
-        printf("Erro: a lista ou a informação a ser inserida não existem..\n");
+    if(isElementNull(Li, "lista", "insert"))
         return NULL;
-    }
+
+    if(isElementNull(info, "Info", "insert"))
+        return NULL;
+        
     list *li = (list*) Li;
 
     node *NODE = (node*) malloc(sizeof(node));
@@ -103,34 +104,28 @@ void removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*)){ //Tem probl
     printf("Erro na remocao: no nao encontrado...\n");
 }
 
-Info get(List Li, Node Posic){/*tem que checar se o Posic esta presente em Li ?*/
-    if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
-        return 0;
-    }
-    if(Posic == NULL){
-        printf("Erro: posic nao existe..\n");
-        return 0;
-    }
+Info get(List Li, Node Posic){ /*tem que checar se o Posic esta presente em Li ?*/
+    if(isElementNull(Li, "lista", "get"))
+        return NULL;
+
+    if(isElementNull(Posic, "posic", "get"))
+        return NULL;
+
     //lista *li = (lista*) Li;
     node *NODE = (node*) Posic;
     return NODE->info;
 }
 
 Node insertBefore(List Li, Node Posic, Info Information){   /*tem que checar se o Posic esta presente em Li ?*/
-    if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
+    if(isElementNull(Li, "lista", "insertBefore"))
         return NULL;
-    }
-    if(Posic == NULL){
-        printf("Erro: posic nao existe..\n");
+        
+    if(isElementNull(Posic, "posic", "insertBefore"))
         return NULL;
-    }
 
-    if(Information == NULL){
-        printf("Erro: informacao nao existe..\n");
+    if(isElementNull(Information, "information", "insertBefore"))
         return NULL;
-    }
+
     list *li = (list*) Li;
     node *NODE = (node*) Posic;
     
@@ -155,19 +150,16 @@ Node insertBefore(List Li, Node Posic, Info Information){   /*tem que checar se 
 }
 
 Node insertAfter(List Li, Node Posic, Info Information){   /*tem que checar se o Posic esta presente em Li ?*/
-    if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
+    
+    if(isElementNull(Li, "lista", "insertBefore"))
         return NULL;
-    }
-    if(Posic == NULL){
-        printf("Erro: posic nao existe..\n");
+        
+    if(isElementNull(Posic, "posic", "insertBefore"))
         return NULL;
-    }
 
-    if(Information == NULL){
-        printf("Erro: informacao nao existe..\n");
+    if(isElementNull(Information, "information", "insertBefore"))
         return NULL;
-    }
+        
     list *li = (list*) Li;
     node *NODE = (node*) Posic;
 
@@ -192,10 +184,9 @@ Node insertAfter(List Li, Node Posic, Info Information){   /*tem que checar se o
 }
 
 Node getFirst(List Li){
-     if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
+    if(isElementNull(Li, "lista", "getFirst"))
         return NULL;
-    }
+
     if(length(Li) == 0){
         printf("Erro: a lista esta vazia..\n");
         return NULL;
@@ -206,24 +197,20 @@ Node getFirst(List Li){
 }
 
 Node getNext(List Li, Node Posic){ /*tem que checar se o Posic esta presente em Li ?*/
-    if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
+    if(isElementNull(Li, "lista", "getNext"))
         return NULL;
-    }
-    if(Posic == NULL){
-        printf("Erro: posic nao existe..\n");
+        
+    if(isElementNull(Posic, "posic", "getNext"))
         return NULL;
-    }
 
     node *NODE = (node*) Posic;
     return NODE->next;
 }
 
 Node getLast(List Li){
-    if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
+    if(isElementNull(Li, "lista", "getLast"))
         return NULL;
-    }
+    
     if(length(Li) == 0){
         printf("Erro: a lista esta vazia..\n");
         return NULL;
@@ -234,21 +221,17 @@ Node getLast(List Li){
 }
 
 Node getPrevious(List Li, Node Posic){ /*tem que checar se o Posic esta presente em Li ?*/
-    if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
+    if(isElementNull(Li, "lista", "getPrevious"))
         return NULL;
-    }
-    if(Posic == NULL){
-        printf("Erro: posic nao existe..\n");
+        
+    if(isElementNull(Posic, "posic", "getPrevious"))
         return NULL;
-    }
 
     node *NODE = (node*) Posic;
     return NODE->previous;
 }
 
 Node searchForElementByIdentifier(List Li, char* (*getElementId)(void*), char* idToSearch){
-
     if(isElementNull(Li, "lista", "searchForElementByIdentifier"))
         return NULL;
 
@@ -273,10 +256,8 @@ Node searchForElementByIdentifier(List Li, char* (*getElementId)(void*), char* i
 }
 
 void printList(List Li, void (*printInformation)(void*)){
-    if(Li == NULL){
-        printf("Erro: a lista nao existe..\n");
+    if(isElementNull(Li, "lista", "printList"))
         return;
-    }
     
     list *li = (list*) Li;
     if(li->first == NULL){
@@ -292,10 +273,8 @@ void printList(List Li, void (*printInformation)(void*)){
 }
 
 void freeList(List Li, void (*freeTAD)(void*)){
-    if(Li == NULL){
-        printf("Erro: lista nao existente..\n");
+    if(isElementNull(Li, "lista", "freeList"))
         return;
-    }
 
     list *li = (list*) Li;
     

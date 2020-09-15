@@ -9,7 +9,7 @@ typedef struct{
 
 int isElementNull(Element element, char* elementName, char* functionName){
     if(element == NULL){
-        printf("Erro: A instancia de %s nao existe..\n(Funcao: %s.)\n", elementName,functionName);
+        printf("Erro: %s nao existe..\n(Funcao: %s.)\n", elementName,functionName);
         return 1;
     }
     return 0;
