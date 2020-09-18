@@ -33,6 +33,12 @@ char* getHydrantY(Hydrant Hyd);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de hidrante.
+* Pós-Condição: retorna o raio do hidrante passado.
+*/
+char* getHydrantRadius(Hydrant Hyd);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de hidrante.
 * Pós-Condição: retorna o sw do hidrante passado.
 */
 char* getHydrantSw(Hydrant Hyd);

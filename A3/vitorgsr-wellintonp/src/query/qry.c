@@ -1,12 +1,7 @@
 #include "../include/headers.h"
 #include "../include/util.h"
-#include "../drawing.h"
+#include "../drawing/drawing.h"
 #include "../include/query.h"
-
-/*
-* numero maximo de partes que um comando vindo de um arquivo qry pode ter
-*/
-#define maxNumberOfQryCommandParts 5
 
 File openTxt(Parameters Param);
 void closeTxt(File txt);

@@ -1,6 +1,6 @@
 #include "./include/headers.h"
 #include "./include/util.h"
-#include "drawing.h"
+#include "./drawing/drawing.h"
 #include "./query/qry.h"
 
 int main(int argc, char* argv[]){
@@ -51,12 +51,7 @@ int main(int argc, char* argv[]){
 
 /*EXTRAS:
 
-*  - Arrumar localizacao dos arquivos customization e drawing.
-
-*  - adicionar atributo raio aos equip. urb. (e usa-los nos getArea)
-*  - Organizar os includes (remover includes desnecessarios caso precise)
-*
-*  - revisar os queries em busca de refatoracao. 
+*  - Revisar os queries em busca de refatoracao. 
 *  - Desalocar memoria em caso de erros (e.g, chamar o metodo de um tad passando null).
 
 *  - Calcular a viewBox dos svg's.

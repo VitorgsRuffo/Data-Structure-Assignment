@@ -6,6 +6,7 @@ typedef struct baseRadio{
     char* id;
     char* x;
     char* y;
+    char* radius;
     char* sw;
     char* cfill;
     char* cstrk;
@@ -18,6 +19,7 @@ BaseRadio createBaseRadio(char* id, char* x, char* y, char* sw, char* cfill, cha
     baseR->id = (char*) malloc((strlen(id) + 1) * sizeof(char));
     baseR->x = (char*) malloc((strlen(x) + 1) * sizeof(char));
     baseR->y = (char*) malloc((strlen(y) + 1) * sizeof(char));
+    baseR->radius = (char*) malloc(4 * sizeof(char));
     baseR->sw = (char*) malloc(20 * sizeof(char));
     baseR->cfill = (char*) malloc(20 * sizeof(char));
     baseR->cstrk = (char*) malloc(20 * sizeof(char));
@@ -25,6 +27,7 @@ BaseRadio createBaseRadio(char* id, char* x, char* y, char* sw, char* cfill, cha
     strcpy(baseR->id, id);
     strcpy(baseR->x, x);
     strcpy(baseR->y, y);
+    strcpy(baseR->radius, "10");
     strcpy(baseR->sw, sw);
     strcpy(baseR->cfill, cfill);
     strcpy(baseR->cstrk, cstrk);
@@ -51,6 +54,14 @@ char* getBaseRadioY(BaseRadio BaseR){
         return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->y;
+}
+
+char* getBaseRadioRadius(BaseRadio BaseR){
+    if(isElementNull(BaseR, "radio-base", "getBaseRadioRadius"))
+        return NULL;
+
+    baseRadio *baseR = (baseRadio*) BaseR;
+    return baseR->radius;
 }
 
 char* getBaseRadioSw(BaseRadio BaseR){
@@ -85,9 +96,8 @@ double getBaseRadioArea(BaseRadio BaseR){
     if(isElementNull(BaseR, "radio-base", "getBaseRadioArea"))
         return 0;
 
-    //baseRadio *baseR = (baseRadio*) BaseR;
-
-    return (3.141592 * (10*10));      
+    baseRadio *baseR = (baseRadio*) BaseR;
+    return 3.141592 * ( atof(baseR->radius) * atof(baseR->radius) );      
 }
 
 char* baseRadioToString(BaseRadio BaseR){
@@ -117,6 +127,7 @@ void freeBaseRadio(BaseRadio BaseR){
     free(baseR->id);  
     free(baseR->x); 
     free(baseR->y);  
+    free(baseR->radius);
     free(baseR->sw);  
     free(baseR->cfill);  
     free(baseR->cstrk);  

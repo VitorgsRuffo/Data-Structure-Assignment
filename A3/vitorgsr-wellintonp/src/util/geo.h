@@ -1,7 +1,7 @@
 #ifndef READINPUT_H
 #define READINPUT_H
 
-#include "../drawing.h"
+#include "../drawing/drawing.h"
 
 /*  
 * Pré-Condição: requer um arquivo de entrada geo e uma variavel do tipo desenho.

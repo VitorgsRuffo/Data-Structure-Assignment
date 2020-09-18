@@ -2,8 +2,8 @@
 #include "../include/util.h"
 #include "../include/figures.h"
 #include "../include/urbanElements.h"
-#include "../drawing.h"
-#include "../customization.h"
+#include "../drawing/drawing.h"
+#include "../drawing/customization.h"
 
 /*
 * numero maximo de partes que um comando vindo de um arquivo geo pode ter

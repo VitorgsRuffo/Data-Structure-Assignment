@@ -32,6 +32,12 @@ char* getBaseRadioY(BaseRadio BaseR);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de radio-base.
+* Pós-Condição: retorna o raio da radio-base passada.
+*/
+char* getBaseRadioRadius(BaseRadio BaseR);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de radio-base.
 * Pós-Condição: retorna a espessura da borda da radio-base passada.
 */
 char* getBaseRadioSw(BaseRadio BaseR);

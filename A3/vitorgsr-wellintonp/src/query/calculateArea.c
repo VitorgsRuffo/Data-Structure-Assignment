@@ -1,7 +1,7 @@
 #include "../include/headers.h"
 #include "../include/util.h"
 #include "../include/urbanElements.h"
-#include "../drawing.h"
+#include "../drawing/drawing.h"
 #include "../include/query.h"
 
 typedef struct {

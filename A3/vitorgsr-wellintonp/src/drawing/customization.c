@@ -1,5 +1,5 @@
-#include "./include/headers.h"
-#include "./include/util.h"
+#include "../include/headers.h"
+#include "../include/util.h"
 #include "customization.h"
 
 typedef struct blockCustomization {

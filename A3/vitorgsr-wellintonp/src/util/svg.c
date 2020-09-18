@@ -2,7 +2,7 @@
 #include "../include/util.h"
 #include "../include/figures.h"
 #include "../include/urbanElements.h"
-#include "../drawing.h"
+#include "../drawing/drawing.h"
 #include <unistd.h>
 
 char* buildGeoSvgPath(Parameters Param);
@@ -200,31 +200,34 @@ void buildBlockSvgTag(char* blockTag, Block Blk){
 void buildSemaphoreSvgTag(char* semaphoreTag, Semaphore Semap){
     char* x = getSemaphoreX(Semap);
     char* y = getSemaphoreY(Semap);
+    char* radius = getSemaphoreRadius(Semap);
     char* sw = getSemaphoreSw(Semap);
     char* cfill = getSemaphoreCfill(Semap);
     char* cstrk = getSemaphoreCstrk(Semap);
 
-    sprintf(semaphoreTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"10.0\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> S </text>\n", x, y, cstrk, sw, cfill, x, y);
+    sprintf(semaphoreTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> S </text>\n", x, y, radius, cstrk, sw, cfill, x, y);
 }
 
 void buildHydrantSvgTag(char* hydrantTag, Hydrant Hyd){
     char* x = getHydrantX(Hyd);
     char* y = getHydrantY(Hyd);
+    char* radius = getHydrantRadius(Hyd);
     char* sw = getHydrantSw(Hyd);
     char* cfill = getHydrantCfill(Hyd);
     char* cstrk = getHydrantCstrk(Hyd);
 
-    sprintf(hydrantTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"10.0\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> H </text>\n", x, y, cstrk, sw, cfill, x, y);
+    sprintf(hydrantTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> H </text>\n", x, y, radius, cstrk, sw, cfill, x, y);
 }
 
 void buildBaseRadioSvgTag(char* baseRadioTag, BaseRadio BaseR){
     char* x = getBaseRadioX(BaseR);
     char* y = getBaseRadioY(BaseR);
+    char* radius = getBaseRadioRadius(BaseR);
     char* sw = getBaseRadioSw(BaseR);
     char* cfill = getBaseRadioCfill(BaseR);
     char* cstrk = getBaseRadioCstrk(BaseR);
 
-    sprintf(baseRadioTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"10.0\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> RB </text>\n", x, y, cstrk, sw, cfill, x, y);
+    sprintf(baseRadioTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> RB </text>\n", x, y, radius, cstrk, sw, cfill, x, y);
 }
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList){

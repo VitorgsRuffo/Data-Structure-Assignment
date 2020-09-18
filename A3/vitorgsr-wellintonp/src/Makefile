@@ -7,7 +7,9 @@ obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o svg
 util_path = ./util/
 figures_path = ./figures/
 urban_elements_path = ./urban-elements/
+drawing_path = ./drawing/
 qry_path = ./query/
+
 
 siguel: $(obj)
 	$(CC) $(obj) -o siguel -lm
@@ -15,11 +17,11 @@ siguel: $(obj)
 main.o: main.c  
 	$(CC) $(flags) -c main.c
 
-drawing.o: drawing.c 
-	$(CC) $(flags) -c drawing.c
+drawing.o: $(drawing_path)drawing.c 
+	$(CC) $(flags) -c $(drawing_path)drawing.c
 
-customization.o: customization.c
-	$(CC) $(flags) -c customization.c
+customization.o: $(drawing_path)customization.c
+	$(CC) $(flags) -c $(drawing_path)customization.c
 
 
 

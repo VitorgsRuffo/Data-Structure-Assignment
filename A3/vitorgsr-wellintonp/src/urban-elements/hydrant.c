@@ -6,6 +6,7 @@ typedef struct hydrant{
     char* id;
     char* x;
     char* y;
+    char* radius;
     char* sw;
     char* cfill;
     char* cstrk;
@@ -18,6 +19,7 @@ Hydrant createHydrant(char* id, char* x, char* y, char* sw, char* cfill, char* c
     hyd->id = (char*) malloc((strlen(id) + 1) * sizeof(char));
     hyd->x = (char*) malloc((strlen(x) + 1) * sizeof(char));
     hyd->y = (char*) malloc((strlen(y) + 1) * sizeof(char));
+    hyd->radius = (char*) malloc(4 * sizeof(char));
     hyd->sw = (char*) malloc(20 * sizeof(char));
     hyd->cfill = (char*) malloc(20 * sizeof(char));
     hyd->cstrk = (char*) malloc(20 * sizeof(char));
@@ -25,6 +27,7 @@ Hydrant createHydrant(char* id, char* x, char* y, char* sw, char* cfill, char* c
     strcpy(hyd->id, id);
     strcpy(hyd->x, x);
     strcpy(hyd->y, y);
+    strcpy(hyd->radius, "10");
     strcpy(hyd->sw, sw);
     strcpy(hyd->cfill, cfill);
     strcpy(hyd->cstrk, cstrk);
@@ -51,6 +54,13 @@ char* getHydrantY(Hydrant Hyd){
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->y;
+}
+
+char* getHydrantRadius(Hydrant Hyd){
+    if(isElementNull(Hyd, "hidrante", "getHydrantRadius"))
+        return NULL;
+    hydrant *hyd = (hydrant*) Hyd;
+    return hyd->radius;
 }
 
 char* getHydrantSw(Hydrant Hyd){
@@ -85,8 +95,8 @@ double getHydrantArea(Hydrant Hyd){
     if(isElementNull(Hyd, "hidrante", "getHidranteArea"))
         return 0;
 
-    //hydrant *hyd = (hydrant*) Hyd;
-    return (3.141592 * (10*10));      
+    hydrant *hyd = (hydrant*) Hyd;
+    return 3.141592 * ( atof(hyd->radius) * atof(hyd->radius) );      
 }
 
 char* hydrantToString(Hydrant Hyd){
@@ -118,6 +128,7 @@ void freeHydrant(Hydrant Hyd){
     free(hyd->id);  
     free(hyd->x); 
     free(hyd->y);
+    free(hyd->radius);
     free(hyd->sw);
     free(hyd->cfill);  
     free(hyd->cstrk);

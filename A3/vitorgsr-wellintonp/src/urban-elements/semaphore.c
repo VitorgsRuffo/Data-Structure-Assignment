@@ -6,6 +6,7 @@ typedef struct semaphore{
     char* id;
     char* x;
     char* y;
+    char* radius;
     char* sw;
     char* cfill;
     char* cstrk;
@@ -18,6 +19,7 @@ Semaphore createSemaphore(char* id, char* x, char* y, char* sw, char* cfill, cha
     semap->id = (char*) malloc((strlen(id) + 1) * sizeof(char));
     semap->x = (char*) malloc((strlen(x) + 1) * sizeof(char));
     semap->y = (char*) malloc((strlen(y) + 1) * sizeof(char));
+    semap->radius = (char*) malloc(4 * sizeof(char));
     semap->sw = (char*) malloc(20 * sizeof(char));
     semap->cfill = (char*) malloc(20 * sizeof(char));
     semap->cstrk = (char*) malloc(20 * sizeof(char));
@@ -25,6 +27,7 @@ Semaphore createSemaphore(char* id, char* x, char* y, char* sw, char* cfill, cha
     strcpy(semap->id, id);
     strcpy(semap->x, x);
     strcpy(semap->y, y);
+    strcpy(semap->radius, "10");
     strcpy(semap->sw, sw);
     strcpy(semap->cfill, cfill);
     strcpy(semap->cstrk, cstrk);
@@ -51,6 +54,13 @@ char* getSemaphoreY(Semaphore Semap){
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->y;
+}
+
+char* getSemaphoreRadius(Semaphore Semap){
+    if(isElementNull(Semap, "semaforo", "getSemaphoreRadius"))
+        return NULL;
+    semaphore *semap = (semaphore*) Semap;
+    return semap->radius;
 }
 
 char* getSemaphoreSw(Semaphore Semap){
@@ -85,8 +95,8 @@ double getSemaphoreArea(Semaphore Semap){
     if(isElementNull(Semap, "semaforo", "getSemaphoreArea"))
         return 0;
 
-    //semaphore *semap = (semaphore*) Semap;
-    return (3.141592 * (10*10));      
+    semaphore *semap = (semaphore*) Semap;
+    return 3.141592 * ( atof(semap->radius) * atof(semap->radius) );      
 }
 
 char* semaphoreToString(Semaphore Semap){
@@ -116,6 +126,7 @@ void freeSemaphore(Semaphore Semap){
     free(semap->id);  
     free(semap->x); 
     free(semap->y);
+    free(semap->radius);
     free(semap->sw);
     free(semap->cfill);
     free(semap->cstrk);  

@@ -128,11 +128,15 @@ char* getOutputDirectory(Parameters Param){
 } 
 
 int isQryNull(Parameters Param){
-    if(Param == NULL){
-        printf("Arquivo query esta ausente no programa..\n");
+    if(isElementNull(Param, "parameter", "isQryNull"))
         return 1;
-    }
-    return 0;
+
+    parameters *param = (parameters*) Param;
+    
+    if(param->qryName == NULL)
+        return 1;
+    else
+        return 0;
 }
 
 

@@ -1,6 +1,6 @@
 #include "../include/headers.h"
 #include "../include/util.h"
-#include "../drawing.h"
+#include "../drawing/drawing.h"
 #include "../include/figures.h"
 
 void setElementCorbAndCorp(Info elementInfo, char* elementType, char* corb, char* corp, char** originalCorb, char** originalCorp);
