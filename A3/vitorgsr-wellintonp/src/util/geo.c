@@ -10,19 +10,25 @@
 */
 #define maxNumberOfGeoCommandParts 8
 
+//T1
 void readCircle(char* command, char** commandParts, Drawing Dr, ElementsCustomization elementsCustom);
 void readRectangle(char* command, char** commandParts, Drawing Dr, ElementsCustomization elementsCustom);
 void readText(char* command, char** commandParts, Drawing Dr);
+
+//T2
 void readBlock(char* command, char** commandParts, Drawing Dr, ElementsCustomization elementsCustom);
 void readHydrant(char* command, char** commandParts, Drawing Dr, ElementsCustomization elementsCustom);
 void readSemaphore(char* command, char** commandParts, Drawing Dr, ElementsCustomization elementsCustom);
 void readBaseRadio(char* command, char** commandParts, Drawing Dr, ElementsCustomization elementsCustom);
-
 void readFiguresCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readBlockCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readHydrantCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readSemaphoreCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readBaseRadioCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
+
+//T3
+void readHealthCenter(char* command, char** commandParts, Drawing Dr);
+void readRegion(char* command, char** commandParts, Drawing Dr);
 
 void freeReadGeoResources(char* command, char** commandParts, ElementsCustomization elementsCustom);
 
@@ -82,6 +88,13 @@ void readGeo(File geo, Drawing Dr){
         
         else if(!strcmp(commandType, "cr"))//lidando com as novas estilizacoes de radio-base: 
             readBaseRadioCustomization(command, commandParts, elementsCustom);
+        
+        else if(!strcmp(commandType, "ps"))
+            readHealthCenter(command, commandParts, Dr);
+
+        else if(!strcmp(commandType, "dd"))
+            readRegion(command, commandParts, Dr);
+        
     }
 
     freeReadGeoResources(command, commandParts, elementsCustom);
@@ -184,6 +197,20 @@ void readBaseRadioCustomization(char* command, char** commandParts, ElementsCust
     setBaseRadioSwCustomization(elementsCustom, commandParts[1]);
     setBaseRadioCfillCustomization(elementsCustom, commandParts[2]);
     setBaseRadioCstrkCustomization(elementsCustom, commandParts[3]);
+}
+
+void readHealthCenter(char* command, char** commandParts, Drawing Dr){
+    sscanf(command, "%s %s %s", commandParts[0], commandParts[1], commandParts[2]);
+    HealthCenter healthCenter = createHealthCenter(commandParts[1], commandParts[2]);
+    List healthCenterList = getHealthCenterList(Dr);
+    insert(healthCenterList, healthCenter);
+}
+
+void readRegion(char* command, char** commandParts, Drawing Dr){
+    sscanf(command, "%s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
+    Region region = createRegion(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
+    List regionList = getRegionList(Dr);
+    insert(regionList, region);
 }
 
 void freeReadGeoResources(char* command, char** commandParts, ElementsCustomization elementsCustom){

@@ -4,6 +4,8 @@
 #include "../urban-elements/block.h"
 #include "../urban-elements/hydrant.h"
 #include "../urban-elements/baseRadio.h"
-#include "../urban-elements/semaphore.h" 
+#include "../urban-elements/semaphore.h"
+#include "../urban-elements/healthCenter.h"
+#include "../urban-elements/region.h" 
 
 #endif

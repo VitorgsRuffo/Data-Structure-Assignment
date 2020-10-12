@@ -61,6 +61,18 @@ List getSemaphoreList(Drawing Dr);
 List getQueryElementsList(Drawing Dr);
 
 /*
+* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
+* Pós-Condição: retorna uma referencia para a lista de postos de saude presente no TAD desenho.
+*/
+List getHealthCenterList(Drawing Dr);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
+* Pós-Condição: retorna uma referencia para a lista de regioes presente no TAD desenho.
+*/
+List getRegionList(Drawing Dr);
+
+/*
 * Pré-Condição: requer a referencia para uma instancia de TAD desenho e uma referencia para uma string que contenha o tipo de um elemento.
 * Pós-Condição: retorna a lista de elementos cujo tipo foi passado por parametro.
 */

@@ -2,7 +2,7 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o svg.o tools.o circle.o rectangle.o text.o block.o hydrant.o semaphore.o baseRadio.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o
+obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o svg.o tools.o circle.o rectangle.o text.o block.o hydrant.o semaphore.o baseRadio.o healthCenter.o region.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o
 
 util_path = ./util/
 figures_path = ./figures/
@@ -17,6 +17,7 @@ siguel: $(obj)
 main.o: main.c  
 	$(CC) $(flags) -c main.c
 
+#drawing files:
 drawing.o: $(drawing_path)drawing.c 
 	$(CC) $(flags) -c $(drawing_path)drawing.c
 
@@ -24,7 +25,7 @@ customization.o: $(drawing_path)customization.c
 	$(CC) $(flags) -c $(drawing_path)customization.c
 
 
-
+#util files:
 parameters.o: $(util_path)parameters.c
 	$(CC) $(flags) -c $(util_path)parameters.c
 
@@ -44,7 +45,7 @@ tools.o: $(util_path)tools.c
 	$(CC) $(flags) -c $(util_path)tools.c
 
 
-
+#figures files:
 circle.o: $(figures_path)circle.c 
 	$(CC) $(flags) -c $(figures_path)circle.c
 
@@ -54,6 +55,8 @@ rectangle.o: $(figures_path)rectangle.c
 text.o: $(figures_path)text.c 
 	$(CC) $(flags) -c $(figures_path)text.c
 
+
+#urban elements files:
 block.o: $(urban_elements_path)block.c
 	$(CC) $(flags) -c $(urban_elements_path)block.c
 
@@ -66,8 +69,14 @@ semaphore.o: $(urban_elements_path)semaphore.c
 baseRadio.o: $(urban_elements_path)baseRadio.c
 	$(CC) $(flags) -c $(urban_elements_path)baseRadio.c
 
+healthCenter.o: $(urban_elements_path)healthCenter.c
+	$(CC) $(flags) -c $(urban_elements_path)healthCenter.c
+
+region.o: $(urban_elements_path)region.c
+	$(CC) $(flags) -c $(urban_elements_path)region.c
 
 
+#query files:
 qry.o: $(qry_path)qry.c
 	$(CC) $(flags) -c $(qry_path)qry.c
 
@@ -97,7 +106,6 @@ urbanDeletion.o: $(qry_path)urbanDeletion.c
 
 calculateArea.o: $(qry_path)calculateArea.c
 	$(CC) $(flags) -c $(qry_path)calculateArea.c
-
 
 clean: 
 	rm $(obj) siguel

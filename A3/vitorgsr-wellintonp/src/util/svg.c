@@ -88,6 +88,8 @@ void buildHydrantSvgTag(char* hydrantTag, Hydrant Hyd);
 
 void buildSemaphoreSvgTag(char* semaphoreTag, Semaphore Semap);
 
+void buildHealthCenterSvgTag(char* HealthCenterTag, HealthCenter HealthC);
+
 void drawQueryElementsOnSvg(Svg svg, List elementsList);
 
 void drawOnSvg(Svg svg, Drawing Dr){
@@ -120,6 +122,9 @@ void drawOnSvg(Svg svg, Drawing Dr){
 
     List baseRadioList = getBaseRadioList(Dr);
     drawElementsOnSvg(svg, baseRadioList, &buildBaseRadioSvgTag);
+
+    List healthCenterList = getHealthCenterList(Dr);
+    drawElementsOnSvg(svg, healthCenterList, &buildHealthCenterSvgTag);
 
     List queryElementsList = getQueryElementsList(Dr);
     drawQueryElementsOnSvg(svg, queryElementsList);
@@ -228,6 +233,14 @@ void buildBaseRadioSvgTag(char* baseRadioTag, BaseRadio BaseR){
     char* cstrk = getBaseRadioCstrk(BaseR);
 
     sprintf(baseRadioTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> RB </text>\n", x, y, radius, cstrk, sw, cfill, x, y);
+}
+
+void buildHealthCenterSvgTag(char* healthCenterTag, HealthCenter HealthC){
+    char* x = getHealthCenterX(HealthC);
+    char* y = getHealthCenterY(HealthC);
+    char* radius = getHealthCenterRadius(HealthC);
+
+    sprintf(healthCenterTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"mediumblue\" stroke-width=\"1\" fill=\"royalblue\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> HC </text>\n", x, y, radius, x, y);
 }
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList){

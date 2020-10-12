@@ -14,6 +14,8 @@ typedef struct drawing {
     List baseRadioList;
     List semaphoreList;
     List queryElementsList;
+    List healthCenterList;
+    List regionList;
 }drawing;
 
 Drawing createDrawing(){
@@ -32,6 +34,8 @@ Drawing createDrawing(){
     dr->baseRadioList = createList();
     dr->semaphoreList = createList();
     dr->queryElementsList = createList();
+    dr->healthCenterList = createList();
+    dr->regionList = createList();
 
     return dr;
 }
@@ -99,6 +103,22 @@ List getQueryElementsList(Drawing Dr){
 
     drawing *dr = (drawing*) Dr;
     return dr->queryElementsList;
+}
+
+List getHealthCenterList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getHealthCenterList"))
+        return NULL;
+
+    drawing *dr = (drawing*) Dr;
+    return dr->healthCenterList;
+}
+
+List getRegionList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getRegionList"))
+        return NULL;
+
+    drawing *dr = (drawing*) Dr;
+    return dr->regionList;
 }
 
 List getListByElementType(Drawing Dr, char* elementType){
@@ -226,6 +246,8 @@ void freeDrawing(Drawing Dr){
     freeList(dr->baseRadioList, &freeBaseRadio);
     freeList(dr->semaphoreList, &freeSemaphore);
     freeList(dr->queryElementsList, &freeQueryElement);
+    freeList(dr->healthCenterList, &freeHealthCenter);
+    freeList(dr->regionList, &freeRegion);
 
     free(dr);
 }
