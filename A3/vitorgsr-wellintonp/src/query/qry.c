@@ -53,6 +53,9 @@ void executeQry(File qry, Drawing Dr, Parameters Param){
         
         else if(!strcmp(commandType, "car"))
             executeUrbanElementsTotalAreaCalculationInRange(command, Dr, txt);
+
+        else if(!strcmp(commandType, "cv"))
+            executeCovidCasesReport(command, Dr);
     }
     
     closeTxt(txt);

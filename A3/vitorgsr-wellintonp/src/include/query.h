@@ -11,5 +11,6 @@
 #include "../query/blockBorder.h"
 #include "../query/urbanDeletion.h"
 #include "../query/calculateArea.h"
+#include "../query/covidCases.h"
 
 #endif 
