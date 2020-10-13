@@ -182,18 +182,27 @@ Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char
     return NULL;
 }
 
+Node searchForBlockByCep(Drawing Dr, char* cepToSearch){
+    drawing *dr = (drawing*) Dr;
+    Node blockNode = NULL;
+
+    blockNode = searchForElementByIdentifier(dr->blockList, &getBlockCep, cepToSearch);
+    return blockNode;
+}
+
 Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urbanElementType){
     if(isElementNull(Dr, "drawing", "searchForUrbanElementByIdentifier"))
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
     Node urbanElementNode;
 
-    urbanElementNode = searchForElementByIdentifier(dr->blockList, &getBlockCep, idToSearch);
+    urbanElementNode = searchForBlockByCep(Dr, idToSearch);
     if(urbanElementNode != NULL){
         strcpy(urbanElementType, "quadra");
         return urbanElementNode;
     }
+
+    drawing *dr = (drawing*) Dr;
 
     urbanElementNode = searchForElementByIdentifier(dr->hydrantList, &getHydrantId, idToSearch);
     if(urbanElementNode != NULL){

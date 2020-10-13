@@ -85,6 +85,12 @@ List getListByElementType(Drawing Dr, char* elementType);
 Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char* figureElementType);
 
 /*
+* Pré-Condição: requer a referencia para uma instancia de TAD desenho, um cep de uma quadra a ser procurada.
+* Pós-Condição: percorre a lista de elementos urbanos em busca de um no cuja informacao tenha o id especificado, se for encontrado retornamos esse no e salvamos seu tipo dessa informacao no ponteiro passado, se nao for retornamos NULL.
+*/
+Node searchForBlockByCep(Drawing Dr, char* cepToSearch);
+
+/*
 * Pré-Condição: requer a referencia para uma instancia de TAD desenho, um id de um elemento urbano a ser procurado nas listas do tad desenho, e um ponteiro para guardar o tipo do elemento quando o encontrarmos (se encontrarmos).
 * Pós-Condição: percorre as listas de elementos urbanos em busca de um no cuja informacao tenha o id especificado, se for encontrado retornamos esse no e salvamos seu tipo dessa informacao no ponteiro passado, se nao for retornamos NULL.
 */
