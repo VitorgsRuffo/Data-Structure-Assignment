@@ -86,7 +86,7 @@ Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD desenho, um cep de uma quadra a ser procurada.
-* Pós-Condição: percorre a lista de elementos urbanos em busca de um no cuja informacao tenha o id especificado, se for encontrado retornamos esse no e salvamos seu tipo dessa informacao no ponteiro passado, se nao for retornamos NULL.
+* Pós-Condição: percorre a lista de quadras em busca de um no cuja informacao tenha o cep especificado, se for encontrado retornamos esse no, se nao for retornamos NULL.
 */
 Node searchForBlockByCep(Drawing Dr, char* cepToSearch);
 

@@ -18,18 +18,20 @@ typedef struct {
 
 typedef struct {
     double x, y, w, h;    
-}Block;
+}CovidBlock;
 
-void readBlockAttributes(Info blockInfo, Block *block);
-void calculateHouseLocation(Block *block, House *house);
-    
+void readBlockAttributes(Info blockInfo, CovidBlock *block);
+void calculateHouseLocation(CovidBlock *block, House *house);
+char* buildHouseTag(House* house);
+
 void executeCovidCasesReport(char* command, Drawing Dr){
     if(isElementNull(Dr, "drawing", "executeCovidCasesReport"))
         return;
 
     House house;
     sscanf(&command[3], "%d %s %c %d", &house.casesNumber, house.address.cep, &house.address.face, &house.address.number);
-    
+    house.w = 15.0; house.h = 15.0;
+
     Node blockNode;
     blockNode = searchForBlockByCep(Dr, house.address.cep);
     if(isElementNull(blockNode, "blockNode", "searchForUrbanElementByIdentifier"))
@@ -38,38 +40,16 @@ void executeCovidCasesReport(char* command, Drawing Dr){
     List blockList = getBlockList(Dr);
     Info blockInfo = get(blockList, blockNode);
     
-    Block block;
+    CovidBlock block;
     readBlockAttributes(blockInfo, &block);
     calculateHouseLocation(&block, &house);
 
-
-
-    /* to do list:
-
-        x - interpret the command. (create TAD address)
-
-        x get block node (searchForUrbanElementByIdentifier)
-        x get block list
-        x get block info ( + get each attribute and assign to a block struct)
-
-        x create house info struct
-
-        - call function that will calculate the house attributes based on the side of the block.
-                -if side == N
-                    call function that will calculate the house attributes on side N.
-                
-                -if side == S
-                    ...
-
-        - create house tag
-
-        - get query elements list
-
-        - insert
-    */
+    char* houseTag = buildHouseTag(&house);
+    List queryElementsList = getQueryElementsList(Dr);
+    insert(queryElementsList, houseTag);
 }
 
-void readBlockAttributes(Info blockInfo, Block *block){
+void readBlockAttributes(Info blockInfo, CovidBlock *block){
     
     block->x = atof(getBlockX(blockInfo));
     block->y = atof(getBlockY(blockInfo));
@@ -79,7 +59,13 @@ void readBlockAttributes(Info blockInfo, Block *block){
     return;
 }
 
-void calculateHouseLocation(Block *block, House *house){
+void calculateHouseLocationOnNorthFace(CovidBlock *block, House *house);
+void calculateHouseLocationOnSouthFace(CovidBlock *block, House *house);
+void calculateHouseLocationOnEastFace(CovidBlock *block, House *house);
+void calculateHouseLocationOnWestFace(CovidBlock *block, House *house);
+
+
+void calculateHouseLocation(CovidBlock *block, House *house){
     
     switch (house->address.face){
         case 'N':
@@ -109,18 +95,40 @@ void calculateHouseLocation(Block *block, House *house){
     return;
 }
 
-void calculateHouseLocationOnNorthFace(Block *block, House *house){
-    
+// Face Norte
+void calculateHouseLocationOnNorthFace(CovidBlock *block, House *house){
+    house->x = (block->x + house->address.number) - (house->w / 2.0);
+    house->y = (block->y + block->h) - house->h;
 }
 
-void calculateHouseLocationOnSouthFace(Block *block, House *house){
-    
+// Face Sul
+void calculateHouseLocationOnSouthFace(CovidBlock *block, House *house){
+    house->x = (block->x + house->address.number) - (house->w / 2.0);
+    house->y = block->y;
 }
 
-void calculateHouseLocationOnEastFace(Block *block, House *house){
-    
+// Face Leste
+void calculateHouseLocationOnEastFace(CovidBlock *block, House *house){
+    house->x = block->x;
+    house->y = (block->y + house->address.number) - (house->h/2);  
 }
 
-void calculateHouseLocationOnWestFace(Block *block, House *house){
+// Face Oeste
+void calculateHouseLocationOnWestFace(CovidBlock *block, House *house){
+    house->x = (block->x + block->w) - house->w;
+    house->y = (block->y + house->address.number) - (house->h/2);
+}
+
+char* buildHouseTag(House* house){
+
+    char* houseTag = (char*) malloc(400 * sizeof(char));
+    if(isElementNull(houseTag, "houseTag", "buildHouseTag"))
+        return NULL;
     
+    double casesNumberX = house->x + (house->w / 2.0);
+    double casesNumberY = house->y + (house->h / 2.0);
+
+    sprintf(houseTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"darkorange\" stroke-width=\"1\" fill=\"orange\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> %d </text>\n", house->w, house->h, house->x, house->y, casesNumberX, casesNumberY, house->casesNumber);
+
+    return houseTag;
 }

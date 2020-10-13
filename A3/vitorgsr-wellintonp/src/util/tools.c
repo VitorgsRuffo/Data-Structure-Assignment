@@ -59,7 +59,7 @@ char* buildQryOutputPath(Parameters Param, char* extension){
 
     char* fullGeoName = getGeoName(Param);
     char* geoNameWithoutPathAndExtension = getFileNameWithoutPathAndExtension(fullGeoName);
-
+    
     char* fullQryName = getQryName(Param);
     char* qryNameWithoutPathAndExtension = getFileNameWithoutPathAndExtension(fullQryName);
 
