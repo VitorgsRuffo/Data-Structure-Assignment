@@ -12,5 +12,6 @@
 #include "../query/urbanDeletion.h"
 #include "../query/calculateArea.h"
 #include "../query/covidCases.h"
+#include "../query/medicalTreatment.h"
 
 #endif 
