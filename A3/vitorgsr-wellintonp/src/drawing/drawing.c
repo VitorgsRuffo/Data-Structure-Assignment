@@ -16,6 +16,7 @@ typedef struct drawing {
     List queryElementsList;
     List healthCenterList;
     List regionList;
+    List houseList;
 }drawing;
 
 Drawing createDrawing(){
@@ -36,6 +37,7 @@ Drawing createDrawing(){
     dr->queryElementsList = createList();
     dr->healthCenterList = createList();
     dr->regionList = createList();
+    dr->houseList = createList();
 
     return dr;
 }
@@ -119,6 +121,14 @@ List getRegionList(Drawing Dr){
 
     drawing *dr = (drawing*) Dr;
     return dr->regionList;
+}
+
+List getHouseList(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getHouseList"))
+        return NULL;
+
+    drawing *dr = (drawing*) Dr;
+    return dr->houseList;
 }
 
 List getListByElementType(Drawing Dr, char* elementType){
@@ -257,6 +267,7 @@ void freeDrawing(Drawing Dr){
     freeList(dr->queryElementsList, &freeQueryElement);
     freeList(dr->healthCenterList, &freeHealthCenter);
     freeList(dr->regionList, &freeRegion);
+    freeList(dr->houseList, &freeHouse);
 
     free(dr);
 }

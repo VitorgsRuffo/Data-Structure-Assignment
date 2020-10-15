@@ -90,6 +90,8 @@ void buildSemaphoreSvgTag(char* semaphoreTag, Semaphore Semap);
 
 void buildHealthCenterSvgTag(char* HealthCenterTag, HealthCenter HealthC);
 
+void buildHouseSvgTag(char* houseTag, House H);
+
 void drawQueryElementsOnSvg(Svg svg, List elementsList);
 
 void drawOnSvg(Svg svg, Drawing Dr){
@@ -125,6 +127,9 @@ void drawOnSvg(Svg svg, Drawing Dr){
 
     List healthCenterList = getHealthCenterList(Dr);
     drawElementsOnSvg(svg, healthCenterList, &buildHealthCenterSvgTag);
+
+    List houseList = getHouseList(Dr);
+    drawElementsOnSvg(svg, houseList, &buildHouseSvgTag);
 
     List queryElementsList = getQueryElementsList(Dr);
     drawQueryElementsOnSvg(svg, queryElementsList);
@@ -241,6 +246,20 @@ void buildHealthCenterSvgTag(char* healthCenterTag, HealthCenter HealthC){
     char* radius = getHealthCenterRadius(HealthC);
 
     sprintf(healthCenterTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"mediumblue\" stroke-width=\"1\" fill=\"royalblue\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> HC </text>\n", x, y, radius, x, y);
+}
+
+
+void buildHouseSvgTag(char* houseTag, House H){
+
+    double x = getHouseX(H);
+    double y = getHouseY(H);
+    double w = getHouseWidth(H);
+    double h = getHouseHeight(H);
+    double centerOfMassX = getHouseCenterOfMassX(H);
+    double centerOfMassY = getHouseCenterOfMassY(H);
+    int casesNumber = getHouseCasesNumber(H);
+
+    sprintf(houseTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"darkorange\" stroke-width=\"1\" fill=\"orange\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> %d </text>\n", w, h, x, y, centerOfMassX, centerOfMassY, casesNumber);
 }
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList){

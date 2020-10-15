@@ -30,9 +30,7 @@ typedef struct {
     double distance;
 }NearHealthCenter;
 
-#include <stdio.h>
-#include <stdlib.h>
-
+// Sort ///////////////////////////////////////////////////////////
 void swap(NearHealthCenter *X, NearHealthCenter *Y){
     NearHealthCenter aux = *X;
     *X = *Y;
@@ -69,6 +67,8 @@ void displayIntegerArray(NearHealthCenter *A, int end){
     printf("\n");
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
 void readBlockAttributes2(Info blockInfo, CovidBlock *block);
 void calculateHouseLocation2(CovidBlock *block, House *house);
 char* buildBlueHouseTag(House* house);
@@ -76,9 +76,6 @@ void copyHealthCenterListNodesInfoToArray(List healthCenterList, NearHealthCente
 void calculateDistanceFromHouseToHealthCenters(House* house, NearHealthCenter* nearHealthCenters, int healthCentersAmount);
 char* buildLineSegmentTag(double x, double y, House* house);
 void writeHealthCenterCoordinatesOnTxt(File txt, int i, double x, double y, double distance);
-
-
-////////////////////////////////////////////////////////////Refatorar.
 
 
 void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
@@ -90,9 +87,7 @@ void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
     sscanf(&command[4], "%d %s %c %d", &K, house.address.cep, &house.address.face, &house.address.number);
     house.w = 15.0; house.h = 15.0;
 
-
-    Node blockNode;
-    blockNode = searchForBlockByCep(Dr, house.address.cep);
+    Node blockNode = searchForBlockByCep(Dr, house.address.cep);
     if(isElementNull(blockNode, "blockNode", "searchForUrbanElementByIdentifier"))
         return;
     
@@ -102,6 +97,9 @@ void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
     CovidBlock block;
     readBlockAttributes2(blockInfo, &block);
     calculateHouseLocation2(&block, &house);
+
+
+
 
     char* blueHouseTag = buildBlueHouseTag(&house);
     List queryElementsList = getQueryElementsList(Dr);
@@ -138,6 +136,9 @@ void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
     }
 
 }
+
+
+
 
 void readBlockAttributes2(Info blockInfo, CovidBlock *block){
     
@@ -211,6 +212,11 @@ void calculateHouseLocationOnWestFace2(CovidBlock *block, House *house){
     house->x = (block->x + block->w) - house->w;
     house->y = (block->y + house->address.number) - (house->h/2);
 }
+
+
+
+
+
 
 char* buildBlueHouseTag(House* house){
 

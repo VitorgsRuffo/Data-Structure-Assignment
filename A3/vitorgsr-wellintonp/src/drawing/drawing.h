@@ -73,6 +73,12 @@ List getHealthCenterList(Drawing Dr);
 List getRegionList(Drawing Dr);
 
 /*
+* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
+* Pós-Condição: retorna uma referencia para a lista de casas presente no TAD desenho.
+*/
+List getHouseList(Drawing Dr);
+
+/*
 * Pré-Condição: requer a referencia para uma instancia de TAD desenho e uma referencia para uma string que contenha o tipo de um elemento.
 * Pós-Condição: retorna a lista de elementos cujo tipo foi passado por parametro.
 */

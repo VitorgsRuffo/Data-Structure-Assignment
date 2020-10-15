@@ -7,5 +7,6 @@
 #include "../urban-elements/semaphore.h"
 #include "../urban-elements/healthCenter.h"
 #include "../urban-elements/region.h" 
+#include "../urban-elements/house.h" 
 
 #endif
