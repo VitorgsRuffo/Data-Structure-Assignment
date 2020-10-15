@@ -83,7 +83,7 @@ void setUrbanEquipmentDoubleBorder(double x, double y, Info urbanEquipmentInfo, 
     if(urbanEquipmentType[0] == 'h'){
         setHydrantSw(urbanEquipmentInfo, "4.0");
         urbanEquipmentInnerCircleRadius = 6.0;
-        strcpy(urbanEquipmentLetter, ".H");;
+        strcpy(urbanEquipmentLetter, ".H");
     }else if(urbanEquipmentType[0] == 's'){
         setSemaphoreSw(urbanEquipmentInfo, "4.0");
         urbanEquipmentInnerCircleRadius = 6.0;

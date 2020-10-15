@@ -30,8 +30,47 @@ typedef struct {
     double distance;
 }NearHealthCenter;
 
-void readBlockAttributes(Info blockInfo, CovidBlock *block);
-void calculateHouseLocation(CovidBlock *block, House *house);
+#include <stdio.h>
+#include <stdlib.h>
+
+void swap(NearHealthCenter *X, NearHealthCenter *Y){
+    NearHealthCenter aux = *X;
+    *X = *Y;
+    *Y = aux;
+}
+
+int partition(NearHealthCenter *A, int start, int end){
+    NearHealthCenter pivot = A[end];
+    int partitionIndex = start;
+
+    for(int i = start; i<end; i++){
+        if(A[i].distance <= pivot.distance){
+            swap(&A[i], &A[partitionIndex]);
+            partitionIndex++;
+        }
+    }
+
+    swap(&A[partitionIndex], &A[end]);
+    return partitionIndex;
+}
+
+void quickSort(NearHealthCenter *A, int start, int end){
+    if(start < end){
+        int partitionIndex = partition(A, start, end);
+        quickSort(A, start, partitionIndex-1);
+        quickSort(A, partitionIndex+1, end);
+    }
+}
+
+void displayIntegerArray(NearHealthCenter *A, int end){
+    for(int i = 0; i<end; i++){
+        printf("%.2lf ", A[i].distance);
+    }
+    printf("\n");
+}
+
+void readBlockAttributes2(Info blockInfo, CovidBlock *block);
+void calculateHouseLocation2(CovidBlock *block, House *house);
 char* buildBlueHouseTag(House* house);
 void copyHealthCenterListNodesInfoToArray(List healthCenterList, NearHealthCenter* nearHealthCenters);
 void calculateDistanceFromHouseToHealthCenters(House* house, NearHealthCenter* nearHealthCenters, int healthCentersAmount);
@@ -61,23 +100,33 @@ void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
     Info blockInfo = get(blockList, blockNode);
     
     CovidBlock block;
-    readBlockAttributes(blockInfo, &block);
-    calculateHouseLocation(&block, &house);
+    readBlockAttributes2(blockInfo, &block);
+    calculateHouseLocation2(&block, &house);
 
     char* blueHouseTag = buildBlueHouseTag(&house);
     List queryElementsList = getQueryElementsList(Dr);
     insert(queryElementsList, blueHouseTag);
 
-        
     List healthCenterList = getHealthCenterList(Dr);
     int healthCentersAmount = length(healthCenterList);
     NearHealthCenter nearHealthCenters[healthCentersAmount];
     copyHealthCenterListNodesInfoToArray(healthCenterList, nearHealthCenters);
     calculateDistanceFromHouseToHealthCenters(&house, nearHealthCenters, healthCentersAmount);
-    //ordenar o vetor de acordo com o campo distance do elemento do vetor.
+    
+    //ordenar o vetor de acordo com o campo distance do elemento do vetor. (substituir por shell sort)
+        printf("Unsorted array:\n");
+        displayIntegerArray(nearHealthCenters, healthCentersAmount);
+
+        quickSort(nearHealthCenters, 0, (healthCentersAmount-1));
+
+        printf("Sorted array:\n");
+        displayIntegerArray(nearHealthCenters, healthCentersAmount);
 
     int healthCenterX, healthCenterY;
     char* lineSegmentTag;
+    
+    if(K > healthCentersAmount)
+        K = healthCentersAmount;
     
     for(int i = 0; i < K; i++){
 
@@ -90,7 +139,7 @@ void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
 
 }
 
-void readBlockAttributes(Info blockInfo, CovidBlock *block){
+void readBlockAttributes2(Info blockInfo, CovidBlock *block){
     
     block->x = atof(getBlockX(blockInfo));
     block->y = atof(getBlockY(blockInfo));
@@ -100,33 +149,33 @@ void readBlockAttributes(Info blockInfo, CovidBlock *block){
     return;
 }
 
-void calculateHouseLocationOnNorthFace(CovidBlock *block, House *house);
-void calculateHouseLocationOnSouthFace(CovidBlock *block, House *house);
-void calculateHouseLocationOnEastFace(CovidBlock *block, House *house);
-void calculateHouseLocationOnWestFace(CovidBlock *block, House *house);
+void calculateHouseLocationOnNorthFace2(CovidBlock *block, House *house);
+void calculateHouseLocationOnSouthFace2(CovidBlock *block, House *house);
+void calculateHouseLocationOnEastFace2(CovidBlock *block, House *house);
+void calculateHouseLocationOnWestFace2(CovidBlock *block, House *house);
 
 
-void calculateHouseLocation(CovidBlock *block, House *house){
+void calculateHouseLocation2(CovidBlock *block, House *house){
     
     switch (house->address.face){
         case 'N':
         case 'n':
-            calculateHouseLocationOnNorthFace(block, house);
+            calculateHouseLocationOnNorthFace2(block, house);
             break;
             
         case 'S':
         case 's':
-            calculateHouseLocationOnSouthFace(block, house);
+            calculateHouseLocationOnSouthFace2(block, house);
             break;
 
         case 'L':
         case 'l':
-            calculateHouseLocationOnEastFace(block, house);
+            calculateHouseLocationOnEastFace2(block, house);
             break;
         
         case 'O':
         case 'o':
-            calculateHouseLocationOnWestFace(block, house);
+            calculateHouseLocationOnWestFace2(block, house);
             break;
 
         default:
@@ -140,25 +189,25 @@ void calculateHouseLocation(CovidBlock *block, House *house){
 }
 
 // Face Norte
-void calculateHouseLocationOnNorthFace(CovidBlock *block, House *house){
+void calculateHouseLocationOnNorthFace2(CovidBlock *block, House *house){
     house->x = (block->x + house->address.number) - (house->w / 2.0);
     house->y = (block->y + block->h) - house->h;
 }
 
 // Face Sul
-void calculateHouseLocationOnSouthFace(CovidBlock *block, House *house){
+void calculateHouseLocationOnSouthFace2(CovidBlock *block, House *house){
     house->x = (block->x + house->address.number) - (house->w / 2.0);
     house->y = block->y;
 }
 
 // Face Leste
-void calculateHouseLocationOnEastFace(CovidBlock *block, House *house){
+void calculateHouseLocationOnEastFace2(CovidBlock *block, House *house){
     house->x = block->x;
     house->y = (block->y + house->address.number) - (house->h/2);  
 }
 
 // Face Oeste
-void calculateHouseLocationOnWestFace(CovidBlock *block, House *house){
+void calculateHouseLocationOnWestFace2(CovidBlock *block, House *house){
     house->x = (block->x + block->w) - house->w;
     house->y = (block->y + house->address.number) - (house->h/2);
 }
@@ -199,7 +248,7 @@ void calculateDistanceFromHouseToHealthCenters(House* house, NearHealthCenter* n
         healthCenterX = atof(getHealthCenterX(nearHealthCenters[i].healthCenter));
         healthCenterY = atof(getHealthCenterY(nearHealthCenters[i].healthCenter));
         
-        nearHealthCenters[i].distance = sqrt(pow((healthCenterX - house->x), 2) + pow((healthCenterY - house->y), 2));
+        nearHealthCenters[i].distance = sqrt(pow((healthCenterX - house->centerOfMass.x), 2) + pow((healthCenterY - house->centerOfMass.y), 2));
     }
 }
 
