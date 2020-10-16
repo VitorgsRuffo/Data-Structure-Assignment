@@ -2,7 +2,7 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o svg.o tools.o circle.o rectangle.o text.o block.o hydrant.o semaphore.o baseRadio.o healthCenter.o region.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o covidCases.o medicalTreatment.o
+obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o svg.o tools.o circle.o rectangle.o text.o block.o hydrant.o semaphore.o baseRadio.o healthCenter.o region.o house.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o covidCases.o medicalTreatment.o
 
 util_path = ./util/
 figures_path = ./figures/
@@ -74,6 +74,9 @@ healthCenter.o: $(urban_elements_path)healthCenter.c
 
 region.o: $(urban_elements_path)region.c
 	$(CC) $(flags) -c $(urban_elements_path)region.c
+
+house.o: $(urban_elements_path)house.c
+	$(CC) $(flags) -c $(urban_elements_path)house.c
 
 
 #query files:

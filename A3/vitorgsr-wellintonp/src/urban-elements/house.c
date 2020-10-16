@@ -170,7 +170,7 @@ double getHouseCenterOfMassX(House H){
     return h->centerOfMass.x;
 }
 
-double getHouseCenterOfMassX(House H){
+double getHouseCenterOfMassY(House H){
     if(isElementNull(H, "Casa", "getHouseCenterOfMassY"))
         return 0;
     house *h = (house*) H;
