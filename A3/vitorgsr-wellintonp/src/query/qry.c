@@ -59,6 +59,9 @@ void executeQry(File qry, Drawing Dr, Parameters Param){
 
         else if(!strcmp(commandType, "soc"))
             executeMedicalTreatmentSearching(command, Dr, txt);
+
+        else if(!strcmp(commandType, "ci"))
+            executeCovidIncidenceReportInRegion(command, Dr, txt);
     }
     
     closeTxt(txt);

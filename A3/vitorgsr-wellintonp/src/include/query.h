@@ -13,5 +13,6 @@
 #include "../query/calculateArea.h"
 #include "../query/covidCases.h"
 #include "../query/medicalTreatment.h"
+#include "../query/covidIncidence.h"
 
 #endif 

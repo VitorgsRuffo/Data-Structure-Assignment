@@ -2,7 +2,7 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o svg.o tools.o circle.o rectangle.o text.o block.o hydrant.o semaphore.o baseRadio.o healthCenter.o region.o house.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o covidCases.o medicalTreatment.o
+obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o svg.o tools.o circle.o rectangle.o text.o block.o hydrant.o semaphore.o baseRadio.o healthCenter.o region.o house.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o covidCases.o medicalTreatment.o covidIncidence.o
 
 util_path = ./util/
 figures_path = ./figures/
@@ -116,6 +116,8 @@ covidCases.o: $(qry_path)covidCases.c
 medicalTreatment.o: $(qry_path)medicalTreatment.c
 	$(CC) $(flags) -c $(qry_path)medicalTreatment.c
 
+covidIncidence.o: $(qry_path)covidIncidence.c
+	$(CC) $(flags) -c $(qry_path)covidIncidence.c
 
 clean: 
 	rm $(obj) siguel
