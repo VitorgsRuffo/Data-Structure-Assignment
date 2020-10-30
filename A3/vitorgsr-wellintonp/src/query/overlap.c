@@ -131,6 +131,7 @@ int checkRectRectOverlap(Info rect1, Info rect2){
     }
 }
 
+//ponhar em tools
 double getNextestRectPointToCircCenter(double min, double max, double value){
 
     if(value < min){
@@ -142,6 +143,7 @@ double getNextestRectPointToCircCenter(double min, double max, double value){
     }
 }
 
+//ponhar em tools
 int checkRectCircOverlap(Info rect, Info circ){
     double jX = atof(getRectangleX(rect));
     double jY = atof(getRectangleY(rect));
