@@ -1,5 +1,5 @@
-#ifndef READINPUT_H
-#define READINPUT_H
+#ifndef READ_INPUT_H
+#define READ_INPUT_H
 
 #include "../drawing/drawing.h"
 

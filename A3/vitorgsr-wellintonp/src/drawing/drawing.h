@@ -1,6 +1,8 @@
 #ifndef DRAWING_H
 #define DRAWING_H
 
+#include "../urban-elements/region.h"
+
 /*
 * TAD desenho que vai conter as listas das entidades que serao desenhadas em um arquivo svg.
 */
@@ -68,15 +70,16 @@ List getHealthCenterList(Drawing Dr);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de regioes presente no TAD desenho.
-*/
-List getRegionList(Drawing Dr);
-
-/*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
 * Pós-Condição: retorna uma referencia para a lista de casas presente no TAD desenho.
 */
 List getHouseList(Drawing Dr);
+
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD desenho e uma instancia de Regiao.
+* Pós-Condição: atribui a regiao passada como sendo a regiao do Tad Desenho.
+*/
+void setRegion(Drawing Dr, Region Reg);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD desenho e uma referencia para uma string que contenha o tipo de um elemento.

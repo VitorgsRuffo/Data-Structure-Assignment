@@ -1,9 +1,9 @@
 #include "../include/headers.h"
 #include "../include/util.h"
 #include "../include/query.h"
+#include "../include/urbanElements.h"
 #include "drawing.h"
 #include "../include/figures.h"
-#include "../include/urbanElements.h"
 
 typedef struct drawing {
     List circleList;
@@ -15,7 +15,7 @@ typedef struct drawing {
     List semaphoreList;
     List queryElementsList;
     List healthCenterList;
-    List regionList;
+    Region region; 
     List houseList;
 }drawing;
 
@@ -36,7 +36,6 @@ Drawing createDrawing(){
     dr->semaphoreList = createList();
     dr->queryElementsList = createList();
     dr->healthCenterList = createList();
-    dr->regionList = createList();
     dr->houseList = createList();
 
     return dr;
@@ -115,20 +114,20 @@ List getHealthCenterList(Drawing Dr){
     return dr->healthCenterList;
 }
 
-List getRegionList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getRegionList"))
-        return NULL;
-
-    drawing *dr = (drawing*) Dr;
-    return dr->regionList;
-}
-
 List getHouseList(Drawing Dr){
     if(isElementNull(Dr, "drawing", "getHouseList"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
     return dr->houseList;
+}
+
+void setRegion(Drawing Dr, Region Reg){
+    if(isElementNull(Dr, "drawing", "setRegion"))
+        return;
+
+    drawing *dr = (drawing*) Dr;
+    dr->region = Reg;
 }
 
 List getListByElementType(Drawing Dr, char* elementType){
@@ -266,8 +265,8 @@ void freeDrawing(Drawing Dr){
     freeList(dr->semaphoreList, &freeSemaphore);
     freeList(dr->queryElementsList, &freeQueryElement);
     freeList(dr->healthCenterList, &freeHealthCenter);
-    freeList(dr->regionList, &freeRegion);
     freeList(dr->houseList, &freeHouse);
+    freeRegion(dr->region);
 
     free(dr);
 }

@@ -1,8 +1,8 @@
 #include "../include/headers.h"
 #include "../include/util.h"
 #include "../include/figures.h"
-#include "../include/urbanElements.h"
 #include "../drawing/drawing.h"
+#include "../include/urbanElements.h"
 #include "../drawing/customization.h"
 
 /*
@@ -209,8 +209,7 @@ void readHealthCenter(char* command, char** commandParts, Drawing Dr){
 void readRegion(char* command, char** commandParts, Drawing Dr){
     sscanf(command, "%s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
     Region region = createRegion(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
-    List regionList = getRegionList(Dr);
-    insert(regionList, region);
+    setRegion(Dr, region);
 }
 
 void freeReadGeoResources(char* command, char** commandParts, ElementsCustomization elementsCustom){
