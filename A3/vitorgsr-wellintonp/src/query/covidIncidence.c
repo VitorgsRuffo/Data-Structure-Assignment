@@ -9,23 +9,25 @@ typedef struct {
     double radius;
 }Circumference;
 
+
 void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     /* to do list
 
         - interpret command.
+
         - function: iterate over houseList, if the current house is inside the circumference we put it inside the other list.
         
-        - calculate the (envoltoria convexa) (should we save the house or just its center of mass when the house occurs to be part of the (envoltoria convexa)) (create a list of the houses or points)
-            
-        - determine the incidence region category.
+        - calculate the (envoltoria convexa) (should we save the center of mass when the house occurs to be part of the (envoltoria convexa)) (create a list of points)   
 
-        - function: check if there is a health center inside the area of incidence.
+        - determine the incidence region category. (???)
+
+        - function: check if there is a health center inside the area of incidence. (circle x irregular polygon overlap)
             if it doesn't:
-                instantiate a new one on the (centroide) of the area and insert on its list.
+                create "HC" text string on the (centroide) of the area and insert it on queryElementsListi.
 
         - create circumference tag and insert on queryElementsList;
 
-        - function: create tag(s) for the incidence region
+        - function: create tag(s) for the incidence region // <polygon points="%lf,%lf %lf,%lf %lf,%lf" style="fill:%s;stroke:red;stroke-width:2" />
         
         - write results on txt.
     */

@@ -4,39 +4,28 @@
 #include "../drawing/drawing.h"
 #include "../include/query.h"
 
-
 typedef struct {
     HealthCenter healthCenter;
     double distance;
 }NearHealthCenter;
 
-// Sort ///////////////////////////////////////////////////////////
-void swap(NearHealthCenter *X, NearHealthCenter *Y){
-    NearHealthCenter aux = *X;
-    *X = *Y;
-    *Y = aux;
-}
+void shellSort(NearHealthCenter* A, int length){
+    double temp = 0;
+    int i;
 
-int partition(NearHealthCenter *A, int start, int end){
-    NearHealthCenter pivot = A[end];
-    int partitionIndex = start;
+    for(int gap = length/2; gap > 0; gap /= 2){
 
-    for(int i = start; i<end; i++){
-        if(A[i].distance <= pivot.distance){
-            swap(&A[i], &A[partitionIndex]);
-            partitionIndex++;
+        for(int j = gap; j<length; j+=1){
+
+            temp = A[j].distance;
+            i = 0;
+            
+            for(i = j; i>=gap && A[i-gap].distance>temp; i -= gap){
+                A[i].distance = A[i-gap].distance;
+            }
+
+            A[i].distance = temp;
         }
-    }
-
-    swap(&A[partitionIndex], &A[end]);
-    return partitionIndex;
-}
-
-void quickSort(NearHealthCenter *A, int start, int end){
-    if(start < end){
-        int partitionIndex = partition(A, start, end);
-        quickSort(A, start, partitionIndex-1);
-        quickSort(A, partitionIndex+1, end);
     }
 }
 
@@ -47,7 +36,6 @@ void displayIntegerArray(NearHealthCenter *A, int end){
     printf("\n");
 }
 
-////////////////////////////////////////////////////////////////////////////////
 
 char* buildBlueHouseTag(House H);
 void copyHealthCenterListNodesInfoToArray(List healthCenterList, NearHealthCenter* nearHealthCenters);
@@ -82,7 +70,7 @@ void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
         printf("Unsorted array:\n");
         displayIntegerArray(nearHealthCenters, healthCentersAmount);
 
-        quickSort(nearHealthCenters, 0, (healthCentersAmount-1));
+        shellSort(nearHealthCenters, healthCentersAmount);
 
         printf("Sorted array:\n");
         displayIntegerArray(nearHealthCenters, healthCentersAmount);
