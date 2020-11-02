@@ -37,7 +37,8 @@ Drawing createDrawing(){
     dr->queryElementsList = createList();
     dr->healthCenterList = createList();
     dr->houseList = createList();
-
+    dr->region = NULL;
+    
     return dr;
 }
 

@@ -40,13 +40,13 @@ double getHouseY(House H);
 * Pré-Condição: requer o endereco de uma instancia de casa.
 * Pós-Condição: retorna a coordenada w da casa passada.
 */
-double getHouseWidth(House H);
+double getHouseW(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
 * Pós-Condição: retorna a coordenada h da casa passada.
 */
-double getHouseHeight(House H);
+double getHouseH(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
@@ -65,6 +65,13 @@ double getHouseCenterOfMassY(House H);
 * Pós-Condição: retorna o numero de casos de covid da casa passada.
 */
 double getHouseCasesNumber(House H);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de casa.
+* Pós-Condição: imprime as informacoes da casa.
+*/
+void printHouse(House H);
+
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
 * Pós-Condição: libera a memoria usada pela instancia de casa que foi passada.

@@ -101,8 +101,8 @@ char* buildBlueHouseTag(House H){
 
     double x = getHouseX(H);
     double y = getHouseY(H);
-    double w = getHouseWidth(H);
-    double h = getHouseHeight(H);
+    double w = getHouseW(H);
+    double h = getHouseH(H);
 
     sprintf(houseTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"white\" stroke-width=\"1\" fill=\"lightblue\" />\n", w, h, x, y);
     return houseTag;

@@ -65,7 +65,6 @@ void executeOverlapTest(char* command, Drawing Dr, File txt){
 
 int checkCircleCircleOverlap(Info circ1, Info circ2);
 int checkRectRectOverlap(Info rect1, Info rect2);
-int checkRectCircOverlap(Info rect, Info circ);
 int checkCircRectOverlap(Info circ, Info rect);
 
 int isThereOverlaping(Info element1Info, Info element2Info, char* element1Type, char* element2Type){ 
@@ -131,41 +130,6 @@ int checkRectRectOverlap(Info rect1, Info rect2){
     }
 }
 
-//ponhar em tools
-double getNextestRectPointToCircCenter(double min, double max, double value){
-
-    if(value < min){
-        return min;
-    }else if(value > max){
-        return max;
-    }else{
-        return value;
-    }
-}
-
-//ponhar em tools
-int checkRectCircOverlap(Info rect, Info circ){
-    double jX = atof(getRectangleX(rect));
-    double jY = atof(getRectangleY(rect));
-    double jWidth = atof(getRectangleWidth(rect));
-    double jHeight = atof(getRectangleHeight(rect));
-
-    double kRadius = atof(getCircleRadius(circ));
-    double kX = atof(getCircleX(circ));
-    double kY = atof(getCircleY(circ));
-
-    double rectPointX = getNextestRectPointToCircCenter(jX, jX + jWidth, kX);
-    double rectPointY = getNextestRectPointToCircCenter(jY, jY + jHeight, kY);                                                        
-
-    //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
-    double D = sqrt(pow((rectPointX - kX), 2) + pow((rectPointY - kY), 2));
-
-    if(D < kRadius){
-        return 1;
-    }else{
-        return 0;
-    }
-}
 
 int checkCircRectOverlap(Info circ, Info rect){
 

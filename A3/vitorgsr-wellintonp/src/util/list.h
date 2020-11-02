@@ -100,4 +100,10 @@ void printList(List Li, void (*printInformation)(void*));
 */
 void freeList(List Li, void (*freeTAD)(void*));
 
+/*
+* Pré-Condição: requer uma lista vazia, ou, com um ou mais elementos.
+* Pós-Condição: desalocar a memoria usada pela lista.
+*/
+void freeOnlyList(List Li);
+
 #endif

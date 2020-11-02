@@ -295,3 +295,26 @@ void freeList(List Li, void (*freeTAD)(void*)){
     li->first = NULL; li->last = NULL;
     free(li);
 }
+
+void freeOnlyList(List Li){
+    if(isElementNull(Li, "lista", "freeList"))
+        return;
+
+    list *li = (list*) Li;
+
+    if(li->first != NULL){
+        node *NODE = li->first;
+        node *helperNODE = NODE->next;
+        while(1){
+            free(NODE);
+            NODE = helperNODE;
+            if(NODE == NULL){
+                break;
+            }
+            helperNODE = helperNODE->next;
+        }
+    }
+
+    li->first = NULL; li->last = NULL;
+    free(li);
+}

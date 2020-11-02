@@ -253,8 +253,8 @@ void buildHouseSvgTag(char* houseTag, House H){
 
     double x = getHouseX(H);
     double y = getHouseY(H);
-    double w = getHouseWidth(H);
-    double h = getHouseHeight(H);
+    double w = getHouseW(H);
+    double h = getHouseH(H);
     double centerOfMassX = getHouseCenterOfMassX(H);
     double centerOfMassY = getHouseCenterOfMassY(H);
     int casesNumber = getHouseCasesNumber(H);

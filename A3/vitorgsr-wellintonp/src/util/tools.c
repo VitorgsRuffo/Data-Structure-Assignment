@@ -1,6 +1,7 @@
 #include "../include/headers.h"
 #include "../include/util.h"
 #include "../include/urbanElements.h"
+#include "../include/figures.h"
 
 typedef struct{
     double x;
@@ -118,4 +119,38 @@ char* getUrbanElementToString(Info urbanElementInfo, char* urbanElementType){
         urbanElementToString = baseRadioToString(urbanElementInfo);
        
     return urbanElementToString;
+}
+
+double getNextestRectPointToCircCenter(double min, double max, double value){
+
+    if(value < min){
+        return min;
+    }else if(value > max){
+        return max;
+    }else{
+        return value;
+    }
+}
+
+int checkRectCircOverlap(Info rect, Info circ){
+    double jX = atof(getRectangleX(rect));
+    double jY = atof(getRectangleY(rect));
+    double jWidth = atof(getRectangleWidth(rect));
+    double jHeight = atof(getRectangleHeight(rect));
+
+    double kRadius = atof(getCircleRadius(circ));
+    double kX = atof(getCircleX(circ));
+    double kY = atof(getCircleY(circ));
+
+    double rectPointX = getNextestRectPointToCircCenter(jX, jX + jWidth, kX);
+    double rectPointY = getNextestRectPointToCircCenter(jY, jY + jHeight, kY);                                                        
+
+    //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
+    double D = sqrt(pow((rectPointX - kX), 2) + pow((rectPointY - kY), 2));
+
+    if(D < kRadius){
+        return 1;
+    }else{
+        return 0;
+    }
 }

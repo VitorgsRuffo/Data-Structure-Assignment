@@ -150,13 +150,13 @@ double getHouseY(House H){
     house *h = (house*) H;
     return h->y;
 }
-double getHouseWidth(House H){
+double getHouseW(House H){
     if(isElementNull(H, "Casa", "getHouseWidth"))
         return 0;
     house *h = (house*) H;
     return h->w;
 }
-double getHouseHeight(House H){
+double getHouseH(House H){
     if(isElementNull(H, "Casa", "getHouseHeight"))
         return 0;
     house *h = (house*) H;
@@ -182,6 +182,14 @@ double getHouseCasesNumber(House H){
         return 0;
     house *h = (house*) H;
     return h->casesNumber;
+}
+
+void printHouse(House H){
+    if(isElementNull(H, "Casa", "printHouse"))
+        return;
+    house *h = (house*) H;
+    printf("Casa:\nw: %lf\nh: %lf\nx: %lf\ny: %lf\n\n\n",
+            h->w, h->h, h->x, h->y);
 }
 
 void freeHouse(House H){
