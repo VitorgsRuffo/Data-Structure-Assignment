@@ -23,12 +23,6 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     List housesInsideCircList = createList();
     determineHousesInsideCircumference(houseList, housesInsideCircList, circ);
 
-    printf("\nLista de casas: \n");
-    printList(houseList, &printHouse);
-
-    printf("\nLista de casas dentro do circulo: \n");
-    printList(housesInsideCircList, &printHouse);
-    
     char* boundingCircumferenceTag = buildBoundingCircumferenceTag(x, y, radius);
     List queryElementsList = getQueryElementsList(Dr);
     insert(queryElementsList, boundingCircumferenceTag);
@@ -63,8 +57,8 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     */
 
     freeCircle(circ);
-    freeOnlyList(housesInsideCircList);
-    freeOnlyList(convexHullHousesList);
+    freeList(housesInsideCircList, NULL);
+    freeList(convexHullHousesList, NULL);
 
 }
 
