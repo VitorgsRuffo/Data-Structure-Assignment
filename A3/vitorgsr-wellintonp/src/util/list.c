@@ -283,7 +283,7 @@ void freeList(List Li, void (*freeTAD)(void*)){
         node *helperNODE = NODE->next;
         while(1){
             if(freeTAD != NULL)
-                freeTAD(NODE->info);
+                (*freeTAD)(NODE->info);
             
             free(NODE);
             NODE = helperNODE;

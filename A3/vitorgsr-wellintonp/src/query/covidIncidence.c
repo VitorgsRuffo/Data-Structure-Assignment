@@ -5,10 +5,19 @@
 #include "../include/query.h"
 #include "../include/figures.h"
 
+typedef struct { 
+    double x, y; 
+}Point; 
+
+Point p0; 
+
 
 void determineHousesInsideCircumference(List houseList, List housesInsideCircList, Circle circle);
 char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, char* circumferenceRadius);
-void calculateConvexHull(List convexHullHousesList, List housesInsideCircList);
+Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsideCircListLength);
+Stack convexHull(Point points[], int n);
+char* pointToString(void* P);
+char* buildIncidenceRegionTag(Point** points, int pointsAmount);
 
 void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     if(isElementNull(Dr, "drawing", "executeCovidIncidenceReportInRegion"))
@@ -27,9 +36,14 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     List queryElementsList = getQueryElementsList(Dr);
     insert(queryElementsList, boundingCircumferenceTag);
     
-    List convexHullHousesList = createList();
-    calculateConvexHull(convexHullHousesList, housesInsideCircList);
-
+    
+    int housesInsideCircListLength = length(housesInsideCircList);
+    Point* points = getHousesInsideCircCenterOfMass(housesInsideCircList, housesInsideCircListLength);
+	
+    int pointsAmount = housesInsideCircListLength;  
+	Stack head = convexHull(points, pointsAmount);
+    int convexHullPointsAmount = stackLength(&head);
+    Point** convexHullPoints = (Point**) stackToArray(&head); 
     
     /* to do list
 
@@ -37,7 +51,7 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
 
         X - function: iterate over houseList, if the current house is inside the circumference we put it inside the other list.
 
-        - calculate the (envoltoria convexa) 
+        X - calculate the (envoltoria convexa) 
 
 
 
@@ -55,11 +69,12 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
         
         - write results on txt.
     */
+   
+    char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount);
+    insert(queryElementsList, incidenceRegionTag);
 
     freeCircle(circ);
     freeList(housesInsideCircList, NULL);
-    freeList(convexHullHousesList, NULL);
-
 }
 
 void determineHousesInsideCircumference(List houseList, List housesInsideCircList, Circle circ){
@@ -105,6 +120,158 @@ char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, 
     return boundingCircumferenceTag;
 }
 
-void calculateConvexHull(List convexHullHousesList, List housesInsideCircList){
 
+//---------------------------------Convex Hull--------------------------------//
+
+char* pointToString(void* P){
+    Point* p = (Point*) P;
+    char* pointString = (char*) malloc(50*sizeof(char));
+
+    sprintf(pointString, "X: %.2f  Y: %.2f \n", p->x, p->y);     
+
+    return pointString;    
+}
+
+Point* nextToTop(Stack* PointerToHead) {
+    Point* p = (Point*) stackTop(PointerToHead);
+    stackPop(PointerToHead);
+    
+    Point* res = (Point*) stackTop(PointerToHead);
+    stackPush(PointerToHead, p);
+    return res; 
+}
+
+void swap(Point* p1, Point* p2) { 
+    Point temp;
+    temp.x = p1->x;
+    temp.y = p1->y;
+    
+    p1->x = p2->x;
+    p1->y = p2->y; 
+
+    p2->x = temp.x;
+    p2->y = temp.y;    
+} 
+
+double distSq(Point p1, Point p2) { 
+    return (p1.x - p2.x)*(p1.x - p2.x) + 
+        (p1.y - p2.y)*(p1.y - p2.y); 
+} 
+
+int orientation(Point* p, Point* q, Point* r){ 
+    double val = (q->y - p->y) * (r->x - q->x) - 
+            (q->x - p->x) * (r->y - q->y); 
+
+    if (((int) val) == 0) return 0;
+    return (((int) val) > 0)? 1 : 2;
+} 
+
+int compare(const void *vp1, const void *vp2) { 
+    Point *p1 = (Point *)vp1; 
+    Point *p2 = (Point *)vp2; 
+
+    int o = orientation(&p0, p1, p2); 
+    if (o == 0) 
+        return (distSq(p0, *p2) >= distSq(p0, *p1))? -1 : 1; 
+
+    return (o == 2)? -1: 1; 
+}
+
+Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsideCircListLength){
+
+    Point* points = (Point*) malloc(sizeof(Point)*housesInsideCircListLength);
+
+    Node NODE = getFirst(housesInsideCircList);
+    if(isElementNull(NODE, "NODE", "getHousesInsideCircCenterOfMass | getFirst"))
+        return NULL;
+    
+    Info house = NULL;
+
+    int i = 0;
+    while(NODE != NULL){
+
+        house = get(housesInsideCircList, NODE);
+        points[i].x = getHouseCenterOfMassX(house);
+        points[i].y = getHouseCenterOfMassY(house);
+        
+        NODE = getNext(housesInsideCircList, NODE);
+        i++;   
+    }
+
+    return points;
+}
+
+Stack convexHull(Point points[], int n) { 
+
+    int ymin = points[0].y, min = 0; 
+    for (int i = 1; i < n; i++) { 
+        int y = points[i].y; 
+
+        
+        if ((y < ymin) || (ymin == y && 
+            points[i].x < points[min].x)) 
+            ymin = points[i].y, min = i; 
+    } 
+
+
+    swap(&points[0], &points[min]); 
+
+
+    p0 = points[0]; 
+    qsort(&points[1], n-1, sizeof(Point), compare); 
+
+    
+    int m = 1; 
+    for (int i=1; i<n; i++) { 
+    
+        while (i < n-1 && orientation(&p0, &points[i], &points[i+1]) == 0) 
+            i++; 
+
+        points[m] = points[i]; 
+        m++; 
+    } 
+
+
+    if (m < 3) 
+        return NULL; 
+
+
+    Stack head = createStack();
+    stackPush(&head, &points[0]);
+    stackPush(&head, &points[1]);
+    stackPush(&head, &points[2]);
+
+
+    for (int i = 3; i < m; i++) { 
+        while (orientation(nextToTop(&head), stackTop(&head), &points[i]) != 2) 
+            stackPop(&head); 
+        
+        stackPush(&head, &points[i]);
+    } 
+
+    return head;
+} 
+//------------------------------------------------------------------------------//
+
+char* buildIncidenceRegionTag(Point** points, int pointsAmount){
+    char* incidenceRegionTag = (char*) malloc(300 * sizeof(char));
+    if(isElementNull(incidenceRegionTag, "incidenceRegionTag", "buildIncidenceRegionTag"))
+        return NULL;
+    
+    int stringLength = strlen("\t<polygon points=\"");
+    sprintf(incidenceRegionTag, "\t<polygon points=\"");
+
+    char* aux = incidenceRegionTag + stringLength;
+    char pointX[10], pointY[10];
+
+    for(int i = 0; i<pointsAmount; i++){
+        sprintf(aux, "%lf,%lf ", (**(points + i)).x, (**(points + i)).y);
+        sprintf(pointX, "%lf", (**(points + i)).x);
+        sprintf(pointY, "%lf", (**(points + i)).y);
+        aux += (strlen(pointX) + strlen(pointY) + 2);
+    }
+
+    sprintf(aux,"\" style=\"fill:red;stroke:red;stroke-width:2; fill-opacity=\"50.0\" />\n");
+
+    return incidenceRegionTag;
 }
