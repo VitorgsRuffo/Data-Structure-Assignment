@@ -64,7 +64,7 @@ double getHouseCenterOfMassY(House H);
 * Pré-Condição: requer o endereco de uma instancia de casa.
 * Pós-Condição: retorna o numero de casos de covid da casa passada.
 */
-double getHouseCasesNumber(House H);
+int getHouseCasesNumber(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.

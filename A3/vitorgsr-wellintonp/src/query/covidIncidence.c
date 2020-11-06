@@ -11,13 +11,14 @@ typedef struct {
 
 Point p0; 
 
-
 void determineHousesInsideCircumference(List houseList, List housesInsideCircList, Circle circle);
 char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, char* circumferenceRadius);
 Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsideCircListLength);
 Stack convexHull(Point points[], int n);
 char* pointToString(void* P);
-char* buildIncidenceRegionTag(Point** points, int pointsAmount);
+int calculateTotalCovidCasesInRegion(List housesInsideCircList);
+char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion);
+char* buildIncidenceRegionTag(Point** points, int pointsAmount, char incidenceRegionCategory);
 
 void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     if(isElementNull(Dr, "drawing", "executeCovidIncidenceReportInRegion"))
@@ -43,10 +44,17 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     int pointsAmount = housesInsideCircListLength;  
 	Stack head = convexHull(points, pointsAmount);
     int convexHullPointsAmount = stackLength(&head);
-    printf("\nstackLength: %d\n", convexHullPointsAmount);
-    getchar();
     Point** convexHullPoints = (Point**) stackToArray(&head); 
     
+    int totalCovidCasesInRegion = calculateTotalCovidCasesInRegion(housesInsideCircList);
+    double incidenceRegionArea = calculateIncidenceRegionArea(convexHullPoints, convexHullPointsAmount);
+    Region region = getRegion(Dr);
+    double regionDemographicDensity = 1000000.00 * (getRegionDemographicDensity(region)); //convertendo densidade demografica de km^2 para m^2.
+    int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
+
+    char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
+    
+
     /* to do list
 
         X - interpret command.
@@ -55,24 +63,29 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
 
         X - calculate the (envoltoria convexa) 
 
-
-
-
         - determine the incidence region category. (???)
+            X - iterate over housesInsideCircList to get the total of cases.
+            - calculate polygon area.
+            X - getRegion (+ convert from km^2 to m^2 (i.e, x1.000.000))
+            X - with total inhabitants inside the incidence region and the total
+              cases in the region we determine the category.
 
-        - function: check if there is a health center inside the area of incidence. (circle and irregular polygon overlap)
-            if it doesn't:
+
+        - function: 
+            - function: check if there is a health center inside the area of incidence. (circle and irregular polygon overlap)
+            - if it doesn't:
                 create "HC" text string on the (centroide) of the area and insert it on queryElementsListi.
 
 
         X - create circumference tag and insert on queryElementsList;
 
-        x function: create tag(s) for the incidence region // <polygon points="%lf,%lf %lf,%lf %lf,%lf" style="fill:%s;stroke:red;stroke-width:2" />
+        x - function: create tag(s) for the incidence region // <polygon points="%lf,%lf %lf,%lf %lf,%lf" style="fill:%s;stroke:red;stroke-width:2" />
         
         - write results on txt.
+        
     */
    
-    char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount);
+    char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount, incidenceRegionCategory);
     insert(queryElementsList, incidenceRegionTag);
 
     free(convexHullPoints);
@@ -148,6 +161,8 @@ Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsi
 
     return points;
 }
+
+
 
 //---------------------------------Convex Hull--------------------------------//
 
@@ -257,7 +272,66 @@ Stack convexHull(Point points[], int n) {
 } 
 //------------------------------------------------------------------------------//
 
-char* buildIncidenceRegionTag(Point** points, int pointsAmount){
+
+int calculateTotalCovidCasesInRegion(List housesInsideCircList){
+    Node NODE = getFirst(housesInsideCircList);
+    if(isElementNull(NODE, "NODE", "calculateTotalCovidCasesInRegion | getFirst"))
+        return -1;
+    
+    int totalCases = 0;
+    Info house = NULL;
+
+    while(NODE != NULL){
+        house = get(housesInsideCircList, NODE);
+        totalCases += getHouseCasesNumber(house);
+        NODE = getNext(housesInsideCircList, NODE);
+    }
+
+    return totalCases;
+}
+
+char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion){
+    /*Logica:
+
+        casos: 1    | habitantes: 15,897
+
+        fator multiplicativo: x6   -> fator = 100000/totalDeHabitantes
+
+        casos: 6 | 100000
+ 
+        Portanto, essa regiao (onde temos 1 caso em 15,897 habitantes) tem a mesma categoria que uma regiao com 6 casos em 100000 habitantes, ou seja, categoria C.
+    */
+
+    double factor = 100000 / totalHabitantsInRegion;
+    
+    double totalCovidCases = totalCovidCasesInRegion * factor;
+
+    if(totalCovidCases < 0.1){
+        return 'A';        
+    }else if(totalCovidCases < 5){
+        return 'B';
+    }else if(totalCovidCases < 10){
+        return 'C';
+    }else if(totalCovidCases < 20){
+        return 'D';
+    }else if(totalCovidCases >= 20){
+        return 'E'; 
+    }
+}
+
+double calculateIncidenceRegionArea(Point** convexHullPoints, int convexHullPointsAmount){
+
+    /* acessando os pontos do vetor.
+    for(int i = 0; i<pointsAmount; i++){
+        (**(points + i)).x);
+        (**(points + i)).y);
+    }
+    */
+}
+
+char* determineIncidenceRegionColor(char incidenceRegionCategory);
+
+char* buildIncidenceRegionTag(Point** points, int pointsAmount, char incidenceRegionCategory){
     char* incidenceRegionTag = (char*) malloc(1000 * sizeof(char));
     if(isElementNull(incidenceRegionTag, "incidenceRegionTag", "buildIncidenceRegionTag"))
         return NULL;
@@ -267,9 +341,6 @@ char* buildIncidenceRegionTag(Point** points, int pointsAmount){
 
     char* aux = incidenceRegionTag + stringLength;
     char pointX[10], pointY[10];
-
-    printf("\n\nPointsAmout: %d\n\n", pointsAmount);
-    getchar();
     
     for(int i = 0; i<pointsAmount; i++){
         sprintf(aux, "%.2f,%.2f ", (**(points + i)).x, (**(points + i)).y);
@@ -278,7 +349,30 @@ char* buildIncidenceRegionTag(Point** points, int pointsAmount){
         aux += (strlen(pointX) + strlen(pointY) + 2);
     }
 
-    sprintf(aux,"\" style=\"fill:red;stroke:black;stroke-width:2;fill-opacity:0.3\" />\n");
+    char* incidenceRegionColor = determineIncidenceRegionColor(incidenceRegionCategory); 
+
+    sprintf(aux,"\" style=\"fill:%s;stroke:red;stroke-width:2;fill-opacity:0.3\" />\n", incidenceRegionColor);
 
     return incidenceRegionTag;
+}
+
+
+char* determineIncidenceRegionColor(char incidenceRegionCategory){
+
+    switch (incidenceRegionCategory){
+        case 'A':
+            return "00FFFF";
+            
+        case 'B':
+            return "008080";
+            
+        case 'C':
+            return "FFFF00";
+            
+        case 'D':
+            return "FF0000";
+             
+        case 'E':
+            return "800080";           
+    }  
 }

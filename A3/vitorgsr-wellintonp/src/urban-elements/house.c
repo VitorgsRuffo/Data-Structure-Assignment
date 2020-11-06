@@ -177,7 +177,7 @@ double getHouseCenterOfMassY(House H){
     return h->centerOfMass.y;
 }
 
-double getHouseCasesNumber(House H){
+int getHouseCasesNumber(House H){
     if(isElementNull(H, "Casa", "getHouseCasesNumber"))
         return 0;
     house *h = (house*) H;

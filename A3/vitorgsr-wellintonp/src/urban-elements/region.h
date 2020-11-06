@@ -40,7 +40,7 @@ char* getRegionHeight(Region Reg);
 * Pré-Condição: requer o endereco de uma instancia de regiao.
 * Pós-Condição: retorna a densidade demografica da regiao passada.
 */
-char* getRegionDemographicDensity(Region Reg);
+double getRegionDemographicDensity(Region Reg);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de regiao.

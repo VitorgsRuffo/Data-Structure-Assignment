@@ -58,11 +58,12 @@ char* getRegionHeight(Region Reg){
     return reg->height;
 }
 
-char* getRegionDemographicDensity(Region Reg){
+double getRegionDemographicDensity(Region Reg){
     if(isElementNull(Reg, "Regiao", "getRegionDemographicDensity"))
-        return NULL;
+        return -1.0;
+
     region *reg = (region*) Reg;
-    return reg->demographicDensity;
+    return atof(reg->demographicDensity);
 }
 
 

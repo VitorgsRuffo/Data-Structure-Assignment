@@ -131,6 +131,15 @@ void setRegion(Drawing Dr, Region Reg){
     dr->region = Reg;
 }
 
+Region getRegion(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getRegion"))
+        return NULL;
+
+    drawing *dr = (drawing*) Dr;
+    return dr->region;
+}
+
+
 List getListByElementType(Drawing Dr, char* elementType){
     if(isElementNull(Dr, "drawing", "getListByElementType"))
         return NULL;
