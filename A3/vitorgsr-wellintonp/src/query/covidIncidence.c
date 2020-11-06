@@ -43,6 +43,8 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     int pointsAmount = housesInsideCircListLength;  
 	Stack head = convexHull(points, pointsAmount);
     int convexHullPointsAmount = stackLength(&head);
+    printf("\nstackLength: %d\n", convexHullPointsAmount);
+    getchar();
     Point** convexHullPoints = (Point**) stackToArray(&head); 
     
     /* to do list
@@ -65,7 +67,7 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
 
         X - create circumference tag and insert on queryElementsList;
 
-        - function: create tag(s) for the incidence region // <polygon points="%lf,%lf %lf,%lf %lf,%lf" style="fill:%s;stroke:red;stroke-width:2" />
+        x function: create tag(s) for the incidence region // <polygon points="%lf,%lf %lf,%lf %lf,%lf" style="fill:%s;stroke:red;stroke-width:2" />
         
         - write results on txt.
     */
@@ -73,6 +75,8 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount);
     insert(queryElementsList, incidenceRegionTag);
 
+    free(convexHullPoints);
+    free(points);
     freeCircle(circ);
     freeList(housesInsideCircList, NULL);
 }
@@ -120,6 +124,30 @@ char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, 
     return boundingCircumferenceTag;
 }
 
+
+Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsideCircListLength){
+
+    Point* points = (Point*) malloc(sizeof(Point)*housesInsideCircListLength);
+
+    Node NODE = getFirst(housesInsideCircList);
+    if(isElementNull(NODE, "NODE", "getHousesInsideCircCenterOfMass | getFirst"))
+        return NULL;
+    
+    Info house = NULL;
+
+    int i = 0;
+    while(NODE != NULL){
+
+        house = get(housesInsideCircList, NODE);
+        points[i].x = getHouseCenterOfMassX(house);
+        points[i].y = getHouseCenterOfMassY(house);
+        
+        NODE = getNext(housesInsideCircList, NODE);
+        i++;   
+    }
+
+    return points;
+}
 
 //---------------------------------Convex Hull--------------------------------//
 
@@ -177,30 +205,6 @@ int compare(const void *vp1, const void *vp2) {
     return (o == 2)? -1: 1; 
 }
 
-Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsideCircListLength){
-
-    Point* points = (Point*) malloc(sizeof(Point)*housesInsideCircListLength);
-
-    Node NODE = getFirst(housesInsideCircList);
-    if(isElementNull(NODE, "NODE", "getHousesInsideCircCenterOfMass | getFirst"))
-        return NULL;
-    
-    Info house = NULL;
-
-    int i = 0;
-    while(NODE != NULL){
-
-        house = get(housesInsideCircList, NODE);
-        points[i].x = getHouseCenterOfMassX(house);
-        points[i].y = getHouseCenterOfMassY(house);
-        
-        NODE = getNext(housesInsideCircList, NODE);
-        i++;   
-    }
-
-    return points;
-}
-
 Stack convexHull(Point points[], int n) { 
 
     int ymin = points[0].y, min = 0; 
@@ -254,7 +258,7 @@ Stack convexHull(Point points[], int n) {
 //------------------------------------------------------------------------------//
 
 char* buildIncidenceRegionTag(Point** points, int pointsAmount){
-    char* incidenceRegionTag = (char*) malloc(300 * sizeof(char));
+    char* incidenceRegionTag = (char*) malloc(1000 * sizeof(char));
     if(isElementNull(incidenceRegionTag, "incidenceRegionTag", "buildIncidenceRegionTag"))
         return NULL;
     
@@ -264,14 +268,17 @@ char* buildIncidenceRegionTag(Point** points, int pointsAmount){
     char* aux = incidenceRegionTag + stringLength;
     char pointX[10], pointY[10];
 
+    printf("\n\nPointsAmout: %d\n\n", pointsAmount);
+    getchar();
+    
     for(int i = 0; i<pointsAmount; i++){
-        sprintf(aux, "%lf,%lf ", (**(points + i)).x, (**(points + i)).y);
-        sprintf(pointX, "%lf", (**(points + i)).x);
-        sprintf(pointY, "%lf", (**(points + i)).y);
+        sprintf(aux, "%.2f,%.2f ", (**(points + i)).x, (**(points + i)).y);
+        sprintf(pointX, "%.2f", (**(points + i)).x);
+        sprintf(pointY, "%.2f", (**(points + i)).y);
         aux += (strlen(pointX) + strlen(pointY) + 2);
     }
 
-    sprintf(aux,"\" style=\"fill:red;stroke:red;stroke-width:2; fill-opacity=\"50.0\" />\n");
+    sprintf(aux,"\" style=\"fill:red;stroke:black;stroke-width:2;fill-opacity:0.3\" />\n");
 
     return incidenceRegionTag;
 }
