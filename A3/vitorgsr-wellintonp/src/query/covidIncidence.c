@@ -17,9 +17,11 @@ Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsi
 Stack convexHull(Point points[], int n);
 char* pointToString(void* P);
 int calculateTotalCovidCasesInRegion(List housesInsideCircList);
+double calculateIncidenceRegionArea(Point** convexHullPoints, int convexHullPointsAmount);
 char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion);
 char* buildIncidenceRegionTag(Point** points, int pointsAmount, char incidenceRegionCategory);
-void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory);
+void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElementsList, Point** convexHullPoints, int convexHullPointsAmount);
+void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, int totalHabitantsInRegion);
 
 
 void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
@@ -45,57 +47,41 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
 	
     int pointsAmount = housesInsideCircListLength;  
 	Stack head = convexHull(points, pointsAmount);
+    if(head == NULL){
+        printf("Finalizando relatorio da quantidade de casas na regiao...\n");   
+        printf("Erro: A quantidade de casas sao insuficientes para formar regiao de incidencia (< 3).\n");
+        
+        free(points);
+        freeCircle(circ);
+        freeList(housesInsideCircList, NULL); 
+        return;    
+    }
+  
     int convexHullPointsAmount = stackLength(&head);
     Point** convexHullPoints = (Point**) stackToArray(&head); 
     
     int totalCovidCasesInRegion = calculateTotalCovidCasesInRegion(housesInsideCircList);
+
     double incidenceRegionArea = calculateIncidenceRegionArea(convexHullPoints, convexHullPointsAmount);
     Region region = getRegion(Dr);
-    double regionDemographicDensity = 1000000.00 * (getRegionDemographicDensity(region)); //convertendo densidade demografica de km^2 para m^2.
+    double regionDemographicDensity = (getRegionDemographicDensity(region)) / 1000000.00; //convertendo densidade demografica de km^2 para m^2.
     int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
 
     char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
-    
-
-    /* to do list
-
-        X - interpret command.
-
-        X - function: iterate over houseList, if the current house is inside the circumference we put it inside the other list.
-
-        X - calculate the (envoltoria convexa) 
-
-        X - determine the incidence region category. (???)
-            X - iterate over housesInsideCircList to get the total of cases.
-            X - calculate polygon area.
-            X - getRegion (+ convert from km^2 to m^2 (i.e, x1.000.000))
-            X - with total inhabitants inside the incidence region and the total
-              cases in the region we determine the category.
-
-
-        - function: 
-            - function: check if there is a health center inside the area of incidence. (circle and irregular polygon overlap)
-            - if it doesn't:
-                create "HC" text string on the (centroide) of the area and insert it on queryElementsListi.
-
-
-        X - create circumference tag and insert on queryElementsList;
-
-        x - function: create tag(s) for the incidence region // <polygon points="%lf,%lf %lf,%lf %lf,%lf" style="fill:%s;stroke:red;stroke-width:2" />
-        
-        - write results on txt.
-        
-    */
+    if(incidenceRegionCategory == 'E'){
+        List healthCenterList = getHealthCenterList(Dr);
+        suggestHealthCenterInRegionIfNeeded(healthCenterList, queryElementsList, convexHullPoints, convexHullPointsAmount);        
+    }
    
     char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount, incidenceRegionCategory);
     insert(queryElementsList, incidenceRegionTag);
 
-    writeCovidIncidenceReportOnTxt(txt, points, pointsAmount, totalCovidCasesInRegion, incidenceRegionArea, incidenceRegionCategory);
+    writeCovidIncidenceReportOnTxt(txt, points, pointsAmount, totalCovidCasesInRegion, incidenceRegionArea, incidenceRegionCategory, totalHabitantsInRegion);
 
     free(convexHullPoints);
     free(points);
     freeCircle(circ);
-    freeList(housesInsideCircList, NULL);
+    freeList(housesInsideCircList, NULL);  
 }
 
 void determineHousesInsideCircumference(List houseList, List housesInsideCircList, Circle circ){
@@ -320,6 +306,10 @@ char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabi
     }else if(totalCovidCases >= 20){
         return 'E'; 
     }
+    else{
+        // Fazer tratamentos ******
+        return 'Z';
+    }
 }
 
 double calculateIncidenceRegionArea(Point** convexHullPoints, int convexHullPointsAmount){
@@ -373,7 +363,7 @@ char* buildIncidenceRegionTag(Point** points, int pointsAmount, char incidenceRe
 
     char* incidenceRegionColor = determineIncidenceRegionColor(incidenceRegionCategory); 
 
-    sprintf(aux,"\" style=\"fill:%s;stroke:red;stroke-width:2;fill-opacity:0.3\" />\n", incidenceRegionColor);
+    sprintf(aux,"\" style=\"fill:%s;stroke:red;stroke-width:2;fill-opacity:0.6\" />\n", incidenceRegionColor);
 
     return incidenceRegionTag;
 }
@@ -383,29 +373,85 @@ char* determineIncidenceRegionColor(char incidenceRegionCategory){
 
     switch (incidenceRegionCategory){
         case 'A':
-            return "00FFFF";
+            return "#00FFFF";
             
         case 'B':
-            return "008080";
+            return "#008080";
             
         case 'C':
-            return "FFFF00";
+            return "#FFFF00";
             
         case 'D':
-            return "FF0000";
+            return "#FF0000";
              
         case 'E':
-            return "800080";           
-    }  
+            return "#800080";           
+    }
+
+    return "black"; 
 }
 
-void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory){
+int checkCircleIrregularPolygonOverlap(double x, double y, double radius, Point** convexHullPoints);
+Point calculatePolygonCentroid(Point** convexHullPoints);
+char* buildHealthCenterSuggestionTag(Point polygonCentroid);
+
+void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElementsList, Point** convexHullPoints, int convexHullPointsAmount){
+    Node NODE = getFirst(healthCenterList);
+    if(isElementNull(NODE, "NODE", "suggestHealthCenterInRegionIfNeeded | getFirst"))
+        return;
+    
+    Info healthCenter = NULL;
+    double x, y, radius;
+
+    while(NODE != NULL){
+        healthCenter = get(healthCenterList, NODE);
+        x = atof(getHealthCenterX(healthCenter));
+        y = atof(getHealthCenterY(healthCenter));
+        radius = atof(getHealthCenterRadius(healthCenter));
+        
+        if(checkCircleIrregularPolygonOverlap(x, y, radius, convexHullPoints))
+            return; //se em algum momento houver overlap entre um posto e a regiao de incidencia saimos da funcao sem sugerir um posto.
+
+        NODE = getNext(healthCenterList, NODE);
+    }
+
+    // Caso finalize o loop sem retorno, significa que não foi encontrado nenhuma posto de saude dentro do poligono e precisamos sugerir a construcao de um.
+    Point polygonCentroid = calculatePolygonCentroid(convexHullPoints);
+    
+    char* healthCenterSuggestionTag = buildHealthCenterSuggestionTag(polygonCentroid);
+    insert(queryElementsList, healthCenterSuggestionTag);  
+}
+
+int checkCircleIrregularPolygonOverlap(double x, double y, double radius, Point** convexHullPoints){
+    return 0;
+}
+
+Point calculatePolygonCentroid(Point** convexHullPoints){
+    Point point;
+
+    point.x = 10;
+    point.y = 10;
+
+    return point;
+}
+
+char* buildHealthCenterSuggestionTag(Point polygonCentroid){
+    char* healthCenterSuggestionTag = (char*) malloc(500 * sizeof(char));
+    if(isElementNull(healthCenterSuggestionTag, "healthCenterSuggestionTag", "buildHealthCenterSuggestionTag"))
+        return NULL;
+    
+    sprintf(healthCenterSuggestionTag, "\t<circle cx=\"%lf\" cy=\"%lf\" r=\"10\" stroke=\"black\" stroke-width=\"1\" fill=\"black\" fill-opacity=\"0.0\"/>\n\t<text x=\"%lf\" y=\"%lf\" fill=\"black\" text-anchor=\"middle\" dy=\".3em\"> HC </text>\n", polygonCentroid.x, polygonCentroid.y, polygonCentroid.x, polygonCentroid.y);
+    return healthCenterSuggestionTag;
+}
+
+void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, int totalHabitantsInRegion){
 
     fprintf(txt, "Coordenadas dos pontos dentro do circulo:\n");
     for(int i = 0; i<pointsAmount; i++)
         fprintf(txt, "\t(%d) x: %.2f, y: %.2f\n", (i+1), points[i].x, points[i].y);
     
+    fprintf(txt, "\nTotal de habitantes: %d\n", totalHabitantsInRegion);
     fprintf(txt, "\nNumero total de casos: %d\n", totalCovidCasesInRegion);
     fprintf(txt, "\nArea dentro da envoltoria convexa: %.2f\n", incidenceRegionArea);
-    fprintf(txt, "\nCategoria da regiao de incidencia: %d\n", incidenceRegionCategory);
+    fprintf(txt, "\nCategoria da regiao de incidencia: %c\n", incidenceRegionCategory);
 }

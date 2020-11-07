@@ -61,7 +61,6 @@ void setHouseBlock(House H, Drawing Dr){
     
     List blockList = getBlockList(Dr);
     Info blockInfo = get(blockList, blockNode);
-    
     readBlockAttributes(blockInfo, &h->block);    
 }
 
@@ -188,8 +187,8 @@ void printHouse(House H){
     if(isElementNull(H, "Casa", "printHouse"))
         return;
     house *h = (house*) H;
-    printf("Casa:\nw: %lf\nh: %lf\nx: %lf\ny: %lf\n\n\n",
-            h->w, h->h, h->x, h->y);
+    printf("Casa:\nw: %lf\nh: %lf\nx: %lf\ny: %lf\ncasos: %d\n\n",
+            h->w, h->h, h->x, h->y, h->casesNumber);
 }
 
 void freeHouse(House H){
