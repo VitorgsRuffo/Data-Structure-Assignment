@@ -19,6 +19,8 @@ char* pointToString(void* P);
 int calculateTotalCovidCasesInRegion(List housesInsideCircList);
 char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion);
 char* buildIncidenceRegionTag(Point** points, int pointsAmount, char incidenceRegionCategory);
+void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory);
+
 
 void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     if(isElementNull(Dr, "drawing", "executeCovidIncidenceReportInRegion"))
@@ -63,9 +65,9 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
 
         X - calculate the (envoltoria convexa) 
 
-        - determine the incidence region category. (???)
+        X - determine the incidence region category. (???)
             X - iterate over housesInsideCircList to get the total of cases.
-            - calculate polygon area.
+            X - calculate polygon area.
             X - getRegion (+ convert from km^2 to m^2 (i.e, x1.000.000))
             X - with total inhabitants inside the incidence region and the total
               cases in the region we determine the category.
@@ -87,6 +89,8 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
    
     char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount, incidenceRegionCategory);
     insert(queryElementsList, incidenceRegionTag);
+
+    writeCovidIncidenceReportOnTxt(txt, points, pointsAmount, totalCovidCasesInRegion, incidenceRegionArea, incidenceRegionCategory);
 
     free(convexHullPoints);
     free(points);
@@ -161,7 +165,6 @@ Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsi
 
     return points;
 }
-
 
 
 //---------------------------------Convex Hull--------------------------------//
@@ -321,13 +324,32 @@ char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabi
 
 double calculateIncidenceRegionArea(Point** convexHullPoints, int convexHullPointsAmount){
 
-    /* acessando os pontos do vetor.
-    for(int i = 0; i<pointsAmount; i++){
-        (**(points + i)).x);
-        (**(points + i)).y);
+    double area = 0;
+    double sum1 = 0;
+    double sum2 = 0;
+    
+    for(int i = convexHullPointsAmount-1; i > -1; i--){
+        if(i == 0){
+            sum1 += ((**(convexHullPoints + i)).x) * ((**(convexHullPoints + convexHullPointsAmount-1)).y);
+            break;
+        }
+        
+        sum1 += ((**(convexHullPoints + i)).x) * ((**(convexHullPoints + i - 1)).y);   
     }
-    */
+
+    for(int i = convexHullPointsAmount-1; i > -1; i--){
+        if(i == 0){
+            sum2 += ((**(convexHullPoints + i)).y) * ((**(convexHullPoints + convexHullPointsAmount-1)).x);
+            break;
+        }
+        
+        sum2 += ((**(convexHullPoints + i)).y) * ((**(convexHullPoints + i - 1)).x);
+    }
+
+   area = (sum1 - sum2) / 2;
+   return area;
 }
+
 
 char* determineIncidenceRegionColor(char incidenceRegionCategory);
 
@@ -375,4 +397,15 @@ char* determineIncidenceRegionColor(char incidenceRegionCategory){
         case 'E':
             return "800080";           
     }  
+}
+
+void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory){
+
+    fprintf(txt, "Coordenadas dos pontos dentro do circulo:\n");
+    for(int i = 0; i<pointsAmount; i++)
+        fprintf(txt, "\t(%d) x: %.2f, y: %.2f\n", (i+1), points[i].x, points[i].y);
+    
+    fprintf(txt, "\nNumero total de casos: %d\n", totalCovidCasesInRegion);
+    fprintf(txt, "\nArea dentro da envoltoria convexa: %.2f\n", incidenceRegionArea);
+    fprintf(txt, "\nCategoria da regiao de incidencia: %d\n", incidenceRegionCategory);
 }
