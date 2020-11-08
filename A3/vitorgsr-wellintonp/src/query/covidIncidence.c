@@ -20,7 +20,7 @@ int calculateTotalCovidCasesInRegion(List housesInsideCircList);
 double calculateIncidenceRegionArea(Point** convexHullPoints, int convexHullPointsAmount);
 char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion);
 char* buildIncidenceRegionTag(Point** points, int pointsAmount, char incidenceRegionCategory);
-void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElementsList, Point** convexHullPoints, int convexHullPointsAmount);
+void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElementsList, Point** convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea);
 void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, int totalHabitantsInRegion);
 
 
@@ -48,9 +48,7 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     int pointsAmount = housesInsideCircListLength;  
 	Stack head = convexHull(points, pointsAmount);
     if(head == NULL){
-        printf("Finalizando relatorio da quantidade de casas na regiao...\n");   
-        printf("Erro: A quantidade de casas sao insuficientes para formar regiao de incidencia (< 3).\n");
-        
+        fprintf(txt, "Erro: A quantidade de casas sao insuficientes para formar regiao de incidencia (quantidade de casas < 3).");
         free(points);
         freeCircle(circ);
         freeList(housesInsideCircList, NULL); 
@@ -70,7 +68,7 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
     if(incidenceRegionCategory == 'E'){
         List healthCenterList = getHealthCenterList(Dr);
-        suggestHealthCenterInRegionIfNeeded(healthCenterList, queryElementsList, convexHullPoints, convexHullPointsAmount);        
+        suggestHealthCenterInRegionIfNeeded(healthCenterList, queryElementsList, convexHullPoints, convexHullPointsAmount, incidenceRegionArea);        
     }
    
     char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount, incidenceRegionCategory);
@@ -392,10 +390,10 @@ char* determineIncidenceRegionColor(char incidenceRegionCategory){
 }
 
 int checkCircleIrregularPolygonOverlap(double x, double y, double radius, Point** convexHullPoints);
-Point calculatePolygonCentroid(Point** convexHullPoints);
+Point calculatePolygonCentroid(Point** convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea);
 char* buildHealthCenterSuggestionTag(Point polygonCentroid);
 
-void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElementsList, Point** convexHullPoints, int convexHullPointsAmount){
+void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElementsList, Point** convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea){
     Node NODE = getFirst(healthCenterList);
     if(isElementNull(NODE, "NODE", "suggestHealthCenterInRegionIfNeeded | getFirst"))
         return;
@@ -416,22 +414,58 @@ void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElemen
     }
 
     // Caso finalize o loop sem retorno, significa que não foi encontrado nenhuma posto de saude dentro do poligono e precisamos sugerir a construcao de um.
-    Point polygonCentroid = calculatePolygonCentroid(convexHullPoints);
+    Point polygonCentroid = calculatePolygonCentroid(convexHullPoints, convexHullPointsAmount, incidenceRegionArea);
     
     char* healthCenterSuggestionTag = buildHealthCenterSuggestionTag(polygonCentroid);
     insert(queryElementsList, healthCenterSuggestionTag);  
 }
 
 int checkCircleIrregularPolygonOverlap(double x, double y, double radius, Point** convexHullPoints){
+    
+    
+    
+    
     return 0;
 }
 
-Point calculatePolygonCentroid(Point** convexHullPoints){
+Point calculatePolygonCentroid(Point** convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea){
     Point point;
+    double sum1 = 0, sum2 = 0;
+    double xi, yi, xi1, yi1;
 
-    point.x = 10;
-    point.y = 10;
+    for(int i = 0; i<convexHullPointsAmount; i++){
+        xi = (**(convexHullPoints + i)).x;
+        yi = (**(convexHullPoints + i)).y;
 
+        if(i == convexHullPointsAmount-1){
+            xi1 = (**(convexHullPoints)).x;
+            yi1 = (**(convexHullPoints)).y;
+        }else{
+            xi1 = (**(convexHullPoints + i + 1)).x;
+            yi1 = (**(convexHullPoints + i + 1)).y;
+        }
+
+        sum1 += ( (xi + xi1) * (xi*yi1 - xi1*yi) )  ;
+    }
+
+    point.x = (1 / (6 * incidenceRegionArea)) * sum1;
+
+    for(int i = 0; i<convexHullPointsAmount; i++){
+        xi = (**(convexHullPoints + i)).x;
+        yi = (**(convexHullPoints + i)).y;
+
+        if(i == convexHullPointsAmount-1){
+            xi1 = (**(convexHullPoints)).x;
+            yi1 = (**(convexHullPoints)).y;
+        }else{
+            xi1 = (**(convexHullPoints + i + 1)).x;
+            yi1 = (**(convexHullPoints + i + 1)).y;
+        }
+
+        sum2 += (yi + yi1) * (xi*yi1 - xi1*yi);
+    }   
+    point.y = (1 / (6 * incidenceRegionArea)) * sum2;
+    
     return point;
 }
 
