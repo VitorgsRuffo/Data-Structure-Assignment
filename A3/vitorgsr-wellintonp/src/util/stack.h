@@ -56,7 +56,7 @@ Info stackTop(Stack* PointerToHead);
 
 /*
 Pré-condição: requer o endereço de um ponteiro para o nó no topo da pilha.
-Pós-condição: 
+Pós-condição: transfere os dados dos nos da pilha para um vetor e retorna o endereço desse vetor.
 */
 Info* stackToArray(Stack* PointerToHead);
 
