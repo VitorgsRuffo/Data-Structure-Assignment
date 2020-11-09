@@ -10,21 +10,21 @@ typedef struct {
 }NearHealthCenter;
 
 void shellSort(NearHealthCenter* A, int length){
-    double temp = 0;
+    NearHealthCenter temp;
     int i;
 
     for(int gap = length/2; gap > 0; gap /= 2){
 
         for(int j = gap; j<length; j+=1){
 
-            temp = A[j].distance;
+            temp = A[j];
             i = 0;
             
-            for(i = j; i>=gap && A[i-gap].distance>temp; i -= gap){
-                A[i].distance = A[i-gap].distance;
+            for(i = j; i>=gap && A[i-gap].distance>temp.distance; i -= gap){
+                A[i] = A[i-gap];
             }
 
-            A[i].distance = temp;
+            A[i] = temp;
         }
     }
 }
@@ -133,7 +133,7 @@ void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHe
 
     double houseCenterOfMassX = getHouseCenterOfMassX(H);
     double houseCenterOfMassY = getHouseCenterOfMassY(H);
-    
+  
 
     for(int i = 0; i<healthCentersAmount; i++){
         healthCenterX = atof(getHealthCenterX(nearHealthCenters[i].healthCenter));
