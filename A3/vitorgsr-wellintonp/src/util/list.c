@@ -235,7 +235,7 @@ Node searchForElementByIdentifier(List Li, char* (*getElementId)(void*), char* i
     if(isElementNull(Li, "lista", "searchForElementByIdentifier"))
         return NULL;
 
-    char elementId[15];
+    char elementId[30];
     Info elementInformation;
     Node NODE;
     List elementsList = (list*) Li;

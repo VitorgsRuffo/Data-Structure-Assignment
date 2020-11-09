@@ -8,7 +8,7 @@
 #define houseHeight 15
 
 typedef struct {
-    char cep[10]; 
+    char cep[30]; 
     char face;
     int number;
 }Address;

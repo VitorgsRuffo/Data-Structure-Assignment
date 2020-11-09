@@ -17,7 +17,7 @@ void executeBlocksDeletion(char* command, Drawing Dr, File txt){
         return;
 
     int thereIsHashtag = 0;
-    char id[15]; double radius;
+    char id[30]; double radius;
     
     if(command[3] == '#'){
         thereIsHashtag = 1;

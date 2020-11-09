@@ -19,13 +19,9 @@ int isElementNull(Element element, char* elementName, char* functionName){
 char** createCommandParts(int numberOfParts){
     char** commandParts = (char**) malloc(sizeof(char*) * numberOfParts);
     
-    for(int i = 0; i<numberOfParts; i++){
-        if(i==6){ // se i for igual a 6 aloca memoria extra caso este comando seja de texto (pois, na parte 7 de um comando de texto vem uma string relativamente grande)
-            commandParts[i] = (char*) malloc(51 * sizeof(char));
-        }else{
-            commandParts[i] = (char*) malloc(16 * sizeof(char));
-        }
-    }
+    for(int i = 0; i<numberOfParts; i++)
+        commandParts[i] = (char*) malloc(60 * sizeof(char));
+    
     return commandParts;
 }
 

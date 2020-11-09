@@ -11,7 +11,7 @@ void executeCovidCasesReport(char* command, Drawing Dr){
     if(isElementNull(Dr, "drawing", "executeCovidCasesReport"))
         return;
 
-    int casesNumber; char cep[10]; char face; int number;
+    int casesNumber; char cep[30]; char face; int number;
     
     sscanf(&command[3], "%d %s %c %d", &casesNumber, cep, &face, &number);
     

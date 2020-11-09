@@ -48,7 +48,7 @@ void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
     if(isElementNull(Dr, "drawing", "executeCovidCasesReport"))
         return;
 
-    int K; char cep[10]; char face; int number;
+    int K; char cep[30]; char face; int number;
 
     sscanf(&command[4], "%d %s %c %d", &K, cep, &face, &number);
 
