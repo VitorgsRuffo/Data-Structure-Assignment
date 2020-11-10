@@ -1,0 +1,2 @@
+Tipo: quadra, Cep: b4-10.9, x: 1075.000000, y: 852.200000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: tomato, cstrk: magenta, rx: 0.0
+

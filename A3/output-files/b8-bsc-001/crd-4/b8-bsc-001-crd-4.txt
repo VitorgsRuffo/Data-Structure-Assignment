@@ -1,0 +1,2 @@
+Tipo: semaforo, id: sfb8-20.165, x: 21350.000000, y: 1755.200000, sw: 1.0, cfill: lightred, cstrk: yellow
+

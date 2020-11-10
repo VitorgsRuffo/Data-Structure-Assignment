@@ -1,0 +1,6 @@
+b2-0ps-500hkm9.14 | radio-base - id: rbb2-0ps-500hkm10.14, x:1785.000000, y: 892.600000
+
+b2-0ps-500hkm10.14 | radio-base - id: rbb2-0ps-500hkm10.14, x:1785.000000, y: 892.600000
+
+b2-0ps-500hkm11.14 | radio-base - id: rbb2-0ps-500hkm10.14, x:1785.000000, y: 892.600000
+

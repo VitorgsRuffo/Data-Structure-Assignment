@@ -1,0 +1,2 @@
+Tipo: quadra, Cep: b2-0ps-500hkm19.35, x: 4455.000000, y: 1669.400000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: darkcyan, cstrk: tan, rx: 0.0
+

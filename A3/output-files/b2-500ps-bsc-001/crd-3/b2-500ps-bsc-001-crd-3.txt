@@ -1,0 +1,2 @@
+Tipo: Radio-base, id: rbb2-500ps-20.41, x: 5295.000000, y: 1800.600000, sw: 1.0, cfill: magenta, cstrk: lightblue
+

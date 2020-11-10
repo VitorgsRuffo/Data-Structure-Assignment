@@ -1,0 +1,2 @@
+Tipo: semaforo, id: sfb2-18.19, x: 2370.000000, y: 1573.600000, sw: 1.0, cfill: lightred, cstrk: yellow
+

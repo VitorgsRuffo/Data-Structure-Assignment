@@ -1,0 +1,2 @@
+Tipo: quadra, Cep: b2-50ps-11.26, x: 3285.000000, y: 943.000000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: orange, cstrk: darkred, rx: 0.0
+

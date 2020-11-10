@@ -1,0 +1,2 @@
+Tipo: quadra, Cep: b2-500ps-7.31, x: 3935.000000, y: 579.800000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: steelblue, cstrk: dodgerblue, rx: 0.0
+

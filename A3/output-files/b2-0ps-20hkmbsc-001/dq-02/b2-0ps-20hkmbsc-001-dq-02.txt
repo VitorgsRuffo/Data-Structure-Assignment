@@ -1,0 +1,6 @@
+b2-0ps-20hkm6.49 | radio-base - id: rbb2-0ps-20hkm7.49, x:6335.000000, y: 620.200000
+
+b2-0ps-20hkm7.49 | radio-base - id: rbb2-0ps-20hkm7.49, x:6335.000000, y: 620.200000
+
+b2-0ps-20hkm8.49 | radio-base - id: rbb2-0ps-20hkm7.49, x:6335.000000, y: 620.200000
+

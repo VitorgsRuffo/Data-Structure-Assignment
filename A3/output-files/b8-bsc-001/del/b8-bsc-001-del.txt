@@ -1,0 +1,16 @@
+Tipo: quadra, Cep: b8-64.59, x: 7575.000000, y: 5755.400000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: orange, cstrk: coral, rx: 0.0
+
+Tipo: hidrante, id: hnob8-27.99, x: 12895.000000, y: 2476.600000, sw: 1.0, cfill: red, cstrk: firebrick
+
+Tipo: Radio-base, id: rbb8-31.71, x: 9195.000000, y: 2799.400000, sw: 1.0, cfill: magenta, cstrk: lightblue
+
+Tipo: semaforo, id: sfb8-49.74, x: 9520.000000, y: 4388.400000, sw: 1.0, cfill: lightred, cstrk: yellow
+
+Tipo: quadra, Cep: b8-64.59, x: 7575.000000, y: 5755.400000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: orange, cstrk: coral, rx: 0.0
+
+Tipo: hidrante, id: hnob8-27.99, x: 12895.000000, y: 2476.600000, sw: 1.0, cfill: red, cstrk: firebrick
+
+Tipo: Radio-base, id: rbb8-31.71, x: 9195.000000, y: 2799.400000, sw: 1.0, cfill: magenta, cstrk: lightblue
+
+Tipo: semaforo, id: sfb8-49.74, x: 9520.000000, y: 4388.400000, sw: 1.0, cfill: lightred, cstrk: yellow
+

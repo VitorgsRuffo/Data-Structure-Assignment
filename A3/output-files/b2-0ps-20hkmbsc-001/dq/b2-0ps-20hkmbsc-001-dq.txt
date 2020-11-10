@@ -1,0 +1,104 @@
+cep: b2-0ps-20hkm7.14
+
+cep: b2-0ps-20hkm7.15
+
+cep: b2-0ps-20hkm8.13
+
+cep: b2-0ps-20hkm8.14
+
+cep: b2-0ps-20hkm8.15
+
+cep: b2-0ps-20hkm8.16
+
+cep: b2-0ps-20hkm9.13
+
+cep: b2-0ps-20hkm9.14
+
+cep: b2-0ps-20hkm9.15
+
+cep: b2-0ps-20hkm9.16
+
+cep: b2-0ps-20hkm10.13
+
+cep: b2-0ps-20hkm10.14
+
+cep: b2-0ps-20hkm10.15
+
+cep: b2-0ps-20hkm10.16
+
+cep: b2-0ps-20hkm11.13
+
+cep: b2-0ps-20hkm11.14
+
+cep: b2-0ps-20hkm11.15
+
+cep: b2-0ps-20hkm11.16
+
+cep: b2-0ps-20hkm12.13
+
+cep: b2-0ps-20hkm12.14
+
+cep: b2-0ps-20hkm12.15
+
+cep: b2-0ps-20hkm12.16
+
+cep: b2-0ps-20hkm13.14
+
+cep: b2-0ps-20hkm13.15
+
+b2-0ps-20hkm10.14 | hidrante - id: hob2-0ps-20hkm10.14, x:1845.000000, y: 892.600000
+
+b2-0ps-20hkm10.15 | hidrante - id: hob2-0ps-20hkm10.14, x:1845.000000, y: 892.600000
+
+cep: b2-0ps-20hkm4.49
+
+cep: b2-0ps-20hkm5.48
+
+cep: b2-0ps-20hkm5.49
+
+cep: b2-0ps-20hkm5.50
+
+cep: b2-0ps-20hkm6.47
+
+cep: b2-0ps-20hkm6.48
+
+cep: b2-0ps-20hkm6.49
+
+cep: b2-0ps-20hkm6.50
+
+cep: b2-0ps-20hkm6.51
+
+cep: b2-0ps-20hkm7.47
+
+cep: b2-0ps-20hkm7.48
+
+cep: b2-0ps-20hkm7.49
+
+cep: b2-0ps-20hkm7.50
+
+cep: b2-0ps-20hkm7.51
+
+cep: b2-0ps-20hkm8.47
+
+cep: b2-0ps-20hkm8.48
+
+cep: b2-0ps-20hkm8.49
+
+cep: b2-0ps-20hkm8.50
+
+cep: b2-0ps-20hkm8.51
+
+cep: b2-0ps-20hkm9.48
+
+cep: b2-0ps-20hkm9.49
+
+cep: b2-0ps-20hkm9.50
+
+cep: b2-0ps-20hkm10.49
+
+b2-0ps-20hkm6.49 | radio-base - id: rbb2-0ps-20hkm7.49, x:6335.000000, y: 620.200000
+
+b2-0ps-20hkm7.49 | radio-base - id: rbb2-0ps-20hkm7.49, x:6335.000000, y: 620.200000
+
+b2-0ps-20hkm8.49 | radio-base - id: rbb2-0ps-20hkm7.49, x:6335.000000, y: 620.200000
+

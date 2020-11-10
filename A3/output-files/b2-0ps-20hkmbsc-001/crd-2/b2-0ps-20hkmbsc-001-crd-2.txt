@@ -1,0 +1,2 @@
+Tipo: hidrante, id: hnb2-0ps-20hkm7.10, x: 1265.000000, y: 660.600000, sw: 1.0, cfill: red, cstrk: firebrick
+

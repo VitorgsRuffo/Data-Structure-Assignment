@@ -1,0 +1,4 @@
+b2-0ps-20hkm10.14 | hidrante - id: hob2-0ps-20hkm10.14, x:1845.000000, y: 892.600000
+
+b2-0ps-20hkm10.15 | hidrante - id: hob2-0ps-20hkm10.14, x:1845.000000, y: 892.600000
+

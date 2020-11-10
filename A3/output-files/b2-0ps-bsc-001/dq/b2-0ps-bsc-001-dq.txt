@@ -1,0 +1,92 @@
+cep: b2-0ps-16.32
+
+cep: b2-0ps-16.33
+
+cep: b2-0ps-17.31
+
+cep: b2-0ps-17.32
+
+cep: b2-0ps-17.33
+
+cep: b2-0ps-17.34
+
+cep: b2-0ps-18.31
+
+cep: b2-0ps-18.32
+
+cep: b2-0ps-18.33
+
+cep: b2-0ps-18.34
+
+cep: b2-0ps-19.31
+
+cep: b2-0ps-19.32
+
+cep: b2-0ps-19.33
+
+cep: b2-0ps-19.34
+
+cep: b2-0ps-20.31
+
+cep: b2-0ps-20.32
+
+cep: b2-0ps-20.33
+
+cep: b2-0ps-20.34
+
+b2-0ps-19.32 | hidrante - id: hob2-0ps-19.32, x:4185.000000, y: 1709.800000
+
+b2-0ps-19.33 | hidrante - id: hob2-0ps-19.32, x:4185.000000, y: 1709.800000
+
+cep: b2-0ps-2.37
+
+cep: b2-0ps-3.36
+
+cep: b2-0ps-3.37
+
+cep: b2-0ps-3.38
+
+cep: b2-0ps-4.35
+
+cep: b2-0ps-4.36
+
+cep: b2-0ps-4.37
+
+cep: b2-0ps-4.38
+
+cep: b2-0ps-4.39
+
+cep: b2-0ps-5.35
+
+cep: b2-0ps-5.36
+
+cep: b2-0ps-5.37
+
+cep: b2-0ps-5.38
+
+cep: b2-0ps-5.39
+
+cep: b2-0ps-6.35
+
+cep: b2-0ps-6.36
+
+cep: b2-0ps-6.37
+
+cep: b2-0ps-6.38
+
+cep: b2-0ps-6.39
+
+cep: b2-0ps-7.36
+
+cep: b2-0ps-7.37
+
+cep: b2-0ps-7.38
+
+cep: b2-0ps-8.37
+
+b2-0ps-4.37 | radio-base - id: rbb2-0ps-5.37, x:4775.000000, y: 438.600000
+
+b2-0ps-5.37 | radio-base - id: rbb2-0ps-5.37, x:4775.000000, y: 438.600000
+
+b2-0ps-6.37 | radio-base - id: rbb2-0ps-5.37, x:4775.000000, y: 438.600000
+

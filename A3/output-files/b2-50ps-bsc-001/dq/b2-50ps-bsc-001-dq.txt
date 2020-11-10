@@ -1,0 +1,86 @@
+cep: b2-50ps-13.10
+
+cep: b2-50ps-13.11
+
+cep: b2-50ps-14.9
+
+cep: b2-50ps-14.10
+
+cep: b2-50ps-14.11
+
+cep: b2-50ps-14.12
+
+cep: b2-50ps-15.9
+
+cep: b2-50ps-15.10
+
+cep: b2-50ps-15.11
+
+cep: b2-50ps-15.12
+
+cep: b2-50ps-16.9
+
+cep: b2-50ps-16.10
+
+cep: b2-50ps-16.11
+
+cep: b2-50ps-16.12
+
+cep: b2-50ps-17.9
+
+cep: b2-50ps-17.10
+
+cep: b2-50ps-17.11
+
+cep: b2-50ps-17.12
+
+cep: b2-50ps-18.10
+
+cep: b2-50ps-18.11
+
+b2-50ps-15.10 | hidrante - id: hnob2-50ps-15.10, x:1325.000000, y: 1387.000000
+
+cep: b2-50ps-1.56
+
+cep: b2-50ps-1.57
+
+cep: b2-50ps-1.58
+
+cep: b2-50ps-1.59
+
+cep: b2-50ps-1.60
+
+cep: b2-50ps-2.56
+
+cep: b2-50ps-2.57
+
+cep: b2-50ps-2.58
+
+cep: b2-50ps-2.59
+
+cep: b2-50ps-2.60
+
+cep: b2-50ps-3.56
+
+cep: b2-50ps-3.57
+
+cep: b2-50ps-3.58
+
+cep: b2-50ps-3.59
+
+cep: b2-50ps-3.60
+
+cep: b2-50ps-4.57
+
+cep: b2-50ps-4.58
+
+cep: b2-50ps-4.59
+
+cep: b2-50ps-5.58
+
+b2-50ps-1.58 | radio-base - id: rbb2-50ps-2.58, x:7505.000000, y: 166.200000
+
+b2-50ps-2.58 | radio-base - id: rbb2-50ps-2.58, x:7505.000000, y: 166.200000
+
+b2-50ps-3.58 | radio-base - id: rbb2-50ps-2.58, x:7505.000000, y: 166.200000
+

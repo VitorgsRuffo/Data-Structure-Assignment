@@ -1,0 +1,84 @@
+cep: b2-0ps-500hkm1.34
+
+cep: b2-0ps-500hkm1.35
+
+cep: b2-0ps-500hkm1.36
+
+cep: b2-0ps-500hkm1.37
+
+cep: b2-0ps-500hkm2.34
+
+cep: b2-0ps-500hkm2.35
+
+cep: b2-0ps-500hkm2.36
+
+cep: b2-0ps-500hkm2.37
+
+cep: b2-0ps-500hkm3.34
+
+cep: b2-0ps-500hkm3.35
+
+cep: b2-0ps-500hkm3.36
+
+cep: b2-0ps-500hkm3.37
+
+cep: b2-0ps-500hkm4.35
+
+cep: b2-0ps-500hkm4.36
+
+b2-0ps-500hkm1.35 | hidrante - id: hob2-0ps-500hkm1.35, x:4575.000000, y: 75.400000
+
+b2-0ps-500hkm1.36 | hidrante - id: hob2-0ps-500hkm1.35, x:4575.000000, y: 75.400000
+
+cep: b2-0ps-500hkm7.14
+
+cep: b2-0ps-500hkm8.13
+
+cep: b2-0ps-500hkm8.14
+
+cep: b2-0ps-500hkm8.15
+
+cep: b2-0ps-500hkm9.12
+
+cep: b2-0ps-500hkm9.13
+
+cep: b2-0ps-500hkm9.14
+
+cep: b2-0ps-500hkm9.15
+
+cep: b2-0ps-500hkm9.16
+
+cep: b2-0ps-500hkm10.12
+
+cep: b2-0ps-500hkm10.13
+
+cep: b2-0ps-500hkm10.14
+
+cep: b2-0ps-500hkm10.15
+
+cep: b2-0ps-500hkm10.16
+
+cep: b2-0ps-500hkm11.12
+
+cep: b2-0ps-500hkm11.13
+
+cep: b2-0ps-500hkm11.14
+
+cep: b2-0ps-500hkm11.15
+
+cep: b2-0ps-500hkm11.16
+
+cep: b2-0ps-500hkm12.13
+
+cep: b2-0ps-500hkm12.14
+
+cep: b2-0ps-500hkm12.15
+
+cep: b2-0ps-500hkm13.14
+
+b2-0ps-500hkm9.14 | radio-base - id: rbb2-0ps-500hkm10.14, x:1785.000000, y: 892.600000
+
+b2-0ps-500hkm10.14 | radio-base - id: rbb2-0ps-500hkm10.14, x:1785.000000, y: 892.600000
+
+b2-0ps-500hkm11.14 | radio-base - id: rbb2-0ps-500hkm10.14, x:1785.000000, y: 892.600000
+

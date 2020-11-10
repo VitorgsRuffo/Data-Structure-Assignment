@@ -1,0 +1,100 @@
+Posto de saude (1) - x: 6597.00, y: 618.00, distancia: 224.69.
+
+Posto de saude (2) - x: 6581.00, y: 801.00, distancia: 320.73.
+
+Posto de saude (3) - x: 6421.00, y: 531.00, distancia: 402.54.
+
+Posto de saude (4) - x: 7334.00, y: 677.00, distancia: 522.46.
+
+Posto de saude (5) - x: 6442.00, y: 169.00, distancia: 562.81.
+
+Posto de saude (6) - x: 6857.00, y: 1169.00, distancia: 583.78.
+
+Posto de saude (7) - x: 7180.00, y: 88.00, distancia: 614.93.
+
+Posto de saude (8) - x: 7370.00, y: 945.00, distancia: 656.78.
+
+Posto de saude (9) - x: 7601.00, y: 410.00, distancia: 800.70.
+
+Posto de saude (10) - x: 6111.00, y: 74.00, distancia: 874.54.
+
+Posto de saude (11) - x: 5939.00, y: 458.00, distancia: 889.65.
+
+Posto de saude (12) - x: 5945.00, y: 288.00, distancia: 923.60.
+
+Posto de saude (13) - x: 7390.00, y: 1382.00, distancia: 979.04.
+
+Posto de saude (14) - x: 5691.00, y: 269.00, distancia: 1172.10.
+
+Posto de saude (15) - x: 5604.00, y: 391.00, distancia: 1231.40.
+
+Posto de saude (16) - x: 5587.00, y: 636.00, distancia: 1233.49.
+
+Posto de saude (17) - x: 6612.00, y: 1842.00, distancia: 1272.66.
+
+Posto de saude (18) - x: 7651.00, y: 1573.00, distancia: 1290.50.
+
+Posto de saude (19) - x: 5477.00, y: 818.00, distancia: 1362.23.
+
+Posto de saude (20) - x: 5817.00, y: 1723.00, distancia: 1515.41.
+
+Posto de saude (21) - x: 5174.00, y: 1121.00, distancia: 1729.85.
+
+Posto de saude (22) - x: 4854.00, y: 437.00, distancia: 1971.42.
+
+Posto de saude (23) - x: 5285.00, y: 1844.00, distancia: 1983.88.
+
+Posto de saude (24) - x: 5077.00, y: 1595.00, distancia: 2013.25.
+
+Posto de saude (25) - x: 4904.00, y: 1249.00, distancia: 2027.03.
+
+Posto de saude (26) - x: 4725.00, y: 276.00, distancia: 2117.03.
+
+Posto de saude (27) - x: 4794.00, y: 1356.00, distancia: 2166.95.
+
+Posto de saude (28) - x: 4834.00, y: 1845.00, distancia: 2350.62.
+
+Posto de saude (29) - x: 4397.00, y: 67.00, distancia: 2477.52.
+
+Posto de saude (30) - x: 4304.00, y: 479.00, distancia: 2517.33.
+
+Posto de saude (31) - x: 4156.00, y: 422.00, distancia: 2668.97.
+
+Posto de saude (32) - x: 3289.00, y: 58.00, distancia: 3570.30.
+
+Posto de saude (33) - x: 3233.00, y: 1194.00, distancia: 3637.09.
+
+Posto de saude (34) - x: 2907.00, y: 1453.00, distancia: 4007.70.
+
+Posto de saude (35) - x: 2549.00, y: 817.00, distancia: 4277.17.
+
+Posto de saude (36) - x: 2648.00, y: 1848.00, distancia: 4358.43.
+
+Posto de saude (37) - x: 2419.00, y: 570.00, distancia: 4400.13.
+
+Posto de saude (38) - x: 2117.00, y: 479.00, distancia: 4703.43.
+
+Posto de saude (39) - x: 1982.00, y: 121.00, distancia: 4860.16.
+
+Posto de saude (40) - x: 1820.00, y: 515.00, distancia: 4999.77.
+
+Posto de saude (41) - x: 1716.00, y: 591.00, distancia: 5103.08.
+
+Posto de saude (42) - x: 1210.00, y: 1020.00, distancia: 5625.94.
+
+Posto de saude (43) - x: 1177.00, y: 1056.00, distancia: 5662.34.
+
+Posto de saude (44) - x: 1141.00, y: 823.00, distancia: 5683.87.
+
+Posto de saude (45) - x: 1115.00, y: 1524.00, distancia: 5780.48.
+
+Posto de saude (46) - x: 832.00, y: 523.00, distancia: 5988.06.
+
+Posto de saude (47) - x: 559.00, y: 50.00, distancia: 6283.24.
+
+Posto de saude (48) - x: 474.00, y: 1187.00, distancia: 6374.22.
+
+Posto de saude (49) - x: 425.00, y: 131.00, distancia: 6410.90.
+
+Posto de saude (50) - x: 161.00, y: 391.00, distancia: 6661.89.
+

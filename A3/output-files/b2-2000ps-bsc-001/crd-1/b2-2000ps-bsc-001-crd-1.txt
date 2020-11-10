@@ -1,0 +1,2 @@
+Tipo: quadra, Cep: b2-2000ps-1.21, x: 2635.000000, y: 35.000000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: peru, cstrk: tomato, rx: 0.0
+

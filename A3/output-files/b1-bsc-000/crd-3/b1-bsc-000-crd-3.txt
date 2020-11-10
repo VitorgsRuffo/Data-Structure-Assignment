@@ -1,0 +1,2 @@
+Tipo: Radio-base, id: rbb05.3, x: 355.000000, y: 445.000000, sw: 1.0, cfill: magenta, cstrk: lightblue
+

@@ -1,0 +1,16 @@
+Tipo: quadra, Cep: b2-500ps-3.23, x: 2895.000000, y: 216.600000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: steelblue, cstrk: dodgerblue, rx: 0.0
+
+Tipo: hidrante, id: hnob2-500ps-17.33, x: 4315.000000, y: 1568.600000, sw: 1.0, cfill: red, cstrk: firebrick
+
+Tipo: Radio-base, id: rbb2-500ps-20.36, x: 4645.000000, y: 1800.600000, sw: 1.0, cfill: magenta, cstrk: lightblue
+
+Tipo: semaforo, id: sfb2-500ps-8.30, x: 3800.000000, y: 665.600000, sw: 1.0, cfill: lightred, cstrk: yellow
+
+Tipo: quadra, Cep: b2-500ps-3.23, x: 2895.000000, y: 216.600000, w: 120.000000, h: 80.800000, sw: 1.0, cfill: steelblue, cstrk: dodgerblue, rx: 0.0
+
+Tipo: hidrante, id: hnob2-500ps-17.33, x: 4315.000000, y: 1568.600000, sw: 1.0, cfill: red, cstrk: firebrick
+
+Tipo: Radio-base, id: rbb2-500ps-20.36, x: 4645.000000, y: 1800.600000, sw: 1.0, cfill: magenta, cstrk: lightblue
+
+Tipo: semaforo, id: sfb2-500ps-8.30, x: 3800.000000, y: 665.600000, sw: 1.0, cfill: lightred, cstrk: yellow
+

@@ -1,0 +1,16 @@
+Coordenadas dos pontos dentro do circulo:
+	(1) x: 3527.50, y: 90.00
+	(2) x: 5505.00, y: 1833.50
+	(3) x: 5112.50, y: 1603.60
+	(4) x: 3787.50, y: 1407.00
+	(5) x: 2902.50, y: 786.40
+	(6) x: 2617.50, y: 544.00
+	(7) x: 2300.00, y: 678.10
+
+Total de habitantes: 39
+
+Numero total de casos: 69
+
+Area dentro da envoltoria convexa: 1960290.50
+
+Categoria da regiao de incidencia: E

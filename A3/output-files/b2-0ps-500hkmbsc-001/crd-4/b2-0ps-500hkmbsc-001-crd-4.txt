@@ -1,0 +1,2 @@
+Tipo: semaforo, id: sfb2-0ps-500hkm1.49, x: 6270.000000, y: 30.000000, sw: 1.0, cfill: lightred, cstrk: yellow
+

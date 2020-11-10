@@ -1,0 +1,2 @@
+Tipo: hidrante, id: hob2-500ps-15.30, x: 3925.000000, y: 1346.600000, sw: 1.0, cfill: red, cstrk: firebrick
+

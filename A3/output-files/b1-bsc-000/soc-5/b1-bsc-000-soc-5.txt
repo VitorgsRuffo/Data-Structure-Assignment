@@ -1,0 +1,10 @@
+Posto de saude (1) - x: 598.00, y: 80.00, distancia: 102.01.
+
+Posto de saude (2) - x: 501.00, y: 223.00, distancia: 192.19.
+
+Posto de saude (3) - x: 594.00, y: 323.00, distancia: 196.78.
+
+Posto de saude (4) - x: 502.00, y: 466.00, distancia: 366.07.
+
+Posto de saude (5) - x: 182.00, y: 151.00, distancia: 494.54.
+

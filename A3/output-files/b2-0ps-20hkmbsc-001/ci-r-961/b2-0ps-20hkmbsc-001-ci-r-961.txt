@@ -1,0 +1,1 @@
+Erro: A quantidade de casas sao insuficientes para formar regiao de incidencia (quantidade de casas < 3).

@@ -1,0 +1,2 @@
+Tipo: hidrante, id: hnob2-17.59, x: 7695.000000, y: 1568.600000, sw: 1.0, cfill: red, cstrk: firebrick
+

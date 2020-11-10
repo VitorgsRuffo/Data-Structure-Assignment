@@ -1,0 +1,94 @@
+cep: b2-500ps-7.25
+
+cep: b2-500ps-7.26
+
+cep: b2-500ps-8.24
+
+cep: b2-500ps-8.25
+
+cep: b2-500ps-8.26
+
+cep: b2-500ps-8.27
+
+cep: b2-500ps-9.24
+
+cep: b2-500ps-9.25
+
+cep: b2-500ps-9.26
+
+cep: b2-500ps-9.27
+
+cep: b2-500ps-10.24
+
+cep: b2-500ps-10.25
+
+cep: b2-500ps-10.26
+
+cep: b2-500ps-10.27
+
+cep: b2-500ps-11.24
+
+cep: b2-500ps-11.25
+
+cep: b2-500ps-11.26
+
+cep: b2-500ps-11.27
+
+cep: b2-500ps-12.25
+
+cep: b2-500ps-12.26
+
+b2-500ps-9.26 | hidrante - id: hneb2-500ps-9.26, x:3285.000000, y: 842.200000
+
+cep: b2-500ps-12.3
+
+cep: b2-500ps-13.2
+
+cep: b2-500ps-13.3
+
+cep: b2-500ps-13.4
+
+cep: b2-500ps-14.1
+
+cep: b2-500ps-14.2
+
+cep: b2-500ps-14.3
+
+cep: b2-500ps-14.4
+
+cep: b2-500ps-14.5
+
+cep: b2-500ps-15.1
+
+cep: b2-500ps-15.2
+
+cep: b2-500ps-15.3
+
+cep: b2-500ps-15.4
+
+cep: b2-500ps-15.5
+
+cep: b2-500ps-16.1
+
+cep: b2-500ps-16.2
+
+cep: b2-500ps-16.3
+
+cep: b2-500ps-16.4
+
+cep: b2-500ps-16.5
+
+cep: b2-500ps-17.2
+
+cep: b2-500ps-17.3
+
+cep: b2-500ps-17.4
+
+cep: b2-500ps-18.3
+
+b2-500ps-14.3 | radio-base - id: rbb2-500ps-15.3, x:355.000000, y: 1346.600000
+
+b2-500ps-15.3 | radio-base - id: rbb2-500ps-15.3, x:355.000000, y: 1346.600000
+
+b2-500ps-16.3 | radio-base - id: rbb2-500ps-15.3, x:355.000000, y: 1346.600000
+

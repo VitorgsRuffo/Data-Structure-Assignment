@@ -1,0 +1,12 @@
+crd? b2-500ps-3.23
+crd? hnob2-500ps-17.33
+crd? rbb2-500ps-20.36
+crd? sfb2-500ps-8.30
+del b2-500ps-3.23
+del hnob2-500ps-17.33
+del rbb2-500ps-20.36
+del sfb2-500ps-8.30
+crd? b2-500ps-3.23
+crd? hnob2-500ps-17.33
+crd? rbb2-500ps-20.36
+crd? sfb2-500ps-8.30
