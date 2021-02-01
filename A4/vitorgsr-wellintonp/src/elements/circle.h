@@ -72,6 +72,12 @@ char* getCircleCw(Circle Circ);
 */
 char* circleToString(Circle Circ);
 
+/*  
+* Pré-Condição: requer o endereco de uma instancia de circulo e de ponto.
+* Pós-Condição: retorna 1 se o ponto se encontra dentro do circulo, retorna 0 se nao.
+*/
+int isPointInsideCirc(Circle Circ, Point P);
+
 /*
 * Pré-Condição: requer o endereco de uma instancia de circulo.
 * Pós-Condição: imprimir na saida padrão essa variavel.

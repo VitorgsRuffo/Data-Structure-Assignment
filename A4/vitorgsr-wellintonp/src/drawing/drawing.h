@@ -2,6 +2,7 @@
 #define DRAWING_H
 
 #include "../urban-elements/region.h"
+#include "../util/data-structure/list.h"
 
 /*
 * TAD desenho que vai conter as listas das entidades que serao desenhadas em um arquivo svg.

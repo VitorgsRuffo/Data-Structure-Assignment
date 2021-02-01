@@ -3,11 +3,8 @@
 #include "../include/urbanElements.h"
 #include "../drawing/drawing.h"
 #include "../include/query.h"
-#include "../include/figures.h"
+#include "../include/elements.h"
 
-typedef struct { 
-    double x, y; 
-}Point; 
 
 Point p0; 
 
@@ -49,6 +46,7 @@ void executeCovidIncidenceReportInRegion(char* command, Drawing Dr, File txt){
     }
     
     int housesInsideCircListLength = length(housesInsideCircList);
+    //**
     Point* points = getHousesInsideCircCenterOfMass(housesInsideCircList, housesInsideCircListLength);
     
     int pointsAmount = housesInsideCircListLength;  

@@ -2,8 +2,8 @@
 #include "../include/util.h"
 #include "../include/query.h"
 #include "../include/urbanElements.h"
-#include "drawing.h"
-#include "../include/figures.h"
+#include "./drawing.h"
+#include "../include/elements.h"
 
 typedef struct drawing {
     List circleList;

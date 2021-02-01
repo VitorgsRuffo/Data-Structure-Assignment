@@ -78,6 +78,13 @@ char* getRectangleRw(Rectangle Rect);
 */
 char* rectangleToString(Rectangle Rect);
 
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de retangulo e de ponto.
+* Pós-Condição: retorna 1 se o ponto se encontra dentro do retangulo, retorna 0 se nao.
+*/
+int isPointInsideRect(Rectangle Rect, Point P);
+
 /*
 * Pré-Condição: requer o endereco de uma instancia de Retangulo.
 * Pós-Condição: imprimir na saida padrão essa variavel.

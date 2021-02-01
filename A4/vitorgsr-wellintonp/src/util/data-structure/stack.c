@@ -1,5 +1,5 @@
-#include "../include/headers.h"
-#include "../include/util.h"
+#include "../../include/headers.h"
+#include "../../include/util.h"
 
 typedef struct stackNode {
     Info data;
@@ -13,14 +13,12 @@ StackNode createStack(){
 
 int empty(Stack* PointerToHead){
     
-    if(PointerToHead == NULL){
-        printf("emptyError: topo da pilha nao existente...\n");
+    if(PointerToHead == NULL)
         return 1;
-    }
-    else if (*PointerToHead == NULL){
-        printf("empty: pilha vazia...\n");
+    
+    else if (*PointerToHead == NULL)
         return 1;
-    }
+
     else
         return 0;
 }
@@ -29,10 +27,9 @@ int stackLength(Stack* PointerToHead){
     if(isElementNull(PointerToHead, "pointeiro para a cabeca da pilha", "stackLength"))
         return 0;  
 
-    if(empty(PointerToHead)){
-        printf("stackLengthError: a pilha esta vazia...\n");
+    if(empty(PointerToHead))
         return 0;
-    }
+    
     
     stackNode** pointerToHead = (stackNode**) PointerToHead;
     stackNode* aux = *pointerToHead; //endereço do nó no topo da pilha.
@@ -46,27 +43,30 @@ int stackLength(Stack* PointerToHead){
     return count;
 }
 
-void stackPush(Stack* PointerToHead, Info data){
+int stackPush(Stack* PointerToHead, Info data){
     if(isElementNull(PointerToHead, "pointeiro para a cabeca da pilha", "stackPush"))
-       return;
+       return 0;
 
     stackNode** pointerToHead = (stackNode**) PointerToHead; 
     
     stackNode* newNode = (stackNode*) malloc(sizeof(stackNode));
+    if(newNode == NULL)
+        return 0;
 
     newNode->data = data;
     newNode->next = *pointerToHead;
     *pointerToHead = newNode;
+
+    return 1;
 }
 
 Info stackPop(Stack* PointerToHead){
     if(isElementNull(PointerToHead, "pointeiro para a cabeca da pilha", "stackPop"))
         return NULL;  
 
-    if(empty(PointerToHead)){
-        printf("stackPopError: a pilha esta vazia...\n");
+    if(empty(PointerToHead))
         return NULL;
-    }
+    
     
     stackNode** pointerToHead = (stackNode**) PointerToHead;
     stackNode* aux = *pointerToHead;
@@ -82,10 +82,8 @@ Info stackTop(Stack* PointerToHead){
     if(isElementNull(PointerToHead, "pointeiro para a cabeca da pilha", "stackTop"))
         return NULL;
 
-    if(empty(PointerToHead)){
-        printf("stackTopError: a pilha esta vazia...\n");
+    if(empty(PointerToHead))
         return NULL;
-    }
     
     stackNode** pointerToHead = (stackNode**) PointerToHead;
     return (**pointerToHead).data;   
@@ -95,13 +93,15 @@ Info* stackToArray(Stack* PointerToHead){
     if(isElementNull(PointerToHead, "pointeiro para a cabeca da pilha", "stackToArray"))
         return NULL;
 
-    if(empty(PointerToHead)){
-        printf("stackToArrayError: a pilha esta vazia...\n");
+    if(empty(PointerToHead))
         return NULL;
-    }
+    
 
     int length = stackLength(PointerToHead);
+
     Info* array = (Info*) malloc(length*sizeof(Info));
+    if(array == NULL)
+        return NULL;
     
     for(int i=0; i<length; i++)
         array[i] = stackPop(PointerToHead);
@@ -113,10 +113,8 @@ void printStack(Stack* PointerToHead, char* (*tadToString)(void*)){
     if(isElementNull(PointerToHead, "pointeiro para a cabeca da pilha", "printStack"))
        return;
 
-    if(empty(PointerToHead)){
-        printf("stackPrintError: a pilha esta vazia...\n");
+    if(empty(PointerToHead))
         return;
-    }
 
     stackNode** pointerToHead = (stackNode**) PointerToHead;
     stackNode* aux = *pointerToHead; //endereço do nó no topo da pilha.
@@ -134,10 +132,8 @@ void printStack(Stack* PointerToHead, char* (*tadToString)(void*)){
 
 void freeStack(Stack* PointerToHead, void (*freeTad)(void*)){
     
-    if(empty(PointerToHead)){
-        printf("freeStackError: a pilha esta vazia...\n");
+    if(empty(PointerToHead))
         return;
-    }
     
     stackNode** pointerToHead = (stackNode**) PointerToHead; 
     stackNode* aux;

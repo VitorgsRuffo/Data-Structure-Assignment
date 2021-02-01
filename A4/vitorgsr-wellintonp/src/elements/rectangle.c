@@ -1,6 +1,7 @@
 #include "../include/headers.h"
 #include "../include/util.h"
-#include "rectangle.h"
+#include "../include/elements.h"
+
 
 typedef struct rectangle {
     char* id;
@@ -116,6 +117,63 @@ char* rectangleToString(Rectangle Rect){
     sprintf(rectangleInfoString, "Tipo: retangulo, id: %s, width: %s, height: %s, x: %s, y: %s, corb: %s, corp: %s, rw: %s", rect->id, rect->width, rect->height, rect->x, rect->y, rect->corb, rect->corp, rect->rw);
     return rectangleInfoString;
 }
+
+
+int isPointInsideRect(Rectangle Rect, Point P){
+   
+    rectangle *rect = (rectangle*) Rect;
+   
+    double pointX = getPointX(P);
+    double pointY = getPointY(P);
+
+    double rectX = atof((*rect).x);
+    double rectY = atof((*rect).y);
+    double rectW = atof((*rect).width);
+    double rectH = atof((*rect).height);
+
+    if( pointX > rectX          &&
+        pointX < rectX + rectW  &&
+        pointY > rectY          &&
+        pointY < rectY + rectH     )
+
+        return 1;
+
+    else
+        return 0;
+}
+
+/*  
+* Pré-Condição: requer o endereco de duas instancias de retangulo.
+* Pós-Condição: retorna 1 se um retangulo se sobrepõe com o outro, retorna 0 se nao.
+*/
+int isThereRectanglesOverlap(Rectangle Rect1, Rectangle Rect2){ 
+    rectangle *rect1 = (rectangle*) Rect1;
+    rectangle *rect2 = (rectangle*) Rect2;
+
+    double r1X = atof(rect1->x);
+    double r1Y = atof(rect1->y);
+    double r1Width = atof(rect1->width);
+    double r1Height = atof(rect1->height);
+    
+    double r2X = atof(rect2->x);
+    double r2Y = atof(rect2->y);
+    double r2Width = atof(rect2->width);
+    double r2Height = atof(rect2->height);
+        
+    //Eles vão se sobrepor quando pelo menos umas das condiçoes abaixo forem satisfeitas: 
+    if( ((r2Y + r2Height > r1Y) && (r2Y < r1Y + r1Height)) ||
+        ((r2Y < r1Y + r1Height) && (r2Y + r2Height > r1Y)) ||
+        ((r2X + r2Width > r1X)  && (r2X < r1X + r1Width))  ||
+        ((r2X < r1X + r1Width)  && (r2X + r2Width > r1X))  ){
+
+        return 1;
+    }
+    
+    else{
+        return 0;
+    }
+}
+
 
 void printRectangle(Rectangle Rect){
     if(isElementNull(Rect, "retangulo", "printRectangle"))

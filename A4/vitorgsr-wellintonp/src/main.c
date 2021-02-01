@@ -53,6 +53,6 @@ int main(int argc, char* argv[]){
 
 *  - Revisar os queries em busca de refatoracao. 
 *  - Desalocar memoria em caso de erros (e.g, chamar o metodo de um tad passando null).
-
+*  - Retirar mensagens de erro... (tratar erro no metodo chamador)
 *  - Calcular a viewBox dos svg's.
 */

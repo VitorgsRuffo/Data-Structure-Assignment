@@ -36,9 +36,9 @@ Node insert(List Li, Info info);
 
 /*
 * Pré-Condição: requer um lista, uma referencia para o no que sera removido e uma referencia para a funcao que libera a memoria da informacao presente dentro do no. 
-* Pós-Condição: libera a memoria da informacao do no, libera o no e o desconecta da lista.
+* Pós-Condição: se o no for encontrado libera a memoria da informacao do no, libera o no, o desconecta da lista e retorna 1. Se nao, retorna 0.
 */
-void removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*));
+int removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*));
 
 /*
 * Pré-Condição: requer uma lista vazia, ou, com um ou mais elementos e um apontador Posic para um no da lista.

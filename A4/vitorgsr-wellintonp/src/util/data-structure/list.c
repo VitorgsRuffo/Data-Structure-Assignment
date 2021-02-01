@@ -1,5 +1,6 @@
-#include "../include/headers.h"
-#include "../include/util.h"
+#include "../../include/headers.h"
+#include "../../include/util.h"
+#include "list.h"
 
 typedef struct node {
     struct node *previous;
@@ -12,18 +13,19 @@ typedef struct list {
     node *last;
 }list;
 
+
 List createList(){
     list *li = (list*) malloc(sizeof(list));
 
-    if(li == NULL){
-        printf("Erro ao alocar memória para a criação da lista\nFinalizando o programa...\n");
-        exit(1);
-    }
+    if(li == NULL)
+        return NULL;
+    
 
     li->first = NULL;
     li->last = NULL;
     return li;
 }
+
 
 int length(List Li){
     if(isElementNull(Li, "lista", "length"))
@@ -42,6 +44,7 @@ int length(List Li){
         return nodeAmount;
     }
 }
+
 
 Node insert(List Li, Info info){
     if(isElementNull(Li, "lista", "insert"))
@@ -68,12 +71,12 @@ Node insert(List Li, Info info){
     return NODE;
 }
 
-void removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*)){ //Tem problema alterara um pouco a assinatura ?
+int removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*)){
     if(isElementNull(Li, "Li", "removeNode"))
-        return;
+        return 0;
         
     if(isElementNull(nodeToRemove, "nodeToRemove", "removeNode"))
-        return;
+        return 0;
         
     list *li = (list*) Li;
     node *NODE = li->first;
@@ -81,11 +84,15 @@ void removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*)){ //Tem probl
     while(NODE != NULL){
 
         if(NODE == nodeToRemove){
-            (*freeTAD)(NODE->info);
+
+            if(freeTAD != NULL)
+              (*freeTAD)(NODE->info);
 
             if(NODE->previous == NULL){ //remocao no inicio
                 li->first = NODE->next;
-                li->first->previous = NULL;
+
+                if(li->first != NULL) //if (lista resultante tem mais de um elemento) 
+                  li->first->previous = NULL; 
 
             }else if(NODE->next == NULL){ //remocao no final
                 li->last = NODE->previous;
@@ -97,26 +104,26 @@ void removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*)){ //Tem probl
             }
            
             free(NODE);
-            return; //no encontrado e removido
+            return 1; //no encontrado e removido.
         }
         NODE = NODE->next;
     }
-    printf("Erro na remocao: no nao encontrado...\n");
+    
+    return 0; //no nao encontrado.
 }
 
-Info get(List Li, Node Posic){ /*tem que checar se o Posic esta presente em Li ?*/
+Info get(List Li, Node Posic){ 
     if(isElementNull(Li, "lista", "get"))
         return NULL;
 
     if(isElementNull(Posic, "posic", "get"))
         return NULL;
 
-    //lista *li = (lista*) Li;
     node *NODE = (node*) Posic;
     return NODE->info;
 }
 
-Node insertBefore(List Li, Node Posic, Info Information){   /*tem que checar se o Posic esta presente em Li ?*/
+Node insertBefore(List Li, Node Posic, Info Information){
     if(isElementNull(Li, "lista", "insertBefore"))
         return NULL;
         
@@ -149,11 +156,11 @@ Node insertBefore(List Li, Node Posic, Info Information){   /*tem que checar se 
     return previousNODE;
 }
 
-Node insertAfter(List Li, Node Posic, Info Information){   /*tem que checar se o Posic esta presente em Li ?*/
+Node insertAfter(List Li, Node Posic, Info Information){   
     
     if(isElementNull(Li, "lista", "insertBefore"))
         return NULL;
-        
+            
     if(isElementNull(Posic, "posic", "insertBefore"))
         return NULL;
 
@@ -187,16 +194,14 @@ Node getFirst(List Li){
     if(isElementNull(Li, "lista", "getFirst"))
         return NULL;
 
-    if(length(Li) == 0){
-        printf("Erro: a lista esta vazia..\n");
+    if(length(Li) == 0)
         return NULL;
-    }
     
     list *li = (list*) Li;
     return li->first;
 }
 
-Node getNext(List Li, Node Posic){ /*tem que checar se o Posic esta presente em Li ?*/
+Node getNext(List Li, Node Posic){
     if(isElementNull(Li, "lista", "getNext"))
         return NULL;
         
@@ -211,16 +216,15 @@ Node getLast(List Li){
     if(isElementNull(Li, "lista", "getLast"))
         return NULL;
     
-    if(length(Li) == 0){
-        printf("Erro: a lista esta vazia..\n");
+    if(length(Li) == 0)
         return NULL;
-    }
+    
 
     list *li = (list*) Li;
     return li->last;
 }
 
-Node getPrevious(List Li, Node Posic){ /*tem que checar se o Posic esta presente em Li ?*/
+Node getPrevious(List Li, Node Posic){ 
     if(isElementNull(Li, "lista", "getPrevious"))
         return NULL;
         
@@ -260,10 +264,8 @@ void printList(List Li, void (*printInformation)(void*)){
         return;
     
     list *li = (list*) Li;
-    if(li->first == NULL){
-        printf("Erro: lista vazia..\n");
+    if(li->first == NULL)
         return;
-    }
     
     node *NODE = li->first; 
     while(NODE != NULL){

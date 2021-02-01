@@ -1,12 +1,16 @@
-#ifndef UTILS_H
-#define UTILS_H
+#ifndef UTIL_H
+#define UTIL_H
 
 #include "../util/parameters.h"
 #include "../util/openInput.h"
-#include "../util/list.h"
-#include "../util/stack.h"
 #include "../util/geo.h"
 #include "../util/svg.h"
 #include "../util/tools.h"
+
+#include "../util/data-structure/list.h"
+#include "../util/data-structure/stack.h"
+#include "../util/data-structure/queue.h"
+#include "../util/data-structure/pquadtree.h"
+#include "../util/data-structure/hashtable.h"
 
 #endif 

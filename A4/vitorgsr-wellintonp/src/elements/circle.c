@@ -1,6 +1,6 @@
 #include "../include/headers.h"
 #include "../include/util.h"
-#include "circle.h"
+#include "../include/elements.h"
 
 typedef struct circle{
     char* id;
@@ -107,6 +107,23 @@ char* circleToString(Circle Circ){
     char* circleInfoString = (char*) malloc(200 * sizeof(char));
     sprintf(circleInfoString, "Tipo: circulo, id: %s, radius: %s, x: %s, y: %s, corb: %s, corp: %s, cw: %s", circ->id, circ->radius, circ->x, circ->y, circ->corb, circ->corp, circ->cw);
     return circleInfoString;
+}
+
+int isPointInsideCirc(Circle Circ, Point P){
+    circle *circ = (circle*) Circ;
+
+    double pointX = getPointX(P);
+    double pointY = getPointY(P);
+    double circX = atof((*circ).x);
+    double circY = atof((*circ).y);
+    double circR = atof((*circ).radius);
+
+    double pointCircCenterDistance = sqrt( pow((pointX-circX), 2) + pow((pointY-circY), 2) );
+
+    if(pointCircCenterDistance < circR)
+        return 1;
+    else
+        return 0;
 }
 
 void printCircle(Circle Circ){

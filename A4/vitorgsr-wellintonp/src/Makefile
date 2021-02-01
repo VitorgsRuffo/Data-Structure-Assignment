@@ -2,10 +2,11 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o drawing.o customization.o parameters.o openInput.o geo.o list.o stack.o svg.o tools.o circle.o rectangle.o text.o block.o hydrant.o semaphore.o baseRadio.o healthCenter.o region.o house.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o covidCases.o medicalTreatment.o covidIncidence.o
+obj = main.o drawing.o customization.o parameters.o openInput.o geo.o svg.o tools.o list.o stack.o queue.o pquadtree.o hashtable.o circle.o rectangle.o text.o point.o block.o hydrant.o semaphore.o baseRadio.o healthCenter.o region.o house.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o covidCases.o medicalTreatment.o covidIncidence.o
 
 util_path = ./util/
-figures_path = ./figures/
+data_structure_path = ./util/data-structure/
+elements_path = ./elements/
 urban_elements_path = ./urban-elements/
 drawing_path = ./drawing/
 qry_path = ./query/
@@ -16,6 +17,7 @@ siguel: $(obj)
 
 main.o: main.c  
 	$(CC) $(flags) -c main.c
+
 
 #drawing files:
 drawing.o: $(drawing_path)drawing.c 
@@ -35,12 +37,6 @@ openInput.o: $(util_path)openInput.c
 geo.o: $(util_path)geo.c
 	$(CC) $(flags) -c $(util_path)geo.c
 
-list.o: $(util_path)list.c 
-	$(CC) $(flags) -c $(util_path)list.c
-
-stack.o: $(util_path)stack.c 
-	$(CC) $(flags) -c $(util_path)stack.c 
-
 svg.o: $(util_path)svg.c 
 	$(CC) $(flags) -c $(util_path)svg.c
 
@@ -48,15 +44,35 @@ tools.o: $(util_path)tools.c
 	$(CC) $(flags) -c $(util_path)tools.c
 
 
-#figures files:
-circle.o: $(figures_path)circle.c 
-	$(CC) $(flags) -c $(figures_path)circle.c
+#data structures files:
+list.o: $(data_structure_path)list.c 
+	$(CC) $(flags) -c $(data_structure_path)list.c
 
-rectangle.o: $(figures_path)rectangle.c 
-	$(CC) $(flags) -c $(figures_path)rectangle.c
+stack.o: $(data_structure_path)stack.c 
+	$(CC) $(flags) -c $(data_structure_path)stack.c 
 
-text.o: $(figures_path)text.c 
-	$(CC) $(flags) -c $(figures_path)text.c
+queue.o: $(data_structure_path)queue.c 
+	$(CC) $(flags) -c $(data_structure_path)queue.c 
+
+pquadtree.o: $(data_structure_path)pquadtree.c 
+	$(CC) $(flags) -c $(data_structure_path)pquadtree.c 
+
+hashtable.o: $(data_structure_path)hashtable.c 
+	$(CC) $(flags) -c $(data_structure_path)hashtable.c 
+
+
+#element files:
+circle.o: $(elements_path)circle.c 
+	$(CC) $(flags) -c $(elements_path)circle.c
+
+rectangle.o: $(elements_path)rectangle.c 
+	$(CC) $(flags) -c $(elements_path)rectangle.c
+
+text.o: $(elements_path)text.c 
+	$(CC) $(flags) -c $(elements_path)text.c
+
+point.o: $(elements_path)point.c 
+	$(CC) $(flags) -c $(elements_path)point.c
 
 
 #urban elements files:
@@ -121,6 +137,7 @@ medicalTreatment.o: $(qry_path)medicalTreatment.c
 
 covidIncidence.o: $(qry_path)covidIncidence.c
 	$(CC) $(flags) -c $(qry_path)covidIncidence.c
+
 
 clean: 
 	rm $(obj) siguel

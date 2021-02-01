@@ -36,9 +36,9 @@ int stackLength(Stack* Head);
 
 /*
 Pré-condição: requer o endereço de um ponteiro para o nó no topo da pilha e o endereço da informação a ser armazenada.
-Pós-condição: Insere um novo nó no topo da pilha.
+Pós-condição: Insere um novo nó no topo da pilha e retorna 1. Se a insercao falhar retorna 0.
 */
-void stackPush(Stack* PointerToHead, Info data);
+int stackPush(Stack* PointerToHead, Info data);
 
 
 /*
