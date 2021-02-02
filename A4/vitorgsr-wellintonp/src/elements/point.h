@@ -20,11 +20,22 @@ Point createPoint(double x, double y);
 double getPointX(Point P);
 
 /*
+    Pré condição: Requer uma instancia do tipo Point e um valor double.
+    Pós condição: Atribui o valor passado para o membro x do ponto.
+*/
+void setPointX(Point P, double x);
+
+/*
     Pré condição: Requer uma instancia do tipo Point.
     Pós condição: Retorna o valor de Y da instancia de ponto passada por parâmetro.
 */
 double getPointY(Point P);
 
+/*
+    Pré condição: Requer uma instancia do tipo Point e um valor double.
+    Pós condição: Atribui o valor passado para o membro y do ponto.
+*/
+void setPointY(Point P, double y);
 
 /*
     Pré condição: Requer uma instancia do tipo Point.

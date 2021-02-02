@@ -23,9 +23,20 @@ double getPointX(Point P){
     return (*p).x;
 }
 
+void setPointX(Point P, double x){
+    point* p = (point*) P;
+    p->x = x;
+}
+
+
 double getPointY(Point P){
     point* p = (point*) P;
     return p->y;
+}
+
+void setPointY(Point P, double y){
+    point* p = (point*) P;
+    p->y = y;
 }
 
 void printPoint(Point P){

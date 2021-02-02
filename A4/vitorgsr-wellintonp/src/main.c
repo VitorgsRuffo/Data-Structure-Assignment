@@ -3,6 +3,20 @@
 #include "./drawing/drawing.h"
 #include "./query/qry.h"
 
+/*to do list:
+
+    1 - tratar novos parametros.
+    2 - mudar drawing: nome e estruturas de dados.
+    3 - inserir tads antigos nas novas estruturas.
+    4 - inserir novos tads nas estruturas.
+    5 - alterar comando dd.
+    
+    6 - planejamento para o query.
+
+*/
+
+
+
 int main(int argc, char* argv[]){
     
     //Criando o TAD parametros e obtendo os parametros de execução do programa.
