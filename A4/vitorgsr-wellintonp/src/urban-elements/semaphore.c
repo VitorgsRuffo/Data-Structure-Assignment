@@ -1,12 +1,13 @@
 #include "../include/headers.h"
 #include "../include/util.h"
-#include "semaphore.h"
+#include "../include/urbanElements.h"
 
 typedef struct semaphore{
     char* id;
     char* x;
     char* y;
     char* radius;
+    Point coordinates;
     char* sw;
     char* cfill;
     char* cstrk;
@@ -28,6 +29,7 @@ Semaphore createSemaphore(char* id, char* x, char* y, char* sw, char* cfill, cha
     strcpy(semap->x, x);
     strcpy(semap->y, y);
     strcpy(semap->radius, "10");
+    semap->coordinates = createPoint(atof(x), atof(y));
     strcpy(semap->sw, sw);
     strcpy(semap->cfill, cfill);
     strcpy(semap->cstrk, cstrk);
@@ -61,6 +63,11 @@ char* getSemaphoreRadius(Semaphore Semap){
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->radius;
+}
+
+Point getSemaphoreCoordinates(Semaphore Semap){
+    semaphore *semap = (semaphore*) Semap;
+    return semap->coordinates;
 }
 
 char* getSemaphoreSw(Semaphore Semap){
@@ -127,6 +134,7 @@ void freeSemaphore(Semaphore Semap){
     free(semap->x); 
     free(semap->y);
     free(semap->radius);
+    free(semap->coordinates);
     free(semap->sw);
     free(semap->cfill);
     free(semap->cstrk);  

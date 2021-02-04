@@ -1,7 +1,8 @@
 //doubs:
     //1 - char* (*get)(void*) == getInfoKey get  (typedef errado)
     //2 - is there any problem if we add extra functions to the .h file?
-    
+    //3 - List queryElementsList;
+
 
 //fixes:
 

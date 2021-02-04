@@ -44,6 +44,12 @@ char* getBlockHeight(Block Blk);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de quadra.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse quadra.
+*/
+Point getBlockCoordinates(Block Blk);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de quadra.
 * Pós-Condição: retorna a espessura da borda da quadra passada.
 */
 char* getBlockSw(Block Blk);

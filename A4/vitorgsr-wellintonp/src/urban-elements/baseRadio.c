@@ -7,6 +7,7 @@ typedef struct baseRadio{
     char* x;
     char* y;
     char* radius;
+    Point coordinates;
     char* sw;
     char* cfill;
     char* cstrk;
@@ -28,6 +29,7 @@ BaseRadio createBaseRadio(char* id, char* x, char* y, char* sw, char* cfill, cha
     strcpy(baseR->x, x);
     strcpy(baseR->y, y);
     strcpy(baseR->radius, "10");
+    baseR->coordinates = createPoint(atof(x), atof(y));
     strcpy(baseR->sw, sw);
     strcpy(baseR->cfill, cfill);
     strcpy(baseR->cstrk, cstrk);
@@ -62,6 +64,11 @@ char* getBaseRadioRadius(BaseRadio BaseR){
 
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->radius;
+}
+
+Point getBaseRadioCoordinates(BaseRadio BaseR){
+    baseRadio *baseR = (baseRadio*) BaseR;
+    return baseR->coordinates;
 }
 
 char* getBaseRadioSw(BaseRadio BaseR){
@@ -128,6 +135,7 @@ void freeBaseRadio(BaseRadio BaseR){
     free(baseR->x); 
     free(baseR->y);  
     free(baseR->radius);
+    free(baseR->coordinates);
     free(baseR->sw);  
     free(baseR->cfill);  
     free(baseR->cstrk);  

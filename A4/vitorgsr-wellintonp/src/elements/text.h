@@ -32,6 +32,12 @@ char* getTextY(Text Txt);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de texto.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse texto.
+*/
+Point getTextCoordinates(Text Txt);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de texto.
 * Pós-Condição: retorna a corb do texto passado.
 */
 char* getTextCorb(Text Txt);

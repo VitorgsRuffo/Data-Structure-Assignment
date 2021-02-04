@@ -11,6 +11,7 @@ typedef struct {
     char cep[30]; 
     char face;
     int number;
+    char* compl;
 }Address;
 
 typedef struct {
@@ -24,9 +25,11 @@ typedef struct {
 }CenterOfMass;
 
 typedef struct {
+    char* cpf;
     Address address;
     HouseBlock block;
     double x, y, w, h;
+    Point coordinates;
     CenterOfMass centerOfMass;
     int casesNumber;
 }house;
@@ -110,6 +113,9 @@ void setHouseLocation(House H){
             printf("A face da quadra (%s) e invalida.\n", h->address.cep);
     }
 
+    h->coordinates = createPoint(h->x, h->y);
+
+
     h->centerOfMass.x = h->x + (h->w / 2.0);
     h->centerOfMass.y = h->y + (h->h / 2.0);
 
@@ -135,6 +141,11 @@ void setHouseLocationOnEastFace(house *h){
 void setHouseLocationOnWestFace(house *h){
     h->x = (h->block.x + h->block.w) - h->w;
     h->y = (h->block.y + h->address.number) - (h->h / 2.0);
+}
+
+char* getHouseCpf(House H){
+    house *h = (house*) H;
+    h->cpf;
 }
 
 double getHouseX(House H){
@@ -176,6 +187,11 @@ double getHouseCenterOfMassY(House H){
     return h->centerOfMass.y;
 }
 
+Point getHouseCoordinates(House H){
+    house *h = (house*) H;
+    return h->coordinates;
+}
+
 int getHouseCasesNumber(House H){
     if(isElementNull(H, "Casa", "getHouseCasesNumber"))
         return 0;
@@ -196,5 +212,6 @@ void freeHouse(House H){
         return;
 
     house *h = (house*) H;
+    free(h->coordinates);
     free(h);
 }

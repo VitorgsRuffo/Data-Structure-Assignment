@@ -44,6 +44,12 @@ char* getRectangleY(Rectangle Rect);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de retangulo.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse retangulo.
+*/
+Point getRectangleCoordinates(Rectangle Rect);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de retangulo.
 * Pós-Condição: retorna a cor da borda do retangulo passado.
 */
 char* getRectangleCorb(Rectangle Rect);

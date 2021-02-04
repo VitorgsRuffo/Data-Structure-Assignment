@@ -38,6 +38,12 @@ char* getCircleY(Circle Circ);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de circulo.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse circulo.
+*/
+Point getCircleCoordinates(Circle Circ);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de circulo.
 * Pós-Condição: retorna a cor da borda do circulo passado.
 */
 char* getCircleCorb(Circle Circ);

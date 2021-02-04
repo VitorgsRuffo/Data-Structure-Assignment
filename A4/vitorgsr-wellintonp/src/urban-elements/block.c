@@ -8,6 +8,7 @@ typedef struct block{
     char* y;
     char* w;
     char* h;
+    Point coordinates;
     char* sw;
     char* cfill;
     char* cstrk;
@@ -33,6 +34,7 @@ Block createBlock(char* cep, char* x, char* y, char* w, char* h, char* sw, char*
     strcpy(blk->y, y);
     strcpy(blk->w, w);
     strcpy(blk->h, h);
+    blk->coordinates = createPoint(atof(x), atof(y));
     strcpy(blk->sw, sw);
     strcpy(blk->cfill, cfill);
     strcpy(blk->cstrk, cstrk);
@@ -74,6 +76,11 @@ char* getBlockHeight(Block Blk){
         return NULL;
     block *blk = (block*) Blk;
     return blk->h;
+}
+
+Point getBlockCoordinates(Block Blk){
+    block *blk = (block*) Blk;
+    return blk->coordinates;
 }
 
 char* getBlockSw(Block Blk){
@@ -165,7 +172,8 @@ void freeBlock(Block Blk){
     free(blk->x);  
     free(blk->y); 
     free(blk->w);  
-    free(blk->h);  
+    free(blk->h);
+    free(blk->coordinates);
     free(blk->sw);  
     free(blk->cfill);  
     free(blk->cstrk);  

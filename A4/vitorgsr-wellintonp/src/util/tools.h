@@ -21,7 +21,7 @@ int isElementNull(Element element, char* elementName, char* functionName);
 * Pré-condição: nenhuma.
 * Pós-condição: aloca memoria dinamicamente para um vetor de ponteiros para char e retorna o endereco do vetor.
 */
-char** createCommandParts();
+char** createCommandParts(int numberOfParts);
 
 /*
 * Pré-Condição: requer um caminho (svg ou geo) contendo uma possivel extensao.

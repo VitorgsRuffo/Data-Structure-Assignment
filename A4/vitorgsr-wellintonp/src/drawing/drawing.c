@@ -6,17 +6,24 @@
 #include "../include/elements.h"
 
 typedef struct drawing {
-    List circleList;
-    List rectangleList;
-    List textList;
-    List blockList;
-    List hydrantList;
-    List baseRadioList;
-    List semaphoreList;
-    List queryElementsList;
-    List healthCenterList;
-    Region region; 
-    List houseList;
+    PQuadTree circles;
+    PQuadTree rectangles;
+    PQuadTree texts;
+    PQuadTree blocks;
+    PQuadTree hydrants;
+    PQuadTree baseRadios;
+    PQuadTree semaphores;
+    PQuadTree healthCenters;
+    HashTable regions; 
+
+    HashTable establishmentTypes;
+    HashTable establishments;
+    HashTable people;
+    PQuadTree housesTree;
+    HashTable housesTable;
+
+    List queryElements;
+    
 }drawing;
 
 Drawing createDrawing(){
@@ -27,116 +34,124 @@ Drawing createDrawing(){
         exit(1);
     }
     
-    dr->circleList = createList();
-    dr->rectangleList = createList();
-    dr->textList = createList();
-    dr->blockList = createList();
-    dr->hydrantList = createList();
-    dr->baseRadioList = createList();
-    dr->semaphoreList = createList();
-    dr->queryElementsList = createList();
-    dr->healthCenterList = createList();
-    dr->houseList = createList();
-    dr->region = NULL;
+    dr->circles = createPQuadTree(getCircleId, getCircleCoordinates);
+    dr->rectangles = createPQuadTree(getRectangleId, getRectangleCoordinates);
+    dr->texts = createPQuadTree(getTextId, getTextCoordinates);
+    dr->blocks = createPQuadTree(getBlockCep, getBlockCoordinates);
+    dr->hydrants = createPQuadTree(getHydrantId, getHydrantCoordinates);
+    dr->baseRadios = createPQuadTree(getBaseRadioId, getBaseRadioCoordinates);
+    dr->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
+    dr->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
+    dr->regions = createHashTable(X, getRegionId);
+
     
+    //dr->establishmentTypes = createHashTable(X, getEstablishmentCode);
+    //dr->establishments = createHashTable(X, getEstablishmentCnpj);
+    //dr->people = createHashTable(X, getPersonCpf);
+    dr->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
+    //dr->housesTable = createHashTable(X, getHouseCpf);
+    
+    dr->queryElements = createList();
+
     return dr;
 }
 
 
-List getCircleList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getCircleList"))
+PQuadTree getCircles(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getCircles"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->circleList;
+    return dr->circles;
 }
 
-List getRectangleList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getRectangleList"))
+PQuadTree getRectangles(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getRectangles"))
         return NULL;
     
     drawing *dr = (drawing*) Dr;
-    return dr->rectangleList;
+    return dr->rectangles;
 }
 
-List getTextList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getTextList"))
+PQuadTree getTexts(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getTexts"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->textList;
+    return dr->texts;
 }
 
-List getBlockList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getBlockList"))
+PQuadTree getBlocks(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getBlocks"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->blockList;
+    return dr->blocks;
 }
 
-List getHydrantList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getHydrantList"))
+PQuadTree getHydrants(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getHydrants"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->hydrantList;
+    return dr->hydrants;
 }
 
-List getBaseRadioList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getBaseRadioList"))
+PQuadTree getBaseRadios(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getBaseRadios"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->baseRadioList;
+    return dr->baseRadios;
 }
 
-List getSemaphoreList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getSemaphoreList"))
+PQuadTree getSemaphores(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getSemaphores"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->semaphoreList;
+    return dr->semaphores;
 }
 
-List getQueryElementsList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getQueryElementsList"))
+List getHealthCenters(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getHealthCenters"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->queryElementsList;
+    return dr->healthCenters;
 }
 
-List getHealthCenterList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getHealthCenterList"))
+PQuadTree getHousesTree(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getHousesTree"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->healthCenterList;
+    return dr->housesTree;
 }
-
-List getHouseList(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getHouseList"))
+/*
+HashTable getHousesTable(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getHousesTable"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->houseList;
+    return dr->housesTable;
 }
-
-void setRegion(Drawing Dr, Region Reg){
-    if(isElementNull(Dr, "drawing", "setRegion"))
-        return;
-
-    drawing *dr = (drawing*) Dr;
-    dr->region = Reg;
-}
-
-Region getRegion(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getRegion"))
+*/
+List getQueryElements(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getQueryElements"))
         return NULL;
 
     drawing *dr = (drawing*) Dr;
-    return dr->region;
+    return dr->queryElements;
+}
+
+
+HashTable getRegions(Drawing Dr){
+    if(isElementNull(Dr, "drawing", "getRegions"))
+        return NULL;
+
+    drawing *dr = (drawing*) Dr;
+    return dr->regions;
 }
 
 

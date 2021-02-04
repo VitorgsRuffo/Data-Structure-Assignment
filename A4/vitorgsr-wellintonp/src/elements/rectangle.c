@@ -9,6 +9,7 @@ typedef struct rectangle {
     char* height;
     char* x;
     char* y;
+    Point coordinates;
     char* corb;
     char* corp;
     char* rw;
@@ -30,6 +31,7 @@ Rectangle createRectangle(char* id, char* width, char* height, char* x, char* y,
     strcpy(rect->height, height);
     strcpy(rect->x, x);
     strcpy(rect->y, y);
+    rect->coordinates = createPoint(atof(x), atof(y));
     strcpy(rect->corb, corb);
     strcpy(rect->corp, corp);
     strcpy(rect->rw, rw);
@@ -71,6 +73,11 @@ char* getRectangleY(Rectangle Rect){
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->y;
+}
+
+Point getRectangleCoordinates(Rectangle Rect){
+    rectangle *rect = (rectangle*) Rect;
+    return rect->coordinates;
 }
 
 char* getRectangleCorb(Rectangle Rect){
@@ -193,6 +200,7 @@ void freeRectangle(Rectangle Rect){
     free(rect->height);  
     free(rect->x); 
     free(rect->y); 
+    free(rect->coordinates);
     free(rect->corb); 
     free(rect->corp);
     free(rect->rw);

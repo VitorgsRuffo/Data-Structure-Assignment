@@ -39,6 +39,12 @@ char* getHydrantRadius(Hydrant Hyd);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de hidrante.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse hidrante.
+*/
+Point getHydrantCoordinates(Hydrant Hyd);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de hidrante.
 * Pós-Condição: retorna o sw do hidrante passado.
 */
 char* getHydrantSw(Hydrant Hyd);

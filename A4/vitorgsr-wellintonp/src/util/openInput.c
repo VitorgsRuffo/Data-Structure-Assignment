@@ -3,32 +3,21 @@
 
 char* buildInputFilePath(char* inputDirectory, char* inputFileName);
 
-File openInputFile(Parameters Param, char* fileType){ 
+File openInputFile(Parameters Param, getParameterName get){ 
     
-    char* inputDirectory = getInputDirectory(Param); 
-    char* inputFileName;
-
-    if(strcmp(fileType, "geo") == 0){
-        inputFileName = getGeoName(Param); 
-        
-    }else if(strcmp(fileType, "qry") == 0){
-        inputFileName = getQryName(Param);
-
-    }else{
-        printf("%s é um tipo invalido. Nao foi possivel abrir o arquivo ..\n", fileType);
+    if(Param == NULL || get == NULL)
         return NULL;
-    }
-    
+
+    char* inputDirectory = getInputDirectory(Param); 
+    char* inputFileName = (*get)(Param);
+
     char* inputFilePath = buildInputFilePath(inputDirectory, inputFileName); 
 
     FILE* file = fopen(inputFilePath, "r");
 
-    if(file == NULL){
-        printf("Erro ao abrir o arquivo %s..\nFinalizando o programa..\n", fileType);
-        exit(1);
-    }
-    printf("O arquivo %s foi aberto..\n", fileType);  //printf("caminho: %s.\n", inputFilePath);
-    
+    if(file == NULL)
+       return NULL;
+        
     free(inputFilePath);
     return file;
 }

@@ -6,6 +6,7 @@ typedef struct text {
     char* id;
     char* x;
     char* y;
+    Point coordinates;
     char* corb;
     char* corp;
     char* textContent;
@@ -23,6 +24,7 @@ Text createText(char* id, char* x, char* y, char* corb, char* corp, char* textCo
     strcpy(txt->id, id);
     strcpy(txt->x, x);
     strcpy(txt->y, y);
+    txt->coordinates = createPoint(atof(x), atof(y));
     strcpy(txt->corb, corb);
     strcpy(txt->corp, corp);
     strcpy(txt->textContent, textContent);
@@ -51,6 +53,11 @@ char* getTextY(Text Txt){
         return NULL;
     text *txt = (text*) Txt;
     return txt->y;
+}
+
+Point getTextCoordinates(Text Txt){
+    text *txt = (text*) Txt;
+    return txt->coordinates;
 }
 
 char* getTextCorb(Text Txt){
@@ -113,7 +120,8 @@ void freeText(Text Txt){
     text *txt = (text*) Txt;
     free(txt->id);   
     free(txt->x); 
-    free(txt->y); 
+    free(txt->y);
+    free(txt->coordinates); 
     free(txt->corb); 
     free(txt->corp);
     free(txt->textContent);

@@ -7,6 +7,7 @@ typedef struct circle{
     char* radius;
     char* x;
     char* y;
+    Point coordinates;
     char* corb;
     char* corp;
     char* cw;
@@ -28,6 +29,7 @@ Circle createCircle(char* id, char* radius, char* x, char* y, char* corb, char* 
     strcpy(circ->radius, radius);
     strcpy(circ->x, x);
     strcpy(circ->y, y);
+    circ->coordinates = createPoint(atof(x), atof(y));
     strcpy(circ->corb, corb);
     strcpy(circ->corp, corp);
     strcpy(circ->cw, cw);
@@ -61,6 +63,11 @@ char* getCircleY(Circle Circ){
         return NULL;
     circle *circ = (circle*) Circ;
     return circ->y;
+}
+
+Point getCircleCoordinates(Circle Circ){
+    circle *circ = (circle*) Circ;
+    return circ->coordinates;
 }
 
 char* getCircleCorb(Circle Circ){
@@ -142,6 +149,7 @@ void freeCircle(Circle Circ){
     free(circ->radius);    
     free(circ->x); 
     free(circ->y); 
+    free(circ->coordinates);
     free(circ->corb); 
     free(circ->corp); 
     free(circ->cw);   

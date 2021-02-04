@@ -6,6 +6,8 @@ typedef struct parameters {
     char* geoName;          // -f: nome + extensao do arquivo .geo
     char* qryName;          // -q: nome + extensao do arquivo .qry
     char* outputDirectory;  // -o: diretorio de saida
+    char* ecName;           // -ec: nome + extensao do arquivo .ec
+    char* pmName;           // -pm: nome + extensao do arquivo .pm
 }parameters;
 
 //Alocar memoria para o TAD que representa os parametros do programa
@@ -22,6 +24,8 @@ Parameters createParameters(){
     param->geoName = NULL;
     param->qryName = NULL;
     param->outputDirectory = NULL;
+    param->ecName = NULL;
+    param->pmName = NULL;
     
     return param;
 }
@@ -59,8 +63,16 @@ void setParameters(Parameters Param, char* argv[], int argc){
         }else if(strcmp("-o", argv[i]) == 0){
             ++i;
             setCurrentParameter(&param->outputDirectory, argv[i]);
+            
+        }else if(strcmp("-ec", argv[i]) == 0){
+            ++i;
+            setCurrentParameter(&param->ecName, argv[i]);
+
+        }else if(strcmp("-pm", argv[i]) == 0){
+            ++i;
+            setCurrentParameter(&param->pmName, argv[i]);
         }
-        
+
         i++;
     }
 
@@ -70,6 +82,7 @@ void setParameters(Parameters Param, char* argv[], int argc){
         strcpy(param->inputDirectory, "./");  
     }
 
+    //Geo e out são obrigatorios!
     if(param->geoName == NULL){
         printf("O parametro -f, que e obrigatorio, esta ausente..\nFinalizando o programa..\n");
         exit(1);
@@ -125,7 +138,29 @@ char* getOutputDirectory(Parameters Param){
     
     parameters *param = (parameters*) Param;
     return param->outputDirectory;
-} 
+}
+
+char* getEcName(Parameters Param){
+    if(Param == NULL){
+        printf("Erro ao alocar memória para o atributo ecName..\nFinalizando o programa..\n");
+        //***Desalocar memórias alocadas até o momentos***
+        exit(1);
+    }
+    
+    parameters *param = (parameters*) Param;
+    return param->ecName;
+}
+
+char* getPmName(Parameters Param){
+    if(Param == NULL){
+        printf("Erro ao alocar memória para o atributo pmName..\nFinalizando o programa..\n");
+        //***Desalocar memórias alocadas até o momentos***
+        exit(1);
+    }
+    
+    parameters *param = (parameters*) Param;
+    return param->pmName;
+}
 
 int isQryNull(Parameters Param){
     if(isElementNull(Param, "parameter", "isQryNull"))
@@ -134,6 +169,30 @@ int isQryNull(Parameters Param){
     parameters *param = (parameters*) Param;
     
     if(param->qryName == NULL)
+        return 1;
+    else
+        return 0;
+}
+
+int isEcNull(Parameters Param){
+    if(isElementNull(Param, "parameter", "isEcNull"))
+        return 1;
+
+    parameters *param = (parameters*) Param;
+    
+    if(param->ecName == NULL)
+        return 1;
+    else
+        return 0;
+}
+
+int isPmNull(Parameters Param){
+    if(isElementNull(Param, "parameter", "isPmNull"))
+        return 1;
+
+    parameters *param = (parameters*) Param;
+    
+    if(param->pmName == NULL)
         return 1;
     else
         return 0;

@@ -7,6 +7,7 @@ typedef struct hydrant{
     char* x;
     char* y;
     char* radius;
+    Point coordinates;
     char* sw;
     char* cfill;
     char* cstrk;
@@ -28,6 +29,7 @@ Hydrant createHydrant(char* id, char* x, char* y, char* sw, char* cfill, char* c
     strcpy(hyd->x, x);
     strcpy(hyd->y, y);
     strcpy(hyd->radius, "10");
+    hyd->coordinates = createPoint(atof(x), atof(y));
     strcpy(hyd->sw, sw);
     strcpy(hyd->cfill, cfill);
     strcpy(hyd->cstrk, cstrk);
@@ -61,6 +63,11 @@ char* getHydrantRadius(Hydrant Hyd){
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->radius;
+}
+
+Point getHydrantCoordinates(Hydrant Hyd){
+    hydrant *hyd = (hydrant*) Hyd;
+    return hyd->coordinates;
 }
 
 char* getHydrantSw(Hydrant Hyd){
@@ -129,6 +136,7 @@ void freeHydrant(Hydrant Hyd){
     free(hyd->x); 
     free(hyd->y);
     free(hyd->radius);
+    free(hyd->coordinates);
     free(hyd->sw);
     free(hyd->cfill);  
     free(hyd->cstrk);

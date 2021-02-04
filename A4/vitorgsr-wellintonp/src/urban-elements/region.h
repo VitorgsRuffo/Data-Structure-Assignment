@@ -10,7 +10,14 @@ typedef void* Region;
 * Pré-Condição: requer os dados (strings) que compoem uma regiao.
 * Pós-Condição: retorna o endereco de uma nova instancia de regiao que possui as informacoes passadas.
 */
-Region createRegion(char* x, char* y, char* w, char* h, char* demographicDensity);
+Region createRegion(int id, char* x, char* y, char* w, char* h, char* demographicDensity);
+
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de regiao.
+* Pós-Condição: retorna o id do regiao passada.
+*/
+int getRegionId(Region Reg);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de regiao.

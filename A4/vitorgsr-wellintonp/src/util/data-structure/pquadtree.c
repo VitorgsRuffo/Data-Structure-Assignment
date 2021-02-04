@@ -180,7 +180,6 @@ void savePointOnListIfItsInsideShape(Info info, ExtraInfo extraInfo){
     
     Point infoPoint = (*(tree->getPoint))(info);
     
-
     if((*testFunction)(shape, infoPoint)){
         
         double nodeX = getPointX(infoPoint);

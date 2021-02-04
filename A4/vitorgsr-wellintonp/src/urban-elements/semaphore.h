@@ -39,6 +39,12 @@ char* getSemaphoreRadius(Semaphore Semap);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de semaforo.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse semaforo.
+*/
+Point getSemaphoreCoordinates(Semaphore Semap);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de semaforo.
 * Pós-Condição: retorna o sw do semaforo passado.
 */
 char* getSemaphoreSw(Semaphore Semap);

@@ -50,9 +50,33 @@ char* getOutputDirectory(Parameters Param);
 
 /*
 * Pré-Condição: requer um TAD parametros.
+* Pós-Condição: retorna o valor do campo "nome do ed" do TAD parametros
+*/
+char* getEcName(Parameters Param);
+
+/*
+* Pré-Condição: requer um TAD parametros.
+* Pós-Condição: retorna o valor do campo "nome do pm" do TAD parametros
+*/
+char* getPmName(Parameters Param);
+
+/*
+* Pré-Condição: requer um TAD parametros.
 * Pós-Condição: retorna 1 se o arquivo query nao foi especificado nos parametros do siguel, ou 0 caso ele tenha sido especificado.
 */
 int isQryNull(Parameters Param);
+
+/*
+* Pré-Condição: requer um TAD parametros.
+* Pós-Condição: retorna 1 se o arquivo ec nao foi especificado nos parametros do siguel, ou 0 caso ele tenha sido especificado.
+*/
+int isEcNull(Parameters Param);
+
+/*
+* Pré-Condição: requer um TAD parametros.
+* Pós-Condição: retorna 1 se o arquivo pm nao foi especificado nos parametros do siguel, ou 0 caso ele tenha sido especificado.
+*/
+int isPmNull(Parameters Param);
 
 /*
 * Pré-Condição: requer um TAD parametros.

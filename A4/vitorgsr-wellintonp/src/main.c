@@ -5,13 +5,12 @@
 
 /*to do list:
 
-    1 - tratar novos parametros.
-    2 - mudar drawing: nome e estruturas de dados.
-    3 - inserir tads antigos nas novas estruturas.
+    0 - determinar tamanho da hashtable.
+    1 - mudar drawing (-> city) ao longo do trabalho.
+    3 - criar funcao para executar pintura das sombras das quadras (comando dd).
+
     4 - inserir novos tads nas estruturas.
-    5 - alterar comando dd.
-    
-    6 - planejamento para o query.
+    5 - planejamento para o query.
 
 */
 
@@ -24,7 +23,7 @@ int main(int argc, char* argv[]){
     setParameters(parameters, argv, argc);
 
     //Abrindo o arquivo de entrada (.geo)
-    File geo = openInputFile(parameters, "geo");
+    File geo = openInputFile(parameters, getGeoName);
 
     //Criando o TAD desenho:
     Drawing drawing = createDrawing();
@@ -33,6 +32,22 @@ int main(int argc, char* argv[]){
     readGeo(geo, drawing);
     closeInputFile(geo);
     
+    if(!isEcNull(parameters)){
+        //Abrindo o arquivo de entrada (.ec)
+        File ec = openInputFile(parameters, getEcName);
+
+
+        //Lendo arquivo ec:
+    }
+
+    if(!isPmNull(parameters)){
+        //Abrindo o arquivo de entrada (.pm)
+        File ec = openInputFile(parameters, getPmName);
+
+        //Lendo arquivo pm:
+    }
+
+
     //Criando SVG do geo:
     Svg geoSvg = NULL;
     geoSvg = createSvg(parameters, drawing, "geo");
@@ -40,6 +55,7 @@ int main(int argc, char* argv[]){
         drawOnSvg(geoSvg, drawing);
         finishSvg(geoSvg);
     }
+
     
     if(!isQryNull(parameters)){
         //Abrindo o arquivo de entrada (.qry)

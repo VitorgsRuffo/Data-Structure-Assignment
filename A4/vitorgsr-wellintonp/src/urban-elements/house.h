@@ -26,6 +26,12 @@ void setHouseLocation(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
+* Pós-Condição: retorna o cpf do(a) proprietario(a) da casa passada.
+*/
+char* getHouseCpf(House H);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de casa.
 * Pós-Condição: retorna a coordenada x da casa passada.
 */
 double getHouseX(House H);
@@ -35,6 +41,12 @@ double getHouseX(House H);
 * Pós-Condição: retorna a coordenada y da casa passada.
 */
 double getHouseY(House H);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de casa.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse casa.
+*/
+Point getHouseCoordinates(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.

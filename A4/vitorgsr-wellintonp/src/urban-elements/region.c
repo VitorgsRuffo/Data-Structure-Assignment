@@ -3,6 +3,7 @@
 #include "region.h"
 
 typedef struct region {
+    int id;
     char* x;
     char* y;
     char* width;
@@ -11,10 +12,11 @@ typedef struct region {
 }region;
 
 
-Region createRegion(char* x, char* y, char* w, char* h, char* demographicDensity){
+Region createRegion(int id, char* x, char* y, char* w, char* h, char* demographicDensity){
 
     region* reg = (region*) malloc(sizeof(region));
 
+    reg->id = id;
     reg->x = (char*) malloc((strlen(x) + 1) * sizeof(char));
     reg->y = (char*) malloc((strlen(y) + 1) * sizeof(char));
     reg->width = (char*) malloc((strlen(w) + 1) * sizeof(char));
@@ -28,6 +30,11 @@ Region createRegion(char* x, char* y, char* w, char* h, char* demographicDensity
     strcpy(reg->demographicDensity, demographicDensity);
 
     return reg;
+}
+
+int getRegionId(Region Reg){
+    region *reg = (region*) Reg;
+    return reg->id;
 }
 
 char* getRegionX(Region Reg){

@@ -27,8 +27,8 @@ void readSemaphoreCustomization(char* command, char** commandParts, ElementsCust
 void readBaseRadioCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 
 //T3
-void readHealthCenter(char* command, char** commandParts, Drawing Dr);
-void readRegion(char* command, char** commandParts, Drawing Dr);
+void readHealthCenter(char* command, int id, char** commandParts, Drawing Dr);
+void readRegion(char* command, int id, char** commandParts, Drawing Dr);
 
 void freeReadGeoResources(char* command, char** commandParts, ElementsCustomization elementsCustom);
 
@@ -41,6 +41,8 @@ void readGeo(File geo, Drawing Dr){
     commandParts = createCommandParts(maxNumberOfGeoCommandParts);
     
     ElementsCustomization elementsCustom = createElementsCustomization();
+    
+    int uniqueId = 0; 
 
     while(!feof(geo)){
         if(fgets(command, commandMaxLength, geo) == NULL) // se tertarmos ler alem da ultima linha do arquivo fgets retornara NULL e sairemos do loop de leitura.
@@ -90,10 +92,12 @@ void readGeo(File geo, Drawing Dr){
             readBaseRadioCustomization(command, commandParts, elementsCustom);
         
         else if(!strcmp(commandType, "ps"))
-            readHealthCenter(command, commandParts, Dr);
+            readHealthCenter(command, uniqueId, commandParts, Dr);
 
         else if(!strcmp(commandType, "dd"))
-            readRegion(command, commandParts, Dr);
+            readRegion(command, uniqueId, commandParts, Dr);
+        
+        uniqueId++;
         
     }
 
@@ -199,16 +203,16 @@ void readBaseRadioCustomization(char* command, char** commandParts, ElementsCust
     setBaseRadioCstrkCustomization(elementsCustom, commandParts[3]);
 }
 
-void readHealthCenter(char* command, char** commandParts, Drawing Dr){
+void readHealthCenter(char* command, int id, char** commandParts, Drawing Dr){
     sscanf(command, "%s %s %s", commandParts[0], commandParts[1], commandParts[2]);
-    HealthCenter healthCenter = createHealthCenter(commandParts[1], commandParts[2]);
+    HealthCenter healthCenter = createHealthCenter(id, commandParts[1], commandParts[2]);
     List healthCenterList = getHealthCenterList(Dr);
     insert(healthCenterList, healthCenter);
 }
 
-void readRegion(char* command, char** commandParts, Drawing Dr){
+void readRegion(char* command, int id, char** commandParts, Drawing Dr){
     sscanf(command, "%s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
-    Region region = createRegion(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
+    Region region = createRegion(id, commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
     setRegion(Dr, region);
 }
 

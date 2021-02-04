@@ -10,7 +10,13 @@ typedef void* HealthCenter;
 * Pré-Condição: requer os dados (strings) que compoem um posto de saude.
 * Pós-Condição: retorna o endereco de uma nova instancia de posto de saude que possui as informacoes passadas.
 */
-HealthCenter createHealthCenter(char* x, char* y);
+HealthCenter createHealthCenter(int id, char* x, char* y);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de Posto.
+* Pós-Condição: retorna o id do Posto passado.
+*/
+int getHealthCenterId(HealthCenter HealthC);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de Posto.
@@ -23,6 +29,12 @@ char* getHealthCenterX(HealthCenter HealthC);
 * Pós-Condição: retorna a coordenada y do posto passado.
 */
 char* getHealthCenterY(HealthCenter HealthC);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de Posto.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse Posto.
+*/
+Point getHealthCenterCoordinates(HealthCenter HealthC);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de Posto.
