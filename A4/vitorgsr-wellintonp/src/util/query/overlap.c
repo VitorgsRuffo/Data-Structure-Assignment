@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "../include/elements.h"
+#include "../input/openInput.h"
 
 typedef struct WrapperRectangle {
     double x;

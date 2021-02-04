@@ -1,8 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/query.h"
-#include "../drawing/drawing.h"
 #include "../include/urbanElements.h"
+#include "../input/openInput.h"
 
 void writeUrbanElementInformationOnTxt(File txt, char* urbanElementToString);
 

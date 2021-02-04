@@ -1,7 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../drawing/drawing.h"
 #include "../include/elements.h"
+#include "../input/openInput.h"
 
 void setElementCorbAndCorp(Info elementInfo, char* elementType, char* corb, char* corp, char** originalCorb, char** originalCorp);
 void writeElementPaintResultOnTxt(File txt, char* command, char* I, char* elementType, char* originalCorb, char* originalCorp);

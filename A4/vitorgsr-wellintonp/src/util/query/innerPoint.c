@@ -1,7 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../drawing/drawing.h"
 #include "../include/elements.h"
+#include "../input/openInput.h"
 
 
 int isPointAnInnerOne(Info elementInfo, char* elementType, Point* centerOfMass, Point point);

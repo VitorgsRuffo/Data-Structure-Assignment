@@ -1,7 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../drawing/drawing.h"
 #include "../include/elements.h"
+#include "../input/openInput.h"
 
 void* getElementFreeFunction(char* elementType);
 void* getElementToStringFunction(char* elementType);

@@ -1,7 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../drawing/drawing.h"
 #include "../include/query.h"
+#include "../../include/util.h"
 
 File openTxt(Parameters Param);
 void closeTxt(File txt);
