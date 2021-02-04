@@ -1,5 +1,4 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "../drawing/drawing.h"
 #include "../urban-elements/block.h"
 #include "house.h"
@@ -52,14 +51,14 @@ House createHouse(char* cep, char face, int number, int casesNumber){
 void readBlockAttributes(Info blockInfo, HouseBlock *block);
 
 void setHouseBlock(House H, Drawing Dr){
-    if(isElementNull(H, "Casa", "setHouseBlock"))
+    if(H == NULL || Dr == NULL)
         return;
 
     house *h = (house*) H;
 
     Node blockNode;
     blockNode = searchForBlockByCep(Dr, h->address.cep);
-    if(isElementNull(blockNode, "blockNode", "searchForBlockByCep | setHouseBlock"))
+    if(blockNode == NULL)
         return;
     
     List blockList = getBlockList(Dr);
@@ -83,7 +82,7 @@ void setHouseLocationOnEastFace(house *h);
 void setHouseLocationOnWestFace(house *h);
 
 void setHouseLocation(House H){
-    if(isElementNull(H, "Casa", "setHouseLocation"))
+    if(H == NULL)
         return;
 
     house *h = (house*) H;
@@ -108,9 +107,6 @@ void setHouseLocation(House H){
         case 'o':
             setHouseLocationOnWestFace(h);
             break;
-
-        default:
-            printf("A face da quadra (%s) e invalida.\n", h->address.cep);
     }
 
     h->coordinates = createPoint(h->x, h->y);
@@ -149,39 +145,39 @@ char* getHouseCpf(House H){
 }
 
 double getHouseX(House H){
-    if(isElementNull(H, "Casa", "getHouseX"))
+    if(H == NULL)
         return 0;
     house *h = (house*) H;
     return h->x;
 }
 double getHouseY(House H){
-    if(isElementNull(H, "Casa", "getHouseY"))
+    if(H == NULL)
         return 0;
     house *h = (house*) H;
     return h->y;
 }
 double getHouseW(House H){
-    if(isElementNull(H, "Casa", "getHouseWidth"))
+    if(H == NULL)
         return 0;
     house *h = (house*) H;
     return h->w;
 }
 double getHouseH(House H){
-    if(isElementNull(H, "Casa", "getHouseHeight"))
+    if(H == NULL)
         return 0;
     house *h = (house*) H;
     return h->h;
 }
 
 double getHouseCenterOfMassX(House H){
-    if(isElementNull(H, "Casa", "getHouseCenterOfMassX"))
+    if(H == NULL)
         return 0;
     house *h = (house*) H;
     return h->centerOfMass.x;
 }
 
 double getHouseCenterOfMassY(House H){
-    if(isElementNull(H, "Casa", "getHouseCenterOfMassY"))
+    if(H == NULL)
         return 0;
     house *h = (house*) H;
     return h->centerOfMass.y;
@@ -193,14 +189,14 @@ Point getHouseCoordinates(House H){
 }
 
 int getHouseCasesNumber(House H){
-    if(isElementNull(H, "Casa", "getHouseCasesNumber"))
+    if(H == NULL)
         return 0;
     house *h = (house*) H;
     return h->casesNumber;
 }
 
 void printHouse(House H){
-    if(isElementNull(H, "Casa", "printHouse"))
+    if(H == NULL)
         return;
     house *h = (house*) H;
     printf("Casa:\nw: %lf\nh: %lf\nx: %lf\ny: %lf\ncasos: %d\n\n",
@@ -208,7 +204,7 @@ void printHouse(House H){
 }
 
 void freeHouse(House H){
-    if(isElementNull(H, "Casa", "freeHouse"))
+    if(H == NULL)
         return;
 
     house *h = (house*) H;

@@ -1,8 +1,5 @@
-#include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/urbanElements.h"
-#include "../drawing/drawing.h"
-#include "../include/query.h"
+#include "../../include/headers.h"
+#include "../../include/urbanElements.h"
 
 
 char* buildHouseTag(House house);

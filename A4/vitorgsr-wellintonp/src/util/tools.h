@@ -7,17 +7,6 @@
 #define commandMaxLength 150
 
 /*
-* apontador para void que representa qualquer TAD do programa.
-*/
-typedef void* Element;
-
-/*
-* Pré-condição: requer a referencia para uma instancia de algum TAD, o nome do seu tipo, e o nome da funcao que quer checar se a referencia para aquele TAD é NULL.
-* Pós-condição: retorna 1 se a intancia do TAD for NULL, ou 0 se nao for.
-*/
-int isElementNull(Element element, char* elementName, char* functionName);
-
-/*
 * Pré-condição: nenhuma.
 * Pós-condição: aloca memoria dinamicamente para um vetor de ponteiros para char e retorna o endereco do vetor.
 */

@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "text.h"
+#include "../point.h"
 
 typedef struct text {
     char* id;
@@ -33,7 +33,7 @@ Text createText(char* id, char* x, char* y, char* corb, char* corp, char* textCo
 }
 
 char* getTextId(Text Txt){
-    if(isElementNull(Txt, "Texto", "getTextId"))
+    if(Txt == NULL)
         return NULL;
 
     text *txt = (text*) Txt;
@@ -41,7 +41,7 @@ char* getTextId(Text Txt){
 }
 
 char* getTextX(Text Txt){
-    if(isElementNull(Txt, "Texto", "getTextX"))
+    if(Txt == NULL)
         return NULL;
 
     text *txt = (text*) Txt;
@@ -49,54 +49,56 @@ char* getTextX(Text Txt){
 }
 
 char* getTextY(Text Txt){
-    if(isElementNull(Txt, "Texto", "getTextY"))
+    if(Txt == NULL)
         return NULL;
     text *txt = (text*) Txt;
     return txt->y;
 }
 
 Point getTextCoordinates(Text Txt){
+    if(Txt == NULL)
+        return NULL;
     text *txt = (text*) Txt;
     return txt->coordinates;
 }
 
 char* getTextCorb(Text Txt){
-    if(isElementNull(Txt, "Texto", "getTextCorb"))
+    if(Txt == NULL)
         return NULL;
     text *txt = (text*) Txt;
     return txt->corb;
 }
 
 void setTextCorb(Text Txt, char* corb){
-    if(isElementNull(Txt, "Texto", "setTextCorb"))
+    if(Txt == NULL)
         return;
     text *txt = (text*) Txt;
     strcpy(txt->corb, corb);
 }
 
 char* getTextCorp(Text Txt){
-    if(isElementNull(Txt, "Texto", "getTextCorp"))
+    if(Txt == NULL)
         return NULL;
     text *txt = (text*) Txt;
     return txt->corp;
 }
 
 void setTextCorp(Text Txt, char* corp){
-    if(isElementNull(Txt, "Texto", "setTextCorp"))
+    if(Txt == NULL)
         return;
     text *txt = (text*) Txt;
     strcpy(txt->corp, corp);
 }
 
 char* getTextContent(Text Txt){
-    if(isElementNull(Txt, "Texto", "getTextContent"))
+    if(Txt == NULL)
         return NULL;
     text *txt = (text*) Txt;
     return txt->textContent;
 }
 
 char* textToString(Text Txt){
-    if(isElementNull(Txt, "Texto", "textToString"))
+    if(Txt == NULL)
         return NULL;
     text *txt = (text*) Txt;
 
@@ -106,7 +108,7 @@ char* textToString(Text Txt){
 }
 
 void printText(Text Txt){
-    if(isElementNull(Txt, "Texto", "printText"))
+    if(Txt == NULL)
         return;
     text *txt = (text*) Txt;
     printf("Texto:\nId: %s\nx: %s\ny: %s\ncorb: %s\ncorp: %s\ntextContent: %s\n\n\n", 
@@ -114,7 +116,7 @@ void printText(Text Txt){
 }
 
 void freeText(Text Txt){
-    if(isElementNull(Txt, "Texto", "freeText"))
+    if(Txt == NULL)
         return;
 
     text *txt = (text*) Txt;

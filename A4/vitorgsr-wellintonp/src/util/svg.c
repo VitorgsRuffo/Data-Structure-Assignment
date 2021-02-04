@@ -1,8 +1,7 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "../include/elements.h"
-#include "../include/urbanElements.h"
-#include "../drawing/drawing.h"
+#include "./input/parameters.h"
+#include "svg.h"
 #include <unistd.h>
 
 char* buildGeoSvgPath(Parameters Param);

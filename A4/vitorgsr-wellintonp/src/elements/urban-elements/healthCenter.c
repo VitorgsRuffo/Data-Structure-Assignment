@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "healthCenter.h"
+#include "../point.h"
 
 typedef struct healthCenter{
     int id;
@@ -34,33 +34,35 @@ int getHealthCenterId(HealthCenter HealthC){
 }
 
 char* getHealthCenterX(HealthCenter HealthC){
-    if(isElementNull(HealthC, "posto de saude", "getHealthCenterX"))
+    if(HealthC == NULL)
         return NULL;
     healthCenter *healthC = (healthCenter*) HealthC;
     return healthC->x;
 }
 
 char* getHealthCenterY(HealthCenter HealthC){
-    if(isElementNull(HealthC, "posto de saude", "getHealthCenterY"))
+    if(HealthC == NULL)
         return NULL;
     healthCenter *healthC = (healthCenter*) HealthC;
     return healthC->y;
 }
 
 Point getHealthCenterCoordinates(HealthCenter HealthC){
+    if(HealthC == NULL)
+        return NULL;
     healthCenter *healthC = (healthCenter*) HealthC;
     return healthC->coordinates;
 }
 
 char* getHealthCenterRadius(HealthCenter HealthC){
-    if(isElementNull(HealthC, "posto de saude", "getHealthCenterRadius"))
+    if(HealthC == NULL)
         return NULL;
     healthCenter *healthC = (healthCenter*) HealthC;
     return healthC->radius;
 }
 
 void freeHealthCenter(HealthCenter HealthC){
-    if(isElementNull(HealthC, "posto de saude", "freeHealthCenter"))
+    if(HealthC == NULL)
         return;
 
     healthCenter *healthC = (healthCenter*) HealthC;

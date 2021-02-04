@@ -1,5 +1,4 @@
 #include "../../include/headers.h"
-#include "../../include/util.h"
 #include "list.h"
 
 typedef struct node {
@@ -28,7 +27,7 @@ List createList(){
 
 
 int length(List Li){
-    if(isElementNull(Li, "lista", "length"))
+    if(Li == NULL)
         return -1;
     
     list *li = (list*) Li;
@@ -47,10 +46,7 @@ int length(List Li){
 
 
 Node insert(List Li, Info info){
-    if(isElementNull(Li, "lista", "insert"))
-        return NULL;
-
-    if(isElementNull(info, "Info", "insert"))
+    if(Li == NULL || info == NULL )
         return NULL;
         
     list *li = (list*) Li;
@@ -72,10 +68,7 @@ Node insert(List Li, Info info){
 }
 
 int removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*)){
-    if(isElementNull(Li, "Li", "removeNode"))
-        return 0;
-        
-    if(isElementNull(nodeToRemove, "nodeToRemove", "removeNode"))
+    if(Li == NULL || nodeToRemove == NULL)
         return 0;
         
     list *li = (list*) Li;
@@ -113,10 +106,7 @@ int removeNode(List Li, Node nodeToRemove, void (*freeTAD)(void*)){
 }
 
 Info get(List Li, Node Posic){ 
-    if(isElementNull(Li, "lista", "get"))
-        return NULL;
-
-    if(isElementNull(Posic, "posic", "get"))
+    if(Li == NULL || Posic == NULL)
         return NULL;
 
     node *NODE = (node*) Posic;
@@ -124,13 +114,7 @@ Info get(List Li, Node Posic){
 }
 
 Node insertBefore(List Li, Node Posic, Info Information){
-    if(isElementNull(Li, "lista", "insertBefore"))
-        return NULL;
-        
-    if(isElementNull(Posic, "posic", "insertBefore"))
-        return NULL;
-
-    if(isElementNull(Information, "information", "insertBefore"))
+    if(Li == NULL || Posic == NULL || Information == NULL)
         return NULL;
 
     list *li = (list*) Li;
@@ -158,13 +142,7 @@ Node insertBefore(List Li, Node Posic, Info Information){
 
 Node insertAfter(List Li, Node Posic, Info Information){   
     
-    if(isElementNull(Li, "lista", "insertBefore"))
-        return NULL;
-            
-    if(isElementNull(Posic, "posic", "insertBefore"))
-        return NULL;
-
-    if(isElementNull(Information, "information", "insertBefore"))
+    if(Li == NULL || Posic == NULL || Information == NULL)
         return NULL;
         
     list *li = (list*) Li;
@@ -191,10 +169,7 @@ Node insertAfter(List Li, Node Posic, Info Information){
 }
 
 Node getFirst(List Li){
-    if(isElementNull(Li, "lista", "getFirst"))
-        return NULL;
-
-    if(length(Li) == 0)
+    if(Li == NULL || length(Li) == 0)
         return NULL;
     
     list *li = (list*) Li;
@@ -202,10 +177,7 @@ Node getFirst(List Li){
 }
 
 Node getNext(List Li, Node Posic){
-    if(isElementNull(Li, "lista", "getNext"))
-        return NULL;
-        
-    if(isElementNull(Posic, "posic", "getNext"))
+    if(Li == NULL || Posic == NULL)
         return NULL;
 
     node *NODE = (node*) Posic;
@@ -213,22 +185,15 @@ Node getNext(List Li, Node Posic){
 }
 
 Node getLast(List Li){
-    if(isElementNull(Li, "lista", "getLast"))
+    if(Li == NULL || length(Li) == 0)
         return NULL;
-    
-    if(length(Li) == 0)
-        return NULL;
-    
 
     list *li = (list*) Li;
     return li->last;
 }
 
 Node getPrevious(List Li, Node Posic){ 
-    if(isElementNull(Li, "lista", "getPrevious"))
-        return NULL;
-        
-    if(isElementNull(Posic, "posic", "getPrevious"))
+    if(Li == NULL || Posic == NULL)
         return NULL;
 
     node *NODE = (node*) Posic;
@@ -236,7 +201,7 @@ Node getPrevious(List Li, Node Posic){
 }
 
 Node searchForElementByIdentifier(List Li, char* (*getElementId)(void*), char* idToSearch){
-    if(isElementNull(Li, "lista", "searchForElementByIdentifier"))
+    if(Li == NULL)
         return NULL;
 
     char elementId[30];
@@ -260,7 +225,7 @@ Node searchForElementByIdentifier(List Li, char* (*getElementId)(void*), char* i
 }
 
 void printList(List Li, void (*printInformation)(void*)){
-    if(isElementNull(Li, "lista", "printList"))
+    if(Li == NULL)
         return;
     
     list *li = (list*) Li;
@@ -275,7 +240,7 @@ void printList(List Li, void (*printInformation)(void*)){
 }
 
 void freeList(List Li, void (*freeTAD)(void*)){
-    if(isElementNull(Li, "lista", "freeList"))
+    if(Li == NULL)
         return;
 
     list *li = (list*) Li;

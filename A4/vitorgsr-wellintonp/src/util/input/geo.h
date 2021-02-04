@@ -1,7 +1,6 @@
 #ifndef GEO_H
 #define GEO_H
 
-#include "../drawing/drawing.h"
 
 /*  
 * Pré-Condição: requer um arquivo de entrada geo e uma variavel do tipo desenho.

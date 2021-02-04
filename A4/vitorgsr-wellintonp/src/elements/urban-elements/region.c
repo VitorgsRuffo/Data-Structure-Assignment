@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "region.h"
+#include "point.h"
 
 typedef struct region {
     int id;
@@ -33,49 +33,60 @@ Region createRegion(int id, char* x, char* y, char* w, char* h, char* demographi
 }
 
 int getRegionId(Region Reg){
+    if(Reg == NULL)
+        return;
     region *reg = (region*) Reg;
     return reg->id;
 }
 
 char* getRegionX(Region Reg){
-    if(isElementNull(Reg, "Regiao", "GetRegionX"))
+    if(Reg == NULL)
         return NULL;
     region *reg = (region*) Reg;
     return reg->x;
 }
 
 char* getRegionY(Region Reg){
-    if(isElementNull(Reg, "Regiao", "GetRegionY"))
+    if(Reg == NULL)
         return NULL;
     region *reg = (region*) Reg;
     return reg->y;
 }
 
 char* getRegionWidth(Region Reg){
-    if(isElementNull(Reg, "Regiao", "getRegionWidth"))
+    if(Reg == NULL)
         return NULL;
     region *reg = (region*) Reg;
     return reg->width;
 }
 
 char* getRegionHeight(Region Reg){
-    if(isElementNull(Reg, "Regiao", "getRegionHeight"))
+    if(Reg == NULL)
         return NULL;
     region *reg = (region*) Reg;
     return reg->height;
 }
 
 double getRegionDemographicDensity(Region Reg){
-    if(isElementNull(Reg, "Regiao", "getRegionDemographicDensity"))
+    if(Reg == NULL)
         return -1.0;
 
     region *reg = (region*) Reg;
     return atof(reg->demographicDensity);
 }
 
+void printRegion(Region Reg){
+    if(Reg == NULL)
+        return;
+
+    region *reg = (region*) Reg;
+
+    printf("Regiao:\nid:%d\n w: %s\nh: %s\nx: %s\ny: %s\ndensidade demografica: %s\n\n", reg->id, reg->width, 
+    reg->height, reg->x, reg->y, reg->demographicDensity);
+}
 
 void freeRegion(Region Reg){
-    if(isElementNull(Reg, "regiao", "freeRegion"))
+    if(Reg == NULL)
         return;
 
     region *reg = (region*) Reg;

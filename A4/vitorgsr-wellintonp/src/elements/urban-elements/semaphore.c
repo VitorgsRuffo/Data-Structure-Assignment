@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/urbanElements.h"
+#include "semaphore.h"
+#include "../point.h"
 
 typedef struct semaphore{
     char* id;
@@ -38,68 +38,70 @@ Semaphore createSemaphore(char* id, char* x, char* y, char* sw, char* cfill, cha
 }
 
 char* getSemaphoreId(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "getSemaphoreId"))
+    if(Semap == NULL)
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->id;
 }
 
 char* getSemaphoreX(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "getSemaphoreX"))
+    if(Semap == NULL)
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->x;
 }
 
 char* getSemaphoreY(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "getSemaphoreY"))
+    if(Semap == NULL)
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->y;
 }
 
 char* getSemaphoreRadius(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "getSemaphoreRadius"))
+    if(Semap == NULL)
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->radius;
 }
 
 Point getSemaphoreCoordinates(Semaphore Semap){
+    if(Semap == NULL)
+        return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->coordinates;
 }
 
 char* getSemaphoreSw(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "getSemaphoreSw"))
+    if(Semap == NULL)
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->sw;
 }
 
 void setSemaphoreSw(Semaphore Semap, char* sw){
-    if(isElementNull(Semap, "semaforo", "setSemaphoreSw"))
+    if(Semap == NULL)
         return;
     semaphore *semap = (semaphore*) Semap;
     strcpy(semap->sw, sw);
 }
 
 char* getSemaphoreCfill(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "getSemaphoreCfill"))
+    if(Semap == NULL)
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->cfill;
 }
 
 char* getSemaphoreCstrk(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "getSemaphoreCstrk"))
+    if(Semap == NULL)
         return NULL;
     semaphore *semap = (semaphore*) Semap;
     return semap->cstrk;
 }
 
 double getSemaphoreArea(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "getSemaphoreArea"))
+    if(Semap == NULL)
         return 0;
 
     semaphore *semap = (semaphore*) Semap;
@@ -107,7 +109,7 @@ double getSemaphoreArea(Semaphore Semap){
 }
 
 char* semaphoreToString(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "semaphoreToString"))
+    if(Semap == NULL)
         return NULL;
 
     semaphore *semap = (semaphore*) Semap;
@@ -118,7 +120,7 @@ char* semaphoreToString(Semaphore Semap){
 }
 
 void printSemaphore(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "printSemaphore"))
+    if(Semap == NULL)
         return;
     semaphore *semap = (semaphore*) Semap;
     printf("Semaforo:\nId: %s\nx: %s\ny: %s\nsw: %s\ncfill: %s\ncstrk: %s\n\n\n", 
@@ -126,7 +128,7 @@ void printSemaphore(Semaphore Semap){
 }
 
 void freeSemaphore(Semaphore Semap){
-    if(isElementNull(Semap, "semaforo", "freeSemaphore"))
+    if(Semap == NULL)
         return;
 
     semaphore *semap = (semaphore*) Semap;

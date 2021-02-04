@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/elements.h"
+#include "circle.h"
+#include "../point.h"
 
 typedef struct circle{
     char* id;
@@ -38,75 +38,77 @@ Circle createCircle(char* id, char* radius, char* x, char* y, char* corb, char* 
 }
 
 char* getCircleId(Circle Circ){
-    if(isElementNull(Circ, "circulo", "getCircleId"))
+    if(Circ == NULL)
         return NULL;
     circle *circ = (circle*) Circ;
     return circ->id;
 }
 
 char* getCircleRadius(Circle Circ){
-    if(isElementNull(Circ, "circulo", "getCircleRadius"))
+    if(Circ == NULL)
         return NULL;
     circle *circ = (circle*) Circ;
     return circ->radius;
 }
 
 char* getCircleX(Circle Circ){
-    if(isElementNull(Circ, "circulo", "getCircleX"))
+    if(Circ == NULL)
         return NULL; 
     circle *circ = (circle*) Circ;
     return circ->x;
 }
 
 char* getCircleY(Circle Circ){
-    if(isElementNull(Circ, "circulo", "getCircleY"))
+    if(Circ == NULL)
         return NULL;
     circle *circ = (circle*) Circ;
     return circ->y;
 }
 
 Point getCircleCoordinates(Circle Circ){
+    if(Circ == NULL)
+        return NULL;
     circle *circ = (circle*) Circ;
     return circ->coordinates;
 }
 
 char* getCircleCorb(Circle Circ){
-    if(isElementNull(Circ, "circulo", "getCircleCorb"))
+    if(Circ == NULL)
         return NULL;
     circle *circ = (circle*) Circ;
     return circ->corb;
 }
 
 void setCircleCorb(Circle Circ, char* corb){
-    if(isElementNull(Circ, "circulo", "setCircleCorb"))
+    if(Circ == NULL)
         return;
     circle *circ = (circle*) Circ;
     strcpy(circ->corb, corb);
 }
 
 char* getCircleCorp(Circle Circ){
-    if(isElementNull(Circ, "circulo", "getCircleCorp"))
+    if(Circ == NULL)
         return NULL;
     circle *circ = (circle*) Circ;
     return circ->corp;
 }
 
 void setCircleCorp(Circle Circ, char* corp){
-    if(isElementNull(Circ, "circulo", "setCircleCorp"))
+    if(Circ == NULL)
         return;
     circle *circ = (circle*) Circ;
     strcpy(circ->corp, corp);
 }
 
 char* getCircleCw(Circle Circ){
-    if(isElementNull(Circ, "circulo", "getCircleCw"))
+    if(Circ == NULL)
         return NULL;
     circle *circ = (circle*) Circ;
     return circ->cw;
 }
 
 char* circleToString(Circle Circ){
-    if(isElementNull(Circ, "circulo", "circleToString"))
+    if(Circ == NULL)
         return NULL;
 
     circle *circ = (circle*) Circ;
@@ -134,7 +136,7 @@ int isPointInsideCirc(Circle Circ, Point P){
 }
 
 void printCircle(Circle Circ){
-    if(isElementNull(Circ, "circulo", "printCircle"))
+    if(Circ == NULL)
         return;
     circle *circ = (circle*) Circ;
     printf("Circulo:\nId: %s\nradius: %s\nx: %s\ny: %s\ncorb: %s\ncorp: %s\ncw: %s\n\n\n", 
@@ -142,7 +144,7 @@ void printCircle(Circle Circ){
 }
 
 void freeCircle(Circle Circ){
-    if(isElementNull(Circ, "circulo", "freeCicle"))
+    if(Circ == NULL)
         return;
     circle *circ = (circle*) Circ;
     free(circ->id);  

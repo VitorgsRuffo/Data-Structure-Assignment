@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "hydrant.h"
+#include "../point.h"
 
 typedef struct hydrant{
     char* id;
@@ -38,68 +38,70 @@ Hydrant createHydrant(char* id, char* x, char* y, char* sw, char* cfill, char* c
 }
 
 char* getHydrantId(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "getHydrantId"))
+    if(Hyd == NULL)
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->id;
 }
 
 char* getHydrantX(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "getHydrantX"))
+    if(Hyd == NULL)
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->x;
 }
 
 char* getHydrantY(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "getHydrantY"))
+    if(Hyd == NULL)
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->y;
 }
 
 char* getHydrantRadius(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "getHydrantRadius"))
+    if(Hyd == NULL)
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->radius;
 }
 
 Point getHydrantCoordinates(Hydrant Hyd){
+    if(Hyd == NULL)
+        return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->coordinates;
 }
 
 char* getHydrantSw(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "getHydrantSw"))
+    if(Hyd == NULL)
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->sw;
 }
 
 void setHydrantSw(Hydrant Hyd, char* sw){
-    if(isElementNull(Hyd, "hidrante", "setHydrantSw"))
+    if(Hyd == NULL)
         return;
     hydrant *hyd = (hydrant*) Hyd;
     strcpy(hyd->sw, sw);
 }
 
 char* getHydrantCfill(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "getHydrantCfill"))
+    if(Hyd == NULL)
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->cfill;
 }
 
 char* getHydrantCstrk(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "getHydrantCstrk"))
+    if(Hyd == NULL)
         return NULL;
     hydrant *hyd = (hydrant*) Hyd;
     return hyd->cstrk;
 }
 
 double getHydrantArea(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "getHidranteArea"))
+    if(Hyd == NULL)
         return 0;
 
     hydrant *hyd = (hydrant*) Hyd;
@@ -107,7 +109,7 @@ double getHydrantArea(Hydrant Hyd){
 }
 
 char* hydrantToString(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "hydrantToString"))
+    if(Hyd == NULL)
         return NULL;
 
     hydrant *hyd = (hydrant*) Hyd;
@@ -118,7 +120,7 @@ char* hydrantToString(Hydrant Hyd){
 }
 
 void printHydrant(Hydrant Hyd){
-    if(isElementNull(Hyd, "hidrante", "printHydrant"))
+    if(Hyd == NULL)
         return;
     hydrant *hyd = (hydrant*) Hyd;
     printf("Hidrante:\nId: %s\nx: %s\ny: %s\nsw: %s\ncfill: %s\ncstrk: %s\n\n\n",
@@ -128,7 +130,7 @@ void printHydrant(Hydrant Hyd){
 
 void freeHydrant(Hydrant Hyd){
     
-    if(isElementNull(Hyd, "hidrante", "freeHydrant"))
+    if(Hyd == NULL)
         return;
 
     hydrant *hyd = (hydrant*) Hyd;

@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "../../include/headers.h"
 #include "queue.h"
 
 typedef struct queueNode {
@@ -15,7 +14,8 @@ typedef struct {
 
 Queue createQueue(){
     queue *q = (queue*) malloc(sizeof(queue));
-
+    if(q == NULL) return NULL;
+    
     (*q).first = NULL;
     (*q).last = NULL;
 
@@ -24,6 +24,7 @@ Queue createQueue(){
 
 
 int isQueueEmpty(Queue Q){
+    if(Q == NULL) return -1;
     
     queue* q = (queue*) Q;
 
@@ -36,8 +37,7 @@ int isQueueEmpty(Queue Q){
 
 int queuePush(Queue Q, Info info){
 
-    if(Q == NULL || info == NULL)
-        return 0;
+    if(Q == NULL || info == NULL) return 0;
 
     queue* q = (queue*) Q;
     
@@ -66,8 +66,7 @@ int queuePush(Queue Q, Info info){
 
 Info queuePop(Queue Q){
 
-    if(Q == NULL)
-        return NULL;
+    if(Q == NULL) return NULL;
 
     queue* q = (queue*) Q;
     Info info;
@@ -98,8 +97,7 @@ Info queuePop(Queue Q){
 
 void freeQueue(Queue Q){
 
-    if(Q == NULL)
-        return;
+    if(Q == NULL) return;
 
     queue* q = (queue*) Q;
 

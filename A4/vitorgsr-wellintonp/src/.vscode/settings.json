@@ -1,10 +1,12 @@
 {
     "files.associations": {
-        "*.tcc": "c",
-        "string": "c",
-        "string_view": "c",
-        "typeinfo": "c",
-        "drawing.h": "c",
+        "headers.h": "c",
+        "elements.h": "c",
+        "openinput.h": "c",
+        "figures.h": "c",
+        "svg.h": "c",
+        "util.h": "c",
         "urbanelements.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }

@@ -2,8 +2,8 @@
 #include "hashtable.h"
 #include "list.h" 
 
-
 typedef struct hashtable {
+    int elementsAmount;
     int size;
     List* info;
     getInfoKey getKey;
@@ -14,7 +14,7 @@ int hashFunction(hashtable* hashT, char *str);
 
 HashTable createHashTable(int tableSize, getInfoKey getKey){
     
-    if(tableSize <= 0)
+    if(tableSize <= 0 || getKey == NULL)
         return NULL;
 
     hashtable* hashT = (hashtable*) malloc(sizeof(hashtable));
@@ -22,6 +22,7 @@ HashTable createHashTable(int tableSize, getInfoKey getKey){
         return NULL;
     
     hashT->size = tableSize;
+    hashT->elementsAmount = 0;
     
     hashT->info = (List*) malloc(tableSize * sizeof(List));
     if(hashT->info == NULL){
@@ -37,20 +38,55 @@ HashTable createHashTable(int tableSize, getInfoKey getKey){
     return hashT;    
 }
 
+hashtable* resizeHashTable(hashtable* hashT){
+
+    hashtable* newHashT = createHashTable(hashT->size*2, hashT->getKey);
+
+    for(int i=0; i<hashT->size; i++){
+        
+        List currentList = hashT->info[i];
+
+        if(currentList != NULL){
+
+            Node currentNode = getFirst(currentList);
+            Info info;
+
+            while(currentNode != NULL){
+
+                info = get(currentList, currentNode);
+
+                insertHashTable(newHashT, info);
+                
+                currentNode = getNext(currentList, currentNode);
+            }
+        }
+    }
+
+    freeHashTable(hashT, NULL); //desaloca apenas a hashtable antiga, mantendo as informacoes alocadas.
+    return newHashT;
+}
+
+
 
 int insertHashTable(HashTable HashT, Info info){
 
     if(HashT == NULL || info == NULL)
-        return 0;        
+        return 0;   
 
     hashtable* hashT = (hashtable*) HashT;
+
+    if(hashT->elementsAmount + 1 >= 0.75 * hashT->size) //se a insercao de mais um elemento causar uma ocupacao de 75% do tamanho da tabela é recomendado aumentar seu tamanho.
+        hashT = resizeHashTable(hashT);
+    
 
     char* infoKey = (*(hashT->getKey))(info);
 
     int position = hashFunction(hashT, infoKey);
 
-    insert(hashT->info[position], info);   //same as insert(*((*hashT).info + position), info);
-    
+
+    insert(hashT->info[position], info);   //same as insert(*((*hashT).info + position), info);    
+    hashT->elementsAmount++;
+
     return 1;
 }
 

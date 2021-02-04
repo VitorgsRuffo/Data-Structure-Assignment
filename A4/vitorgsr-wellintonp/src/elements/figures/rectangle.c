@@ -1,7 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/elements.h"
-
+#include "rectangle.h"
+#include "../point.h"
 
 typedef struct rectangle {
     char* id;
@@ -40,83 +39,84 @@ Rectangle createRectangle(char* id, char* width, char* height, char* x, char* y,
 }
 
 char* getRectangleId(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "getRectangleId"))
+    if(Rect == NULL)
         return NULL;
-
     rectangle *rect = (rectangle*) Rect;
     return rect->id;
 }
 
 char* getRectangleWidth(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "getRectangleWidth"))
+    if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->width;
 }
 
 char* getRectangleHeight(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "getRectangleHeight"))
+    if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->height;
 }
 
 char* getRectangleX(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "getRectangleX"))
+    if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->x;
 }
 
 char* getRectangleY(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "getRectangleY"))
+    if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->y;
 }
 
 Point getRectangleCoordinates(Rectangle Rect){
+    if(Rect == NULL)
+        return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->coordinates;
 }
 
 char* getRectangleCorb(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "getRectangleCorb"))
+    if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->corb;
 }
 
 void setRectangleCorb(Rectangle Rect, char* corb){
-    if(isElementNull(Rect, "retangulo", "setRectangleCorb"))
+    if(Rect == NULL)
         return;
     rectangle *rect = (rectangle*) Rect;
     strcpy(rect->corb, corb);
 }
 
 char* getRectangleCorp(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "getRectangleCorp"))
+    if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->corp;
 }
 
 void setRectangleCorp(Rectangle Rect, char* corp){
-    if(isElementNull(Rect, "retangulo", "setRectangleCorp"))
+    if(Rect == NULL)
         return;
     rectangle *rect = (rectangle*) Rect;
     strcpy(rect->corp, corp);
 }
 
 char* getRectangleRw(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "getRectangleRw"))
+    if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->rw;
 }
 
 char* rectangleToString(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "rectangleToString"))
+    if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
 
@@ -124,7 +124,6 @@ char* rectangleToString(Rectangle Rect){
     sprintf(rectangleInfoString, "Tipo: retangulo, id: %s, width: %s, height: %s, x: %s, y: %s, corb: %s, corp: %s, rw: %s", rect->id, rect->width, rect->height, rect->x, rect->y, rect->corb, rect->corp, rect->rw);
     return rectangleInfoString;
 }
-
 
 int isPointInsideRect(Rectangle Rect, Point P){
    
@@ -144,7 +143,6 @@ int isPointInsideRect(Rectangle Rect, Point P){
         pointY < rectY + rectH     )
 
         return 1;
-
     else
         return 0;
 }
@@ -172,18 +170,14 @@ int isThereRectanglesOverlap(Rectangle Rect1, Rectangle Rect2){
         ((r2Y < r1Y + r1Height) && (r2Y + r2Height > r1Y)) ||
         ((r2X + r2Width > r1X)  && (r2X < r1X + r1Width))  ||
         ((r2X < r1X + r1Width)  && (r2X + r2Width > r1X))  ){
-
         return 1;
     }
-    
-    else{
+    else
         return 0;
-    }
 }
 
-
 void printRectangle(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "printRectangle"))
+    if(Rect == NULL)
         return;
     rectangle *rect = (rectangle*) Rect;
     printf("Retangulo:\nId: %s\nw: %s\nh: %s\nx: %s\ny: %s\ncorb: %s\ncorp: %s\nrw: %s\n\n\n",
@@ -191,7 +185,7 @@ void printRectangle(Rectangle Rect){
 }
 
 void freeRectangle(Rectangle Rect){
-    if(isElementNull(Rect, "retangulo", "freeRectangle"))
+    if(Rect == NULL)
         return;
 
     rectangle *rect = (rectangle*) Rect;

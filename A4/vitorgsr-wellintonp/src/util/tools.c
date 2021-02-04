@@ -1,15 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/urbanElements.h"
 #include "../include/elements.h"
-
-int isElementNull(Element element, char* elementName, char* functionName){
-    if(element == NULL){
-        printf("Erro: %s nao existe..\n(Funcao: %s.)\n", elementName,functionName);
-        return 1;
-    }
-    return 0;
-}
+#include "./input/parameters.h"
 
 char** createCommandParts(int numberOfParts){
     char** commandParts = (char**) malloc(sizeof(char*) * numberOfParts);

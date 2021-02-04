@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "baseRadio.h"
+#include "../point.h"
 
 typedef struct baseRadio{
     char* id;
@@ -38,28 +38,28 @@ BaseRadio createBaseRadio(char* id, char* x, char* y, char* sw, char* cfill, cha
 }
 
 char* getBaseRadioId(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "getBaseRadioId"))
+    if(BaseR == NULL)
         return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->id;
 }
 
 char* getBaseRadioX(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "getBaseRadioX"))
+    if(BaseR == NULL)
         return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->x;
 }
 
 char* getBaseRadioY(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "getBaseRadioY"))
+    if(BaseR == NULL)
         return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->y;
 }
 
 char* getBaseRadioRadius(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "getBaseRadioRadius"))
+    if(BaseR == NULL)
         return NULL;
 
     baseRadio *baseR = (baseRadio*) BaseR;
@@ -67,40 +67,42 @@ char* getBaseRadioRadius(BaseRadio BaseR){
 }
 
 Point getBaseRadioCoordinates(BaseRadio BaseR){
+    if(BaseR == NULL)
+        return;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->coordinates;
 }
 
 char* getBaseRadioSw(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "getBaseRadioSw"))
+    if(BaseR == NULL)
         return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->sw;
 }
 
 void setBaseRadioSw(BaseRadio BaseR, char* sw){
-    if(isElementNull(BaseR, "base-radio", "setBaseRadioSw"))
+    if(BaseR == NULL)
         return;
     baseRadio *baseR = (baseRadio*) BaseR;
     strcpy(baseR->sw, sw);
 }
 
 char* getBaseRadioCfill(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "getBaseRadioCfill"))
+    if(BaseR == NULL)
         return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->cfill;
 }
 
 char* getBaseRadioCstrk(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "getBaseRadioCstrk"))
+    if(BaseR == NULL)
         return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->cstrk;
 }
 
 double getBaseRadioArea(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "getBaseRadioArea"))
+    if(BaseR == NULL)
         return 0;
 
     baseRadio *baseR = (baseRadio*) BaseR;
@@ -108,7 +110,7 @@ double getBaseRadioArea(BaseRadio BaseR){
 }
 
 char* baseRadioToString(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "baseRadioToString"))
+    if(BaseR == NULL)
         return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
 
@@ -118,7 +120,7 @@ char* baseRadioToString(BaseRadio BaseR){
 }
 
 void printBaseRadio(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "printBaseRadio"))
+    if(BaseR == NULL)
         return;
 
     baseRadio *baseR = (baseRadio*) BaseR;
@@ -127,7 +129,7 @@ void printBaseRadio(BaseRadio BaseR){
 }
 
 void freeBaseRadio(BaseRadio BaseR){
-    if(isElementNull(BaseR, "radio-base", "freeBaseRadio"))
+    if(BaseR == NULL)
         return;
 
     baseRadio *baseR = (baseRadio*) BaseR;

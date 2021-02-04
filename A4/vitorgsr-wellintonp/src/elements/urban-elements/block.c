@@ -1,6 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "block.h"
+#include "../point.h"
 
 typedef struct block{
     char* cep;  
@@ -44,61 +44,63 @@ Block createBlock(char* cep, char* x, char* y, char* w, char* h, char* sw, char*
 }
 
 char* getBlockCep(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockCep"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->cep;
 }
 
 char* getBlockX(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockX"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->x;
 }
 
 char* getBlockY(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockY"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->y;
 }
 
 char* getBlockWidth(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockWidth"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->w;
 }
 
 char* getBlockHeight(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockHeight"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->h;
 }
 
 Point getBlockCoordinates(Block Blk){
+    if(Blk == NULL)
+        return NULL;
     block *blk = (block*) Blk;
     return blk->coordinates;
 }
 
 char* getBlockSw(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockSw"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->sw;
 }
 
 char* getBlockCfill(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockCfill"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->cfill;
 }
 
 void setBlockCfill(Block Blk, char* cfill){
-    if(isElementNull(Blk, "quadra", "setBlockCfill"))
+    if(Blk == NULL)
         return;
 
     block *blk = (block*) Blk;
@@ -106,14 +108,14 @@ void setBlockCfill(Block Blk, char* cfill){
 }
 
 char* getBlockCstrk(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockCstrk"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->cstrk;
 }
 
 void setBlockCstrk(Block Blk, char* cstrk){
-    if(isElementNull(Blk, "quadra", "setBlockCstrk"))
+    if(Blk == NULL)
         return;
 
     block *blk = (block*) Blk;
@@ -121,14 +123,14 @@ void setBlockCstrk(Block Blk, char* cstrk){
 }
 
 char* getBlockRx(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockRx"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
     return blk->rx;
 }
 
 void setBlockRx(Block Blk, char* rx){
-    if(isElementNull(Blk, "quadra", "setBlockRx"))
+    if(Blk == NULL)
         return;
 
     block *blk = (block*) Blk;
@@ -136,7 +138,7 @@ void setBlockRx(Block Blk, char* rx){
 }
 
 double getBlockArea(Block Blk){
-    if(isElementNull(Blk, "quadra", "getBlockArea"))
+    if(Blk == NULL)
         return 0;
     block *blk = (block*) Blk;
 
@@ -146,7 +148,7 @@ double getBlockArea(Block Blk){
 }
 
 char* blockToString(Block Blk){
-    if(isElementNull(Blk, "quadra", "blockToString"))
+    if(Blk == NULL)
         return NULL;
     block *blk = (block*) Blk;
 
@@ -156,7 +158,7 @@ char* blockToString(Block Blk){
 }
 
 void printBlock(Block Blk){
-    if(isElementNull(Blk, "quadra", "printBlock"))
+    if(Blk == NULL)
         return;
     block *blk = (block*) Blk;
     printf("Quadra:\ncep: %s\nx: %s\ny: %s\nw: %s\nh: %s\nsw: %s\ncfill: %s\ncstrk: %s\n\n\n",
@@ -164,7 +166,7 @@ void printBlock(Block Blk){
 }
 
 void freeBlock(Block Blk){
-    if(isElementNull(Blk, "quadra", "freeBlock"))
+    if(Blk == NULL)
         return;
 
     block *blk = (block*) Blk;

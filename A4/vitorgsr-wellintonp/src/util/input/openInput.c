@@ -1,5 +1,6 @@
 #include "../include/headers.h"
-#include "../include/util.h"
+#include "openInput.h"
+#include "parameters.h"
 
 char* buildInputFilePath(char* inputDirectory, char* inputFileName);
 

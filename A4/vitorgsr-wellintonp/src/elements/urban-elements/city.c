@@ -2,7 +2,7 @@
 #include "../include/util.h"
 #include "../include/query.h"
 #include "../include/urbanElements.h"
-#include "./drawing.h"
+#include "./city.h"
 #include "../include/elements.h"
 
 typedef struct drawing {
@@ -42,14 +42,14 @@ Drawing createDrawing(){
     dr->baseRadios = createPQuadTree(getBaseRadioId, getBaseRadioCoordinates);
     dr->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
     dr->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
-    dr->regions = createHashTable(X, getRegionId);
+    dr->regions = createHashTable(HASH_TABLE_INITIAL_SIZE, getRegionId);
 
     
-    //dr->establishmentTypes = createHashTable(X, getEstablishmentCode);
-    //dr->establishments = createHashTable(X, getEstablishmentCnpj);
-    //dr->people = createHashTable(X, getPersonCpf);
+    //dr->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
+    //dr->establishments = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
+    //dr->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);
     dr->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
-    //dr->housesTable = createHashTable(X, getHouseCpf);
+    //dr->housesTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getHouseCpf);
     
     dr->queryElements = createList();
 
@@ -187,6 +187,11 @@ List getListByElementType(Drawing Dr, char* elementType){
     return elementList;
 }
 
+
+
+
+
+
 Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char* figureElementType){
     if(isElementNull(Dr, "drawing", "searchForFigureOrTextElementByIdentifier"))
         return NULL;
@@ -194,19 +199,19 @@ Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char
     drawing *dr = (drawing*) Dr;
     Node figureElementNode;
 
-    figureElementNode = searchForElementByIdentifier(dr->circleList, &getCircleId, idToSearch);
+    figureElementNode = searchForElementByIdentifier(dr->circles, &getCircleId, idToSearch);
     if(figureElementNode != NULL){
         strcpy(figureElementType, "circulo");
         return figureElementNode;
     }
 
-    figureElementNode = searchForElementByIdentifier(dr->rectangleList, &getRectangleId, idToSearch);
+    figureElementNode = searchForElementByIdentifier(dr->rectangles, &getRectangleId, idToSearch);
     if(figureElementNode != NULL){
         strcpy(figureElementType, "retangulo");
         return figureElementNode;
     }
 
-    figureElementNode = searchForElementByIdentifier(dr->textList, &getTextId, idToSearch);
+    figureElementNode = searchForElementByIdentifier(dr->texts, &getTextId, idToSearch);
     if(figureElementNode != NULL){
         strcpy(figureElementType, "texto");
         return figureElementNode;
@@ -220,7 +225,7 @@ Node searchForBlockByCep(Drawing Dr, char* cepToSearch){
     drawing *dr = (drawing*) Dr;
     Node blockNode = NULL;
 
-    blockNode = searchForElementByIdentifier(dr->blockList, &getBlockCep, cepToSearch);
+    blockNode = searchForElementByIdentifier(dr->blocks, &getBlockCep, cepToSearch);
     return blockNode;
 }
 
@@ -238,19 +243,19 @@ Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urban
 
     drawing *dr = (drawing*) Dr;
 
-    urbanElementNode = searchForElementByIdentifier(dr->hydrantList, &getHydrantId, idToSearch);
+    urbanElementNode = searchForElementByIdentifier(dr->hydrants, &getHydrantId, idToSearch);
     if(urbanElementNode != NULL){
         strcpy(urbanElementType, "hidrante");
         return urbanElementNode;
     }
 
-    urbanElementNode = searchForElementByIdentifier(dr->semaphoreList, &getSemaphoreId, idToSearch);
+    urbanElementNode = searchForElementByIdentifier(dr->semaphores, &getSemaphoreId, idToSearch);
     if(urbanElementNode != NULL){
         strcpy(urbanElementType, "semaforo");
         return urbanElementNode;
     }
 
-    urbanElementNode = searchForElementByIdentifier(dr->baseRadioList, &getBaseRadioId, idToSearch);
+    urbanElementNode = searchForElementByIdentifier(dr->baseRadios, &getBaseRadioId, idToSearch);
     if(urbanElementNode != NULL){
         strcpy(urbanElementType, "radio-base");
         return urbanElementNode;
@@ -260,19 +265,31 @@ Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urban
     return NULL;
 }
 
+
+
+
+
+
+
+
+
 void printDrawing(Drawing Dr){
     if(isElementNull(Dr, "drawing", "printDrawing"))
         return;
     
     drawing *dr = (drawing*) Dr;
 
-    printList(dr->circleList, &printCircle);
-    printList(dr->rectangleList, &printRectangle);
-    printList(dr->textList, &printText);
-    printList(dr->blockList, &printBlock);
-    printList(dr->hydrantList, &printHydrant);
-    printList(dr->baseRadioList, &printBaseRadio);
-    printList(dr->semaphoreList, &printSemaphore);
+    printPQuadTree(dr->circles);
+    printPQuadTree(dr->rectangles);
+    printPQuadTree(dr->texts);
+    printPQuadTree(dr->blocks);
+    printPQuadTree(dr->hydrants);
+    printPQuadTree(dr->baseRadios);
+    printPQuadTree(dr->semaphores);
+    printPQuadTree(dr->healthCenters);
+    printHashTable(dr->regions, printRegion);
+
+    printPQuadTree(dr->housesTree);
 }
 
 void freeDrawing(Drawing Dr){
@@ -281,17 +298,18 @@ void freeDrawing(Drawing Dr){
 
     drawing *dr = (drawing*) Dr;
 
-    freeList(dr->circleList, &freeCircle);
-    freeList(dr->rectangleList, &freeRectangle);
-    freeList(dr->textList, &freeText);
-    freeList(dr->blockList, &freeBlock);
-    freeList(dr->hydrantList, &freeHydrant);
-    freeList(dr->baseRadioList, &freeBaseRadio);
-    freeList(dr->semaphoreList, &freeSemaphore);
-    freeList(dr->queryElementsList, &freeQueryElement);
-    freeList(dr->healthCenterList, &freeHealthCenter);
-    freeList(dr->houseList, &freeHouse);
-    freeRegion(dr->region);
+    freePQuadTree(dr->circles, freeCircle);
+    freePQuadTree(dr->rectangles, freeRectangle);
+    freePQuadTree(dr->texts, freeText);
+    freePQuadTree(dr->blocks, freeBlock);
+    freePQuadTree(dr->hydrants, freeHydrant);
+    freePQuadTree(dr->baseRadios, freeBaseRadio);
+    freePQuadTree(dr->semaphores, freeSemaphore);
+    freePQuadTree(dr->healthCenters, freeHealthCenter);
+    freeHashTable(dr->regions, freeRegion);
 
+    freePQuadTree(dr->housesTree, freeHouse);
+
+    freeList(dr->queryElements, freeQueryElement);
     free(dr);
 }

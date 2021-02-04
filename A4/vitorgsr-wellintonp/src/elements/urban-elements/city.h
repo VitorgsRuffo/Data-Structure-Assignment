@@ -1,5 +1,5 @@
-#ifndef DRAWING_H
-#define DRAWING_H
+#ifndef CITY_H
+#define CITY_H
 
 #include "../urban-elements/region.h"
 #include "../util/data-structure/list.h"
@@ -7,7 +7,7 @@
 /*
 * TAD desenho que vai conter as listas das entidades que serao desenhadas em um arquivo svg.
 */
-typedef void* Drawing;
+typedef void* City;
 
 /*
 * Pré-Condição: nenhuma.

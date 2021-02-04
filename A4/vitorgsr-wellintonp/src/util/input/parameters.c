@@ -1,5 +1,5 @@
 #include "../include/headers.h"
-#include "../include/util.h"
+#include "parameters.h"
 
 typedef struct parameters {
     char* inputDirectory;   // -e: diretorio de entrada

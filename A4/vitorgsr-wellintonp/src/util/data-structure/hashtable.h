@@ -1,6 +1,8 @@
 #ifndef HASH_TABLE
 #define HASH_TABLE
 
+#define HASH_TABLE_INITIAL_SIZE 29
+
 typedef void* HashTable;
 typedef void* Info;
 typedef char* InfoKey;

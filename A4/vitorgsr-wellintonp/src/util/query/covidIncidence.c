@@ -1,10 +1,7 @@
-#include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/urbanElements.h"
-#include "../drawing/drawing.h"
-#include "../include/query.h"
-#include "../include/elements.h"
-
+#include "../../include/headers.h"
+#include "../../include/elements.h"
+#include "../../include/dataStructure.h"
+#include "../input/openInput.h"
 
 void determineHousesInsideCircumference(List houseList, List housesInsideCircList, Circle circle);
 char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, char* circumferenceRadius);

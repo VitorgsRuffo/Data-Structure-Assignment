@@ -51,6 +51,12 @@ double getRegionDemographicDensity(Region Reg);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de regiao.
+* Pós-Condição: imprime as informacoes da regiao.
+*/
+void printRegion(Region Reg);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de regiao.
 * Pós-Condição: libera a memoria usada pela instancia de regiao que foi passada.
 */
 void freeRegion(Region Reg);

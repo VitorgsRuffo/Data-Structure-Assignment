@@ -1,8 +1,6 @@
-#include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/urbanElements.h"
-#include "../drawing/drawing.h"
-#include "../include/query.h"
+#include "../../include/headers.h"
+#include "../../include/urbanElements.h"
+#include "../input/openInput.h"
 
 void getUrbanEquipmentInfo(Info urbanEquipmentInfo, char* urbanEquipmentType, double* x, double* y, char* *urbanEquipmentId);
 void setUrbanEquipmentDoubleBorder(double x, double y, Info urbanEquipmentInfo, char* urbanEquipmentType, Drawing Dr);

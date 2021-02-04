@@ -1,8 +1,7 @@
 #include "../../include/headers.h"
+#include "../../include/figures.h"
 #include "./pquadtree.h"
-#include "../../include/elements.h"
 #include "./queue.h"
-
 
 typedef struct pquadtreenode {
     Point point;
@@ -26,6 +25,9 @@ pquadtreenode* findPointNodeInPQuadTree(pquadtreenode *node, double x, double y)
 // Obs: Confirmar se há necessidade ou não "*" no "get" (parâmetro de createPQuadTree)
 PQuadTree createPQuadTree(getInfoKey getKey, getInfoPoint getPoint){
 
+    if(getKey == NULL)
+        return NULL;
+
     pquadtree *tree = (pquadtree*) malloc(sizeof(pquadtree));
     if(tree == NULL)
         return NULL;
@@ -46,38 +48,38 @@ List getObjectsLocatedInsideCircle(PQuadTree Tree, double x, double y, double r,
 
 
 List getInfoKeysLocatedInsideRectangle(PQuadTree Tree, double x1, double y1, double x2, double y2){
-    
+    if(Tree == NULL) return NULL;
     List infoKeyList = getObjectsLocatedInsideRectangle(Tree, x1, y1, x2, y2, saveInfoKeyOnListIfItsInsideShape);
     return infoKeyList;
 }
 
 List getPointsLocatedInsideRectangle(PQuadTree Tree, double x1, double y1, double x2, double y2){
-    
+    if(Tree == NULL) return NULL;
     List pointList = getObjectsLocatedInsideRectangle(Tree, x1, y1, x2, y2, savePointOnListIfItsInsideShape);
     return pointList;
 }
 
 List getNodesLocatedInsideRectangle(PQuadTree Tree, double x1, double y1, double x2, double y2){
-    
+    if(Tree == NULL) return NULL;
     List nodeList = getObjectsLocatedInsideRectangle(Tree, x1, y1, x2, y2, saveNodeOnListIfItsInsideShape);
     return nodeList;
 }
 
 
 List getInfoKeysLocatedInsideCircle(PQuadTree Tree, double x, double y, double r){
-    
+    if(Tree == NULL) return NULL;
     List infoKeyList = getObjectsLocatedInsideCircle(Tree, x, y, r, saveInfoKeyOnListIfItsInsideShape);
     return infoKeyList;
 }
 
 List getPointsLocatedInsideCircle(PQuadTree Tree, double x, double y, double r){
-    
+    if(Tree == NULL) return NULL;
     List pointList = getObjectsLocatedInsideCircle(Tree, x, y, r, savePointOnListIfItsInsideShape);
     return pointList;
 }
 
 List getNodesLocatedInsideCircle(PQuadTree Tree, double x, double y, double r){
-    
+    if(Tree == NULL) return NULL;
     List nodeList = getObjectsLocatedInsideCircle(Tree, x, y, r, saveNodeOnListIfItsInsideShape);
     return nodeList;
 }
@@ -96,7 +98,7 @@ typedef struct ObjectsInShape {
 void function(pquadtreenode* node, ObjectsInShape objectsInShape);
 
 List getObjectsLocatedInsideRectangle(PQuadTree Tree, double x1, double y1, double x2, double y2, nodeVisitingFunction saveObjectOnListIfItsInsideShape){
-
+    
     char w[20], h[20], x[20], y[20];
     sprintf(w, "%lf", (x2-x1));
     sprintf(h, "%lf", (y2-y1));
@@ -215,7 +217,7 @@ void saveNodeOnListIfItsInsideShape(Info info, ExtraInfo extraInfo){
 void executeFunctionTraversingTree(pquadtreenode *node, nodeVisitingFunction function, ExtraInfo extraInfo);
 
 void preOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInfo extraInfo){
-
+    if(Tree == NULL || function == NULL) return;
     pquadtree* tree = (pquadtree*) Tree;
     executeFunctionTraversingTree(tree->root, function, extraInfo);
 }
@@ -232,7 +234,8 @@ void executeFunctionTraversingTree(pquadtreenode *node, nodeVisitingFunction fun
 
 
 void levelOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInfo extraInfo){
-
+    if(Tree == NULL || function == NULL) return;
+    
     pquadtree* tree = (pquadtree*) Tree;
     pquadtreenode* root = tree->root;
 
@@ -269,8 +272,8 @@ void levelOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInf
 
 PQuadTreeNode insertPQuadTree(PQuadTree Tree, Point P, Info info){
 
-    //isElementNull(Tree)
-    
+    if(Tree == NULL || P == NULL || info == NULL) return NULL;
+
     pquadtree* tree = (pquadtree*) Tree;
 
     pquadtreenode* newNode = (pquadtreenode*) malloc(sizeof(pquadtreenode));
@@ -365,6 +368,8 @@ void addInfoInList(Info info, List infoList);
 
 Info removePQuadTreeNode(PQuadTree Tree, PQuadTreeNode Node){
     
+    if(Tree == NULL || Node == NULL) return NULL;
+
     pquadtree* tree = (pquadtree*) Tree;
     pquadtreenode* node = (pquadtreenode*) Node;
 
@@ -414,7 +419,8 @@ Info removePQuadTreeNode(PQuadTree Tree, PQuadTreeNode Node){
 
 void reinsertNotToRemoveNodesOnPQuadTree(pquadtree* tree, pquadtreenode* node, Info nodeToRemoveInfo){
 
-    if (node == NULL) return; 
+    if(node == NULL) 
+        return; 
     
     reinsertNotToRemoveNodesOnPQuadTree(tree, node->northWest, nodeToRemoveInfo); 
     reinsertNotToRemoveNodesOnPQuadTree(tree, node->northEast, nodeToRemoveInfo);  
@@ -424,11 +430,10 @@ void reinsertNotToRemoveNodesOnPQuadTree(pquadtree* tree, pquadtreenode* node, I
     Info info = node->info;
 
     if(info != nodeToRemoveInfo){ //if (nó atual nao é o nó a ser removido) then, adicionar esse nó devolta na arvore
-
         Point point = node->point;
         insertPQuadTree(tree, point, info);
     }
-
+    
     free(node);
 }
 
@@ -440,19 +445,18 @@ void addInfoInList(Info info, List infoList){
 
 PQuadTreeNode getPQuadTreeNode(PQuadTree Tree, double x, double y){
 
-    pquadtree* tree = (pquadtree*) Tree;
+    if(Tree == NULL) return NULL;
 
+    pquadtree* tree = (pquadtree*) Tree;
     return findPointNodeInPQuadTree(tree->root, x, y);
 }
 
 
 Info getPQuadTreeNodeInfo(PQuadTree Tree, PQuadTreeNode Node){
     
-    if(Node == NULL)
-        return NULL;
+    if(Tree == NULL || Node == NULL) return NULL;
 
     pquadtreenode* node = (pquadtreenode*) Node;
-
     return node->info;
 }
 
@@ -460,6 +464,9 @@ Info getPQuadTreeNodeInfo(PQuadTree Tree, PQuadTreeNode Node){
 //tree freeing function:
 
 void freePQuadTree(PQuadTree Tree, freeInfo freefunction){
+
+    if(Tree == NULL) return;
+
     pquadtree* tree = (pquadtree*) Tree;
     pquadtreenode* root = tree->root;
 
@@ -490,7 +497,7 @@ void freePQuadTreeLeafNodes(pquadtreenode* node, freeInfo freeFunction)  {
 void printPQuadTreeNode(Info info, ExtraInfo extraArgs);
 
 void printPQuadTree(PQuadTree Tree){
-
+    if(Tree == NULL) return;
     levelOrderTraversal(Tree, printPQuadTreeNode, Tree);
 }
 

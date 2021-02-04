@@ -1,13 +1,9 @@
 #include "../include/headers.h"
-#include "../include/util.h"
+#include "../tools.h"
 #include "../include/elements.h"
-#include "../drawing/drawing.h"
-#include "../include/urbanElements.h"
-#include "../drawing/customization.h"
+#include "openInput.h"
 
-/*
-* numero maximo de partes que um comando vindo de um arquivo geo pode ter
-*/
+//numero maximo de partes que um comando vindo de um arquivo geo pode ter
 #define maxNumberOfGeoCommandParts 8
 
 //T1

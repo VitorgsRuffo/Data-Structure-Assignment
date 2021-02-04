@@ -1,5 +1,4 @@
 #include "../include/headers.h"
-#include "../include/util.h"
 #include "customization.h"
 
 typedef struct blockCustomization {
@@ -91,140 +90,140 @@ ElementsCustomization createElementsCustomization(){
 }
 
 char* getBlockSwCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getBlockSw"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->blockCustom->sw;
 }
 
 char* getBlockCfillCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getBlockCfill"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->blockCustom->cfill;
 }
 
 char* getBlockCstrkCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getBlockCstrk"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->blockCustom->cstrk;
 }
 
 char* getHydrantSwCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getHydrantSw"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->hydrantCustom->sw;
 }
 
 char* getHydrantCfillCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getHydrantCfill"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->hydrantCustom->cfill;
 }
 
 char* getHydrantCstrkCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getHydrantCstrk"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->hydrantCustom->cstrk;
 }
 
 char* getBaseRadioSwCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getBaseRadioSw"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->baseRadioCustom->sw;
 }
 
 char* getBaseRadioCfillCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getBaseRadioCfill"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->baseRadioCustom->cfill;
 }
 
 char* getBaseRadioCstrkCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getBaseRadioCstrk"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->baseRadioCustom->cstrk;
 }
 
 char* getSemaphoreSwCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getSemaphoreSw"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->semaphoreCustom->sw;
 }
 
 char* getSemaphoreCfillCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getSemaphoreCfill"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->semaphoreCustom->cfill;
 }
 
 char* getSemaphoreCstrkCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getSemaphoreCstrk"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->semaphoreCustom->cstrk;
 }
 
 char* getFiguresCwCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getFiguresCw"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->figuresCustom->cw;
 }
 
 char* getFiguresRwCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "getFiguresRw"))
+    if(Custom == NULL)
         return NULL;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     return custom->figuresCustom->rw;
 }
 
 void setBlockSwCustomization(ElementsCustomization Custom, char* sw){
-    if(isElementNull(Custom, "customizacao", "setBlockSw"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->blockCustom->sw, sw);
 }
 
 void setBlockCfillCustomization(ElementsCustomization Custom, char* cfill){
-    if(isElementNull(Custom, "customizacao", "setBlockCfill"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->blockCustom->cfill, cfill);
 }
 
 void setBlockCstrkCustomization(ElementsCustomization Custom, char* cstrk){
-    if(isElementNull(Custom, "customizacao", "setBlockCstrk"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->blockCustom->cstrk, cstrk);
 }
 
 void setBaseRadioSwCustomization(ElementsCustomization Custom, char* sw){
-    if(isElementNull(Custom, "customizacao", "setBaseRadioSw"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->baseRadioCustom->sw, sw);
 }
 
 void setBaseRadioCfillCustomization(ElementsCustomization Custom, char* cfill){
-    if(isElementNull(Custom, "customizacao", "setBaseRadioCfill"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->baseRadioCustom->cfill, cfill);
 }
 
 void setBaseRadioCstrkCustomization(ElementsCustomization Custom, char* cstrk){
-    if(isElementNull(Custom, "customizacao", "setBaseRadioCstrk"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->baseRadioCustom->cstrk, cstrk);
@@ -232,63 +231,63 @@ void setBaseRadioCstrkCustomization(ElementsCustomization Custom, char* cstrk){
 
 
 void setHydrantSwCustomization(ElementsCustomization Custom, char* sw){
-    if(isElementNull(Custom, "customizacao", "setHydrantSw"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->hydrantCustom->sw, sw);
 }
 
 void setHydrantCfillCustomization(ElementsCustomization Custom, char* cfill){
-    if(isElementNull(Custom, "customizacao", "setHydrantCfill"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->hydrantCustom->cfill, cfill);
 }
 
 void setHydrantCstrkCustomization(ElementsCustomization Custom, char* cstrk){
-    if(isElementNull(Custom, "customizacao", "setHydrantCstrk"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->hydrantCustom->cstrk, cstrk);
 }
 
 void setSemaphoreSwCustomization(ElementsCustomization Custom, char* sw){
-    if(isElementNull(Custom, "customizacao", "setSemaphoreSw"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->semaphoreCustom->sw, sw);
 }
 
 void setSemaphoreCfillCustomization(ElementsCustomization Custom, char* cfill){
-    if(isElementNull(Custom, "customizacao", "setSemaphoreCfill"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->semaphoreCustom->cfill, cfill);
 }
 
 void setSemaphoreCstrkCustomization(ElementsCustomization Custom, char* cstrk){
-    if(isElementNull(Custom, "customizacao", "setSempahoreCstrk"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->semaphoreCustom->cstrk, cstrk);
 }
 
 void setFiguresCwCustomization(ElementsCustomization Custom, char* cw){
-    if(isElementNull(Custom, "customizacao", "setFiguresCw"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->figuresCustom->cw, cw);
 }
 
 void setFiguresRwCustomization(ElementsCustomization Custom, char* rw){
-    if(isElementNull(Custom, "customizacao", "setFiguresRw"))
+    if(Custom == NULL)
         return;
     elementsCustomization *custom = (elementsCustomization*) Custom;
     strcpy(custom->figuresCustom->rw, rw);
 }
 
 void freeElementsCustomization(ElementsCustomization Custom){
-    if(isElementNull(Custom, "customizacao", "freeElementsCustomization"))
+    if(Custom == NULL)
         return;
 
     elementsCustomization *custom = (elementsCustomization*) Custom;

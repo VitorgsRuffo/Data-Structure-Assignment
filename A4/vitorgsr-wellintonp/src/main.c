@@ -1,11 +1,10 @@
 #include "./include/headers.h"
 #include "./include/util.h"
-#include "./drawing/drawing.h"
-#include "./query/qry.h"
+
 
 /*to do list:
 
-    0 - determinar tamanho da hashtable.
+    x 0 - determinar tamanho da hashtable.
     1 - mudar drawing (-> city) ao longo do trabalho.
     3 - criar funcao para executar pintura das sombras das quadras (comando dd).
 

@@ -3,7 +3,5 @@
 
 #include "../elements/circle.h"
 #include "../elements/rectangle.h"
-#include "../elements/text.h"
-#include "../elements/point.h"
 
 #endif
