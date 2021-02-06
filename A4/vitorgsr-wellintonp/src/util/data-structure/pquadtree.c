@@ -266,7 +266,7 @@ void levelOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInf
             queuePush(queue, currentNode->southEast);
     }
 
-    freeQueue(queue);
+    freeQueue(queue, NULL);
 }
 
 
@@ -364,7 +364,7 @@ void reinsertNotToRemoveNodesOnPQuadTree(pquadtree* tree, pquadtreenode* node, I
 
 void freePQuadTreeLeafNodes(pquadtreenode* node, freeInfo freeFunction);
 
-void addInfoInList(Info info, List infoList);
+void pushInfosToQueue(Info info, Queue infos);
 
 Info removePQuadTreeNode(PQuadTree Tree, PQuadTreeNode Node){
     
@@ -396,21 +396,19 @@ Info removePQuadTreeNode(PQuadTree Tree, PQuadTreeNode Node){
 
     }else{ //o nó a ser removido é o root!
 
-        List infoList = createList();
+        Queue infos = createQueue();
         
-        levelOrderTraversal(Tree, addInfoInList, infoList);
+        levelOrderTraversal(Tree, pushInfosToQueue, infos);
 
-        // pre-processar a lista de info-pontos()
+        queuePop(infos); //removendo a info do root da fila de informacoes.
 
         freePQuadTreeLeafNodes(tree->root, NULL);
         tree->root = NULL;
 
-        
-        //while(stack not empty)
-            // Inserir os elementos pré processados
-        
-        freeList(infoList, NULL);
-        //freeStack()
+        Stack infosStack = queueToStack(infos);
+        freeQueue(infos, NULL);
+
+        balancedlyInsertObjectsInPQuadTree(Tree, infosStack);
     }   
 
     return info;
@@ -437,9 +435,9 @@ void reinsertNotToRemoveNodesOnPQuadTree(pquadtree* tree, pquadtreenode* node, I
     free(node);
 }
 
-void addInfoInList(Info info, List infoList){
+void pushInfosToQueue(Info info, Queue infos){
 
-    insert(infoList, info);
+    queuePush(infos, info);
 }
 
 
@@ -565,19 +563,16 @@ pquadtreenode* findPointNodeInPQuadTree(pquadtreenode *node, double x, double y)
         if (y <= py) {
             
             if (node->northWest != NULL) 
-                return findPointNodeInPQuadTree(node->northWest, x, y);           
-            
+                return findPointNodeInPQuadTree(node->northWest, x, y);                     
             else 
                 return NULL; //o ponto nao se encontra na arvore. 
             
         } else {
 
             if (node->southWest != NULL) 
-                return findPointNodeInPQuadTree(node->southWest, x, y);           
-            
+                return findPointNodeInPQuadTree(node->southWest, x, y);              
             else 
                 return NULL; //o ponto nao se encontra na arvore. 
-
         }
 
     } else {
@@ -585,7 +580,6 @@ pquadtreenode* findPointNodeInPQuadTree(pquadtreenode *node, double x, double y)
 
             if (node->northEast != NULL) 
                 return findPointNodeInPQuadTree(node->northEast, x, y);           
-            
             else 
                 return NULL; //o ponto nao se encontra na arvore. 
 
@@ -593,11 +587,96 @@ pquadtreenode* findPointNodeInPQuadTree(pquadtreenode *node, double x, double y)
 
             if (node->southEast) 
                 return findPointNodeInPQuadTree(node->southEast, x, y);           
-            
             else 
                 return NULL; //o ponto nao se encontra na arvore. 
         }
     }
 
     return NULL;
+}
+
+
+Stack preProcessObjects(PQuadTree Tree, Stack Objects);
+
+int balancedlyInsertObjectsInPQuadTree(PQuadTree Tree, Stack Objects){
+    
+    if(Tree == NULL || Objects == NULL)
+        return 0;
+
+    Stack preProcessedObjects = preProcessObjects(Tree, Objects);
+    if(preProcessedObjects == NULL)
+        return 0;
+
+    pquadtree* tree = (pquadtree*) Tree;
+    Info info; 
+    Point point;
+
+    while(!empty(preProcessedObjects)){
+        
+        info = stackPop(&preProcessedObjects);
+        point = (*(*tree).getPoint)(info);     
+        insertPQuadTree(Tree, point, info);
+    }
+
+    return 1;
+}
+
+Stack preProcessObjects(PQuadTree Tree, Stack Objects){
+
+    pquadtree* tree = (pquadtree*) Tree;
+
+    //stack com os tads ja pre processados
+    Stack preProcessedObjects = createStack();
+
+    //vetor com as tads "crus".
+    int objectsAmount = stackLength(Objects);
+    Info* Objs = stackToArray(Objects);
+
+    //lista com os pontos dos tads.
+    List pointsList = createList();
+    for(int i = 0; i<objectsAmount; i++)
+        insert(pointsList, (*(*tree).getPoint)(Objs[i]));
+
+
+    while(1){
+
+        Point* pointsArray = listToArray(pointsList);
+        if(pointsArray == NULL) //todos os pontos ja foram processados.
+            break;
+
+        int pointsAmount = length(pointsList);
+
+        Stack convexHullStack = convexHull(pointsArray, pointsAmount);
+        
+        if(convexHullStack == NULL){ //sobraram 1 ou 2 pontos. Agora basta empilhar o(s) tad(s) correspondente(s) 
+           
+            for(int i=0; i<pointsAmount; i++){
+                for(int j = 0; j<objectsAmount; j++){
+                    if((*(*tree).getPoint)(Objs[j]) == pointsArray[i]){
+                        stackPush(preProcessedObjects, Objs[j]);
+                        break;
+                    }
+                }
+            }         
+            break;
+        }
+
+        while(!empty(&convexHullStack)){
+            Point p = stackPop(&convexHullStack);
+
+            for(int i = 0; i<objectsAmount; i++){
+                if((*(*tree).getPoint)(Objs[i]) == p){
+                    stackPush(preProcessedObjects, Objs[i]);
+                    break;
+                }
+            }
+
+            Node nodeToRemove = searchForNodeByInfo(pointsList, p);
+            removeNode(pointsList, nodeToRemove, NULL);
+        }  
+
+        free(pointsArray);
+    }
+
+    return preProcessedObjects;
 }

@@ -1,15 +1,17 @@
 #include "./include/headers.h"
 #include "./include/util.h"
+#include "./elements/urban-elements/city.h"
 
 
 /*to do list:
 
-    x 0 - determinar tamanho da hashtable.
-    1 - mudar drawing (-> city) ao longo do trabalho.
-    3 - criar funcao para executar pintura das sombras das quadras (comando dd).
+    - mudar drawing (-> city) ao longo do trabalho: svg e query.
+    - arrumar funcoes de busca: house.c, 
+    - makefile.
 
-    4 - inserir novos tads nas estruturas.
-    5 - planejamento para o query.
+    - criar funcao para executar pintura das sombras das quadras (comando dd).
+    - inserir novos tads nas estruturas.
+    - planejamento para o query.
 
 */
 
@@ -24,11 +26,11 @@ int main(int argc, char* argv[]){
     //Abrindo o arquivo de entrada (.geo)
     File geo = openInputFile(parameters, getGeoName);
 
-    //Criando o TAD desenho:
-    Drawing drawing = createDrawing();
+    //Criando o TAD cidade:
+    City city = createCity();
 
     //Lendo o arquivo geo:
-    readGeo(geo, drawing);
+    readGeo(geo, city);
     closeInputFile(geo);
     
     if(!isEcNull(parameters)){
@@ -49,9 +51,9 @@ int main(int argc, char* argv[]){
 
     //Criando SVG do geo:
     Svg geoSvg = NULL;
-    geoSvg = createSvg(parameters, drawing, "geo");
+    geoSvg = createSvg(parameters, city, "geo");
     if(geoSvg != NULL){
-        drawOnSvg(geoSvg, drawing);
+        drawOnSvg(geoSvg, city);
         finishSvg(geoSvg);
     }
 
@@ -61,20 +63,20 @@ int main(int argc, char* argv[]){
         File qry = openInputFile(parameters, "qry");
 
         //Lendo o arquivo qry e executando os comandos:
-        executeQry(qry, drawing, parameters);
+        executeQry(qry, city, parameters);
         closeInputFile(qry);
 
         //Criando SVG do qry:
         Svg qrySvg = NULL;
-        qrySvg = createSvg(parameters, drawing, "qry");
+        qrySvg = createSvg(parameters, city, "qry");
         if(qrySvg != NULL){
-            drawOnSvg(qrySvg, drawing);
+            drawOnSvg(qrySvg, city);
             finishSvg(qrySvg);
         }
     }
     
     freeParameters(parameters);
-    freeDrawing(drawing);
+    freeCity(city);
     return 0;
 }
 

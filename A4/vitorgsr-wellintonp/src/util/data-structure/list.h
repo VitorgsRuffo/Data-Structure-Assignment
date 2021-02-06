@@ -89,10 +89,22 @@ Node getPrevious(List Li, Node Posic);
 Node searchForElementByIdentifier(List Li, char* (*getElementId)(void*), char* idToSearch);
 
 /*
+* Pré-Condição: requer a referencia para uma lista, e uma informacao.
+* Pós-Condição: percorre a lista e , se encontrado, retorna no que possua a informacao (tad) passada por parametro. Se o elemento nao for encontrado e retonado NULL.
+*/
+Node searchForNodeByInfo(List Li, Info info);
+
+/*
 * Pré-Condição: requer uma lista com um ou mais nós.
 * Pós-Condição: imprimir na saida padrão a informação presente em cada nó da lista especificada. 
 */
 void printList(List Li, void (*printInformation)(void*));
+
+/*
+Pré-condição: requer uma lista com um ou mais nós.
+Pós-condição: cria e retorna um vetor que aponta para as mesmas informacoes que a lista.
+*/
+Info* listToArray(List Li);
 
 /*
 * Pré-Condição: requer uma lista vazia, ou, com um ou mais elementos.

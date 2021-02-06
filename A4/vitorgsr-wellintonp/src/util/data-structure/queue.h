@@ -1,8 +1,11 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+#include "stack.h"
+
 typedef void* Queue;
 typedef void* Info;
+typedef void (*freeInfo)(Info); 
 
 /*
 
@@ -33,9 +36,15 @@ int queuePush(Queue Q, Info info);
 Info queuePop(Queue Q); 
 
 /*
-    Pré-condição: requer uma instancia de fila.
-    Pós-condição: desaloca toda a memoria usada pela fila.
+    Pré-condição: requer uma instancia de fila nao vazia.
+    Pós-condição: cria e retorna uma pilha contendo as mesmas informacoes que estavam na fila. 
 */
-void freeQueue(Queue Q);
+Stack queueToStack(Queue Q);
+
+/*
+    Pré-condição: requer uma instancia de fila. A passagem de uma funcao de desalocar informacao e opcional.
+    Pós-condição: desaloca toda a memoria usada pela fila. Se uma funcao de desalocar for passada, as informacoes tambem sao desalocadas.
+*/
+void freeQueue(Queue Q, freeInfo freeFunction);
 
 #endif

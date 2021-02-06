@@ -78,6 +78,15 @@ Info stackTop(Stack* PointerToHead){
     return (**pointerToHead).data;   
 }
 
+Info nextToTop(Stack* PointerToHead) {
+    Info topInfo = stackTop(PointerToHead);
+    stackPop(PointerToHead);
+    
+    Info nextToTopInfo = stackTop(PointerToHead);
+    stackPush(PointerToHead, topInfo);
+    return nextToTopInfo; 
+}
+
 Info* stackToArray(Stack* PointerToHead){
     if(PointerToHead == NULL || empty(PointerToHead))
         return NULL;
@@ -123,7 +132,9 @@ void freeStack(Stack* PointerToHead, void (*freeTad)(void*)){
         aux = *pointerToHead;
         *pointerToHead = (**pointerToHead).next;
 
-        (*freeTad)((*aux).data);
+        if(freeTad != NULL)
+            (*freeTad)((*aux).data);
+
         (*aux).data = NULL; (*aux).next = NULL;
         free(aux);
     }while(*pointerToHead != NULL);   

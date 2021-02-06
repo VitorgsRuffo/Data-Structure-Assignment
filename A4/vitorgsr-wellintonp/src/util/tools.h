@@ -47,4 +47,11 @@ double getNextestRectPointToCircCenter(double min, double max, double value);
 * Pós-Condição: retorna 1 se essas entidades se sobrepoem, se nao retorna 0.
 */
 int checkRectCircOverlap(Info rect, Info circ);
+
+/*
+* Pré-Condição: requer um vetor de pontos e o tamanho do vetor.
+* Pós-Condição: retorna uma pilha contendo a envoltoria convexa dos pontos do vetor.
+*/
+Stack convexHull(Point* points, int n);
+
 #endif 

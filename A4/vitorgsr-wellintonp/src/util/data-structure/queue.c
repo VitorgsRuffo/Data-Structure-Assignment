@@ -95,7 +95,27 @@ Info queuePop(Queue Q){
 }
 
 
-void freeQueue(Queue Q){
+Stack queueToStack(Queue Q){
+    if(Q == NULL) return;
+
+    queue* q = (queue*) Q;
+    queueNode* currentNode = q->first;
+    if(currentNode == NULL) return NULL;
+
+    Stack stack = createStack();
+    if(stack == NULL) return NULL;
+
+    while(currentNode != NULL){
+
+        stackPush(stack, currentNode->info);
+        currentNode = currentNode->prox;
+    }
+
+    return stack;
+}
+
+
+void freeQueue(Queue Q, freeInfo freeFunction){
 
     if(Q == NULL) return;
 
@@ -106,6 +126,8 @@ void freeQueue(Queue Q){
     while(firstNode != NULL){
 
         q->first = q->first->prox;
+        if(freeFunction != NULL)
+            (*freeFunction)(firstNode->info);
         free(firstNode);
         firstNode = q->first;
     }

@@ -1,6 +1,7 @@
 #include "../include/headers.h"
 #include "../include/elements.h"
 #include "./input/parameters.h"
+#include "./data-structure/stack.h"
 
 char** createCommandParts(int numberOfParts){
     char** commandParts = (char**) malloc(sizeof(char*) * numberOfParts);
@@ -138,3 +139,97 @@ int checkRectCircOverlap(Info rect, Info circ){
         return 0;
     }
 }
+
+//---------------------------------Convex Hull--------------------------------//
+
+Point p0; 
+
+void swap(Point* p1, Point* p2) { 
+    Point temp;
+
+    temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;  
+} 
+
+double distSq(Point p1, Point p2) { 
+    double p1x = getPointX(p1); double p1y = getPointY(p1);
+    double p2x = getPointX(p2); double p2y = getPointY(p2);
+
+    return (p1x - p2x)*(p1x - p2x) + 
+        (p1y - p2y)*(p1y - p2y); 
+} 
+
+int orientation(Point p, Point q, Point r){ 
+    
+    double px = getPointX(p); double py = getPointY(p);
+    double qx = getPointX(q); double qy = getPointY(q);
+    double rx = getPointX(r); double ry = getPointY(r);
+
+    double val = (qy - py) * (rx - qx) - 
+            (qx - px) * (ry - qy); 
+
+    if (((int) val) == 0) return 0;
+    return (((int) val) > 0)? 1 : 2;
+} 
+
+
+int compare(const void *vp1,  const void *vp2) { 
+
+    Point p1 = (Point) vp1; 
+    Point p2 = (Point) vp2;
+
+    int o = orientation(p0, p1, p2); 
+    if (o == 0) 
+        return (distSq(p0, p2) >= distSq(p0, p1))? -1 : 1; 
+
+    return (o == 2)? -1: 1; 
+}
+
+
+Stack convexHull(Point* points, int n) { 
+
+    int ymin = getPointY(*points), min = 0; // same as: int ymin = getPointY(points[0]), min =0;
+    
+    for (int i = 1; i < n; i++) { 
+        int y = getPointY(*(points + i)); 
+
+        if ((y < ymin) || (ymin == y && 
+            getPointX(*(points + i)) < getPointX(*(points + min)))) 
+
+            ymin = getPointY(*(points + i)), min = i; 
+    } 
+
+    swap(points, points + min); 
+
+    p0 = *points;
+    qsort(*(points + 1), n-1, sizeof(Point), compare); 
+
+    int m = 1; 
+    for (int i=1; i<n; i++) { 
+    
+        while (i < n-1 && orientation(p0, *(points + i), *(points + i + 1)) == 0) 
+            i++; 
+
+        *(points + m) = *(points + i);
+        m++; 
+    } 
+
+    if (m < 3) 
+        return NULL; 
+
+    Stack head = createStack();
+    stackPush(&head, *(points)); 
+    stackPush(&head, *(points + 1));
+    stackPush(&head, *(points + 2));
+
+    for (int i = 3; i < m; i++) { 
+        while (orientation(nextToTop(&head), stackTop(&head), *(points + i)) != 2) 
+            stackPop(&head); 
+        
+        stackPush(&head, *(points + i));
+    } 
+
+    return head;
+} 
+//------------------------------------------------------------------------------//

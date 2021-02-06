@@ -1,11 +1,8 @@
-#include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/query.h"
-#include "../include/urbanElements.h"
-#include "./city.h"
-#include "../include/elements.h"
+#include "../../include/headers.h"
+#include "../../include/elements.h"
+#include "../../util/query/qry.h"
 
-typedef struct drawing {
+typedef struct city {
     PQuadTree circles;
     PQuadTree rectangles;
     PQuadTree texts;
@@ -23,140 +20,140 @@ typedef struct drawing {
     HashTable housesTable;
 
     List queryElements;
-    
-}drawing;
+}city;
 
-Drawing createDrawing(){
-    drawing *dr = (drawing*) malloc(sizeof(drawing));
+City createCity(){
+    city *ct = (city*) malloc(sizeof(city));
     
-    if(dr == NULL){
-        printf("Erro ao alocar memória para a criação do TAD desenho\nFinalizando o programa...");
+    if(ct == NULL){
+        printf("Erro ao alocar memória para a criação do TAD cidade\nFinalizando o programa...");
         exit(1);
     }
     
-    dr->circles = createPQuadTree(getCircleId, getCircleCoordinates);
-    dr->rectangles = createPQuadTree(getRectangleId, getRectangleCoordinates);
-    dr->texts = createPQuadTree(getTextId, getTextCoordinates);
-    dr->blocks = createPQuadTree(getBlockCep, getBlockCoordinates);
-    dr->hydrants = createPQuadTree(getHydrantId, getHydrantCoordinates);
-    dr->baseRadios = createPQuadTree(getBaseRadioId, getBaseRadioCoordinates);
-    dr->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
-    dr->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
-    dr->regions = createHashTable(HASH_TABLE_INITIAL_SIZE, getRegionId);
+    ct->circles = createPQuadTree(getCircleId, getCircleCoordinates);
+    ct->rectangles = createPQuadTree(getRectangleId, getRectangleCoordinates);
+    ct->texts = createPQuadTree(getTextId, getTextCoordinates);
+    ct->blocks = createPQuadTree(getBlockCep, getBlockCoordinates);
+    ct->hydrants = createPQuadTree(getHydrantId, getHydrantCoordinates);
+    ct->baseRadios = createPQuadTree(getBaseRadioId, getBaseRadioCoordinates);
+    ct->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
+    ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
+    ct->regions = createHashTable(HASH_TABLE_INITIAL_SIZE, getRegionId);
 
     
-    //dr->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
-    //dr->establishments = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
-    //dr->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);
-    dr->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
-    //dr->housesTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getHouseCpf);
+    //ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
+    //ct->establishments = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
+    //ct->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);
+    ct->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
+    //ct->housesTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getHouseCpf);
     
-    dr->queryElements = createList();
+    ct->queryElements = createList();
 
-    return dr;
+    return ct;
 }
 
 
-PQuadTree getCircles(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getCircles"))
+PQuadTree getCircles(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->circles;
+    city *ct = (city*) Ct;
+    return ct->circles;
 }
 
-PQuadTree getRectangles(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getRectangles"))
+PQuadTree getRectangles(City Ct){
+    if(Ct == NULL)
         return NULL;
     
-    drawing *dr = (drawing*) Dr;
-    return dr->rectangles;
+    city *ct = (city*) Ct;
+    return ct->rectangles;
 }
 
-PQuadTree getTexts(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getTexts"))
+PQuadTree getTexts(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->texts;
+    city *ct = (city*) Ct;
+    return ct->texts;
 }
 
-PQuadTree getBlocks(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getBlocks"))
+PQuadTree getBlocks(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->blocks;
+    city *ct = (city*) Ct;
+    return ct->blocks;
 }
 
-PQuadTree getHydrants(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getHydrants"))
+PQuadTree getHydrants(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->hydrants;
+    city *ct = (city*) Ct;
+    return ct->hydrants;
 }
 
-PQuadTree getBaseRadios(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getBaseRadios"))
+PQuadTree getBaseRadios(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->baseRadios;
+    city *ct = (city*) Ct;
+    return ct->baseRadios;
 }
 
-PQuadTree getSemaphores(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getSemaphores"))
+PQuadTree getSemaphores(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->semaphores;
+    city *ct = (city*) Ct;
+    return ct->semaphores;
 }
 
-List getHealthCenters(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getHealthCenters"))
+List getHealthCenters(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->healthCenters;
+    city *ct = (city*) Ct;
+    return ct->healthCenters;
 }
 
-PQuadTree getHousesTree(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getHousesTree"))
+PQuadTree getHousesTree(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->housesTree;
+    city *ct = (city*) Ct;
+    return ct->housesTree;
 }
 /*
-HashTable getHousesTable(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getHousesTable"))
+HashTable getHousesTable(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->housesTable;
+    city *ct = (city*) Ct;
+    return ct->housesTable;
 }
 */
-List getQueryElements(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getQueryElements"))
+List getQueryElements(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->queryElements;
+    city *ct = (city*) Ct;
+    return ct->queryElements;
 }
 
 
-HashTable getRegions(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "getRegions"))
+HashTable getRegions(City Ct){
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
-    return dr->regions;
+    city *ct = (city*) Ct;
+    return ct->regions;
 }
 
+/*
 
 List getListByElementType(Drawing Dr, char* elementType){
-    if(isElementNull(Dr, "drawing", "getListByElementType"))
+    if(Ct == NULL)
         return NULL;
     
     List elementList = NULL;
@@ -188,15 +185,11 @@ List getListByElementType(Drawing Dr, char* elementType){
 }
 
 
-
-
-
-
 Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char* figureElementType){
-    if(isElementNull(Dr, "drawing", "searchForFigureOrTextElementByIdentifier"))
+    if(Ct == NULL)
         return NULL;
 
-    drawing *dr = (drawing*) Dr;
+    city *ct = (city*) Ct;
     Node figureElementNode;
 
     figureElementNode = searchForElementByIdentifier(dr->circles, &getCircleId, idToSearch);
@@ -222,7 +215,7 @@ Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char
 }
 
 Node searchForBlockByCep(Drawing Dr, char* cepToSearch){
-    drawing *dr = (drawing*) Dr;
+    city *ct = (city*) Ct;
     Node blockNode = NULL;
 
     blockNode = searchForElementByIdentifier(dr->blocks, &getBlockCep, cepToSearch);
@@ -230,7 +223,7 @@ Node searchForBlockByCep(Drawing Dr, char* cepToSearch){
 }
 
 Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urbanElementType){
-    if(isElementNull(Dr, "drawing", "searchForUrbanElementByIdentifier"))
+    if(Ct == NULL)
         return NULL;
 
     Node urbanElementNode;
@@ -241,7 +234,7 @@ Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urban
         return urbanElementNode;
     }
 
-    drawing *dr = (drawing*) Dr;
+    city *ct = (city*) Ct;
 
     urbanElementNode = searchForElementByIdentifier(dr->hydrants, &getHydrantId, idToSearch);
     if(urbanElementNode != NULL){
@@ -265,51 +258,45 @@ Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urban
     return NULL;
 }
 
+*/
 
-
-
-
-
-
-
-
-void printDrawing(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "printDrawing"))
+void printCity(City Ct){
+    if(Ct == NULL)
         return;
     
-    drawing *dr = (drawing*) Dr;
+    city *ct = (city*) Ct;
 
-    printPQuadTree(dr->circles);
-    printPQuadTree(dr->rectangles);
-    printPQuadTree(dr->texts);
-    printPQuadTree(dr->blocks);
-    printPQuadTree(dr->hydrants);
-    printPQuadTree(dr->baseRadios);
-    printPQuadTree(dr->semaphores);
-    printPQuadTree(dr->healthCenters);
-    printHashTable(dr->regions, printRegion);
+    printPQuadTree(ct->circles);
+    printPQuadTree(ct->rectangles);
+    printPQuadTree(ct->texts);
+    printPQuadTree(ct->blocks);
+    printPQuadTree(ct->hydrants);
+    printPQuadTree(ct->baseRadios);
+    printPQuadTree(ct->semaphores);
+    printPQuadTree(ct->healthCenters);
+    printHashTable(ct->regions, printRegion);
 
-    printPQuadTree(dr->housesTree);
+    printPQuadTree(ct->housesTree);
 }
 
-void freeDrawing(Drawing Dr){
-    if(isElementNull(Dr, "drawing", "freeDrawing"))
+void freeCity(City Ct){
+    if(Ct == NULL)
         return;
 
-    drawing *dr = (drawing*) Dr;
+    city *ct = (city*) Ct;
 
-    freePQuadTree(dr->circles, freeCircle);
-    freePQuadTree(dr->rectangles, freeRectangle);
-    freePQuadTree(dr->texts, freeText);
-    freePQuadTree(dr->blocks, freeBlock);
-    freePQuadTree(dr->hydrants, freeHydrant);
-    freePQuadTree(dr->baseRadios, freeBaseRadio);
-    freePQuadTree(dr->semaphores, freeSemaphore);
-    freePQuadTree(dr->healthCenters, freeHealthCenter);
-    freeHashTable(dr->regions, freeRegion);
+    freePQuadTree(ct->circles, freeCircle);
+    freePQuadTree(ct->rectangles, freeRectangle);
+    freePQuadTree(ct->texts, freeText);
+    freePQuadTree(ct->blocks, freeBlock);
+    freePQuadTree(ct->hydrants, freeHydrant);
+    freePQuadTree(ct->baseRadios, freeBaseRadio);
+    freePQuadTree(ct->semaphores, freeSemaphore);
+    freePQuadTree(ct->healthCenters, freeHealthCenter);
+    freeHashTable(ct->regions, freeRegion);
 
-    freePQuadTree(dr->housesTree, freeHouse);
+    freePQuadTree(ct->housesTree, freeHouse);
 
-    freeList(dr->queryElements, freeQueryElement);
-    free(dr);
+    freeList(ct->queryElements, freeQueryElement);
+    free(ct);
 }

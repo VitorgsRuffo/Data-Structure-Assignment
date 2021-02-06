@@ -1,5 +1,5 @@
 #include "../include/headers.h"
-#include "circle.h"
+#include "./circle.h"
 #include "../point.h"
 
 typedef struct circle{

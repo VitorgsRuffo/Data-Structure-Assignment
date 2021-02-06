@@ -53,6 +53,11 @@ Pós-condição: retorna o dado presente no nó do topo da pilha.
 */
 Info stackTop(Stack* PointerToHead);
 
+/*
+Pré-condição: requer o endereço de um ponteiro para o nó no topo da pilha.
+Pós-condição: retorna o dado presente no nó imediatamente antes do nó no topo da pilha.
+*/
+Info nextToTop(Stack* PointerToHead);
 
 /*
 Pré-condição: requer o endereço de um ponteiro para o nó no topo da pilha.

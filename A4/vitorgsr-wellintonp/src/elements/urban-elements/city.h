@@ -1,127 +1,120 @@
 #ifndef CITY_H
 #define CITY_H
 
-#include "../urban-elements/region.h"
-#include "../util/data-structure/list.h"
+#include "../util/data-structure/pquadtree.h"
+#include "../util/data-structure/hashtable.h"
 
 /*
-* TAD desenho que vai conter as listas das entidades que serao desenhadas em um arquivo svg.
+* TAD cidade que vai conter a estrutura das entidades que serao desenhadas em um arquivo svg.
 */
 typedef void* City;
 
 /*
 * Pré-Condição: nenhuma.
-* Pós-Condição: retorna um TAD desenho com as listas das entidades vazias.
+* Pós-Condição: retorna um TAD cidade com as estruturas das entidades vazias.
 */
-Drawing createDrawing();
+City createCity();
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de circulos presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de circulos presente no TAD cidade.
 */
-List getCircleList(Drawing Dr);
+PQuadTree getCircles(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de retangulo presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de retangulo presente no TAD cidade.
 */
-List getRectangleList(Drawing Dr);
+PQuadTree getRectangles(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de textos presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de textos presente no TAD cidade.
 */
-List getTextList(Drawing Dr);
+PQuadTree getTexts(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de quadras presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de quadras presente no TAD cidade.
 */
-List getBlockList(Drawing Dr);
+PQuadTree getBlocks(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de hidrantes presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de hidrantes presente no TAD cidade.
 */
-List getHydrantList(Drawing Dr);
+PQuadTree getHydrants(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de rádio-bases presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de rádio-bases presente no TAD cidade.
 */
-List getBaseRadioList(Drawing Dr);
+PQuadTree getBaseRadios(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de Semáfaros presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de Semáfaros presente no TAD cidade.
 */
-List getSemaphoreList(Drawing Dr);
+PQuadTree getSemaphores(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de elementos de query presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de postos de saude presente no TAD cidade.
 */
-List getQueryElementsList(Drawing Dr);
+PQuadTree getHealthCenters(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de postos de saude presente no TAD desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de casas presente no TAD cidade.
 */
-List getHealthCenterList(Drawing Dr);
-
-/*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: retorna uma referencia para a lista de casas presente no TAD desenho.
-*/
-List getHouseList(Drawing Dr);
-
-
-/*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho e uma instancia de Regiao.
-* Pós-Condição: atribui a regiao passada como sendo a regiao do Tad Desenho.
-*/
-void setRegion(Drawing Dr, Region Reg);
+PQuadTree getHousesTree(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de Regiao.
-* Pós-Condição: retorna uma referencia para o TAD Regiao
+* Pós-Condição: retorna uma referencia para a estrutura de regioes presente no TAD cidade.
 */
-Region getRegion(Drawing Dr);
+HashTable getRegions(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho e uma referencia para uma string que contenha o tipo de um elemento.
-* Pós-Condição: retorna a lista de elementos cujo tipo foi passado por parametro.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de elementos de query presente no TAD cidade.
 */
-List getListByElementType(Drawing Dr, char* elementType);
+List getQueryElements(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho, um id de um elemento (figura ou texto) a ser procurado nas listas do tad desenho, e um ponteiro para guardar o tipo da figura quando a encontrarmos (se encontrarmos).
-* Pós-Condição: percorre as listas de figuras e a lista de texto em busca de um elemento que tenha o id especificado, se for encontrado retornamos o seu no e salvamos seu tipo no ponteiro passado, se nao for retornamos NULL.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade e uma referencia para uma string que contenha o tipo de um elemento.
+* Pós-Condição: retorna a estrutura de elementos cujo tipo foi passado por parametro.
 */
-Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char* figureElementType);
+//List getListByElementType(City Ct, char* elementType);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho, um cep de uma quadra a ser procurada.
-* Pós-Condição: percorre a lista de quadras em busca de um no cuja informacao tenha o cep especificado, se for encontrado retornamos esse no, se nao for retornamos NULL.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade, um id de um elemento (figura ou texto) a ser procurado nas estruturas do tad cidade, e um ponteiro para guardar o tipo da figura quando a encontrarmos (se encontrarmos).
+* Pós-Condição: percorre as estruturas de figuras e a estrutura de texto em busca de um elemento que tenha o id especificado, se for encontrado retornamos o seu no e salvamos seu tipo no ponteiro passado, se nao for retornamos NULL.
 */
-Node searchForBlockByCep(Drawing Dr, char* cepToSearch);
+//Node searchForFigureOrTextElementByIdentifier(City Ct, char* idToSearch, char* figureElementType);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho, um id de um elemento urbano a ser procurado nas listas do tad desenho, e um ponteiro para guardar o tipo do elemento quando o encontrarmos (se encontrarmos).
-* Pós-Condição: percorre as listas de elementos urbanos em busca de um no cuja informacao tenha o id especificado, se for encontrado retornamos esse no e salvamos seu tipo dessa informacao no ponteiro passado, se nao for retornamos NULL.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade, um cep de uma quadra a ser procurada.
+* Pós-Condição: percorre a estrutura de quadras em busca de um no cuja informacao tenha o cep especificado, se for encontrado retornamos esse no, se nao for retornamos NULL.
 */
-Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urbanElementType);
+//Node searchForBlockByCep(City Ct, char* cepToSearch);
 
 /*
-* Pré-Condição: requer o endereco de uma instancia de desenho.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade, um id de um elemento urbano a ser procurado nas estruturas do tad cidade, e um ponteiro para guardar o tipo do elemento quando o encontrarmos (se encontrarmos).
+* Pós-Condição: percorre as estruturas de elementos urbanos em busca de um no cuja informacao tenha o id especificado, se for encontrado retornamos esse no e salvamos seu tipo dessa informacao no ponteiro passado, se nao for retornamos NULL.
+*/
+//Node searchForUrbanElementByIdentifier(City Ct, char* idToSearch, char* urbanElementType);
+
+/*
+* Pré-Condição: requer o endereco de uma instancia de cidade.
 * Pós-Condição: imprimir na saida padrão essa variavel.
 */
-void printDrawing(Drawing Dr);
+void printCity(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de TAD desenho.
-* Pós-Condição: libera a memoria usada pela instancia de drawing que foi passada.
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: libera a memoria usada pela instancia de cidade que foi passada.
 */
-void freeDrawing(Drawing Dr);
+void freeCity(City Ct);
 
 #endif

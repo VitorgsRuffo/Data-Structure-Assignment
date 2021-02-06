@@ -1,5 +1,5 @@
 
-void readPm(File pm, Drawing Dr){
-    
+
+void readPm(File ec, City Ct){
 
 }

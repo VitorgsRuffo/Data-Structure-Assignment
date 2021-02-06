@@ -1,7 +1,7 @@
-#ifndef ELEMENTS_H
-#define ELEMENTS_H
+#ifndef FIGURES_H
+#define FIGURES_H
 
-#include "../elements/circle.h"
-#include "../elements/rectangle.h"
+#include "../elements/figures/circle.h"
+#include "../elements/figures/rectangle.h"
 
 #endif

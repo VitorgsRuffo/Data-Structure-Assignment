@@ -1,5 +1,4 @@
 #include "../include/headers.h"
-#include "../drawing/drawing.h"
 #include "../urban-elements/block.h"
 #include "house.h"
 

@@ -6,7 +6,16 @@
         "figures.h": "c",
         "svg.h": "c",
         "util.h": "c",
-        "urbanelements.h": "c"
+        "urbanelements.h": "c",
+        "point.h": "c",
+        "input.h": "c",
+        "parameters.h": "c",
+        "pm.h": "c",
+        "block.h": "c",
+        "stack.h": "c",
+        "city.h": "c",
+        "ec.h": "c"
     },
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "C_Cpp.dimInactiveRegions": false
 }

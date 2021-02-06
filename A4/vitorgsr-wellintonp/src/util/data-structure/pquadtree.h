@@ -16,6 +16,7 @@
 #define P_QUAD_TREE_H
 
 #include "./list.h"
+#include "./stack.h"
 #include "../../elements/point.h"
 
 typedef void *PQuadTree;
@@ -117,6 +118,12 @@ void levelOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInf
 */
 PQuadTreeNode insertPQuadTree(PQuadTree Tree, Point P, Info info);
 
+/*
+* Pré-Condição: Requer uma instancia de p-quadtree e uma pilha de objetos.
+* Pós-Condição: insere os objetos na arvore de maneira que a mesma fique balanceada.
+*/
+int balancedlyInsertObjectsInPQuadTree(PQuadTree Tree, Stack Objects);
+
 
 /*
     Pré condição: Requer uma instancia de p-quadtree e um nó presente nesta arvore.
@@ -146,8 +153,6 @@ Info getPQuadTreeNodeInfo(PQuadTree Tree, PQuadTreeNode Node);
     Obs: nao desaloca a memoria usada pelas listas retornadas nas funcoes acima.
 */
 void freePQuadTree(PQuadTree Tree, freeInfo freefunction);
-
-
 
 
 /*

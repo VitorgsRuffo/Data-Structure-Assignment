@@ -224,6 +224,29 @@ Node searchForElementByIdentifier(List Li, char* (*getElementId)(void*), char* i
     return NULL;
 }
 
+Node searchForNodeByInfo(List Li, Info info){
+    if(Li == NULL || info == NULL)
+        return NULL;
+
+    List li = (list*) Li;
+    Info currentInfo;
+    Node currentNode;
+    
+    currentNode = getFirst(li);
+    
+    while (currentNode != NULL){
+
+        currentInfo = get(li, currentNode);
+        
+        if(currentInfo == info)
+            return currentNode;    
+        else
+            currentNode = getNext(li, currentNode);               
+    }
+
+    return NULL;
+}
+
 void printList(List Li, void (*printInformation)(void*)){
     if(Li == NULL)
         return;
@@ -239,6 +262,49 @@ void printList(List Li, void (*printInformation)(void*)){
     }
 }
 
+
+Info* listToArray(List Li){
+    if(Li == NULL) return;
+
+    int listLength = length(Li);
+    if(listLength == 0) return NULL;
+
+    Info* array = (Info*) malloc(listLength*sizeof(Info));
+    if(array == NULL) return NULL;
+    int i = 0;
+
+    node* currentNode = getFirst(Li);
+
+    while(currentNode != NULL){
+        array[i] = get(Li, currentNode);
+        currentNode = getNext(Li, currentNode);
+        i++;
+    }
+    
+    return array;
+}
+
+
+/*
+
+Info* stackToArray(Stack* PointerToHead){
+    if(PointerToHead == NULL || empty(PointerToHead))
+        return NULL;
+    
+    int length = stackLength(PointerToHead);
+
+    Info* array = (Info*) malloc(length*sizeof(Info));
+    if(array == NULL)
+        return NULL;
+    
+    for(int i=0; i<length; i++)
+        array[i] = stackPop(PointerToHead);
+    
+    return array;
+} 
+
+
+*/
 void freeList(List Li, void (*freeTAD)(void*)){
     if(Li == NULL)
         return;

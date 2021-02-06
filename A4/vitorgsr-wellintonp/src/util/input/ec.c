@@ -1,17 +1,17 @@
 #include "../include/headers.h"
 #include "../include/util.h"
 #include "../include/elements.h"
-#include "../drawing/drawing.h"
-#include "../include/urbanElements.h"
+
 
 /*
-* numero maximo de partes que um comando vindo de um arquivo ec pode ter
-*/
+
+//numero maximo de partes que um comando vindo de um arquivo ec pode ter
+
 #define maxNumberOfEcCommandParts 8
 
 void freeReadEcResources(char* command, char** commandParts);
 
-void readEc(File ec, Drawing Dr){
+void readEc(File ec, City Ct){
     
     char* command = (char*) malloc((commandMaxLength + 1) * sizeof(char));     
     int commandLength;
@@ -54,14 +54,14 @@ void readEstablishmentType(char* command, char** commandParts, Drawing Dr){
     insertHashTable(etTable, et);
 }
 
-/*
+
 void readCircle(char* command, char** commandParts, Drawing Dr, ElementsCustomization elementsCustom){
     sscanf(command, "%s %s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6]);
     Circle circle = createCircle(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6], getFiguresCwCustomization(elementsCustom));
     List circleList = getCircleList(Dr);
     insert(circleList, circle);
 }
-*/
+
 
 void readEstablishment(char* command, char** commandParts, Drawing Dr){
     sscanf(&command[2], "%s %s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6]);
@@ -79,3 +79,4 @@ void freeReadEcResources(char* command, char** commandParts){
     
     free(commandParts);
 }
+*/
