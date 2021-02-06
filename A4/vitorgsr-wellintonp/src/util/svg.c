@@ -1,6 +1,7 @@
 #include "../include/headers.h"
 #include "../include/elements.h"
 #include "./input/parameters.h"
+#include "../include/dataStructure.h"
 #include "svg.h"
 #include <unistd.h>
 
@@ -8,16 +9,9 @@ char* buildGeoSvgPath(Parameters Param);
 
 Svg openSvg(char* filePath);
 
-Svg createSvg(Parameters Param, Drawing Dr, char* fileType){
-    if(Param == NULL){
-        printf("Erro: os parametros nao existem..\n");
-        exit(1);
-    }
-
-    if(Dr == NULL){
-        printf("Erro: Drawing nao existe..\n");
-        exit(1);
-    }
+Svg createSvg(Parameters Param, City Ct, char* fileType){
+    if(Param == NULL || Ct == NULL || fileType == NULL)
+        return NULL;
 
     char* filePath;
     if(!strcmp(fileType, "geo"))
@@ -28,13 +22,9 @@ Svg createSvg(Parameters Param, Drawing Dr, char* fileType){
         
     Svg svg = NULL;
     
-    if(access(filePath, F_OK ) != -1){ 
-        printf("O arquivo Svg (%s) ja existe...\n", filePath);
-    
-    }else{ //se a funcao access retornar -1 significa que o arquivo cujo caminho é "filePath" ainda nao existe, portanto, iremos cria-lo. Não iremos cria-lo caso ele ja exista nesse diretorio.       
+    if(access(filePath, F_OK ) == -1)  //se a funcao access retornar -1 significa que o arquivo cujo caminho é "filePath" ainda nao existe, portanto, iremos cria-lo. Não iremos cria-lo caso ele ja exista nesse diretorio.       
         svg = openSvg(filePath); 
-    }                               
-
+                                   
     free(filePath);
     return svg;
 }
@@ -64,14 +54,15 @@ Svg openSvg(char* filePath){
     
     Svg svg = fopen(filePath, "a");
 
-    if(isElementNull(svg, "svg", "openSvg"))
-        return NULL;
+    if(svg == NULL) return NULL;
 
     fprintf(svg, "<svg>\n");
     return svg;
 }
 
-void drawElementsOnSvg(Svg svg, List elementsList, void (*buildElementSvgTag)(char*, void*));
+typedef void (*buildElementSvgTag)(char*, void*);
+
+void drawElementsOnSvg(Svg svg, DataStructure elements, buildElementSvgTag buildTag);
 
 void buildCircleSvgTag(char* circleTag, Circle Circ);
 
@@ -93,68 +84,77 @@ void buildHouseSvgTag(char* houseTag, House H);
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList);
 
-void drawOnSvg(Svg svg, Drawing Dr){
-    if(svg == NULL){
-        printf("Erro: Ponteiro para o arquivo svg e NULL");
-        exit(1);
-    }
-    if(Dr == NULL){
-        printf("Erro: o TAD dos desenhos nao existe..\n");
-        exit(1);
-    }
 
-    List circleList = getCircleList(Dr);
-    drawElementsOnSvg(svg, circleList, &buildCircleSvgTag);
-
-    List rectangleList = getRectangleList(Dr);
-    drawElementsOnSvg(svg, rectangleList, &buildRectangleSvgTag);
-
-    List textList = getTextList(Dr);
-    drawElementsOnSvg(svg, textList, &buildTextSvgTag);
-
-    List blockList = getBlockList(Dr);
-    drawElementsOnSvg(svg, blockList, &buildBlockSvgTag);
-
-    List semaphoreList = getSemaphoreList(Dr);
-    drawElementsOnSvg(svg, semaphoreList, &buildSemaphoreSvgTag);
+int drawOnSvg(Svg svg, City Ct){
+    if(svg == NULL || Ct == NULL)
+        return 0;
     
-    List hydrantList = getHydrantList(Dr);
-    drawElementsOnSvg(svg, hydrantList, &buildHydrantSvgTag);
+    DataStructure circles = getCircles(Ct);
+    drawElementsOnSvg(svg, circles, &buildCircleSvgTag);
 
-    List baseRadioList = getBaseRadioList(Dr);
-    drawElementsOnSvg(svg, baseRadioList, &buildBaseRadioSvgTag);
+    DataStructure rectangles = getRectangles(Ct);
+    drawElementsOnSvg(svg, rectangles, &buildRectangleSvgTag);
 
-    List healthCenterList = getHealthCenterList(Dr);
-    drawElementsOnSvg(svg, healthCenterList, &buildHealthCenterSvgTag);
+    DataStructure texts = getTexts(Ct);
+    drawElementsOnSvg(svg, texts, &buildTextSvgTag);
 
-    List houseList = getHouseList(Dr);
-    drawElementsOnSvg(svg, houseList, &buildHouseSvgTag);
+    DataStructure blocks = getBlocks(Ct);
+    drawElementsOnSvg(svg, blocks, &buildBlockSvgTag);
 
-    List queryElementsList = getQueryElementsList(Dr);
+    DataStructure semaphores = getSemaphores(Ct);
+    drawElementsOnSvg(svg, semaphores, &buildSemaphoreSvgTag);
+    
+    DataStructure hydrants = getHydrants(Ct);
+    drawElementsOnSvg(svg, hydrants, &buildHydrantSvgTag);
+
+    DataStructure baseRadios = getBaseRadios(Ct);
+    drawElementsOnSvg(svg, baseRadios, &buildBaseRadioSvgTag);
+
+    DataStructure healthCenters = getHealthCenters(Ct);
+    drawElementsOnSvg(svg, healthCenters, &buildHealthCenterSvgTag);
+
+    DataStructure houses = getHouses(Ct);
+    drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
+
+    //estabelecimento comercial.
+
+    List queryElementsList = getQueryElementsList(Ct);
     drawQueryElementsOnSvg(svg, queryElementsList);
+
+    return 1;
 }
 
-void drawElementsOnSvg(Svg svg, List elementsList, void (*buildElementSvgTag)(char*, void*)){
-    Node NODE = getFirst(elementsList);
+typedef struct {
+    Svg svg;
+    buildElementSvgTag buildTag;
+    char* elementTag;
+} SvgTag;
 
-    if(NODE == NULL){
-        printf("Erro: a lista de elementos esta vazia, falha ao desenhar no svg..\n");
-    }
+void drawElementOnSvg(Info info, ExtraInfo extraInfo);
+
+void drawElementsOnSvg(Svg svg, DataStructure elements, buildElementSvgTag buildTag){
+   
+    if(svg == NULL || elements == NULL || buildTag)
+        return;
     
-    char* elementTag = (char*) malloc(500 * sizeof(char));
-    Info information;
-    while(NODE != NULL){
-        information = get(elementsList, NODE);
+    SvgTag extraInfo;
+    extraInfo.svg = svg; 
+    extraInfo.buildTag = buildTag; 
+    extraInfo.elementTag = (char*) malloc(500 * sizeof(char));
 
-        (*buildElementSvgTag)(elementTag, information);
-        
-        fprintf(svg, "%s", elementTag);
-
-        NODE = getNext(elementsList, NODE);        
-    }
-
-    free(elementTag);
+    preOrderTraversal(elements, drawElementOnSvg, &extraInfo);
+   
+    free(extraInfo.elementTag);
 }
+
+void drawElementOnSvg(Info info, ExtraInfo extraInfo){
+    
+    SvgTag *exInfo = (SvgTag*) extraInfo;
+    
+    (*exInfo->buildTag)(exInfo->elementTag, info);
+    fprintf(exInfo->svg, "%s", exInfo->elementTag);
+}
+
 
 void buildCircleSvgTag(char* circleTag, Circle Circ){
     char* radius = getCircleRadius(Circ);
@@ -262,11 +262,10 @@ void buildHouseSvgTag(char* houseTag, House H){
 }
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList){
+    
     Node NODE = getFirst(elementsList);
-
-    if(NODE == NULL){
-        printf("Erro: a lista de elementos do query esta vazia, falha ao desenhar no svg..\n");
-    }
+    if(NODE == NULL) return;
+    
     
     Info information;
     while(NODE != NULL){

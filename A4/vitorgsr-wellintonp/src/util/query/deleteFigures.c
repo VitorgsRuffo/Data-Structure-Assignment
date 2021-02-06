@@ -1,13 +1,15 @@
 #include "../include/headers.h"
 #include "../include/elements.h"
 #include "../input/openInput.h"
+#include "../../include/dataStructure.h"
 
 void* getElementFreeFunction(char* elementType);
 void* getElementToStringFunction(char* elementType);
 void writeElementDeletionResultOnTxt(File txt, char* command, char* (*elementToString)(void*), Info elementInfo);
 
-void executeElementDeletion(char* command, Drawing Dr, File txt, char* deletionType){
-    if(isElementNull(Dr, "drawing", "executeElementDeletion"))
+void executeElementDeletion(char* command, City Ct, File txt, char* deletionType){
+    
+    if(command == NULL || Ct == NULL || txt == NULL || deletionType == NULL)
         return;
 
     int J = 0; int K = 0; 
@@ -23,16 +25,16 @@ void executeElementDeletion(char* command, Drawing Dr, File txt, char* deletionT
     char elementType[11]; char I[10];
 
     for(int i = J; i<=K; i++){
-        sprintf(I,"%d", i);
+        sprintf(I,"%d", i);  
         
-        Node elementNode = searchForFigureOrTextElementByIdentifier(Dr, I, elementType);
-        if(isElementNull(elementNode, "elementNode", "searchForFigureOrTextElementByIdentifier"))
+        Node elementNode = searchForFigureOrTextElementByIdentifier(Ct, I, elementType);
+        if(elementNode == NULL)
             continue;
         
-        List elementList = getListByElementType(Dr, elementType);
+        DataStructure elements = getDataStructureByElementType(Ct, elementType);
 
-        Info elementInfo = get(elementList, elementNode);
-        if(isElementNull(elementNode, "elementInfo", "searchForFigureOrTextElementByIdentifier"))
+        Info elementInfo = getPQuadTreeNodeInfo(elements, elementNode);
+        if(elementInfo == NULL)
             continue;
         
 
@@ -40,9 +42,12 @@ void executeElementDeletion(char* command, Drawing Dr, File txt, char* deletionT
         elementToStringFunction = getElementToStringFunction(elementType);
         writeElementDeletionResultOnTxt(txt, command, elementToStringFunction, elementInfo);
         
+        
         void (*freeElementFunction)(void*);
         freeElementFunction = getElementFreeFunction(elementType);
-        removeNode(elementList, elementNode, freeElementFunction);        
+
+        Info info = removePQuadTreeNode(elements, elementNode);
+        (*freeElementFunction)(info);
     }
 }
     

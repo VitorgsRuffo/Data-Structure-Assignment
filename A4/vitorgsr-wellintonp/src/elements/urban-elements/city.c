@@ -1,6 +1,7 @@
 #include "../../include/headers.h"
 #include "../../include/elements.h"
 #include "../../util/query/qry.h"
+#include "../../include/dataStructure.h"
 
 typedef struct city {
     PQuadTree circles;
@@ -150,85 +151,77 @@ HashTable getRegions(City Ct){
     return ct->regions;
 }
 
-/*
 
-List getListByElementType(Drawing Dr, char* elementType){
-    if(Ct == NULL)
-        return NULL;
+
+DataStructure getDataStructureByElementType(City Ct, char* elementType){
+    if(Ct == NULL) return NULL;
     
-    List elementList = NULL;
+    DataStructure elements = NULL;
+    
     if(elementType[0] == 'c')
-        elementList = getCircleList(Dr);
+        elements = getCircles(Ct);
     
     else if(elementType[2] == 't')
-        elementList = getRectangleList(Dr);
+        elements = getRectangles(Ct);
     
     else if(elementType[0] == 't')
-        elementList = getTextList(Dr);
+        elements = getTexts(Ct);
     
     else if(elementType[0] == 'q')
-        elementList = getBlockList(Dr);
+        elements = getBlocks(Ct);
 
     else if(elementType[0] == 'h')
-        elementList = getHydrantList(Dr);
+        elements = getHydrants(Ct);
 
     else if(elementType[0] == 's')
-        elementList = getSemaphoreList(Dr);
+        elements = getSemaphores(Ct);
 
     else if(elementType[1] == 'a')
-        elementList = getBaseRadioList(Dr);    
+        elements = getBaseRadios(Ct);    
     
     else
         return NULL;
     
-    return elementList;
+    return elements;
 }
 
 
-Node searchForFigureOrTextElementByIdentifier(Drawing Dr, char* idToSearch, char* figureElementType){
-    if(Ct == NULL)
+Node searchForFigureOrTextElementByIdentifier(City Ct, char* idToSearch, char* figureElementType){
+    if(Ct == NULL || idToSearch == NULL)
         return NULL;
 
     city *ct = (city*) Ct;
-    Node figureElementNode;
+    Node elementNode;
 
-    figureElementNode = searchForElementByIdentifier(dr->circles, &getCircleId, idToSearch);
-    if(figureElementNode != NULL){
+    elementNode = searchForObjectByKey(ct->circles, idToSearch);
+    if(elementNode != NULL){
         strcpy(figureElementType, "circulo");
-        return figureElementNode;
+        return elementNode;
     }
 
-    figureElementNode = searchForElementByIdentifier(dr->rectangles, &getRectangleId, idToSearch);
-    if(figureElementNode != NULL){
+    elementNode = searchForObjectByKey(ct->rectangles, idToSearch);
+    if(elementNode != NULL){
         strcpy(figureElementType, "retangulo");
-        return figureElementNode;
+        return elementNode;
     }
 
-    figureElementNode = searchForElementByIdentifier(dr->texts, &getTextId, idToSearch);
-    if(figureElementNode != NULL){
+    elementNode = searchForObjectByKey(ct->texts, idToSearch);
+    if(elementNode != NULL){
         strcpy(figureElementType, "texto");
-        return figureElementNode;
+        return elementNode;
     }
 
-    printf("Erro: elemento cujo id e %s nao foi encontrado nas listas de figuras..\n", idToSearch);
     return NULL;
 }
 
-Node searchForBlockByCep(Drawing Dr, char* cepToSearch){
-    city *ct = (city*) Ct;
-    Node blockNode = NULL;
 
-    blockNode = searchForElementByIdentifier(dr->blocks, &getBlockCep, cepToSearch);
-    return blockNode;
-}
-
-Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urbanElementType){
+Node searchForUrbanElementByIdentifier(City Ct, char* idToSearch, char* urbanElementType){
     if(Ct == NULL)
         return NULL;
 
     Node urbanElementNode;
 
-    urbanElementNode = searchForBlockByCep(Dr, idToSearch);
+    urbanElementNode = searchForBlockByCep(Ct, idToSearch);
     if(urbanElementNode != NULL){
         strcpy(urbanElementType, "quadra");
         return urbanElementNode;
@@ -236,29 +229,32 @@ Node searchForUrbanElementByIdentifier(Drawing Dr, char* idToSearch, char* urban
 
     city *ct = (city*) Ct;
 
-    urbanElementNode = searchForElementByIdentifier(dr->hydrants, &getHydrantId, idToSearch);
+    urbanElementNode = searchForObjectByKeyInPQuadTree(ct->hydrants, idToSearch);
     if(urbanElementNode != NULL){
         strcpy(urbanElementType, "hidrante");
         return urbanElementNode;
     }
 
-    urbanElementNode = searchForElementByIdentifier(dr->semaphores, &getSemaphoreId, idToSearch);
+    urbanElementNode = searchForObjectByKeyInPQuadTree(ct->semaphores, idToSearch);
     if(urbanElementNode != NULL){
         strcpy(urbanElementType, "semaforo");
         return urbanElementNode;
     }
 
-    urbanElementNode = searchForElementByIdentifier(dr->baseRadios, &getBaseRadioId, idToSearch);
+    urbanElementNode = searchForObjectByKeyInPQuadTree(ct->baseRadios, idToSearch);
     if(urbanElementNode != NULL){
         strcpy(urbanElementType, "radio-base");
         return urbanElementNode;
     }
 
-    printf("Erro: o equipamento urbano cujo id e %s nao foi encontrado nas listas...\n", idToSearch);
     return NULL;
 }
 
-*/
+Node searchForBlockByCep(City Ct, char* cepToSearch){
+    city *ct = (city*) Ct;
+    Node blockNode = searchForObjectByKeyInPQuadTree(ct->blocks, cepToSearch);
+    return blockNode;
+}
 
 void printCity(City Ct){
     if(Ct == NULL)

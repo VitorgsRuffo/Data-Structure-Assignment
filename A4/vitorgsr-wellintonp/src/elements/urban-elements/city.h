@@ -85,25 +85,27 @@ List getQueryElements(City Ct);
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade e uma referencia para uma string que contenha o tipo de um elemento.
 * Pós-Condição: retorna a estrutura de elementos cujo tipo foi passado por parametro.
 */
-//List getListByElementType(City Ct, char* elementType);
+DataStructure getDataStructureByElementType(City Ct, char* elementType);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade, um id de um elemento (figura ou texto) a ser procurado nas estruturas do tad cidade, e um ponteiro para guardar o tipo da figura quando a encontrarmos (se encontrarmos).
 * Pós-Condição: percorre as estruturas de figuras e a estrutura de texto em busca de um elemento que tenha o id especificado, se for encontrado retornamos o seu no e salvamos seu tipo no ponteiro passado, se nao for retornamos NULL.
 */
-//Node searchForFigureOrTextElementByIdentifier(City Ct, char* idToSearch, char* figureElementType);
+Node searchForFigureOrTextElementByIdentifier(City Ct, char* idToSearch, char* figureElementType);
 
-/*
-* Pré-Condição: requer a referencia para uma instancia de TAD cidade, um cep de uma quadra a ser procurada.
-* Pós-Condição: percorre a estrutura de quadras em busca de um no cuja informacao tenha o cep especificado, se for encontrado retornamos esse no, se nao for retornamos NULL.
-*/
-//Node searchForBlockByCep(City Ct, char* cepToSearch);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade, um id de um elemento urbano a ser procurado nas estruturas do tad cidade, e um ponteiro para guardar o tipo do elemento quando o encontrarmos (se encontrarmos).
 * Pós-Condição: percorre as estruturas de elementos urbanos em busca de um no cuja informacao tenha o id especificado, se for encontrado retornamos esse no e salvamos seu tipo dessa informacao no ponteiro passado, se nao for retornamos NULL.
 */
-//Node searchForUrbanElementByIdentifier(City Ct, char* idToSearch, char* urbanElementType);
+Node searchForUrbanElementByIdentifier(City Ct, char* idToSearch, char* urbanElementType);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade, um cep de uma quadra a ser procurada.
+* Pós-Condição: percorre a estrutura de quadras em busca de um no cuja informacao tenha o cep especificado, se for encontrado retornamos esse no, se nao for retornamos NULL.
+*/
+Node searchForBlockByCep(City Ct, char* cepToSearch);
+
 
 /*
 * Pré-Condição: requer o endereco de uma instancia de cidade.

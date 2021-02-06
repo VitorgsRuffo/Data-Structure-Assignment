@@ -4,19 +4,19 @@
 
 void writeUrbanElementInformationOnTxt(File txt, char* urbanElementToString);
 
-void executeUrbanElementInformationChecking(char* command, Drawing Dr, File txt){
-    if(isElementNull(Dr, "Drawing", "printUrbanElementInformationOnTxt"))
+void executeUrbanElementInformationChecking(char* command, City Ct, File txt){
+    if(command == NULL || Ct == NULL || txt == NULL)
         return;
     
     char identifier[15];
     sscanf(&command[5], "%s", identifier);
     
     char urbanElementType[15];
-    Node urbanElementNode = searchForUrbanElementByIdentifier(Dr, identifier, urbanElementType);
+    Node urbanElementNode = searchForUrbanElementByIdentifier(Ct, identifier, urbanElementType);
     if(isElementNull(urbanElementNode, "urbanElementNode", "printUrbanElementInformationOnTxt | searchForUrbanElementByIdentifier"))
             return;
     
-    List urbanElementList = getListByElementType(Dr, urbanElementType);
+    List urbanElementList = getListByElementType(Ct, urbanElementType);
     
     Info urbanElementInfo = get(urbanElementList, urbanElementNode);
     if(isElementNull(urbanElementInfo, "urbanElementInfo", "printUrbanElementInformationOnTxt | get"))

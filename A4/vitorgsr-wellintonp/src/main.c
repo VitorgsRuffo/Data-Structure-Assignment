@@ -5,8 +5,8 @@
 
 /*to do list:
 
-    - mudar drawing (-> city) ao longo do trabalho: svg e query.
-    - arrumar funcoes de busca: house.c, 
+    - mudar drawing (-> city) ao longo do trabalho: query.
+    - arrumar funcoes de busca.
     - makefile.
 
     - criar funcao para executar pintura das sombras das quadras (comando dd).

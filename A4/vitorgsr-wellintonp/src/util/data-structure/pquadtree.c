@@ -270,6 +270,47 @@ void levelOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInf
 }
 
 
+PQuadTreeNode searchForObjectByKeyInPQuadTree(PQuadTree Tree, char* key){
+    if(Tree == NULL || key == NULL) 
+        return NULL;
+    
+    pquadtree* tree = (pquadtree*) Tree;
+    pquadtreenode* root = tree->root;
+
+    if(root == NULL) return NULL;
+
+    Queue queue = createQueue();
+    queuePush(queue, root);
+    
+    pquadtreenode* currentNode;
+
+    while(!isQueueEmpty(queue)){
+        
+        currentNode = queuePop(queue);
+
+        if(!strcmp((*(tree->getKey))(currentNode->info), key)){
+            freeQueue(queue, NULL);
+            return currentNode;
+        }
+
+        if(currentNode->northWest != NULL)
+            queuePush(queue, currentNode->northWest);
+
+        if(currentNode->northEast != NULL)
+            queuePush(queue, currentNode->northEast);
+
+        if(currentNode->southWest != NULL)
+            queuePush(queue, currentNode->southWest);
+
+        if(currentNode->southEast != NULL)
+            queuePush(queue, currentNode->southEast);
+    }
+
+    freeQueue(queue, NULL);
+    return NULL;
+}
+
+
 PQuadTreeNode insertPQuadTree(PQuadTree Tree, Point P, Info info){
 
     if(Tree == NULL || P == NULL || info == NULL) return NULL;

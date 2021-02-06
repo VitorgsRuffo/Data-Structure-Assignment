@@ -1,6 +1,8 @@
 #include "../../include/headers.h"
 #include "../../include/urbanElements.h"
 #include "../input/openInput.h"
+#include "../../include/dataStructure.h"
+#include "../tools.h"
 
 typedef struct{
     double x;
@@ -9,42 +11,52 @@ typedef struct{
     char cstrk[20];
 }WrapperCircle;
 
+
 void setBlocksBorderInRange(File txt, List blockList, WrapperCircle* wrapperCircle);
 
-void executeBlocksBorderColorChanging(char* command, Drawing Dr, File txt){
-    if(isElementNull(Dr, "drawing", "executeBlocksBorderColorChanging"))
+void executeBlocksBorderColorChanging(char* command, City Ct, File txt){
+    if(Ct == NULL || txt == NULL)
         return;
 
     WrapperCircle wrapperCircle;
     sscanf(&command[4], "%lf %lf %lf %s", &wrapperCircle.x, &wrapperCircle.y, &wrapperCircle.radius, wrapperCircle.cstrk);
 
-    List blockList = getBlockList(Dr);
+    DataStructure blocks = getBlocks(Ct);
 
-    setBlocksBorderInRange(txt, blockList, &wrapperCircle);
+    setBlocksBorderInRange(txt, blocks, &wrapperCircle);
+}
+
+typedef struct {
+    WrapperCircle* wrapperCircle;
+    File txt;
+} extraInfos;
+
+
+void setBlockBorderIfItsInRange(Info blockInfo, ExtraInfo extraInfo);
+
+void setBlocksBorderInRange(File txt, DataStructure blocks, WrapperCircle* wrapperCircle){
+
+    if(txt == NULL || blocks == NULL || wrapperCircle == NULL)
+        return;
+
+    extraInfos extraInfo;
+
+    extraInfo.wrapperCircle = wrapperCircle;
+    extraInfo.txt = txt;
+
+    preOrderTraversal(blocks, setBlockBorderIfItsInRange, &extraInfo);
 }
 
 void writeBlockCepOnTxt(File txt, Info blockInfo);
 
-void setBlocksBorderInRange(File txt, List blockList, WrapperCircle* wrapperCircle){
+void setBlockBorderIfItsInRange(Info blockInfo, ExtraInfo extraInfo){
+    
+    extraInfos *exInfo = (extraInfos*) extraInfo; 
 
-    Node NODE = getFirst(blockList);
-    if(isElementNull(NODE, "NODE", "setBlocksBorderInRange | getFirst")){
-        return;
-    }
-
-    Info blockInfo = NULL;
-
-    while(NODE != NULL){
-
-        blockInfo = get(blockList, NODE);
+    if(isBlockInCircleRange(blockInfo, exInfo->wrapperCircle->x, exInfo->wrapperCircle->y, exInfo->wrapperCircle->radius)){
         
-        if(isBlockInCircleRange(blockInfo, wrapperCircle->x, wrapperCircle->y, wrapperCircle->radius)){
-
-           setBlockCstrk(blockInfo, wrapperCircle->cstrk);
-           writeBlockCepOnTxt(txt, blockInfo);
-        }
-
-        NODE = getNext(blockList, NODE);
+        setBlockCstrk(blockInfo, exInfo->wrapperCircle->cstrk);
+        writeBlockCepOnTxt(exInfo->txt, blockInfo);
     }
 }
 
