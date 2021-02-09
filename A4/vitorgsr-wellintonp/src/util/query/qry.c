@@ -1,6 +1,7 @@
-#include "../include/headers.h"
-#include "../include/query.h"
+#include "../../include/headers.h"
+#include "../../include/query.h"
 #include "../../include/util.h"
+#include "../../elements/urban-elements/city.h"
 
 File openTxt(Parameters Param);
 void closeTxt(File txt);
@@ -8,7 +9,7 @@ void closeTxt(File txt);
 void freeExecuteQryResources(char* command);
 
 void executeQry(File qry, City Ct, Parameters Param){
-    if(Ct == NULL) return;
+    if(qry == NULL || Ct == NULL || Param == NULL) return;
     
     char* command = (char*) malloc((commandMaxLength + 1) * sizeof(char));     
     int commandLength;
@@ -33,40 +34,40 @@ void executeQry(File qry, City Ct, Parameters Param){
 
         sscanf(command, "%s ", commandType);
         if(!strcmp(commandType, "o?"))
-            executeOverlapTest(command, Dr, txt);
+            executeOverlapTest(command, Ct, txt);
         
         else if(!strcmp(commandType, "i?"))
-            executeInnerPointTest(command, Dr, txt);
+            executeInnerPointTest(command, Ct, txt);
     
         else if(!strcmp(commandType, "pnt") || !strcmp(commandType, "pnt*"))  
-            executeElementPainting(command, Dr, txt, commandType);
+            executeElementPainting(command, Ct, txt, commandType);
 
         else if(!strcmp(commandType, "delf") || !strcmp(commandType, "delf*")) 
-            executeElementDeletion(command, Dr, txt, commandType);        
+            executeElementDeletion(command, Ct, txt, commandType);        
         
         else if(!strcmp(commandType, "dq"))   
-            executeBlocksDeletion(command, Dr, txt);
+            executeBlocksDeletion(command, Ct, txt);
         
         else if(!strcmp(commandType, "del")) 
-            executeUrbanElementDeletion(command, Dr, txt);
+            executeUrbanElementDeletion(command, Ct, txt);
     
         else if(!strcmp(commandType, "cbq")) 
-            executeBlocksBorderColorChanging(command, Dr, txt);
+            executeBlocksBorderColorChanging(command, Ct, txt);
 
         else if(!strcmp(commandType, "crd?"))
-            executeUrbanElementInformationChecking(command, Dr, txt);
+            executeUrbanElementInformationChecking(command, Ct, txt);
         
         else if(!strcmp(commandType, "car"))
-            executeUrbanElementsTotalAreaCalculationInRange(command, Dr, txt);
+            executeUrbanElementsTotalAreaCalculationInRange(command, Ct, txt);
 
         else if(!strcmp(commandType, "cv"))
-            executeCovidCasesReport(command, Dr);
+            executeCovidCasesReport(command, Ct);
 
         else if(!strcmp(commandType, "soc"))
-            executeMedicalTreatmentSearching(command, Dr, txt);
+            executeMedicalTreatmentSearching(command, Ct, txt);
 
         else if(!strcmp(commandType, "ci"))
-            executeCovidIncidenceReportInRegion(command, Dr, txt);
+            executeCovidIncidenceReportInRegion(command, Ct, txt);
     }
     
     closeTxt(txt);
@@ -76,7 +77,7 @@ void executeQry(File qry, City Ct, Parameters Param){
 File openTxt(Parameters Param){
     char* txtPath = buildQryOutputPath(Param, "txt");
     File txt = fopen(txtPath, "a");
-    if(isElementNull(txt, "txt", "openTxt"))
+    if(txt == NULL)
         return NULL;
     
     free(txtPath);
@@ -92,8 +93,7 @@ void freeExecuteQryResources(char* command){
 }
 
 void freeQueryElement(QueryElement queryElement){
-    if(isElementNull(queryElement, "query", "freeQueryElement"))
-        return;
+    if(queryElement == NULL) return;
 
     char* qryElem = (char*) queryElement;
     free(qryElem);

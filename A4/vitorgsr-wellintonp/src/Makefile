@@ -2,14 +2,18 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o drawing.o customization.o parameters.o openInput.o geo.o svg.o tools.o list.o stack.o queue.o pquadtree.o hashtable.o circle.o rectangle.o text.o point.o block.o hydrant.o semaphore.o baseRadio.o healthCenter.o region.o house.o qry.o overlap.o innerPoint.o paint.o deleteFigures.o deleteBlocks.o printInfo.o blockBorder.o urbanDeletion.o calculateArea.o covidCases.o medicalTreatment.o covidIncidence.o
+obj = main.o circle.o rectangle.o baseRadio.o block.o city.o customization.o establishmentType.o healthCenter.o house.o hydrant.o region.o semaphore.o point.o text.o hashtable.o list.o pquadtree.o queue.o stack.o geo.o openInput.o parameters.o blockBorder.o calculateArea.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o qry.o urbanDeletion.o sort.o svg.o tools.o
 
-util_path = ./util/
-data_structure_path = ./util/data-structure/
-elements_path = ./elements/
-urban_elements_path = ./urban-elements/
-drawing_path = ./drawing/
-qry_path = ./query/
+
+#paths:
+elements = ./elements
+figures = $(elements)/figures
+urban_elements =  $(elements)/urban-elements
+
+util = ./util
+data_structure = $(util)/data-structure
+input = $(util)/input
+query = $(util)/query
 
 
 siguel: $(obj)
@@ -19,124 +23,127 @@ main.o: main.c
 	$(CC) $(flags) -c main.c
 
 
-#drawing files:
-drawing.o: $(drawing_path)drawing.c 
-	$(CC) $(flags) -c $(drawing_path)drawing.c
+#figures:
+circle.o: $(figures)/circle.c 
+	$(CC) $(flags) -c $(figures)/circle.c
 
-customization.o: $(drawing_path)customization.c
-	$(CC) $(flags) -c $(drawing_path)customization.c
-
-
-#util files:
-parameters.o: $(util_path)parameters.c
-	$(CC) $(flags) -c $(util_path)parameters.c
-
-openInput.o: $(util_path)openInput.c
-	$(CC) $(flags) -c $(util_path)openInput.c
-
-geo.o: $(util_path)geo.c
-	$(CC) $(flags) -c $(util_path)geo.c
-
-svg.o: $(util_path)svg.c 
-	$(CC) $(flags) -c $(util_path)svg.c
-
-tools.o: $(util_path)tools.c 
-	$(CC) $(flags) -c $(util_path)tools.c
+rectangle.o: $(figures)/rectangle.c 
+	$(CC) $(flags) -c $(figures)/rectangle.c
 
 
-#data structures files:
-list.o: $(data_structure_path)list.c 
-	$(CC) $(flags) -c $(data_structure_path)list.c
+#urban elements:
+block.o: $(urban_elements)/block.c
+	$(CC) $(flags) -c $(urban_elements)/block.c
 
-stack.o: $(data_structure_path)stack.c 
-	$(CC) $(flags) -c $(data_structure_path)stack.c 
+hydrant.o: $(urban_elements)/hydrant.c
+	$(CC) $(flags) -c $(urban_elements)/hydrant.c
 
-queue.o: $(data_structure_path)queue.c 
-	$(CC) $(flags) -c $(data_structure_path)queue.c 
+semaphore.o: $(urban_elements)/semaphore.c
+	$(CC) $(flags) -c $(urban_elements)/semaphore.c
 
-pquadtree.o: $(data_structure_path)pquadtree.c 
-	$(CC) $(flags) -c $(data_structure_path)pquadtree.c 
+baseRadio.o: $(urban_elements)/baseRadio.c
+	$(CC) $(flags) -c $(urban_elements)/baseRadio.c
 
-hashtable.o: $(data_structure_path)hashtable.c 
-	$(CC) $(flags) -c $(data_structure_path)hashtable.c 
+healthCenter.o: $(urban_elements)/healthCenter.c
+	$(CC) $(flags) -c $(urban_elements)/healthCenter.c
 
+region.o: $(urban_elements)/region.c
+	$(CC) $(flags) -c $(urban_elements)/region.c
 
-#element files:
-circle.o: $(elements_path)circle.c 
-	$(CC) $(flags) -c $(elements_path)circle.c
+house.o: $(urban_elements)/house.c
+	$(CC) $(flags) -c $(urban_elements)/house.c
 
-rectangle.o: $(elements_path)rectangle.c 
-	$(CC) $(flags) -c $(elements_path)rectangle.c
+city.o: $(urban_elements)/city.c 
+	$(CC) $(flags) -c $(urban_elements)/city.c
 
-text.o: $(elements_path)text.c 
-	$(CC) $(flags) -c $(elements_path)text.c
-
-point.o: $(elements_path)point.c 
-	$(CC) $(flags) -c $(elements_path)point.c
+customization.o: $(urban_elements)/customization.c
+	$(CC) $(flags) -c $(urban_elements)/customization.c
 
 
-#urban elements files:
-block.o: $(urban_elements_path)block.c
-	$(CC) $(flags) -c $(urban_elements_path)block.c
+text.o: $(elements)/text.c 
+	$(CC) $(flags) -c $(elements)/text.c
 
-hydrant.o: $(urban_elements_path)hydrant.c
-	$(CC) $(flags) -c $(urban_elements_path)hydrant.c
-
-semaphore.o: $(urban_elements_path)semaphore.c
-	$(CC) $(flags) -c $(urban_elements_path)semaphore.c
-
-baseRadio.o: $(urban_elements_path)baseRadio.c
-	$(CC) $(flags) -c $(urban_elements_path)baseRadio.c
-
-healthCenter.o: $(urban_elements_path)healthCenter.c
-	$(CC) $(flags) -c $(urban_elements_path)healthCenter.c
-
-region.o: $(urban_elements_path)region.c
-	$(CC) $(flags) -c $(urban_elements_path)region.c
-
-house.o: $(urban_elements_path)house.c
-	$(CC) $(flags) -c $(urban_elements_path)house.c
+point.o: $(elements)/point.c 
+	$(CC) $(flags) -c $(elements)/point.c
 
 
-#query files:
-qry.o: $(qry_path)qry.c
-	$(CC) $(flags) -c $(qry_path)qry.c
+#data structures:
+list.o: $(data_structure)/list.c 
+	$(CC) $(flags) -c $(data_structure)/list.c
 
-overlap.o: $(qry_path)overlap.c
-	$(CC) $(flags) -c $(qry_path)overlap.c
+stack.o: $(data_structure)/stack.c 
+	$(CC) $(flags) -c $(data_structure)/stack.c 
 
-innerPoint.o: $(qry_path)innerPoint.c
-	$(CC) $(flags) -c $(qry_path)innerPoint.c
+queue.o: $(data_structure)/queue.c 
+	$(CC) $(flags) -c $(data_structure)/queue.c 
 
-paint.o: $(qry_path)paint.c
-	$(CC) $(flags) -c $(qry_path)paint.c
+pquadtree.o: $(data_structure)/pquadtree.c 
+	$(CC) $(flags) -c $(data_structure)/pquadtree.c 
 
-deleteFigures.o: $(qry_path)deleteFigures.c
-	$(CC) $(flags) -c $(qry_path)deleteFigures.c
+hashtable.o: $(data_structure)/hashtable.c 
+	$(CC) $(flags) -c $(data_structure)/hashtable.c 
 
-deleteBlocks.o: $(qry_path)deleteBlocks.c
-	$(CC) $(flags) -c $(qry_path)deleteBlocks.c
 
-printInfo.o: $(qry_path)printInfo.c
-	$(CC) $(flags) -c $(qry_path)printInfo.c
+#input:
+parameters.o: $(input)/parameters.c
+	$(CC) $(flags) -c $(input)/parameters.c
 
-blockBorder.o: $(qry_path)blockBorder.c
-	$(CC) $(flags) -c $(qry_path)blockBorder.c
+openInput.o: $(input)/openInput.c
+	$(CC) $(flags) -c $(input)/openInput.c
 
-urbanDeletion.o: $(qry_path)urbanDeletion.c
-	$(CC) $(flags) -c $(qry_path)urbanDeletion.c
+geo.o: $(input)/geo.c
+	$(CC) $(flags) -c $(input)/geo.c
 
-calculateArea.o: $(qry_path)calculateArea.c
-	$(CC) $(flags) -c $(qry_path)calculateArea.c
 
-covidCases.o: $(qry_path)covidCases.c
-	$(CC) $(flags) -c $(qry_path)covidCases.c
+#query:
+qry.o: $(query)/qry.c
+	$(CC) $(flags) -c $(query)/qry.c
 
-medicalTreatment.o: $(qry_path)medicalTreatment.c
-	$(CC) $(flags) -c $(qry_path)medicalTreatment.c
+overlap.o: $(query)/overlap.c
+	$(CC) $(flags) -c $(query)/overlap.c
 
-covidIncidence.o: $(qry_path)covidIncidence.c
-	$(CC) $(flags) -c $(qry_path)covidIncidence.c
+innerPoint.o: $(query)/innerPoint.c
+	$(CC) $(flags) -c $(query)/innerPoint.c
+
+paint.o: $(query)/paint.c
+	$(CC) $(flags) -c $(query)/paint.c
+
+deleteFigures.o: $(query)/deleteFigures.c
+	$(CC) $(flags) -c $(query)/deleteFigures.c
+
+deleteBlocks.o: $(query)/deleteBlocks.c
+	$(CC) $(flags) -c $(query)/deleteBlocks.c
+
+printInfo.o: $(query)/printInfo.c
+	$(CC) $(flags) -c $(query)/printInfo.c
+
+blockBorder.o: $(query)/blockBorder.c
+	$(CC) $(flags) -c $(query)/blockBorder.c
+
+urbanDeletion.o: $(query)/urbanDeletion.c
+	$(CC) $(flags) -c $(query)/urbanDeletion.c
+
+calculateArea.o: $(query)/calculateArea.c
+	$(CC) $(flags) -c $(query)/calculateArea.c
+
+covidCases.o: $(query)/covidCases.c
+	$(CC) $(flags) -c $(query)/covidCases.c
+
+medicalTreatment.o: $(query)/medicalTreatment.c
+	$(CC) $(flags) -c $(query)/medicalTreatment.c
+
+covidIncidence.o: $(query)/covidIncidence.c
+	$(CC) $(flags) -c $(query)/covidIncidence.c
+
+
+svg.o: $(util)/svg.c 
+	$(CC) $(flags) -c $(util)/svg.c
+
+sort.o: $(util)/sort.c 
+	$(CC) $(flags) -c $(util)/sort.c
+
+tools.o: $(util)/tools.c 
+	$(CC) $(flags) -c $(util)/tools.c
 
 
 clean: 

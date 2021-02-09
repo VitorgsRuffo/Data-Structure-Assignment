@@ -52,11 +52,25 @@ char* getRectangleWidth(Rectangle Rect){
     return rect->width;
 }
 
+void setRectangleWidth(Rectangle Rect, char* width){
+    if(Rect == NULL)
+        return;
+    rectangle *rect = (rectangle*) Rect;
+    strcpy(rect->width, width);
+}
+
 char* getRectangleHeight(Rectangle Rect){
     if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->height;
+}
+
+void setRectangleHeight(Rectangle Rect, char* height){
+    if(Rect == NULL)
+        return;
+    rectangle *rect = (rectangle*) Rect;
+    strcpy(rect->height, height);
 }
 
 char* getRectangleX(Rectangle Rect){
@@ -66,12 +80,29 @@ char* getRectangleX(Rectangle Rect){
     return rect->x;
 }
 
+void setRectangleX(Rectangle Rect, char* x){
+    if(Rect == NULL)
+        return;
+    rectangle *rect = (rectangle*) Rect;
+    strcpy(rect->x, x);
+    setPointX(rect->coordinates, atof(x));
+}
+
 char* getRectangleY(Rectangle Rect){
     if(Rect == NULL)
         return NULL;
     rectangle *rect = (rectangle*) Rect;
     return rect->y;
 }
+
+void setRectangleY(Rectangle Rect, char* y){
+    if(Rect == NULL)
+        return;
+    rectangle *rect = (rectangle*) Rect;
+    strcpy(rect->y, y);
+    setPointY(rect->coordinates, atof(y));
+}
+
 
 Point getRectangleCoordinates(Rectangle Rect){
     if(Rect == NULL)

@@ -4,73 +4,88 @@
 #include "../input/openInput.h"
 #include "../tools.h"
 
-void determineHousesInsideCircumference(List houseList, List housesInsideCircList, Circle circle);
+
+typedef struct {
+    List housesInsideCircList;
+    Circle circumference;
+    Rectangle house;
+    int thereIsHealthCenterInPolygon;
+    int convexHullPointsAmount;
+    Point* convexHullPoints; 
+}Variables;
+
+void determineHousesInsideCircumference(DataStructure houses, Variables* variables);
 char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, char* circumferenceRadius);
 Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsideCircListLength);
-Stack convexHull(Point points[], int n);
 char* pointToString(void* P);
 int calculateTotalCovidCasesInRegion(List housesInsideCircList);
 double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPointsAmount);
 char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion);
 char* buildIncidenceRegionTag(Point* points, int pointsAmount, char incidenceRegionCategory);
-void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElementsList, Point* convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea);
+void suggestHealthCenterInRegionIfNeeded(DataStructure healthCenters, Variables* variables, List queryElementsList, double incidenceRegionArea);
 void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, int totalHabitantsInRegion);
 
 
 void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
-    if(isElementNull(Ct, "city", "executeCovidIncidenceReportInRegion"))
-        return;
 
     char x[15], y[15], radius[15];
     sscanf(&command[3], "%s %s %s", x, y, radius);
 
-    Circle circ = createCircle("...", radius, x, y, "...", "...", "...");
+    Variables variables;
+    variables.circumference = createCircle("...", radius, x, y, "...", "...", "...");
+    variables.house = createRectangle("...", "...", "...", "...", "...", "...", "...", "...");
     
-    List houseList = getHouseList(Ct);
-    List housesInsideCircList = createList();
-    determineHousesInsideCircumference(houseList, housesInsideCircList, circ);
+    DataStructure houses = getHouses(Ct);
+    variables.housesInsideCircList = createList();
+    determineHousesInsideCircumference(houses, &variables);
 
     char* boundingCircumferenceTag = buildBoundingCircumferenceTag(x, y, radius);
     List queryElementsList = getQueryElementsList(Ct);
     insert(queryElementsList, boundingCircumferenceTag);
 
-    if(length(housesInsideCircList) <= 0){
+    if(length(variables.housesInsideCircList) <= 0){
         fprintf(txt, "Nao existem casas dentro do circulo.");
-        freeCircle(circ);
-        freeList(housesInsideCircList, NULL);
+        freeCircle(variables.circumference);
+        freeList(variables.housesInsideCircList, NULL);
         return;
     }
     
-    int housesInsideCircListLength = length(housesInsideCircList);
+    int housesInsideCircListLength = length(variables.housesInsideCircList);
 
-    Point* points = getHousesInsideCircCenterOfMass(housesInsideCircList, housesInsideCircListLength);
-    
-    int pointsAmount = housesInsideCircListLength;  
+    Point* points = getHousesInsideCircCenterOfMass(variables.housesInsideCircList, housesInsideCircListLength);
+    int pointsAmount = housesInsideCircListLength; 
+
     Stack head = convexHull(points, pointsAmount);
     if(head == NULL){
         fprintf(txt, "Erro: A quantidade de casas sao insuficientes para formar regiao de incidencia (quantidade de casas < 3).");
         for(int i = 0; i<housesInsideCircListLength; i++)
             free(*(points + i));
         free(points);
-        freeCircle(circ);
-        freeList(housesInsideCircList, NULL); 
+        freeCircle(variables.circumference);
+        freeList(variables.housesInsideCircList, NULL); 
         return;    
     }
   
     int convexHullPointsAmount = stackLength(&head);
     Point* convexHullPoints = (Point*) stackToArray(&head); 
     
-    int totalCovidCasesInRegion = calculateTotalCovidCasesInRegion(housesInsideCircList);
+    int totalCovidCasesInRegion = calculateTotalCovidCasesInRegion(variables.housesInsideCircList);
+    
     double incidenceRegionArea = calculateIncidenceRegionArea(convexHullPoints, convexHullPointsAmount);
+    
+
+
+    //** CORRIGIR!!
     Region region = getRegion(Ct);
     double regionDemographicDensity = (getRegionDemographicDensity(region)) / 1000000.00; //convertendo densidade demografica de km^2 para m^2.
     int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
-
+    //**
     
+
     char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
     if(incidenceRegionCategory == 'E'){
-        List healthCenterList = getHealthCenterList(Ct);
-        suggestHealthCenterInRegionIfNeeded(healthCenterList, queryElementsList, convexHullPoints, convexHullPointsAmount, incidenceRegionArea);        
+        DataStructure healthCenters = getHealthCenters(Ct); 
+        suggestHealthCenterInRegionIfNeeded(healthCenters, &variables, queryElementsList, incidenceRegionArea);        
     }
     
     char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount, incidenceRegionCategory);
@@ -87,47 +102,45 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
             free(*(convexHullPoints + i));
     free(convexHullPoints);
 
-    freeCircle(circ);
-    freeList(housesInsideCircList, NULL);  
+    freeCircle(variables.circumference);
+    freeList(variables.housesInsideCircList, NULL);  
 }
 
-void determineHousesInsideCircumference(List houseList, List housesInsideCircList, Circle circ){
+void insertHouseInListIfItsInsideCircumference(Info houseInfo, ExtraInfo extraInfo);
 
-    Node NODE = getFirst(houseList);
-    if(isElementNull(NODE, "NODE", "determineHousesInsideCircumference | getFirst"))
-        return;
+void determineHousesInsideCircumference(DataStructure houses, Variables* variables){
+
+    levelOrderTraversal(houses, insertHouseInListIfItsInsideCircumference, variables);
+    free(variables->house);
+}
+
+void insertHouseInListIfItsInsideCircumference(Info houseInfo, ExtraInfo extraInfo){
     
-    Info houseInfo = NULL;
-    char houseX[15], houseY[15], houseW[15], houseH[15];
+    Variables* variables = (Variables*) extraInfo;
+
     double aux;
+    char houseX[10], houseY[10], houseW[10], houseH[10];
+    aux = getHouseX(houseInfo);
+    sprintf(houseX, "%.2lf", aux);
+    aux = getHouseY(houseInfo);
+    sprintf(houseY, "%.2lf", aux);
+    aux = getHouseW(houseInfo);
+    sprintf(houseW, "%.2lf", aux);
+    aux = getHouseH(houseInfo);
+    sprintf(houseH, "%.2lf", aux);
 
-    while(NODE != NULL){
+    setRectangleX(variables->house, houseX);
+    setRectangleY(variables->house, houseY);
+    setRectangleWidth(variables->house, houseW);
+    setRectangleHeight(variables->house, houseH);
 
-        houseInfo = get(houseList, NODE);
-
-        aux = getHouseX(houseInfo);
-        sprintf(houseX, "%lf", aux);
-        aux = getHouseY(houseInfo);
-        sprintf(houseY, "%lf", aux);
-        aux = getHouseW(houseInfo);
-        sprintf(houseW, "%lf", aux);
-        aux = getHouseH(houseInfo);
-        sprintf(houseH, "%lf", aux);
-
-        Rectangle rect = createRectangle("...", houseW, houseH, houseX, houseY, "...", "...", "...");
-
-        if(checkRectCircOverlap(rect, circ))
-            insert(housesInsideCircList, houseInfo);
-
-
-        freeRectangle(rect);
-        NODE = getNext(houseList, NODE);
-    }
+    if(checkRectCircOverlap(variables->house, variables->circumference)) //isRectInsideCirc
+        insert(variables->housesInsideCircList, houseInfo);
 }
 
 char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, char* circumferenceRadius){
     char* boundingCircumferenceTag = (char*) malloc(300 * sizeof(char));
-    if(isElementNull(boundingCircumferenceTag, "boundingCircumferenceTag", "buildBoundingCircumferenceTag"))
+    if(boundingCircumferenceTag == NULL)
         return NULL;
 
     sprintf(boundingCircumferenceTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"green\" stroke-width=\"3\" fill=\"black\" fill-opacity=\"0.0\" />\n", circumferenceX, circumferenceY, circumferenceRadius);
@@ -139,8 +152,7 @@ Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsi
     Point* points = (Point*) malloc(sizeof(Point) * housesInsideCircListLength);
 
     Node NODE = getFirst(housesInsideCircList);
-    if(isElementNull(NODE, "NODE", "getHousesInsideCircCenterOfMass | getFirst"))
-        return NULL;
+    if(NODE == NULL) return NULL;
     
     Info house = NULL;
 
@@ -162,8 +174,7 @@ Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsi
 
 int calculateTotalCovidCasesInRegion(List housesInsideCircList){
     Node NODE = getFirst(housesInsideCircList);
-    if(isElementNull(NODE, "NODE", "calculateTotalCovidCasesInRegion | getFirst"))
-        return -1;
+    if(NODE == NULL) return -1;
     
     int totalCases = 0;
     Info house = NULL;
@@ -203,10 +214,8 @@ char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabi
     }else if(totalCovidCases >= 20){
         return 'E'; 
     }
-    else{
-        // Fazer tratamentos ******
+    else
         return 'Z';
-    }
 }
 
 double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPointsAmount){
@@ -238,8 +247,7 @@ char* determineIncidenceRegionColor(char incidenceRegionCategory);
 
 char* buildIncidenceRegionTag(Point* points, int pointsAmount, char incidenceRegionCategory){
     char* incidenceRegionTag = (char*) malloc(1000 * sizeof(char));
-    if(isElementNull(incidenceRegionTag, "incidenceRegionTag", "buildIncidenceRegionTag"))
-        return NULL;
+    if(incidenceRegionTag == NULL) return NULL;
     
     int stringLength = strlen("\t<polygon points=\"");
     sprintf(incidenceRegionTag, "\t<polygon points=\"");
@@ -284,43 +292,43 @@ char* determineIncidenceRegionColor(char incidenceRegionCategory){
     return "black"; 
 }
 
-int checkPointIrregularPolygonOverlap(Point healthCenterLocation, Point* convexHullPoints, int convexHullPointsAmount);
+void checkIfHealthCenterIsInsidePolygon(Info healthCenterInfo, ExtraInfo extraInfo);
+int checkPointIrregularPolygonOverlap(Point healthCenterCoordinates, Point* convexHullPoints, int convexHullPointsAmount);
 Point calculatePolygonCentroid(Point* convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea);
 char* buildHealthCenterSuggestionTag(Point polygonCentroid);
 
-void suggestHealthCenterInRegionIfNeeded(List healthCenterList, List queryElementsList, Point* convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea){
-    Node NODE = getFirst(healthCenterList);
-    if(isElementNull(NODE, "NODE", "suggestHealthCenterInRegionIfNeeded | getFirst"))
-        return;
+void suggestHealthCenterInRegionIfNeeded(DataStructure healthCenters, Variables* variables, List queryElementsList, double incidenceRegionArea){
     
-    Info healthCenter = NULL;
-    Point healthCenterLocation = createPoint(0, 0);
-
-    while(NODE != NULL){
-
-        healthCenter = get(healthCenterList, NODE);
-
-        setPointX(healthCenterLocation, atof(getHealthCenterX(healthCenter)));
-        setPointY(healthCenterLocation, atof(getHealthCenterY(healthCenter)));
+    variables->thereIsHealthCenterInPolygon = 0;
+    
+    levelOrderTraversal(healthCenters, checkIfHealthCenterIsInsidePolygon, variables);
+    
+    if(variables->thereIsHealthCenterInPolygon)
+        return; //se em algum momento houve overlap entre um posto e a regiao de incidencia saimos da funcao sem sugerir um posto.
         
-        if(checkPointIrregularPolygonOverlap(healthCenterLocation, convexHullPoints, convexHullPointsAmount))
-            return; //se em algum momento houver overlap entre um posto e a regiao de incidencia saimos da funcao sem sugerir um posto.
-
-        NODE = getNext(healthCenterList, NODE);
-    }
-    
-    // Caso finalize o loop sem retorno, significa que não foi encontrado nenhuma posto de saude dentro do poligono e precisamos sugerir a construcao de um.
-    Point polygonCentroid = calculatePolygonCentroid(convexHullPoints, convexHullPointsAmount, incidenceRegionArea);
+    //não foi encontrado nenhuma posto de saude dentro do poligono e, portanto, precisamos sugerir a construcao de um.
+    Point polygonCentroid = calculatePolygonCentroid(variables->convexHullPoints, variables->convexHullPointsAmount, incidenceRegionArea);
   
     char* healthCenterSuggestionTag = buildHealthCenterSuggestionTag(polygonCentroid);
     insert(queryElementsList, healthCenterSuggestionTag);  
+}
+
+void checkIfHealthCenterIsInsidePolygon(Info healthCenterInfo, ExtraInfo extraInfo){
+
+    Variables* variables = (Variables*) extraInfo;
+
+    Point healthCenterCoordinates = getHealthCenterCoordinates(healthCenterInfo);
+    
+    if(checkPointIrregularPolygonOverlap(healthCenterCoordinates, variables->convexHullPoints, variables->convexHullPointsAmount))
+        variables->thereIsHealthCenterInPolygon = 1;
+
 }
 
 #define MIN(x,y) (x < y ? x : y)
 #define MAX(x,y) (x > y ? x : y)
 
 //colocar no tad point
-int checkPointIrregularPolygonOverlap(Point healthCenterLocation, Point* convexHullPoints, int convexHullPointsAmount){
+int checkPointIrregularPolygonOverlap(Point healthCenterCoordinates, Point* convexHullPoints, int convexHullPointsAmount){
     
     int counter = 0;
     int i;
@@ -331,17 +339,17 @@ int checkPointIrregularPolygonOverlap(Point healthCenterLocation, Point* convexH
     for (i=1; i<=convexHullPointsAmount; i++) {
         p2 = *(convexHullPoints + (i % convexHullPointsAmount));
 
-        if (getPointY(healthCenterLocation) > MIN(getPointY(p1), getPointY(p2))) {
+        if (getPointY(healthCenterCoordinates) > MIN(getPointY(p1), getPointY(p2))) {
             
-            if (getPointY(healthCenterLocation)  <= MAX(getPointY(p1), getPointY(p2))) {
+            if (getPointY(healthCenterCoordinates)  <= MAX(getPointY(p1), getPointY(p2))) {
                 
-                if (getPointX(healthCenterLocation) <= MAX(getPointX(p1), getPointX(p2))) {
+                if (getPointX(healthCenterCoordinates) <= MAX(getPointX(p1), getPointX(p2))) {
                     
                     if (getPointY(p1) != getPointY(p2)) {
                         
-                        xinters = (getPointY(healthCenterLocation) - getPointY(p1)) * 
+                        xinters = (getPointY(healthCenterCoordinates) - getPointY(p1)) * 
                                   (getPointX(p2)-getPointX(p1))/(getPointY(p2)-getPointY(p1)) + getPointX(p1);
-                        if (getPointX(p1) == getPointX(p2) || getPointX(healthCenterLocation) <= xinters)
+                        if (getPointX(p1) == getPointX(p2) || getPointX(healthCenterCoordinates) <= xinters)
                             counter++;
                     }
                 }
@@ -405,8 +413,7 @@ Point calculatePolygonCentroid(Point* convexHullPoints, int convexHullPointsAmou
 
 char* buildHealthCenterSuggestionTag(Point polygonCentroid){
     char* healthCenterSuggestionTag = (char*) malloc(500 * sizeof(char));
-    if(isElementNull(healthCenterSuggestionTag, "healthCenterSuggestionTag", "buildHealthCenterSuggestionTag"))
-        return NULL;
+    if(healthCenterSuggestionTag == NULL) return NULL;
     
     sprintf(healthCenterSuggestionTag, "\t<circle cx=\"%lf\" cy=\"%lf\" r=\"10\" stroke=\"white\" stroke-width=\"1\" fill=\"white\" fill-opacity=\"0.0\"/>\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> HC </text>\n", getPointX(polygonCentroid), getPointY(polygonCentroid), getPointX(polygonCentroid), getPointY(polygonCentroid));
     return healthCenterSuggestionTag;

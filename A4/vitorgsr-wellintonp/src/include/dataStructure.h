@@ -1,6 +1,8 @@
 #ifndef DS_H
 #define DS_H
 
+typedef void* Info;
+typedef void* Node;
 typedef void* DataStructure;
 
 #include "../util/data-structure/list.h"

@@ -25,10 +25,22 @@ char* getRectangleId(Rectangle Rect);
 char* getRectangleWidth(Rectangle Rect);
 
 /*  
+* Pré-Condição: requer o endereco de uma instancia de retangulo e um valor.
+* Pós-Condição: atribui o valor passado para o membro "width" do retangulo.
+*/
+void setRectangleWidth(Rectangle Rect, char* width);
+
+/*  
 * Pré-Condição: requer o endereco de uma instancia de retangulo.
 * Pós-Condição: retorna a altura do retangulo passado.
 */
 char* getRectangleHeight(Rectangle Rect);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de retangulo e um valor.
+* Pós-Condição: atribui o valor passado para o membro "height" do retangulo.
+*/
+void setRectangleHeight(Rectangle Rect, char* height);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de retangulo.
@@ -37,10 +49,22 @@ char* getRectangleHeight(Rectangle Rect);
 char* getRectangleX(Rectangle Rect);
 
 /*  
+*  Pré-Condição: requer o endereco de uma instancia de retangulo e um valor x.
+*  Pós-Condição: atribui o valor passado para a coordenada x do retangulo.
+*/
+void setRectangleX(Rectangle Rect, char* x);
+
+/*  
 * Pré-Condição: requer o endereco de uma instancia de retangulo.
 * Pós-Condição: retorna a coordenada y do canto superior esquerdo do retangulo passado.
 */
 char* getRectangleY(Rectangle Rect);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de retangulo e um valor y.
+* Pós-Condição: atribui o valor passado para a coordenada y do retangulo.
+*/
+void setRectangleY(Rectangle Rect, char* y);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de retangulo.
@@ -83,7 +107,6 @@ char* getRectangleRw(Rectangle Rect);
 * Pós-Condição: retorna uma string com todas as informacoes da instancia de Retangulo passada.
 */
 char* rectangleToString(Rectangle Rect);
-
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de retangulo e de ponto.

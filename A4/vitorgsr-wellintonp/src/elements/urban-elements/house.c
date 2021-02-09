@@ -1,5 +1,8 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
+#include "../../include/dataStructure.h"
 #include "../urban-elements/block.h"
+#include "../point.h"
+#include "./city.h"
 #include "house.h"
 
 #define houseWidth 15
@@ -49,19 +52,16 @@ House createHouse(char* cep, char face, int number, int casesNumber){
 
 void readBlockAttributes(Info blockInfo, HouseBlock *block);
 
-void setHouseBlock(House H, Drawing Dr){
-    if(H == NULL || Dr == NULL)
-        return;
+void setHouseBlock(House H, City Ct){
+    if(H == NULL || Ct == NULL) return;
 
     house *h = (house*) H;
 
-    Node blockNode;
-    blockNode = searchForBlockByCep(Dr, h->address.cep);
-    if(blockNode == NULL)
-        return;
+    Node blockNode = searchForBlockByCep(Ct, h->address.cep);
+    if(blockNode == NULL) return;
     
-    List blockList = getBlockList(Dr);
-    Info blockInfo = get(blockList, blockNode);
+    DataStructure blocks = getBlocks(Ct);
+    Info blockInfo = get(blocks, blockNode); //h->block = get(blocks, blockNode);
     readBlockAttributes(blockInfo, &h->block);    
 }
 

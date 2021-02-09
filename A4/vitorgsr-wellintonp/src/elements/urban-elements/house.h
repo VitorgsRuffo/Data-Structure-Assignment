@@ -16,7 +16,7 @@ House createHouse(char* cep, char face, int number, int casesNumber);
 * Pré-Condição: requer o endereco de uma instancia de casa e desenho.
 * Pós-Condição: atribui como sendo quadra da casa a quadra cujo cep esta contido no endereço da casa.
 */
-void setHouseBlock(House H, Drawing Dr);
+void setHouseBlock(House H, City Ct);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa e desenho.

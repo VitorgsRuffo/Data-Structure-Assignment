@@ -106,19 +106,15 @@ int checkIfPointIsInsideRect(Info elementInfo, Point *centerOfMass, Point point)
 char* buildPointTag(Point point, char* color){
 
     char* pointTag = (char*) malloc(200 * sizeof(char));
-    
-    if(isElementNull(pointTag, "pointTag", "buildPointTag"))
-        return NULL;    
+    if(pointTag == NULL) return NULL;    
     
     sprintf(pointTag, "\n\t<circle cx=\"%lf\" cy=\"%lf\" r=\"2\" stroke=\"black\" stroke-width=\"0\" fill=\"%s\"/>", getPointX(point), getPointY(point), color);
-
     return pointTag;
 }
 
 char* buildLineTag(Point point, Point centerOfMass, char* color){
     char* lineTag = (char*) malloc(200 * sizeof(char));
-    if(isElementNull(lineTag, "lineTag", "buildLineTag"))
-        return NULL;
+    if(lineTag) return NULL;
         
     sprintf(lineTag, "<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"%lf\" stroke=\"%s\" stroke-width=\"0.8\" />", getPointX(point), getPointY(point), getPointX(centerOfMass), getPointY(centerOfMass), color);
     return lineTag;

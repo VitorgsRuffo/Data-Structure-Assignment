@@ -5,15 +5,14 @@
 
 /*to do list:
 
-    - mudar drawing (-> city) ao longo do trabalho: covidIncidence.c.
-    
-    - makefile.
+    - erros de include.
     - corrigir funcoes de overlap.
 
     - criar funcao para executar pintura das sombras das quadras (comando dd).
-    - inserir novos tads nas estruturas.
-    - planejamento para o query.
+    - inserir novos tads nas estruturas. (como organizar as hashs)
 
+    - planejamento para o query.
+    - corrigir covidIncidence.c
 */
 
 

@@ -163,7 +163,7 @@ char* getPmName(Parameters Param){
 }
 
 int isQryNull(Parameters Param){
-    if(isElementNull(Param, "parameter", "isQryNull"))
+    if(Param == NULL)
         return 1;
 
     parameters *param = (parameters*) Param;
@@ -175,7 +175,7 @@ int isQryNull(Parameters Param){
 }
 
 int isEcNull(Parameters Param){
-    if(isElementNull(Param, "parameter", "isEcNull"))
+    if(Param == NULL)
         return 1;
 
     parameters *param = (parameters*) Param;
@@ -187,7 +187,7 @@ int isEcNull(Parameters Param){
 }
 
 int isPmNull(Parameters Param){
-    if(isElementNull(Param, "parameter", "isPmNull"))
+    if(Param == NULL)
         return 1;
 
     parameters *param = (parameters*) Param;

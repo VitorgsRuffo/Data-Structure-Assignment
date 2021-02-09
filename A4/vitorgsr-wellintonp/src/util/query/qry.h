@@ -7,10 +7,10 @@
 typedef void* QueryElement; 
 
 /*
-* Pré-Condição: requer um arquivo de entrada query, a referencia para uma instancia de Desenho e a referencia para uma instancia de Parametros.
-* Pós-Condição: percorre o arquivo query, interpretando cada comando e executando-o. O tad Desenho sera alterado com o resultado dos comandos query. Um arquivo txt sera criado para mostrar esses resultados de maneira textual.
+* Pré-Condição: requer um arquivo de entrada query, a referencia para uma instancia de cidade e a referencia para uma instancia de Parametros.
+* Pós-Condição: percorre o arquivo query, interpretando cada comando e executando-o. O tad cidade sera alterado com o resultado dos comandos query. Um arquivo txt sera criado para mostrar esses resultados de maneira textual.
 */
-void executeQry(File qry, Drawing Dr, Parameters Param);
+void executeQry(File qry, City Ct, Parameters Param);
 
 /*
 * Pré-Condição: requer um ponteiro para o inicio de uma tag (string) proveniente de uma consulta.
