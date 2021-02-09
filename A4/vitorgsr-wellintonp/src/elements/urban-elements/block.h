@@ -1,6 +1,8 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
+#include "../point.h"
+
 /*
 *   Tipo abstrato de dado que representa o elemento urbano quadra.
 */

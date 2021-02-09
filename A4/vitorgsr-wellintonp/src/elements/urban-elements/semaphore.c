@@ -1,6 +1,5 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
 #include "semaphore.h"
-#include "../point.h"
 
 typedef struct semaphore{
     char* id;

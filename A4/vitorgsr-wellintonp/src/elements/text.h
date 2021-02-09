@@ -1,6 +1,8 @@
 #ifndef TEXT_H
 #define TEXT_H
 
+#include "point.h"
+
 /*
 * Tipo abstrato de dados que representa um texto.
 */

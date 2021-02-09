@@ -1,6 +1,8 @@
 #ifndef HEALTH_CENTER_H
 #define HEALTH_CENTER_H
 
+#include "../point.h"
+
 /*
 *   Tipo abstrato de dado que representa o elemento urbano posto de saude.
 */
@@ -16,7 +18,7 @@ HealthCenter createHealthCenter(int id, char* x, char* y);
 * Pré-Condição: requer o endereco de uma instancia de Posto.
 * Pós-Condição: retorna o id do Posto passado.
 */
-int getHealthCenterId(HealthCenter HealthC);
+char* getHealthCenterId(HealthCenter HealthC);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de Posto.

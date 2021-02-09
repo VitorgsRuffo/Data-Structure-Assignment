@@ -1,7 +1,6 @@
 #include "../../include/headers.h"
-#include "../../include/query.h"
-#include "../../include/util.h"
 #include "../../elements/urban-elements/city.h"
+#include "./qry.h"
 
 File openTxt(Parameters Param);
 void closeTxt(File txt);

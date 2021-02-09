@@ -12,6 +12,12 @@
         "ostream": "c",
         "tuple": "c",
         "type_traits": "c",
-        "utility": "c"
+        "utility": "c",
+        "util.h": "c",
+        "input.h": "c",
+        "parameters.h": "c",
+        "thread": "c",
+        "point.h": "c",
+        "customization.h": "c"
     }
 }

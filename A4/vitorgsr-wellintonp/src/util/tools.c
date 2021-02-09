@@ -1,7 +1,7 @@
 #include "../include/headers.h"
 #include "../include/elements.h"
-#include "./input/parameters.h"
 #include "./data-structure/stack.h"
+#include "tools.h"
 
 char** createCommandParts(int numberOfParts){
     char** commandParts = (char**) malloc(sizeof(char*) * numberOfParts);

@@ -193,19 +193,19 @@ Node searchForFigureOrTextElementByIdentifier(City Ct, char* idToSearch, char* f
     city *ct = (city*) Ct;
     Node elementNode;
 
-    elementNode = searchForObjectByKey(ct->circles, idToSearch);
+    elementNode = searchForObjectByKeyInPQuadTree(ct->circles, idToSearch);
     if(elementNode != NULL){
         strcpy(figureElementType, "circulo");
         return elementNode;
     }
 
-    elementNode = searchForObjectByKey(ct->rectangles, idToSearch);
+    elementNode = searchForObjectByKeyInPQuadTree(ct->rectangles, idToSearch);
     if(elementNode != NULL){
         strcpy(figureElementType, "retangulo");
         return elementNode;
     }
 
-    elementNode = searchForObjectByKey(ct->texts, idToSearch);
+    elementNode = searchForObjectByKeyInPQuadTree(ct->texts, idToSearch);
     if(elementNode != NULL){
         strcpy(figureElementType, "texto");
         return elementNode;

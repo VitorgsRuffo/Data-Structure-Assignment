@@ -1,9 +1,9 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
 #include "region.h"
-#include "point.h"
+#include "../point.h"
 
 typedef struct region {
-    int id;
+    char* id;
     char* x;
     char* y;
     char* width;
@@ -16,13 +16,17 @@ Region createRegion(int id, char* x, char* y, char* w, char* h, char* demographi
 
     region* reg = (region*) malloc(sizeof(region));
 
-    reg->id = id;
+    char idString[3];
+    sprintf(idString, "%d", id);
+
+    reg->id = (char*) malloc(4 * sizeof(char));
     reg->x = (char*) malloc((strlen(x) + 1) * sizeof(char));
     reg->y = (char*) malloc((strlen(y) + 1) * sizeof(char));
     reg->width = (char*) malloc((strlen(w) + 1) * sizeof(char));
     reg->height = (char*) malloc((strlen(h) + 1) * sizeof(char));
     reg->demographicDensity = (char*) malloc((strlen(demographicDensity) + 1) * sizeof(char));
     
+    strcpy(reg->id, idString);
     strcpy(reg->x, x);
     strcpy(reg->y, y);
     strcpy(reg->width, w);
@@ -32,9 +36,9 @@ Region createRegion(int id, char* x, char* y, char* w, char* h, char* demographi
     return reg;
 }
 
-int getRegionId(Region Reg){
+char* getRegionId(Region Reg){
     if(Reg == NULL)
-        return;
+        return NULL;
     region *reg = (region*) Reg;
     return reg->id;
 }
@@ -81,7 +85,7 @@ void printRegion(Region Reg){
 
     region *reg = (region*) Reg;
 
-    printf("Regiao:\nid:%d\n w: %s\nh: %s\nx: %s\ny: %s\ndensidade demografica: %s\n\n", reg->id, reg->width, 
+    printf("Regiao:\nid:%s\n w: %s\nh: %s\nx: %s\ny: %s\ndensidade demografica: %s\n\n", reg->id, reg->width, 
     reg->height, reg->x, reg->y, reg->demographicDensity);
 }
 
@@ -91,6 +95,7 @@ void freeRegion(Region Reg){
 
     region *reg = (region*) Reg;
 
+    free(reg->id);
     free(reg->x); 
     free(reg->y); 
     free(reg->width); 

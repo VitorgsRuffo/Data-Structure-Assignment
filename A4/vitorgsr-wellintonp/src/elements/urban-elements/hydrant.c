@@ -1,6 +1,5 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
 #include "hydrant.h"
-#include "../point.h"
 
 typedef struct hydrant{
     char* id;

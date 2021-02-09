@@ -1,9 +1,8 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
 #include "healthCenter.h"
-#include "../point.h"
 
 typedef struct healthCenter{
-    int id;
+    char* id;
     char* x;
     char* y;
     Point coordinates;
@@ -15,11 +14,15 @@ HealthCenter createHealthCenter(int id, char* x, char* y){
 
     healthCenter *healthC = (healthCenter*) malloc(sizeof(healthCenter));
 
-    healthC->id = id;
+    char idString[3];
+    sprintf(idString, "%d", id);
+    
+    healthC->id = (char*) malloc(4 * sizeof(char));
     healthC->x = (char*) malloc((strlen(x) + 1) * sizeof(char));
     healthC->y = (char*) malloc((strlen(y) + 1) * sizeof(char));
     healthC->radius = (char*) malloc(4 * sizeof(char));
 
+    strcpy(healthC->id, idString);
     strcpy(healthC->x, x);
     strcpy(healthC->y, y);
     healthC->coordinates = createPoint(atof(x), atof(y));
@@ -28,7 +31,7 @@ HealthCenter createHealthCenter(int id, char* x, char* y){
     return healthC;
 }
 
-int getHealthCenterId(HealthCenter HealthC){
+char* getHealthCenterId(HealthCenter HealthC){
     healthCenter *healthC = (healthCenter*) HealthC;
     return healthC->id;
 }
@@ -67,6 +70,7 @@ void freeHealthCenter(HealthCenter HealthC){
 
     healthCenter *healthC = (healthCenter*) HealthC;
 
+    free(healthC->id);
     free(healthC->x); 
     free(healthC->y);  
     free(healthC->coordinates);

@@ -1,6 +1,8 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
+#include "../point.h"
+
 /*
 *   Tipo abstrato de dado que representa a figura circulo.
 */

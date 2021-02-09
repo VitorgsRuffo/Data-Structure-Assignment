@@ -47,7 +47,7 @@ void executeBlocksDeletion(char* command, City Ct, File txt){
 
     //setando a borda dupla do equipamento urbano:
     getUrbanEquipmentCoordinates(urbanEquipmentInfo, &urbanEquipment);
-    List queryElementsList = getQueryElementsList(Ct);
+    List queryElementsList = getQueryElements(Ct);
     setUrbanEquipmentDoubleBorder(urbanEquipmentInfo, queryElementsList, urbanEquipment);
     
     //alterando/deletando as quadras dentro do raio:

@@ -1,6 +1,8 @@
 #ifndef OPENINPUT_H
 #define OPENINPUT_H
 
+#include "parameters.h"
+
 /*
 * Definindo um ponteiro para arquivo.
 */

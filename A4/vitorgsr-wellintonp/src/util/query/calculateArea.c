@@ -16,7 +16,7 @@ typedef struct {
     double totalArea;
     List queryElementsList;
     char* urbanEquipmentType;
-    double (*getUrbanEquipmentArea)(void*)
+    double (*getUrbanEquipmentArea)(void*);
 }Variables;
 
 
@@ -33,7 +33,7 @@ void executeUrbanElementsTotalAreaCalculationInRange(char* command, City Ct, Fil
 
     variables.totalArea = 0.0;
     variables.txt = txt;
-    variables.queryElementsList = getQueryElementsList(Ct);
+    variables.queryElementsList = getQueryElements(Ct);
 
     DataStructure blocks = getBlocks(Ct);
     calculateBlocksTotalAreaInRange(blocks, &variables);
@@ -118,7 +118,8 @@ void writeBlockAreaOnTxt(File txt, char* cep, double blockArea ){
     fprintf(txt, "cep: %s - area: %lf\n\n", cep, blockArea); 
 }
 
-int isUrbanEquipmentInRectangleRange(Info urbanEquipmentInfo, char* urbanEquipmentType, WrapperRectangle wrapperRectangle);
+
+void calculateUrbanEquipmentAreaIfItsInRange(Info urbanEquipmentInfo, ExtraInfo extraInfo);
 
 void calculateUrbanEquipmentsTotalAreaInRange(DataStructure urbanEquipments, Variables* variables, char* urbanEquipmentType, double (*getUrbanEquipmentArea)(void*)){
     
@@ -127,6 +128,8 @@ void calculateUrbanEquipmentsTotalAreaInRange(DataStructure urbanEquipments, Var
     
     levelOrderTraversal(urbanEquipments, calculateUrbanEquipmentAreaIfItsInRange, variables);
 }
+
+int isUrbanEquipmentInRectangleRange(Info urbanEquipmentInfo, char* urbanEquipmentType, WrapperRectangle wrapperRectangle);
 
 void calculateUrbanEquipmentAreaIfItsInRange(Info urbanEquipmentInfo, ExtraInfo extraInfo){
 

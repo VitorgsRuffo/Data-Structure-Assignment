@@ -40,7 +40,7 @@ void executeInnerPointTest(char* command, City Ct, File txt){
     char* pointTag = buildPointTag(point, pointFillColor);
     char* lineTag = buildLineTag(point, centerOfMass, pointFillColor);
 
-    List queryElementsList = getQueryElementsList(Ct);
+    List queryElementsList = getQueryElements(Ct);
     insert(queryElementsList, pointTag);
     insert(queryElementsList, lineTag);
 

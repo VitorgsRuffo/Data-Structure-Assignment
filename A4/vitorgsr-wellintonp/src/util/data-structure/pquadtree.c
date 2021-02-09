@@ -2,6 +2,7 @@
 #include "../../include/figures.h"
 #include "./pquadtree.h"
 #include "./queue.h"
+#include "../tools.h"
 
 typedef struct pquadtreenode {
     Point point;

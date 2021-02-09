@@ -1,6 +1,8 @@
 #ifndef QRY_H
 #define QRY_H
 
+#include "../../include/util.h"
+
 /*
 * apontador para o inicio de uma string. Ela sera uma tag proveniente de um dos comandos de query e posteriormente sera adicionada em uma lista propria)
 */

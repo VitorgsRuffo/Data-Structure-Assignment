@@ -1,6 +1,10 @@
 #ifndef TOOLS_H
 #define TOOLS_H
 
+#include "./input/parameters.h"
+#include "../include/dataStructure.h"
+#include "../elements/point.h"
+
 /* 
 * Definicao do tamanho maximo de uma linha de comando de um arquivo de entrada (linha do geo/qry) 
 */

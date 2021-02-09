@@ -1,5 +1,5 @@
-#include "../include/headers.h"
-#include "../include/elements.h"
+#include "../../include/headers.h"
+#include "../../include/elements.h"
 #include "../input/openInput.h"
 #include "../../include/dataStructure.h"
 

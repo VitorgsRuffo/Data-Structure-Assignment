@@ -1,7 +1,6 @@
 #include "../../include/headers.h"
 #include "../../include/dataStructure.h"
 #include "../urban-elements/block.h"
-#include "../point.h"
 #include "./city.h"
 #include "house.h"
 
@@ -140,7 +139,7 @@ void setHouseLocationOnWestFace(house *h){
 
 char* getHouseCpf(House H){
     house *h = (house*) H;
-    h->cpf;
+    return h->cpf;
 }
 
 double getHouseX(House H){

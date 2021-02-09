@@ -1,8 +1,8 @@
 #ifndef CITY_H
 #define CITY_H
 
-#include "../util/data-structure/pquadtree.h"
-#include "../util/data-structure/hashtable.h"
+#include "../../include/dataStructure.h"
+#include "./city.h"
 
 /*
 * TAD cidade que vai conter a estrutura das entidades que serao desenhadas em um arquivo svg.

@@ -264,7 +264,7 @@ void printList(List Li, void (*printInformation)(void*)){
 
 
 Info* listToArray(List Li){
-    if(Li == NULL) return;
+    if(Li == NULL) return NULL;
 
     int listLength = length(Li);
     if(listLength == 0) return NULL;

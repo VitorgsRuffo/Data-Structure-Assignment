@@ -29,7 +29,7 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
     setHouseLocation(house);
 
     char* blueHouseTag = buildBlueHouseTag(house);
-    List queryElementsList = getQueryElementsList(Ct);
+    List queryElementsList = getQueryElements(Ct);
     insert(queryElementsList, blueHouseTag);
 
 

@@ -1,6 +1,5 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
 #include "rectangle.h"
-#include "../point.h"
 
 typedef struct rectangle {
     char* id;

@@ -1,6 +1,8 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
+#include "../point.h"
+
 /*
 * Tipo abstrato de dados que representa a figura retangulo.
 */

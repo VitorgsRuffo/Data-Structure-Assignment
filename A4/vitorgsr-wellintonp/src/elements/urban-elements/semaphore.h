@@ -1,6 +1,8 @@
 #ifndef SEMAPHORE_H
 #define SEMAPHORE_H
 
+#include "../point.h"
+
 /*
 *   Tipo abstrato de dado que representa o elemento urbano semaforo.
 */

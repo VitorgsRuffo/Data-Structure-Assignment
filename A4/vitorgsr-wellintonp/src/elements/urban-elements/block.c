@@ -1,6 +1,5 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
 #include "block.h"
-#include "../point.h"
 
 typedef struct block{
     char* cep;  

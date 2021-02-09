@@ -1,6 +1,5 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
 #include "baseRadio.h"
-#include "../point.h"
 
 typedef struct baseRadio{
     char* id;
@@ -68,7 +67,7 @@ char* getBaseRadioRadius(BaseRadio BaseR){
 
 Point getBaseRadioCoordinates(BaseRadio BaseR){
     if(BaseR == NULL)
-        return;
+        return NULL;
     baseRadio *baseR = (baseRadio*) BaseR;
     return baseR->coordinates;
 }

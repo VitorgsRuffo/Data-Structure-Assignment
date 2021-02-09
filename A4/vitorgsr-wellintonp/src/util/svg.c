@@ -1,8 +1,6 @@
 #include "../include/headers.h"
 #include "../include/elements.h"
-#include "./input/parameters.h"
-#include "../include/dataStructure.h"
-#include "svg.h"
+#include "../include/util.h"
 #include <unistd.h>
 
 char* buildGeoSvgPath(Parameters Param);
@@ -113,12 +111,12 @@ int drawOnSvg(Svg svg, City Ct){
     DataStructure healthCenters = getHealthCenters(Ct);
     drawElementsOnSvg(svg, healthCenters, &buildHealthCenterSvgTag);
 
-    DataStructure houses = getHouses(Ct);
+    DataStructure houses = getHousesTree(Ct);
     drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
 
     //estabelecimento comercial.
 
-    List queryElementsList = getQueryElementsList(Ct);
+    List queryElementsList = getQueryElements(Ct);
     drawQueryElementsOnSvg(svg, queryElementsList);
 
     return 1;

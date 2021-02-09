@@ -96,7 +96,7 @@ Info queuePop(Queue Q){
 
 
 Stack queueToStack(Queue Q){
-    if(Q == NULL) return;
+    if(Q == NULL) return NULL;
 
     queue* q = (queue*) Q;
     queueNode* currentNode = q->first;

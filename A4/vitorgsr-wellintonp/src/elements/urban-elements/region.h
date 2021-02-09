@@ -17,7 +17,7 @@ Region createRegion(int id, char* x, char* y, char* w, char* h, char* demographi
 * Pré-Condição: requer o endereco de uma instancia de regiao.
 * Pós-Condição: retorna o id do regiao passada.
 */
-int getRegionId(Region Reg);
+char* getRegionId(Region Reg);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de regiao.

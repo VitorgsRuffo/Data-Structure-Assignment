@@ -1,6 +1,6 @@
-#include "../include/headers.h"
+#include "../../include/headers.h"
 #include "../tools.h"
-#include "../include/elements.h"
+#include "../../include/elements.h"
 #include "openInput.h"
 #include "../data-structure/stack.h"
 
@@ -112,9 +112,9 @@ void readGeo(File geo, City Ct){
 
     balancedlyInsertObjectsInPQuadTree(getRectangles(Ct), rectangles);
 
-    balancedlyInsertObjectsInPQuadTree(getText(Ct), texts);
+    balancedlyInsertObjectsInPQuadTree(getTexts(Ct), texts);
 
-    balancedlyInsertObjectsInPQuadTree(getBlock(Ct), blocks);
+    balancedlyInsertObjectsInPQuadTree(getBlocks(Ct), blocks);
 
     balancedlyInsertObjectsInPQuadTree(getHydrants(Ct), hydrants);
 

@@ -1,6 +1,5 @@
 #include "../include/headers.h"
 #include "text.h"
-#include "../point.h"
 
 typedef struct text {
     char* id;

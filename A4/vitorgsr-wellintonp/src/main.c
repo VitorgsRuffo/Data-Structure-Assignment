@@ -1,11 +1,10 @@
 #include "./include/headers.h"
-#include "./include/util.h"
 #include "./elements/urban-elements/city.h"
+#include "./include/util.h"
 
 
 /*to do list:
 
-    - erros de include.
     - corrigir funcoes de overlap.
 
     - criar funcao para executar pintura das sombras das quadras (comando dd).
@@ -35,7 +34,7 @@ int main(int argc, char* argv[]){
     
     if(!isEcNull(parameters)){
         //Abrindo o arquivo de entrada (.ec)
-        File ec = openInputFile(parameters, getEcName);
+        //File ec = openInputFile(parameters, getEcName);
 
 
         //Lendo arquivo ec:
@@ -43,7 +42,7 @@ int main(int argc, char* argv[]){
 
     if(!isPmNull(parameters)){
         //Abrindo o arquivo de entrada (.pm)
-        File ec = openInputFile(parameters, getPmName);
+        //File ec = openInputFile(parameters, getPmName);
 
         //Lendo arquivo pm:
     }
@@ -60,7 +59,7 @@ int main(int argc, char* argv[]){
     
     if(!isQryNull(parameters)){
         //Abrindo o arquivo de entrada (.qry)
-        File qry = openInputFile(parameters, "qry");
+        File qry = openInputFile(parameters, getQryName);
 
         //Lendo o arquivo qry e executando os comandos:
         executeQry(qry, city, parameters);
@@ -68,7 +67,7 @@ int main(int argc, char* argv[]){
 
         //Criando SVG do qry:
         Svg qrySvg = NULL;
-        qrySvg = createSvg(parameters, city, "qry");
+        qrySvg = createSvg(parameters, city, "qry");   
         if(qrySvg != NULL){
             drawOnSvg(qrySvg, city);
             finishSvg(qrySvg);

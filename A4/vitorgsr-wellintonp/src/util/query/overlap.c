@@ -2,6 +2,7 @@
 #include "../../include/elements.h"
 #include "../../include/dataStructure.h"
 #include "../input/openInput.h"
+#include "../tools.h"
 
 typedef struct WrapperRectangle {
     double x;
@@ -55,7 +56,7 @@ void executeOverlapTest(char* command, City Ct, File txt){
     calculateWrapperRectangleInformation(&wrapperRectangle, element1Info, element2Info, element1Type, element2Type);   
     char* wrapperRectangleTag = buildWrapperRectangleTag(&wrapperRectangle, extraWrapperRectangleAttribute);
 
-    List queryElementsList = getQueryElementsList(Ct);
+    List queryElementsList = getQueryElements(Ct);
     insert(queryElementsList, wrapperRectangleTag);
 
     writeOverlapResultOnTxt(txt, command, J, element1Type, K, element2Type, overlapResult);

@@ -35,12 +35,12 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
     variables.circumference = createCircle("...", radius, x, y, "...", "...", "...");
     variables.house = createRectangle("...", "...", "...", "...", "...", "...", "...", "...");
     
-    DataStructure houses = getHouses(Ct);
+    DataStructure houses = getHousesTree(Ct);
     variables.housesInsideCircList = createList();
     determineHousesInsideCircumference(houses, &variables);
 
     char* boundingCircumferenceTag = buildBoundingCircumferenceTag(x, y, radius);
-    List queryElementsList = getQueryElementsList(Ct);
+    List queryElementsList = getQueryElements(Ct);
     insert(queryElementsList, boundingCircumferenceTag);
 
     if(length(variables.housesInsideCircList) <= 0){
@@ -74,13 +74,13 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
     double incidenceRegionArea = calculateIncidenceRegionArea(convexHullPoints, convexHullPointsAmount);
     
 
-
-    //** CORRIGIR!!
-    Region region = getRegion(Ct);
+    /*
+     CORRIGIR!!
+    Region region = getRegions(Ct);
     double regionDemographicDensity = (getRegionDemographicDensity(region)) / 1000000.00; //convertendo densidade demografica de km^2 para m^2.
     int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
-    //**
-    
+    */
+    int totalHabitantsInRegion = 1000;
 
     char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
     if(incidenceRegionCategory == 'E'){

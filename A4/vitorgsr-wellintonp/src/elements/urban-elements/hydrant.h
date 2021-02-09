@@ -1,6 +1,8 @@
 #ifndef HYDRANT_H
 #define HYDRANT_H
 
+#include "../point.h"
+
 /*
 *   Tipo abstrato de dado que representa o elemento urbano hidrante.
 */

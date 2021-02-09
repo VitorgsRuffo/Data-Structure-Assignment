@@ -1,6 +1,8 @@
 #ifndef BASE_RADIO_H
 #define BASE_RADIO_H
 
+#include "../point.h"
+
 /*
 *   Tipo abstrato de dado que representa o elemento urbano radio-base.
 */

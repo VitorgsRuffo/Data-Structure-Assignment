@@ -38,7 +38,7 @@ void executeUrbanElementDeletion(char* command, City Ct, File txt){
     getUrbanElementCenter(urbanElementInfo, urbanElementType, &urbanElementCenter);
    
     char* verticalLineTag = buildVerticalLineTag(&urbanElementCenter, identifier);
-    List queryElementsList = getQueryElementsList(Ct);
+    List queryElementsList = getQueryElements(Ct);
     insert(queryElementsList, verticalLineTag);
     
     removeUrbanElement(urbanElements, urbanElementNode, urbanElementType);
