@@ -17,6 +17,7 @@ typedef struct pquadtree {
     getInfoKey getKey;
     getInfoPoint getPoint;
     pquadtreenode* root;
+    int size;
 }pquadtree;
 
 
@@ -35,8 +36,16 @@ PQuadTree createPQuadTree(getInfoKey getKey, getInfoPoint getPoint){
     (*tree).getKey = getKey;
     (*tree).getPoint = getPoint;
     (*tree).root = NULL;
+    (*tree).size = 0;
 
     return tree;
+}
+
+int PQuadTreeSize(PQuadTree Tree){
+    if(Tree == NULL) return -1;
+
+    pquadtree *tree = (pquadtree*) Tree;
+    return tree->size;
 }
 
 void saveInfoKeyOnListIfItsInsideShape(Info info, ExtraInfo extraInfo);
@@ -395,6 +404,7 @@ PQuadTreeNode insertPQuadTree(PQuadTree Tree, Point P, Info info){
         } 
     }
 
+    tree->size++;
     return newNode;
 }
 
@@ -452,6 +462,7 @@ Info removePQuadTreeNode(PQuadTree Tree, PQuadTreeNode Node){
         balancedlyInsertObjectsInPQuadTree(Tree, infosStack);
     }   
 
+    tree->size--;
     return info;
 }
 
@@ -498,6 +509,41 @@ Info getPQuadTreeNodeInfo(PQuadTree Tree, PQuadTreeNode Node){
     pquadtreenode* node = (pquadtreenode*) Node;
     return node->info;
 }
+
+
+//p-quadtree to array:
+
+typedef struct {
+    Info* infos;
+    int index;
+}InfoArray;
+
+void addPQuadTreeInfoToArray(Info info, ExtraInfo extraInfo);
+
+Info* PQuadTreeToArray(PQuadTree Tree){
+    if(Tree == NULL) return NULL;
+    pquadtree* tree = (pquadtree*) Tree;
+
+
+    InfoArray arr;
+
+    arr.infos = (Info*) malloc(tree->size * sizeof(Info));
+    if(arr.infos == NULL) return NULL;
+
+    arr.index = 0;
+
+    levelOrderTraversal(Tree, addPQuadTreeInfoToArray, &arr);
+    
+    return arr.infos;
+}
+
+void addPQuadTreeInfoToArray(Info info, ExtraInfo extraInfo){
+
+    InfoArray* arr = (InfoArray*) extraInfo; 
+
+    arr->infos[arr->index] = info;
+    arr->index++;
+} 
 
 
 //tree freeing function:

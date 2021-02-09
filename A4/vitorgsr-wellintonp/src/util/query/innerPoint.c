@@ -1,5 +1,6 @@
-#include "../include/headers.h"
-#include "../include/elements.h"
+#include "../../include/headers.h"
+#include "../../include/elements.h"
+#include "../../include/dataStructure.h"
 #include "../input/openInput.h"
 
 
@@ -8,27 +9,20 @@ char* buildPointTag(Point point, char* color);
 char* buildLineTag(Point point, Point centerOfMass, char* color);
 void writeInnerPointResultOnTxt(File txt, char* command, char* elementType, char* innerPointResult);
 
-void executeInnerPointTest(char* command, Drawing Dr, File txt){
-    if(isElementNull(Dr, "drawing", "executeInnerPointTest"))
-        return;
+void executeInnerPointTest(char* command, City Ct, File txt){
 
     char J[10]; double px, py;
     sscanf(&command[3], "%s %lf %lf", J, &px, &py);
     Point point = createPoint(px, py);
 
     char elementType[11];
-    Node elementNode = searchForFigureOrTextElementByIdentifier(Dr, J, elementType);
-    if(isElementNull(elementNode, "elementNode", "searchForFigureOrTextElementByIdentifier"))
+    Node elementNode = searchForFigureOrTextElementByIdentifier(Ct, J, elementType);
+    if(elementNode == NULL || elementType[0] == 't')
         return;
     
-    List elementList = getListByElementType(Dr, elementType);
-    Info elementInfo = get(elementList, elementNode);
-            
-    if(elementType[0] == 't'){
-        printf("Erro: elemento cujo id e %s nao foi encontrado nas listas de figuras..\n", J);
-        return;
-    }
-    
+    DataStructure elements = getDataStructureByElementType(Ct, elementType);
+    Info elementInfo = getPQuadTreeNodeInfo(elements, elementNode);
+        
     Point centerOfMass;
     int pointIsAnInnerOne = isPointAnInnerOne(elementInfo, elementType, &centerOfMass, point);
     
@@ -46,7 +40,7 @@ void executeInnerPointTest(char* command, Drawing Dr, File txt){
     char* pointTag = buildPointTag(point, pointFillColor);
     char* lineTag = buildLineTag(point, centerOfMass, pointFillColor);
 
-    List queryElementsList = getQueryElementsList(Dr);
+    List queryElementsList = getQueryElementsList(Ct);
     insert(queryElementsList, pointTag);
     insert(queryElementsList, lineTag);
 

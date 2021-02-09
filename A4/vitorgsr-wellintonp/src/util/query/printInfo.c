@@ -1,6 +1,8 @@
-#include "../include/headers.h"
-#include "../include/urbanElements.h"
+#include "../../include/headers.h"
+#include "../../include/urbanElements.h"
+#include "../../include/dataStructure.h"
 #include "../input/openInput.h"
+#include "../tools.h"
 
 void writeUrbanElementInformationOnTxt(File txt, char* urbanElementToString);
 
@@ -13,13 +15,13 @@ void executeUrbanElementInformationChecking(char* command, City Ct, File txt){
     
     char urbanElementType[15];
     Node urbanElementNode = searchForUrbanElementByIdentifier(Ct, identifier, urbanElementType);
-    if(isElementNull(urbanElementNode, "urbanElementNode", "printUrbanElementInformationOnTxt | searchForUrbanElementByIdentifier"))
+    if(urbanElementNode == NULL)
             return;
     
-    List urbanElementList = getListByElementType(Ct, urbanElementType);
+    DataStructure urbanElements = getDataStructureByElementType(Ct, urbanElementType);
     
-    Info urbanElementInfo = get(urbanElementList, urbanElementNode);
-    if(isElementNull(urbanElementInfo, "urbanElementInfo", "printUrbanElementInformationOnTxt | get"))
+    Info urbanElementInfo = get(urbanElements, urbanElementNode);
+    if(urbanElementInfo == NULL)
         return;
     
     char* urbanElementToString = getUrbanElementToString(urbanElementInfo, urbanElementType);

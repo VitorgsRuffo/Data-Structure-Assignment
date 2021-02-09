@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "datastructure.h": "c",
+        "openinput.h": "c",
+        "urbanelements.h": "c",
+        "headers.h": "c",
+        "cmath": "c",
+        "random": "c",
+        "array": "c",
+        "functional": "c",
+        "istream": "c",
+        "ostream": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c"
+    }
+}

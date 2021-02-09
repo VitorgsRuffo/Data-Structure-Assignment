@@ -5,9 +5,10 @@
 
 /*to do list:
 
-    - mudar drawing (-> city) ao longo do trabalho: query.
-    - arrumar funcoes de busca.
+    - mudar drawing (-> city) ao longo do trabalho: covidIncidence.c.
+    
     - makefile.
+    - corrigir funcoes de overlap.
 
     - criar funcao para executar pintura das sombras das quadras (comando dd).
     - inserir novos tads nas estruturas.

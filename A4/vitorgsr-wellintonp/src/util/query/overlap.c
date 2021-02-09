@@ -1,5 +1,6 @@
-#include "../include/headers.h"
-#include "../include/elements.h"
+#include "../../include/headers.h"
+#include "../../include/elements.h"
+#include "../../include/dataStructure.h"
 #include "../input/openInput.h"
 
 typedef struct WrapperRectangle {
@@ -10,35 +11,32 @@ typedef struct WrapperRectangle {
 }WrapperRectangle;
 
 
-Info searchForElementById(Drawing Dr, char* idToSearch, char* elementT);
 int isThereOverlaping(Info element1Info, Info element2Info, char* element1Type, char* element2Type);
 void calculateWrapperRectangleInformation(WrapperRectangle *wrapperRectangle, Info element1Info, Info element2Info, char* element1Type, char* element2Type);
 char* buildWrapperRectangleTag(WrapperRectangle *wrapperRectangle, char* extraAttribute);
 void writeOverlapResultOnTxt(File txt, char* command, char* J, char* element1Type, char* K, char* element2Type, char* overlapResult);
 
 
-void executeOverlapTest(char* command, Drawing Dr, File txt){
-    if(isElementNull(Dr, "drawing", "executeOverlapTest"))
-        return;
+void executeOverlapTest(char* command, City Ct, File txt){
 
     char J[10]; char K[10];
     sscanf(&command[3], "%s %s", J, K);
 
     char element1Type[11]; char element2Type[11];
 
-    Node element1Node = searchForFigureOrTextElementByIdentifier(Dr, J, element1Type);
-    if(isElementNull(element1Node, "element1Node", "searchForFigureOrTextElementByIdentifier"))
+    Node element1Node = searchForFigureOrTextElementByIdentifier(Ct, J, element1Type);
+    if(element1Node == NULL)
         return;
 
-    Node element2Node = searchForFigureOrTextElementByIdentifier(Dr, K, element2Type);
-    if(isElementNull(element2Node, "element2Node", "searchForFigureOrTextElementByIdentifier"))
+    Node element2Node = searchForFigureOrTextElementByIdentifier(Ct, K, element2Type);
+    if(element2Node == NULL)
         return;
 
-    List element1List = getListByElementType(Dr, element1Type);
-    Info element1Info = get(element1List, element1Node);
+    DataStructure elements1 = getDataStructureByElementType(Ct, element1Type);
+    Info element1Info = getPQuadTreeNodeInfo(elements1, element1Node);
 
-    List element2List = getListByElementType(Dr, element2Type);
-    Info element2Info = get(element2List, element2Node);
+    DataStructure elements2 = getDataStructureByElementType(Ct, element2Type);
+    Info element2Info = getPQuadTreeNodeInfo(elements2, element2Node);
 
     int thereIsOverlaping = isThereOverlaping(element1Info, element2Info, element1Type, element2Type);
     char overlapResult[5];
@@ -57,7 +55,7 @@ void executeOverlapTest(char* command, Drawing Dr, File txt){
     calculateWrapperRectangleInformation(&wrapperRectangle, element1Info, element2Info, element1Type, element2Type);   
     char* wrapperRectangleTag = buildWrapperRectangleTag(&wrapperRectangle, extraWrapperRectangleAttribute);
 
-    List queryElementsList = getQueryElementsList(Dr);
+    List queryElementsList = getQueryElementsList(Ct);
     insert(queryElementsList, wrapperRectangleTag);
 
     writeOverlapResultOnTxt(txt, command, J, element1Type, K, element2Type, overlapResult);
@@ -328,7 +326,7 @@ void calculateCircRectWrapperRectangle(WrapperRectangle *wrapperRectangle, Info 
 
 char* buildWrapperRectangleTag(WrapperRectangle *wrapperRectangle, char* extraWrapperRectangleAttribute){
     char* wrapperRectangleTag = (char*) malloc(200 * sizeof(char));
-    if(isElementNull(wrapperRectangleTag, "wrapperRectangleTag", "buildWrapperRectangleTag"))
+    if(wrapperRectangleTag == NULL)
         return NULL;
 
     sprintf(wrapperRectangleTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"rgb(0,0,0)\" stroke-width=\"1.5\" fill=\"#044B94\" fill-opacity=\"0.0\" %s />\n", wrapperRectangle->width, wrapperRectangle->height, wrapperRectangle->x, wrapperRectangle->y, extraWrapperRectangleAttribute);

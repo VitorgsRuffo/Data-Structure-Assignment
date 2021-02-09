@@ -1,6 +1,8 @@
-#include "../include/headers.h"
-#include "../include/urbanElements.h"
+#include "../../include/headers.h"
+#include "../../include/urbanElements.h"
+#include "../../include/dataStructure.h"
 #include "../input/openInput.h"
+#include "../tools.h"
 
 typedef struct{
     double x;
@@ -9,24 +11,22 @@ typedef struct{
 
 void getUrbanElementCenter(Info urbanElementInfo, char* urbanElementType, UrbanElementCenter* urbanElementCenter);
 char* buildVerticalLineTag(UrbanElementCenter* urbanElementCenter, char* identifier);
-void removeUrbanElement(List urbanElementList, Node urbanElementNode, char* urbanElementType);
+void removeUrbanElement(DataStructure urbanElements, Node urbanElementNode, char* urbanElementType);
 void writeDeletedUrbanElementInformationOnTxt(File txt, char* urbanElementToString);
 
-void executeUrbanElementDeletion(char* command, Drawing Dr, File txt){
-    if(isElementNull(Dr, "drawing", "executeUrbanElementDeletion"))
-        return;
-
+void executeUrbanElementDeletion(char* command, City Ct, File txt){
+    
     char identifier[15];
     sscanf(&command[4], "%s", identifier);
 
     char urbanElementType[15];
-    Node urbanElementNode = searchForUrbanElementByIdentifier(Dr, identifier, urbanElementType);
-    if(isElementNull(urbanElementNode, "urbanElementNode", "executeUrbanElementDeletion | searchForUrbanElementByIdentifier"))
+    Node urbanElementNode = searchForUrbanElementByIdentifier(Ct, identifier, urbanElementType);
+    if(urbanElementNode == NULL)
             return;
     
-    List urbanElementList = getListByElementType(Dr, urbanElementType);
-    Info urbanElementInfo = get(urbanElementList, urbanElementNode);
-    if(isElementNull(urbanElementInfo, "urbanElementInfo", "executeUrbanElementDeletion | get"))
+    DataStructure urbanElements = getDataStructureByElementType(Ct, urbanElementType);
+    Info urbanElementInfo = getPQuadTreeNodeInfo(urbanElements, urbanElementNode);
+    if(urbanElementInfo == NULL)
         return;
     
 
@@ -38,10 +38,10 @@ void executeUrbanElementDeletion(char* command, Drawing Dr, File txt){
     getUrbanElementCenter(urbanElementInfo, urbanElementType, &urbanElementCenter);
    
     char* verticalLineTag = buildVerticalLineTag(&urbanElementCenter, identifier);
-    List queryElementsList = getQueryElementsList(Dr);
+    List queryElementsList = getQueryElementsList(Ct);
     insert(queryElementsList, verticalLineTag);
     
-    removeUrbanElement(urbanElementList, urbanElementNode, urbanElementType);
+    removeUrbanElement(urbanElements, urbanElementNode, urbanElementType);
 }
 
 void getUrbanElementCenter(Info urbanElementInfo, char* urbanElementType, UrbanElementCenter* urbanElementCenter){
@@ -70,7 +70,7 @@ void getUrbanElementCenter(Info urbanElementInfo, char* urbanElementType, UrbanE
 
 char* buildVerticalLineTag(UrbanElementCenter* urbanElementCenter, char* identifier){
     char* verticalLineTag = (char*) malloc(300 * sizeof(char));
-    if(isElementNull(verticalLineTag, "verticalLineTag", "buildVerticalLineTag"))
+    if(verticalLineTag == NULL)
         return NULL;
 
     
@@ -78,19 +78,26 @@ char* buildVerticalLineTag(UrbanElementCenter* urbanElementCenter, char* identif
     return verticalLineTag;
 }
 
-void removeUrbanElement(List urbanElementList, Node urbanElementNode, char* urbanElementType){
+void removeUrbanElement(DataStructure urbanElements, Node urbanElementNode, char* urbanElementType){
+    
+    Info urbanElementInfo;
 
-    if(urbanElementType[0] == 'q')
-        removeNode(urbanElementList, urbanElementNode, &freeBlock);
+    if(urbanElementType[0] == 'q'){
+        urbanElementInfo = removePQuadTreeNode(urbanElements, urbanElementNode);
+        freeBlock(urbanElementInfo);
+        
+    }else if(urbanElementType[0] == 'h'){
+        urbanElementInfo = removePQuadTreeNode(urbanElements, urbanElementNode);
+        freeHydrant(urbanElementInfo);
 
-    else if(urbanElementType[0] == 'h')
-        removeNode(urbanElementList, urbanElementNode, &freeHydrant);
-  
-    else if(urbanElementType[0] == 's')
-        removeNode(urbanElementList, urbanElementNode, &freeSemaphore);
+    }else if(urbanElementType[0] == 's'){
+        urbanElementInfo = removePQuadTreeNode(urbanElements, urbanElementNode);
+        freeSemaphore(urbanElementInfo);
 
-    else if(urbanElementType[0] == 'r') 
-        removeNode(urbanElementList, urbanElementNode, &freeBaseRadio); 
+    }else if(urbanElementType[0] == 'r'){ 
+        urbanElementInfo = removePQuadTreeNode(urbanElements, urbanElementNode); 
+        freeBaseRadio(urbanElementInfo);
+    }
 }
 
 void writeDeletedUrbanElementInformationOnTxt(File txt, char* urbanElementToString){

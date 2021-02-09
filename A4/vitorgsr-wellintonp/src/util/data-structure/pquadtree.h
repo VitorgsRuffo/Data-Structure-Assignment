@@ -41,6 +41,12 @@ typedef void (*nodeVisitingFunction)(Info, ExtraInfo);
 PQuadTree createPQuadTree(getInfoKey getKey, getInfoPoint getPoint); 
 
 /*
+    Pré-condição: Requer a referencia para uma p-quadtree.
+    Pós-condição: retorna a quantidade de elementos da p-quadtree. 
+*/
+int PQuadTreeSize(PQuadTree Tree);
+
+/*
     Pré condição: Requer a referencia para uma p-quadtree e os vértices opostos (x1,y1) e (x2,y2) de um retangulo.
     Pós condição: Cria e retorna uma lista contendo as chaves de ordenaçao das informaçoes cuja coordenada se encontra dentro do retangulo.
 
@@ -152,6 +158,13 @@ Info getPQuadTreeNodeInfo(PQuadTree Tree, PQuadTreeNode Node);
 
 
 /*
+    Pré condição: Requer uma instancia de p-quadtree.
+    Pós condição: retorna um vetor contendo as informações da arvore;
+*/
+Info* PQuadTreeToArray(PQuadTree Tree);
+
+
+/*
     Pré condição: requer uma instancia de p-quadtree. A passagem de uma funcao de desalocar informacao e opcional.
     Pós condição: desaloca a memoria usada pela arvore e seus nós. Se uma funcao de desalocar for passada, as informacoes tambem sao desalocadas.
 
@@ -164,13 +177,13 @@ void freePQuadTree(PQuadTree Tree, freeInfo freefunction);
     Pré-condição: Requer uma instancia de p-quadtree.
     Pós-condição: imprime na saida padrao o conteudo de cada nó.
 */
-void printPQuadTree(PQuadTree Tree); //EXTRA!
+void printPQuadTree(PQuadTree Tree); 
 
 
 /*
     Pré-condição: Requer uma instancia de um no de uma p-quadtree.
     Pós-condição: imprime na saida padrao as coordenadas do nó.
 */
-void printPQuadTreeNodeCoordinates(PQuadTreeNode Node); //EXTRA!
+void printPQuadTreeNodeCoordinates(PQuadTreeNode Node);
 
 #endif

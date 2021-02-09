@@ -6,5 +6,6 @@
 #include "../util/tools.h"
 #include "./query.h"
 #include "./dataStructure.h"
+#include "../util/sort.h"
 
 #endif 

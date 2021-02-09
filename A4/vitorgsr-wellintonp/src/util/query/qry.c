@@ -7,12 +7,18 @@ void closeTxt(File txt);
 
 void freeExecuteQryResources(char* command);
 
-void executeQry(File qry, Drawing Dr, Parameters Param){
+void executeQry(File qry, City Ct, Parameters Param){
+    if(Ct == NULL) return;
+    
     char* command = (char*) malloc((commandMaxLength + 1) * sizeof(char));     
     int commandLength;
     char commandType[10];
 
     File txt = openTxt(Param);
+    if(txt == NULL){
+        free(command);
+        return;
+    }
 
     while(!(feof(qry))){
 

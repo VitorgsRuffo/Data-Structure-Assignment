@@ -1,83 +1,63 @@
-#include "../include/headers.h"
-#include "../include/urbanElements.h"
+#include "../../include/headers.h"
+#include "../../include/urbanElements.h"
+#include "../../include/dataStructure.h"
 #include "../input/openInput.h"
+#include "../sort.h"
+
 
 typedef struct {
     HealthCenter healthCenter;
     double distance;
 }NearHealthCenter;
 
-void shellSort(NearHealthCenter* A, int length){
-    NearHealthCenter temp;
-    int i;
-
-    for(int gap = length/2; gap > 0; gap /= 2){
-
-        for(int j = gap; j<length; j+=1){
-
-            temp = A[j];
-            i = 0;
-            
-            for(i = j; i>=gap && A[i-gap].distance>temp.distance; i -= gap){
-                A[i] = A[i-gap];
-            }
-
-            A[i] = temp;
-        }
-    }
-}
-
-void displayIntegerArray(NearHealthCenter *A, int end){
-    for(int i = 0; i<end; i++){
-        printf("%.2lf ", A[i].distance);
-    }
-    printf("\n");
-}
-
 
 char* buildBlueHouseTag(House H);
-void copyHealthCenterListNodesInfoToArray(List healthCenterList, NearHealthCenter* nearHealthCenters);
 void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHealthCenters, int healthCentersAmount);
+void displayIntegerArray(NearHealthCenter* A, int end);
+int compareNearHealthCenters(Info Hc1, Info Hc2);
 char* buildLineSegmentTag(double x, double y, House H);
 void writeHealthCenterCoordinatesOnTxt(File txt, int i, double x, double y, double distance);
 
-
-void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
-    if(isElementNull(Dr, "drawing", "executeCovidCasesReport"))
-        return;
+void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
 
     int K; char cep[30]; char face; int number;
 
     sscanf(&command[4], "%d %s %c %d", &K, cep, &face, &number);
 
     House house = createHouse(cep, face, number, 0); 
-    setHouseBlock(house, Dr);       
+    setHouseBlock(house, Ct);       
     setHouseLocation(house);
 
     char* blueHouseTag = buildBlueHouseTag(house);
-    List queryElementsList = getQueryElementsList(Dr);
+    List queryElementsList = getQueryElementsList(Ct);
     insert(queryElementsList, blueHouseTag);
 
-    List healthCenterList = getHealthCenterList(Dr);
-    int healthCentersAmount = length(healthCenterList);
+
+    DataStructure healthCenters = getHealthCenters(Ct);
+    HealthCenter* healthCentersArray = PQuadTreeToArray(healthCenters);
+
+    int healthCentersAmount = PQuadTreeSize(healthCenters);
     NearHealthCenter nearHealthCenters[healthCentersAmount];
-    copyHealthCenterListNodesInfoToArray(healthCenterList, nearHealthCenters);
+
+    for(int i = 0; i<healthCentersAmount; i++)
+        nearHealthCenters[i].healthCenter = healthCentersArray[i];
+
+    free(healthCentersArray);
+    
     calculateDistanceFromHouseToHealthCenters(house, nearHealthCenters, healthCentersAmount);
     
-    //ordenar o vetor de acordo com o campo distance do elemento do vetor. (substituir por shell sort)
-        printf("Unsorted array:\n");
-        displayIntegerArray(nearHealthCenters, healthCentersAmount);
+    //printf("Unsorted array:\n");
+    //displayIntegerArray(nearHealthCenters, healthCentersAmount);
 
-        shellSort(nearHealthCenters, healthCentersAmount);
+    shellsort((Info*) nearHealthCenters, healthCentersAmount, compareNearHealthCenters);
 
-        printf("Sorted array:\n");
-        displayIntegerArray(nearHealthCenters, healthCentersAmount);
+    //printf("Sorted array:\n");
+    //displayIntegerArray(nearHealthCenters, healthCentersAmount);
 
     int healthCenterX, healthCenterY;
     char* lineSegmentTag;
     
-    if(K > healthCentersAmount)
-        K = healthCentersAmount;
+    if(K > healthCentersAmount) K = healthCentersAmount;
     
     for(int i = 0; i < K; i++){
 
@@ -94,7 +74,7 @@ void executeMedicalTreatmentSearching(char* command, Drawing Dr, File txt){
 char* buildBlueHouseTag(House H){
 
     char* houseTag = (char*) malloc(200 * sizeof(char));
-    if(isElementNull(houseTag, "houseTag", "buildBlueHouseTag"))
+    if(houseTag == NULL)
         return NULL;
 
     double x = getHouseX(H);
@@ -106,32 +86,12 @@ char* buildBlueHouseTag(House H){
     return houseTag;
 }
 
-void copyHealthCenterListNodesInfoToArray(List healthCenterList, NearHealthCenter* nearHealthCenters){
-    Node NODE = getFirst(healthCenterList);
-    if(isElementNull(NODE, "NODE", "copyHealthCenterListNodeInfoToArray | getFirst"))
-        return;
-    
-    Info healthCenterInfo = NULL;
-
-    int i = 0;
-    while(NODE != NULL){
-
-        healthCenterInfo = get(healthCenterList, NODE);
-        nearHealthCenters[i].healthCenter = healthCenterInfo;
-
-        NODE = getNext(healthCenterList, NODE);
-        i++;   
-    }
-      
-}
-
 void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHealthCenters, int healthCentersAmount){
     
     double healthCenterX, healthCenterY;  
 
     double houseCenterOfMassX = getHouseCenterOfMassX(H);
     double houseCenterOfMassY = getHouseCenterOfMassY(H);
-  
 
     for(int i = 0; i<healthCentersAmount; i++){
         healthCenterX = atof(getHealthCenterX(nearHealthCenters[i].healthCenter));
@@ -141,11 +101,25 @@ void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHe
     }
 }
 
+int compareNearHealthCenters(Info Hc1, Info Hc2){
+
+    NearHealthCenter* hc1 = (NearHealthCenter*) Hc1;
+    NearHealthCenter* hc2 = (NearHealthCenter*) Hc2;
+
+    if(hc1->distance > hc2->distance)
+        return 1;
+
+    else if(hc1->distance < hc2->distance)
+        return -1;
+
+    else
+        return 0;
+}
+
 char* buildLineSegmentTag(double x, double y, House H){
 
     char* lineSegmentTag = (char*) malloc(200 * sizeof(char));
-    if(isElementNull(lineSegmentTag, "lineSegmentTag", "buildLineSegmentTag"))
-        return NULL;
+    if(lineSegmentTag == NULL) return NULL;
 
     double houseCenterOfMassX = getHouseCenterOfMassX(H);
     double houseCenterOfMassY = getHouseCenterOfMassY(H);
@@ -157,4 +131,10 @@ char* buildLineSegmentTag(double x, double y, House H){
 void writeHealthCenterCoordinatesOnTxt(File txt, int i, double x, double y, double distance){
     i++;
     fprintf(txt, "Posto de saude (%d) - x: %.2lf, y: %.2lf, distancia: %.2lf.\n\n", i, x, y, distance);
+}
+
+void displayIntegerArray(NearHealthCenter* A, int end){
+    for(int i = 0; i<end; i++)
+        printf("%.2lf ", A[i].distance);
+    printf("\n");
 }

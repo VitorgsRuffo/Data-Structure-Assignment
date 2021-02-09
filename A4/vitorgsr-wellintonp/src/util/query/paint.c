@@ -1,13 +1,12 @@
-#include "../include/headers.h"
-#include "../include/elements.h"
+#include "../../include/headers.h"
+#include "../../include/elements.h"
+#include "../../include/dataStructure.h"
 #include "../input/openInput.h"
 
 void setElementCorbAndCorp(Info elementInfo, char* elementType, char* corb, char* corp, char** originalCorb, char** originalCorp);
 void writeElementPaintResultOnTxt(File txt, char* command, char* I, char* elementType, char* originalCorb, char* originalCorp);
 
-void executeElementPainting(char* command, Drawing Dr, File txt, char* paintingType){
-    if(isElementNull(Dr, "drawing", "executeElementPainting"))
-        return;
+void executeElementPainting(char* command, City Ct, File txt, char* paintingType){
 
     int J = 0; int K = 0; char corb[15]; char corp[15]; 
     
@@ -27,16 +26,16 @@ void executeElementPainting(char* command, Drawing Dr, File txt, char* paintingT
 
     for(int i = J; i<=K; i++){
         sprintf(I,"%d", i);
-        Node elementNode = searchForFigureOrTextElementByIdentifier(Dr, I, elementType);
-        if(isElementNull(elementNode, "elementNode", "searchForFigureOrTextElementByIdentifier"))
+        Node elementNode = searchForFigureOrTextElementByIdentifier(Ct, I, elementType);
+        if(elementNode == NULL)
             return;
 
-        List elementList = getListByElementType(Dr, elementType);
-        if(isElementNull(elementList, "elementList", "searchForFigureOrTextElementByIdentifier"))
+        DataStructure elements = getDataStructureByElementType(Ct, elementType);
+        if(elements == NULL)
             return;
 
-        Info elementInfo = get(elementList, elementNode);
-        if(isElementNull(elementInfo, "elementInfo", "searchForFigureOrTextElementByIdentifier"))
+        Info elementInfo = getPQuadTreeNodeInfo(elements, elementNode);
+        if(elementInfo == NULL)
             return;
         
         setElementCorbAndCorp(elementInfo, elementType, corb, corp, &originalCorb, &originalCorp);
