@@ -70,6 +70,7 @@ char* buildQryOutputPath(Parameters Param, char* extension){
 }
 
 //é a mesma que a "isRectangleInsideCircle".
+/*
 int isBlockInCircleRange(Info blockInfo, double x, double y, double radius){ 
     double blockX = atof(getBlockX(blockInfo));
     double blockY = atof(getBlockY(blockInfo));
@@ -96,6 +97,7 @@ int isBlockInCircleRange(Info blockInfo, double x, double y, double radius){
         return 0;
     }
 }
+*/
 
 char* getUrbanElementToString(Info urbanElementInfo, char* urbanElementType){
     char* urbanElementToString = NULL;

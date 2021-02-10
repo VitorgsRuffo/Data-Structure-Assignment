@@ -1,29 +1,11 @@
 #include "../../include/headers.h"
 #include "customization.h"
 
-typedef struct blockCustomization {
+typedef struct {
     char* sw;
     char* cfill;
     char* cstrk;
-}blockCustomization;
-
-typedef struct hydrantCustomization {
-    char* sw;
-    char* cfill;
-    char* cstrk;
-}hydrantCustomization;
-
-typedef struct baseRadioCustomization {
-    char* sw;
-    char* cfill;
-    char* cstrk;
-}baseRadioCustomization;
-
-typedef struct semaphoreCustomization {
-    char* sw;
-    char* cfill;
-    char* cstrk;
-}semaphoreCustomization;
+}urbanCustomization;
 
 typedef struct figuresCustomization{
     char* cw;
@@ -31,10 +13,10 @@ typedef struct figuresCustomization{
 }figuresCustomization;
 
 typedef struct elementsCustomization {
-    blockCustomization* blockCustom;
-    hydrantCustomization* hydrantCustom;
-    baseRadioCustomization* baseRadioCustom;
-    semaphoreCustomization* semaphoreCustom;
+    urbanCustomization* blockCustom;
+    urbanCustomization* hydrantCustom;
+    urbanCustomization* baseRadioCustom;
+    urbanCustomization* semaphoreCustom;
     figuresCustomization* figuresCustom;
 }elementsCustomization;
 
@@ -42,10 +24,10 @@ ElementsCustomization createElementsCustomization(){
 
     elementsCustomization *custom = (elementsCustomization*) malloc(sizeof(elementsCustomization));
 
-    custom->blockCustom = (blockCustomization*) malloc(sizeof(blockCustomization));
-    custom->hydrantCustom = (hydrantCustomization*) malloc(sizeof(hydrantCustomization));
-    custom->baseRadioCustom = (baseRadioCustomization*) malloc(sizeof(baseRadioCustomization));
-    custom->semaphoreCustom = (semaphoreCustomization*) malloc(sizeof(semaphoreCustomization));
+    custom->blockCustom = (urbanCustomization*) malloc(sizeof(urbanCustomization));
+    custom->hydrantCustom = (urbanCustomization*) malloc(sizeof(urbanCustomization));
+    custom->baseRadioCustom = (urbanCustomization*) malloc(sizeof(urbanCustomization));
+    custom->semaphoreCustom = (urbanCustomization*) malloc(sizeof(urbanCustomization));
     custom->figuresCustom = (figuresCustomization*) malloc(sizeof(figuresCustomization));
 
     custom->blockCustom->sw = (char*) malloc(10 * sizeof(char));
@@ -287,8 +269,7 @@ void setFiguresRwCustomization(ElementsCustomization Custom, char* rw){
 }
 
 void freeElementsCustomization(ElementsCustomization Custom){
-    if(Custom == NULL)
-        return;
+    if(Custom == NULL) return;
 
     elementsCustomization *custom = (elementsCustomization*) Custom;
 

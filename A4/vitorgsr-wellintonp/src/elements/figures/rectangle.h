@@ -1,13 +1,15 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include "../point.h"
-#include "circle.h"
-
 /*
 * Tipo abstrato de dados que representa a figura retangulo.
 */
 typedef void* Rectangle;
+
+
+#include "../point.h"
+#include "circle.h"
+
 
 /*
 * Pré-Condição: requer os dados (strings) que compoem um Retangulo.

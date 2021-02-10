@@ -1,13 +1,12 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
-
-#include "../point.h"
-#include "rectangle.h"
-
 /*
 *   Tipo abstrato de dado que representa a figura circulo.
 */
 typedef void* Circle;
+
+#include "../point.h"
+#include "rectangle.h"
 
 /*  
 * Pré-Condição: requer os dados (strings) que compoem um Circulo.
