@@ -57,11 +57,26 @@ char* getCircleX(Circle Circ){
     return circ->x;
 }
 
+void setCircleX(Circle Circ, char* x){
+    if(Circ == NULL)
+        return;
+    circle *circ = (circle*) Circ;
+    strcpy(circ->x, x);
+    setPointX(circ->coordinates, atof(x));
+}
+
 char* getCircleY(Circle Circ){
     if(Circ == NULL)
         return NULL;
     circle *circ = (circle*) Circ;
     return circ->y;
+}
+
+void setCircleY(Circle Circ, char* y){
+    if(Circ == NULL) return;
+    circle *circ = (circle*) Circ;
+    strcpy(circ->y, y);
+    setPointY(circ->coordinates, atof(y));
 }
 
 Point getCircleCoordinates(Circle Circ){

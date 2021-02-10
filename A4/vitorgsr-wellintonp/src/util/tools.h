@@ -35,12 +35,6 @@ char* getFileNameWithoutPathAndExtension(char* fullFileName);
 char* buildQryOutputPath(Parameters Param, char* extension);
 
 /*
-* Pré-Condição: requer um TAD quadra, o centro e o raio de um circulo.
-* Pós-Condição: retorna 1 se a quadra estiver inteiramente dentro do circulo, se nao, retorna 0;
-*/
-int isBlockInCircleRange(Info blockInfo, double x, double y, double radius);
-
-/*
 * Pré-Condição: requer um TAD que seja um elemento urbano e o tipo desse elemento.
 * Pós-Condição: retorna a string que informa todas as informacoes do elemento urbano passado.
 */

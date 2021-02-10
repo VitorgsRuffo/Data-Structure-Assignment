@@ -18,6 +18,9 @@
         "parameters.h": "c",
         "thread": "c",
         "point.h": "c",
-        "customization.h": "c"
+        "customization.h": "c",
+        "elements.h": "c",
+        "figures.h": "c",
+        "circle.h": "c"
     }
 }

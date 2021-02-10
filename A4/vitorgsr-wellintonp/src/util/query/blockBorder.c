@@ -1,62 +1,64 @@
 #include "../../include/headers.h"
-#include "../../include/urbanElements.h"
-#include "../input/openInput.h"
+#include "../../include/elements.h"
 #include "../../include/dataStructure.h"
+#include "../input/openInput.h"
 #include "../tools.h"
 
-typedef struct{
-    double x;
-    double y;
-    double radius;
-    char cstrk[20];
-}WrapperCircle;
 
-
-void setBlocksBorderInRange(File txt, List blockList, WrapperCircle* wrapperCircle);
+void setBlocksBorderInRange(File txt, DataStructure blocks, Circle wrapper);
 
 void executeBlocksBorderColorChanging(char* command, City Ct, File txt){
-    if(Ct == NULL || txt == NULL)
-        return;
-
-    WrapperCircle wrapperCircle;
-    sscanf(&command[4], "%lf %lf %lf %s", &wrapperCircle.x, &wrapperCircle.y, &wrapperCircle.radius, wrapperCircle.cstrk);
+    
+    char x[10], y[10], radius[10], cstrk[20];
+    sscanf(&command[4], "%s %s %s %s", x, y, radius, cstrk);
+    
+    Circle wrapper = createCircle("..", radius, x, y, cstrk, "..", "..");
 
     DataStructure blocks = getBlocks(Ct);
+    if(blocks == NULL) return;
 
-    setBlocksBorderInRange(txt, blocks, &wrapperCircle);
+    setBlocksBorderInRange(txt, blocks, wrapper);
+
+    freeCircle(wrapper);
 }
 
 typedef struct {
-    WrapperCircle* wrapperCircle;
+    Circle wrapper;
+    Rectangle block;
     File txt;
-} extraInfos;
+}Variables;
 
 
 void setBlockBorderIfItsInRange(Info blockInfo, ExtraInfo extraInfo);
 
-void setBlocksBorderInRange(File txt, DataStructure blocks, WrapperCircle* wrapperCircle){
+void setBlocksBorderInRange(File txt, DataStructure blocks, Circle wrapper){
 
-    if(txt == NULL || blocks == NULL || wrapperCircle == NULL)
-        return;
+    Variables variables;
 
-    extraInfos extraInfo;
+    variables.wrapper = wrapper;
+    variables.txt = txt;
+    variables.block = createRectangle("..", "..", "..", "..", "..", "..", "..", "..");
 
-    extraInfo.wrapperCircle = wrapperCircle;
-    extraInfo.txt = txt;
-
-    preOrderTraversal(blocks, setBlockBorderIfItsInRange, &extraInfo);
+    preOrderTraversal(blocks, setBlockBorderIfItsInRange, &variables);
+    
+    freeRectangle(variables.block);
 }
 
 void writeBlockCepOnTxt(File txt, Info blockInfo);
 
 void setBlockBorderIfItsInRange(Info blockInfo, ExtraInfo extraInfo){
     
-    extraInfos *exInfo = (extraInfos*) extraInfo; 
+    Variables *variables = (Variables*) extraInfo; 
+    
+    setRectangleX(variables->block, getBlockX(blockInfo));
+    setRectangleY(variables->block, getBlockY(blockInfo));
+    setRectangleWidth(variables->block, getBlockWidth(blockInfo));
+    setRectangleHeight(variables->block, getBlockHeight(blockInfo));
 
-    if(isBlockInCircleRange(blockInfo, exInfo->wrapperCircle->x, exInfo->wrapperCircle->y, exInfo->wrapperCircle->radius)){
+    if(isRectangleInsideCircle(variables->wrapper, variables->block)){
         
-        setBlockCstrk(blockInfo, exInfo->wrapperCircle->cstrk);
-        writeBlockCepOnTxt(exInfo->txt, blockInfo);
+        setBlockCstrk(blockInfo, getCircleCorb(variables->wrapper));
+        writeBlockCepOnTxt(variables->txt, blockInfo);
     }
 }
 

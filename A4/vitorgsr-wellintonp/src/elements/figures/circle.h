@@ -33,10 +33,22 @@ char* getCircleRadius(Circle Circ);
 char* getCircleX(Circle Circ);
 
 /*  
+*  Pré-Condição: requer o endereco de uma instancia de circulo e um valor x.
+*  Pós-Condição: atribui o valor passado para a coordenada x do circulo.
+*/
+void setCircleX(Circle Circ, char* x);
+
+/*  
 * Pré-Condição: requer o endereco de uma instancia de circulo.
 * Pós-Condição: retorna a coordenada y do centro do circulo passado.
 */
 char* getCircleY(Circle Circ);
+
+/*  
+*  Pré-Condição: requer o endereco de uma instancia de circulo e um valor y.
+*  Pós-Condição: atribui o valor passado para a coordenada y do circulo.
+*/
+void setCircleY(Circle Circ, char* y);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de circulo.

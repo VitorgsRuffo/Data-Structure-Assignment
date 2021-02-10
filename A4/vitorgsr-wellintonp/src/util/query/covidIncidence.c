@@ -111,7 +111,7 @@ void insertHouseInListIfItsInsideCircumference(Info houseInfo, ExtraInfo extraIn
 void determineHousesInsideCircumference(DataStructure houses, Variables* variables){
 
     levelOrderTraversal(houses, insertHouseInListIfItsInsideCircumference, variables);
-    free(variables->house);
+    freeRectangle(variables->house);
 }
 
 void insertHouseInListIfItsInsideCircumference(Info houseInfo, ExtraInfo extraInfo){
@@ -134,7 +134,7 @@ void insertHouseInListIfItsInsideCircumference(Info houseInfo, ExtraInfo extraIn
     setRectangleWidth(variables->house, houseW);
     setRectangleHeight(variables->house, houseH);
 
-    if(checkRectCircOverlap(variables->house, variables->circumference)) //isRectInsideCirc
+    if(isRectangleInsideCircle(variables->circumference, variables->house)) //isRectInsideCirc
         insert(variables->housesInsideCircList, houseInfo);
 }
 

@@ -69,36 +69,6 @@ char* buildQryOutputPath(Parameters Param, char* extension){
     return qryOutputPath;
 }
 
-//é a mesma que a "isRectangleInsideCircle".
-/*
-int isBlockInCircleRange(Info blockInfo, double x, double y, double radius){ 
-    double blockX = atof(getBlockX(blockInfo));
-    double blockY = atof(getBlockY(blockInfo));
-    
-    double blockWidth = atof(getBlockWidth(blockInfo));
-    double blockHeight = atof(getBlockHeight(blockInfo));
-    
-    double point1X, point2X, point3X, point4X;
-    double point1Y, point2Y, point3Y, point4Y;
-
-    point1X = blockX;               point1Y = blockY;
-    point2X = blockX + blockWidth;  point2Y = blockY;
-    point3X = blockX;               point3Y = blockY + blockHeight;
-    point4X = blockX + blockWidth;  point4Y = blockY + blockHeight;
-
-
-    if((pow(x - point1X, 2) + pow(y - point1Y, 2) <= pow(radius, 2)) &&
-       (pow(x - point2X, 2) + pow(y - point2Y, 2) <= pow(radius, 2)) &&
-       (pow(x - point3X, 2) + pow(y - point3Y, 2) <= pow(radius, 2)) &&
-       (pow(x - point4X, 2) + pow(y - point4Y, 2) <= pow(radius, 2)) ){
-        
-        return 1;
-    }else{
-        return 0;
-    }
-}
-*/
-
 char* getUrbanElementToString(Info urbanElementInfo, char* urbanElementType){
     char* urbanElementToString = NULL;
 

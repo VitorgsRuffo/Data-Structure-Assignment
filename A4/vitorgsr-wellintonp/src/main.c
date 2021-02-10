@@ -5,14 +5,13 @@
 
 /*to do list:
 
-    - corrigir as chamadas ás funcoes de overlap. (+ verificar se n tem outra funcao de overlap perdida)
-
-    T4:
     - criar funcao para executar pintura das sombras das quadras (comando dd).
     - inserir novos tads nas estruturas. (como organizar as hashs)
 
     - planejamento para o query.
+    
     - corrigir covidIncidence.c
+    - mudar as funcoes relativas a poligono de arquivo.
 */
 
 
