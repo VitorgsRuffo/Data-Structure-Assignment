@@ -62,96 +62,28 @@ void executeOverlapTest(char* command, City Ct, File txt){
     writeOverlapResultOnTxt(txt, command, J, element1Type, K, element2Type, overlapResult);
 }
 
-int checkCircleCircleOverlap(Info circ1, Info circ2);
-int checkRectRectOverlap(Info rect1, Info rect2);
-int checkCircRectOverlap(Info circ, Info rect);
-
 int isThereOverlaping(Info element1Info, Info element2Info, char* element1Type, char* element2Type){ 
     int thereIsOverlaping;
         
     if(element1Type[0] == 'c' && element2Type[0] == 'c')
-        thereIsOverlaping = checkCircleCircleOverlap(element1Info, element2Info);
+        thereIsOverlaping = isThereCirclesOverlap(element1Info, element2Info);
 
     else if(element1Type[0] == 'r' && element2Type[0] == 'r' )
-        thereIsOverlaping = checkRectRectOverlap(element1Info, element2Info);
-        
-    else if(element1Type[0] == 'r' && element2Type[0] == 'c')
-        thereIsOverlaping = checkRectCircOverlap(element1Info, element2Info);
+        thereIsOverlaping = isThereRectanglesOverlap(element1Info, element2Info);
 
     else if(element1Type[0] == 'c' && element2Type[0] == 'r')
-        thereIsOverlaping = checkCircRectOverlap(element1Info, element2Info);
-     
+        thereIsOverlaping = isThereOverlapBetweenCircleAndRectangle(element1Info, element2Info);
+
+    else if(element1Type[0] == 'r' && element2Type[0] == 'c'){
+        swapInformations(&element1Info, &element2Info);
+        thereIsOverlaping = isThereOverlapBetweenCircleAndRectangle(element1Info, element2Info);
+        swapInformations(&element1Info, &element2Info);
+    }
+
     else
         return -1;
 
     return thereIsOverlaping;
-}
-
-int checkCircleCircleOverlap(Info circ1, Info circ2){
-
-    double jRadius = atof(getCircleRadius(circ1));  //**refatorar**//
-    double jX = atof(getCircleX(circ1));
-    double jY = atof(getCircleY(circ1));
-
-    double kRadius = atof(getCircleRadius(circ2));
-    double kX = atof(getCircleX(circ2));
-    double kY = atof(getCircleY(circ2));
-
-    //Eles vão se sobrepor quando a distancia entre os centros dos circulos for menor que a soma dos seus raios.
-    double D = sqrt(pow((kX - jX), 2) + pow((kY - jY), 2)); //distancia entre os centros dos circulos:
-
-    if(D < jRadius + kRadius){ //Se sobrepõem:
-        return 1;
-    }else{ //Não se sobrepõem:
-        return 0;
-    } 
-}
-
-int checkRectRectOverlap(Info rect1, Info rect2){
-    double jX = atof(getRectangleX(rect1));
-    double jY = atof(getRectangleY(rect1));
-    double jWidth = atof(getRectangleWidth(rect1));
-    double jHeight = atof(getRectangleHeight(rect1));
-    double kX = atof(getRectangleX(rect2));
-    double kY = atof(getRectangleY(rect2));
-    double kWidth = atof(getRectangleWidth(rect2));
-    double kHeight = atof(getRectangleHeight(rect2));
-        
-    //Eles vão se sobrepor quando pelo menos umas das condiçoes abaixo forem satisfeitas: 
-    if( ((kY + kHeight > jY) && (kY < jY + jHeight)) ||
-        ((kY < jY + jHeight) && (kY + kHeight > jY)) ||
-        ((kX + kWidth > jX) && (kX < jX + jWidth)) ||
-        ((kX < jX + jWidth) && (kX + kWidth > jX)) ){
-
-        return 1;
-    }else{
-        return 0;
-    }
-}
-
-
-int checkCircRectOverlap(Info circ, Info rect){
-
-    double jRadius = atof(getCircleRadius(circ));
-    double jX = atof(getCircleX(circ));
-    double jY = atof(getCircleY(circ));
-
-    double kX = atof(getRectangleX(rect));
-    double kY = atof(getRectangleY(rect));
-    double kWidth = atof(getRectangleWidth(rect));
-    double kHeight = atof(getRectangleHeight(rect));
-
-    double rectPointX = getNextestRectPointToCircCenter(kX, kX + kWidth, jX);
-    double rectPointY = getNextestRectPointToCircCenter(kY, kY + kHeight, jY);                                                      
-
-    //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
-    double D = sqrt(pow((rectPointX - jX), 2) + pow((rectPointY - jY), 2));
-
-    if(D < jRadius){
-        return 1;
-    }else{
-        return 0;
-    }   
 }
 
 void calculateCircCircWrapperRectangle(WrapperRectangle *wrapperRectangle, Info element1Info, Info element2Info);

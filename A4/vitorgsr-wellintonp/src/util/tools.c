@@ -3,6 +3,14 @@
 #include "./data-structure/stack.h"
 #include "tools.h"
 
+void swapInformations(Info* info1, Info* info2) { 
+    Info temp;
+
+    temp = *info1;
+    *info1 = *info2;
+    *info2 = temp;  
+} 
+
 char** createCommandParts(int numberOfParts){
     char** commandParts = (char**) malloc(sizeof(char*) * numberOfParts);
     
@@ -61,6 +69,7 @@ char* buildQryOutputPath(Parameters Param, char* extension){
     return qryOutputPath;
 }
 
+//é a mesma que a "isRectangleInsideCircle".
 int isBlockInCircleRange(Info blockInfo, double x, double y, double radius){ 
     double blockX = atof(getBlockX(blockInfo));
     double blockY = atof(getBlockY(blockInfo));
@@ -106,51 +115,10 @@ char* getUrbanElementToString(Info urbanElementInfo, char* urbanElementType){
     return urbanElementToString;
 }
 
-double getNextestRectPointToCircCenter(double min, double max, double value){
-
-    if(value < min){
-        return min;
-    }else if(value > max){
-        return max;
-    }else{
-        return value;
-    }
-}
-
-int checkRectCircOverlap(Info rect, Info circ){
-    double jX = atof(getRectangleX(rect));
-    double jY = atof(getRectangleY(rect));
-    double jWidth = atof(getRectangleWidth(rect));
-    double jHeight = atof(getRectangleHeight(rect));
-
-    double kRadius = atof(getCircleRadius(circ));
-    double kX = atof(getCircleX(circ));
-    double kY = atof(getCircleY(circ));
-
-    double rectPointX = getNextestRectPointToCircCenter(jX, jX + jWidth, kX);
-    double rectPointY = getNextestRectPointToCircCenter(jY, jY + jHeight, kY);                                                        
-
-    //distancia entre o centro dos circulo e o ponto do retangulo mais proximo dele:
-    double D = sqrt(pow((rectPointX - kX), 2) + pow((rectPointY - kY), 2));
-
-    if(D < kRadius){
-        return 1;
-    }else{
-        return 0;
-    }
-}
 
 //---------------------------------Convex Hull--------------------------------//
 
 Point p0; 
-
-void swap(Point* p1, Point* p2) { 
-    Point temp;
-
-    temp = *p1;
-    *p1 = *p2;
-    *p2 = temp;  
-} 
 
 double distSq(Point p1, Point p2) { 
     double p1x = getPointX(p1); double p1y = getPointY(p1);
@@ -200,7 +168,7 @@ Stack convexHull(Point* points, int n) {
             ymin = getPointY(*(points + i)), min = i; 
     } 
 
-    swap(points, points + min); 
+    swapInformations(points, points + min); 
 
     p0 = *points;
     qsort(*(points + 1), n-1, sizeof(Point), compare); 

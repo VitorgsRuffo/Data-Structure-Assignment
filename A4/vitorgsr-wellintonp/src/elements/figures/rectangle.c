@@ -177,10 +177,30 @@ int isPointInsideRect(Rectangle Rect, Point P){
         return 0;
 }
 
-/*  
-* Pré-Condição: requer o endereco de duas instancias de retangulo.
-* Pós-Condição: retorna 1 se um retangulo se sobrepõe com o outro, retorna 0 se nao.
-*/
+int isCircleInsideRectangle(Rectangle Rect, Circle Circ){
+    if(Rect == NULL || Circ == NULL) return -1;
+
+    rectangle *rect = (rectangle*) Rect;
+    double rx = atof(rect->x);
+    double ry = atof(rect->y);
+    double rw = atof(rect->width);
+    double rh = atof(rect->height);
+
+    double cr = atof(getCircleRadius(Circ));  
+    double cx = atof(getCircleX(Circ));
+    double cy = atof(getCircleY(Circ));
+
+    if( cx + cr < rx + rw &&
+        cx - cr > rx      &&
+        cy + cr < ry + rh &&
+        cy - cr > ry         )
+
+        return 1;
+
+    else
+        return 0;
+}
+
 int isThereRectanglesOverlap(Rectangle Rect1, Rectangle Rect2){ 
     rectangle *rect1 = (rectangle*) Rect1;
     rectangle *rect2 = (rectangle*) Rect2;
@@ -205,6 +225,7 @@ int isThereRectanglesOverlap(Rectangle Rect1, Rectangle Rect2){
     else
         return 0;
 }
+
 
 void printRectangle(Rectangle Rect){
     if(Rect == NULL)

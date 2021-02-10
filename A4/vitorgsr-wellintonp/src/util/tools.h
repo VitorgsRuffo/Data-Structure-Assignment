@@ -11,6 +11,12 @@
 #define commandMaxLength 150
 
 /*
+* Pré-condição: requer o endereço de duas informacoes.
+* Pós-condição: as informacoes têm seu conteudo trocado.
+*/
+void swapInformations(Info* info1, Info* info2);
+
+/*
 * Pré-condição: nenhuma.
 * Pós-condição: aloca memoria dinamicamente para um vetor de ponteiros para char e retorna o endereco do vetor.
 */
@@ -39,18 +45,6 @@ int isBlockInCircleRange(Info blockInfo, double x, double y, double radius);
 * Pós-Condição: retorna a string que informa todas as informacoes do elemento urbano passado.
 */
 char* getUrbanElementToString(Info urbanElementInfo, char* urbanElementType);
-
-/*
-* Pré-Condição: requer a coordenada inicial do retangulo(x ou y), a coordenada final do retangulo(x+w ou y+h) e por fim a coordenada (x ou y) do centro do circulo.
-* Pós-Condição: retorna a coordenada (x ou y) do ponto do retangulo mais proximo do centro do circulo.
-*/
-double getNextestRectPointToCircCenter(double min, double max, double value);
-
-/*
-* Pré-Condição: requer uma instancia de retangulo e de circulo.
-* Pós-Condição: retorna 1 se essas entidades se sobrepoem, se nao retorna 0.
-*/
-int checkRectCircOverlap(Info rect, Info circ);
 
 /*
 * Pré-Condição: requer um vetor de pontos e o tamanho do vetor.

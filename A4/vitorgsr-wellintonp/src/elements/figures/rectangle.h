@@ -2,6 +2,7 @@
 #define RECTANGLE_H
 
 #include "../point.h"
+#include "circle.h"
 
 /*
 * Tipo abstrato de dados que representa a figura retangulo.
@@ -115,6 +116,19 @@ char* rectangleToString(Rectangle Rect);
 * Pós-Condição: retorna 1 se o ponto se encontra dentro do retangulo, retorna 0 se nao.
 */
 int isPointInsideRect(Rectangle Rect, Point P);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de retangulo e de circulo.
+* Pós-Condição: retorna 1 se o circulo se encontra INTEIRAMENTE dentro do retangulo, se nao retorna 0.
+*/
+int isCircleInsideRectangle(Rectangle Rect, Circle Circ);
+
+/*  
+* Pré-Condição: requer o endereco de duas instancias de retangulo.
+* Pós-Condição: retorna 1 se um retangulo se sobrepõe com o outro, retorna 0 se nao.
+*/
+int isThereRectanglesOverlap(Rectangle Rect1, Rectangle Rect2);
+
 
 /*
 * Pré-Condição: requer o endereco de uma instancia de Retangulo.

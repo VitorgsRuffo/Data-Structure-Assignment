@@ -2,6 +2,7 @@
 #define CIRCLE_H
 
 #include "../point.h"
+#include "rectangle.h"
 
 /*
 *   Tipo abstrato de dado que representa a figura circulo.
@@ -85,6 +86,24 @@ char* circleToString(Circle Circ);
 * Pós-Condição: retorna 1 se o ponto se encontra dentro do circulo, retorna 0 se nao.
 */
 int isPointInsideCirc(Circle Circ, Point P);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de circulo e de retangulo.
+* Pós-Condição: retorna 1 se o retangulo se encontra INTEIRAMENTE dentro do circulo, se nao retorna 0.
+*/
+int isRectangleInsideCircle(Circle Circ, Rectangle Rect);
+
+/*  
+* Pré-Condição: requer o endereco de duas instancias de circulos.
+* Pós-Condição: retorna 1 caso um dos circulos se sobrepõe o outro, caso contrário retorna 0.
+*/
+int isThereCirclesOverlap(Circle Circ1, Circle Circ2);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de circulo e de retangulo.
+* Pós-Condição: retorna 1 se as figuras se sobrepoẽm, caso contrário retorna 0.
+*/
+int isThereOverlapBetweenCircleAndRectangle(Circle Circ, Rectangle Rect);
 
 /*
 * Pré-Condição: requer o endereco de uma instancia de circulo.
