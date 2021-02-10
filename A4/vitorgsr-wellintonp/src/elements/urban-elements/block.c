@@ -12,6 +12,8 @@ typedef struct block{
     char* cfill;
     char* cstrk;
     char* rx;
+    double demographicDensity;
+    char* shadowColor;
 }block;
 
 Block createBlock(char* cep, char* x, char* y, char* w, char* h, char* sw, char* cfill, char* cstrk){
@@ -38,6 +40,8 @@ Block createBlock(char* cep, char* x, char* y, char* w, char* h, char* sw, char*
     strcpy(blk->cfill, cfill);
     strcpy(blk->cstrk, cstrk);
     strcpy(blk->rx, "0.0");
+    blk->demographicDensity = 0.0;
+    blk->shadowColor = NULL;
 
     return blk;
 }
@@ -136,6 +140,72 @@ void setBlockRx(Block Blk, char* rx){
     strcpy(blk->rx, rx);
 }
 
+double getBlockDemographicDensity(Block Blk){
+    if(Blk == NULL) return -1;
+
+    block *blk = (block*) Blk;
+    return blk->demographicDensity;
+}
+
+void setBlockDemographicDensity(Block Blk, double demographicDensity){
+    if(Blk == NULL || demographicDensity < 0)
+        return;
+
+    block *blk = (block*) Blk;
+    blk->demographicDensity = demographicDensity;
+}
+
+char* getBlockShadowColor(Block Blk){
+    if(Blk == NULL) return NULL; 
+
+    block *blk = (block*) Blk;
+    return blk->shadowColor;
+}
+
+
+void setBlockShadowColor(Block Blk){
+
+    if(Blk == NULL) return;
+
+    block *blk = (block*) Blk;
+
+    /*  shadow     density
+        == NULL    >=10  * aloca memoria e atribui sombra
+        != NULL    >=10  * somente sobreescreve cor da sombra ja existente
+        == NULL    <10   * nao acontece nada
+        != NULL    <10   * retira sombra
+    */
+    //Obs: quadras com densidade inferior a 10 hab/k² nao possuem sombra.
+
+    if(blk->shadowColor == NULL && blk->demographicDensity >= 10) {     
+        blk->shadowColor = (char*) malloc(10 * sizeof(char));
+
+    }else if(blk->shadowColor != NULL && blk->demographicDensity < 10){ //remover a sombra da quadra.
+        free(blk->shadowColor);
+        blk->shadowColor = NULL;
+        return;
+    }
+
+
+    if(blk->demographicDensity >= 10 && blk->demographicDensity < 500)
+        strcpy(blk->shadowColor, "#FFFF00");
+
+    else if(blk->demographicDensity >= 500 && blk->demographicDensity < 1500)
+        strcpy(blk->shadowColor, "#FF9955");
+
+    else if(blk->demographicDensity >= 1500 && blk->demographicDensity < 3000)
+        strcpy(blk->shadowColor, "#FF0000");
+
+    else if(blk->demographicDensity >= 3000 && blk->demographicDensity < 4500)
+        strcpy(blk->shadowColor, "#FF00CC");
+        
+    else if(blk->demographicDensity >= 4500 && blk->demographicDensity < 6000)
+        strcpy(blk->shadowColor, "#6600FF");
+        
+    else if(blk->demographicDensity >= 6000) 
+        strcpy(blk->shadowColor, "#A02C5A");
+}
+
 double getBlockArea(Block Blk){
     if(Blk == NULL)
         return 0;
@@ -179,6 +249,6 @@ void freeBlock(Block Blk){
     free(blk->cfill);  
     free(blk->cstrk);  
     free(blk->rx);
-
+    if(blk->shadowColor != NULL) free(blk->shadowColor);
     free(blk);
 }

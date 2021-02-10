@@ -1,6 +1,6 @@
 #include "../../include/headers.h"
-#include "../tools.h"
 #include "../../include/elements.h"
+#include "../tools.h"
 #include "openInput.h"
 #include "../data-structure/stack.h"
 
@@ -225,11 +225,43 @@ void readHealthCenter(Stack healthCenters, char* command, int id, char** command
     stackPush(healthCenters, healthCenter);
 }
 
+typedef struct {
+    Rectangle region;
+    double demographicDensity;
+    Rectangle block;
+}ddVariables;
+
+void setBlockDemographicDensityIfItsInsideRegion(Info blockInfo, ExtraInfo extraInfo);
+
 void readRegion(City Ct, char* command, int id, char** commandParts){
     sscanf(command, "%s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
-    Region region = createRegion(id, commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
-    HashTable regions = getRegions(Ct);
-    insertHashTable(regions, region);
+       
+    ddVariables variables;
+    variables.region = createRectangle("..", commandParts[3], commandParts[4], commandParts[1], commandParts[2], "..", "..", "..");
+    variables.demographicDensity = atof(commandParts[5]); // a divisao por 1000000.00 converteria a densidade demografica de km^2 para m^2.
+    variables.block = createRectangle("..", "..", "..", "..", "..", "..", "..", "..");
+
+    DataStructure blocks = getBlocks(Ct);
+
+    levelOrderTraversal(blocks, setBlockDemographicDensityIfItsInsideRegion, &variables);
+
+    freeRectangle(variables.region);
+    freeRectangle(variables.block);
+}
+
+void setBlockDemographicDensityIfItsInsideRegion(Info blockInfo, ExtraInfo extraInfo){
+
+    ddVariables* variables = (ddVariables*) extraInfo; 
+
+    setRectangleX(variables->block, getBlockX(blockInfo));
+    setRectangleY(variables->block, getBlockY(blockInfo));
+    setRectangleWidth(variables->block, getBlockWidth(blockInfo));
+    setRectangleHeight(variables->block, getBlockHeight(blockInfo));
+
+    if(isRectangleInsideRectangle(variables->block, variables->region)){
+        setBlockDemographicDensity(blockInfo, variables->demographicDensity);
+        setBlockShadowColor(blockInfo);
+    }
 }
 
 void freeReadGeoResources(char* command, char** commandParts, ElementsCustomization elementsCustom){

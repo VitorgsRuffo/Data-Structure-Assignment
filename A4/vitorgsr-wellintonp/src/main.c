@@ -5,13 +5,14 @@
 
 /*to do list:
 
-    - criar funcao para executar pintura das sombras das quadras (comando dd).
     - inserir novos tads nas estruturas. (como organizar as hashs)
 
     - planejamento para o query.
     
+    - finalizar sombra das quadras.
     - corrigir covidIncidence.c
     - mudar as funcoes relativas a poligono de arquivo.
+    
 */
 
 

@@ -6,7 +6,6 @@
 #include "../elements/urban-elements/baseRadio.h"
 #include "../elements/urban-elements/semaphore.h"
 #include "../elements/urban-elements/healthCenter.h"
-#include "../elements/urban-elements/region.h" 
 #include "../elements/urban-elements/house.h" 
 #include "../elements/urban-elements/customization.h"
 #include "../elements/urban-elements/city.h"

@@ -12,7 +12,6 @@ typedef struct city {
     PQuadTree baseRadios;
     PQuadTree semaphores;
     PQuadTree healthCenters;
-    HashTable regions; 
 
     HashTable establishmentTypes;
     HashTable establishments;
@@ -39,8 +38,6 @@ City createCity(){
     ct->baseRadios = createPQuadTree(getBaseRadioId, getBaseRadioCoordinates);
     ct->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
     ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
-    ct->regions = createHashTable(HASH_TABLE_INITIAL_SIZE, getRegionId);
-
     
     //ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
     //ct->establishments = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
@@ -141,16 +138,6 @@ List getQueryElements(City Ct){
     city *ct = (city*) Ct;
     return ct->queryElements;
 }
-
-
-HashTable getRegions(City Ct){
-    if(Ct == NULL)
-        return NULL;
-
-    city *ct = (city*) Ct;
-    return ct->regions;
-}
-
 
 
 DataStructure getDataStructureByElementType(City Ct, char* elementType){
@@ -270,7 +257,6 @@ void printCity(City Ct){
     printPQuadTree(ct->baseRadios);
     printPQuadTree(ct->semaphores);
     printPQuadTree(ct->healthCenters);
-    printHashTable(ct->regions, printRegion);
 
     printPQuadTree(ct->housesTree);
 }
@@ -289,7 +275,6 @@ void freeCity(City Ct){
     freePQuadTree(ct->baseRadios, freeBaseRadio);
     freePQuadTree(ct->semaphores, freeSemaphore);
     freePQuadTree(ct->healthCenters, freeHealthCenter);
-    freeHashTable(ct->regions, freeRegion);
 
     freePQuadTree(ct->housesTree, freeHouse);
 

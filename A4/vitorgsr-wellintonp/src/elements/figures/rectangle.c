@@ -177,6 +177,37 @@ int isPointInsideRect(Rectangle Rect, Point P){
         return 0;
 }
 
+int isRectangleInsideRectangle(Rectangle Rect1, Rectangle Rect2){
+    if(Rect1 == NULL || Rect2 == NULL) return -1;
+
+    rectangle *rect1 = (rectangle*) Rect1;
+    double r1x = atof(rect1->x);
+    double r1y = atof(rect1->y);
+    double r1w = atof(rect1->width);
+    double r1h = atof(rect1->height);
+    
+    Point vertex1 = createPoint(r1x, r1y);
+    Point vertex2 = createPoint(r1x+r1w, r1y);
+    Point vertex3 = createPoint(r1x, r1y+r1h);
+    Point vertex4 = createPoint(r1x+r1w, r1y+r1h);
+
+    int rectangleIsInsideRectangle = 0;
+
+    if( isPointInsideRect(Rect2, vertex1) &&
+        isPointInsideRect(Rect2, vertex2) &&
+        isPointInsideRect(Rect2, vertex3) &&
+        isPointInsideRect(Rect2, vertex4)  )
+
+        rectangleIsInsideRectangle = 1;
+    
+    free(vertex1);
+    free(vertex2);
+    free(vertex3);
+    free(vertex4);
+
+    return rectangleIsInsideRectangle;
+}
+
 int isCircleInsideRectangle(Rectangle Rect, Circle Circ){
     if(Rect == NULL || Circ == NULL) return -1;
 
@@ -202,6 +233,8 @@ int isCircleInsideRectangle(Rectangle Rect, Circle Circ){
 }
 
 int isThereRectanglesOverlap(Rectangle Rect1, Rectangle Rect2){ 
+    if(Rect1 == NULL || Rect2 == NULL) return -1;
+
     rectangle *rect1 = (rectangle*) Rect1;
     rectangle *rect2 = (rectangle*) Rect2;
 

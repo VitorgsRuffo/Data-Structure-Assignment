@@ -199,8 +199,15 @@ void buildBlockSvgTag(char* blockTag, Block Blk){
     char* rx = getBlockRx(Blk);
     float xCep =  atof(x)+(atof(width)/2);
     float yCep =  atof(y)+(atof(height)/2);
+    char* shadowColor;
+
+    if((shadowColor = getShadowColor(Blk)) == NULL)
+        strcpy(shadowColor, "");
+        
+
 
     sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%f\" y=\"%f\" fill=\"black\" stroke=\"white\" stroke-width=\"0.1\" dominant-baseline=\"middle\" text-anchor=\"middle\"> %s </text>\n", width, height, x, y, rx ,cstrk, sw, cfill, xCep, yCep, cep);
+
 }    
 
 

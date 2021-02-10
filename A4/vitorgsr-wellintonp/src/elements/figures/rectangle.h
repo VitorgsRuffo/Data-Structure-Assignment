@@ -120,6 +120,12 @@ char* rectangleToString(Rectangle Rect);
 int isPointInsideRect(Rectangle Rect, Point P);
 
 /*  
+* Pré-Condição: requer o endereco de duas instancias de retangulo.
+* Pós-Condição: retorna 1 se o primeiro retangulo esta INTEIRAMENTE dentro do segundo retangulo, retorna 0 se nao.
+*/
+int isRectangleInsideRectangle(Rectangle Rect1, Rectangle Rect2);
+
+/*  
 * Pré-Condição: requer o endereco de uma instancia de retangulo e de circulo.
 * Pós-Condição: retorna 1 se o circulo se encontra INTEIRAMENTE dentro do retangulo, se nao retorna 0.
 */

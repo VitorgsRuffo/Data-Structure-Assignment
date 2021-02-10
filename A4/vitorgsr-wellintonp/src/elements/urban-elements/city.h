@@ -70,12 +70,6 @@ PQuadTree getHealthCenters(City Ct);
 PQuadTree getHousesTree(City Ct);
 
 /*
-* Pré-Condição: requer a referencia para uma instancia de Regiao.
-* Pós-Condição: retorna uma referencia para a estrutura de regioes presente no TAD cidade.
-*/
-HashTable getRegions(City Ct);
-
-/*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
 * Pós-Condição: retorna uma referencia para a estrutura de elementos de query presente no TAD cidade.
 */

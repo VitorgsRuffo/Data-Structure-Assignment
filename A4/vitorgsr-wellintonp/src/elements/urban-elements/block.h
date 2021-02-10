@@ -94,6 +94,30 @@ void setBlockRx(Block Blk, char* rx);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de quadra.
+* Pós-Condição: retorna a densidade demografica da quadra.
+*/
+double getBlockDemographicDensity(Block Blk);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de quadra e um valor de densidade demografica.
+* Pós-Condição: altera o valor do atributo "demographicDensity".
+*/
+void setBlockDemographicDensity(Block Blk, double demographicDensity);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de quadra.
+* Pós-Condição: retorna a cor da sombra da quadra.
+*/
+char* getBlockShadowColor(Block Blk);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de quadra.
+* Pós-Condição: altera o valor do atributo "sombra" de acordo com a densidade demografica da quadra.
+*/
+char* setBlockShadowColor(Block Blk);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de quadra.
 * Pós-Condição: retorna o valor da area da quadra.
 */
 double getBlockArea(Block Blk);
