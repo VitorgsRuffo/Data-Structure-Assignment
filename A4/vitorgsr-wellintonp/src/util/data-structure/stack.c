@@ -7,7 +7,7 @@ typedef struct stackNode {
 }stackNode;
 
 
-StackNode createStack(){
+Stack createStack(){
     return NULL;
 }
 

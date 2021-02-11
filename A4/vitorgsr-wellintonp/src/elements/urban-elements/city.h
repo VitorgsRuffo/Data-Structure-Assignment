@@ -63,11 +63,17 @@ PQuadTree getSemaphores(City Ct);
 */
 PQuadTree getHealthCenters(City Ct);
 
+
+
+PQuadTree getEstablishmentsTree(City Ct);
+
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
 * Pós-Condição: retorna uma referencia para a estrutura de casas presente no TAD cidade.
 */
 PQuadTree getHousesTree(City Ct);
+
+HashTable getHousesTable(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.

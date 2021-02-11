@@ -9,5 +9,9 @@
 #include "../elements/urban-elements/house.h" 
 #include "../elements/urban-elements/customization.h"
 #include "../elements/urban-elements/city.h"
+#include "../elements/urban-elements/establishmentType.h"
+#include "../elements/urban-elements/establishment.h"
+#include "../elements/urban-elements/address.h"
+#include "../elements/urban-elements/person.h"
 
 #endif

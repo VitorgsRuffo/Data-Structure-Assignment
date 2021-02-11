@@ -20,7 +20,7 @@ typedef void* Stack;
 Pré-condição: nenhuma.
 Pós-condição: cria e retorna a referencia para uma pilha vazia.
 */
-StackNode createStack();
+Stack createStack();
 
 /*
 Pré-condição: requer o endereço de um ponteiro para o nó no topo da pilha.

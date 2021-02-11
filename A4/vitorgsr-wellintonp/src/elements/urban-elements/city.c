@@ -12,14 +12,17 @@ typedef struct city {
     PQuadTree baseRadios;
     PQuadTree semaphores;
     PQuadTree healthCenters;
+    PQuadTree covidRegionsblocks;
 
     HashTable establishmentTypes;
-    HashTable establishments;
+    HashTable establishmentsTable;
+    PQuadTree establishmentsTree;
     HashTable people;
     PQuadTree housesTree;
     HashTable housesTable;
 
     List queryElements;
+    
 }city;
 
 City createCity(){
@@ -39,11 +42,12 @@ City createCity(){
     ct->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
     ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
     
-    //ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
-    //ct->establishments = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
-    //ct->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);
+    ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
+    //ct->establishmentTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
+    ct->establishmentsTree = createPQuadTree(getEstablishmentCnpj, getEstablishmentCoordinates);
+    ct->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);
     ct->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
-    //ct->housesTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getHouseCpf);
+    ct->housesTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getHouseCpf);
     
     ct->queryElements = createList();
 
@@ -115,6 +119,22 @@ List getHealthCenters(City Ct){
     return ct->healthCenters;
 }
 
+PQuadTree getEstablishmentsTree(City Ct){
+    if(Ct == NULL)
+        return NULL;
+
+    city *ct = (city*) Ct;
+    return ct->establishmentsTree;
+}
+
+HashTable getPeople(City Ct){
+    if(Ct == NULL)
+        return NULL;
+
+    city *ct = (city*) Ct;
+    return ct->establishmentsTree;
+}
+
 PQuadTree getHousesTree(City Ct){
     if(Ct == NULL)
         return NULL;
@@ -122,7 +142,7 @@ PQuadTree getHousesTree(City Ct){
     city *ct = (city*) Ct;
     return ct->housesTree;
 }
-/*
+
 HashTable getHousesTable(City Ct){
     if(Ct == NULL)
         return NULL;
@@ -130,7 +150,7 @@ HashTable getHousesTable(City Ct){
     city *ct = (city*) Ct;
     return ct->housesTable;
 }
-*/
+
 List getQueryElements(City Ct){
     if(Ct == NULL)
         return NULL;

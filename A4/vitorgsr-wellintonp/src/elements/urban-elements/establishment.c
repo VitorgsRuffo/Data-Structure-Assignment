@@ -49,6 +49,69 @@ void setEstablishmentCoordinates(establishment* est){
 }
 
 
+char* getEstablishmentName(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->name;
+}
+
+
+char* getEstablishmentCnpj(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->cnpj;
+}
+
+
+char* getEstablishmentCpf(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->cpf;
+}
+
+
+char* getEstablishmentCode(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->code;
+}
+
+
+Point getEstablishmentCoordinates(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->coordinates;
+}
+
+
+double getEstablishmentWidth(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->w;
+}
+
+
+double getEstablishmentHeight(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->h;
+}
+
+
 void freeEstablishment(Establishment Et){
     if(Et == NULL)
         return;

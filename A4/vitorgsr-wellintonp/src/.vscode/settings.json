@@ -25,6 +25,9 @@
         "stack.h": "c",
         "house.h": "c",
         "semaphore.h": "c",
-        "address.h": "c"
+        "address.h": "c",
+        "city.h": "c",
+        "establishmenttype.h": "c",
+        "person.h": "c"
     }
 }

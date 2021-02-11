@@ -6,7 +6,11 @@
 /*to do list:
 
     geo:
-    - tad person
+    - criar tad CovidRegion 
+    - refatorar covidIncidence.c
+
+
+    - refatorar arquivos que usam o tad House (ex: medicalTreatment.c)
     - arquivos ec.c e pm.c
     - printar novos tads no svg se necesario.
 
@@ -19,9 +23,10 @@
 
     extras:
     - finalizar sombra das quadras.
-    - corrigir covidIncidence.c
-    - mudar as funcoes relativas a poligono de arquivo.
+    - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
     
+    - implementar quicksort
+    - implementar convexHull
 */
 
 
