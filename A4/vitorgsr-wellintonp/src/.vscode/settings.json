@@ -24,6 +24,7 @@
         "circle.h": "c",
         "stack.h": "c",
         "house.h": "c",
-        "semaphore.h": "c"
+        "semaphore.h": "c",
+        "address.h": "c"
     }
 }

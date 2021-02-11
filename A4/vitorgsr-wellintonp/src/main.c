@@ -5,10 +5,19 @@
 
 /*to do list:
 
-    - inserir novos tads nas estruturas. (como organizar as hashs)
+    geo:
+    - tad person
+    - arquivos ec.c e pm.c
+    - printar novos tads no svg se necesario.
 
+
+
+    query:
     - planejamento para o query.
     
+
+
+    extras:
     - finalizar sombra das quadras.
     - corrigir covidIncidence.c
     - mudar as funcoes relativas a poligono de arquivo.

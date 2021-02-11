@@ -10,22 +10,10 @@
 typedef void* House;
 
 /*  
-* Pré-Condição: requer o endereço da casa e o numero de casos de covid na casa.
+* Pré-Condição: requer o cpf do dono da casa, o endereço da casa, o numero de casos de covid na casa e a cidade na qual a casa se localiza.
 * Pós-Condição: retorna o endereco de uma nova instancia de casa que possui as informacoes passadas.
 */
-House createHouse(char* cep, char face, int number, int casesNumber);
-
-/*  
-* Pré-Condição: requer o endereco de uma instancia de casa e desenho.
-* Pós-Condição: atribui como sendo quadra da casa a quadra cujo cep esta contido no endereço da casa.
-*/
-void setHouseBlock(House H, City Ct);
-
-/*  
-* Pré-Condição: requer o endereco de uma instancia de casa e desenho.
-* Pós-Condição: atribui valores as posiçoes x e y da casa e seu centro de massa.
-*/
-void setHouseLocation(House H);
+House createHouse(char* cpf, char* cep, char face, int number, char* compl, int casesNumber, City Ct);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
@@ -35,19 +23,7 @@ char* getHouseCpf(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
-* Pós-Condição: retorna a coordenada x da casa passada.
-*/
-double getHouseX(House H);
-
-/*  
-* Pré-Condição: requer o endereco de uma instancia de casa.
-* Pós-Condição: retorna a coordenada y da casa passada.
-*/
-double getHouseY(House H);
-
-/*  
-* Pré-Condição: requer o endereco de uma instancia de casa.
-* Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse casa.
+* Pós-Condição: retorna uma instancia de ponto que representa a localizacao da casa.
 */
 Point getHouseCoordinates(House H);
 
@@ -65,15 +41,9 @@ double getHouseH(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
-* Pós-Condição: retorna a coordenada x do centro de massa da casa passada.
+* Pós-Condição: retorna uma instancia de ponto que representa o centro de massa da casa passada.
 */
-double getHouseCenterOfMassX(House H);
-
-/*  
-* Pré-Condição: requer o endereco de uma instancia de casa.
-* Pós-Condição: retorna a coordenada y do centro de massa da casa passada.
-*/
-double getHouseCenterOfMassY(House H);
+Point getHouseCenterOfMass(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
