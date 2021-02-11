@@ -10,10 +10,10 @@
 typedef void* House;
 
 /*  
-* Pré-Condição: requer o cpf do dono da casa, o endereço da casa, o numero de casos de covid na casa e a cidade na qual a casa se localiza.
+* Pré-Condição: requer o cpf do dono da casa, o endereço da casa e a cidade na qual a casa se localiza.
 * Pós-Condição: retorna o endereco de uma nova instancia de casa que possui as informacoes passadas.
 */
-House createHouse(char* cpf, char* cep, char face, int number, char* compl, int casesNumber, City Ct);
+House createHouse(char* cpf, char* cep, char face, int number, char* compl, City Ct);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
@@ -45,11 +45,6 @@ double getHouseH(House H);
 */
 Point getHouseCenterOfMass(House H);
 
-/*  
-* Pré-Condição: requer o endereco de uma instancia de casa.
-* Pós-Condição: retorna o numero de casos de covid da casa passada.
-*/
-int getHouseCasesNumber(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.

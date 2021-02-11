@@ -6,12 +6,13 @@
 #include "../elements/urban-elements/baseRadio.h"
 #include "../elements/urban-elements/semaphore.h"
 #include "../elements/urban-elements/healthCenter.h"
-#include "../elements/urban-elements/house.h" 
+#include "../elements/urban-elements/house.h"
+#include "../elements/urban-elements/covidAddress.h"
 #include "../elements/urban-elements/customization.h"
-#include "../elements/urban-elements/city.h"
 #include "../elements/urban-elements/establishmentType.h"
 #include "../elements/urban-elements/establishment.h"
 #include "../elements/urban-elements/address.h"
 #include "../elements/urban-elements/person.h"
+#include "../elements/urban-elements/city.h"
 
 #endif

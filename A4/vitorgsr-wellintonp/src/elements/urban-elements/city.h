@@ -63,7 +63,11 @@ PQuadTree getSemaphores(City Ct);
 */
 PQuadTree getHealthCenters(City Ct);
 
-
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de endereços de covid presente no TAD cidade.
+*/
+PQuadTree getCovidAddresses(City Ct);
 
 PQuadTree getEstablishmentsTree(City Ct);
 
