@@ -3,6 +3,7 @@
 
 #include "city.h"
 #include "point.h"
+#include "address.h"
 
 /*
 *   Tipo abstrato de dado que representa o elemento urbano estabelecimento comercial.
@@ -33,20 +34,23 @@ char* getEstablishmentCnpj(Establishment Est);
 */
 char* getEstablishmentCpf(Establishment Est);
 
-
 /*  
 * Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
 * Pós-Condição: retorna o codigo referente ao tipo do estabelecimento comercial passado.
 */
 char* getEstablishmentCode(Establishment Est);
 
+/*  
+* Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
+* Pós-Condição: retorna uma instancia de endereço que representa a localizacao desse estabelecimento comercial.
+*/
+Address getEstablishmentAddress(Establishment Est);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
 * Pós-Condição: retorna uma instancia de ponto que representa a localizacao desse estabelecimento comercial.
 */
 Point getEstablishmentCoordinates(Establishment Est);
-
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
@@ -60,6 +64,11 @@ double getEstablishmentWidth(Establishment Est);
 */
 double getEstablishmentHeight(Establishment Est);
 
+/*  
+* Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
+* Pós-Condição: retorna um Point contendo x e y do centro de massa do estabelecimento comercial passado.
+*/
+Point getEstablishmentCenterOfMass(Establishment Est);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.

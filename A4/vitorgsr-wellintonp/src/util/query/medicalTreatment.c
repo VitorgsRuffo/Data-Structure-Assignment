@@ -24,14 +24,11 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
 
     sscanf(&command[4], "%d %s %c %d", &K, cep, &face, &number);
 
-    House house = createHouse(cep, face, number, 0); 
-    setHouseBlock(house, Ct);       
-    setHouseLocation(house);
+    House house = createHouse("none", cep, face, number, "none", 0, Ct); 
 
     char* blueHouseTag = buildBlueHouseTag(house);
     List queryElementsList = getQueryElements(Ct);
     insert(queryElementsList, blueHouseTag);
-
 
     DataStructure healthCenters = getHealthCenters(Ct);
     HealthCenter* healthCentersArray = PQuadTreeToArray(healthCenters);
@@ -77,8 +74,8 @@ char* buildBlueHouseTag(House H){
     if(houseTag == NULL)
         return NULL;
 
-    double x = getHouseX(H);
-    double y = getHouseY(H);
+    double x = getPointX(getHouseCoordinates(H));
+    double y = getPointY(getHouseCoordinates(H));
     double w = getHouseW(H);
     double h = getHouseH(H);
 
@@ -88,10 +85,10 @@ char* buildBlueHouseTag(House H){
 
 void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHealthCenters, int healthCentersAmount){
     
-    double healthCenterX, healthCenterY;  
+    double healthCenterX, healthCenterY;
 
-    double houseCenterOfMassX = getHouseCenterOfMassX(H);
-    double houseCenterOfMassY = getHouseCenterOfMassY(H);
+    double houseCenterOfMassX = getPointX(getHouseCenterOfMass(H));
+    double houseCenterOfMassY = getPointY(getHouseCenterOfMass(H));
 
     for(int i = 0; i<healthCentersAmount; i++){
         healthCenterX = atof(getHealthCenterX(nearHealthCenters[i].healthCenter));
@@ -121,8 +118,8 @@ char* buildLineSegmentTag(double x, double y, House H){
     char* lineSegmentTag = (char*) malloc(200 * sizeof(char));
     if(lineSegmentTag == NULL) return NULL;
 
-    double houseCenterOfMassX = getHouseCenterOfMassX(H);
-    double houseCenterOfMassY = getHouseCenterOfMassY(H);
+    double houseCenterOfMassX = getPointX(getHouseCenterOfMass(H));
+    double houseCenterOfMassY = getPointY(getHouseCenterOfMass(H));
 
     sprintf(lineSegmentTag, "<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"%lf\" stroke=\"black\" stroke-width=\"0.8\" stroke-dasharray=\"5,5\"/>", houseCenterOfMassX, houseCenterOfMassY, x, y);
     return lineSegmentTag;

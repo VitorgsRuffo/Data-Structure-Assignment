@@ -13,9 +13,10 @@ typedef struct city {
     PQuadTree semaphores;
     PQuadTree healthCenters;
     PQuadTree covidRegionsblocks;
+    
 
     HashTable establishmentTypes;
-    HashTable establishmentsTable;
+    //HashTable establishmentsTable;
     PQuadTree establishmentsTree;
     HashTable people;
     PQuadTree housesTree;
@@ -111,13 +112,31 @@ PQuadTree getSemaphores(City Ct){
     return ct->semaphores;
 }
 
-List getHealthCenters(City Ct){
+PQuadTree getHealthCenters(City Ct){
     if(Ct == NULL)
         return NULL;
 
     city *ct = (city*) Ct;
     return ct->healthCenters;
 }
+
+HashTable getEstablishmentTypes(City Ct){
+    if(Ct == NULL)
+        return NULL;
+
+    city *ct = (city*) Ct;
+    return ct->establishmentTypes;
+}
+
+/*
+HashTable getEstablishmentsTable(City Ct){
+    if(Ct == NULL)
+        return NULL;
+
+    city *ct = (city*) Ct;
+    return ct->establishmentsTable;
+}
+*/
 
 PQuadTree getEstablishmentsTree(City Ct){
     if(Ct == NULL)
@@ -132,7 +151,7 @@ HashTable getPeople(City Ct){
         return NULL;
 
     city *ct = (city*) Ct;
-    return ct->establishmentsTree;
+    return ct->people;
 }
 
 PQuadTree getHousesTree(City Ct){
@@ -161,6 +180,7 @@ List getQueryElements(City Ct){
 
 
 DataStructure getDataStructureByElementType(City Ct, char* elementType){
+    
     if(Ct == NULL) return NULL;
     
     DataStructure elements = NULL;
@@ -192,7 +212,6 @@ DataStructure getDataStructureByElementType(City Ct, char* elementType){
     return elements;
 }
 
-
 Node searchForFigureOrTextElementByIdentifier(City Ct, char* idToSearch, char* figureElementType){
     if(Ct == NULL || idToSearch == NULL)
         return NULL;
@@ -220,7 +239,6 @@ Node searchForFigureOrTextElementByIdentifier(City Ct, char* idToSearch, char* f
 
     return NULL;
 }
-
 
 Node searchForUrbanElementByIdentifier(City Ct, char* idToSearch, char* urbanElementType){
     if(Ct == NULL)
@@ -278,6 +296,7 @@ void printCity(City Ct){
     printPQuadTree(ct->semaphores);
     printPQuadTree(ct->healthCenters);
 
+    printPQuadTree(ct->establishmentsTree);
     printPQuadTree(ct->housesTree);
 }
 
@@ -296,7 +315,12 @@ void freeCity(City Ct){
     freePQuadTree(ct->semaphores, freeSemaphore);
     freePQuadTree(ct->healthCenters, freeHealthCenter);
 
+    freeHashTable(ct->establishmentTypes, freeEstablishmentType);
+    //freeHashTable(ct->establishmentsTable, freeEstablishment);
+    freePQuadTree(ct->establishmentsTree, freeEstablishment);
+    freeHashTable(ct->people, freePerson);
     freePQuadTree(ct->housesTree, freeHouse);
+    freeHashTable(ct->housesTable, freeHouse);
 
     freeList(ct->queryElements, freeQueryElement);
     free(ct);

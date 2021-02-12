@@ -1,6 +1,5 @@
 #include "../../include/headers.h"
 #include "establishment.h"
-#include "address.h"
 
 #define establishmentWidth 50
 #define establishmentHeight 30
@@ -84,6 +83,13 @@ char* getEstablishmentCode(Establishment Est){
     return est->code;
 }
 
+Address getEstablishmentAddress(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->address;
+}
 
 Point getEstablishmentCoordinates(Establishment Est){
     if(Est == NULL)
@@ -93,7 +99,6 @@ Point getEstablishmentCoordinates(Establishment Est){
     return est->coordinates;
 }
 
-
 double getEstablishmentWidth(Establishment Est){
     if(Est == NULL)
         return;
@@ -101,7 +106,6 @@ double getEstablishmentWidth(Establishment Est){
     establishment* est = (establishment*) Est;
     return est->w;
 }
-
 
 double getEstablishmentHeight(Establishment Est){
     if(Est == NULL)
@@ -111,6 +115,12 @@ double getEstablishmentHeight(Establishment Est){
     return est->h;
 }
 
+Point getEstablishmentCenterOfMass(Establishment Est){
+    if(Est == NULL)
+        return NULL;
+    establishment* est = (establishment*) Est;
+    return getAddressCoordinates(est->address);
+}
 
 void freeEstablishment(Establishment Et){
     if(Et == NULL)

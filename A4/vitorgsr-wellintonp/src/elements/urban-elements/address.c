@@ -47,11 +47,28 @@ Address createAdress(char* cep, char face, int number, char* compl, City Ct){
     return add;
 }
 
-
 Point getAddressCoordinates(Address Add){
     if(Add == NULL) return NULL;
     address *add = (address*) Add;
     return add->coordinates;
+}
+
+double getAddressX(Address Add){
+
+    if(Add == NULL)
+        return -1;
+
+    address *add = (address*) Add;
+    return getPointX(add->coordinates);
+}
+
+double getAddressY(Address Add){
+
+    if(Add == NULL)
+        return -1;
+
+    address *add = (address*) Add;
+    return getPointY(add->coordinates);
 }
 
 
