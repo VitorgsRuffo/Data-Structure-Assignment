@@ -20,6 +20,8 @@ void executeQry(File qry, City Ct, Parameters Param){
         return;
     }
 
+    int uniqueId = 0;
+
     while(!(feof(qry))){
 
         if(fgets(command, commandMaxLength, qry) == NULL) // se tertarmos ler alem da ultima linha do arquivo fgets retornara NULL e sairemos do loop de leitura.
@@ -60,13 +62,15 @@ void executeQry(File qry, City Ct, Parameters Param){
             executeUrbanElementsTotalAreaCalculationInRange(command, Ct, txt);
 
         else if(!strcmp(commandType, "cv"))
-            executeCovidCasesReport(command, Ct);
+            executeCovidCasesReport(uniqueId, command, Ct);
 
         else if(!strcmp(commandType, "soc"))
             executeMedicalTreatmentSearching(command, Ct, txt);
 
         else if(!strcmp(commandType, "ci"))
             executeCovidIncidenceReportInRegion(command, Ct, txt);
+        
+        uniqueId++;
     }
     
     closeTxt(txt);

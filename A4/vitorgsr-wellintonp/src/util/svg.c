@@ -78,6 +78,8 @@ void buildSemaphoreSvgTag(char* semaphoreTag, Semaphore Semap);
 
 void buildHealthCenterSvgTag(char* HealthCenterTag, HealthCenter HealthC);
 
+void buildCovidAddressSvgTag(char* covidAddressTag, CovidAddress Ca);
+
 void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est);
 
 void buildHouseSvgTag(char* houseTag, House H);
@@ -115,6 +117,9 @@ int drawOnSvg(Svg svg, City Ct){
     
     DataStructure establishments = getEstablishmentsTree(Ct);
     drawElementsOnSvg(svg, establishments, &buildEstablishmentSvgTag);
+
+    DataStructure covidAddresses = getCovidAddresses(Ct);
+    drawElementsOnSvg(svg, covidAddresses, &buildCovidAddressSvgTag);
 
     DataStructure houses = getHousesTree(Ct);
     drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
@@ -205,8 +210,9 @@ void buildBlockSvgTag(char* blockTag, Block Blk){
     char* shadowColor;
 
     if((shadowColor = getShadowColor(Blk)) == NULL)
-        strcpy(shadowColor, "");
-        
+        strcpy(shadowColor, "rgba(0,0,0,0)");
+
+    sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n", width, height, (x + 8), (y + 8), rx , shadowColor, sw, shadowColor); 
     sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%f\" y=\"%f\" fill=\"black\" stroke=\"white\" stroke-width=\"0.1\" dominant-baseline=\"middle\" text-anchor=\"middle\"> %s </text>\n", width, height, x, y, rx ,cstrk, sw, cfill, xCep, yCep, cep);
 }    
 
@@ -251,6 +257,22 @@ void buildHealthCenterSvgTag(char* healthCenterTag, HealthCenter HealthC){
     sprintf(healthCenterTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"mediumblue\" stroke-width=\"1\" fill=\"royalblue\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> HC </text>\n", x, y, radius, x, y);
 }
 
+void buildCovidAddressSvgTag(char* covidAddressTag, CovidAddress Ca){
+
+    Address address = getCovidAddress(Ca);
+    Point covidAddressCoordinates = getAddressCoordinates(address);
+
+    double covidAddressX = getPointX(covidAddressCoordinates);
+    double covidAddressY = getPointY(covidAddressCoordinates);
+
+    double x = covidAddressX - 15.00;
+    double y = covidAddressY - 15.00;
+  
+    int casesNumber = getCovidAddressCasesNumber(Ca);
+
+    sprintf(covidAddressTag, "\t<rect width=\"15.00\" height=\"15.00\" x=\"%lf\" y=\"%lf\" stroke=\"darkorange\" stroke-width=\"1\" fill=\"orange\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> %d </text>\n", x, y, covidAddressX, covidAddressY, casesNumber);
+}
+
 void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est){
 
     Point estCoordinates = getEstablishmentCoordinates(est);
@@ -258,8 +280,9 @@ void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est){
     double y = getPointY(estCoordinates);
     double w = getEstablishmentWidth(est);
     double h = getEstablishmentHeight(est);
-    double centerOfMassX = getPointX(getAddressCoordinates);
-    double centerOfMassY = getPointY(getAddressCoordinates);
+    Point centerOfMass = getEstablishmentCenterOfMass(est);
+    double centerOfMassX = getPointX(centerOfMass);
+    double centerOfMassY = getPointY(centerOfMass);
 
     sprintf(EstablishmentTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"black\" stroke-width=\"1\" fill=\"chartreuse\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"black\" text-anchor=\"middle\" dy=\".3em\"> EC </text>\n", w, h, x, y, centerOfMassX, centerOfMassY);
 }

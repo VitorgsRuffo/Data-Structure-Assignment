@@ -13,16 +13,14 @@ typedef struct {
     Address address;
     Point coordinates;
     double w, h;
-    int casesNumber;
 }house;
 
 void setHouseCoordinates(house* h);
 
-House createHouse(char* cpf, char* cep, char face, int number, char* compl, int casesNumber, City Ct){
+House createHouse(char* cpf, char* cep, char face, int number, char* compl, City Ct){
     
     house *h = (house*) malloc(sizeof(house));
-    if(h == NULL)
-        return;
+    if(h == NULL) return NULL;
 
     h->cpf = (char*) malloc((strlen(cpf) + 1) * sizeof(char));
     strcpy(h->cpf, cpf);
@@ -31,7 +29,6 @@ House createHouse(char* cpf, char* cep, char face, int number, char* compl, int 
     setHouseCoordinates(h);
     h->w = houseWidth;
     h->h = houseHeight;
-    h->casesNumber = casesNumber;
 
     return h;
 }
@@ -79,19 +76,13 @@ Point getHouseCenterOfMass(House H){
     return getAddressCoordinates(h->address);
 }
 
-int getHouseCasesNumber(House H){
-    if(H == NULL)
-        return 0;
-    house *h = (house*) H;
-    return h->casesNumber;
-}
 
 void printHouse(House H){
     if(H == NULL)
         return;
     house *h = (house*) H;
-    printf("Casa:\nw: %lf\nh: %lf\nx: %lf\ny: %lf\ncasos: %d\n\n",
-            h->w, h->h, getPointX(h->coordinates), getPointY(h->coordinates), h->casesNumber);
+    printf("Casa:\nw: %lf\nh: %lf\nx: %lf\ny: %lf\n\n",
+            h->w, h->h, getPointX(h->coordinates), getPointY(h->coordinates));
 }
 
 void freeHouse(House H){

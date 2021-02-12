@@ -12,18 +12,14 @@ typedef struct city {
     PQuadTree baseRadios;
     PQuadTree semaphores;
     PQuadTree healthCenters;
-    PQuadTree covidRegionsblocks;
-    
-
+    PQuadTree covidAddresses;
     HashTable establishmentTypes;
     //HashTable establishmentsTable;
     PQuadTree establishmentsTree;
     HashTable people;
     PQuadTree housesTree;
     HashTable housesTable;
-
     List queryElements;
-    
 }city;
 
 City createCity(){
@@ -42,14 +38,13 @@ City createCity(){
     ct->baseRadios = createPQuadTree(getBaseRadioId, getBaseRadioCoordinates);
     ct->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
     ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
-    
+    ct->covidAddresses = createPQuadTree(getCovidAddressId, getCovidAddressCoordinates);
     ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
     //ct->establishmentTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
     ct->establishmentsTree = createPQuadTree(getEstablishmentCnpj, getEstablishmentCoordinates);
     ct->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);
     ct->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
     ct->housesTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getHouseCpf);
-    
     ct->queryElements = createList();
 
     return ct;
@@ -118,6 +113,14 @@ PQuadTree getHealthCenters(City Ct){
 
     city *ct = (city*) Ct;
     return ct->healthCenters;
+}
+
+PQuadTree getCovidAddresses(City Ct){
+  if(Ct == NULL)
+        return NULL;
+
+  city *ct = (city*) Ct;
+  return ct->covidAddresses;
 }
 
 HashTable getEstablishmentTypes(City Ct){
