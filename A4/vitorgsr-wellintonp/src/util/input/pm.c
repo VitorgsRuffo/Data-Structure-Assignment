@@ -1,13 +1,13 @@
-#include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/elements.h"
+#include "../../include/headers.h"
+#include "../../include/util.h"
+#include "../../include/elements.h"
 
 //numero maximo de partes que um comando vindo de um arquivo ec pode ter
 #define maxNumberOfEcCommandParts 8
 
 void readPeople(char* command, char** commandParts, City Ct);
 void readPeopleAddress(char* command, char** commandParts, City Ct);
-void freeReadEcResources(char* command, char** commandParts);
+void freeReadPmResources(char* command, char** commandParts);
 
 void readPm(File pm, City Ct){
                                              
@@ -34,23 +34,26 @@ void readPm(File pm, City Ct){
             readPeopleAddress(command, commandParts, Ct);
     }
 
-    freeReadEcResources(command, commandParts);
+    freeReadPmResources(command, commandParts);
 }
 
 void readPeople(char* command, char** commandParts, City Ct){
 
     sscanf(&command[2], "%s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2],commandParts[3],commandParts[4]);
-    Person person = createPerson(commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4]);
+    char gender = commandParts[3][0];
+    Person person = createPerson(commandParts[0], commandParts[1], commandParts[2], gender, commandParts[4]);
     
     //Inserindo na HashTable
-    DataStructure peopleTable = getPeopleTable(Ct);
+    DataStructure peopleTable = getPeople(Ct);
     insertHashTable(peopleTable, person);
 }
 
 void readPeopleAddress(char* command, char** commandParts, City Ct){
     
     sscanf(&command[2], "%s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4]);
-    House house = createHouse(commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], Ct);
+    char face = commandParts[2][0];
+    int number = atoi(commandParts[3]);
+    House house = createHouse(commandParts[0], commandParts[1], face, number, commandParts[4], Ct);
 
     // Inserçao na HashTable (verificar se há necessidade)
     //DataStructure housesTable = getHousesTable(Ct); 
@@ -61,7 +64,7 @@ void readPeopleAddress(char* command, char** commandParts, City Ct){
     insertPQuadTree(housesTree, getHouseCoordinates, house);
 }
 
-void freeReadEcResources(char* command, char** commandParts){
+void freeReadPmResources(char* command, char** commandParts){
     free(command);   
 
     for(int i = 0; i<8; i++)

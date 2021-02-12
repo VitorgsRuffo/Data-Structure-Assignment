@@ -1,7 +1,7 @@
 #ifndef EC_H
 #define EC_H
 
-//#include "../../elements/urban-elements/city.h"
+#include "../../elements/urban-elements/city.h"
 
 /*  
 * Pré-Condição: requer um arquivo de entrada ec e uma variavel do tipo cidade.

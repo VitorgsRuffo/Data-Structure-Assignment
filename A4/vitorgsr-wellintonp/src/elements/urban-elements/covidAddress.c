@@ -2,7 +2,7 @@
 #include "covidAddress.h"
 
 typedef struct {
-    int id;
+    char* id;
     Address address;
     int casesNumber;
 }covidaddress;
@@ -11,13 +11,17 @@ CovidAddress createCovidAddress(int id, char* cep, char face, int number, int ca
     covidaddress* ca = (covidaddress*) malloc(sizeof(covidaddress));
     if(ca == NULL) return NULL;
 
-    ca->id = id;
-    ca->address = createAdress(cep, face, number, "none", Ct);
+    char idString[5];
+    sprintf(idString, "%d", id);
+
+    ca->id = (char*) malloc(6 * sizeof(char));
+    strcpy(ca->id, idString);
+    ca->address = createAddress(cep, face, number, "none", Ct);
     ca->casesNumber = casesNumber;
     return ca;
 }
 
-int getCovidAddressId(CovidAddress Ca){
+char* getCovidAddressId(CovidAddress Ca){
     if(Ca == NULL) return NULL;
 
     covidaddress* ca = (covidaddress*) Ca;
@@ -32,7 +36,7 @@ Address getCovidAddress(CovidAddress Ca){
 }
 
 int getCovidAddressCasesNumber(CovidAddress Ca){
-    if(Ca == NULL) return NULL;
+    if(Ca == NULL) return -1;
 
     covidaddress* ca = (covidaddress*) Ca;
     return ca->casesNumber;
@@ -45,10 +49,11 @@ Point getCovidAddressCoordinates(CovidAddress Ca){
     return getAddressCoordinates(ca->address);
 }
 
-void freeCovidAdress(CovidAddress Ca){
-    if(Ca == NULL) return NULL;
+void freeCovidAddress(CovidAddress Ca){
+    if(Ca == NULL) return;
     
     covidaddress* ca = (covidaddress*) Ca;
-    freeAdress(ca->address);
+    free(ca->id);
+    freeAddress(ca->address);
     free(ca);
 }

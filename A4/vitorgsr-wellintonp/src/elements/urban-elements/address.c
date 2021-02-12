@@ -1,9 +1,6 @@
 #include "../../include/headers.h"
-#include "address.h"
-#include "../point.h"
-#include "../figures/rectangle.h"
+#include "../../include/elements.h"
 #include "../../include/dataStructure.h"
-#include "city.h"
 
 typedef struct {
     char cep[30]; 
@@ -18,10 +15,10 @@ typedef struct {
 #define ADDRESS_DISTANCE_FROM_BLOCK_BORDER 7.5
 
 int setAddressBlock(address* add, City Ct);
-void setAdressCoordinates(address* add);
+void setAddressCoordinates(address* add);
 
-Address createAdress(char* cep, char face, int number, char* compl, City Ct){
-    if(cep == NULL || face == NULL || number == NULL || Ct == NULL) 
+Address createAddress(char* cep, char face, int number, char* compl, City Ct){
+    if(cep == NULL || compl == NULL || Ct == NULL) 
         return NULL;
 
     address *add = (address*) malloc(sizeof(address));
@@ -96,12 +93,12 @@ void readBlockAttributes(Info blockInfo, Rectangle* block){
     return;
 }
 
-void setAdressCoordinatesOnNorthFace(address* add, double bx, double by, double bw, double bh);
-void setAdressCoordinatesOnSouthFace(address* add, double bx, double by, double bw, double bh);
-void setAdressCoordinatesOnEastFace(address* add, double bx, double by, double bw, double bh);
-void setAdressCoordinatesOnWestFace(address* add, double bx, double by, double bw, double bh);
+void setAddressCoordinatesOnNorthFace(address* add, double bx, double by, double bw, double bh);
+void setAddressCoordinatesOnSouthFace(address* add, double bx, double by, double bw, double bh);
+void setAddressCoordinatesOnEastFace(address* add, double bx, double by, double bw, double bh);
+void setAddressCoordinatesOnWestFace(address* add, double bx, double by, double bw, double bh);
 
-void setAdressCoordinates(address* add){
+void setAddressCoordinates(address* add){
 
     double bx = atof(getRectangleX(add->block));
     double by = atof(getRectangleY(add->block));
@@ -111,22 +108,22 @@ void setAdressCoordinates(address* add){
     switch (add->face){
         case 'N':
         case 'n':
-            setAdressCoordinatesOnNorthFace(add, bx, by, bw, bh);
+            setAddressCoordinatesOnNorthFace(add, bx, by, bw, bh);
             break;
             
         case 'S':
         case 's':
-            setAdressCoordinatesOnSouthFace(add, bx, by, bw, bh);
+            setAddressCoordinatesOnSouthFace(add, bx, by, bw, bh);
             break;
 
         case 'L':
         case 'l':
-            setAdressCoordinatesOnEastFace(add, bx, by, bw, bh);
+            setAddressCoordinatesOnEastFace(add, bx, by, bw, bh);
             break;
         
         case 'O':
         case 'o':
-            setAdressCoordinatesOnWestFace(add, bx, by, bw, bh);
+            setAddressCoordinatesOnWestFace(add, bx, by, bw, bh);
             break;
     }
 
@@ -134,28 +131,28 @@ void setAdressCoordinates(address* add){
 }
 
 // Face Norte
-void setAdressCoordinatesOnNorthFace(address* add, double bx, double by, double bw, double bh){
+void setAddressCoordinatesOnNorthFace(address* add, double bx, double by, double bw, double bh){
     setPointX(add->coordinates, bx + add->number);
     setPointY(add->coordinates, (by + bh) - ADDRESS_DISTANCE_FROM_BLOCK_BORDER);
 }
 // Face Sul
-void setAdressCoordinatesOnSouthFace(address* add, double bx, double by, double bw, double bh){
+void setAddressCoordinatesOnSouthFace(address* add, double bx, double by, double bw, double bh){
     setPointX(add->coordinates, (bx + add->number));
     setPointY(add->coordinates, (by + ADDRESS_DISTANCE_FROM_BLOCK_BORDER));
 }
 // Face Leste
-void setAdressCoordinatesOnEastFace(address* add, double bx, double by, double bw, double bh){
+void setAddressCoordinatesOnEastFace(address* add, double bx, double by, double bw, double bh){
     setPointX(add->coordinates, (bx + ADDRESS_DISTANCE_FROM_BLOCK_BORDER));
     setPointY(add->coordinates, (by + add->number));  
 }
 // Face Oeste
-void setAdressCoordinatesOnWestFace(address* add, double bx, double by, double bw, double bh){
+void setAddressCoordinatesOnWestFace(address* add, double bx, double by, double bw, double bh){
     setPointX(add->coordinates, (bx + bw - ADDRESS_DISTANCE_FROM_BLOCK_BORDER));
     setPointY(add->coordinates, (by + add->number));
 }
 
 
-void freeAdress(Address Add){
+void freeAddress(Address Add){
     if(Add == NULL) return;
     address *add = (address*) Add;
 

@@ -24,7 +24,7 @@ House createHouse(char* cpf, char* cep, char face, int number, char* compl, City
 
     h->cpf = (char*) malloc((strlen(cpf) + 1) * sizeof(char));
     strcpy(h->cpf, cpf);
-    h->address = createAdress(cep, face, number, compl, Ct);
+    h->address = createAddress(cep, face, number, compl, Ct);
     h->coordinates = createPoint(0,0);
     setHouseCoordinates(h);
     h->w = houseWidth;
@@ -91,7 +91,7 @@ void freeHouse(House H){
 
     house *h = (house*) H;
     free(h->cpf);
-    freeAdress(h->address);
+    freeAddress(h->address);
     free(h->coordinates);
     free(h);
 }

@@ -209,7 +209,7 @@ void buildBlockSvgTag(char* blockTag, Block Blk){
     float yCep =  atof(y)+(atof(height)/2);
     char* shadowColor;
 
-    if((shadowColor = getShadowColor(Blk)) == NULL)
+    if((shadowColor = getBlockShadowColor(Blk)) == NULL)
         strcpy(shadowColor, "rgba(0,0,0,0)");
 
     sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n", width, height, (x + 8), (y + 8), rx , shadowColor, sw, shadowColor); 
@@ -289,15 +289,16 @@ void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est){
 
 void buildHouseSvgTag(char* houseTag, House H){
 
-    double x = getHouseX(H);
-    double y = getHouseY(H);
+    Point houseCoordinates = getHouseCoordinates(H);
+    double x = getPointX(houseCoordinates);
+    double y = getPointY(houseCoordinates);
     double w = getHouseW(H);
     double h = getHouseH(H);
-    double centerOfMassX = getHouseCenterOfMassX(H);
-    double centerOfMassY = getHouseCenterOfMassY(H);
-    int casesNumber = getHouseCasesNumber(H);
+    Point centerOfMass = getHouseCenterOfMass(H);
+    double centerOfMassX = getPointX(centerOfMass);
+    double centerOfMassY = getPointY(centerOfMass);
 
-    sprintf(houseTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"darkorange\" stroke-width=\"1\" fill=\"orange\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> %d </text>\n", w, h, x, y, centerOfMassX, centerOfMassY, casesNumber);
+    sprintf(houseTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"gold\" stroke-width=\"1\" fill=\"olivedrab\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> CA </text>\n", w, h, x, y, centerOfMassX, centerOfMassY);
 }
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList){

@@ -50,7 +50,7 @@ void setEstablishmentCoordinates(establishment* est){
 
 char* getEstablishmentName(Establishment Est){
     if(Est == NULL)
-        return;
+        return NULL;
  
     establishment* est = (establishment*) Est;
     return est->name;
@@ -59,7 +59,7 @@ char* getEstablishmentName(Establishment Est){
 
 char* getEstablishmentCnpj(Establishment Est){
     if(Est == NULL)
-        return;
+        return NULL;
  
     establishment* est = (establishment*) Est;
     return est->cnpj;
@@ -68,7 +68,7 @@ char* getEstablishmentCnpj(Establishment Est){
 
 char* getEstablishmentCpf(Establishment Est){
     if(Est == NULL)
-        return;
+        return NULL;
  
     establishment* est = (establishment*) Est;
     return est->cpf;
@@ -77,7 +77,7 @@ char* getEstablishmentCpf(Establishment Est){
 
 char* getEstablishmentCode(Establishment Est){
     if(Est == NULL)
-        return;
+        return NULL;
  
     establishment* est = (establishment*) Est;
     return est->code;
@@ -85,7 +85,7 @@ char* getEstablishmentCode(Establishment Est){
 
 Address getEstablishmentAddress(Establishment Est){
     if(Est == NULL)
-        return;
+        return NULL;
  
     establishment* est = (establishment*) Est;
     return est->address;
@@ -93,7 +93,7 @@ Address getEstablishmentAddress(Establishment Est){
 
 Point getEstablishmentCoordinates(Establishment Est){
     if(Est == NULL)
-        return;
+        return NULL;
  
     establishment* est = (establishment*) Est;
     return est->coordinates;
@@ -101,7 +101,7 @@ Point getEstablishmentCoordinates(Establishment Est){
 
 double getEstablishmentWidth(Establishment Est){
     if(Est == NULL)
-        return;
+        return -1;
  
     establishment* est = (establishment*) Est;
     return est->w;
@@ -109,7 +109,7 @@ double getEstablishmentWidth(Establishment Est){
 
 double getEstablishmentHeight(Establishment Est){
     if(Est == NULL)
-        return;
+        return -1;
  
     establishment* est = (establishment*) Est;
     return est->h;
@@ -132,7 +132,7 @@ void freeEstablishment(Establishment Et){
     free(est->cnpj);
     free(est->cpf);
     free(est->code);
-    freeAdress(est->address);
+    freeAddress(est->address);
     free(est->coordinates);
     free(est);
 }

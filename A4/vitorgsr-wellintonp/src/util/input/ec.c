@@ -1,6 +1,6 @@
-#include "../include/headers.h"
-#include "../include/util.h"
-#include "../include/elements.h"
+#include "../../include/headers.h"
+#include "../../include/util.h"
+#include "../../include/elements.h"
 
 
 //numero maximo de partes que um comando vindo de um arquivo ec pode ter
@@ -50,10 +50,12 @@ void readEstablishmentType(char* command, char** commandParts, City Ct){
 void readEstablishment(char* command, char** commandParts, City Ct){
     
     sscanf(&command[2], "%s %s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6]);
-    Establishment est = createEstablishment(commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6], Ct);
+    char face = commandParts[4][0]; // Conferir se isto da certo ****************
+    int number = atoi(commandParts[5]);
+    Establishment est = createEstablishment(commandParts[0], commandParts[1], commandParts[2], commandParts[3], face, number, commandParts[6], Ct);
     
     //Inserçao na QuadTree
-    DataStructure establishmentTree = getEstablishmentTree(Ct);
+    DataStructure establishmentTree = getEstablishmentsTree(Ct);
     insertPQuadTree(establishmentTree, getEstablishmentCoordinates(est), est);
 
     // Inserçao na HashTable (verificar se há necessidade)

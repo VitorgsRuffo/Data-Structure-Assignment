@@ -31,7 +31,7 @@ Person createPerson(char* cpf, char* name, char* lastName, char gender, char* bi
 
 char* getPersonCpf(Person Pe){
     if(Pe == NULL)
-        return;
+        return NULL;
  
     person* pe = (person*) Pe;
     return pe->cpf;
@@ -39,7 +39,7 @@ char* getPersonCpf(Person Pe){
 
 char* getPersonName(Person Pe){
     if(Pe == NULL)
-        return;
+        return NULL;
     
     person* pe = (person*) Pe;
     return pe->name;
@@ -47,7 +47,7 @@ char* getPersonName(Person Pe){
 
 char* getPersonLastName(Person Pe){
     if(Pe == NULL)
-        return;
+        return NULL;
     
     person* pe = (person*) Pe;
     return pe->lastName;
@@ -55,7 +55,7 @@ char* getPersonLastName(Person Pe){
 
 char getPersonGender(Person Pe){
     if(Pe == NULL)
-        return;
+        return 'Z'; // Nesse caso é obrigatorio o retorno de um caracter, portanto retornará Z quando house algum erro
     
     person* pe = (person*) Pe;
     return pe->gender;
@@ -63,10 +63,10 @@ char getPersonGender(Person Pe){
 
 char* getPersonBirthdate(Person Pe){
     if(Pe == NULL)
-        return;
+        return NULL;
     
     person* pe = (person*) Pe;
-        return pe->birthdate;
+    return pe->birthdate;
 }
 
 void freePerson(Person Pe){

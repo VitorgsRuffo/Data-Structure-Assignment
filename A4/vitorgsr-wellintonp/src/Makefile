@@ -2,7 +2,7 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o circle.o rectangle.o baseRadio.o block.o city.o customization.o healthCenter.o house.o hydrant.o region.o semaphore.o point.o text.o hashtable.o list.o pquadtree.o queue.o stack.o geo.o openInput.o parameters.o blockBorder.o calculateArea.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o qry.o urbanDeletion.o sort.o svg.o tools.o
+obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o point.o text.o hashtable.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o blockBorder.o calculateArea.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o qry.o urbanDeletion.o sort.o svg.o tools.o
 
 
 #paths:
@@ -32,32 +32,44 @@ rectangle.o: $(figures)/rectangle.c
 
 
 #urban elements:
-block.o: $(urban_elements)/block.c
-	$(CC) $(flags) -c $(urban_elements)/block.c
-
-hydrant.o: $(urban_elements)/hydrant.c
-	$(CC) $(flags) -c $(urban_elements)/hydrant.c
-
-semaphore.o: $(urban_elements)/semaphore.c
-	$(CC) $(flags) -c $(urban_elements)/semaphore.c
+address.o: $(urban_elements)/address.c
+	$(CC) $(flags) -c $(urban_elements)/address.c
 
 baseRadio.o: $(urban_elements)/baseRadio.c
 	$(CC) $(flags) -c $(urban_elements)/baseRadio.c
 
-healthCenter.o: $(urban_elements)/healthCenter.c
-	$(CC) $(flags) -c $(urban_elements)/healthCenter.c
-
-region.o: $(urban_elements)/region.c
-	$(CC) $(flags) -c $(urban_elements)/region.c
-
-house.o: $(urban_elements)/house.c
-	$(CC) $(flags) -c $(urban_elements)/house.c
+block.o: $(urban_elements)/block.c
+	$(CC) $(flags) -c $(urban_elements)/block.c
 
 city.o: $(urban_elements)/city.c 
 	$(CC) $(flags) -c $(urban_elements)/city.c
 
+covidAddress.o: $(urban_elements)/covidAddress.c
+	$(CC) $(flags) -c $(urban_elements)/covidAddress.c
+
 customization.o: $(urban_elements)/customization.c
 	$(CC) $(flags) -c $(urban_elements)/customization.c
+
+establishment.o: $(urban_elements)/establishment.c
+	$(CC) $(flags) -c $(urban_elements)/establishment.c
+
+establishmentType.o: $(urban_elements)/establishmentType.c
+	$(CC) $(flags) -c $(urban_elements)/establishmentType.c
+
+healthCenter.o: $(urban_elements)/healthCenter.c
+	$(CC) $(flags) -c $(urban_elements)/healthCenter.c
+
+house.o: $(urban_elements)/house.c
+	$(CC) $(flags) -c $(urban_elements)/house.c
+
+hydrant.o: $(urban_elements)/hydrant.c
+	$(CC) $(flags) -c $(urban_elements)/hydrant.c
+	
+person.o: $(urban_elements)/person.c
+	$(CC) $(flags) -c $(urban_elements)/person.c
+
+semaphore.o: $(urban_elements)/semaphore.c
+	$(CC) $(flags) -c $(urban_elements)/semaphore.c
 
 
 text.o: $(elements)/text.c 
@@ -65,6 +77,7 @@ text.o: $(elements)/text.c
 
 point.o: $(elements)/point.c 
 	$(CC) $(flags) -c $(elements)/point.c
+
 
 
 #data structures:
@@ -85,14 +98,20 @@ hashtable.o: $(data_structure)/hashtable.c
 
 
 #input:
-parameters.o: $(input)/parameters.c
-	$(CC) $(flags) -c $(input)/parameters.c
+ec.o: $(input)/ec.c
+	$(CC) $(flags) -c $(input)/ec.c
+
+geo.o: $(input)/geo.c
+	$(CC) $(flags) -c $(input)/geo.c
 
 openInput.o: $(input)/openInput.c
 	$(CC) $(flags) -c $(input)/openInput.c
 
-geo.o: $(input)/geo.c
-	$(CC) $(flags) -c $(input)/geo.c
+parameters.o: $(input)/parameters.c
+	$(CC) $(flags) -c $(input)/parameters.c
+
+pm.o: $(input)/pm.c
+	$(CC) $(flags) -c $(input)/pm.c
 
 
 #query:

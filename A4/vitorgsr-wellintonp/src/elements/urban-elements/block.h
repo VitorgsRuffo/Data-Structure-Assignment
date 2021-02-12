@@ -114,7 +114,7 @@ char* getBlockShadowColor(Block Blk);
 * Pré-Condição: requer o endereco de uma instancia de quadra.
 * Pós-Condição: altera o valor do atributo "sombra" de acordo com a densidade demografica da quadra.
 */
-char* setBlockShadowColor(Block Blk);
+void setBlockShadowColor(Block Blk);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de quadra.

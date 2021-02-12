@@ -3,6 +3,7 @@
 #include "../../util/query/qry.h"
 #include "../../include/dataStructure.h"
 
+
 typedef struct city {
     PQuadTree circles;
     PQuadTree rectangles;

@@ -1,7 +1,7 @@
 #ifndef PM_H
 #define PM_H
 
-//#include "../../elements/urban-elements/city.h"
+#include "../../elements/urban-elements/city.h"
 
 /*  
 * Pré-Condição: requer um arquivo de entrada pm e uma variavel do tipo cidade.

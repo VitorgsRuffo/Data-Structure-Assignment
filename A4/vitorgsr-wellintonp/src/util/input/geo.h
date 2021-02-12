@@ -1,7 +1,7 @@
 #ifndef GEO_H
 #define GEO_H
 
-//#include "../../elements/urban-elements/city.h"
+#include "../../elements/urban-elements/city.h"
 
 /*  
 * Pré-Condição: requer um arquivo de entrada geo e uma variavel do tipo cidade.

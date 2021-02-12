@@ -28,6 +28,9 @@
         "address.h": "c",
         "city.h": "c",
         "establishmenttype.h": "c",
-        "person.h": "c"
+        "person.h": "c",
+        "new": "c",
+        "streambuf": "c",
+        "typeinfo": "c"
     }
 }

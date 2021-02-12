@@ -1,5 +1,5 @@
-#ifndef ADRESS_H
-#define ADRESS_H
+#ifndef ADDRESS_H
+#define ADDRESS_H
 
 #include "city.h"
 
@@ -12,7 +12,7 @@ typedef void* Address;
     Pré-Condição: requer os dados (strings) que compoem um endereço.
     Pós-Condição: retorna uma nova instancia de "address" na qual possui as informacoes passadas.
 */
-Address createAdress(char* cep, char face, int number, char* compl, City Ct);
+Address createAddress(char* cep, char face, int number, char* compl, City Ct);
 
 /*  
     Pré-Condição: requer uma referencia de uma instancia de endereço.
@@ -36,6 +36,6 @@ double getAddressY(Address Add);
     Pré-Condição: requer uma referencia de uma instancia de endereco.
     Pós-Condição: libera a memoria usada pela instancia de endereco que foi passada.
 */
-void freeAdress(Address Add);
+void freeAddress(Address Add);
 
 #endif

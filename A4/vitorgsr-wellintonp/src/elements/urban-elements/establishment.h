@@ -2,8 +2,8 @@
 #define ESTABLISHMENT_H
 
 #include "city.h"
-#include "point.h"
 #include "address.h"
+#include "../point.h"
 
 /*
 *   Tipo abstrato de dado que representa o elemento urbano estabelecimento comercial.

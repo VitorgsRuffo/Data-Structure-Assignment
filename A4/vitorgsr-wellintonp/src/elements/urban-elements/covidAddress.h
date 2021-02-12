@@ -18,7 +18,7 @@ CovidAddress createCovidAddress(int id, char* cep, char face, int number, int ca
 * Pré-Condição: requer uma instancia de um endereço que possui casos de covid.
 * Pós-Condição: retorna o identificador do endereço.
 */
-int getCovidAddressId(CovidAddress Ca);
+char* getCovidAddressId(CovidAddress Ca);
 
 /*  
 * Pré-Condição: requer uma instancia de um endereço que possui casos de covid.
@@ -42,6 +42,6 @@ Point getCovidAddressCoordinates(CovidAddress Ca);
 * Pré-Condição: requer uma instancia de um endereço que possui casos de covid.
 * Pós-Condição: desaloca a memoria usada pelo tad.
 */
-void freeCovidAdress(CovidAddress Ca);
+void freeCovidAddress(CovidAddress Ca);
 
 #endif

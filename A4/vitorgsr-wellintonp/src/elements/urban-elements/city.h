@@ -90,7 +90,7 @@ PQuadTree getHousesTree(City Ct);
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
 * Pós-Condição: retorna uma referencia para a estrutura de pessoas presente no TAD cidade.
 */
-HashTable getPeople(City Ct)
+HashTable getPeople(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.

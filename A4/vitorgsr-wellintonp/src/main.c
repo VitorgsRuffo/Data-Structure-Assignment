@@ -4,25 +4,17 @@
 
 
 /*to do list:
+    - Arrumar makefile
+    - implementar quicksort
 
-    geo:
+    - implementar convexHull
     
-    - refatorar arquivos que usam o tad House (ex: medicalTreatment.c)
-    - arquivos ec.c e pm.c
-    - printar novos tads no svg se necesario.
-
-
-
-    query:
+    Query:
     - planejamento para o query.
     
-
-
     extras:
     - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
     
-    - implementar quicksort
-    - implementar convexHull
 */
 
 
@@ -46,7 +38,7 @@ int main(int argc, char* argv[]){
     if(!isEcNull(parameters)){
         //Abrindo o arquivo de entrada (.ec)
         //File ec = openInputFile(parameters, getEcName);
-
+        printf("Ec nao e null");
 
         //Lendo arquivo ec:
     }
@@ -54,7 +46,7 @@ int main(int argc, char* argv[]){
     if(!isPmNull(parameters)){
         //Abrindo o arquivo de entrada (.pm)
         //File ec = openInputFile(parameters, getPmName);
-
+        printf("pm nao e null");
         //Lendo arquivo pm:
     }
 
