@@ -91,7 +91,6 @@ Address getEstablishmentAddress(Establishment Est){
     return est->address;
 }
 
-
 Point getEstablishmentCoordinates(Establishment Est){
     if(Est == NULL)
         return;
@@ -99,7 +98,6 @@ Point getEstablishmentCoordinates(Establishment Est){
     establishment* est = (establishment*) Est;
     return est->coordinates;
 }
-
 
 double getEstablishmentWidth(Establishment Est){
     if(Est == NULL)
@@ -109,7 +107,6 @@ double getEstablishmentWidth(Establishment Est){
     return est->w;
 }
 
-
 double getEstablishmentHeight(Establishment Est){
     if(Est == NULL)
         return;
@@ -118,6 +115,12 @@ double getEstablishmentHeight(Establishment Est){
     return est->h;
 }
 
+Point getEstablishmentCenterOfMass(Establishment Est){
+    if(Est == NULL)
+        return NULL;
+    establishment* est = (establishment*) Est;
+    return getAddressCoordinates(est->address);
+}
 
 void freeEstablishment(Establishment Et){
     if(Et == NULL)

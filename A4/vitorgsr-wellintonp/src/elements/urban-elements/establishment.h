@@ -34,7 +34,6 @@ char* getEstablishmentCnpj(Establishment Est);
 */
 char* getEstablishmentCpf(Establishment Est);
 
-
 /*  
 * Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
 * Pós-Condição: retorna o codigo referente ao tipo do estabelecimento comercial passado.
@@ -53,7 +52,6 @@ Address getEstablishmentAddress(Establishment Est);
 */
 Point getEstablishmentCoordinates(Establishment Est);
 
-
 /*  
 * Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
 * Pós-Condição: retorna a largura do estabelecimento comercial passado.
@@ -66,6 +64,11 @@ double getEstablishmentWidth(Establishment Est);
 */
 double getEstablishmentHeight(Establishment Est);
 
+/*  
+* Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
+* Pós-Condição: retorna um Point contendo x e y do centro de massa do estabelecimento comercial passado.
+*/
+Point getEstablishmentCenterOfMass(Establishment Est);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.

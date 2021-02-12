@@ -47,7 +47,6 @@ Address createAdress(char* cep, char face, int number, char* compl, City Ct){
     return add;
 }
 
-
 Point getAddressCoordinates(Address Add){
     if(Add == NULL) return NULL;
     address *add = (address*) Add;

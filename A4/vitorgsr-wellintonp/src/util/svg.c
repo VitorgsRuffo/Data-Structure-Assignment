@@ -254,13 +254,12 @@ void buildHealthCenterSvgTag(char* healthCenterTag, HealthCenter HealthC){
 void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est){
 
     Point estCoordinates = getEstablishmentCoordinates(est);
-    Address estAddress = getEstablishmentAddress(est);
     double x = getPointX(estCoordinates);
     double y = getPointY(estCoordinates);
     double w = getEstablishmentWidth(est);
     double h = getEstablishmentHeight(est);
-    double centerOfMassX = getAddressX(estAddress);
-    double centerOfMassY = getAddressY(estAddress);
+    double centerOfMassX = getPointX(getAddressCoordinates);
+    double centerOfMassY = getPointY(getAddressCoordinates);
 
     sprintf(EstablishmentTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"black\" stroke-width=\"1\" fill=\"chartreuse\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"black\" text-anchor=\"middle\" dy=\".3em\"> EC </text>\n", w, h, x, y, centerOfMassX, centerOfMassY);
 }
