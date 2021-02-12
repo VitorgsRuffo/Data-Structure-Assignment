@@ -8,6 +8,7 @@
 #define maxNumberOfEcCommandParts 8
 
 void readEstablishmentType(char* command, char** commandParts, City Ct);
+void readEstablishment(char* command, char** commandParts, City Ct);
 void freeReadEcResources(char* command, char** commandParts);
 
 void readEc(File ec, City Ct){
@@ -17,7 +18,6 @@ void readEc(File ec, City Ct){
     char commandType[10];
     char** commandParts = createCommandParts(maxNumberOfEcCommandParts);
     
-
     while(!feof(ec)){
         if(fgets(command, commandMaxLength, ec) == NULL) // se tertarmos ler alem da ultima linha do arquivo fgets retornara NULL e sairemos do loop de leitura.
             break;
@@ -27,7 +27,6 @@ void readEc(File ec, City Ct){
         if(command[commandLength-1] == '\n')  //remover \n do final de cada comando.
             command[commandLength-1] = '\0';
         
-
         sscanf(command, "%s ", commandType);
 
         if(!strcmp(commandType, "t")) //lidando com tipos de estabelecimentos comerciais
@@ -35,12 +34,10 @@ void readEc(File ec, City Ct){
 
         else if(!strcmp(commandType, "e"))//lidando com estabelecimentos comerciais.
             readEstablishment(command, commandParts, Ct);
-
     }
 
     freeReadEcResources(command, commandParts);
 }
-
 
 void readEstablishmentType(char* command, char** commandParts, City Ct){
 
@@ -50,14 +47,19 @@ void readEstablishmentType(char* command, char** commandParts, City Ct){
     insertHashTable(establishmentTypes, et);
 }
 
-
 void readEstablishment(char* command, char** commandParts, City Ct){
+    
     sscanf(&command[2], "%s %s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6]);
-    // new estabelecimento
-    // Add na estrutura
+    Establishment est = createEstablishment(commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6], Ct);
+    
+    //Inserçao na QuadTree
+    DataStructure establishmentTree = getEstablishmentTree(Ct);
+    insertPQuadTree(establishmentTree, getEstablishmentCoordinates(est), est);
+
+    // Inserçao na HashTable (verificar se há necessidade)
+    //DataStructure establishmentHashTable = getEstablishmentsTable(Ct); 
+    //insertHashTable(establishmentHashTable, est);
 }
-
-
 
 void freeReadEcResources(char* command, char** commandParts){
     free(command);   

@@ -69,6 +69,15 @@ PQuadTree getHealthCenters(City Ct);
 */
 PQuadTree getCovidAddresses(City Ct);
 
+/* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de tipos de estabelecimentos comerciais presente no TAD cidade.
+*/
+HashTable getEstablishmentTypes(City Ct);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de estabelecimentos comerciais presente no TAD cidade.
+*/
 PQuadTree getEstablishmentsTree(City Ct);
 
 /*
@@ -77,6 +86,22 @@ PQuadTree getEstablishmentsTree(City Ct);
 */
 PQuadTree getHousesTree(City Ct);
 
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de pessoas presente no TAD cidade.
+*/
+HashTable getPeople(City Ct)
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de casas presente no TAD cidade.
+*/
+PQuadTree getHousesTree(City Ct);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de casas presente no TAD cidade.
+*/
 HashTable getHousesTable(City Ct);
 
 /*

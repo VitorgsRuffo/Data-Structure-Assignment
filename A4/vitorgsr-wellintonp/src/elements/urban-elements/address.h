@@ -15,13 +15,25 @@ typedef void* Address;
 Address createAdress(char* cep, char face, int number, char* compl, City Ct);
 
 /*  
-    Pré-Condição: requer o endereco de uma instancia de endereço.
+    Pré-Condição: requer uma referencia de uma instancia de endereço.
     Pós-Condição: retorna as coordenadas do endereço passado por parametro.
 */
 Point getAddressCoordinates(Address Add);
 
+/*  
+    Pré-Condição: requer uma referencia de uma instancia de endereço.
+    Pós-Condição: retorna o valor de X referente a cordenada do endereço passado por parametro.
+*/
+double getAddressX(Address Add);
+
+/*  
+    Pré-Condição: requer uma referencia de uma instancia de endereço.
+    Pós-Condição: retorna o valor de Y referente a cordenada do endereço passado por parametro.
+*/
+double getAddressY(Address Add);
+
 /*
-    Pré-Condição: requer o endereco de uma instancia de endereco.
+    Pré-Condição: requer uma referencia de uma instancia de endereco.
     Pós-Condição: libera a memoria usada pela instancia de endereco que foi passada.
 */
 void freeAdress(Address Add);

@@ -48,7 +48,7 @@ int removeHashTableInfo(HashTable HashT, char* key, freeInfo freeFunction);
 
 
 /*
-    Pré condição: requer uma instancia de tabela hash e uma chave.
+    Pré condição: requer uma instancia de tabela hash e para função de print do tad.
     Pós condição: percorre a tabela printando seus elementos.
 */
 void printHashTable(HashTable HashT, void (*printInformation)(void*));
