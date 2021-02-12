@@ -4,7 +4,7 @@
 
 char* buildHouseTag(House house);
 
-void executeCovidCasesReport(char* command, City Ct){
+void executeCovidCasesReport(int id, char* command, City Ct){
     if(command == NULL || Ct == NULL)
         return;
 
@@ -12,10 +12,9 @@ void executeCovidCasesReport(char* command, City Ct){
     
     sscanf(&command[3], "%d %s %c %d", &casesNumber, cep, &face, &number);
     
-    House house = createHouse(cep, face, number, casesNumber); 
-    setHouseBlock(house, Ct);       
-    setHouseLocation(house);
+    
+    CovidAddress covidAddress = createCovidAddress(id, cep, face, number, casesNumber, Ct);
 
-    DataStructure houses = getHousesTree(Ct);
-    insertPQuadTree(houses, getHouseCoordinates(house), house);
+    DataStructure covidAddresses = getCovidAddresses(Ct);
+    insertPQuadTree(covidAddresses, getCovidAddressCoordinates(covidAddress), covidAddress);
 }

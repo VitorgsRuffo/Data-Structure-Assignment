@@ -38,7 +38,7 @@ City createCity(){
     ct->baseRadios = createPQuadTree(getBaseRadioId, getBaseRadioCoordinates);
     ct->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
     ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
-    ct->covidAdresses = createPQuadTree(getCovidAddressId, getCovidAddressCoordinates);
+    ct->covidAddresses = createPQuadTree(getCovidAddressId, getCovidAddressCoordinates);
     ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
     //ct->establishmentTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
     ct->establishmentsTree = createPQuadTree(getEstablishmentCnpj, getEstablishmentCoordinates);
