@@ -239,7 +239,7 @@ void readRegion(City Ct, char* command, int id, char** commandParts){
     ddVariables variables;
     variables.region = createRectangle("..", commandParts[3], commandParts[4], commandParts[1], commandParts[2], "..", "..", "..");
     variables.demographicDensity = atof(commandParts[5]); // a divisao por 1000000.00 converteria a densidade demografica de km^2 para m^2.
-    variables.block = createRectangle("..", "..", "..", "..", "..", "..", "..", "..");
+    variables.block = createRectangle(".........", ".........", ".........", ".........", ".........", ".........", ".........", ".........");
 
     DataStructure blocks = getBlocks(Ct);
 

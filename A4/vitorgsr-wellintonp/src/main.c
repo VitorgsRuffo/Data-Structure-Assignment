@@ -19,7 +19,6 @@
 
 
     extras:
-    - finalizar sombra das quadras.
     - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
     
     - implementar quicksort
