@@ -6,10 +6,7 @@
 /*to do list:
 
     geo:
-    - criar tad CovidRegion 
-    - refatorar covidIncidence.c
-
-
+    
     - refatorar arquivos que usam o tad House (ex: medicalTreatment.c)
     - arquivos ec.c e pm.c
     - printar novos tads no svg se necesario.

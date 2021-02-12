@@ -6,19 +6,17 @@
 
 
 typedef struct {
-    List housesInsideCircList;
+    List covidAddressesInCirc;
     Circle circumference;
-    Rectangle house;
     int thereIsHealthCenterInPolygon;
     int convexHullPointsAmount;
     Point* convexHullPoints; 
 }Variables;
 
-void determineHousesInsideCircumference(DataStructure houses, Variables* variables);
+void determineCovidAddressesInsideCircumference(DataStructure CovidAddresses, Variables* variables);
 char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, char* circumferenceRadius);
-Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsideCircListLength);
-char* pointToString(void* P);
-int calculateTotalCovidCasesInRegion(List housesInsideCircList);
+Point* getCovidAddressesInCircCoordinates(List covidAddressesInCirc, int covidAddressesInCircAmount);
+int calculateTotalCovidCasesInRegion(List covidAddressesInCirc);
 double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPointsAmount);
 char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion);
 char* buildIncidenceRegionTag(Point* points, int pointsAmount, char incidenceRegionCategory);
@@ -33,54 +31,59 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
 
     Variables variables;
     variables.circumference = createCircle("...", radius, x, y, "...", "...", "...");
-    variables.house = createRectangle("...", "...", "...", "...", "...", "...", "...", "...");
     
-    DataStructure houses = getHousesTree(Ct);
-    variables.housesInsideCircList = createList();
-    determineHousesInsideCircumference(houses, &variables);
+    DataStructure covidAddresses = getCovidAddresses(Ct);
+    variables.covidAddressesInCirc = createList();
+    determineCovidAddressesInsideCircumference(covidAddresses, &variables);
 
-    char* boundingCircumferenceTag = buildBoundingCircumferenceTag(x, y, radius);
+    char* boundingCircumferenceTag = 
+        buildBoundingCircumferenceTag(x, y, radius);
     List queryElementsList = getQueryElements(Ct);
     insert(queryElementsList, boundingCircumferenceTag);
 
-    if(length(variables.housesInsideCircList) <= 0){
-        fprintf(txt, "Nao existem casas dentro do circulo.");
+
+    int covidAddressesInCircAmount = 
+        length(variables.covidAddressesInCirc);
+
+    if(covidAddressesInCircAmount <= 0){
+        fprintf(txt, "Nao existem enderecos com casos de covid dentro do circulo.");
         freeCircle(variables.circumference);
-        freeList(variables.housesInsideCircList, NULL);
+        freeList(variables.covidAddressesInCirc, NULL);
         return;
     }
+
+    Point* covidAddressesInCircCoordinates = 
+        getCovidAddressesInCircCoordinates(variables.covidAddressesInCirc, 
+                                           covidAddressesInCircAmount);
     
-    int housesInsideCircListLength = length(variables.housesInsideCircList);
+    Stack head =
+        convexHull(covidAddressesInCircCoordinates, covidAddressesInCircAmount);
 
-    Point* points = getHousesInsideCircCenterOfMass(variables.housesInsideCircList, housesInsideCircListLength);
-    int pointsAmount = housesInsideCircListLength; 
-
-    Stack head = convexHull(points, pointsAmount);
     if(head == NULL){
-        fprintf(txt, "Erro: A quantidade de casas sao insuficientes para formar regiao de incidencia (quantidade de casas < 3).");
-        for(int i = 0; i<housesInsideCircListLength; i++)
-            free(*(points + i));
-        free(points);
+        fprintf(txt, "Erro: A quantidade de enderecos de covid sao insuficientes para formar regiao de incidencia (quantidade de enderecos < 3).");
+        free(covidAddressesInCircCoordinates);
         freeCircle(variables.circumference);
-        freeList(variables.housesInsideCircList, NULL); 
+        freeList(variables.covidAddressesInCirc, NULL); 
         return;    
     }
   
-    int convexHullPointsAmount = stackLength(&head);
-    Point* convexHullPoints = (Point*) stackToArray(&head); 
+    variables.convexHullPointsAmount = stackLength(&head);
+    variables.convexHullPoints = (Point*) stackToArray(&head); 
     
-    int totalCovidCasesInRegion = calculateTotalCovidCasesInRegion(variables.housesInsideCircList);
-    
-    double incidenceRegionArea = calculateIncidenceRegionArea(convexHullPoints, convexHullPointsAmount);
+    int totalCovidCasesInRegion = calculateTotalCovidCasesInRegion(variables.covidAddressesInCirc);
     
 
+    double incidenceRegionArea = calculateIncidenceRegionArea(variables.convexHullPoints, variables.convexHullPointsAmount);
     /*
-     CORRIGIR!!
+     CORRIGIR: como conseguir a densidade demografica dentro do poligono irregular (incidence region) ?
     Region region = getRegions(Ct);
     double regionDemographicDensity = (getRegionDemographicDensity(region)) / 1000000.00; //convertendo densidade demografica de km^2 para m^2.
     int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
     */
+
+
     int totalHabitantsInRegion = 1000;
+
 
     char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
     if(incidenceRegionCategory == 'E'){
@@ -88,54 +91,30 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
         suggestHealthCenterInRegionIfNeeded(healthCenters, &variables, queryElementsList, incidenceRegionArea);        
     }
     
-    char* incidenceRegionTag = buildIncidenceRegionTag(convexHullPoints, convexHullPointsAmount, incidenceRegionCategory);
+    char* incidenceRegionTag = buildIncidenceRegionTag(variables.convexHullPoints, variables.convexHullPointsAmount, incidenceRegionCategory);
     insert(queryElementsList, incidenceRegionTag);
 
-    writeCovidIncidenceReportOnTxt(txt, points, pointsAmount, totalCovidCasesInRegion, incidenceRegionArea, incidenceRegionCategory, totalHabitantsInRegion);
-    
-
-    for(int i = 0; i<housesInsideCircListLength; i++)
-            free(*(points + i));
-    free(points);
-
-    for(int i = 0; i<convexHullPointsAmount; i++)
-            free(*(convexHullPoints + i));
-    free(convexHullPoints);
-
+    writeCovidIncidenceReportOnTxt(txt, covidAddressesInCircCoordinates, covidAddressesInCircAmount, totalCovidCasesInRegion, incidenceRegionArea, incidenceRegionCategory, totalHabitantsInRegion);
+   
+    free(covidAddressesInCircCoordinates);
+    free(variables.convexHullPoints);
     freeCircle(variables.circumference);
-    freeList(variables.housesInsideCircList, NULL);  
+    freeList(variables.covidAddressesInCirc, NULL);  
 }
 
-void insertHouseInListIfItsInsideCircumference(Info houseInfo, ExtraInfo extraInfo);
+void insertCovidAddressInListIfItsInsideCircumference(Info covidAddress, ExtraInfo extraInfo);
 
-void determineHousesInsideCircumference(DataStructure houses, Variables* variables){
+void determineCovidAddressesInsideCircumference(DataStructure CovidAddresses, Variables* variables){
 
-    levelOrderTraversal(houses, insertHouseInListIfItsInsideCircumference, variables);
-    freeRectangle(variables->house);
+    levelOrderTraversal(CovidAddresses, insertCovidAddressInListIfItsInsideCircumference, variables);
 }
 
-void insertHouseInListIfItsInsideCircumference(Info houseInfo, ExtraInfo extraInfo){
+void insertCovidAddressInListIfItsInsideCircumference(Info covidAddress, ExtraInfo extraInfo){
     
     Variables* variables = (Variables*) extraInfo;
 
-    double aux;
-    char houseX[10], houseY[10], houseW[10], houseH[10];
-    aux = getHouseX(houseInfo);
-    sprintf(houseX, "%.2lf", aux);
-    aux = getHouseY(houseInfo);
-    sprintf(houseY, "%.2lf", aux);
-    aux = getHouseW(houseInfo);
-    sprintf(houseW, "%.2lf", aux);
-    aux = getHouseH(houseInfo);
-    sprintf(houseH, "%.2lf", aux);
-
-    setRectangleX(variables->house, houseX);
-    setRectangleY(variables->house, houseY);
-    setRectangleWidth(variables->house, houseW);
-    setRectangleHeight(variables->house, houseH);
-
-    if(isRectangleInsideCircle(variables->circumference, variables->house)) //isRectInsideCirc
-        insert(variables->housesInsideCircList, houseInfo);
+    if(isPointInsideCirc(variables->circumference, getCovidAddressCoordinates(covidAddress)))
+        insert(variables->covidAddressesInCirc, covidAddress);
 }
 
 char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, char* circumferenceRadius){
@@ -147,23 +126,23 @@ char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, 
     return boundingCircumferenceTag;
 }
 
-Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsideCircListLength){
+Point* getCovidAddressesInCircCoordinates(List covidAddressesInCirc, int covidAddressesInCircAmount){
 
-    Point* points = (Point*) malloc(sizeof(Point) * housesInsideCircListLength);
+    Point* points = (Point*) malloc(sizeof(Point) * covidAddressesInCircAmount);
 
-    Node NODE = getFirst(housesInsideCircList);
-    if(NODE == NULL) return NULL;
+    Node currentNode = getFirst(covidAddressesInCirc);
+    if(currentNode == NULL) return NULL;
     
-    Info house = NULL;
+    Info covidAddress = NULL;
 
     int i = 0;
-    while(NODE != NULL){
+    while(currentNode != NULL){
 
-        house = get(housesInsideCircList, NODE);
+        covidAddress = get(covidAddressesInCirc, currentNode);
 
-        *(points + i) = createPoint(getHouseCenterOfMassX(house), getHouseCenterOfMassY(house));
+        *(points + i) = getCovidAddressCoordinates(covidAddress);
         
-        NODE = getNext(housesInsideCircList, NODE);
+        currentNode = getNext(covidAddressesInCirc, currentNode);
         i++;   
     }
 
@@ -171,18 +150,17 @@ Point* getHousesInsideCircCenterOfMass(List housesInsideCircList, int housesInsi
 }
 
 
-
-int calculateTotalCovidCasesInRegion(List housesInsideCircList){
-    Node NODE = getFirst(housesInsideCircList);
-    if(NODE == NULL) return -1;
+int calculateTotalCovidCasesInRegion(List covidAddressesInCirc){
+    Node currentNode = getFirst(covidAddressesInCirc);
+    if(currentNode == NULL) return -1;
     
     int totalCases = 0;
-    Info house = NULL;
+    Info covidAddress = NULL;
 
-    while(NODE != NULL){
-        house = get(housesInsideCircList, NODE);
-        totalCases += getHouseCasesNumber(house);
-        NODE = getNext(housesInsideCircList, NODE);
+    while(currentNode != NULL){
+        covidAddress = get(covidAddressesInCirc, currentNode);
+        totalCases += getCovidAddressCasesNumber(covidAddress);
+        currentNode = getNext(covidAddressesInCirc, currentNode);
     }
 
     return totalCases;
@@ -218,6 +196,7 @@ char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabi
         return 'Z';
 }
 
+//calcular area de poligono irregular:
 double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPointsAmount){
 
     double area = 0, sum1 = 0, sum2 = 0;
@@ -421,7 +400,7 @@ char* buildHealthCenterSuggestionTag(Point polygonCentroid){
 
 void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, int totalHabitantsInRegion){
 
-    fprintf(txt, "Coordenadas dos pontos dentro do circulo:\n");
+    fprintf(txt, "Coordenadas dos enderecos de covid dentro do circulo:\n");
     for(int i = 0; i<pointsAmount; i++)
         fprintf(txt, "\t(%d) x: %.2f, y: %.2f\n", (i+1), getPointX(*(points + i)), getPointY(*(points + i)));
         

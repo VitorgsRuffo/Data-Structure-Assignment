@@ -28,6 +28,12 @@ Address getCovidAddress(CovidAddress Ca);
 
 /*  
 * Pré-Condição: requer uma instancia de um endereço que possui casos de covid.
+* Pós-Condição: retorna a quantidade de casos de covid presentes no endereco.
+*/
+int getCovidAddressCasesNumber(CovidAddress Ca);
+
+/*  
+* Pré-Condição: requer uma instancia de um endereço que possui casos de covid.
 * Pós-Condição: retorna o ponto que localiza o endereço.
 */
 Point getCovidAddressCoordinates(CovidAddress Ca);

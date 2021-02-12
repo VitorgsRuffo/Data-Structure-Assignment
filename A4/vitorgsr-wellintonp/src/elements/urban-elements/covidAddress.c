@@ -31,6 +31,13 @@ Address getCovidAddress(CovidAddress Ca){
     return ca->address;
 }
 
+int getCovidAddressCasesNumber(CovidAddress Ca){
+    if(Ca == NULL) return NULL;
+
+    covidaddress* ca = (covidaddress*) Ca;
+    return ca->casesNumber;
+}
+
 Point getCovidAddressCoordinates(CovidAddress Ca){
     if(Ca == NULL) return NULL;
 

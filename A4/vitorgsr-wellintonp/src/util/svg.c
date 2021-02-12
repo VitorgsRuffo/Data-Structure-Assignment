@@ -78,6 +78,8 @@ void buildSemaphoreSvgTag(char* semaphoreTag, Semaphore Semap);
 
 void buildHealthCenterSvgTag(char* HealthCenterTag, HealthCenter HealthC);
 
+void buildCovidAddressSvgTag(char* covidAddressTag, CovidAddress Ca);
+
 void buildHouseSvgTag(char* houseTag, House H);
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList);
@@ -111,10 +113,12 @@ int drawOnSvg(Svg svg, City Ct){
     DataStructure healthCenters = getHealthCenters(Ct);
     drawElementsOnSvg(svg, healthCenters, &buildHealthCenterSvgTag);
 
+    DataStructure covidAddresses = getCovidAddresses(Ct);
+    drawElementsOnSvg(svg, covidAddresses, &buildCovidAddressSvgTag);
+
     DataStructure houses = getHousesTree(Ct);
     drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
 
-    //estabelecimento comercial.
 
     List queryElementsList = getQueryElements(Ct);
     drawQueryElementsOnSvg(svg, queryElementsList);
@@ -252,6 +256,21 @@ void buildHealthCenterSvgTag(char* healthCenterTag, HealthCenter HealthC){
     sprintf(healthCenterTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"mediumblue\" stroke-width=\"1\" fill=\"royalblue\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> HC </text>\n", x, y, radius, x, y);
 }
 
+void buildCovidAddressSvgTag(char* covidAddressTag, CovidAddress Ca){
+
+    Address address = getCovidAddress(Ca);
+    Point covidAddressCoordinates = getAddressCoordinates(address);
+
+    double covidAddressX = getPointX(covidAddressCoordinates);
+    double covidAddressY = getPointY(covidAddressCoordinates);
+
+    double x = covidAddressX - 15.00;
+    double y = covidAddressY - 15.00;
+  
+    int casesNumber = getCovidAddressCasesNumber(Ca);
+
+    sprintf(covidAddressTag, "\t<rect width=\"15.00\" height=\"15.00\" x=\"%lf\" y=\"%lf\" stroke=\"darkorange\" stroke-width=\"1\" fill=\"orange\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> %d </text>\n", x, y, covidAddressX, covidAddressY, casesNumber);
+}
 
 void buildHouseSvgTag(char* houseTag, House H){
 
