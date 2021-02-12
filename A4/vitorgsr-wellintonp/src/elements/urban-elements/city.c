@@ -12,8 +12,8 @@ typedef struct city {
     PQuadTree baseRadios;
     PQuadTree semaphores;
     PQuadTree healthCenters;
-    
     PQuadTree covidRegionsblocks;
+    
 
     HashTable establishmentTypes;
     //HashTable establishmentsTable;

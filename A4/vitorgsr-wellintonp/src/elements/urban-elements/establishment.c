@@ -1,6 +1,5 @@
 #include "../../include/headers.h"
 #include "establishment.h"
-#include "address.h"
 
 #define establishmentWidth 50
 #define establishmentHeight 30
@@ -82,6 +81,14 @@ char* getEstablishmentCode(Establishment Est){
  
     establishment* est = (establishment*) Est;
     return est->code;
+}
+
+Address getEstablishmentAddress(Establishment Est){
+    if(Est == NULL)
+        return;
+ 
+    establishment* est = (establishment*) Est;
+    return est->address;
 }
 
 

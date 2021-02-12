@@ -78,6 +78,8 @@ void buildSemaphoreSvgTag(char* semaphoreTag, Semaphore Semap);
 
 void buildHealthCenterSvgTag(char* HealthCenterTag, HealthCenter HealthC);
 
+void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est);
+
 void buildHouseSvgTag(char* houseTag, House H);
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList);
@@ -110,11 +112,12 @@ int drawOnSvg(Svg svg, City Ct){
 
     DataStructure healthCenters = getHealthCenters(Ct);
     drawElementsOnSvg(svg, healthCenters, &buildHealthCenterSvgTag);
+    
+    DataStructure establishments = getEstablishmentsTree(Ct);
+    drawElementsOnSvg(svg, establishments, &buildEstablishmentSvgTag);
 
     DataStructure houses = getHousesTree(Ct);
     drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
-
-    //estabelecimento comercial.
 
     List queryElementsList = getQueryElements(Ct);
     drawQueryElementsOnSvg(svg, queryElementsList);
@@ -204,23 +207,8 @@ void buildBlockSvgTag(char* blockTag, Block Blk){
     if((shadowColor = getShadowColor(Blk)) == NULL)
         strcpy(shadowColor, "");
         
-
-
     sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%f\" y=\"%f\" fill=\"black\" stroke=\"white\" stroke-width=\"0.1\" dominant-baseline=\"middle\" text-anchor=\"middle\"> %s </text>\n", width, height, x, y, rx ,cstrk, sw, cfill, xCep, yCep, cep);
-
 }    
-
-
-void buildSemaphoreSvgTag(char* semaphoreTag, Semaphore Semap){
-    char* x = getSemaphoreX(Semap);
-    char* y = getSemaphoreY(Semap);
-    char* radius = getSemaphoreRadius(Semap);
-    char* sw = getSemaphoreSw(Semap);
-    char* cfill = getSemaphoreCfill(Semap);
-    char* cstrk = getSemaphoreCstrk(Semap);
-
-    sprintf(semaphoreTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> S </text>\n", x, y, radius, cstrk, sw, cfill, x, y);
-}
 
 void buildHydrantSvgTag(char* hydrantTag, Hydrant Hyd){
     char* x = getHydrantX(Hyd);
@@ -244,6 +232,17 @@ void buildBaseRadioSvgTag(char* baseRadioTag, BaseRadio BaseR){
     sprintf(baseRadioTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> RB </text>\n", x, y, radius, cstrk, sw, cfill, x, y);
 }
 
+void buildSemaphoreSvgTag(char* semaphoreTag, Semaphore Semap){
+    char* x = getSemaphoreX(Semap);
+    char* y = getSemaphoreY(Semap);
+    char* radius = getSemaphoreRadius(Semap);
+    char* sw = getSemaphoreSw(Semap);
+    char* cfill = getSemaphoreCfill(Semap);
+    char* cstrk = getSemaphoreCstrk(Semap);
+
+    sprintf(semaphoreTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> S </text>\n", x, y, radius, cstrk, sw, cfill, x, y);
+}
+
 void buildHealthCenterSvgTag(char* healthCenterTag, HealthCenter HealthC){
     char* x = getHealthCenterX(HealthC);
     char* y = getHealthCenterY(HealthC);
@@ -252,8 +251,19 @@ void buildHealthCenterSvgTag(char* healthCenterTag, HealthCenter HealthC){
     sprintf(healthCenterTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"mediumblue\" stroke-width=\"1\" fill=\"royalblue\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> HC </text>\n", x, y, radius, x, y);
 }
 
-//fazer build estabelecimento comercial, e ver se vai fazer do address
+void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est){
 
+    Point estCoordinates = getEstablishmentCoordinates(est);
+    Address estAddress = getEstablishmentAddress(est);
+    double x = getPointX(estCoordinates);
+    double y = getPointY(estCoordinates);
+    double w = getEstablishmentWidth(est);
+    double h = getEstablishmentHeight(est);
+    double centerOfMassX = getAddressX(estAddress);
+    double centerOfMassY = getAddressY(estAddress);
+
+    sprintf(EstablishmentTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"black\" stroke-width=\"1\" fill=\"chartreuse\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"black\" text-anchor=\"middle\" dy=\".3em\"> EC </text>\n", w, h, x, y, centerOfMassX, centerOfMassY);
+}
 
 void buildHouseSvgTag(char* houseTag, House H){
 
@@ -282,7 +292,6 @@ void drawQueryElementsOnSvg(Svg svg, List elementsList){
 
         NODE = getNext(elementsList, NODE);        
     }
-
 }
 
 void finishSvg(Svg svg){

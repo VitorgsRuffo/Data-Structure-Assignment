@@ -54,6 +54,24 @@ Point getAddressCoordinates(Address Add){
     return add->coordinates;
 }
 
+double getAddressX(Address Add){
+
+    if(Add == NULL)
+        return -1;
+
+    address *add = (address*) Add;
+    return getPointX(add->coordinates);
+}
+
+double getAddressY(Address Add){
+
+    if(Add == NULL)
+        return -1;
+
+    address *add = (address*) Add;
+    return getPointY(add->coordinates);
+}
+
 
 void readBlockAttributes(Info blockInfo, Rectangle* block);
 
