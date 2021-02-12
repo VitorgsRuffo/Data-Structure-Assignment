@@ -252,6 +252,8 @@ void buildHealthCenterSvgTag(char* healthCenterTag, HealthCenter HealthC){
     sprintf(healthCenterTag, "\t<circle cx=\"%s\" cy=\"%s\" r=\"%s\" stroke=\"mediumblue\" stroke-width=\"1\" fill=\"royalblue\" />\n\t<text x=\"%s\" y=\"%s\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> HC </text>\n", x, y, radius, x, y);
 }
 
+//fazer build estabelecimento comercial, e ver se vai fazer do address
+
 
 void buildHouseSvgTag(char* houseTag, House H){
 
