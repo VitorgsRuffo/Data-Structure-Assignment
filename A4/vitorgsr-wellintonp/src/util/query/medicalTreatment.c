@@ -24,7 +24,7 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
 
     sscanf(&command[4], "%d %s %c %d", &K, cep, &face, &number);
 
-    House house = createHouse("none", cep, face, number, "none", 0, Ct); 
+    House house = createHouse("none", cep, face, number, "none", Ct); 
 
     char* blueHouseTag = buildBlueHouseTag(house);
     List queryElementsList = getQueryElements(Ct);

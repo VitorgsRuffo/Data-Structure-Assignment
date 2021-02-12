@@ -50,11 +50,11 @@ void readPeople(char* command, char** commandParts, City Ct){
 void readPeopleAddress(char* command, char** commandParts, City Ct){
     
     sscanf(&command[2], "%s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4]);
-    House house = createHouse(commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], 0, Ct);
+    House house = createHouse(commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], Ct);
 
     // Inserçao na HashTable (verificar se há necessidade)
-    DataStructure housesTable = getHousesTable(Ct); 
-    insertHashTable(housesTable, house);
+    //DataStructure housesTable = getHousesTable(Ct); 
+    //insertHashTable(housesTable, house);
 
     // Inserindo na quadTree
     DataStructure housesTree = getHousesTree(Ct);
@@ -69,10 +69,3 @@ void freeReadEcResources(char* command, char** commandParts){
     
     free(commandParts);
 }
-
-/*
-    Dúvidas:
-        - Verificar se leitura começa em command[2] mesmo ou em command[1].
-        - Ver qual TAD criar quando ler o comando "m"
-
-*/
