@@ -32,6 +32,12 @@ double getAddressX(Address Add);
 */
 double getAddressY(Address Add);
 
+/*  
+* Pré-Condição: requer uma referencia de uma instancia de endereco.
+* Pós-Condição: retorna uma string com todas as informacoes da instancia de endereco passada.
+*/
+char* addressToString(Address Add);
+
 /*
     Pré-Condição: requer uma referencia de uma instancia de endereco.
     Pós-Condição: libera a memoria usada pela instancia de endereco que foi passada.

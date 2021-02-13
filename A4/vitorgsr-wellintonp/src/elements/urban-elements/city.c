@@ -15,7 +15,7 @@ typedef struct city {
     PQuadTree healthCenters;
     PQuadTree covidAddresses;
     HashTable establishmentTypes;
-    //HashTable establishmentsTable;
+    HashTable establishmentsTable;
     PQuadTree establishmentsTree;
     HashTable people;
     PQuadTree housesTree;
@@ -41,7 +41,7 @@ City createCity(){
     ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
     ct->covidAddresses = createPQuadTree(getCovidAddressId, getCovidAddressCoordinates);
     ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
-    //ct->establishmentTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
+    ct->establishmentsTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
     ct->establishmentsTree = createPQuadTree(getEstablishmentCnpj, getEstablishmentCoordinates);
     ct->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);
     ct->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
@@ -132,7 +132,6 @@ HashTable getEstablishmentTypes(City Ct){
     return ct->establishmentTypes;
 }
 
-/*
 HashTable getEstablishmentsTable(City Ct){
     if(Ct == NULL)
         return NULL;
@@ -140,7 +139,6 @@ HashTable getEstablishmentsTable(City Ct){
     city *ct = (city*) Ct;
     return ct->establishmentsTable;
 }
-*/
 
 PQuadTree getEstablishmentsTree(City Ct){
     if(Ct == NULL)

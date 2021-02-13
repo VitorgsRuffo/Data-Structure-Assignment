@@ -38,16 +38,16 @@ int main(int argc, char* argv[]){
     
     if(!isEcNull(parameters)){
         //Abrindo o arquivo de entrada (.ec)
-        File ec = openInputFile(parameters, getEcName);
-        
+        //File ec = openInputFile(parameters, getEcName);
+        printf("Lendo pm\n");
 
         //Lendo arquivo ec:
     }
 
     if(!isPmNull(parameters)){
         //Abrindo o arquivo de entrada (.pm)
-        File ec = openInputFile(parameters, getPmName);
-
+        //File ec = openInputFile(parameters, getPmName);
+        printf("Lendo ec\n");
         //Lendo arquivo pm:
     }
 
