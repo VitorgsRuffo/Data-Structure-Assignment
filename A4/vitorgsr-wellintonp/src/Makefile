@@ -2,8 +2,7 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o point.o text.o hashtable.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o blockBorder.o calculateArea.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o qry.o urbanDeletion.o sort.o svg.o tools.o
-
+obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o point.o text.o convexhull.o sort.o hashtable.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o blockBorder.o calculateArea.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o qry.o urbanDeletion.o svg.o tools.o
 
 #paths:
 elements = ./elements
@@ -11,6 +10,7 @@ figures = $(elements)/figures
 urban_elements =  $(elements)/urban-elements
 
 util = ./util
+algorithm = $(util)/algorithm
 data_structure = $(util)/data-structure
 input = $(util)/input
 query = $(util)/query
@@ -97,6 +97,14 @@ hashtable.o: $(data_structure)/hashtable.c
 	$(CC) $(flags) -c $(data_structure)/hashtable.c 
 
 
+#algorithms:
+sort.o: $(algorithm)/sort.c 
+	$(CC) $(flags) -c $(algorithm)/sort.c
+
+convexhull.o: $(algorithm)/convexhull.c 
+	$(CC) $(flags) -c $(algorithm)/convexhull.c
+
+
 #input:
 ec.o: $(input)/ec.c
 	$(CC) $(flags) -c $(input)/ec.c
@@ -157,9 +165,6 @@ covidIncidence.o: $(query)/covidIncidence.c
 
 svg.o: $(util)/svg.c 
 	$(CC) $(flags) -c $(util)/svg.c
-
-sort.o: $(util)/sort.c 
-	$(CC) $(flags) -c $(util)/sort.c
 
 tools.o: $(util)/tools.c 
 	$(CC) $(flags) -c $(util)/tools.c

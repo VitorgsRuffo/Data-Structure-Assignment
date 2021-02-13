@@ -3,6 +3,7 @@
 #include "./pquadtree.h"
 #include "./queue.h"
 #include "../tools.h"
+#include "../algorithm/convexhull.h"
 
 typedef struct pquadtreenode {
     Point point;

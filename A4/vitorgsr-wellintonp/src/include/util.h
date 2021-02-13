@@ -6,6 +6,6 @@
 #include "./query.h"
 #include "../util/tools.h"
 #include "../util/svg.h"
-#include "../util/sort.h"
+#include "./algorithm.h"
 
 #endif 

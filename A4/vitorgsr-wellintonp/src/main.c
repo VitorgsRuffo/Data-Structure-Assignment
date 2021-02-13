@@ -4,11 +4,7 @@
 
 
 /*to do list:
-    - Arrumar makefile
-    - implementar quicksort
-
-    - implementar convexHull
-    
+        
     Query:
     - planejamento para o query.
     

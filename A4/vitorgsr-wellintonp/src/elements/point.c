@@ -47,6 +47,37 @@ void setPointY(Point P, double y){
     p->y = y;
 }
 
+
+double distanceBetweenPoints(Point P1, Point P2) { 
+    if(P1 == NULL || P2 == NULL) return -1;
+
+    point* p1 = (point*) P1;
+    point* p2 = (point*) P2;
+
+    return sqrt(pow((p1->x - p2->x), 2) + pow((p1->y - p2->y), 2)); 
+} 
+  
+
+int findOrientationOfOrderedPoints(Point P1, Point P2, Point P3){ 
+    
+    if(P1 == NULL || P2 == NULL || P3 == NULL) return -1;
+
+    point* p1 = (point*) P1;
+    point* p2 = (point*) P2;
+    point* p3 = (point*) P3;
+
+    int orientation = (int) ((p2->y - p1->y) * (p3->x - p2->x) - (p2->x - p1->x) * (p3->y - p2->y)); 
+
+    if (orientation == 0) 
+        return 0; // os pontos sao colineares.
+
+    else if(orientation > 0)
+        return 1; // os pontos estao em sentido horario.
+
+    else
+        return 2; // os pontos estao em sentido anti-horario.
+} 
+
 void printPoint(Point P){
     if(P == NULL)
         return;

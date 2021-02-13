@@ -1,10 +1,11 @@
 #ifndef POINT_H
 #define POINT_H
 
+/*
+* Tipo que representa um ponto no plano.
+*/
 typedef void* Point;
 
-/*
-*/
 
 /*
     Pré condição: Requer dois valores do tipo double especificando as coordenadas do ponto.
@@ -36,6 +37,23 @@ double getPointY(Point P);
     Pós condição: Atribui o valor passado para o membro y do ponto.
 */
 void setPointY(Point P, double y);
+
+
+/*
+    Pré condição: Requer duas instancias do tipo Point.
+    Pós condição: Calcula e retorna a distancia entre esses dois pontos.
+*/
+double distanceBetweenPoints(Point P1, Point P2);
+
+/*
+    Pré condição: Requer um trio ordenado de instancias do tipo Point.
+    Pós condição: Calcula e retorna a orientacao desses pontos.
+                  Retorna 0 se os pontos forem colineares.
+                  Retorna 1 se os pontos estao em sentido horario.
+                  Retorna 2 se os pontos estao em sentido anti-horario.
+*/
+int findOrientationOfOrderedPoints(Point P1, Point P2, Point P3);
+
 
 /*
     Pré condição: Requer uma instancia do tipo Point.

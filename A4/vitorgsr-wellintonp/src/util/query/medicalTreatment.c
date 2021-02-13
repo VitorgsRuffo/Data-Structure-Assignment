@@ -2,7 +2,7 @@
 #include "../../include/urbanElements.h"
 #include "../../include/dataStructure.h"
 #include "../input/openInput.h"
-#include "../sort.h"
+#include "../algorithm/sort.h"
 
 
 typedef struct {
@@ -13,7 +13,6 @@ typedef struct {
 
 char* buildBlueHouseTag(House H);
 void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHealthCenters, int healthCentersAmount);
-void displayIntegerArray(NearHealthCenter* A, int end);
 int compareNearHealthCenters(Info Hc1, Info Hc2);
 char* buildLineSegmentTag(double x, double y, House H);
 void writeHealthCenterCoordinatesOnTxt(File txt, int i, double x, double y, double distance);
@@ -42,14 +41,8 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
     free(healthCentersArray);
     
     calculateDistanceFromHouseToHealthCenters(house, nearHealthCenters, healthCentersAmount);
-    
-    //printf("Unsorted array:\n");
-    //displayIntegerArray(nearHealthCenters, healthCentersAmount);
 
     shellsort((Info*) nearHealthCenters, healthCentersAmount, compareNearHealthCenters);
-
-    //printf("Sorted array:\n");
-    //displayIntegerArray(nearHealthCenters, healthCentersAmount);
 
     int healthCenterX, healthCenterY;
     char* lineSegmentTag;
@@ -128,10 +121,4 @@ char* buildLineSegmentTag(double x, double y, House H){
 void writeHealthCenterCoordinatesOnTxt(File txt, int i, double x, double y, double distance){
     i++;
     fprintf(txt, "Posto de saude (%d) - x: %.2lf, y: %.2lf, distancia: %.2lf.\n\n", i, x, y, distance);
-}
-
-void displayIntegerArray(NearHealthCenter* A, int end){
-    for(int i = 0; i<end; i++)
-        printf("%.2lf ", A[i].distance);
-    printf("\n");
 }

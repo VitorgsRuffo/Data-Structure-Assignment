@@ -31,6 +31,10 @@
         "person.h": "c",
         "new": "c",
         "streambuf": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "sort.h": "c",
+        "qry.h": "c",
+        "tools.h": "c",
+        "convexhull.h": "c"
     }
 }

@@ -3,6 +3,7 @@
 #include "../../include/dataStructure.h"
 #include "../input/openInput.h"
 #include "../tools.h"
+#include "../algorithm/convexhull.h"
 
 
 typedef struct {
