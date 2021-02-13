@@ -4,15 +4,20 @@
 
 
 /*to do list:
-        
-    Query:
-    - planejamento para o query.
     
+    - dm (v) e de(w);
+
+    - eplg(w) e catac(v); (obs: quem acabar primeiro pega o mud.)
+    
+    - bosses finais: m? e dmprbt.
+
+
     extras:
     - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
-    
-*/
+    - checar se estamos usando os dicionarios da maneira que ele pede.
+      (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
 
+*/
 
 
 int main(int argc, char* argv[]){
@@ -33,16 +38,16 @@ int main(int argc, char* argv[]){
     
     if(!isEcNull(parameters)){
         //Abrindo o arquivo de entrada (.ec)
-        //File ec = openInputFile(parameters, getEcName);
-        printf("Ec nao e null");
+        File ec = openInputFile(parameters, getEcName);
+        
 
         //Lendo arquivo ec:
     }
 
     if(!isPmNull(parameters)){
         //Abrindo o arquivo de entrada (.pm)
-        //File ec = openInputFile(parameters, getPmName);
-        printf("pm nao e null");
+        File ec = openInputFile(parameters, getPmName);
+
         //Lendo arquivo pm:
     }
 
@@ -84,4 +89,17 @@ int main(int argc, char* argv[]){
 *  - Desalocar memoria em caso de erros (e.g, chamar o metodo de um tad passando null).
 *  - Retirar mensagens de erro... (tratar erro no metodo chamador)
 *  - Calcular a viewBox dos svg's.
+
+   - pquadtree:
+        //doubs:
+            //1 - char* (*get)(void*) == getInfoKey get  (typedef errado)
+            //2 - is there any problem if we add extra functions to the .h file?
+
+
+        //fixes:
+
+            //1 - fix getObjectIfItsInsideShape. (we should not traverse the whole tree!!).
+            
+            //2 - is our current remove method maintaining the tree balanced? .
+
 */

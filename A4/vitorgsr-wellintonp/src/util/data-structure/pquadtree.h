@@ -1,15 +1,3 @@
-//doubs:
-    //1 - char* (*get)(void*) == getInfoKey get  (typedef errado)
-    //2 - is there any problem if we add extra functions to the .h file?
-    //3 - List queryElementsList;
-
-
-//fixes:
-
-    //1 - fix getObjectIfItsInsideShape. (we should not traverse the whole tree!!).
-    
-    //2 - is our current remove method maintaining the tree balanced? .
-            
 
 
 #ifndef P_QUAD_TREE_H

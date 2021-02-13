@@ -35,6 +35,7 @@
         "sort.h": "c",
         "qry.h": "c",
         "tools.h": "c",
-        "convexhull.h": "c"
+        "convexhull.h": "c",
+        "block.h": "c"
     }
 }
