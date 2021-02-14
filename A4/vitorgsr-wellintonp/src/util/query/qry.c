@@ -73,6 +73,9 @@ void executeQry(File qry, City Ct, Parameters Param){
         else if(!strcmp(commandType, "de?"))
             executeEstablishmentInformationChecking(command, Ct, txt);
 
+        else if(!strcmp(commandType, "eplg?"))
+            executeHighlightEstablishmentInRange(command, Ct, txt);
+
         uniqueId++;
     }
     

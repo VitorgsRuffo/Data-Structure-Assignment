@@ -38,6 +38,7 @@
         "convexhull.h": "c",
         "block.h": "c",
         "establishment.h": "c",
-        "establishmentinformation.h": "c"
+        "establishmentinformation.h": "c",
+        "rectangle.h": "c"
     }
 }

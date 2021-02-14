@@ -4,8 +4,9 @@
 #include "../../elements/urban-elements/establishment.h"
 #include "../../elements/urban-elements/person.h"
 #include "../../elements/urban-elements/address.h"
+#include "../../elements/urban-elements/establishmentType.h"
 
-void writeEstablishmentInfosOnTxt(File txt, Info establishmentInfo, Info personInfo);
+void writeEstablishmentInfosOnTxt(File txt, Info estabInfo,Info personInfo, Info estabType);
 
 void executeEstablishmentInformationChecking(char* command, City Ct, File txt){
 
@@ -20,25 +21,27 @@ void executeEstablishmentInformationChecking(char* command, City Ct, File txt){
     // Pegando as informações do proprietario do estabelecimento comercial
     DataStructure peoples = getPeople(Ct);
     Info personInfo = getHashTableInfo(peoples, ownerCpf);
-    
-    writeEstablishmentInfosOnTxt(txt, establishmentInfo, personInfo);
+
+    // Pegando a tabela de descrição de tipos de estabelecimentos
+    DataStructure establishmentsTypes = getEstablishmentTypes(Ct);
+    Info establishmentType = getHashTableInfo(establishmentsTypes, getEstablishmentCode(establishmentInfo));
+
+    writeEstablishmentInfosOnTxt(txt, establishmentInfo, personInfo, establishmentType);
 }
 
-void writeEstablishmentInfosOnTxt(File txt, Info estabInfo, Info personInfo){
+void writeEstablishmentInfosOnTxt(File txt, Info estabInfo,Info personInfo, Info estabType){
 
-    Address estabAddress = getEstablishmentAddress(estabInfo);
-    Point estabCoordinates = getEstablishmentCoordinates(estabInfo);
-    char* addressString = addressToString(estabAddress);
-    
-    fprintf(txt, "Nome: %s\nCNPJ: %s\nCodigo: %s\n", getEstablishmentName(estabInfo), getEstablishmentCnpj(estabInfo), getEstablishmentCode(estabInfo));
-    fprintf(txt, "Address: %s\n", addressString);
-    fprintf(txt, "x:%lf y:%lf width:%lf height:%lf\n", getPointX(estabCoordinates), getPointY(estabCoordinates), getEstablishmentWidth(estabInfo), getEstablishmentHeight(estabInfo));
+    char* establishmentString = establishmentToString(estabInfo, estabType);
+
+    fprintf(txt, "%s", establishmentString);
     fprintf(txt, "Dados do proprietario:\n");
+    //Chamar toString do Person
     fprintf(txt, "CPF: %s\n", getPersonCpf(personInfo));
     fprintf(txt, "Nome: %s\n", getPersonName(personInfo));
     fprintf(txt, "Sobrenome: %s\n", getPersonLastName(personInfo));
     fprintf(txt, "Sexo: %c\n", getPersonGender(personInfo));
     fprintf(txt, "Data de nascimento: %s\n", getPersonBirthdate(personInfo));
+    fprintf(txt, "\n\n");
 
-    free(addressString);
+    free(establishmentString);
 }

@@ -1,5 +1,7 @@
 #include "../../include/headers.h"
 #include "establishment.h"
+#include "establishmentType.h"
+#include "address.h"
 
 #define establishmentWidth 50
 #define establishmentHeight 30
@@ -120,6 +122,25 @@ Point getEstablishmentCenterOfMass(Establishment Est){
         return NULL;
     establishment* est = (establishment*) Est;
     return getAddressCoordinates(est->address);
+}
+
+char* establishmentToString(Establishment Est, EstablishmentType EstabType){
+    if(Est == NULL || EstabType == NULL)
+        return NULL;
+    
+    establishment *est = (establishment*) Est;
+    
+    char* establishmentInfoString = (char*) malloc(500 * sizeof(char)); 
+
+    char* description = getEstablishmentTypeDescription(EstabType);
+    char* address = addressToString(est->address);
+
+    double x = getPointX(est->coordinates);
+    double y = getPointY(est->coordinates);
+
+    sprintf(establishmentInfoString, "Nome: %s\nCNPJ: %s\nDescricao: %s\nEndereco: %sx: %lf y:%lf width:%lf height:%lf\n", est->name, est->cnpj, description, address, x, y, est->w, est->h );
+    
+    return establishmentInfoString;
 }
 
 void freeEstablishment(Establishment Et){
