@@ -1,7 +1,8 @@
 #ifndef HOUSE_H
 #define HOUSE_H
 
-#include "./city.h"
+#include "city.h"
+#include "address.h"
 #include "../point.h"
 
 /*
@@ -20,6 +21,18 @@ House createHouse(char* cpf, char* cep, char face, int number, char* compl, City
 * Pós-Condição: retorna o cpf do(a) proprietario(a) da casa passada.
 */
 char* getHouseCpf(House H);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de casa.
+* Pós-Condição: retorna o endereco do(a) proprietario(a) da casa passada.
+*/
+Address getHouseAddress(House H);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de casa e uma instancia do novo endereco a ser atribuido.
+* Pós-Condição: libera o antigo endereco da casa e atribui o endereco do parametro como novo endereço. Retorna 0 caso de algum erro, caso contrário retorna 1.
+*/
+int setHouseAddress(House H, Address newAddress);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.

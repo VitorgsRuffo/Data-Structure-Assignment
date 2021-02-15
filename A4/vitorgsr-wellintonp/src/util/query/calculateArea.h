@@ -7,5 +7,4 @@
 */
 void executeUrbanElementsTotalAreaCalculationInRange(char* command, City Ct, File txt);
 
-
 #endif

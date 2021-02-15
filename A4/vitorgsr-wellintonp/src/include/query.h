@@ -16,5 +16,6 @@
 #include "../util/query/covidIncidence.h"
 #include "../util/query/establishmentInformation.h"
 #include "../util/query/highlightEstablishment.h"
+#include "../util/query/changeAddress.h"
 
 #endif 

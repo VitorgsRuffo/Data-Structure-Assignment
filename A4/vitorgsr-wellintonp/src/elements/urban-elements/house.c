@@ -49,6 +49,25 @@ char* getHouseCpf(House H){
     return h->cpf;
 }
 
+
+Address getHouseAddress(House H){
+   if(H == NULL)
+        return NULL;
+    house *h = (house*) H;
+    return h->address;
+}
+
+int setHouseAddress(House H, Address newAddress){
+    if(H == NULL)
+        return 0;
+    house *h = (house*) H;
+
+    freeAddress(h->address);
+    h->address = newAddress;
+    
+    return 1;
+}
+
 Point getHouseCoordinates(House H){
     if(H == NULL)
         return NULL;
@@ -75,7 +94,6 @@ Point getHouseCenterOfMass(House H){
     house *h = (house*) H;
     return getAddressCoordinates(h->address);
 }
-
 
 void printHouse(House H){
     if(H == NULL)

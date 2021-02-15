@@ -1,5 +1,5 @@
-#ifndef ESTABLISMENT_IN_RANGE_H
-#define ESTABLISMENT_IN_RANGE_H
+#ifndef HIGHLIGHT_ESTABLISHMENT_H
+#define HIGHLIGHT_ESTABLISHMENT_H
 
 #include "../../elements/urban-elements/city.h"
 #include "../input/openInput.h"

@@ -55,9 +55,9 @@ void readPeopleAddress(char* command, char** commandParts, City Ct){
     int number = atoi(commandParts[3]);
     House house = createHouse(commandParts[0], commandParts[1], face, number, commandParts[4], Ct);
 
-    // Inserçao na HashTable (verificar se há necessidade)
-    //DataStructure housesTable = getHousesTable(Ct); 
-    //insertHashTable(housesTable, house);
+    // Inserçao na HashTable
+    DataStructure housesTable = getHousesTable(Ct); 
+    insertHashTable(housesTable, house);
 
     // Inserindo na quadTree
     DataStructure housesTree = getHousesTree(Ct);
