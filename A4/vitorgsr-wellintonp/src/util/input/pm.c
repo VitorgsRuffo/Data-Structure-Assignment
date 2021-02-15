@@ -2,8 +2,8 @@
 #include "../../include/util.h"
 #include "../../include/elements.h"
 
-//numero maximo de partes que um comando vindo de um arquivo ec pode ter
-#define maxNumberOfEcCommandParts 8
+//numero maximo de partes que um comando vindo de um arquivo pm pode ter
+#define maxNumberOfPmCommandParts 8
 
 void readPeople(char* command, char** commandParts, City Ct);
 void readPeopleAddress(char* command, char** commandParts, City Ct);
@@ -14,7 +14,7 @@ void readPm(File pm, City Ct){
     char* command = (char*) malloc((commandMaxLength + 1) * sizeof(char));     
     int commandLength;
     char commandType[10];
-    char** commandParts = createCommandParts(maxNumberOfEcCommandParts);
+    char** commandParts = createCommandParts(maxNumberOfPmCommandParts);
     
     while(!feof(pm)){
         if(fgets(command, commandMaxLength, pm) == NULL) // se tertarmos ler alem da ultima linha do arquivo fgets retornara NULL e sairemos do loop de leitura.
@@ -43,9 +43,8 @@ void readPeople(char* command, char** commandParts, City Ct){
     char gender = commandParts[3][0];
     Person person = createPerson(commandParts[0], commandParts[1], commandParts[2], gender, commandParts[4]);
     
-    //Inserindo na HashTable
-    DataStructure peopleTable = getPeople(Ct);
-    insertHashTable(peopleTable, person);
+    DataStructure* peopleTable = getPeople(Ct);
+    insertHashTable((HashTable*) peopleTable, person);
 }
 
 void readPeopleAddress(char* command, char** commandParts, City Ct){
@@ -55,11 +54,9 @@ void readPeopleAddress(char* command, char** commandParts, City Ct){
     int number = atoi(commandParts[3]);
     House house = createHouse(commandParts[0], commandParts[1], face, number, commandParts[4], Ct);
 
-    // Inserçao na HashTable (verificar se há necessidade)
-    //DataStructure housesTable = getHousesTable(Ct); 
-    //insertHashTable(housesTable, house);
+    DataStructure* housesTable = getHousesTable(Ct); 
+    insertHashTable((HashTable*) housesTable, house);
 
-    // Inserindo na quadTree
     DataStructure housesTree = getHousesTree(Ct);
     insertPQuadTree(housesTree, getHouseCoordinates, house);
 }

@@ -1,8 +1,6 @@
 #include "../../include/headers.h"
 #include "../../include/dataStructure.h"
 #include "../urban-elements/block.h"
-#include "../urban-elements/address.h"
-#include "./city.h"
 #include "house.h"
 
 #define houseWidth 15
@@ -47,6 +45,13 @@ char* getHouseCpf(House H){
         return NULL;
     house *h = (house*) H;
     return h->cpf;
+}
+
+Address getHouseAddress(House H){
+    if(H == NULL) 
+        return NULL;
+    house *h = (house*) H;
+    return h->address;
 }
 
 Point getHouseCoordinates(House H){

@@ -3,6 +3,7 @@
 
 #include "./city.h"
 #include "../point.h"
+#include "./address.h"
 
 /*
 *   Tipo abstrato de dado que representa o elemento urbano casa.
@@ -20,6 +21,12 @@ House createHouse(char* cpf, char* cep, char face, int number, char* compl, City
 * Pós-Condição: retorna o cpf do(a) proprietario(a) da casa passada.
 */
 char* getHouseCpf(House H);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de casa.
+* Pós-Condição: retorna a instancia de endereco que localiza a casa na cidade.
+*/
+Address getHouseAddress(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.

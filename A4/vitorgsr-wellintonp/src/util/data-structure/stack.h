@@ -69,7 +69,7 @@ Info* stackToArray(Stack* PointerToHead);
 Pré-condição: requer o endereço de um ponteiro para o nó no topo da pilha.
 Pós-condição: Percorre a pilha printando suas informações.
 */
-void printStack(Stack* PointerToHead, char* (*tadToString)(void*));
+int printStack(Stack* PointerToHead, char* (*tadToString)(void*));
 
 
 /*

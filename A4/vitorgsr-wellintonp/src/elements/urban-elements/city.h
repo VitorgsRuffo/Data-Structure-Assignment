@@ -76,7 +76,13 @@ HashTable getEstablishmentTypes(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
-* Pós-Condição: retorna uma referencia para a estrutura de estabelecimentos comerciais presente no TAD cidade.
+* Pós-Condição: retorna uma referencia para a tabela hash de estabelecimentos comerciais presente no TAD cidade.
+*/
+HashTable getEstablishmentsTable(City Ct);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a arvore de estabelecimentos comerciais presente no TAD cidade.
 */
 PQuadTree getEstablishmentsTree(City Ct);
 
@@ -90,19 +96,19 @@ PQuadTree getHousesTree(City Ct);
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
 * Pós-Condição: retorna uma referencia para a estrutura de pessoas presente no TAD cidade.
 */
-HashTable getPeople(City Ct);
+HashTable* getPeople(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
-* Pós-Condição: retorna uma referencia para a estrutura de casas presente no TAD cidade.
+* Pós-Condição: retorna uma referencia para a arvore de casas presente no TAD cidade.
 */
 PQuadTree getHousesTree(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
-* Pós-Condição: retorna uma referencia para a estrutura de casas presente no TAD cidade.
+* Pós-Condição: retorna uma referencia para a hash table de casas presente no TAD cidade.
 */
-HashTable getHousesTable(City Ct);
+HashTable* getHousesTable(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.

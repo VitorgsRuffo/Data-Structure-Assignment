@@ -69,6 +69,17 @@ char* getPersonBirthdate(Person Pe){
     return pe->birthdate;
 }
 
+char* personToString(Person Pe){
+     if(Pe == NULL)
+        return NULL;
+    person* pe = (person*) Pe;
+
+    char* string = (char*) malloc(100 * sizeof(char));
+    sprintf(string, "Nome: %s %s\ncpf: %s, sexo: %c, nascimento: %s.",
+                    pe->name, pe->lastName, pe->cpf, pe->gender, pe->birthdate);
+    return string;
+}
+
 void freePerson(Person Pe){
     person* pe = (person*) Pe;
 

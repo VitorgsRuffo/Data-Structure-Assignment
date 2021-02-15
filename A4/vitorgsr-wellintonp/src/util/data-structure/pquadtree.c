@@ -700,7 +700,7 @@ int balancedlyInsertObjectsInPQuadTree(PQuadTree Tree, Stack Objects){
     Info info; 
     Point point;
 
-    while(!empty(preProcessedObjects)){
+    while(!empty(&preProcessedObjects)){
         
         info = stackPop(&preProcessedObjects);
         point = (*(*tree).getPoint)(info);     
@@ -718,31 +718,30 @@ Stack preProcessObjects(PQuadTree Tree, Stack Objects){
     Stack preProcessedObjects = createStack();
 
     //vetor com as tads "crus".
-    int objectsAmount = stackLength(Objects);
-    Info* Objs = stackToArray(Objects);
+    int objectsAmount = stackLength(&Objects);
+    Info* Objs = stackToArray(&Objects);
 
     //lista com os pontos dos tads.
     List pointsList = createList();
     for(int i = 0; i<objectsAmount; i++)
         insert(pointsList, (*(*tree).getPoint)(Objs[i]));
 
-
     while(1){
-
         Point* pointsArray = listToArray(pointsList);
+
         if(pointsArray == NULL) //todos os pontos ja foram processados.
             break;
 
         int pointsAmount = length(pointsList);
 
         Stack convexHullStack = convexHull(pointsArray, pointsAmount);
-        
+
         if(convexHullStack == NULL){ //sobraram 1 ou 2 pontos. Agora basta empilhar o(s) tad(s) correspondente(s) 
            
             for(int i=0; i<pointsAmount; i++){
                 for(int j = 0; j<objectsAmount; j++){
                     if((*(*tree).getPoint)(Objs[j]) == pointsArray[i]){
-                        stackPush(preProcessedObjects, Objs[j]);
+                        stackPush(&preProcessedObjects, Objs[j]);
                         break;
                     }
                 }
@@ -755,7 +754,7 @@ Stack preProcessObjects(PQuadTree Tree, Stack Objects){
 
             for(int i = 0; i<objectsAmount; i++){
                 if((*(*tree).getPoint)(Objs[i]) == p){
-                    stackPush(preProcessedObjects, Objs[i]);
+                    stackPush(&preProcessedObjects, Objs[i]);
                     break;
                 }
             }

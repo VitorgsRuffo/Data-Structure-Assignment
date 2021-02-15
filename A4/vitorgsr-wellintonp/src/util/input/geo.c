@@ -8,15 +8,15 @@
 #define maxNumberOfGeoCommandParts 8
 
 //T1
-void readCircle(Stack circles, char* command, char** commandParts, ElementsCustomization elementsCustom);
-void readRectangle(Stack rectangles, char* command, char** commandParts, ElementsCustomization elementsCustom);
-void readText(Stack texts, char* command, char** commandParts);
+void readCircle(Stack* circles, char* command, char** commandParts, ElementsCustomization elementsCustom);
+void readRectangle(Stack* rectangles, char* command, char** commandParts, ElementsCustomization elementsCustom);
+void readText(Stack* texts, char* command, char** commandParts);
 
 //T2
-void readBlock(Stack blocks, char* command, char** commandParts, ElementsCustomization elementsCustom);
-void readHydrant(Stack hydrants, char* command, char** commandParts, ElementsCustomization elementsCustom);
-void readSemaphore(Stack semaphores, char* command, char** commandParts, ElementsCustomization elementsCustom);
-void readBaseRadio(Stack baseRadios, char* command, char** commandParts, ElementsCustomization elementsCustom);
+void readBlock(Stack* blocks, char* command, char** commandParts, ElementsCustomization elementsCustom);
+void readHydrant(Stack* hydrants, char* command, char** commandParts, ElementsCustomization elementsCustom);
+void readSemaphore(Stack* semaphores, char* command, char** commandParts, ElementsCustomization elementsCustom);
+void readBaseRadio(Stack* baseRadios, char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readFiguresCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readBlockCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readHydrantCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
@@ -24,7 +24,7 @@ void readSemaphoreCustomization(char* command, char** commandParts, ElementsCust
 void readBaseRadioCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 
 //T3
-void readHealthCenter(Stack healthCenters, char* command, int id, char** commandParts);
+void readHealthCenter(Stack* healthCenters, char* command, int id, char** commandParts);
 void readRegion(City Ct, char* command, int id, char** commandParts);
 
 void freeReadGeoResources(char* command, char** commandParts, ElementsCustomization elementsCustom);
@@ -64,25 +64,25 @@ void readGeo(File geo, City Ct){
 
         sscanf(command, "%s ", commandType);
         if(!strcmp(commandType, "c")) //lidando com circulo:
-            readCircle(circles, command, commandParts, elementsCustom);
+            readCircle(&circles, command, commandParts, elementsCustom);
 
         else if(!strcmp(commandType, "r")) //lidando com retangulo:
-            readRectangle(rectangles ,command, commandParts, elementsCustom);
+            readRectangle(&rectangles ,command, commandParts, elementsCustom);
 
         else if(!strcmp(commandType, "t")) //lidando com texto:   
-            readText(texts ,command, commandParts);
+            readText(&texts ,command, commandParts);
             
         else if(!strcmp(commandType, "q")) //lidando com quadra: 
-            readBlock(blocks ,command, commandParts, elementsCustom);
+            readBlock(&blocks ,command, commandParts, elementsCustom);
 
         else if(!strcmp(commandType, "h")) //lidando com hidrante:
-            readHydrant(hydrants ,command, commandParts, elementsCustom);
+            readHydrant(&hydrants ,command, commandParts, elementsCustom);
 
         else if(!strcmp(commandType, "s")) //lidando com semaforos:   
-            readSemaphore(semaphores ,command, commandParts, elementsCustom);            
+            readSemaphore(&semaphores ,command, commandParts, elementsCustom);            
 
         else if(!strcmp(commandType, "rb")) //lidando com radio-bases:    
-            readBaseRadio(baseRadios ,command, commandParts, elementsCustom);
+            readBaseRadio(&baseRadios ,command, commandParts, elementsCustom);
 
         else if(!strcmp(commandType, "sw")) //lidando com as novas estilizacoes de circulo e retangulo:
             readFiguresCustomization(command, commandParts, elementsCustom);
@@ -100,7 +100,7 @@ void readGeo(File geo, City Ct){
             readBaseRadioCustomization(command, commandParts, elementsCustom);
         
         else if(!strcmp(commandType, "ps"))//lidando com postos: 
-            readHealthCenter(healthCenters ,command, uniqueId, commandParts);
+            readHealthCenter(&healthCenters ,command, uniqueId, commandParts);
 
         else if(!strcmp(commandType, "dd"))//lidando com regioes:
             readRegion(Ct, command, uniqueId, commandParts);
@@ -127,43 +127,43 @@ void readGeo(File geo, City Ct){
     freeReadGeoResources(command, commandParts, elementsCustom);
 }
 
-void readCircle(Stack circles, char* command, char** commandParts, ElementsCustomization elementsCustom){
+void readCircle(Stack* circles, char* command, char** commandParts, ElementsCustomization elementsCustom){
     sscanf(command, "%s %s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6]);
     Circle circle = createCircle(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6], getFiguresCwCustomization(elementsCustom));
     stackPush(circles, circle);
 }
 
-void readRectangle(Stack rectangles, char* command, char** commandParts, ElementsCustomization elementsCustom){
+void readRectangle(Stack* rectangles, char* command, char** commandParts, ElementsCustomization elementsCustom){
     sscanf(command, "%s %s %s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6], commandParts[7]);
     Rectangle rectangle = createRectangle(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6], commandParts[7], getFiguresRwCustomization(elementsCustom));
     stackPush(rectangles, rectangle);
 }
 
-void readText(Stack texts, char* command, char** commandParts){
+void readText(Stack* texts, char* command, char** commandParts){
     sscanf(command, "%s %s %s %s %s %s %[^\n]s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6]);
     Text text = createText(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6]);
     stackPush(texts, text);
 }
 
-void readBlock(Stack blocks, char* command, char** commandParts, ElementsCustomization elementsCustom){
+void readBlock(Stack* blocks, char* command, char** commandParts, ElementsCustomization elementsCustom){
     sscanf(command, "%s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
     Block block = createBlock(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], getBlockSwCustomization(elementsCustom), getBlockCfillCustomization(elementsCustom), getBlockCstrkCustomization(elementsCustom));
     stackPush(blocks, block);
 }
 
-void readHydrant(Stack hydrants, char* command, char** commandParts, ElementsCustomization elementsCustom){
+void readHydrant(Stack* hydrants, char* command, char** commandParts, ElementsCustomization elementsCustom){
     sscanf(command, "%s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3]);
     Hydrant hydrant = createHydrant(commandParts[1], commandParts[2], commandParts[3], getHydrantSwCustomization(elementsCustom), getHydrantCfillCustomization(elementsCustom), getHydrantCstrkCustomization(elementsCustom));
     stackPush(hydrants, hydrant);
 }
 
-void readSemaphore(Stack semaphores, char* command, char** commandParts, ElementsCustomization elementsCustom){
+void readSemaphore(Stack* semaphores, char* command, char** commandParts, ElementsCustomization elementsCustom){
     sscanf(command, "%s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3]);
     Semaphore semaphore = createSemaphore(commandParts[1], commandParts[2], commandParts[3], getSemaphoreSwCustomization(elementsCustom), getSemaphoreCfillCustomization(elementsCustom), getSemaphoreCstrkCustomization(elementsCustom));
     stackPush(semaphores, semaphore);
 }
 
-void readBaseRadio(Stack baseRadios, char* command, char** commandParts, ElementsCustomization elementsCustom){
+void readBaseRadio(Stack* baseRadios, char* command, char** commandParts, ElementsCustomization elementsCustom){
     sscanf(command, "%s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3]);
     BaseRadio baseRadio = createBaseRadio(commandParts[1], commandParts[2], commandParts[3], getBaseRadioSwCustomization(elementsCustom), getBaseRadioCfillCustomization(elementsCustom), getBaseRadioCstrkCustomization(elementsCustom));
     stackPush(baseRadios, baseRadio);
@@ -219,7 +219,7 @@ void readBaseRadioCustomization(char* command, char** commandParts, ElementsCust
     setBaseRadioCstrkCustomization(elementsCustom, commandParts[3]);
 }
 
-void readHealthCenter(Stack healthCenters, char* command, int id, char** commandParts){
+void readHealthCenter(Stack* healthCenters, char* command, int id, char** commandParts){
     sscanf(command, "%s %s %s", commandParts[0], commandParts[1], commandParts[2]);
     HealthCenter healthCenter = createHealthCenter(id, commandParts[1], commandParts[2]);
     stackPush(healthCenters, healthCenter);

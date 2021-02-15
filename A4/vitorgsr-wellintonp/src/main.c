@@ -5,9 +5,13 @@
 
 /*to do list:
     
-    - dm (v) e de(w);
+    - dm    (v) (pronto!)
+    - catac (v)
 
-    - eplg(w) e catac(v); (obs: quem acabar primeiro pega o mud.)
+
+    - de    (w)
+    - eplg  (w) 
+    - mud   (w)
     
     - bosses finais: m? e dmprbt.
 
@@ -28,6 +32,10 @@ int main(int argc, char* argv[]){
 
     //Abrindo o arquivo de entrada (.geo)
     File geo = openInputFile(parameters, getGeoName);
+    if(geo == NULL){
+        printf("Erro: nao foi possivel abrir o arquivo .geo\n");
+        return 1;
+    }
 
     //Criando o TAD cidade:
     City city = createCity();
@@ -40,17 +48,19 @@ int main(int argc, char* argv[]){
         //Abrindo o arquivo de entrada (.ec)
         File ec = openInputFile(parameters, getEcName);
         
-
         //Lendo arquivo ec:
+        readEc(ec, city);
+        closeInputFile(ec);
     }
 
     if(!isPmNull(parameters)){
         //Abrindo o arquivo de entrada (.pm)
-        File ec = openInputFile(parameters, getPmName);
+        File pm = openInputFile(parameters, getPmName);
 
         //Lendo arquivo pm:
+        readPm(pm, city);
+        closeInputFile(pm);
     }
-
 
     //Criando SVG do geo:
     Svg geoSvg = NULL;

@@ -204,6 +204,8 @@ void printParameters(Parameters Param){
 
     printf("Input path (-e): %s\n", param->inputDirectory);
     printf("Geo name (-f): %s\n", param->geoName);
+    printf("ec name (-ec): %s\n", param->ecName);
+    printf("pm name (-pm): %s\n", param->pmName);
     printf("Query name (-q): %s\n", param->qryName);
     printf("Output path (-o): %s\n", param->outputDirectory);
 }
