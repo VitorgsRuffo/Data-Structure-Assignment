@@ -58,8 +58,8 @@ void readEstablishment(char* command, char** commandParts, City Ct){
     DataStructure establishmentsTree = getEstablishmentsTree(Ct);
     insertPQuadTree(establishmentsTree, getEstablishmentCoordinates(est), est);
 
-    DataStructure establishmentHashsTable = getEstablishmentsTable(Ct); 
-    insertHashTable(&establishmentHashsTable, est);
+    DataStructure* establishmentHashTable = getEstablishmentsTable(Ct); 
+    insertHashTable(establishmentHashTable, est);
 }
 
 void freeReadEcResources(char* command, char** commandParts){

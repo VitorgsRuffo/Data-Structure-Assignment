@@ -1,5 +1,3 @@
-
-
 #ifndef P_QUAD_TREE_H
 #define P_QUAD_TREE_H
 

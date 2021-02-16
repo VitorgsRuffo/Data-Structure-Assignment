@@ -16,11 +16,13 @@
     - bosses finais: m? e dmprbt.
 
 
-    extras:
-    - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
-    - checar se estamos usando os dicionarios da maneira que ele pede.
-      (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
+    - extras:
+        - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
+        - checar se estamos usando os dicionarios da maneira que ele pede.
+        (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
+    
 
+    - testar todos os comandos!.
 */
 
 

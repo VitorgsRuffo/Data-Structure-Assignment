@@ -8,18 +8,18 @@ typedef struct city {
     PQuadTree circles;
     PQuadTree rectangles;
     PQuadTree texts;
-    PQuadTree blocks;
-    PQuadTree hydrants;
-    PQuadTree baseRadios;
-    PQuadTree semaphores;
-    PQuadTree healthCenters;
+    PQuadTree blocks;//
+    PQuadTree hydrants;//
+    PQuadTree baseRadios;//
+    PQuadTree semaphores;//
+    PQuadTree healthCenters;//
     PQuadTree covidAddresses;
     HashTable establishmentTypes;
-    HashTable establishmentsTable;
-    PQuadTree establishmentsTree;
+    HashTable establishmentsTable; //
+    PQuadTree establishmentsTree; //
     HashTable people;
-    PQuadTree housesTree;
-    HashTable housesTable;
+    PQuadTree housesTree; //
+    HashTable housesTable; //
     List queryElements;
 }city;
 
@@ -40,12 +40,14 @@ City createCity(){
     ct->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
     ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
     ct->covidAddresses = createPQuadTree(getCovidAddressId, getCovidAddressCoordinates);
+    
     ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
     ct->establishmentsTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
     ct->establishmentsTree = createPQuadTree(getEstablishmentCnpj, getEstablishmentCoordinates);
     ct->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);
     ct->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
     ct->housesTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getHouseCpf);
+    
     ct->queryElements = createList();
 
     return ct;
@@ -132,12 +134,12 @@ HashTable getEstablishmentTypes(City Ct){
     return ct->establishmentTypes;
 }
 
-HashTable getEstablishmentsTable(City Ct){
+HashTable* getEstablishmentsTable(City Ct){
     if(Ct == NULL)
         return NULL;
 
     city *ct = (city*) Ct;
-    return ct->establishmentsTable;
+    return &ct->establishmentsTable;
 }
 
 PQuadTree getEstablishmentsTree(City Ct){
@@ -319,8 +321,8 @@ void freeCity(City Ct){
     freePQuadTree(ct->healthCenters, freeHealthCenter);
 
     freeHashTable(ct->establishmentTypes, freeEstablishmentType);
-    //freeHashTable(ct->establishmentsTable, freeEstablishment);
     freePQuadTree(ct->establishmentsTree, freeEstablishment);
+    freeHashTable(ct->establishmentsTable, NULL);
     freeHashTable(ct->people, freePerson);
     freePQuadTree(ct->housesTree, freeHouse);
     freeHashTable(ct->housesTable, NULL);
