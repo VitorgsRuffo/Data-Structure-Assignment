@@ -134,6 +134,7 @@ HashTable getEstablishmentTypes(City Ct){
     return ct->establishmentTypes;
 }
 
+
 HashTable* getEstablishmentsTable(City Ct){
     if(Ct == NULL)
         return NULL;

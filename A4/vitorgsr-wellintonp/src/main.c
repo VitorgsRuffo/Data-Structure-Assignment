@@ -21,8 +21,13 @@
         - checar se estamos usando os dicionarios da maneira que ele pede.
         (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
     
+   
+
+    ****** Corrigir a questão de criar uma figura passando ".." e depois querer setar um valor nesse local 
+    (não vai ter memória suficiente para um numero pois alocou memória do tamanho de "..")(exemplo BlockBorder.c)
 
     - testar todos os comandos!.
+
 */
 
 
@@ -49,7 +54,7 @@ int main(int argc, char* argv[]){
     if(!isEcNull(parameters)){
         //Abrindo o arquivo de entrada (.ec)
         File ec = openInputFile(parameters, getEcName);
-        
+       
         //Lendo arquivo ec:
         readEc(ec, city);
         closeInputFile(ec);
@@ -57,8 +62,8 @@ int main(int argc, char* argv[]){
 
     if(!isPmNull(parameters)){
         //Abrindo o arquivo de entrada (.pm)
-        File pm = openInputFile(parameters, getPmName);
-
+        File ec = openInputFile(parameters, getPmName);
+    
         //Lendo arquivo pm:
         readPm(pm, city);
         closeInputFile(pm);

@@ -36,6 +36,10 @@
         "qry.h": "c",
         "tools.h": "c",
         "convexhull.h": "c",
-        "block.h": "c"
+        "block.h": "c",
+        "establishment.h": "c",
+        "establishmentinformation.h": "c",
+        "rectangle.h": "c",
+        "changeaddress.h": "c"
     }
 }

@@ -1,7 +1,8 @@
 #ifndef HOUSE_H
 #define HOUSE_H
 
-#include "./city.h"
+#include "city.h"
+#include "address.h"
 #include "../point.h"
 #include "./address.h"
 
@@ -27,6 +28,12 @@ char* getHouseCpf(House H);
 * Pós-Condição: retorna a instancia de endereco que localiza a casa na cidade.
 */
 Address getHouseAddress(House H);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de casa e uma instancia do novo endereco a ser atribuido.
+* Pós-Condição: libera o antigo endereco da casa e atribui o endereco do parametro como novo endereço. Retorna 0 caso de algum erro, caso contrário retorna 1.
+*/
+int setHouseAddress(House H, Address newAddress);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.

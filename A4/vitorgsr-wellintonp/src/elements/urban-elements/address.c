@@ -185,6 +185,16 @@ void setAddressCoordinatesOnWestFace(address* add, double bx, double by, double 
     setPointY(add->coordinates, (by + add->number));
 }
 
+char* addressToString(Address Add){
+    if(Add == NULL)
+        return NULL;
+    
+    address *add = (address*) Add;
+
+    char* addressInfoString = (char*) malloc(200 * sizeof(char));
+    sprintf(addressInfoString, "Cep: %s, Face: %c, Numero: %d, Complemento: %s\n", add->cep, add->face, add->number, add->compl);
+    return addressInfoString;
+}
 
 void freeAddress(Address Add){
     if(Add == NULL) return;
