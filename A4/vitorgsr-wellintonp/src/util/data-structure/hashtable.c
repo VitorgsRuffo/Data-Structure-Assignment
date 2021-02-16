@@ -73,12 +73,11 @@ int insertHashTable(HashTable* HashT, Info info){
 
     if(HashT == NULL || info == NULL)
         return 0;   
-
+        
     hashtable** hashT = (hashtable**) HashT;
 
     if((**hashT).elementsAmount + 1 >= 0.75 * (**hashT).size) //se a insercao de mais um elemento causar uma ocupacao de 75% do tamanho da tabela é recomendado aumentar seu tamanho.
         *hashT = resizeHashTable(*hashT);
-    
 
     char* infoKey = (*((**hashT).getKey))(info);
 

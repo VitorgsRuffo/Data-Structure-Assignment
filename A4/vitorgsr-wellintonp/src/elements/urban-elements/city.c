@@ -126,12 +126,12 @@ PQuadTree getCovidAddresses(City Ct){
   return ct->covidAddresses;
 }
 
-HashTable getEstablishmentTypes(City Ct){
+HashTable* getEstablishmentTypes(City Ct){
     if(Ct == NULL)
         return NULL;
 
     city *ct = (city*) Ct;
-    return ct->establishmentTypes;
+    return &ct->establishmentTypes;
 }
 
 
