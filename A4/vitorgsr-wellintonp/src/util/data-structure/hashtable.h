@@ -23,7 +23,7 @@ HashTable createHashTable(int tableSize, getInfoKey getKey);
     Pré condição: requer uma instancia de tabela hash e a informacao a ser inserida. A chave dessa informacao nao deve ja estar presente na tabela.
     Pós condição: insere o dado "info" na tabela e retorna 1. Se a insercao falhar retorna 0.
 */
-int insertHashTable(HashTable HashT, Info info);
+int insertHashTable(HashTable* HashT, Info info);
 
 /*
     Pré condição: requer uma instancia de tabela hash e uma chave.

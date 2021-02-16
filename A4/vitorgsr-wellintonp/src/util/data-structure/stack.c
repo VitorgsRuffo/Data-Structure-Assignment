@@ -24,9 +24,11 @@ int empty(Stack* PointerToHead){
 }
 
 int stackLength(Stack* PointerToHead){
-    if(PointerToHead == NULL || empty(PointerToHead))
-        return 0;  
-    
+    if(PointerToHead == NULL)
+        return -1;  
+    else if(empty(PointerToHead))
+        return -2;
+
     stackNode** pointerToHead = (stackNode**) PointerToHead;
     stackNode* aux = *pointerToHead; //endereço do nó no topo da pilha.
     int count = 0;
@@ -52,7 +54,7 @@ int stackPush(Stack* PointerToHead, Info data){
     newNode->data = data;
     newNode->next = *pointerToHead;
     *pointerToHead = newNode;
-
+    
     return 1;
 }
 
@@ -103,9 +105,11 @@ Info* stackToArray(Stack* PointerToHead){
     return array;
 } 
 
-void printStack(Stack* PointerToHead, char* (*tadToString)(void*)){
-    if(PointerToHead == NULL || empty(PointerToHead))
-       return;
+int printStack(Stack* PointerToHead, char* (*tadToString)(void*)){
+    if(PointerToHead == NULL)
+       return -1;
+    if(empty(PointerToHead))
+        return -2;
 
     stackNode** pointerToHead = (stackNode**) PointerToHead;
     stackNode* aux = *pointerToHead; //endereço do nó no topo da pilha.
@@ -119,6 +123,8 @@ void printStack(Stack* PointerToHead, char* (*tadToString)(void*)){
         free(tadString);
         aux = (*aux).next;
     }while(aux != NULL);
+
+    return 1;
 }
 
 void freeStack(Stack* PointerToHead, void (*freeTad)(void*)){

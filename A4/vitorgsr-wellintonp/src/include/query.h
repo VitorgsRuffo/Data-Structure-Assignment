@@ -14,5 +14,7 @@
 #include "../util/query/covidCases.h"
 #include "../util/query/medicalTreatment.h"
 #include "../util/query/covidIncidence.h"
+#include "../util/query/personalInfo.h"
+#include "../util/query/urbanDeletionInRange.h"
 
 #endif 

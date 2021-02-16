@@ -2,6 +2,7 @@
 #include "hashtable.h"
 #include "list.h" 
 
+
 typedef struct hashtable {
     int elementsAmount;
     int size;
@@ -32,7 +33,7 @@ HashTable createHashTable(int tableSize, getInfoKey getKey){
 
     for(int i = 0 ; i < tableSize; i++)
         hashT->info[i] = createList(); //same as *((*hashT).info + i) = createList();
-
+    
     hashT->getKey = getKey;
 
     return hashT;    
@@ -55,37 +56,37 @@ hashtable* resizeHashTable(hashtable* hashT){
 
                 info = get(currentList, currentNode);
 
-                insertHashTable(newHashT, info);
+                insertHashTable((HashTable*) &newHashT, info);
                 
                 currentNode = getNext(currentList, currentNode);
             }
         }
     }
 
-    freeHashTable(hashT, NULL); //desaloca apenas a hashtable antiga, mantendo as informacoes alocadas.
+    freeHashTable((HashTable) hashT, NULL); //desaloca apenas a hashtable antiga, mantendo as informacoes alocadas.
     return newHashT;
 }
 
 
 
-int insertHashTable(HashTable HashT, Info info){
+int insertHashTable(HashTable* HashT, Info info){
 
     if(HashT == NULL || info == NULL)
         return 0;   
 
-    hashtable* hashT = (hashtable*) HashT;
+    hashtable** hashT = (hashtable**) HashT;
 
-    if(hashT->elementsAmount + 1 >= 0.75 * hashT->size) //se a insercao de mais um elemento causar uma ocupacao de 75% do tamanho da tabela é recomendado aumentar seu tamanho.
-        hashT = resizeHashTable(hashT);
+    if((**hashT).elementsAmount + 1 >= 0.75 * (**hashT).size) //se a insercao de mais um elemento causar uma ocupacao de 75% do tamanho da tabela é recomendado aumentar seu tamanho.
+        *hashT = resizeHashTable(*hashT);
     
 
-    char* infoKey = (*(hashT->getKey))(info);
+    char* infoKey = (*((**hashT).getKey))(info);
 
-    int position = hashFunction(hashT, infoKey);
+    int position = hashFunction(*hashT, infoKey);
 
 
-    insert(hashT->info[position], info);   //same as insert(*((*hashT).info + position), info);    
-    hashT->elementsAmount++;
+    insert((**hashT).info[position], info);  
+    (**hashT).elementsAmount++;
 
     return 1;
 }
@@ -216,6 +217,8 @@ void freeHashTable(HashTable HashT, freeInfo freeFunction){
 
 int hashFunction(hashtable* hashT, char *str){
     
+    if(hashT->size == 0) return -1;
+
     unsigned long hash = 5381;
     int c;
 
