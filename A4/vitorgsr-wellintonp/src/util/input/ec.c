@@ -44,22 +44,23 @@ void readEstablishmentType(char* command, char** commandParts, City Ct){
     sscanf(&command[2], "%s %s", commandParts[0], commandParts[1]);
     EstablishmentType et = createEstablishmentType(commandParts[0], commandParts[1]);
     DataStructure establishmentTypes = getEstablishmentTypes(Ct);
-    insertHashTable(establishmentTypes, et);
+    insertHashTable(&establishmentTypes, et);
 }
 
 void readEstablishment(char* command, char** commandParts, City Ct){
     
     sscanf(&command[2], "%s %s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], commandParts[6]);
-    char face = commandParts[4][0]; // Conferir se isto da certo ****************
+    char face = commandParts[4][0]; 
     int number = atoi(commandParts[5]);
+    
     Establishment est = createEstablishment(commandParts[0], commandParts[1], commandParts[2], commandParts[3], face, number, commandParts[6], Ct);
     
-    //Inserçao na QuadTree
-    DataStructure establishmentTree = getEstablishmentsTree(Ct);
-    insertPQuadTree(establishmentTree, getEstablishmentCoordinates(est), est);
+    DataStructure establishmentsTree = getEstablishmentsTree(Ct);
+    insertPQuadTree(establishmentsTree, getEstablishmentCoordinates(est), est);
+
 
     // Inserçao na HashTable
-    DataStructure establishmentHashTable = getEstablishmentsTable(Ct); 
+    DataStructure* establishmentHashTable = getEstablishmentsTable(Ct); 
     insertHashTable(establishmentHashTable, est);
 }
 

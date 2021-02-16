@@ -5,22 +5,28 @@
 
 /*to do list:
     
-    - dm (v) e de(w);
+    - dm    (v) (pronto!)
+    - catac (v)
 
-    - eplg(w) e catac(v); (obs: quem acabar primeiro pega o mud.)
+
+    - de    (w)
+    - eplg  (w) 
+    - mud   (w)
     
     - bosses finais: m? e dmprbt.
 
 
-    extras:
-    - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
-    - checar se estamos usando os dicionarios da maneira que ele pede.
-      (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
-
+    - extras:
+        - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
+        - checar se estamos usando os dicionarios da maneira que ele pede.
+        (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
     
+   
 
     ****** Corrigir a questão de criar uma figura passando ".." e depois querer setar um valor nesse local 
     (não vai ter memória suficiente para um numero pois alocou memória do tamanho de "..")(exemplo BlockBorder.c)
+
+    - testar todos os comandos!.
 
 */
 
@@ -33,6 +39,10 @@ int main(int argc, char* argv[]){
 
     //Abrindo o arquivo de entrada (.geo)
     File geo = openInputFile(parameters, getGeoName);
+    if(geo == NULL){
+        printf("Erro: nao foi possivel abrir o arquivo .geo\n");
+        return 1;
+    }
 
     //Criando o TAD cidade:
     City city = createCity();
@@ -43,19 +53,21 @@ int main(int argc, char* argv[]){
     
     if(!isEcNull(parameters)){
         //Abrindo o arquivo de entrada (.ec)
-        //File ec = openInputFile(parameters, getEcName);
-        printf("Lendo pm\n");
-
+        File ec = openInputFile(parameters, getEcName);
+       
         //Lendo arquivo ec:
+        readEc(ec, city);
+        closeInputFile(ec);
     }
 
     if(!isPmNull(parameters)){
         //Abrindo o arquivo de entrada (.pm)
-        //File ec = openInputFile(parameters, getPmName);
-        printf("Lendo ec\n");
+        File ec = openInputFile(parameters, getPmName);
+    
         //Lendo arquivo pm:
+        readPm(pm, city);
+        closeInputFile(pm);
     }
-
 
     //Criando SVG do geo:
     Svg geoSvg = NULL;

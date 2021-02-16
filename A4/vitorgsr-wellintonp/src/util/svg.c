@@ -20,9 +20,14 @@ Svg createSvg(Parameters Param, City Ct, char* fileType){
         
     Svg svg = NULL;
     
+    printf("%s\n\n", filePath);
+
     if(access(filePath, F_OK ) == -1)  //se a funcao access retornar -1 significa que o arquivo cujo caminho é "filePath" ainda nao existe, portanto, iremos cria-lo. Não iremos cria-lo caso ele ja exista nesse diretorio.       
         svg = openSvg(filePath); 
-                                   
+
+    printf("filetype: %s\n", fileType);
+    printf("svg: %p\n", svg);
+
     free(filePath);
     return svg;
 }
@@ -121,9 +126,9 @@ int drawOnSvg(Svg svg, City Ct){
     DataStructure covidAddresses = getCovidAddresses(Ct);
     drawElementsOnSvg(svg, covidAddresses, &buildCovidAddressSvgTag);
 
-    DataStructure houses = getHousesTree(Ct);
-    drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
-
+    //DataStructure houses = getHousesTree(Ct);
+    //drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
+    
     List queryElementsList = getQueryElements(Ct);
     drawQueryElementsOnSvg(svg, queryElementsList);
 
@@ -140,9 +145,10 @@ void drawElementOnSvg(Info info, ExtraInfo extraInfo);
 
 void drawElementsOnSvg(Svg svg, DataStructure elements, buildElementSvgTag buildTag){
    
-    if(svg == NULL || elements == NULL || buildTag)
+    if(svg == NULL || elements == NULL || buildTag == NULL || PQuadTreeSize(elements) <= 0)
         return;
     
+
     SvgTag extraInfo;
     extraInfo.svg = svg; 
     extraInfo.buildTag = buildTag; 
@@ -154,7 +160,6 @@ void drawElementsOnSvg(Svg svg, DataStructure elements, buildElementSvgTag build
 }
 
 void drawElementOnSvg(Info info, ExtraInfo extraInfo){
-    
     SvgTag *exInfo = (SvgTag*) extraInfo;
     
     (*exInfo->buildTag)(exInfo->elementTag, info);
@@ -207,10 +212,12 @@ void buildBlockSvgTag(char* blockTag, Block Blk){
     char* rx = getBlockRx(Blk);
     float xCep =  atof(x)+(atof(width)/2);
     float yCep =  atof(y)+(atof(height)/2);
-    char* shadowColor;
+    char transparentShadow[15];
+    strcpy(transparentShadow, "rgba(0,0,0,0)");
 
+    char* shadowColor;
     if((shadowColor = getBlockShadowColor(Blk)) == NULL)
-        strcpy(shadowColor, "rgba(0,0,0,0)");
+        shadowColor = transparentShadow;
 
     sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n", width, height, (x + 8), (y + 8), rx , shadowColor, sw, shadowColor); 
     sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%f\" y=\"%f\" fill=\"black\" stroke=\"white\" stroke-width=\"0.1\" dominant-baseline=\"middle\" text-anchor=\"middle\"> %s </text>\n", width, height, x, y, rx ,cstrk, sw, cfill, xCep, yCep, cep);

@@ -17,5 +17,8 @@
 #include "../util/query/establishmentInformation.h"
 #include "../util/query/highlightEstablishment.h"
 #include "../util/query/changeAddress.h"
+#include "../util/query/personalInfo.h"
+#include "../util/query/urbanDeletionInRange.h"
+
 
 #endif 

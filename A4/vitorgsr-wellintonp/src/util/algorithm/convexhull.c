@@ -29,7 +29,7 @@ Stack convexHull(Point* points, int pointsAmount) {
     p0 = *points;
 
     //ordenaremos os pontos (a partir do segundo) efetuando uma comparacao que depende do ponto p0.
-    quicksort((points + 1), 0, pointsAmount-1, comparePoints);
+    quicksort((points + 1), 0, pointsAmount-2, comparePoints);
 
     
     int m = 1; 
@@ -54,7 +54,7 @@ Stack convexHull(Point* points, int pointsAmount) {
 
     
     for (int i = 3; i < m; i++) { 
-        while (findOrientationOfOrderedPoints(nextToTop(&head), stackTop(&head), *(points + i)) != 2) 
+        while (findOrientationOfOrderedPoints(nextToTop(&head), stackTop(&head), *(points + i)) != 2)
             stackPop(&head); 
         
         stackPush(&head, *(points + i));

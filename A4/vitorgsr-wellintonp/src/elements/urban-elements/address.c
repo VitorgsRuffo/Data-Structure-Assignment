@@ -44,6 +44,30 @@ Address createAddress(char* cep, char face, int number, char* compl, City Ct){
     return add;
 }
 
+char* getAddressCep(Address Add){
+    if(Add == NULL) return NULL;
+    address *add = (address*) Add;
+    return add->cep;
+}
+
+char getAddressFace(Address Add){
+    if(Add == NULL) return -1;
+    address *add = (address*) Add;
+    return add->face;
+}
+
+int getAddressNumber(Address Add){
+    if(Add == NULL) return -1;
+    address *add = (address*) Add;
+    return add->number;
+}
+
+char* getAddressCompl(Address Add){
+    if(Add == NULL) return NULL;
+    address *add = (address*) Add;
+    return add->compl;
+}
+
 Point getAddressCoordinates(Address Add){
     if(Add == NULL) return NULL;
     address *add = (address*) Add;
@@ -68,6 +92,16 @@ double getAddressY(Address Add){
     return getPointY(add->coordinates);
 }
 
+char* addressToString(Address Add){
+     if(Add == NULL)
+        return NULL;
+    address *add = (address*) Add;
+
+    char* string = (char*) malloc(100 * sizeof(char));
+    sprintf(string, "endereco - cep: %s, face: %c, num: %d, compl: %s.",
+                    add->cep, add->face, add->number, add->compl);
+    return string;
+}
 
 void readBlockAttributes(Info blockInfo, Rectangle* block);
 

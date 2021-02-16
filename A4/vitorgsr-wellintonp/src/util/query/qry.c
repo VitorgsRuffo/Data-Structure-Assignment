@@ -78,7 +78,13 @@ void executeQry(File qry, City Ct, Parameters Param){
 
         else if(!strcmp(commandType, "mud"))
             executeChangeOfAddress(command, Ct, txt);
-
+        
+        else if(!strcmp(commandType, "dm?"))
+            executePersonalInformationChecking(command, Ct, txt);
+        
+        else if(!strcmp(commandType, "catac"))
+            executeUrbanElementsDeletionInRange(command, Ct, txt);
+      
         uniqueId++;
     }
     

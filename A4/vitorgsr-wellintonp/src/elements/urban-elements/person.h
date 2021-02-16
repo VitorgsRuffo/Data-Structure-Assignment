@@ -42,6 +42,13 @@ char getPersonGender(Person Pe);
 */
 char* getPersonBirthdate(Person Pe);
 
+
+/*  
+    Pré-Condição: requer o endereco de uma instancia de pessoa.
+    Pós-Condição: aloca e retorna uma string com as informacoes da instancia de pessoa.
+*/
+char* personToString(Person Pe);
+
 /*  
 * Pré-Condição: requer o endereco de uma instancia de pessoa.
 * Pós-Condição: libera a memoria usada pela instancia de pessoa que foi passada.
