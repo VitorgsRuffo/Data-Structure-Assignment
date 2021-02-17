@@ -44,7 +44,7 @@ void readPeople(char* command, char** commandParts, City Ct){
     Person person = createPerson(commandParts[0], commandParts[1], commandParts[2], gender, commandParts[4]);
     
     DataStructure* peopleTable = getPeople(Ct);
-    insertHashTable((HashTable*) peopleTable, person);
+    insertHashTable(peopleTable, person);
 }
 
 void readPeopleAddress(char* command, char** commandParts, City Ct){
@@ -54,8 +54,6 @@ void readPeopleAddress(char* command, char** commandParts, City Ct){
     int number = atoi(commandParts[3]);
     House house = createHouse(commandParts[0], commandParts[1], face, number, commandParts[4], Ct);
 
-
-    // Inserçao na HashTable
     DataStructure* housesTable = getHousesTable(Ct); 
     insertHashTable((HashTable*) housesTable, house);
 

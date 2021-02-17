@@ -83,7 +83,7 @@ void executeQry(File qry, City Ct, Parameters Param){
             executePersonalInformationChecking(command, Ct, txt);
         
         else if(!strcmp(commandType, "catac"))
-            executeUrbanElementsDeletionInRange(command, Ct, txt);
+            executeUrbanElementsDeletion(command, Ct, txt);
       
         uniqueId++;
     }

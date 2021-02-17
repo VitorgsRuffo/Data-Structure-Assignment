@@ -103,11 +103,9 @@ Stack queueToStack(Queue Q){
     if(currentNode == NULL) return NULL;
 
     Stack stack = createStack();
-    if(stack == NULL) return NULL;
-
     while(currentNode != NULL){
 
-        stackPush(stack, currentNode->info);
+        stackPush(&stack, currentNode->info);
         currentNode = currentNode->prox;
     }
 

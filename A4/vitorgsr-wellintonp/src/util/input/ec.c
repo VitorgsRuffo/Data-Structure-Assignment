@@ -43,8 +43,8 @@ void readEstablishmentType(char* command, char** commandParts, City Ct){
 
     sscanf(&command[2], "%s %s", commandParts[0], commandParts[1]);
     EstablishmentType et = createEstablishmentType(commandParts[0], commandParts[1]);
-    DataStructure establishmentTypes = getEstablishmentTypes(Ct);
-    insertHashTable(&establishmentTypes, et);
+    DataStructure* establishmentTypes = getEstablishmentTypes(Ct);
+    insertHashTable(establishmentTypes, et);
 }
 
 void readEstablishment(char* command, char** commandParts, City Ct){
@@ -58,10 +58,8 @@ void readEstablishment(char* command, char** commandParts, City Ct){
     DataStructure establishmentsTree = getEstablishmentsTree(Ct);
     insertPQuadTree(establishmentsTree, getEstablishmentCoordinates(est), est);
 
-
-    // Inserçao na HashTable
-    DataStructure* establishmentHashTable = getEstablishmentsTable(Ct); 
-    insertHashTable(establishmentHashTable, est);
+    DataStructure* establishmentsTable = getEstablishmentsTable(Ct); 
+    insertHashTable(establishmentsTable, est);
 }
 
 void freeReadEcResources(char* command, char** commandParts){

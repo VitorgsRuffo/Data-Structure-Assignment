@@ -103,6 +103,16 @@ char* addressToString(Address Add){
     return string;
 }
 
+void freeAddress(Address Add){
+    if(Add == NULL) return;
+    address *add = (address*) Add;
+
+    free(add->compl);
+    freeRectangle(add->block);
+    free(add->coordinates);
+    free(add);
+}
+
 void readBlockAttributes(Info blockInfo, Rectangle* block);
 
 int setAddressBlock(address* add, City Ct){
@@ -183,25 +193,4 @@ void setAddressCoordinatesOnEastFace(address* add, double bx, double by, double 
 void setAddressCoordinatesOnWestFace(address* add, double bx, double by, double bw, double bh){
     setPointX(add->coordinates, (bx + bw - ADDRESS_DISTANCE_FROM_BLOCK_BORDER));
     setPointY(add->coordinates, (by + add->number));
-}
-
-char* addressToString(Address Add){
-    if(Add == NULL)
-        return NULL;
-    
-    address *add = (address*) Add;
-
-    char* addressInfoString = (char*) malloc(200 * sizeof(char));
-    sprintf(addressInfoString, "Cep: %s, Face: %c, Numero: %d, Complemento: %s\n", add->cep, add->face, add->number, add->compl);
-    return addressInfoString;
-}
-
-void freeAddress(Address Add){
-    if(Add == NULL) return;
-    address *add = (address*) Add;
-
-    free(add->compl);
-    freeRectangle(add->block);
-    free(add->coordinates);
-    free(add);
 }

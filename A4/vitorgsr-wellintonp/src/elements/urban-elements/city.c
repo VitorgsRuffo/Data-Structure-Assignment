@@ -8,11 +8,11 @@ typedef struct city {
     PQuadTree circles;
     PQuadTree rectangles;
     PQuadTree texts;
-    PQuadTree blocks;//
-    PQuadTree hydrants;//
-    PQuadTree baseRadios;//
-    PQuadTree semaphores;//
-    PQuadTree healthCenters;//
+    PQuadTree blocks;//*
+    PQuadTree hydrants;//*
+    PQuadTree baseRadios;//*
+    PQuadTree semaphores;//*
+    PQuadTree healthCenters;//*
     PQuadTree covidAddresses;
     HashTable establishmentTypes;
     HashTable establishmentsTable; //
@@ -41,7 +41,7 @@ City createCity(){
     ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
     ct->covidAddresses = createPQuadTree(getCovidAddressId, getCovidAddressCoordinates);
     
-    ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCode);
+    ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentTypeCode);
     ct->establishmentsTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
     ct->establishmentsTree = createPQuadTree(getEstablishmentCnpj, getEstablishmentCoordinates);
     ct->people = createHashTable(HASH_TABLE_INITIAL_SIZE, getPersonCpf);

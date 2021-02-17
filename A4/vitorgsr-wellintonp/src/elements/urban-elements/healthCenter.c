@@ -64,6 +64,17 @@ char* getHealthCenterRadius(HealthCenter HealthC){
     return healthC->radius;
 }
 
+char* healthCenterToString(HealthCenter HealthC){
+    if(HealthC == NULL)
+        return NULL;
+
+    healthCenter *healthC = (healthCenter*) HealthC;
+
+    char* string = (char*) malloc(200 * sizeof(char));
+    sprintf(string, "Tipo: posto de saude, id: %s, x: %s, y: %s, radius: %s", healthC->id, healthC->x, healthC->y, healthC->radius);
+    return string;
+}
+
 void freeHealthCenter(HealthCenter HealthC){
     if(HealthC == NULL)
         return;

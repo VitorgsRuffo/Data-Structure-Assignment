@@ -284,27 +284,6 @@ Info* listToArray(List Li){
     return array;
 }
 
-
-/*
-
-Info* stackToArray(Stack* PointerToHead){
-    if(PointerToHead == NULL || empty(PointerToHead))
-        return NULL;
-    
-    int length = stackLength(PointerToHead);
-
-    Info* array = (Info*) malloc(length*sizeof(Info));
-    if(array == NULL)
-        return NULL;
-    
-    for(int i=0; i<length; i++)
-        array[i] = stackPop(PointerToHead);
-    
-    return array;
-} 
-
-
-*/
 void freeList(List Li, void (*freeTAD)(void*)){
     if(Li == NULL)
         return;

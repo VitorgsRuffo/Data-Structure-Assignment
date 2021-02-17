@@ -59,6 +59,11 @@ double getHouseH(House H);
 */
 Point getHouseCenterOfMass(House H);
 
+/*  
+* Pré-Condição: requer o endereco de uma instancia de casa.
+* Pós-Condição: retorna uma string com todas as informacoes da casa.
+*/
+char* houseToString(House H);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de casa.
