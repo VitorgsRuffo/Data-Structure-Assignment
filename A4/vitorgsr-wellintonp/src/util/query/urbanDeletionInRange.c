@@ -10,7 +10,7 @@ typedef struct {
     File txt;
 }Variables;
 
-void deleteBlocksInRange(Variables variables);
+//void deleteBlocksInRange(Variables variables);
 char* buildUrbanElementsDeletionRangeTag(char* x, char* y, char* radius);
 
 void executeUrbanElementsDeletionInRange(char* command, City Ct, File txt){
@@ -26,7 +26,7 @@ void executeUrbanElementsDeletionInRange(char* command, City Ct, File txt){
     variables.txt = txt;
 
     variables.elements = getBlocks(Ct);
-    deleteBlocksInRange(variables);
+    //deleteBlocksInRange(variables);
 
     //deleteUrbanEquipmentsInRange(txt);
 
@@ -42,11 +42,11 @@ void executeUrbanElementsDeletionInRange(char* command, City Ct, File txt){
 
 void function(Info blockInfo, ExtraInfo extraInfo);
 
-void deleteBlocksInRange(Variables variables){
+/*void deleteBlocksInRange(Variables variables){
 
     levelOrderTraversal(variables.elements, function, &variables);
 }
-
+*/
 void function(Info blockInfo, ExtraInfo extraInfo){
 
     Variables* variables = (Variables*) extraInfo;

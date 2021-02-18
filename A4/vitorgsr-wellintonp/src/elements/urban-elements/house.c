@@ -24,9 +24,9 @@ House createHouse(char* cpf, char* cep, char face, int number, char* compl, City
     strcpy(h->cpf, cpf);
     h->address = createAddress(cep, face, number, compl, Ct);
     h->coordinates = createPoint(0,0);
-    setHouseCoordinates(h);
     h->w = houseWidth;
     h->h = houseHeight;
+    setHouseCoordinates(h);
 
     return h;
 }

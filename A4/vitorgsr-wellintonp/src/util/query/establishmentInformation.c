@@ -14,17 +14,23 @@ void executeEstablishmentInformationChecking(char* command, City Ct, File txt){
     sscanf(&command[4], "%s", cnpj);
 
     // Pegando informações do estabelecimento comercial
-    DataStructure establishmentTable = getEstablishmentsTable(Ct);
-    Info establishmentInfo = getHashTableInfo(establishmentTable, cnpj);
+    DataStructure* establishmentTable = getEstablishmentsTable(Ct);
+    Info establishmentInfo = getHashTableInfo(*establishmentTable, cnpj);
+
+    if(establishmentInfo == NULL){  // Caso nao exista o cnpj na tabela escrevemos no txt o aviso e finalizamos a função.
+        fprintf(txt, "CNPJ inexistente\n\n");
+        return;
+    }
+
     char* ownerCpf = getEstablishmentCpf(establishmentInfo);
 
     // Pegando as informações do proprietario do estabelecimento comercial
-    DataStructure peoples = getPeople(Ct);
-    Info personInfo = getHashTableInfo(peoples, ownerCpf);
+    DataStructure* peoples = getPeople(Ct);
+    Info personInfo = getHashTableInfo(*peoples, ownerCpf);
 
     // Pegando a tabela de descrição de tipos de estabelecimentos
-    DataStructure establishmentsTypes = getEstablishmentTypes(Ct);
-    Info establishmentType = getHashTableInfo(establishmentsTypes, getEstablishmentCode(establishmentInfo));
+    DataStructure* establishmentsTypes = getEstablishmentTypes(Ct);
+    Info establishmentType = getHashTableInfo(*establishmentsTypes, getEstablishmentCode(establishmentInfo));
 
     writeEstablishmentInfosOnTxt(txt, establishmentInfo, personInfo, establishmentType);
 }
@@ -32,15 +38,11 @@ void executeEstablishmentInformationChecking(char* command, City Ct, File txt){
 void writeEstablishmentInfosOnTxt(File txt, Info estabInfo,Info personInfo, Info estabType){
 
     char* establishmentString = establishmentToString(estabInfo, estabType);
+    char* personString = personToString(personInfo);
 
     fprintf(txt, "%s", establishmentString);
     fprintf(txt, "Dados do proprietario:\n");
-    //Chamar toString do Person
-    fprintf(txt, "CPF: %s\n", getPersonCpf(personInfo));
-    fprintf(txt, "Nome: %s\n", getPersonName(personInfo));
-    fprintf(txt, "Sobrenome: %s\n", getPersonLastName(personInfo));
-    fprintf(txt, "Sexo: %c\n", getPersonGender(personInfo));
-    fprintf(txt, "Data de nascimento: %s\n", getPersonBirthdate(personInfo));
+    fprintf(txt, "%s", personString);
     fprintf(txt, "\n\n");
 
     free(establishmentString);

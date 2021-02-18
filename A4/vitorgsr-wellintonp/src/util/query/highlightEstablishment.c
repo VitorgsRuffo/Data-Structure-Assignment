@@ -8,12 +8,13 @@
 typedef struct {
     File txt;
     char codt[5];
-    DataStructure people;
+    DataStructure* people;
     Rectangle regionRect;
-    DataStructure establishmentsType;
+    DataStructure* establishmentsType;
     List queryElements;
 }Variables;
 
+void buildDelitionRectange(Rectangle rect, List queryElements);
 void highlightEstablishmentsInRange(Info establishmentInfo, ExtraInfo extraInfo);
 
 void executeHighlightEstablishmentInRange(char* command, City Ct, File txt){
@@ -26,37 +27,36 @@ void executeHighlightEstablishmentInRange(char* command, City Ct, File txt){
     // Retangulo que representa a regiao delimitante
     Rectangle rect = createRectangle("..", w, h, x, y, "..", "..", "..");
 
-    DataStructure establishments = getEstablishmentsTable(Ct);
+    DataStructure establishments = getEstablishmentsTree(Ct);
     
     variables.txt = txt;
     strcpy(variables.codt, codt);
     variables.people = getPeople(Ct);
     variables.regionRect = rect;
-    variables.establishmentsType = getEstablishmentTypes(Ct);
-    variables.queryElements = getQueryElements(Ct);
+    variables.establishmentsType = getEstablishmentTypes(Ct);  
 
     levelOrderTraversal(establishments, highlightEstablishmentsInRange, &variables);
 
+    buildDelitionRectange(rect, getQueryElements(Ct));
     free(rect);
 }
 
-
-void buildHighlightCircumference(Info establishmentInfo, List queryElements);
 void writeEstablishmentInformationOnTxt(Info establishmentInfo, Info establishmentsTypeInfo, Info personInfo, File txt);
 
 void highlightEstablishmentsInRange(Info establishmentInfo, ExtraInfo extraInfo){
-    
-    Variables* variables = (Variables*) extraInfo;
-    Point estabCoordinates = getEstablishmentCoordinates(establishmentInfo);
 
+    Variables* variables = (Variables*) extraInfo;  
+    
+    Point estabCoordinates = getEstablishmentCoordinates(establishmentInfo);
     double estabX = getPointX(estabCoordinates); 
     double estabY = getPointY(estabCoordinates);
+
     double estabWidth = getEstablishmentWidth(establishmentInfo);
     double estabHeight = getEstablishmentHeight(establishmentInfo);
 
     char* ownerCpf = getEstablishmentCpf(establishmentInfo);
-    Info owner = getHashTableInfo(variables->people, ownerCpf);
-    Info establishmentTypeInfo = getHashTableInfo(variables->establishmentsType, getEstablishmentCode(establishmentInfo));
+    Info owner = getHashTableInfo(*(variables->people), ownerCpf);
+    Info establishmentTypeInfo = getHashTableInfo(*(variables->establishmentsType), getEstablishmentCode(establishmentInfo));
 
     char x[20]; char y[20]; char w[20]; char h[20];
     sprintf(x, "%lf", estabX); sprintf(y, "%lf", estabY);
@@ -67,7 +67,7 @@ void highlightEstablishmentsInRange(Info establishmentInfo, ExtraInfo extraInfo)
     if(!strcmp(variables->codt, "*")){
         if(isRectangleInsideRectangle(establishmentRect, variables->regionRect)){
             writeEstablishmentInformationOnTxt(establishmentInfo, establishmentTypeInfo, owner, variables->txt);
-            buildHighlightCircumference(establishmentInfo, variables->queryElements);
+            setEstablishmentColor(establishmentInfo, "pink");
         }
     }
 
@@ -77,7 +77,7 @@ void highlightEstablishmentsInRange(Info establishmentInfo, ExtraInfo extraInfo)
 
         if(isRectangleInsideRectangle(establishmentRect, variables->regionRect) && checkTypes == 0){
             writeEstablishmentInformationOnTxt(establishmentInfo, establishmentTypeInfo, owner, variables->txt);
-            buildHighlightCircumference(establishmentInfo, variables->queryElements);
+            setEstablishmentColor(establishmentInfo, "pink");
         }
     }
 
@@ -97,19 +97,19 @@ void writeEstablishmentInformationOnTxt(Info establishmentInfo, Info establishme
     free(establishmentString);
 }
 
-
-void buildHighlightCircumference(Info establishmentInfo, List queryElements){
+void buildDelitionRectange(Rectangle rect, List queryElements){
     
-    Point centerOfMassPoint = getEstablishmentCenterOfMass(establishmentInfo);
-    double centerOfMassX = getPointX(centerOfMassPoint);
-    double centerOfMassY = getPointY(centerOfMassPoint);
-    double radius = 80.0;
+    Point rectangleCoordinates = getRectangleCoordinates(rect);
+    double x = getPointX(rectangleCoordinates);
+    double y = getPointY(rectangleCoordinates);
+    double w = atof(getRectangleWidth(rect));
+    double h = atof(getRectangleHeight(rect));
 
-    char* circumferenceTag = (char*) malloc(300 * sizeof(char));
-    if(circumferenceTag == NULL)
+    char* delitionRectangleTag = (char*) malloc(300 * sizeof(char));
+    if(delitionRectangleTag == NULL)
         return;
 
-    sprintf(circumferenceTag, "\t<circle cx=\"%lf\" cy=\"%lf\" r=\"%lf\" stroke=\"lawngreen\" stroke-width=\"3\" fill=\"black\" fill-opacity=\"0.0\" />\n", centerOfMassX, centerOfMassY, radius);
-    
-    insert(queryElements, circumferenceTag);
+    sprintf(delitionRectangleTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"black\" stroke-width=\"1.5\" fill=\"black\" fill-opacity=\"0.0\" />\n", w, h, x, y); 
+
+    insert(queryElements, delitionRectangleTag);
 }

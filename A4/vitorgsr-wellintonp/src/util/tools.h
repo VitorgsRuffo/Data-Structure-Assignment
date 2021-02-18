@@ -8,7 +8,7 @@
 /* 
 * Definicao do tamanho maximo de uma linha de comando de um arquivo de entrada (linha do geo/qry) 
 */
-#define commandMaxLength 150
+#define commandMaxLength 200
 
 /*
 * Pré-condição: requer o endereço de duas informacoes.

@@ -126,8 +126,8 @@ int drawOnSvg(Svg svg, City Ct){
     DataStructure covidAddresses = getCovidAddresses(Ct);
     drawElementsOnSvg(svg, covidAddresses, &buildCovidAddressSvgTag);
 
-    //DataStructure houses = getHousesTree(Ct);
-    //drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
+    DataStructure houses = getHousesTree(Ct);
+    drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
     
     List queryElementsList = getQueryElements(Ct);
     drawQueryElementsOnSvg(svg, queryElementsList);
@@ -290,8 +290,9 @@ void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est){
     Point centerOfMass = getEstablishmentCenterOfMass(est);
     double centerOfMassX = getPointX(centerOfMass);
     double centerOfMassY = getPointY(centerOfMass);
+    char* color = getEstablishmentColor(est);
 
-    sprintf(EstablishmentTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"black\" stroke-width=\"1\" fill=\"chartreuse\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"black\" text-anchor=\"middle\" dy=\".3em\"> EC </text>\n", w, h, x, y, centerOfMassX, centerOfMassY);
+    sprintf(EstablishmentTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"black\" stroke-width=\"1\" fill=\"%s\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"black\" text-anchor=\"middle\" dy=\".3em\"> EC </text>\n", w, h, x, y, color, centerOfMassX, centerOfMassY);
 }
 
 void buildHouseSvgTag(char* houseTag, House H){

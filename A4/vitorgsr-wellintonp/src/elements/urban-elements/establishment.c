@@ -3,8 +3,8 @@
 #include "establishmentType.h"
 #include "address.h"
 
-#define establishmentWidth 50
-#define establishmentHeight 30
+#define establishmentWidth 20
+#define establishmentHeight 15
 
 typedef struct {
     char* name;
@@ -14,6 +14,7 @@ typedef struct {
     Address address;
     Point coordinates;
     double w, h;
+    char* color;
 }establishment;
 
 void setEstablishmentCoordinates(establishment* est);
@@ -21,21 +22,23 @@ void setEstablishmentCoordinates(establishment* est);
 Establishment createEstablishment(char* cnpj, char* cpf, char* code, char* cep, char face, int number, char* name, City Ct){
 
     establishment* est = (establishment*) malloc(sizeof(establishment));
-    
+
     est->name = (char*) malloc((strlen(name) + 1) * sizeof(char));
     est->cnpj = (char*) malloc((strlen(cnpj) + 1) * sizeof(char));
     est->cpf = (char*) malloc((strlen(cpf) + 1) * sizeof(char));
     est->code = (char*) malloc((strlen(code) + 1) * sizeof(char));
     est->address = createAddress(cep, face, number, "..", Ct);
     est->coordinates = createPoint(0,0);
+    est->color = (char*) malloc(30 * sizeof(char));
 
     strcpy(est->name, name);
     strcpy(est->cnpj, cnpj);
     strcpy(est->cpf, cpf);
     strcpy(est->code, code);
-    setEstablishmentCoordinates(est);
     est->w = establishmentWidth;
     est->h = establishmentHeight;
+    setEstablishmentCoordinates(est);
+    strcpy(est->color, "chartreuse");
 
     return est;
 }
@@ -124,13 +127,30 @@ Point getEstablishmentCenterOfMass(Establishment Est){
     return getAddressCoordinates(est->address);
 }
 
+char* getEstablishmentColor(Establishment Est){
+    if(Est == NULL)
+        return NULL;
+    establishment* est = (establishment*) Est;
+    return est->color;
+}
+
+int setEstablishmentColor(Establishment Est, char* color){
+    if(Est == NULL)
+        return 0;
+    establishment* est = (establishment*) Est;
+
+    strcpy(est->color, color);
+    return 1;
+}
+
 char* establishmentToString(Establishment Est, EstablishmentType EstabType){
+    
     if(Est == NULL || EstabType == NULL)
         return NULL;
     
     establishment *est = (establishment*) Est;
     
-    char* establishmentInfoString = (char*) malloc(500 * sizeof(char)); 
+    char* establishmentInfoString = (char*) malloc(1000 * sizeof(char)); 
 
     char* description = getEstablishmentTypeDescription(EstabType);
     char* address = addressToString(est->address);
@@ -138,7 +158,7 @@ char* establishmentToString(Establishment Est, EstablishmentType EstabType){
     double x = getPointX(est->coordinates);
     double y = getPointY(est->coordinates);
 
-    sprintf(establishmentInfoString, "Nome: %s\nCNPJ: %s\nDescricao: %s\nEndereco: %sx: %lf y:%lf width:%lf height:%lf\n", est->name, est->cnpj, description, address, x, y, est->w, est->h );
+    sprintf(establishmentInfoString, "Nome: %s\nCNPJ: %s\nDescricao: %s\n%sx: %lf y:%lf width:%lf height:%lf\n", est->name, est->cnpj, description, address, x, y, est->w, est->h );
     
     return establishmentInfoString;
 }
