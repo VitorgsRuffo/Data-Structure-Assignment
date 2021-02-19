@@ -71,7 +71,7 @@ hashtable* resizeHashTable(hashtable* hashT){
 
 int insertHashTable(HashTable* HashT, Info info){
 
-    if(HashT == NULL || info == NULL)
+    if(HashT == NULL  || *HashT == NULL || info == NULL)
         return 0;   
         
     hashtable** hashT = (hashtable**) HashT;
@@ -216,7 +216,7 @@ void freeHashTable(HashTable HashT, freeInfo freeFunction){
 
 int hashFunction(hashtable* hashT, char *str){
     
-    if(hashT->size == 0) return -1;
+    if(hashT->size == 0 || str == NULL) return -1;
 
     unsigned long hash = 5381;
     int c;

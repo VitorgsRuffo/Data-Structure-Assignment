@@ -62,7 +62,7 @@ int main(int argc, char* argv[]){
 
     if(!isPmNull(parameters)){
         //Abrindo o arquivo de entrada (.pm)
-        File ec = openInputFile(parameters, getPmName);
+        File pm = openInputFile(parameters, getPmName);
     
         //Lendo arquivo pm:
         readPm(pm, city);

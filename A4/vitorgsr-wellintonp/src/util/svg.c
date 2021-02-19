@@ -126,8 +126,8 @@ int drawOnSvg(Svg svg, City Ct){
     DataStructure covidAddresses = getCovidAddresses(Ct);
     drawElementsOnSvg(svg, covidAddresses, &buildCovidAddressSvgTag);
 
-    //DataStructure houses = getHousesTree(Ct);
-    //drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
+    DataStructure houses = getHousesTree(Ct);
+    drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
     
     List queryElementsList = getQueryElements(Ct);
     drawQueryElementsOnSvg(svg, queryElementsList);
@@ -161,7 +161,7 @@ void drawElementsOnSvg(Svg svg, DataStructure elements, buildElementSvgTag build
 
 void drawElementOnSvg(Info info, ExtraInfo extraInfo){
     SvgTag *exInfo = (SvgTag*) extraInfo;
-    
+
     (*exInfo->buildTag)(exInfo->elementTag, info);
     fprintf(exInfo->svg, "%s", exInfo->elementTag);
 }

@@ -26,16 +26,16 @@ Establishment createEstablishment(char* cnpj, char* cpf, char* code, char* cep, 
     est->cnpj = (char*) malloc((strlen(cnpj) + 1) * sizeof(char));
     est->cpf = (char*) malloc((strlen(cpf) + 1) * sizeof(char));
     est->code = (char*) malloc((strlen(code) + 1) * sizeof(char));
-    est->address = createAddress(cep, face, number, "..", Ct);
+    est->address = createAddress(cep, face, number, "none", Ct);
     est->coordinates = createPoint(0,0);
 
     strcpy(est->name, name);
     strcpy(est->cnpj, cnpj);
     strcpy(est->cpf, cpf);
     strcpy(est->code, code);
-    setEstablishmentCoordinates(est);
     est->w = establishmentWidth;
     est->h = establishmentHeight;
+    setEstablishmentCoordinates(est);
 
     return est;
 }
@@ -123,6 +123,7 @@ Point getEstablishmentCenterOfMass(Establishment Est){
     establishment* est = (establishment*) Est;
     return getAddressCoordinates(est->address);
 }
+
 
 char* establishmentToString(Establishment Est, EstablishmentType EstabType){
     if(Est == NULL || EstabType == NULL)

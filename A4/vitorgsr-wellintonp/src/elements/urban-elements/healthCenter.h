@@ -45,6 +45,12 @@ Point getHealthCenterCoordinates(HealthCenter HealthC);
 char* getHealthCenterRadius(HealthCenter HealthC);
 
 /*  
+* Pré-Condição: requer o endereco de uma instancia de Posto.
+* Pós-Condição: retorna uma string com todas as informacoes da instancia de Posto passada.
+*/
+char* healthCenterToString(HealthCenter HealthC);
+
+/*  
 * Pré-Condição: requer o endereco de uma instancia de posto.
 * Pós-Condição: libera a memoria usada pela instancia de posto que foi passada.
 */
