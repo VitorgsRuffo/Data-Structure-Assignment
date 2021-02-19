@@ -75,16 +75,11 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
     
 
     double incidenceRegionArea = calculateIncidenceRegionArea(variables.convexHullPoints, variables.convexHullPointsAmount);
-    /*
-     CORRIGIR: como conseguir a densidade demografica dentro do poligono irregular (incidence region) ?
-    Region region = getRegions(Ct);
-    double regionDemographicDensity = (getRegionDemographicDensity(region)) / 1000000.00; //convertendo densidade demografica de km^2 para m^2.
+    
+    //double regionDemographicDensity = calculateIncidenceRegionDemographicDensity() * 1000000.00; //convertendo densidade demografica de km^2 para m^2.
+    double regionDemographicDensity = 100;
+
     int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
-    */
-
-
-    int totalHabitantsInRegion = 1000;
-
 
     char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
     if(incidenceRegionCategory == 'E'){

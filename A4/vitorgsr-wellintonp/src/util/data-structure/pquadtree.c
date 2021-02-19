@@ -246,13 +246,13 @@ void executeFunctionTraversingTree(pquadtreenode *node, nodeVisitingFunction fun
 
 void levelOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInfo extraInfo){
     if(Tree == NULL || function == NULL) return;
-    
+
     pquadtree* tree = (pquadtree*) Tree;
     pquadtreenode* root = tree->root;
 
     if(root == NULL)
         return;
-    
+
     Queue queue = createQueue();
     queuePush(queue, root);
     

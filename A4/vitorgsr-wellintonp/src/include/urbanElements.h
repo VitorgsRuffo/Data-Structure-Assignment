@@ -8,6 +8,7 @@
 #include "../elements/urban-elements/healthCenter.h"
 #include "../elements/urban-elements/house.h"
 #include "../elements/urban-elements/covidAddress.h"
+#include "../elements/urban-elements/region.h"
 #include "../elements/urban-elements/customization.h"
 #include "../elements/urban-elements/establishmentType.h"
 #include "../elements/urban-elements/establishment.h"
