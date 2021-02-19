@@ -23,16 +23,13 @@ typedef struct {
     List pointsToRemove;
 }Variables;
 
-void test(Info info, ExtraInfo ei){
-    int* count = (int*) ei;
-    (*count)++;
-}
 
 void deleteBlocksInCircle(Variables variables);
 void deleteUrbanElementsInCircle(Variables variables);
 void deleteHousesInCircle(Variables variables);
 void deleteEstablishmentsInCircle(Variables variables);
 char* buildUrbanElementsDeletionCircleTag(char* x, char* y, char* radius);
+
 
 void executeUrbanElementsDeletion(char* command, City Ct, File txt){
 
@@ -57,6 +54,7 @@ void executeUrbanElementsDeletion(char* command, City Ct, File txt){
 
 
     variables.elements = getBlocks(Ct);
+
     deleteBlocksInCircle(variables);
     
     variables.elements = getHydrants(Ct);
@@ -204,7 +202,6 @@ void deleteHousesInCircle(Variables variables){
 
     //buscando as casas inteiramente dentro do circulo:
     levelOrderTraversal(variables.elements, deleteHouseIfItsInsideCircle, &variables);
-
 
     //removendo as casas selecionadas das estruturas de dados:
     Node currentNode = getFirst(variables.pointsToRemove);

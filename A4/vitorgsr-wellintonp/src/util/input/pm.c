@@ -5,8 +5,10 @@
 //numero maximo de partes que um comando vindo de um arquivo pm pode ter
 #define maxNumberOfPmCommandParts 8
 
+//T4
 void readPeople(char* command, char** commandParts, City Ct);
-void readPeopleAddress(char* command, char** commandParts, City Ct);
+void readPeopleAddress(Stack* houses, char* command, char** commandParts, City Ct);
+
 void freeReadPmResources(char* command, char** commandParts);
 
 void readPm(File pm, City Ct){
@@ -15,6 +17,9 @@ void readPm(File pm, City Ct){
     int commandLength;
     char commandType[10];
     char** commandParts = createCommandParts(maxNumberOfPmCommandParts);
+
+    // Os dados incluidos na stack vão ser pre-processados antes de serem inseridos na estrutura. (p-quadtree)
+    Stack houses = createStack();
     
     while(!feof(pm)){
         if(fgets(command, commandMaxLength, pm) == NULL) // se tertarmos ler alem da ultima linha do arquivo fgets retornara NULL e sairemos do loop de leitura.
@@ -31,8 +36,10 @@ void readPm(File pm, City Ct){
             readPeople(command, commandParts, Ct);
 
         else if(!strcmp(commandType, "m")) //lidando endereço de pessoa
-            readPeopleAddress(command, commandParts, Ct);
+            readPeopleAddress(&houses, command, commandParts, Ct);
     }
+
+    balancedlyInsertObjectsInPQuadTree(getHousesTree(Ct), houses);
 
     freeReadPmResources(command, commandParts);
 }
@@ -41,24 +48,23 @@ void readPeople(char* command, char** commandParts, City Ct){
 
     sscanf(&command[2], "%s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2],commandParts[3],commandParts[4]);
     char gender = commandParts[3][0];
-    Person person = createPerson(commandParts[0], commandParts[1], commandParts[2], gender, commandParts[4]);
+    Person pe = createPerson(commandParts[0], commandParts[1], commandParts[2], gender, commandParts[4]);
     
     DataStructure* peopleTable = getPeople(Ct);
     insertHashTable(peopleTable, person);
 }
 
-void readPeopleAddress(char* command, char** commandParts, City Ct){
+void readPeopleAddress(Stack* houses, char* command, char** commandParts, City Ct){
     
     sscanf(&command[2], "%s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4]);
     char face = commandParts[2][0];
     int number = atoi(commandParts[3]);
-    House house = createHouse(commandParts[0], commandParts[1], face, number, commandParts[4], Ct);
+    House h = createHouse(commandParts[0], commandParts[1], face, number, commandParts[4], Ct);
+
+    stackPush(houses, h);
 
     DataStructure* housesTable = getHousesTable(Ct); 
-    insertHashTable((HashTable*) housesTable, house);
-
-    DataStructure housesTree = getHousesTree(Ct);
-    insertPQuadTree(housesTree, getHouseCoordinates, house);
+    insertHashTable(housesTable, h);
 }
 
 void freeReadPmResources(char* command, char** commandParts){

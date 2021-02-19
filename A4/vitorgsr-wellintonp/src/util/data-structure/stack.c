@@ -95,7 +95,7 @@ Info* stackToArray(Stack* PointerToHead){
     
     int length = stackLength(PointerToHead);
 
-    Info* array = (Info*) malloc(length*sizeof(Info));
+    Info* array = (Info*) malloc(length * sizeof(Info));
     if(array == NULL)
         return NULL;
     

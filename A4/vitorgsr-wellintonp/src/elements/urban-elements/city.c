@@ -315,18 +315,20 @@ void freeCity(City Ct){
     freePQuadTree(ct->circles, freeCircle);
     freePQuadTree(ct->rectangles, freeRectangle);
     freePQuadTree(ct->texts, freeText);
+
     freePQuadTree(ct->blocks, freeBlock);
     freePQuadTree(ct->hydrants, freeHydrant);
     freePQuadTree(ct->baseRadios, freeBaseRadio);
     freePQuadTree(ct->semaphores, freeSemaphore);
     freePQuadTree(ct->healthCenters, freeHealthCenter);
+    freePQuadTree(ct->covidAddresses, freeCovidAddress);
 
     freeHashTable(ct->establishmentTypes, freeEstablishmentType);
     freePQuadTree(ct->establishmentsTree, freeEstablishment);
     freeHashTable(ct->establishmentsTable, NULL);
     freeHashTable(ct->people, freePerson);
-    freePQuadTree(ct->housesTree, freeHouse);
     freeHashTable(ct->housesTable, NULL);
+    freePQuadTree(ct->housesTree, freeHouse);
 
     freeList(ct->queryElements, freeQueryElement);
     free(ct);

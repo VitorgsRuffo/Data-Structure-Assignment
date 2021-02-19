@@ -15,7 +15,7 @@ char** createCommandParts(int numberOfParts){
     char** commandParts = (char**) malloc(sizeof(char*) * numberOfParts);
     
     for(int i = 0; i<numberOfParts; i++)
-        commandParts[i] = (char*) malloc(60 * sizeof(char));
+        commandParts[i] = (char*) malloc(150 * sizeof(char));
     
     return commandParts;
 }

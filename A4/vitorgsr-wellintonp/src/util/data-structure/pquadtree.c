@@ -707,6 +707,7 @@ int balancedlyInsertObjectsInPQuadTree(PQuadTree Tree, Stack Objects){
         insertPQuadTree(Tree, point, info);
     }
 
+
     return 1;
 }
 
@@ -726,8 +727,10 @@ Stack preProcessObjects(PQuadTree Tree, Stack Objects){
     for(int i = 0; i<objectsAmount; i++)
         insert(pointsList, (*(*tree).getPoint)(Objs[i]));
 
+    Point* pointsArray;
+
     while(1){
-        Point* pointsArray = listToArray(pointsList);
+        pointsArray = listToArray(pointsList);
 
         if(pointsArray == NULL) //todos os pontos ja foram processados.
             break;
@@ -763,8 +766,11 @@ Stack preProcessObjects(PQuadTree Tree, Stack Objects){
             removeNode(pointsList, nodeToRemove, NULL);
         }  
 
-        free(pointsArray);
     }
+
+    free(pointsArray);
+    free(Objs);
+    freeList(pointsList, NULL);
 
     return preProcessedObjects;
 }

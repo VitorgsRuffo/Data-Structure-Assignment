@@ -72,6 +72,18 @@ double getEstablishmentHeight(Establishment Est);
 Point getEstablishmentCenterOfMass(Establishment Est);
 
 /*  
+* Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial.
+* Pós-Condição: retorna a cor que é usada no svg para representar o estabelecimento comercial.
+*/
+char* getEstablishmentColor(Establishment Est);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de estabelecimento comercial e uma string informando a nova cor do estabelecimento.
+* Pós-Condição: Altera a cor do estabelecimento comercial. Retorna 0 caso de algum erro, caso contrário retorna 1.
+*/
+int setEstablishmentColor(Establishment Est, char* color);
+
+/*  
 * Pré-Condição: requer uma instancia de uma instancia de estabelecimento e uma instancia de tipo de estabelecimento.
 * Pós-Condição: retorna uma string com todas as informacoes da instancia de estabelecimento passada.
 */

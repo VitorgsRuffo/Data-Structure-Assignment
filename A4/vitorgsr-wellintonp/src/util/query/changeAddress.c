@@ -13,22 +13,37 @@ void executeChangeOfAddress(char* command, City Ct, File txt){
     char cpf[15]; char cep[15]; char face[3]; char num[15]; char compl[15];
     sscanf(&command[4], "%s %s %s %s %s", cpf, cep, face, num, compl);
 
-    DataStructure peopleTable = getPeople(Ct);
-    Info personInfo = getHashTableInfo(peopleTable, cpf);
+    DataStructure* peopleTable = getPeople(Ct);
+    Info personInfo = getHashTableInfo(*peopleTable, cpf);
+    if(personInfo == NULL){
+        fprintf(txt, "Pessoa com CPF %s nao foi encontrada\n", cpf);
+        return;
+    }
 
-    DataStructure houseTable = getHousesTable(Ct);
-    Info houseInfo = getHashTableInfo(houseTable, cpf);
+    DataStructure* houseTable = getHousesTable(Ct);
+    Info houseInfo = getHashTableInfo(*houseTable, cpf);
+    if(personInfo == NULL){
+        fprintf(txt, "A casa do morador dono do CPF %s nao foi encontrada\n", cpf);
+        return;
+    }
 
     Address oldAddress = getHouseAddress(houseInfo);
-    char* oldAddressString = addressToString(oldAddress);
+    if(oldAddress == NULL){
+        printf("Instancia de endereco esta null");
+        return;
+    }
+
     Point oldAddressCoordinates = getHouseCoordinates(houseInfo); // Esse point vai ser freelado junto com o endereço antigo, portanto é criado um point abaixo com essas informaçoes
+    char* oldAddressString = addressToString(oldAddress);
+
+    // Criando os pontos refrentes as coordenandas do endereço antigo (temos que criar pois os pontos antigos vao ser freelados na funcao setHouseAddress)
     Point oldAddressPoint = createPoint(getPointX(oldAddressCoordinates), getPointY(oldAddressCoordinates));
 
     Address newAddress = createAddress(cep, face[0], atof(num), compl, Ct);
 
     setHouseAddress(houseInfo, newAddress);
     char* newAddressString = addressToString(newAddress);
-    Point newAddressCoordinates = getHouseCoordinates(houseInfo);
+    Point newAddressCoordinates = getAddressCoordinates(getHouseAddress(houseInfo));
 
     writeAdressesOnTxt(oldAddressString, newAddressString, personInfo, txt);
 
@@ -41,20 +56,20 @@ void executeChangeOfAddress(char* command, City Ct, File txt){
     insert(queryElements, oldAddressCircumference);
     insert(queryElements, newAddressCircumference);
 
-    free(oldAddressCoordinates);
+    free(oldAddressPoint);
 }
 
 void writeAdressesOnTxt(char* oldAddressString, char* newAddressString, Info personInfo, File txt){
 
-    //char* personString = personToString(personInfo);
+    char* personString = personToString(personInfo);
 
-    fprintf(txt, "Endereco antigo: %s", oldAddressString);
-    fprintf(txt, "Novo endereco: %s", newAddressString);
-    //fprintf(txt, "Dados do morador: %s", personString);
+    fprintf(txt, "Antigo %s\n", oldAddressString);
+    fprintf(txt, "Novo %s\n", newAddressString);
+    fprintf(txt, "Dados do morador: %s\n\n", personString);
 
     free(oldAddressString);
     free(newAddressString);
-    //free(personString);
+    free(personString);
 }
 
 char* buildLineBetweenAddresses(Point oldAddressCoordinates, Point newAddressCoordinates){
@@ -62,13 +77,13 @@ char* buildLineBetweenAddresses(Point oldAddressCoordinates, Point newAddressCoo
     double oldX = getPointX(oldAddressCoordinates);
     double oldY = getPointY(oldAddressCoordinates);
     double newX = getPointX(newAddressCoordinates);
-    double NewY = getPointY(newAddressCoordinates);
+    double newY = getPointY(newAddressCoordinates);
 
     char* lineTag = (char*) malloc(200 * sizeof(char));
     if(lineTag == NULL)
         return NULL;
 
-    sprintf(lineTag, "<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"%lf\" stroke=\"red\" stroke-width=\"5.0\" />", oldX, oldY, newX, NewY);
+    sprintf(lineTag, "\t<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"%lf\" style=\"stroke:rgb(255,0,0);stroke-width:3.0;\" />\n", oldX, oldY, newX, newY);
 
     return lineTag;
 }
@@ -83,7 +98,7 @@ char* buildAddressCircumference(Point addressCoordinates, char* color){
     double x = getPointX(addressCoordinates);
     double y = getPointY(addressCoordinates);
 
-    sprintf(addressCircumference, "\t<circle cx=\"%lf\" cy=\"%lf\" r=\"30\" stroke=\"white\" stroke-width=\"7.0\" fill=\"%s\" fill-opacity=\"0.8\"/>\n", x, y, color);
+    sprintf(addressCircumference, "\t<circle cx=\"%lf\" cy=\"%lf\" r=\"15\" stroke=\"white\" stroke-width=\"4.0\" fill=\"%s\"/>\n", x, y, color);
 
     return addressCircumference;
 }
