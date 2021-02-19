@@ -5,15 +5,17 @@
 
 /*to do list:
 
-    - bosses finais: m? e dmprbt.
+    - m? + implementar tabela de quadras e usar em buscas tipo "cep -> quadra".
+
 
     - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
-    
-    - checar se estamos usando os dicionarios da maneira que ele pede.
-    (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
 
     - Corrigir a questão de criar uma figura passando ".." e depois querer setar um valor nesse local 
     (não vai ter memória suficiente para um numero pois alocou memória do tamanho de "..")(exemplo BlockBorder.c)
+
+
+
+    - dmprbt;
 
     - testar todos os comandos!.
     
