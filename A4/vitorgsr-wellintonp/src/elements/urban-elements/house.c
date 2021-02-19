@@ -31,15 +31,6 @@ House createHouse(char* cpf, char* cep, char face, int number, char* compl, City
     return h;
 }
 
-void setHouseCoordinates(house* h){
-    
-    double addressX = getAddressX(h->address);
-    double addressY = getAddressY(h->address);
-
-    setPointX(h->coordinates, addressX - (h->w / 2.0));
-    setPointY(h->coordinates, addressY - (h->h / 2.0));
-}
-
 char* getHouseCpf(House H){
     if(H == NULL)
         return NULL;
@@ -64,6 +55,7 @@ int setHouseAddress(House H, Address newAddress){
     
     return 1;
 }
+
 
 Point getHouseCoordinates(House H){
     if(H == NULL)
@@ -92,6 +84,23 @@ Point getHouseCenterOfMass(House H){
     return getAddressCoordinates(h->address);
 }
 
+char* houseToString(House H){
+    if(H == NULL)
+        return NULL;
+    house *h = (house*) H;
+
+    char* addressString = addressToString(h->address);
+    double hx = getPointX(H);
+    double hy = getPointY(H);
+
+    char* string = (char*) malloc(200 * sizeof(char));
+    sprintf(string, "Casa - cpf do dono: %s, %s, x: %.2lf, y: %.2lf.", h->cpf, addressString, hx, hy);
+    
+    free(addressString);
+    return string;
+}
+
+
 void printHouse(House H){
     if(H == NULL)
         return;
@@ -109,4 +118,14 @@ void freeHouse(House H){
     freeAddress(h->address);
     free(h->coordinates);
     free(h);
+}
+
+
+void setHouseCoordinates(house* h){
+    
+    double addressX = getAddressX(h->address);
+    double addressY = getAddressY(h->address);
+
+    setPointX(h->coordinates, addressX - (h->w / 2.0));
+    setPointY(h->coordinates, addressY - (h->h / 2.0));
 }

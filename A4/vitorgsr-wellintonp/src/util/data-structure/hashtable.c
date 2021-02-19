@@ -71,9 +71,9 @@ hashtable* resizeHashTable(hashtable* hashT){
 
 int insertHashTable(HashTable* HashT, Info info){
 
-    if(HashT == NULL || info == NULL)
-        return 0;
-
+    if(HashT == NULL  || *HashT == NULL || info == NULL)
+        return 0;   
+        
     hashtable** hashT = (hashtable**) HashT;
 
     if((**hashT).elementsAmount + 1 >= 0.75 * (**hashT).size){ //se a insercao de mais um elemento causar uma ocupacao de 75% do tamanho da tabela é recomendado aumentar seu tamanho.
@@ -217,7 +217,7 @@ void freeHashTable(HashTable HashT, freeInfo freeFunction){
 
 int hashFunction(hashtable* hashT, char *str){
 
-    if(hashT->size == 0) return -1;
+    if(hashT->size == 0 || str == NULL) return -1;
 
     unsigned long hash = 5381;
     int c;

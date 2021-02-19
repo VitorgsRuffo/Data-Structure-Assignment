@@ -50,6 +50,13 @@ char* getCircleRadius(Circle Circ){
     return circ->radius;
 }
 
+void setCircleRadius(Circle Circ, char* radius){
+    if(Circ == NULL || radius == NULL)
+        return;
+    circle *circ = (circle*) Circ;
+    strcpy(circ->radius, radius);
+}
+
 char* getCircleX(Circle Circ){
     if(Circ == NULL)
         return NULL; 
@@ -149,6 +156,22 @@ int isPointInsideCirc(Circle Circ, Point P){
         return 0;
 }
 
+int isCircleInsideCircle(Circle Circ1, Circle Circ2){
+    if(Circ1 == NULL || Circ2 == NULL) return -1;
+
+    circle *circ1 = (circle*) Circ1;
+    circle *circ2 = (circle*) Circ2;
+
+    double centersDistance = distanceBetweenPoints(circ1->coordinates, circ2->coordinates);
+    double circ1Radius = atof(circ1->radius);
+    double circ2Radius = atof(circ2->radius);
+
+    //
+    if(centersDistance + circ1Radius < circ2Radius)
+        return 1;
+    else
+        return 0;
+}
 
 int isRectangleInsideCircle(Circle Circ, Rectangle Rect){
     if(Circ == NULL || Rect == NULL) return -1;
@@ -187,13 +210,13 @@ int isThereCirclesOverlap(Circle Circ1, Circle Circ2){
     circle *circ1 = (circle*) Circ1;
     circle *circ2 = (circle*) Circ2;
 
-    double c1R = atof(getCircleRadius(circ1->radius));  
-    double c1X = atof(getCircleX(circ1->x));
-    double c1Y = atof(getCircleY(circ1->y));
+    double c1R = atof(circ1->radius); 
+    double c1X = atof(circ1->x);
+    double c1Y = atof(circ1->y);
 
-    double c2R = atof(getCircleRadius(circ2->radius));
-    double c2X = atof(getCircleX(circ2->x));
-    double c2Y = atof(getCircleY(circ2->y));
+    double c2R = atof(circ2->radius);
+    double c2X = atof(circ2->x);
+    double c2Y = atof(circ2->y);
 
     //Eles vão se sobrepor quando a distancia entre os centros dos circulos for menor que a soma dos seus raios.
     double D = sqrt(pow((c2X - c1X), 2) + pow((c2Y - c1Y), 2)); //distancia entre os centros dos circulos:

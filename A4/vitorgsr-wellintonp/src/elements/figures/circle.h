@@ -27,6 +27,12 @@ char* getCircleId(Circle Circ);
 char* getCircleRadius(Circle Circ);
 
 /*  
+*  Pré-Condição: requer o endereco de uma instancia de circulo e um valor radius.
+*  Pós-Condição: atribui o valor passado para o campo raio do circulo.
+*/
+void setCircleRadius(Circle Circ, char* radius);
+
+/*  
 * Pré-Condição: requer o endereco de uma instancia de circulo.
 * Pós-Condição: retorOna a coordenada x do centro do circulo passado.
 */
@@ -97,6 +103,12 @@ char* circleToString(Circle Circ);
 * Pós-Condição: retorna 1 se o ponto se encontra dentro do circulo, retorna 0 se nao.
 */
 int isPointInsideCirc(Circle Circ, Point P);
+
+/*  
+* Pré-Condição: requer o endereco de duas instancias de circulo.
+* Pós-Condição: retorna 1 se o primeiro circulo (Circ1) esta INTEIRAMENTE dentro do segundo circulo (Circ2), retorna 0 se nao.
+*/
+int isCircleInsideCircle(Circle Circ1, Circle Circ2);
 
 /*  
 * Pré-Condição: requer o endereco de uma instancia de circulo e de retangulo.

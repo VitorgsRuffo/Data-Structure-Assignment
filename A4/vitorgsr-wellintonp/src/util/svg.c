@@ -161,7 +161,7 @@ void drawElementsOnSvg(Svg svg, DataStructure elements, buildElementSvgTag build
 
 void drawElementOnSvg(Info info, ExtraInfo extraInfo){
     SvgTag *exInfo = (SvgTag*) extraInfo;
-    
+
     (*exInfo->buildTag)(exInfo->elementTag, info);
     fprintf(exInfo->svg, "%s", exInfo->elementTag);
 }

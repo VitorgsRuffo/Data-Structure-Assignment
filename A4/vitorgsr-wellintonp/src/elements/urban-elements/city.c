@@ -8,11 +8,11 @@ typedef struct city {
     PQuadTree circles;
     PQuadTree rectangles;
     PQuadTree texts;
-    PQuadTree blocks;//
-    PQuadTree hydrants;//
-    PQuadTree baseRadios;//
-    PQuadTree semaphores;//
-    PQuadTree healthCenters;//
+    PQuadTree blocks;//*
+    PQuadTree hydrants;//*
+    PQuadTree baseRadios;//*
+    PQuadTree semaphores;//*
+    PQuadTree healthCenters;//*
     PQuadTree covidAddresses;
     HashTable establishmentTypes;
     HashTable establishmentsTable; //

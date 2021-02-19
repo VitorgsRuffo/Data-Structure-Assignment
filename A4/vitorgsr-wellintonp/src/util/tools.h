@@ -40,10 +40,5 @@ char* buildQryOutputPath(Parameters Param, char* extension);
 */
 char* getUrbanElementToString(Info urbanElementInfo, char* urbanElementType);
 
-/*
-* Pré-Condição: requer um vetor de pontos e o tamanho do vetor.
-* Pós-Condição: retorna uma pilha contendo a envoltoria convexa dos pontos do vetor.
-*/
-Stack convexHull(Point* points, int n);
 
 #endif 

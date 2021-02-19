@@ -51,7 +51,7 @@ void readPeople(char* command, char** commandParts, City Ct){
     Person pe = createPerson(commandParts[0], commandParts[1], commandParts[2], gender, commandParts[4]);
     
     DataStructure* peopleTable = getPeople(Ct);
-    insertHashTable((HashTable*) peopleTable, pe);
+    insertHashTable(peopleTable, person);
 }
 
 void readPeopleAddress(Stack* houses, char* command, char** commandParts, City Ct){
@@ -62,9 +62,9 @@ void readPeopleAddress(Stack* houses, char* command, char** commandParts, City C
     House h = createHouse(commandParts[0], commandParts[1], face, number, commandParts[4], Ct);
 
     stackPush(houses, h);
-    
+
     DataStructure* housesTable = getHousesTable(Ct); 
-    insertHashTable((HashTable*) housesTable, h);
+    insertHashTable(housesTable, h);
 }
 
 void freeReadPmResources(char* command, char** commandParts){

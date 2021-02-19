@@ -52,7 +52,7 @@ void readEstablishmentType(char* command, char** commandParts, City Ct){
     EstablishmentType et = createEstablishmentType(commandParts[0], commandParts[1]);
 
     DataStructure* establishmentTypes = getEstablishmentTypes(Ct);
-    insertHashTable((HashTable*) establishmentTypes, et);
+    insertHashTable(establishmentTypes, et);
 }
 
 void readEstablishment(Stack* establishments, char* command, char** commandParts, City Ct){
@@ -65,8 +65,8 @@ void readEstablishment(Stack* establishments, char* command, char** commandParts
     
     stackPush(establishments, est);
 
-    DataStructure* establishmentHashTable = getEstablishmentsTable(Ct); 
-    insertHashTable((HashTable*) establishmentHashTable, est);
+    DataStructure* establishmentsTable = getEstablishmentsTable(Ct); 
+    insertHashTable(establishmentsTable, est);
 }
 
 void freeReadEcResources(char* command, char** commandParts){

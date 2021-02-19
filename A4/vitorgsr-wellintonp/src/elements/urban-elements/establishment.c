@@ -27,7 +27,7 @@ Establishment createEstablishment(char* cnpj, char* cpf, char* code, char* cep, 
     est->cnpj = (char*) malloc((strlen(cnpj) + 1) * sizeof(char));
     est->cpf = (char*) malloc((strlen(cpf) + 1) * sizeof(char));
     est->code = (char*) malloc((strlen(code) + 1) * sizeof(char));
-    est->address = createAddress(cep, face, number, "..", Ct);
+    est->address = createAddress(cep, face, number, "none", Ct);
     est->coordinates = createPoint(0,0);
     est->color = (char*) malloc(30 * sizeof(char));
 

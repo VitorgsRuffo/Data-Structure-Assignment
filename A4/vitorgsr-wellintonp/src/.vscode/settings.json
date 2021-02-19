@@ -40,6 +40,7 @@
         "establishment.h": "c",
         "establishmentinformation.h": "c",
         "rectangle.h": "c",
-        "changeaddress.h": "c"
+        "changeaddress.h": "c",
+        "healthcenter.h": "c"
     }
 }
