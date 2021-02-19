@@ -48,7 +48,7 @@ void readPeople(char* command, char** commandParts, City Ct){
 
     sscanf(&command[2], "%s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2],commandParts[3],commandParts[4]);
     char gender = commandParts[3][0];
-    Person pe = createPerson(commandParts[0], commandParts[1], commandParts[2], gender, commandParts[4]);
+    Person person = createPerson(commandParts[0], commandParts[1], commandParts[2], gender, commandParts[4]);
     
     DataStructure* peopleTable = getPeople(Ct);
     insertHashTable(peopleTable, person);

@@ -4,30 +4,19 @@
 
 
 /*to do list:
-    
-    - dm    (v) (pronto!)
-    - catac (v)
 
-
-    - de    (w)
-    - eplg  (w) 
-    - mud   (w)
-    
     - bosses finais: m? e dmprbt.
 
-
-    - extras:
-        - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
-        - checar se estamos usando os dicionarios da maneira que ele pede.
-        (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
+    - corrigir covidIncidence.c (determinar densidade demografica da regiao de incidencia)
     
-   
+    - checar se estamos usando os dicionarios da maneira que ele pede.
+    (e.g, implementar tabela de quadras e usar em buscas tipo "cep -> quadra".)
 
-    ****** Corrigir a questão de criar uma figura passando ".." e depois querer setar um valor nesse local 
+    - Corrigir a questão de criar uma figura passando ".." e depois querer setar um valor nesse local 
     (não vai ter memória suficiente para um numero pois alocou memória do tamanho de "..")(exemplo BlockBorder.c)
 
     - testar todos os comandos!.
-
+    
 */
 
 
@@ -102,21 +91,10 @@ int main(int argc, char* argv[]){
 
 /*EXTRAS:
 
-*  - Revisar os queries em busca de refatoracao. 
-*  - Desalocar memoria em caso de erros (e.g, chamar o metodo de um tad passando null).
-*  - Retirar mensagens de erro... (tratar erro no metodo chamador)
-*  - Calcular a viewBox dos svg's.
-
-   - pquadtree:
-        //doubs:
-            //1 - char* (*get)(void*) == getInfoKey get  (typedef errado)
-            //2 - is there any problem if we add extra functions to the .h file?
-
-
-        //fixes:
-
-            //1 - fix getObjectIfItsInsideShape. (we should not traverse the whole tree!!).
-            
-            //2 - is our current remove method maintaining the tree balanced? .
-
+    - Revisar os queries em busca de refatoracao. 
+    - Desalocar memoria em caso de erros (e.g, chamar o metodo de um tad passando null).
+    - pquadtree:
+        //1 - fix getObjectIfItsInsideShape. (we should not traverse the whole tree!!).
+        
+        //2 - is our current remove method maintaining the tree balanced? .
 */
