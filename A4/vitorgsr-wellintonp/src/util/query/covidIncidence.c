@@ -19,6 +19,7 @@ char* buildBoundingCircumferenceTag(char* circumferenceX, char* circumferenceY, 
 Point* getCovidAddressesInCircCoordinates(List covidAddressesInCirc, int covidAddressesInCircAmount);
 int calculateTotalCovidCasesInRegion(List covidAddressesInCirc);
 double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPointsAmount);
+double getIncidenceRegionDemographicDensity(City Ct, List covidAddressesInCirc);
 char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion);
 char* buildIncidenceRegionTag(Point* points, int pointsAmount, char incidenceRegionCategory);
 void suggestHealthCenterInRegionIfNeeded(DataStructure healthCenters, Variables* variables, List queryElementsList, double incidenceRegionArea);
@@ -76,8 +77,7 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
 
     double incidenceRegionArea = calculateIncidenceRegionArea(variables.convexHullPoints, variables.convexHullPointsAmount);
     
-    //double regionDemographicDensity = calculateIncidenceRegionDemographicDensity() * 1000000.00; //convertendo densidade demografica de km^2 para m^2.
-    double regionDemographicDensity = 100;
+    double regionDemographicDensity = getIncidenceRegionDemographicDensity(Ct, variables.covidAddressesInCirc) * 1000000.00; //convertendo densidade demografica de km^2 para m^2.
 
     int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
 
@@ -217,6 +217,20 @@ double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPoint
    return area;
 }
 
+double getIncidenceRegionDemographicDensity(City Ct, List covidAddressesInCirc){
+
+    Node firstNode = getFirst(covidAddressesInCirc);
+    Info covidAddress = get(covidAddressesInCirc, firstNode);
+
+    Address address = getCovidAddress(covidAddress);
+    char* blockCep = getAddressCep(address);
+
+    DataStructure* blocksTable = getBlocksTable(Ct);
+    Block block = getHashTableInfo(*blocksTable, blockCep);
+
+    double demographicDensity = getBlockDemographicDensity(block);
+    return demographicDensity;
+}
 
 char* determineIncidenceRegionColor(char incidenceRegionCategory);
 
