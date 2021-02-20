@@ -1,5 +1,6 @@
 #include "../../include/headers.h"
 #include "block.h"
+#include "house.h"
 
 typedef struct block{
     char* cep;  
@@ -14,6 +15,7 @@ typedef struct block{
     char* rx;
     double demographicDensity;
     char* shadowColor;
+    List housesInBlock;
 }block;
 
 Block createBlock(char* cep, char* x, char* y, char* w, char* h, char* sw, char* cfill, char* cstrk){
@@ -42,6 +44,7 @@ Block createBlock(char* cep, char* x, char* y, char* w, char* h, char* sw, char*
     strcpy(blk->rx, "0.0");
     blk->demographicDensity = 0.0;
     blk->shadowColor = NULL;
+    blk->housesInBlock = createList();
 
     return blk;
 }
@@ -162,7 +165,6 @@ char* getBlockShadowColor(Block Blk){
     return blk->shadowColor;
 }
 
-
 void setBlockShadowColor(Block Blk){
 
     if(Blk == NULL) return;
@@ -216,6 +218,13 @@ double getBlockArea(Block Blk){
     return length * width;
 }
 
+List getListOfHousesInBlock(Block Blk){
+    if(Blk == NULL) return NULL;
+
+    block *blk = (block*) Blk;
+    return blk->housesInBlock;
+}
+
 char* blockToString(Block Blk){
     if(Blk == NULL)
         return NULL;
@@ -250,5 +259,6 @@ void freeBlock(Block Blk){
     free(blk->cstrk);  
     free(blk->rx);
     if(blk->shadowColor != NULL) free(blk->shadowColor);
+    freeList(blk->housesInBlock, NULL);
     free(blk);
 }

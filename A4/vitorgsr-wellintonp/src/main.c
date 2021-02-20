@@ -13,8 +13,6 @@
     - Corrigir a questão de criar uma figura passando ".." e depois querer setar um valor nesse local 
     (não vai ter memória suficiente para um numero pois alocou memória do tamanho de "..")(exemplo BlockBorder.c)
 
-
-
     - dmprbt;
 
     - testar todos os comandos!.
