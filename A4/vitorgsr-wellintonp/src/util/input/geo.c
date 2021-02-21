@@ -3,6 +3,8 @@
 #include "../tools.h"
 #include "openInput.h"
 #include "../data-structure/stack.h"
+#include "../data-structure/hashtable.h"
+#include "../../elements/urban-elements/city.h"
 
 //numero maximo de partes que um comando vindo de um arquivo geo pode ter
 #define maxNumberOfGeoCommandParts 8
@@ -11,7 +13,7 @@ void readCircle(Stack* circles, char* command, char** commandParts, ElementsCust
 void readRectangle(Stack* rectangles, char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readText(Stack* texts, char* command, char** commandParts);
 
-void readBlock(Stack* blocks, char* command, char** commandParts, ElementsCustomization elementsCustom);
+void readBlock(Stack* blocks, char* command, char** commandParts, ElementsCustomization elementsCustom, City Ct);
 void setBlocksDemographicDensity(DataStructure blocks, DataStructure regions);
 
 void readHydrant(Stack* hydrants, char* command, char** commandParts, ElementsCustomization elementsCustom);
@@ -73,7 +75,7 @@ void readGeo(File geo, City Ct){
             readText(&texts ,command, commandParts);
             
         else if(!strcmp(commandType, "q")) //lidando com quadra: 
-            readBlock(&blocks ,command, commandParts, elementsCustom);
+            readBlock(&blocks, command, commandParts, elementsCustom, Ct);
 
         else if(!strcmp(commandType, "h")) //lidando com hidrante:
             readHydrant(&hydrants ,command, commandParts, elementsCustom);
@@ -147,10 +149,13 @@ void readText(Stack* texts, char* command, char** commandParts){
     stackPush(texts, text);
 }
 
-void readBlock(Stack* blocks, char* command, char** commandParts, ElementsCustomization elementsCustom){
+void readBlock(Stack* blocks, char* command, char** commandParts, ElementsCustomization elementsCustom, City Ct){
     sscanf(command, "%s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
     Block block = createBlock(commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5], getBlockSwCustomization(elementsCustom), getBlockCfillCustomization(elementsCustom), getBlockCstrkCustomization(elementsCustom));
     stackPush(blocks, block);
+
+    DataStructure* blocksTable = getBlocksTable(Ct);
+    insertHashTable(blocksTable, block);
 }
 
 typedef struct {

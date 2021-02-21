@@ -9,6 +9,7 @@ typedef struct city {
     PQuadTree rectangles;
     PQuadTree texts;
     PQuadTree blocks;//*
+    HashTable blocksTable;
     PQuadTree hydrants;//*
     PQuadTree baseRadios;//*
     PQuadTree semaphores;//*
@@ -36,6 +37,7 @@ City createCity(){
     ct->rectangles = createPQuadTree(getRectangleId, getRectangleCoordinates);
     ct->texts = createPQuadTree(getTextId, getTextCoordinates);
     ct->blocks = createPQuadTree(getBlockCep, getBlockCoordinates);
+    ct->blocksTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getBlockCep);
     ct->hydrants = createPQuadTree(getHydrantId, getHydrantCoordinates);
     ct->baseRadios = createPQuadTree(getBaseRadioId, getBaseRadioCoordinates);
     ct->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
@@ -86,6 +88,14 @@ PQuadTree getBlocks(City Ct){
 
     city *ct = (city*) Ct;
     return ct->blocks;
+}
+
+HashTable* getBlocksTable(City Ct){
+    if(Ct == NULL)
+        return NULL;
+
+    city *ct = (city*) Ct;
+    return &ct->blocksTable;
 }
 
 PQuadTree getHydrants(City Ct){
@@ -326,6 +336,7 @@ void freeCity(City Ct){
     freePQuadTree(ct->rectangles, freeRectangle);
     freePQuadTree(ct->texts, freeText);
 
+    freeHashTable(ct->blocksTable, NULL);
     freePQuadTree(ct->blocks, freeBlock);
     freePQuadTree(ct->hydrants, freeHydrant);
     freePQuadTree(ct->baseRadios, freeBaseRadio);

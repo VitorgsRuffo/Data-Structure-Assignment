@@ -20,5 +20,6 @@
 #include "../util/query/personalInfo.h"
 #include "../util/query/urbanDeletionInRange.h"
 #include "../util/query/printTree.h"
+#include "../util/query/blockResidents.h"
 
 #endif 

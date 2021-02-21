@@ -41,6 +41,7 @@
         "establishmentinformation.h": "c",
         "rectangle.h": "c",
         "changeaddress.h": "c",
-        "healthcenter.h": "c"
+        "healthcenter.h": "c",
+        "blockresidents.h": "c"
     }
 }

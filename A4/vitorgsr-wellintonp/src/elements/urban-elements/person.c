@@ -74,7 +74,7 @@ char* personToString(Person Pe){
         return NULL;
     person* pe = (person*) Pe;
 
-    char* string = (char*) malloc(200 * sizeof(char));
+    char* string = (char*) malloc(300 * sizeof(char));
     sprintf(string, "Nome: %s %s\ncpf: %s, sexo: %c, nascimento: %s.",
                     pe->name, pe->lastName, pe->cpf, pe->gender, pe->birthdate);
     return string;

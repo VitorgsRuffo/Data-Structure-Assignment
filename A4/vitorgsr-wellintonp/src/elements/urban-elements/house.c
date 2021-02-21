@@ -105,8 +105,8 @@ void printHouse(House H){
     if(H == NULL)
         return;
     house *h = (house*) H;
-    printf("Casa:\nw: %lf\nh: %lf\nx: %lf\ny: %lf\n\n",
-            h->w, h->h, getPointX(h->coordinates), getPointY(h->coordinates));
+    printf("Casa:\nCpf morador: %s\n%s\nw: %lf\nh: %lf\nx: %lf\ny: %lf\n\n",
+            h->cpf, addressToString(h->address), h->w, h->h, getPointX(h->coordinates), getPointY(h->coordinates));
 }
 
 void freeHouse(House H){

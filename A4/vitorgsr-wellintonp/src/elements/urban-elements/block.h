@@ -2,6 +2,7 @@
 #define BLOCK_H
 
 #include "../point.h"
+#include "../../util/data-structure/list.h"
 
 /*
 *   Tipo abstrato de dado que representa o elemento urbano quadra.
@@ -121,6 +122,12 @@ void setBlockShadowColor(Block Blk);
 * Pós-Condição: retorna o valor da area da quadra.
 */
 double getBlockArea(Block Blk);
+
+/*  
+* Pré-Condição: requer o endereco de uma instancia de quadra.
+* Pós-Condição: retorna uma lista contendo as casas dentro daquela instancia de quadra.
+*/
+List getListOfHousesInBlock(Block Blk);
 
 /*
 * Pré-Condição: requer o endereco de uma instancia de quadra.

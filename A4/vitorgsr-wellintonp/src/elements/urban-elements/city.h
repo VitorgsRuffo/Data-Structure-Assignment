@@ -39,6 +39,12 @@ PQuadTree getTexts(City Ct);
 */
 PQuadTree getBlocks(City Ct);
 
+/* 
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de quadras presente no TAD cidade.
+*/
+HashTable* getBlocksTable(City Ct);
+
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
 * Pós-Condição: retorna uma referencia para a estrutura de hidrantes presente no TAD cidade.

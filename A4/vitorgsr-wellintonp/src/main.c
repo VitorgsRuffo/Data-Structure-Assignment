@@ -5,9 +5,8 @@
 
 /*to do list:
 
-    - m? + implementar tabela de quadras e usar em buscas tipo "cep -> quadra".
-
     - covid incidence correcao final.
+
     - testar todos os comandos!.
     
 */
