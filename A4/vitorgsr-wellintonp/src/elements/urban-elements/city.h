@@ -75,6 +75,12 @@ PQuadTree getHealthCenters(City Ct);
 */
 PQuadTree getCovidAddresses(City Ct);
 
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura de regioes presente no TAD cidade.
+*/
+List getRegions(City Ct);
+
 /* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
 * Pós-Condição: retorna uma referencia para a estrutura de tipos de estabelecimentos comerciais presente no TAD cidade.
 */

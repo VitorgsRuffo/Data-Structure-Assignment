@@ -246,13 +246,13 @@ void executeFunctionTraversingTree(pquadtreenode *node, nodeVisitingFunction fun
 
 void levelOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInfo extraInfo){
     if(Tree == NULL || function == NULL) return;
-    
+
     pquadtree* tree = (pquadtree*) Tree;
     pquadtreenode* root = tree->root;
 
     if(root == NULL)
         return;
-    
+
     Queue queue = createQueue();
     queuePush(queue, root);
     
@@ -498,20 +498,52 @@ void pushInfosToQueue(Info info, Queue infos){
 PQuadTreeNode getPQuadTreeNode(PQuadTree Tree, double x, double y){
 
     if(Tree == NULL) return NULL;
-
     pquadtree* tree = (pquadtree*) Tree;
     return findPointNodeInPQuadTree(tree->root, x, y);
 }
 
 
 Info getPQuadTreeNodeInfo(PQuadTree Tree, PQuadTreeNode Node){
-    
     if(Tree == NULL || Node == NULL) return NULL;
-
     pquadtreenode* node = (pquadtreenode*) Node;
     return node->info;
 }
 
+Info getPQuadTreeNodeCoordinates(PQuadTree Tree, PQuadTreeNode Node){
+    if(Tree == NULL || Node == NULL) return NULL;
+    pquadtreenode* node = (pquadtreenode*) Node;
+    return node->point;
+}
+
+PQuadTreeNode getPQuadTreeRoot(PQuadTree Tree){
+    if(Tree == NULL) return NULL;
+    pquadtree* tree = (pquadtree*) Tree;
+    return tree->root;
+}
+
+PQuadTreeNode getPQuadTreeNodeNwChild(PQuadTree Tree, PQuadTreeNode Node){
+    if(Tree == NULL || Node == NULL) return NULL;
+    pquadtreenode* node = (pquadtreenode*) Node;
+    return node->northWest;
+}
+
+PQuadTreeNode getPQuadTreeNodeNeChild(PQuadTree Tree, PQuadTreeNode Node){
+    if(Tree == NULL || Node == NULL) return NULL;
+    pquadtreenode* node = (pquadtreenode*) Node;
+    return node->northEast;
+}
+
+PQuadTreeNode getPQuadTreeNodeSwChild(PQuadTree Tree, PQuadTreeNode Node){
+    if(Tree == NULL || Node == NULL) return NULL;
+    pquadtreenode* node = (pquadtreenode*) Node;
+    return node->southWest;
+}
+
+PQuadTreeNode getPQuadTreeNodeSeChild(PQuadTree Tree, PQuadTreeNode Node){
+    if(Tree == NULL || Node == NULL) return NULL;
+    pquadtreenode* node = (pquadtreenode*) Node;
+    return node->southEast;
+}
 
 //p-quadtree to array:
 

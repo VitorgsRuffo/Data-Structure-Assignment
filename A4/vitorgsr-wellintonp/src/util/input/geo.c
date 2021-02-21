@@ -9,13 +9,13 @@
 //numero maximo de partes que um comando vindo de um arquivo geo pode ter
 #define maxNumberOfGeoCommandParts 8
 
-//T1
 void readCircle(Stack* circles, char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readRectangle(Stack* rectangles, char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readText(Stack* texts, char* command, char** commandParts);
 
-//T2
 void readBlock(Stack* blocks, char* command, char** commandParts, ElementsCustomization elementsCustom, City Ct);
+void setBlocksDemographicDensity(DataStructure blocks, DataStructure regions);
+
 void readHydrant(Stack* hydrants, char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readSemaphore(Stack* semaphores, char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readBaseRadio(Stack* baseRadios, char* command, char** commandParts, ElementsCustomization elementsCustom);
@@ -25,7 +25,6 @@ void readHydrantCustomization(char* command, char** commandParts, ElementsCustom
 void readSemaphoreCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 void readBaseRadioCustomization(char* command, char** commandParts, ElementsCustomization elementsCustom);
 
-//T3
 void readHealthCenter(Stack* healthCenters, char* command, int id, char** commandParts);
 void readRegion(City Ct, char* command, int id, char** commandParts);
 
@@ -35,13 +34,11 @@ void readGeo(File geo, City Ct){
     char* command = (char*) malloc((commandMaxLength + 1) * sizeof(char));     
     int commandLength;
     char commandType[10];
-
     char** commandParts;
     commandParts = createCommandParts(maxNumberOfGeoCommandParts);
     
+
     ElementsCustomization elementsCustom = createElementsCustomization();
-    
-    int uniqueId = 0; // Contador para atribuir Id's às regioes e aos postos.
 
     //esses dados precisam ser pre-processados antes de serem inseridos na estrutura. (p-quadtree)
     Stack circles = createStack();
@@ -53,7 +50,10 @@ void readGeo(File geo, City Ct){
     Stack semaphores = createStack();
     Stack healthCenters = createStack();
 
+    DataStructure regions = getRegions(Ct);
 
+
+    int uniqueId = 0; // Contador para atribuir Ids aos tads que necessitarem.
     while(!feof(geo)){
         if(fgets(command, commandMaxLength, geo) == NULL) // se tertarmos ler alem da ultima linha do arquivo fgets retornara NULL e sairemos do loop de leitura.
             break;
@@ -105,7 +105,7 @@ void readGeo(File geo, City Ct){
             readHealthCenter(&healthCenters ,command, uniqueId, commandParts);
 
         else if(!strcmp(commandType, "dd"))//lidando com regioes:
-            readRegion(Ct, command, uniqueId, commandParts);
+            readRegion(regions, command, uniqueId, commandParts);
         
         uniqueId++;
     }
@@ -117,6 +117,8 @@ void readGeo(File geo, City Ct){
     balancedlyInsertObjectsInPQuadTree(getTexts(Ct), texts);
 
     balancedlyInsertObjectsInPQuadTree(getBlocks(Ct), blocks);
+
+    setBlocksDemographicDensity(getBlocks(Ct), regions);
 
     balancedlyInsertObjectsInPQuadTree(getHydrants(Ct), hydrants);
 
@@ -154,6 +156,64 @@ void readBlock(Stack* blocks, char* command, char** commandParts, ElementsCustom
 
     DataStructure* blocksTable = getBlocksTable(Ct);
     insertHashTable(blocksTable, block);
+}
+
+typedef struct {
+    DataStructure regions;
+    Rectangle region;
+    Rectangle block;
+}ddVariables;
+
+void setBlockDemographicDensityIfItsInsideRegion(Info blockInfo, ExtraInfo extraInfo);
+
+void setBlocksDemographicDensity(DataStructure blocks, DataStructure regions){
+    ddVariables variables;
+    variables.regions = regions;
+    variables.region = createRectangle("..", "000000.000000", "000000.000000", "000000.000000", "000000.000000", "..", "..", "..");
+    variables.block = createRectangle("..", "000000.000000","000000.000000","000000.000000","000000.000000","..", "..", "..");
+
+    levelOrderTraversal(blocks, setBlockDemographicDensityIfItsInsideRegion, &variables);
+
+    freeRectangle(variables.region);
+    freeRectangle(variables.block);
+}
+
+void setBlockDemographicDensityIfItsInsideRegion(Info blockInfo, ExtraInfo extraInfo){
+
+    ddVariables* variables = (ddVariables*) extraInfo; 
+
+    setRectangleX(variables->block, getBlockX(blockInfo));
+    setRectangleY(variables->block, getBlockY(blockInfo));
+    setRectangleWidth(variables->block, getBlockWidth(blockInfo));
+    setRectangleHeight(variables->block, getBlockHeight(blockInfo));
+
+
+    Node currentNode = getFirst(variables->regions);
+    Region region;
+    char rx[10], ry[10], rw[10], rh[10];
+
+    while(currentNode != NULL){
+        region = get(variables->regions, currentNode);
+
+        sprintf(rx, "%.2lf", getRegionX(region));
+        sprintf(ry, "%.2lf", getRegionY(region));
+        sprintf(rw, "%.2lf", getRegionWidth(region));
+        sprintf(rh, "%.2lf", getRegionHeight(region));
+
+        setRectangleX(variables->region, rx);
+        setRectangleY(variables->region, ry);
+        setRectangleWidth(variables->region, rw);
+        setRectangleHeight(variables->region, rh);
+
+        if(isRectangleInsideRectangle(variables->block, variables->region)){
+            setBlockDemographicDensity(blockInfo, getRegionDemographicDensity(region));
+            setBlockShadowColor(blockInfo);
+            return;
+        }
+
+        currentNode = getNext(variables->regions, currentNode);
+    }
+    
 }
 
 void readHydrant(Stack* hydrants, char* command, char** commandParts, ElementsCustomization elementsCustom){
@@ -230,43 +290,11 @@ void readHealthCenter(Stack* healthCenters, char* command, int id, char** comman
     stackPush(healthCenters, healthCenter);
 }
 
-typedef struct {
-    Rectangle region;
-    double demographicDensity;
-    Rectangle block;
-}ddVariables;
 
-void setBlockDemographicDensityIfItsInsideRegion(Info blockInfo, ExtraInfo extraInfo);
-
-void readRegion(City Ct, char* command, int id, char** commandParts){
+void readRegion(DataStructure regions, char* command, int id, char** commandParts){
     sscanf(command, "%s %s %s %s %s %s", commandParts[0], commandParts[1], commandParts[2], commandParts[3], commandParts[4], commandParts[5]);
-       
-    ddVariables variables;
-    variables.region = createRectangle("..", commandParts[3], commandParts[4], commandParts[1], commandParts[2], "..", "..", "..");
-    variables.demographicDensity = atof(commandParts[5]); // a divisao por 1000000.00 converteria a densidade demografica de km^2 para m^2.
-    variables.block = createRectangle(".........", ".........", ".........", ".........", ".........", ".........", ".........", ".........");
-
-    DataStructure blocks = getBlocks(Ct);
-
-    levelOrderTraversal(blocks, setBlockDemographicDensityIfItsInsideRegion, &variables);
-
-    freeRectangle(variables.region);
-    freeRectangle(variables.block);
-}
-
-void setBlockDemographicDensityIfItsInsideRegion(Info blockInfo, ExtraInfo extraInfo){
-
-    ddVariables* variables = (ddVariables*) extraInfo; 
-
-    setRectangleX(variables->block, getBlockX(blockInfo));
-    setRectangleY(variables->block, getBlockY(blockInfo));
-    setRectangleWidth(variables->block, getBlockWidth(blockInfo));
-    setRectangleHeight(variables->block, getBlockHeight(blockInfo));
-
-    if(isRectangleInsideRectangle(variables->block, variables->region)){
-        setBlockDemographicDensity(blockInfo, variables->demographicDensity);
-        setBlockShadowColor(blockInfo);
-    }
+    Region region = createRegion(id, atof(commandParts[1]), atof(commandParts[2]), atof(commandParts[3]), atof(commandParts[4]), atof(commandParts[5]));
+    insert(regions, region);
 }
 
 void freeReadGeoResources(char* command, char** commandParts, ElementsCustomization elementsCustom){

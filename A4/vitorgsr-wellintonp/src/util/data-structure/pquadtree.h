@@ -137,11 +137,46 @@ PQuadTreeNode getPQuadTreeNode(PQuadTree Tree, double x, double y);
 
 
 /*
-    Pré condição: Requer uma instancia de p-quadtree e um nó.
-    Pós condição: Retorna a informação armazenada na árvore no nó referenciado por node. O ponteiro "node" deve referenciar um nó válido dentro da árvore.
+    Pré condição: Requer uma instancia de p-quadtree e um nó. O ponteiro "node" deve referenciar um nó válido dentro da árvore.
+    Pós condição: Retorna a informação armazenada na árvore no nó referenciado por node.
 */
 Info getPQuadTreeNodeInfo(PQuadTree Tree, PQuadTreeNode Node);
 
+/*
+    Pré condição: Requer uma instancia de p-quadtree e um nó. O ponteiro "node" deve referenciar um nó válido dentro da árvore.
+    Pós condição: Retorna as coordenadas do nó referenciado por node. 
+*/
+Info getPQuadTreeNodeCoordinates(PQuadTree Tree, PQuadTreeNode Node);
+
+/*
+    Pré condição: Requer uma instancia de p-quadtree.
+    Pós condição: Retorna o no raiz da arvore.
+*/
+PQuadTreeNode getPQuadTreeRoot(PQuadTree Tree);
+
+/*
+    Pré condição: Requer uma instancia de p-quadtree e um nó.
+    Pós condição: Retorna o filho noroeste do no passado.
+*/
+PQuadTreeNode getPQuadTreeNodeNwChild(PQuadTree Tree, PQuadTreeNode Node);
+
+/*
+    Pré condição: Requer uma instancia de p-quadtree e um nó.
+    Pós condição: Retorna o filho nordeste do no passado.
+*/
+PQuadTreeNode getPQuadTreeNodeNeChild(PQuadTree Tree, PQuadTreeNode Node);
+
+/*
+    Pré condição: Requer uma instancia de p-quadtree e um nó.
+    Pós condição: Retorna o filho sudoeste do no passado.
+*/
+PQuadTreeNode getPQuadTreeNodeSwChild(PQuadTree Tree, PQuadTreeNode Node);
+
+/*
+    Pré condição: Requer uma instancia de p-quadtree e um nó.
+    Pós condição: Retorna o filho sudeste do no passado.
+*/
+PQuadTreeNode getPQuadTreeNodeSeChild(PQuadTree Tree, PQuadTreeNode Node);
 
 /*
     Pré condição: Requer uma instancia de p-quadtree.

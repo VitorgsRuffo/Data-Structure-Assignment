@@ -87,6 +87,9 @@ void executeQry(File qry, City Ct, Parameters Param){
         
         else if(!strcmp(commandType, "catac"))
             executeUrbanElementsDeletion(command, Ct, txt);
+        
+        else if(!strcmp(commandType, "dmprbt"))
+            executeTreeStatePrinting(command, Ct, Param);
       
         uniqueId++;
     }
@@ -96,7 +99,7 @@ void executeQry(File qry, City Ct, Parameters Param){
 }
 
 File openTxt(Parameters Param){
-    char* txtPath = buildQryOutputPath(Param, "txt");
+    char* txtPath = buildQryOutputPath(Param, NULL, "txt");
     File txt = fopen(txtPath, "a");
     if(txt == NULL)
         return NULL;

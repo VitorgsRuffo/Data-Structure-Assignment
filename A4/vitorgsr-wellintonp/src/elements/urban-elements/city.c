@@ -15,6 +15,7 @@ typedef struct city {
     PQuadTree semaphores;//*
     PQuadTree healthCenters;//*
     PQuadTree covidAddresses;
+    List regions;
     HashTable establishmentTypes;
     HashTable establishmentsTable; //
     PQuadTree establishmentsTree; //
@@ -42,7 +43,8 @@ City createCity(){
     ct->semaphores = createPQuadTree(getSemaphoreId, getSemaphoreCoordinates);
     ct->healthCenters = createPQuadTree(getHealthCenterId, getHealthCenterCoordinates);
     ct->covidAddresses = createPQuadTree(getCovidAddressId, getCovidAddressCoordinates);
-    
+    ct->regions = createList();
+
     ct->establishmentTypes = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentTypeCode);
     ct->establishmentsTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getEstablishmentCnpj);
     ct->establishmentsTree = createPQuadTree(getEstablishmentCnpj, getEstablishmentCoordinates);
@@ -134,6 +136,14 @@ PQuadTree getCovidAddresses(City Ct){
 
   city *ct = (city*) Ct;
   return ct->covidAddresses;
+}
+
+List getRegions(City Ct){
+    if(Ct == NULL)
+        return NULL;
+
+    city *ct = (city*) Ct;
+    return ct->regions;
 }
 
 HashTable* getEstablishmentTypes(City Ct){
@@ -333,6 +343,7 @@ void freeCity(City Ct){
     freePQuadTree(ct->semaphores, freeSemaphore);
     freePQuadTree(ct->healthCenters, freeHealthCenter);
     freePQuadTree(ct->covidAddresses, freeCovidAddress);
+    freeList(ct->regions, freeRegion);
 
     freeHashTable(ct->establishmentTypes, freeEstablishmentType);
     freePQuadTree(ct->establishmentsTree, freeEstablishment);

@@ -37,7 +37,7 @@ void setBlocksBorderInRange(File txt, DataStructure blocks, Circle wrapper){
 
     variables.wrapper = wrapper;
     variables.txt = txt;
-    variables.block = createRectangle("..", "..", "..", "..", "..", "..", "..", "..");
+    variables.block = createRectangle("..", "000000.000000", "000000.000000", "000000.000000", "000000.000000", "..", "..", "..");
 
     preOrderTraversal(blocks, setBlockBorderIfItsInRange, &variables);
     

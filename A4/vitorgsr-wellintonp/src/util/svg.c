@@ -7,7 +7,7 @@ char* buildGeoSvgPath(Parameters Param);
 
 Svg openSvg(char* filePath);
 
-Svg createSvg(Parameters Param, City Ct, char* fileType){
+Svg createSvg(Parameters Param, City Ct, char* fileType, char* sufix){
     if(Param == NULL || Ct == NULL || fileType == NULL)
         return NULL;
 
@@ -16,17 +16,16 @@ Svg createSvg(Parameters Param, City Ct, char* fileType){
         filePath = buildGeoSvgPath(Param); 
 
     else if(!strcmp(fileType, "qry"))
-        filePath = buildQryOutputPath(Param, "svg"); 
+        filePath = buildQryOutputPath(Param, sufix, "svg");
+
+    else if(!strcmp(fileType, "tree"))
+        filePath = buildQryOutputPath(Param, sufix, "svg");
+
         
     Svg svg = NULL;
     
-    printf("%s\n\n", filePath);
-
     if(access(filePath, F_OK ) == -1)  //se a funcao access retornar -1 significa que o arquivo cujo caminho é "filePath" ainda nao existe, portanto, iremos cria-lo. Não iremos cria-lo caso ele ja exista nesse diretorio.       
         svg = openSvg(filePath); 
-
-    printf("filetype: %s\n", fileType);
-    printf("svg: %p\n", svg);
 
     free(filePath);
     return svg;
@@ -215,12 +214,11 @@ void buildBlockSvgTag(char* blockTag, Block Blk){
     char transparentShadow[15];
     strcpy(transparentShadow, "rgba(0,0,0,0)");
 
-    char* shadowColor;
-    if((shadowColor = getBlockShadowColor(Blk)) == NULL)
+    char* shadowColor = getBlockShadowColor(Blk);
+    if(shadowColor == NULL)
         shadowColor = transparentShadow;
 
-    sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n", width, height, (x + 8), (y + 8), rx , shadowColor, sw, shadowColor); 
-    sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%f\" y=\"%f\" fill=\"black\" stroke=\"white\" stroke-width=\"0.1\" dominant-baseline=\"middle\" text-anchor=\"middle\"> %s </text>\n", width, height, x, y, rx ,cstrk, sw, cfill, xCep, yCep, cep);
+    sprintf(blockTag, "\t<rect width=\"%s\" height=\"%s\" x=\"%lf\" y=\"%lf\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<rect width=\"%s\" height=\"%s\" x=\"%s\" y=\"%s\" rx=\"%s\" stroke=\"%s\" stroke-width=\"%s\" fill=\"%s\" />\n\t<text x=\"%f\" y=\"%f\" fill=\"black\" stroke=\"white\" stroke-width=\"0.1\" dominant-baseline=\"middle\" text-anchor=\"middle\"> %s </text>\n", width, height, (atof(x) + 5), (atof(y) + 5), rx , shadowColor, sw, shadowColor, width, height, x, y, rx ,cstrk, sw, cfill, xCep, yCep, cep);
 }    
 
 void buildHydrantSvgTag(char* hydrantTag, Hydrant Hyd){
