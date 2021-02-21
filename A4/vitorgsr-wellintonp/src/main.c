@@ -5,8 +5,6 @@
 
 /*to do list:
 
-    - covid incidence correcao final.
-
     - testar todos os comandos!.
     
 */

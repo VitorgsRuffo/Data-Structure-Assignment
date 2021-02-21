@@ -77,8 +77,7 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
 
     double incidenceRegionArea = calculateIncidenceRegionArea(variables.convexHullPoints, variables.convexHullPointsAmount);
     
-    //double regionDemographicDensity = getIncidenceRegionDemographicDensity(Ct, variables.covidAddressesInCirc) * 1000000.00; //convertendo densidade demografica de km^2 para m^2.
-    double regionDemographicDensity = 1000;
+    double regionDemographicDensity = getIncidenceRegionDemographicDensity(Ct, variables.covidAddressesInCirc) * 1000000.00; //convertendo densidade demografica de km^2 para m^2.
 
     int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
 
@@ -218,7 +217,7 @@ double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPoint
    return area;
 }
 
-/*
+
 double getIncidenceRegionDemographicDensity(City Ct, List covidAddressesInCirc){
 
     Node firstNode = getFirst(covidAddressesInCirc);
@@ -233,7 +232,7 @@ double getIncidenceRegionDemographicDensity(City Ct, List covidAddressesInCirc){
     double demographicDensity = getBlockDemographicDensity(block);
     return demographicDensity;
 }
-*/
+
 char* determineIncidenceRegionColor(char incidenceRegionCategory);
 
 char* buildIncidenceRegionTag(Point* points, int pointsAmount, char incidenceRegionCategory){
