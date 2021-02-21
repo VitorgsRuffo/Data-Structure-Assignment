@@ -5,6 +5,7 @@
 #include "../include/dataStructure.h"
 #include "../elements/point.h"
 
+
 /* 
 * Definicao do tamanho maximo de uma linha de comando de um arquivo de entrada (linha do geo/qry) 
 */
@@ -29,10 +30,10 @@ char** createCommandParts(int numberOfParts);
 char* getFileNameWithoutPathAndExtension(char* fullFileName);
 
 /*
-* Pré-Condição: requer um TAD parametros, e a extensao de um arquivo de saida (svg ou txt).
+* Pré-Condição: requer um TAD parametros, o sufixo e a extensao de um arquivo de saida (svg ou txt).
 * Pós-Condição: constroi o caminho de saida para uma arquivo de output do query, seja ele um svg ou txt. Esse caminho e retornado.
 */
-char* buildQryOutputPath(Parameters Param, char* extension);
+char* buildQryOutputPath(Parameters Param, char* sufix, char* extension);
 
 /*
 * Pré-Condição: requer um TAD que seja um elemento urbano e o tipo desse elemento.
@@ -40,5 +41,11 @@ char* buildQryOutputPath(Parameters Param, char* extension);
 */
 char* getUrbanElementToString(Info urbanElementInfo, char* urbanElementType);
 
+/*
+* Pré-Condição: requer um tipo de elemento.
+* Pós-Condição: retorna a referencia para a funcao que retorna a chave desse tipo de elemento.
+*/
+typedef char* (*getKeyFunction)(Info);
+getKeyFunction getKeyRetrievingFunctionByElementType(char* elementType);
 
 #endif 

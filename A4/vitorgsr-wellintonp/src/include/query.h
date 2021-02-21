@@ -19,6 +19,6 @@
 #include "../util/query/changeAddress.h"
 #include "../util/query/personalInfo.h"
 #include "../util/query/urbanDeletionInRange.h"
-
+#include "../util/query/printTree.h"
 
 #endif 

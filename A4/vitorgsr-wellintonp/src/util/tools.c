@@ -45,7 +45,7 @@ char* getFileNameWithoutPathAndExtension(char* fullFileName){ //Retorna somente 
     return fileNameWithoutExtension;
 }
 
-char* buildQryOutputPath(Parameters Param, char* extension){
+char* buildQryOutputPath(Parameters Param, char* sufix, char* extension){
     char* outputDirectory = getOutputDirectory(Param);
     int outputDirectoryLength = strlen(outputDirectory);
 
@@ -55,13 +55,20 @@ char* buildQryOutputPath(Parameters Param, char* extension){
     char* fullQryName = getQryName(Param);
     char* qryNameWithoutPathAndExtension = getFileNameWithoutPathAndExtension(fullQryName);
 
-    int qryOutputPathLength = strlen(outputDirectory) + strlen(geoNameWithoutPathAndExtension) + strlen(qryNameWithoutPathAndExtension) + strlen(".ext") + 5;
+    char finalSufix[30];
+    if(sufix == NULL)
+        strcpy(finalSufix, "");
+    else
+        sprintf(finalSufix, "-%s", sufix);
+    
+
+    int qryOutputPathLength = strlen(outputDirectory) + strlen(geoNameWithoutPathAndExtension) + strlen(qryNameWithoutPathAndExtension) + strlen(finalSufix) + strlen(".ext") + 5;
     char* qryOutputPath = (char*) malloc(qryOutputPathLength * sizeof(char));
 
     if(outputDirectory[outputDirectoryLength - 1] == '/'){
-        sprintf(qryOutputPath, "%s%s-%s.%s", outputDirectory, geoNameWithoutPathAndExtension, qryNameWithoutPathAndExtension, extension);    
+        sprintf(qryOutputPath, "%s%s-%s%s.%s", outputDirectory, geoNameWithoutPathAndExtension, qryNameWithoutPathAndExtension, finalSufix, extension);    
     }else{
-        sprintf(qryOutputPath, "%s/%s-%s.%s", outputDirectory, geoNameWithoutPathAndExtension, qryNameWithoutPathAndExtension, extension);    
+        sprintf(qryOutputPath, "%s/%s-%s%s.%s", outputDirectory, geoNameWithoutPathAndExtension, qryNameWithoutPathAndExtension, finalSufix, extension);    
     }
 
     free(geoNameWithoutPathAndExtension);
@@ -85,4 +92,25 @@ char* getUrbanElementToString(Info urbanElementInfo, char* urbanElementType){
         urbanElementToString = baseRadioToString(urbanElementInfo);
        
     return urbanElementToString;
+}
+
+getKeyFunction getKeyRetrievingFunctionByElementType(char* elementType){
+    getKeyFunction f;
+
+    if(elementType[0] == 'q')
+        f = getBlockCep;
+
+    else if(elementType[0] == 'h')
+        f = getHydrantId;
+
+    else if(elementType[0] == 's')
+        f = getSemaphoreId;
+
+    else if(elementType[0] == 'r') 
+       f = getBaseRadioId;
+
+    else 
+        f = NULL;
+
+    return f;
 }

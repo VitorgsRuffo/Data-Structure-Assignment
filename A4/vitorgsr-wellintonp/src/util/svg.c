@@ -7,7 +7,7 @@ char* buildGeoSvgPath(Parameters Param);
 
 Svg openSvg(char* filePath);
 
-Svg createSvg(Parameters Param, City Ct, char* fileType){
+Svg createSvg(Parameters Param, City Ct, char* fileType, char* sufix){
     if(Param == NULL || Ct == NULL || fileType == NULL)
         return NULL;
 
@@ -16,7 +16,11 @@ Svg createSvg(Parameters Param, City Ct, char* fileType){
         filePath = buildGeoSvgPath(Param); 
 
     else if(!strcmp(fileType, "qry"))
-        filePath = buildQryOutputPath(Param, "svg"); 
+        filePath = buildQryOutputPath(Param, sufix, "svg");
+
+    else if(!strcmp(fileType, "tree"))
+        filePath = buildQryOutputPath(Param, sufix, "svg");
+
         
     Svg svg = NULL;
     

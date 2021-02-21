@@ -9,10 +9,10 @@ typedef FILE* Svg;
 
 
 /*
-* Pré-Condição: recebe os parametros do terminal, uma instancia do TAD cidade e a string informando o tipo do arquivo (geo ou qry).
+* Pré-Condição: recebe os parametros do terminal, uma instancia do TAD cidade, a string informando o tipo do arquivo (geo ou qry) e um sufixo de arquivo query se necesssario.
 * Pós-Condição: retorna o endereço do arquivo SVG aberto.  
 */
-Svg createSvg(Parameters Param, City Ct, char* fileType);
+Svg createSvg(Parameters Param, City Ct, char* fileType, char* sufix);
 
 /*
 * Pré-Condição: requer uma referencia para uma arquivo e uma instancia do TAD cidade.

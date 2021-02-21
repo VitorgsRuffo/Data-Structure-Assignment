@@ -54,6 +54,11 @@ double distanceBetweenPoints(Point P1, Point P2);
 */
 int findOrientationOfOrderedPoints(Point P1, Point P2, Point P3);
 
+/*  
+* Pré-Condição: requer o endereco de uma instancia de ponto.
+* Pós-Condição: retorna uma string com as informacoes da instancia de ponto passada.
+*/
+char* pointToString(Point P);
 
 /*
     Pré condição: Requer uma instancia do tipo Point.

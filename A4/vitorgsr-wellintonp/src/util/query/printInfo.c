@@ -7,9 +7,7 @@
 void writeUrbanElementInformationOnTxt(File txt, char* urbanElementToString);
 
 void executeUrbanElementInformationChecking(char* command, City Ct, File txt){
-    if(command == NULL || Ct == NULL || txt == NULL)
-        return;
-    
+   
     char identifier[15];
     sscanf(&command[5], "%s", identifier);
     

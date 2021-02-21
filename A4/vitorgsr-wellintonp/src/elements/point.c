@@ -78,6 +78,14 @@ int findOrientationOfOrderedPoints(Point P1, Point P2, Point P3){
         return 2; // os pontos estao em sentido anti-horario.
 } 
 
+char* pointToString(Point P){
+   if(P == NULL) return NULL;
+    point* p = (point*) P; 
+    char* string = (char*) malloc(30 * sizeof(char));
+    sprintf(string, "(%.2lf, %.2lf)", p->x, p->y);
+    return string;
+}
+
 void printPoint(Point P){
     if(P == NULL)
         return;

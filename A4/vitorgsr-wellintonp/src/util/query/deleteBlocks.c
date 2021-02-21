@@ -35,7 +35,7 @@ void executeBlocksDeletion(char* command, City Ct, File txt){
         sscanf(&command[3], "%s %s", id, radius);
 
     variables.txt = txt;
-    variables.deletionRange = createCircle(id, radius, "..", "..", "..", "..", "..");
+    variables.deletionRange = createCircle(id, radius, "000000.000000", "000000.000000", "..", "..", "..");
 
     //pegando a referencia para o equipamento urbano:
     Node urbanEquipmentNode = searchForUrbanElementByIdentifier(Ct, id, variables.urbanEquipmentType);
@@ -55,7 +55,7 @@ void executeBlocksDeletion(char* command, City Ct, File txt){
     //alterando/deletando as quadras dentro do raio:
     DataStructure blocks = getBlocks(Ct);
     variables.blocks = blocks;
-    variables.block = createRectangle("..", "..", "..", "..", "..", "..", "..", "..");
+    variables.block = createRectangle("..", "000000.000000", "000000.000000", "000000.000000", "000000.000000", "..", "..", "..");
 
     if(thereIsHashtag)
         changeBlocksCustomizationInRange(blocks, &variables);
