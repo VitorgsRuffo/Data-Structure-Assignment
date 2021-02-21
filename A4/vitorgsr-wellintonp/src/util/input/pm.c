@@ -65,6 +65,13 @@ void readPeopleAddress(Stack* houses, char* command, char** commandParts, City C
 
     DataStructure* housesTable = getHousesTable(Ct); 
     insertHashTable(housesTable, h);
+
+    char* cep = commandParts[1];
+    DataStructure* blocksTable = getBlocksTable(Ct);
+    Info blockInfo = getHashTableInfo(*blocksTable, cep);
+
+    if(blockInfo != NULL) // Se não existir uma quadra com o cep da casa, então nao temos uma lista exisente para inserir essa casa.
+        insert(getListOfHousesInBlock(blockInfo), h);
 }
 
 void freeReadPmResources(char* command, char** commandParts){

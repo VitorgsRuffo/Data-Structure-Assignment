@@ -70,17 +70,20 @@ void executeQry(File qry, City Ct, Parameters Param){
         else if(!strcmp(commandType, "ci"))
             executeCovidIncidenceReportInRegion(command, Ct, txt);
 
+        else if(!strcmp(commandType, "m?"))
+            executeBlockResidentsReport(command, Ct, txt);
+
+        else if(!strcmp(commandType, "dm?"))
+            executePersonalInformationChecking(command, Ct, txt);
+
         else if(!strcmp(commandType, "de?"))
             executeEstablishmentInformationChecking(command, Ct, txt);
 
-        else if(!strcmp(commandType, "eplg?"))
-            executeHighlightEstablishmentInRange(command, Ct, txt);
-
         else if(!strcmp(commandType, "mud"))
             executeChangeOfAddress(command, Ct, txt);
-        
-        else if(!strcmp(commandType, "dm?"))
-            executePersonalInformationChecking(command, Ct, txt);
+
+        else if(!strcmp(commandType, "eplg?"))
+            executeHighlightEstablishmentInRange(command, Ct, txt);
         
         else if(!strcmp(commandType, "catac"))
             executeUrbanElementsDeletion(command, Ct, txt);
