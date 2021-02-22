@@ -12,7 +12,7 @@ typedef struct {
 
 
 char* buildBlueHouseTag(House H);
-void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHealthCenters, int healthCentersAmount);
+void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter** nearHealthCenters, int healthCentersAmount);
 int compareNearHealthCenters(Info Hc1, Info Hc2);
 char* buildLineSegmentTag(double x, double y, House H);
 void writeHealthCenterCoordinatesOnTxt(File txt, int i, double x, double y, double distance);
@@ -32,16 +32,20 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
     DataStructure healthCenters = getHealthCenters(Ct);
     HealthCenter* healthCentersArray = PQuadTreeToArray(healthCenters);
 
-    int healthCentersAmount = PQuadTreeSize(healthCenters);
-    NearHealthCenter nearHealthCenters[healthCentersAmount];
 
-    for(int i = 0; i<healthCentersAmount; i++)
-        nearHealthCenters[i].healthCenter = healthCentersArray[i];
+    int healthCentersAmount = PQuadTreeSize(healthCenters);
+
+    NearHealthCenter** nearHealthCenters = (NearHealthCenter**) malloc(healthCentersAmount * sizeof(NearHealthCenter*));
+
+    for(int i = 0; i<healthCentersAmount; i++){
+        *(nearHealthCenters + i) = (NearHealthCenter*) malloc(sizeof(NearHealthCenter));
+        (**(nearHealthCenters + i)).healthCenter = healthCentersArray[i];
+    }
 
     free(healthCentersArray);
     
     calculateDistanceFromHouseToHealthCenters(house, nearHealthCenters, healthCentersAmount);
-
+    
     shellsort((Info*) nearHealthCenters, healthCentersAmount, compareNearHealthCenters);
 
     int healthCenterX, healthCenterY;
@@ -51,14 +55,19 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
     
     for(int i = 0; i < K; i++){
 
-        healthCenterX = atof(getHealthCenterX(nearHealthCenters[i].healthCenter));
-        healthCenterY = atof(getHealthCenterY(nearHealthCenters[i].healthCenter));
+        healthCenterX = atof(getHealthCenterX((**(nearHealthCenters + i)).healthCenter));
+        healthCenterY = atof(getHealthCenterY((**(nearHealthCenters + i)).healthCenter));
         lineSegmentTag = buildLineSegmentTag(healthCenterX, healthCenterY, house);
         insert(queryElementsList, lineSegmentTag);
-        writeHealthCenterCoordinatesOnTxt(txt, i, healthCenterX, healthCenterY, nearHealthCenters[i].distance);
+        writeHealthCenterCoordinatesOnTxt(txt, i, healthCenterX, healthCenterY, (**(nearHealthCenters + i)).distance);
     }
 
     freeHouse(house);
+
+    for(int i = 0; i<healthCentersAmount; i++)
+        free(*(nearHealthCenters + i));
+
+    free(nearHealthCenters);
 }
 
 char* buildBlueHouseTag(House H){
@@ -76,7 +85,7 @@ char* buildBlueHouseTag(House H){
     return houseTag;
 }
 
-void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHealthCenters, int healthCentersAmount){
+void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter** nearHealthCenters, int healthCentersAmount){
     
     double healthCenterX, healthCenterY;
 
@@ -84,10 +93,10 @@ void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter* nearHe
     double houseCenterOfMassY = getPointY(getHouseCenterOfMass(H));
 
     for(int i = 0; i<healthCentersAmount; i++){
-        healthCenterX = atof(getHealthCenterX(nearHealthCenters[i].healthCenter));
-        healthCenterY = atof(getHealthCenterY(nearHealthCenters[i].healthCenter));
+        healthCenterX = atof(getHealthCenterX( (**(nearHealthCenters + i)).healthCenter ));
+        healthCenterY = atof(getHealthCenterY( (**(nearHealthCenters + i)).healthCenter ));
         
-        nearHealthCenters[i].distance = sqrt(pow((healthCenterX - houseCenterOfMassX), 2) + pow((healthCenterY - houseCenterOfMassY), 2));
+        (**(nearHealthCenters + i)).distance = sqrt(pow((healthCenterX - houseCenterOfMassX), 2) + pow((healthCenterY - houseCenterOfMassY), 2));
     }
 }
 

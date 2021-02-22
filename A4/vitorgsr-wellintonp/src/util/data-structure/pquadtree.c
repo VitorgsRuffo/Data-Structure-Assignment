@@ -558,7 +558,6 @@ Info* PQuadTreeToArray(PQuadTree Tree){
     if(Tree == NULL) return NULL;
     pquadtree* tree = (pquadtree*) Tree;
 
-
     InfoArray arr;
 
     arr.infos = (Info*) malloc(tree->size * sizeof(Info));

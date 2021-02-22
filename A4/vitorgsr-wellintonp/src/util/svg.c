@@ -270,8 +270,8 @@ void buildCovidAddressSvgTag(char* covidAddressTag, CovidAddress Ca){
     double covidAddressX = getPointX(covidAddressCoordinates);
     double covidAddressY = getPointY(covidAddressCoordinates);
 
-    double x = covidAddressX - 15.00;
-    double y = covidAddressY - 15.00;
+    double x = covidAddressX - 7.5;
+    double y = covidAddressY - 7.5;
   
     int casesNumber = getCovidAddressCasesNumber(Ca);
 

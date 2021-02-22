@@ -18,7 +18,7 @@ void drawParentChildConnection(Svg treeSvg, Point nodeDrawingCoordinates, Point 
 
 void executeTreeStatePrinting(char* command, City Ct, Parameters Param){
 
-    char treeType[5], sufix[30];
+    char treeType[5] = {'x','x','x','x'}, sufix[30];
     sscanf(&command[7], "%s %s", treeType, sufix);
 
     if(treeType[0] == 't') treeType[0] = 'a';

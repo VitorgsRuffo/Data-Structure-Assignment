@@ -176,7 +176,7 @@ void getUrbanEquipmentInfoByType(Info urbanEquipmentInfo, char* urbanEquipmentTy
 
 char* buildUrbanWrapperRectangleTag(WrapperRectangle wrapperRectangle, double totalArea){
     char* wrapperUrbanRectangleTag = (char*) malloc(500 * sizeof(char));
-    if(wrapperUrbanRectangleTag) return NULL;
+    if(wrapperUrbanRectangleTag == NULL) return NULL;
 
     sprintf(wrapperUrbanRectangleTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"black\" stroke-width=\"1.5\" fill-opacity=\"0.0\" />\n\t<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"-100\" style=\"stroke:rgb(0,0,0);stroke-width:1.5\" />\t<text x=\"%lf\" y=\"-110\" stroke=\"2.0\" stroke-width=\"0.3\" fill=\"black\" > %.2lf </text>\n", wrapperRectangle.width, wrapperRectangle.height, wrapperRectangle.x, wrapperRectangle.y, wrapperRectangle.x, wrapperRectangle.y, wrapperRectangle.x, wrapperRectangle.x, totalArea);
     return wrapperUrbanRectangleTag;

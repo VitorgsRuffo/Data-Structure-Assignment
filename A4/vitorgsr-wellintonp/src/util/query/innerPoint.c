@@ -114,7 +114,7 @@ char* buildPointTag(Point point, char* color){
 
 char* buildLineTag(Point point, Point centerOfMass, char* color){
     char* lineTag = (char*) malloc(200 * sizeof(char));
-    if(lineTag) return NULL;
+    if(lineTag == NULL) return NULL;
         
     sprintf(lineTag, "<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"%lf\" stroke=\"%s\" stroke-width=\"0.8\" />", getPointX(point), getPointY(point), getPointX(centerOfMass), getPointY(centerOfMass), color);
     return lineTag;

@@ -74,11 +74,9 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
     
     int totalCovidCasesInRegion = calculateTotalCovidCasesInRegion(variables.covidAddressesInCirc);
     
-
     double incidenceRegionArea = calculateIncidenceRegionArea(variables.convexHullPoints, variables.convexHullPointsAmount);
     
     double regionDemographicDensity = getIncidenceRegionDemographicDensity(Ct, variables.covidAddressesInCirc) * 1000000.00; //convertendo densidade demografica de km^2 para m^2.
-
     int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
 
     char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
@@ -220,16 +218,24 @@ double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPoint
 
 double getIncidenceRegionDemographicDensity(City Ct, List covidAddressesInCirc){
 
-    Node firstNode = getFirst(covidAddressesInCirc);
-    Info covidAddress = get(covidAddressesInCirc, firstNode);
+    Node currentNode = getFirst(covidAddressesInCirc);   
+    double demographicDensity;
+    
+    while (currentNode != NULL){
 
-    Address address = getCovidAddress(covidAddress);
-    char* blockCep = getAddressCep(address);
+        Info covidAddress = get(covidAddressesInCirc, currentNode);
+        Address address = getCovidAddress(covidAddress);
+        char* blockCep = getAddressCep(address);
 
-    DataStructure* blocksTable = getBlocksTable(Ct);
-    Block block = getHashTableInfo(*blocksTable, blockCep);
+        DataStructure* blocksTable = getBlocksTable(Ct);
+        Block block = getHashTableInfo(*blocksTable, blockCep);
 
-    double demographicDensity = getBlockDemographicDensity(block);
+        demographicDensity = getBlockDemographicDensity(block);
+        if(demographicDensity == -1) continue;
+        else if(demographicDensity != 0) break;
+        currentNode = getNext(covidAddressesInCirc, currentNode);
+    }
+
     return demographicDensity;
 }
 

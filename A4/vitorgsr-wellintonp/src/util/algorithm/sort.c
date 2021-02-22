@@ -35,7 +35,7 @@ void shellsort(Info* array, int n, compare function){
         for (int i = gap; i < n; i += 1) { 
             
             Info temp = array[i]; 
-  
+
             int j;             
             for (j = i; j >= gap && (*function)(array[j - gap], temp) > 0; j -= gap) 
                 array[j] = array[j - gap]; 
