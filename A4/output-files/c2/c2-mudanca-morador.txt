@@ -1,0 +1,5 @@
+Antigo endereco - cep: B40-6.10, face: L, num: 20, compl: -.
+Novo endereco - cep: B40-6.1, face: N, num: 60, compl: cobertura.
+Dados do morador: Nome: Mia_Heidi Mawicow_Marchetti
+cpf: 000.012.961-59, sexo: F, nascimento: 06/05/1974.
+

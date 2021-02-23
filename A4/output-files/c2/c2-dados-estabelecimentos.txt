@@ -1,0 +1,10 @@
+Nome: Banco_M1-4
+CNPJ: 00001975/0001-39
+Descricao: Banco
+endereco - cep: B40-4.7, face: O, num: 80, compl: none.x: 1127.500000 y:2577.500000 width:20.000000 height:15.000000
+Dados do proprietario:
+Nome: Antonio_Artur Conte_Coppola
+cpf: 000.013.581-03, sexo: M, nascimento: 15/02/1974.
+
+O estabelecimento de CNPJ INEXISTENTE nao existe na cidade.
+

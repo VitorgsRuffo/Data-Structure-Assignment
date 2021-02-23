@@ -1,0 +1,479 @@
+"Tipo: quadra, Cep: b04.5, x: 635.000000, y: 380.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b04.6, x: 770.000000, y: 380.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b03.5, x: 635.000000, y: 285.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b03.6, x: 770.000000, y: 285.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b02.5, x: 635.000000, y: 190.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b02.6, x: 770.000000, y: 190.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b03.7, x: 905.000000, y: 285.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b02.4, x: 500.000000, y: 190.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b01.5, x: 635.000000, y: 95.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b01.6, x: 770.000000, y: 95.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b02.7, x: 905.000000, y: 190.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: quadra, Cep: b01.7, x: 905.000000, y: 95.000000, w: 120.000000, h: 80.000000, sw: 1.0, cfill: darkcyan, cstrk: MistyRose, rx: 0.0" foi removido.
+"Tipo: hidrante, id: hnb04.6, x: 830.000000, y: 460.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb04.5, x: 695.000000, y: 460.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob05.5, x: 755.000000, y: 475.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb05.6, x: 770.000000, y: 475.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb03.6, x: 830.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb03.5, x: 695.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob04.5, x: 755.000000, y: 460.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb04.6, x: 770.000000, y: 460.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb02.6, x: 830.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob05.6, x: 890.000000, y: 475.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb02.5, x: 695.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob04.5, x: 755.000000, y: 420.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb04.6, x: 770.000000, y: 420.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb01.6, x: 830.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob04.6, x: 890.000000, y: 460.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb05.7, x: 905.000000, y: 475.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob04.4, x: 620.000000, y: 460.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb04.5, x: 635.000000, y: 460.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb01.5, x: 695.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob04.5, x: 755.000000, y: 380.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb04.6, x: 770.000000, y: 380.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob04.6, x: 890.000000, y: 420.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb04.7, x: 905.000000, y: 460.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb03.7, x: 965.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb04.5, x: 635.000000, y: 420.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob03.5, x: 755.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb03.6, x: 770.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob04.6, x: 890.000000, y: 380.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb04.7, x: 905.000000, y: 420.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb02.7, x: 965.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob04.4, x: 620.000000, y: 420.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb04.5, x: 635.000000, y: 380.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob03.5, x: 755.000000, y: 325.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb03.6, x: 770.000000, y: 325.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob03.6, x: 890.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb04.7, x: 905.000000, y: 380.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb01.7, x: 965.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb03.4, x: 560.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob04.4, x: 620.000000, y: 380.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb03.5, x: 635.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob03.5, x: 755.000000, y: 285.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb03.6, x: 770.000000, y: 285.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob03.6, x: 890.000000, y: 325.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb03.7, x: 905.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb02.4, x: 560.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob03.4, x: 620.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb03.5, x: 635.000000, y: 325.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob02.5, x: 755.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb02.6, x: 770.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob03.6, x: 890.000000, y: 285.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb03.7, x: 905.000000, y: 325.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb01.4, x: 560.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob03.4, x: 620.000000, y: 325.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb03.5, x: 635.000000, y: 285.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob02.5, x: 755.000000, y: 230.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb02.6, x: 770.000000, y: 230.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob02.6, x: 890.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb03.7, x: 905.000000, y: 285.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob03.7, x: 1025.000000, y: 365.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob03.4, x: 620.000000, y: 285.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb02.5, x: 635.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob02.5, x: 755.000000, y: 190.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb02.6, x: 770.000000, y: 190.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob02.6, x: 890.000000, y: 230.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb02.7, x: 905.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob03.7, x: 1025.000000, y: 325.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob02.4, x: 620.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb02.5, x: 635.000000, y: 230.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob01.5, x: 755.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb01.6, x: 770.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob02.6, x: 890.000000, y: 190.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb02.7, x: 905.000000, y: 230.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob03.7, x: 1025.000000, y: 285.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb03.8, x: 1040.000000, y: 325.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob02.4, x: 620.000000, y: 230.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb02.5, x: 635.000000, y: 190.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob01.5, x: 755.000000, y: 135.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb01.6, x: 770.000000, y: 135.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob01.6, x: 890.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb02.7, x: 905.000000, y: 190.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob02.7, x: 1025.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb03.8, x: 1040.000000, y: 285.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob02.4, x: 620.000000, y: 190.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb01.5, x: 635.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob01.5, x: 755.000000, y: 95.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb01.6, x: 770.000000, y: 95.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob01.6, x: 890.000000, y: 135.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb01.7, x: 905.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob02.7, x: 1025.000000, y: 230.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb02.8, x: 1040.000000, y: 270.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob01.4, x: 620.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb01.5, x: 635.000000, y: 135.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob01.6, x: 890.000000, y: 95.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb01.7, x: 905.000000, y: 135.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob02.7, x: 1025.000000, y: 190.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb02.8, x: 1040.000000, y: 230.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob01.4, x: 620.000000, y: 135.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb01.5, x: 635.000000, y: 95.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb01.7, x: 905.000000, y: 95.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob01.7, x: 1025.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb02.8, x: 1040.000000, y: 190.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob01.4, x: 620.000000, y: 95.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob01.7, x: 1025.000000, y: 135.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb01.8, x: 1040.000000, y: 175.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb01.8, x: 1040.000000, y: 135.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: Radio-base, id: rbb04.5, x: 695.000000, y: 420.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb04.6, x: 830.000000, y: 420.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb04.7, x: 965.000000, y: 420.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb03.4, x: 560.000000, y: 325.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb02.5, x: 695.000000, y: 230.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb02.6, x: 830.000000, y: 230.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb03.7, x: 965.000000, y: 325.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb01.5, x: 695.000000, y: 135.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb01.6, x: 830.000000, y: 135.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb01.7, x: 965.000000, y: 135.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb02.4, x: 560.000000, y: 230.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: Radio-base, id: rbb01.4, x: 560.000000, y: 135.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: semaforo, id: sfb04.5, x: 627.500000, y: 372.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb05.6, x: 762.500000, y: 467.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb03.5, x: 627.500000, y: 277.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb04.6, x: 762.500000, y: 372.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb02.5, x: 627.500000, y: 182.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb03.6, x: 762.500000, y: 277.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb01.5, x: 627.500000, y: 87.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb02.6, x: 762.500000, y: 182.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb02.7, x: 897.500000, y: 182.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb01.6, x: 762.500000, y: 87.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb01.7, x: 897.500000, y: 87.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb02.8, x: 1032.500000, y: 182.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb03.8, x: 1032.500000, y: 277.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Casa - cpf do dono: 000.002.241-11, endereco - cep: b04.6, face: N, num: 10, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.000.311-51, endereco - cep: b03.6, face: L, num: 40, compl: ap-295., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.005.851-30, endereco - cep: b04.6, face: N, num: 30, compl: ap-862., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.007.291-59, endereco - cep: b05.6, face: S, num: 60, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.002.291-80, endereco - cep: b04.5, face: L, num: 40, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.006.861-66, endereco - cep: b02.6, face: L, num: 50, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.003.431-29, endereco - cep: b01.6, face: S, num: 30, compl: ap-771., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.002.251-93, endereco - cep: b03.6, face: N, num: 40, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.004.011-88, endereco - cep: b03.5, face: L, num: 20, compl: ap-440., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.003.211-50, endereco - cep: b04.5, face: S, num: 50, compl: ap-1161., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.003.711-73, endereco - cep: b02.6, face: L, num: 40, compl: ap-364., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.000.851-62, endereco - cep: b03.6, face: S, num: 60, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.004.751-14, endereco - cep: b04.6, face: O, num: 10, compl: ap-1136., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.006.731-88, endereco - cep: b03.5, face: L, num: 10, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.006.711-34, endereco - cep: b03.5, face: S, num: 30, compl: ap-184., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.002.381-71, endereco - cep: b02.5, face: N, num: 60, compl: ap-607., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.000.041-89, endereco - cep: b01.6, face: L, num: 20, compl: ap-567., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.000.941-53, endereco - cep: b02.6, face: S, num: 60, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.004.991-37, endereco - cep: b02.7, face: S, num: 30, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.001.231-96, endereco - cep: b03.7, face: L, num: 40, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.002.821-54, endereco - cep: b04.7, face: S, num: 10, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.005.781-93, endereco - cep: b01.6, face: L, num: 10, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.006.461-05, endereco - cep: b01.7, face: N, num: 60, compl: ap-1420., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.004.061-47, endereco - cep: b02.8, face: L, num: 20, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.004.661-23, endereco - cep: b03.7, face: N, num: 80, compl: ap-583., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.000.441-30, endereco - cep: b04.7, face: S, num: 70, compl: -., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.004.641-80, endereco - cep: b02.4, face: L, num: 50, compl: ap-1572., x: 0.00, y: 0.00." foi removido.
+"Nome: Extintores_M6-0
+CNPJ: 00000129/0001-00
+Descricao: Extintores
+endereco - cep: b04.5, face: O, num: 60, compl: none.x: 737.500000 y:432.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Toldos_M3-0
+CNPJ: 00000143/0001-38
+Descricao: Toldos
+endereco - cep: b04.6, face: S, num: 40, compl: none.x: 800.000000 y:380.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Lavanderia_M5-0
+CNPJ: 00000240/0001-92
+Descricao: Lavanderia
+endereco - cep: b04.6, face: O, num: 60, compl: none.x: 872.500000 y:432.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Oficina_mecanica_M3-0
+CNPJ: 00000193/0001-00
+Descricao: Oficina_mecanica
+endereco - cep: b03.5, face: N, num: 90, compl: none.x: 715.000000 y:350.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Brindes_M3-0
+CNPJ: 00000241/0001-56
+Descricao: Brindes
+endereco - cep: b04.5, face: O, num: 40, compl: none.x: 737.500000 y:412.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Auto_escola_M3-0
+CNPJ: 00000122/0001-65
+Descricao: Auto_escola
+endereco - cep: b02.6, face: L, num: 10, compl: none.x: 767.500000 y:192.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Granito_M2-0
+CNPJ: 00000234/0001-92
+Descricao: Granito
+endereco - cep: b02.6, face: S, num: 40, compl: none.x: 800.000000 y:190.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Igreja_M5-0
+CNPJ: 00000137/0001-38
+Descricao: Igreja
+endereco - cep: b04.6, face: O, num: 40, compl: none.x: 872.500000 y:412.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Churracaria_M5-0
+CNPJ: 00000157/0001-47
+Descricao: Churracaria
+endereco - cep: b04.7, face: L, num: 50, compl: none.x: 902.500000 y:422.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Ensino_fundamental_M4-0
+CNPJ: 00000155/0001-10
+Descricao: Ensino_fundamental
+endereco - cep: b03.5, face: S, num: 20, compl: none.x: 645.000000 y:285.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Petshop_M6-1
+CNPJ: 00000232/0001-65
+Descricao: Petshop
+endereco - cep: b04.5, face: O, num: 20, compl: none.x: 737.500000 y:392.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Pecas_de_fogao_M4-1
+CNPJ: 00000228/0001-92
+Descricao: Pecas_de_fogao
+endereco - cep: b02.6, face: S, num: 20, compl: none.x: 780.000000 y:190.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Floricultura_M5-0
+CNPJ: 00000139/0001-65
+Descricao: Floricultura
+endereco - cep: b02.6, face: N, num: 80, compl: none.x: 840.000000 y:255.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Papelaria_M6-0
+CNPJ: 00000174/0001-65
+Descricao: Papelaria
+endereco - cep: b04.7, face: S, num: 70, compl: none.x: 965.000000 y:380.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Posto_de_combustivel_M2-0
+CNPJ: 00000115/0001-00
+Descricao: Posto_de_combustivel
+endereco - cep: b04.4, face: S, num: 70, compl: none.x: 560.000000 y:380.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Farmacia_M6-0
+CNPJ: 00000239/0001-00
+Descricao: Farmacia
+endereco - cep: b04.4, face: O, num: 50, compl: none.x: 602.500000 y:422.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Pizzaria_M5-0
+CNPJ: 00000165/0001-74
+Descricao: Pizzaria
+endereco - cep: b02.5, face: N, num: 10, compl: none.x: 635.000000 y:255.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Assoalhos_M4-0
+CNPJ: 00000218/0001-38
+Descricao: Assoalhos
+endereco - cep: b03.5, face: O, num: 60, compl: none.x: 737.500000 y:337.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Curso_pre-vestibular_M6-0
+CNPJ: 00000132/0001-10
+Descricao: Curso_pre-vestibular
+endereco - cep: b02.6, face: N, num: 90, compl: none.x: 850.000000 y:255.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Padaria_Pao_de_Ouro-0
+CNPJ: 00000194/0001-74
+Descricao: Padaria
+endereco - cep: b03.6, face: O, num: 10, compl: none.x: 872.500000 y:287.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Papelaria_M5-0
+CNPJ: 00000134/0001-47
+Descricao: Papelaria
+endereco - cep: b03.8, face: L, num: 20, compl: none.x: 1037.500000 y:297.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Fossa_septica_M2-0
+CNPJ: 00000246/0001-74
+Descricao: Fossa_septica
+endereco - cep: b02.4, face: N, num: 50, compl: none.x: 540.000000 y:255.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Petshop_M2-0
+CNPJ: 00000184/0001-10
+Descricao: Petshop
+endereco - cep: b03.4, face: O, num: 40, compl: none.x: 602.500000 y:317.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Funeraria_M2-0
+CNPJ: 00000150/0001-00
+Descricao: Funeraria
+endereco - cep: b02.5, face: L, num: 10, compl: none.x: 632.500000 y:192.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Locacao_de_cacambas_M4-0
+CNPJ: 00000151/0001-65
+Descricao: Locacao_de_cacambas
+endereco - cep: b03.5, face: O, num: 50, compl: none.x: 737.500000 y:327.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Escola_de_idiomas_M3-0
+CNPJ: 00000172/0001-38
+Descricao: Escola_de_idiomas
+endereco - cep: b01.6, face: O, num: 60, compl: none.x: 872.500000 y:147.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Buteco_M5-0
+CNPJ: 00000177/0001-56
+Descricao: Buteco
+endereco - cep: b01.7, face: S, num: 90, compl: none.x: 985.000000 y:95.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Posto_de_combustivel_M7-0
+CNPJ: 00000190/0001-10
+Descricao: Posto_de_combustivel
+endereco - cep: b01.4, face: S, num: 60, compl: none.x: 550.000000 y:95.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Escola_de_idiomas_M2-0
+CNPJ: 00000243/0001-83
+Descricao: Escola_de_idiomas
+endereco - cep: b01.4, face: O, num: 20, compl: none.x: 602.500000 y:107.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Barbearia_M7-0
+CNPJ: 00000179/0001-83
+Descricao: Barbearia
+endereco - cep: b01.5, face: L, num: 50, compl: none.x: 632.500000 y:137.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Petshop_M6-0
+CNPJ: 00000164/0001-00
+Descricao: Petshop
+endereco - cep: b03.5, face: O, num: 30, compl: none.x: 737.500000 y:307.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Papelaria_M7-0
+CNPJ: 00000109/0001-00
+Descricao: Papelaria
+endereco - cep: b01.6, face: O, num: 50, compl: none.x: 872.500000 y:137.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Raio-x_M3-0
+CNPJ: 00000185/0001-83
+Descricao: Raio-x
+endereco - cep: b01.5, face: L, num: 20, compl: none.x: 632.500000 y:107.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Psicologo_M7-0
+CNPJ: 00000112/0001-00
+Descricao: Psicologo
+endereco - cep: b01.5, face: O, num: 60, compl: none.x: 737.500000 y:147.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Pocos_artesianos_M3-0
+CNPJ: 00000111/0001-47
+Descricao: Pocos_artesianos
+endereco - cep: b01.6, face: O, num: 20, compl: none.x: 872.500000 y:107.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Brindes_M4-0
+CNPJ: 00000189/0001-38
+Descricao: Brindes
+endereco - cep: b01.5, face: O, num: 20, compl: none.x: 737.500000 y:107.500000 width:20.000000 height:15.000000
+" foi removido.

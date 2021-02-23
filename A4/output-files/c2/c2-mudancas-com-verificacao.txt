@@ -1,0 +1,13 @@
+Nome: Aad_Joppe Lombardi_Marino
+cpf: 000.002.581-05, sexo: M, nascimento: 02/07/2004.
+endereco - cep: B30-8.5, face: L, num: 20, compl: ap-705.
+
+Antigo endereco - cep: B30-8.5, face: L, num: 20, compl: ap-705.
+Novo endereco - cep: B32-3.16, face: O, num: 10, compl: 3o_Andar.
+Dados do morador: Nome: Aad_Joppe Lombardi_Marino
+cpf: 000.002.581-05, sexo: M, nascimento: 02/07/2004.
+
+Nome: Aad_Joppe Lombardi_Marino
+cpf: 000.002.581-05, sexo: M, nascimento: 02/07/2004.
+endereco - cep: B32-3.16, face: O, num: 10, compl: 3o_Andar.
+

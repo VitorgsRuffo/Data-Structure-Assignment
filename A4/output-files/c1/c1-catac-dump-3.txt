@@ -1,0 +1,60 @@
+"Tipo: hidrante, id: hob06.7, x: 1025.000000, y: 610.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob06.7, x: 1025.000000, y: 570.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb06.8, x: 1040.000000, y: 610.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb06.7, x: 965.000000, y: 650.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob07.7, x: 1025.000000, y: 665.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hob07.7, x: 1025.000000, y: 705.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb06.8, x: 1040.000000, y: 570.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob06.7, x: 1025.000000, y: 650.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb07.8, x: 1040.000000, y: 665.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: heb07.8, x: 1040.000000, y: 705.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnob07.7, x: 1025.000000, y: 745.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hsob08.7, x: 1025.000000, y: 760.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb06.8, x: 1040.000000, y: 650.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hneb07.8, x: 1040.000000, y: 745.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hseb08.8, x: 1040.000000, y: 760.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: hidrante, id: hnb06.8, x: 1100.000000, y: 650.000000, sw: 1.0, cfill: orange, cstrk: red" foi removido.
+
+"Tipo: Radio-base, id: rbb06.8, x: 1100.000000, y: 610.000000, sw: 1.0, cfill: blue, cstrk: lightgrey" foi removido.
+
+"Tipo: semaforo, id: sfb07.8, x: 1032.500000, y: 657.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Tipo: semaforo, id: sfb08.8, x: 1032.500000, y: 752.500000, sw: 1.0, cfill: steelblue, cstrk: blue" foi removido.
+
+"Casa - cpf do dono: 000.000.171-67, endereco - cep: b07.7, face: O, num: 10, compl: ap-1162., x: 0.00, y: 0.00." foi removido.
+"Casa - cpf do dono: 000.006.401-74, endereco - cep: b07.8, face: N, num: 10, compl: ap-417., x: 0.00, y: 0.00." foi removido.
+"Nome: Conserto_de_computadores_M4-0
+CNPJ: 00000188/0001-74
+Descricao: Conserto_de_computadores
+endereco - cep: b06.8, face: S, num: 20, compl: none.x: 1050.000000 y:570.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Papelaria_M2-0
+CNPJ: 00000145/0001-65
+Descricao: Papelaria
+endereco - cep: b06.7, face: N, num: 50, compl: none.x: 945.000000 y:635.000000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Loterica_M7-0
+CNPJ: 00000123/0001-29
+Descricao: Loterica
+endereco - cep: b07.7, face: O, num: 60, compl: none.x: 1007.500000 y:717.500000 width:20.000000 height:15.000000
+" foi removido.
+"Nome: Material_de_construcao_M1-0
+CNPJ: 00000201/0001-38
+Descricao: Material_de_construcao
+endereco - cep: b07.8, face: S, num: 70, compl: none.x: 1100.000000 y:665.000000 width:20.000000 height:15.000000
+" foi removido.

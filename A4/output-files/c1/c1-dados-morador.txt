@@ -1,0 +1,5 @@
+Relatorio pessoal:
+Nome: Carlos_Eduardo_Gabriel Kabacchiw_Galli
+cpf: 000.001.181-92, sexo: M, nascimento: 22/09/1992.
+endereco - cep: b06.9, face: S, num: 90, compl: ap-1107.
+

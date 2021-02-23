@@ -1,0 +1,6 @@
+Nome: Vidracaria_M6-5
+CNPJ: 00002320/0001-70
+Descricao: Vidracaria
+endereco - cep: B41-6.8, face: O, num: 60, compl: none.x: 3362.500000 y:2767.500000 width:20.000000 height:15.000000
+Nome do proprietario: Marina_Brunswichk
+

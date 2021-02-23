@@ -1,0 +1,6 @@
+Nome: Psicologo_M5-0
+CNPJ: 00000140/0001-47
+Descricao: Psicologo
+endereco - cep: b01.1, face: L, num: 30, compl: none.x: 92.500000 y:117.500000 width:20.000000 height:15.000000
+Nome do proprietario: Carlos_Eduardo_Rafael
+

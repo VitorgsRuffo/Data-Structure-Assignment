@@ -1,0 +1,43 @@
+Nome: Artur_Bernardo Caputo_Daalieva
+cpf: 000.006.731-88, sexo: M, nascimento: 06/06/1994.
+endereco - cep: b03.5, face: L, num: 10, compl: -.
+
+Nome: Maria_Bernardo Ferrara_Riva
+cpf: 000.006.711-34, sexo: F, nascimento: 03/04/1980.
+endereco - cep: b03.5, face: S, num: 30, compl: ap-184.
+
+Nome: Silena_Silvio Abadzhiyan_Abadzhiisca
+cpf: 000.004.011-88, sexo: F, nascimento: 22/12/1967.
+endereco - cep: b03.5, face: L, num: 20, compl: ap-440.
+
+Antigo endereco - cep: b03.5, face: L, num: 10, compl: -.
+Novo endereco - cep: b06.7, face: O, num: 10, compl: 3o_Andar.
+Dados do morador: Nome: Artur_Bernardo Caputo_Daalieva
+cpf: 000.006.731-88, sexo: M, nascimento: 06/06/1994.
+
+Antigo endereco - cep: b03.5, face: S, num: 30, compl: ap-184.
+Novo endereco - cep: b06.7, face: O, num: 10, compl: 3o_Andar.
+Dados do morador: Nome: Maria_Bernardo Ferrara_Riva
+cpf: 000.006.711-34, sexo: F, nascimento: 03/04/1980.
+
+Antigo endereco - cep: b03.5, face: L, num: 20, compl: ap-440.
+Novo endereco - cep: b06.7, face: O, num: 10, compl: 3o_Andar.
+Dados do morador: Nome: Silena_Silvio Abadzhiyan_Abadzhiisca
+cpf: 000.004.011-88, sexo: F, nascimento: 22/12/1967.
+
+Nome: Artur_Bernardo Caputo_Daalieva
+cpf: 000.006.731-88, sexo: M, nascimento: 06/06/1994.
+endereco - cep: b06.7, face: O, num: 10, compl: 3o_Andar.
+
+Nome: Maria_Bernardo Ferrara_Riva
+cpf: 000.006.711-34, sexo: F, nascimento: 03/04/1980.
+endereco - cep: b06.7, face: O, num: 10, compl: 3o_Andar.
+
+Nome: Silena_Silvio Abadzhiyan_Abadzhiisca
+cpf: 000.004.011-88, sexo: F, nascimento: 22/12/1967.
+endereco - cep: b06.7, face: O, num: 10, compl: 3o_Andar.
+
+Nome: Heleen_Caio Kabackchieva_Abadzhiiscka
+cpf: 000.001.651-90, sexo: M, nascimento: 21/02/1974.
+endereco - cep: b06.7, face: L, num: 60, compl: ap-1155.
+

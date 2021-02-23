@@ -1,0 +1,4 @@
+Nome: Annalies_Antonio Mawikowa_Marini
+cpf: 000.001.441-93, sexo: M, nascimento: 17/09/1987.
+endereco - cep: B32-9.24, face: O, num: 40, compl: ap-385.
+

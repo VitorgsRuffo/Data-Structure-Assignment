@@ -1,0 +1,5 @@
+Antigo endereco - cep: b06.4, face: N, num: 40, compl: -.
+Novo endereco - cep: b08.7, face: N, num: 60, compl: cobertura.
+Dados do morador: Nome: Bianca_Abhigyan Abadzhiyan_Gentile
+cpf: 000.001.161-49, sexo: F, nascimento: 18/11/1982.
+

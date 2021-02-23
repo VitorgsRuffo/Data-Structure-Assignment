@@ -1,0 +1,10 @@
+Nome: Dedetizadora_M7-6
+CNPJ: 00002095/0001-13
+Descricao: Dedetizadora
+endereco - cep: B40-7.16, face: O, num: 50, compl: none.x: 2297.500000 y:3712.500000 width:20.000000 height:15.000000
+Dados do proprietario:
+Nome: Thiago_Mart Vacadinsci_Ruggiero
+cpf: 000.014.341-36, sexo: M, nascimento: 11/12/1997.
+
+O estabelecimento de CNPJ INEXISTENTE nao existe na cidade.
+

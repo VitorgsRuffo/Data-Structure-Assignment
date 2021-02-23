@@ -1,0 +1,13 @@
+Nome: Antonio_Melissa Gallo_Vacavchiev
+cpf: 000.006.381-96, sexo: M, nascimento: 21/02/1969.
+endereco - cep: B42-3.15, face: O, num: 60, compl: ap-363.
+
+Antigo endereco - cep: B42-3.15, face: O, num: 60, compl: ap-363.
+Novo endereco - cep: B30-21.14, face: O, num: 10, compl: 3o_Andar.
+Dados do morador: Nome: Antonio_Melissa Gallo_Vacavchiev
+cpf: 000.006.381-96, sexo: M, nascimento: 21/02/1969.
+
+Nome: Antonio_Melissa Gallo_Vacavchiev
+cpf: 000.006.381-96, sexo: M, nascimento: 21/02/1969.
+endereco - cep: B30-21.14, face: O, num: 10, compl: 3o_Andar.
+

@@ -1,0 +1,4 @@
+Nome: Hanneke_Mariana Kabacchiiska_Kabacchiiscki
+cpf: 000.002.661-16, sexo: M, nascimento: 18/08/1972.
+endereco - cep: B42-3.1, face: N, num: 60, compl: ap-1300.
+

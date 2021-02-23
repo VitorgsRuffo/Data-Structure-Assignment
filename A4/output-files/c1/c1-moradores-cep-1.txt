@@ -1,0 +1,12 @@
+Nome: Silena_Enzo Ruggiero_Daalijsci
+cpf: 000.006.401-74, sexo: F, nascimento: 26/04/1991.
+endereco - cep: b07.8, face: N, num: 10, compl: ap-417.
+
+Nome: Lorelay_Albertjan Vitale_Kabacchiiscki
+cpf: 000.002.051-68, sexo: M, nascimento: 06/01/1966.
+endereco - cep: b07.8, face: S, num: 100, compl: -.
+
+Nome: Daantje_Zelia Martino_Testa
+cpf: 000.000.511-87, sexo: M, nascimento: 14/11/1968.
+endereco - cep: b07.8, face: S, num: 100, compl: -.
+
