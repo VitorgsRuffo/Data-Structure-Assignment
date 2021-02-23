@@ -5,7 +5,7 @@
 #include "../tools.h"
 #include "../svg.h"
 
-#define node_spacing 20.00      //distancia entre nós folha.
+#define node_spacing 15.00      //distancia entre nós folha.
 #define node_w 45.00            //largura de um no
 #define node_h 45.00            //altura de um no
 
@@ -17,15 +17,15 @@ Point drawTreeOnSvg(PQuadTree tree, PQuadTreeNode node, getKeyFunction getKey, d
 void drawParentChildConnection(Svg treeSvg, Point nodeDrawingCoordinates, Point nodeChildCoordinates);
 
 void executeTreeStatePrinting(char* command, City Ct, Parameters Param){
-
+    
+    //tipos: q: quadra, h: hidrante, s: semaforo, t: torre de radio / radio base
     char treeType[5] = {'x','x','x','x'}, sufix[30];
     sscanf(&command[7], "%s %s", treeType, sufix);
 
-    if(treeType[0] == 't') treeType[0] = 'a';
+    if(treeType[0] == 't'){ treeType[0] = 'r'; treeType[1] = 'a';}
     DataStructure tree = getDataStructureByElementType(Ct, treeType);
     if(tree == NULL) return;
 
-    if(treeType[0] == 'a') treeType[0] = 'r';
     getKeyFunction getKey = getKeyRetrievingFunctionByElementType(treeType);
 
     double xBound = initial_xbound;

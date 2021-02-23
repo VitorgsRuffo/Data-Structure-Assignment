@@ -187,7 +187,7 @@ void deleteUrbanElementIfItsInsideCircle(Info urbanElement, ExtraInfo extraInfo)
 
     if(isCircleInsideCircle(variables->urbanElement, variables->circle)){
         char* urbanElementString = (*variables->urbanElementToString)(urbanElement);
-        fprintf(variables->txt, "\"%s\" foi removido.\n", urbanElementString);
+        fprintf(variables->txt, "\"%s\" foi removido.\n\n", urbanElementString);
         free(urbanElementString);
 
         insert(variables->pointsToRemove, (*variables->getCoordinates)(urbanElement));

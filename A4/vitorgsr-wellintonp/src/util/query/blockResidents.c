@@ -16,8 +16,7 @@ void executeBlockResidentsReport(char* command, City Ct, File txt){
     Info blocksInfo = getHashTableInfo(*blocksTable, cep);
 
     if(blocksInfo == NULL){  // Caso nao exista o cep na tabela de quadras escrevemos no txt o aviso e finalizamos a função.
-        fprintf(txt, "CEP inexistente\n\n");
-        printf("CEP inexistente!\n");
+        fprintf(txt, "Nao existe uma quadra com cep %s na cidade.\n\n", cep);
         return;
     }
 
@@ -47,7 +46,6 @@ void executeBlockResidentsReport(char* command, City Ct, File txt){
 }
 
 void writePersonInformationOnTxt(File txt, char* personString, char* houseAddressString){
-
     fprintf(txt, "%s\n", personString);
     fprintf(txt, "%s\n\n", houseAddressString);
 }

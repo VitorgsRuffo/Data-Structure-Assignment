@@ -2,13 +2,6 @@
 #include "./elements/urban-elements/city.h"
 #include "./include/util.h"
 
-
-/*to do list:
-
-    - testar todos os comandos!.
-    
-*/
-
 int main(int argc, char* argv[]){
     
     //Criando o TAD parametros e obtendo os parametros de execução do programa.

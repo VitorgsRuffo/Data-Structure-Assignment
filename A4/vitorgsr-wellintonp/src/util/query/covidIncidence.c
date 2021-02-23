@@ -20,10 +20,10 @@ Point* getCovidAddressesInCircCoordinates(List covidAddressesInCirc, int covidAd
 int calculateTotalCovidCasesInRegion(List covidAddressesInCirc);
 double calculateIncidenceRegionArea(Point* convexHullPoints, int convexHullPointsAmount);
 double getIncidenceRegionDemographicDensity(City Ct, List covidAddressesInCirc);
-char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion);
+char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, long totalHabitantsInRegion);
 char* buildIncidenceRegionTag(Point* points, int pointsAmount, char incidenceRegionCategory);
 void suggestHealthCenterInRegionIfNeeded(DataStructure healthCenters, Variables* variables, List queryElementsList, double incidenceRegionArea);
-void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, int totalHabitantsInRegion);
+void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, long totalHabitantsInRegion);
 
 
 void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
@@ -77,7 +77,7 @@ void executeCovidIncidenceReportInRegion(char* command, City Ct, File txt){
     double incidenceRegionArea = calculateIncidenceRegionArea(variables.convexHullPoints, variables.convexHullPointsAmount);
     
     double regionDemographicDensity = getIncidenceRegionDemographicDensity(Ct, variables.covidAddressesInCirc) * 1000000.00; //convertendo densidade demografica de km^2 para m^2.
-    int totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
+    long totalHabitantsInRegion = regionDemographicDensity * incidenceRegionArea;  
 
     char incidenceRegionCategory = calculateIncidenceRegionCategory(totalCovidCasesInRegion, totalHabitantsInRegion);
     if(incidenceRegionCategory == 'E'){
@@ -160,7 +160,7 @@ int calculateTotalCovidCasesInRegion(List covidAddressesInCirc){
     return totalCases;
 }
 
-char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, int totalHabitantsInRegion){
+char calculateIncidenceRegionCategory(int totalCovidCasesInRegion, long totalHabitantsInRegion){
     /*Logica:
 
         casos: 1    | habitantes: 15,897
@@ -415,13 +415,13 @@ char* buildHealthCenterSuggestionTag(Point polygonCentroid){
     return healthCenterSuggestionTag;
 }
 
-void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, int totalHabitantsInRegion){
+void writeCovidIncidenceReportOnTxt(File txt, Point* points, int pointsAmount, int totalCovidCasesInRegion, double incidenceRegionArea, char incidenceRegionCategory, long totalHabitantsInRegion){
 
     fprintf(txt, "Coordenadas dos enderecos de covid dentro do circulo:\n");
     for(int i = 0; i<pointsAmount; i++)
         fprintf(txt, "\t(%d) x: %.2f, y: %.2f\n", (i+1), getPointX(*(points + i)), getPointY(*(points + i)));
         
-    fprintf(txt, "\nTotal de habitantes: %d\n", totalHabitantsInRegion);
+    fprintf(txt, "\nTotal de habitantes: %ld\n", totalHabitantsInRegion);
     fprintf(txt, "\nNumero total de casos: %d\n", totalCovidCasesInRegion);
     fprintf(txt, "\nArea dentro da envoltoria convexa: %.2f\n", incidenceRegionArea);
     fprintf(txt, "\nCategoria da regiao de incidencia: %c\n", incidenceRegionCategory);

@@ -18,7 +18,7 @@ void executeEstablishmentInformationChecking(char* command, City Ct, File txt){
     Info establishmentInfo = getHashTableInfo(*establishmentTable, cnpj);
 
     if(establishmentInfo == NULL){  // Caso nao exista o cnpj na tabela escrevemos no txt o aviso e finalizamos a função.
-        fprintf(txt, "CNPJ inexistente\n\n");
+        fprintf(txt, "O estabelecimento de CNPJ %s nao existe na cidade.\n\n", cnpj);
         return;
     }
 
@@ -33,6 +33,7 @@ void executeEstablishmentInformationChecking(char* command, City Ct, File txt){
     Info establishmentType = getHashTableInfo(*establishmentsTypes, getEstablishmentCode(establishmentInfo));
 
     writeEstablishmentInfosOnTxt(txt, establishmentInfo, personInfo, establishmentType);
+    
 }
 
 void writeEstablishmentInfosOnTxt(File txt, Info estabInfo,Info personInfo, Info estabType){

@@ -11,10 +11,10 @@ CovidAddress createCovidAddress(int id, char* cep, char face, int number, int ca
     covidaddress* ca = (covidaddress*) malloc(sizeof(covidaddress));
     if(ca == NULL) return NULL;
 
-    char idString[5];
+    char idString[15];
     sprintf(idString, "%d", id);
 
-    ca->id = (char*) malloc(6 * sizeof(char));
+    ca->id = (char*) malloc(15 * sizeof(char));
     strcpy(ca->id, idString);
     ca->address = createAddress(cep, face, number, "none", Ct);
     ca->casesNumber = casesNumber;
