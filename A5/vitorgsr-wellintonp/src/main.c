@@ -13,6 +13,8 @@
         
         - criar a arvore geradora minima (subgrafo).
 
+        - arrumar os comentarios do tad grafo.
+
     - query:
         - implementar o dijisktra.
         - queries dos registradores.
@@ -26,20 +28,23 @@ int main(int argc, char* argv[]){
     Parameters parameters = createParameters();
     setParameters(parameters, argv, argc);
 
+    //Criando o TAD cidade:
+    City city = createCity();
+
+
     //Abrindo o arquivo de entrada (.geo)
     File geo = openInputFile(parameters, getGeoName);
     if(geo == NULL){
         printf("Erro: nao foi possivel abrir o arquivo .geo\n");
         return 1;
     }
-
-    //Criando o TAD cidade:
-    City city = createCity();
-
-    //Lendo o arquivo geo:
+    
+    //Lendo o arquivo .geo:
     readGeo(geo, city);
     closeInputFile(geo);
     
+
+    //Lendo e abrindo arquivos de entrada extras:
     if(!isEcNull(parameters)){
         //Abrindo o arquivo de entrada (.ec)
         File ec = openInputFile(parameters, getEcName);
@@ -57,6 +62,16 @@ int main(int argc, char* argv[]){
         readPm(pm, city);
         closeInputFile(pm);
     }
+
+    if(!isViaNull(parameters)){
+        //Abrindo o arquivo de entrada (.via)
+        File via = openInputFile(parameters, getViaName);
+    
+        //Lendo arquivo via:
+        readVia(via, city);
+        closeInputFile(via);
+    }
+
 
     //Criando SVG do geo:
     Svg geoSvg = NULL;

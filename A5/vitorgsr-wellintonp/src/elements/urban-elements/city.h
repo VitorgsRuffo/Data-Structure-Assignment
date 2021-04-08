@@ -130,6 +130,36 @@ HashTable* getHousesTable(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura que representa o sistema viario da cidade.
+*/
+Graph getRoadSystem(City Ct);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade e uma instancia de um sistema viario.
+* Pós-Condição: define o sistema viario passado como sendo o sistema viario da cidade.
+*/
+void setRoadSystem(City Ct, Graph roadSystem);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia para a estrutura que representa as intersecoes de rua da cidade.
+*/
+PQuadTree getRoadIntersections(City Ct);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia do grafo que representa a ciclovia da cidade.
+*/
+Graph getBikePath(City Ct);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade e uma instancia de uma ciclovia.
+* Pós-Condição: define a ciclovia passado como sendo o a ciclovia da cidade.
+*/
+void setBikePath(City Ct, Graph bikePath);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
 * Pós-Condição: retorna uma referencia para a estrutura de elementos de query presente no TAD cidade.
 */
 List getQueryElements(City Ct);

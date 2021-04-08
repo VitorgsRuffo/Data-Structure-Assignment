@@ -14,6 +14,7 @@
 #include "../elements/urban-elements/establishment.h"
 #include "../elements/urban-elements/address.h"
 #include "../elements/urban-elements/person.h"
+#include "../elements/urban-elements/street.h"
 #include "../elements/urban-elements/city.h"
 
 #endif

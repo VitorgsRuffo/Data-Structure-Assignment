@@ -92,3 +92,9 @@ void printPoint(Point P){
     point* p = (point*) P;
     printf("Point - x: %.2lf y: %.2lf\n", p->x, p->y);
 }
+
+void freePoint(Point P){
+    if(P == NULL) return;
+    point* p = (point*) P;
+    free(p);
+}

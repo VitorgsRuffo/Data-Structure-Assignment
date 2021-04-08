@@ -66,5 +66,10 @@ char* pointToString(Point P);
 */
 void printPoint(Point P);
 
+/*
+    Pré condição: Requer uma instancia do tipo Point.
+    Pós condição: desaloca a memoria usada pelo tad.
+*/
+void freePoint(Point P);
 
 #endif

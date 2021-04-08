@@ -42,6 +42,7 @@
         "rectangle.h": "c",
         "changeaddress.h": "c",
         "healthcenter.h": "c",
-        "blockresidents.h": "c"
+        "blockresidents.h": "c",
+        "idedpoint.h": "c"
     }
 }

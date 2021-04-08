@@ -2,7 +2,7 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o region.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o point.o text.o convexhull.o sort.o hashtable.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o blockBorder.o blockResidents.o calculateArea.o changeAddress.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o establishmentInformation.o highlightEstablishment.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o urbanDeletion.o personalInfo.o urbanDeletionInRange.o printTree.o qry.o svg.o tools.o
+obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o region.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o street.o idedPoint.o point.o text.o convexhull.o sort.o graph.o hashtable.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o via.o blockBorder.o blockResidents.o calculateArea.o changeAddress.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o establishmentInformation.o highlightEstablishment.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o urbanDeletion.o personalInfo.o urbanDeletionInRange.o printTree.o qry.o svg.o tools.o
 
 #paths:
 elements = ./elements
@@ -74,13 +74,18 @@ house.o: $(urban_elements)/house.c
 person.o: $(urban_elements)/person.c
 	$(CC) $(flags) -c $(urban_elements)/person.c
 
+street.o: $(urban_elements)/street.c
+	$(CC) $(flags) -c $(urban_elements)/street.c
 
-text.o: $(elements)/text.c 
-	$(CC) $(flags) -c $(elements)/text.c
+
+idedPoint.o: $(elements)/idedPoint.c 
+	$(CC) $(flags) -c $(elements)/idedPoint.c
 
 point.o: $(elements)/point.c 
 	$(CC) $(flags) -c $(elements)/point.c
 
+text.o: $(elements)/text.c 
+	$(CC) $(flags) -c $(elements)/text.c
 
 
 #data structures:
@@ -95,6 +100,9 @@ queue.o: $(data_structure)/queue.c
 
 pquadtree.o: $(data_structure)/pquadtree.c 
 	$(CC) $(flags) -c $(data_structure)/pquadtree.c 
+
+graph.o: $(data_structure)/graph.c 
+	$(CC) $(flags) -c $(data_structure)/graph.c 
 
 hashtable.o: $(data_structure)/hashtable.c 
 	$(CC) $(flags) -c $(data_structure)/hashtable.c 
@@ -123,6 +131,9 @@ parameters.o: $(input)/parameters.c
 
 pm.o: $(input)/pm.c
 	$(CC) $(flags) -c $(input)/pm.c
+
+via.o: $(input)/via.c
+	$(CC) $(flags) -c $(input)/via.c
 
 
 #query:

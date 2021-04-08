@@ -10,5 +10,6 @@ typedef void* DataStructure;
 #include "../util/data-structure/queue.h"
 #include "../util/data-structure/pquadtree.h"
 #include "../util/data-structure/hashtable.h"
+#include "../util/data-structure/graph.h"
 
 #endif 

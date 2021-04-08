@@ -8,20 +8,23 @@ typedef struct city {
     PQuadTree circles;
     PQuadTree rectangles;
     PQuadTree texts;
-    PQuadTree blocks;//*
+    PQuadTree blocks;
     HashTable blocksTable;
-    PQuadTree hydrants;//*
-    PQuadTree baseRadios;//*
-    PQuadTree semaphores;//*
-    PQuadTree healthCenters;//*
+    PQuadTree hydrants;
+    PQuadTree baseRadios;
+    PQuadTree semaphores;
+    PQuadTree healthCenters;
     PQuadTree covidAddresses;
     List regions;
     HashTable establishmentTypes;
-    HashTable establishmentsTable; //
-    PQuadTree establishmentsTree; //
+    HashTable establishmentsTable;
+    PQuadTree establishmentsTree;
     HashTable people;
-    PQuadTree housesTree; //
-    HashTable housesTable; //
+    PQuadTree housesTree;
+    HashTable housesTable;
+    Graph roadSystem;
+    PQuadTree roadIntersections;
+    Graph bikePath;
     List queryElements;
 }city;
 
@@ -52,6 +55,10 @@ City createCity(){
     ct->housesTree = createPQuadTree(getHouseCpf, getHouseCoordinates);
     ct->housesTable = createHashTable(HASH_TABLE_INITIAL_SIZE, getHouseCpf);
     
+    ct->roadSystem = NULL;
+    ct->roadIntersections = createPQuadTree(getIdedPointId, getIdedPointCoordinates);
+    ct->bikePath = NULL;
+
     ct->queryElements = createList();
 
     return ct;
@@ -193,6 +200,48 @@ HashTable* getHousesTable(City Ct){
 
     city *ct = (city*) Ct;
     return &ct->housesTable;
+}
+
+Graph getRoadSystem(City Ct){
+    if(Ct == NULL)
+        return NULL;
+    
+    city *ct = (city*) Ct;
+    return ct->roadSystem;
+}
+
+void setRoadSystem(City Ct, Graph roadSystem){
+    if(Ct == NULL || roadSystem == NULL)
+        return;
+    
+    city *ct = (city*) Ct;
+    ct->roadSystem = roadSystem;
+}
+
+
+PQuadTree getRoadIntersections(City Ct){
+    if(Ct == NULL)
+            return NULL;
+        
+    city *ct = (city*) Ct;
+    return ct->roadIntersections;
+}
+
+
+Graph getBikePath(City Ct){
+    if(Ct == NULL)
+        return NULL;
+
+    city *ct = (city*) Ct;
+    return ct->bikePath;
+} 
+
+void setBikePath(City Ct, Graph bikePath){
+    if(Ct == NULL || bikePath == NULL)
+        return NULL;
+    
+    city *ct = (city*) Ct;
+    ct->bikePath = bikePath;
 }
 
 List getQueryElements(City Ct){
@@ -351,6 +400,10 @@ void freeCity(City Ct){
     freeHashTable(ct->people, freePerson);
     freeHashTable(ct->housesTable, NULL);
     freePQuadTree(ct->housesTree, freeHouse);
+
+    freeGraph(ct->roadSystem, freePoint, 1);
+    freePQuadTree(ct->roadIntersections, freeIdedPoint);
+    freeGraph(ct->bikePath, freePoint, 1);
 
     freeList(ct->queryElements, freeQueryElement);
     free(ct);

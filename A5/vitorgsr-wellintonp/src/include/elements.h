@@ -5,5 +5,6 @@
 #include "./urbanElements.h"
 #include "../elements/text.h"
 #include "../elements/point.h"
+#include "../elements/idedPoint.h"
 
 #endif

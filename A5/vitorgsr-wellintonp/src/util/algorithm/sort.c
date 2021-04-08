@@ -45,7 +45,6 @@ void shellsort(Info* array, int n, compare function){
     } 
 }
 
-
 //----------------------------Quicksort-----------------------------
 
 int getArrayPartitionIndex(Info* array, int start, int end, compare function){

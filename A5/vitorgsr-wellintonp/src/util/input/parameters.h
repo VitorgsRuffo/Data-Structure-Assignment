@@ -62,6 +62,12 @@ char* getPmName(Parameters Param);
 
 /*
 * Pré-Condição: requer um TAD parametros.
+* Pós-Condição: retorna o valor do campo "nome do via" do TAD parametros
+*/
+char* getViaName(Parameters Param);
+
+/*
+* Pré-Condição: requer um TAD parametros.
 * Pós-Condição: retorna 1 se o arquivo query nao foi especificado nos parametros do siguel, ou 0 caso ele tenha sido especificado.
 */
 int isQryNull(Parameters Param);
@@ -77,6 +83,12 @@ int isEcNull(Parameters Param);
 * Pós-Condição: retorna 1 se o arquivo pm nao foi especificado nos parametros do siguel, ou 0 caso ele tenha sido especificado.
 */
 int isPmNull(Parameters Param);
+
+/*
+* Pré-Condição: requer um TAD parametros.
+* Pós-Condição: retorna 1 se o arquivo via nao foi especificado nos parametros do siguel, ou 0 caso ele tenha sido especificado.
+*/
+int isViaNull(Parameters Param);
 
 /*
 * Pré-Condição: requer um TAD parametros.

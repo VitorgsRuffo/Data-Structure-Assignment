@@ -8,6 +8,7 @@ typedef struct parameters {
     char* outputDirectory;  // -o: diretorio de saida
     char* ecName;           // -ec: nome + extensao do arquivo .ec
     char* pmName;           // -pm: nome + extensao do arquivo .pm
+    char* viaName;          // -via: nome + extensao do arquivo .via
 }parameters;
 
 //Alocar memoria para o TAD que representa os parametros do programa
@@ -26,7 +27,8 @@ Parameters createParameters(){
     param->outputDirectory = NULL;
     param->ecName = NULL;
     param->pmName = NULL;
-    
+    param->viaName = NULL;
+
     return param;
 }
 
@@ -71,6 +73,10 @@ void setParameters(Parameters Param, char* argv[], int argc){
         }else if(strcmp("-pm", argv[i]) == 0){
             ++i;
             setCurrentParameter(&param->pmName, argv[i]);
+            
+        }else if(strcmp("-via", argv[i]) == 0){
+            ++i;
+            setCurrentParameter(&param->viaName, argv[i]);
         }
 
         i++;
@@ -162,6 +168,17 @@ char* getPmName(Parameters Param){
     return param->pmName;
 }
 
+char* getViaName(Parameters Param){
+    if(Param == NULL){
+        printf("Erro ao alocar memória para o atributo viaName..\nFinalizando o programa..\n");
+        //***Desalocar memórias alocadas até o momentos***
+        exit(1);
+    }
+    
+    parameters *param = (parameters*) Param;
+    return param->viaName;
+}
+
 int isQryNull(Parameters Param){
     if(Param == NULL)
         return 1;
@@ -198,6 +215,17 @@ int isPmNull(Parameters Param){
         return 0;
 }
 
+int isViaNull(Parameters Param){
+    if(Param == NULL)
+        return 1;
+
+    parameters *param = (parameters*) Param;
+    
+    if(param->viaName == NULL)
+        return 1;
+    else
+        return 0;
+}
 
 void printParameters(Parameters Param){ 
     parameters *param = (parameters*) Param;
@@ -208,8 +236,8 @@ void printParameters(Parameters Param){
     printf("pm name (-pm): %s\n", param->pmName);
     printf("Query name (-q): %s\n", param->qryName);
     printf("Output path (-o): %s\n", param->outputDirectory);
+    printf("via name (-via): %s\n", param->viaName);
 }
-
 
 void freeParameters(Parameters Param){
     parameters *param = (parameters*) Param;
@@ -217,5 +245,8 @@ void freeParameters(Parameters Param){
     free(param->geoName);
     free(param->qryName);
     free(param->outputDirectory);
+    free(param->ecName);
+    free(param->pmName);
+    free(param->viaName);
     free(param);
 }
