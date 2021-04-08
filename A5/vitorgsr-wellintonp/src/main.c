@@ -2,6 +2,24 @@
 #include "./elements/urban-elements/city.h"
 #include "./include/util.h"
 
+/* To do list:
+*
+*   - input:
+        - ler o sistema viario e guardar na arvore e no grafo:
+            - itera no arquivo até ler o ultimo vertice: (obs: manter contador do numero de vertices)
+                p/ cada um cria um idedPoint e insere na arvore.
+            
+            - itera na arvore inserindo no grafo.
+        
+        - criar a arvore geradora minima (subgrafo).
+
+    - query:
+        - implementar o dijisktra.
+        - queries dos registradores.
+        - demais queries.
+*
+*/
+
 int main(int argc, char* argv[]){
     
     //Criando o TAD parametros e obtendo os parametros de execução do programa.
