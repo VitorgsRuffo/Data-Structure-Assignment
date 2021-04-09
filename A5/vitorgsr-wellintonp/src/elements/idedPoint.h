@@ -1,6 +1,8 @@
 #ifndef IDED_POINT_H
 #define IDED_POINT_H
 
+#include "point.h"
+
 typedef void* IdedPoint;
 
 /*

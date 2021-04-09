@@ -1,6 +1,5 @@
 #include "../include/headers.h"
 #include "idedPoint.h"
-#include "point.h"
 
 typedef struct {
     char id[50];
@@ -37,7 +36,7 @@ Point getIdedPointCoordinates(IdedPoint IP){
 }
 
 void freeIdedPoint(IdedPoint IP){
-    if(IP == NULL) return NULL;
+    if(IP == NULL) return;
     idedPoint* iP = (idedPoint*) IP;
     free(iP);
 }

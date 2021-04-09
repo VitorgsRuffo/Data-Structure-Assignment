@@ -3,10 +3,6 @@
 
 #include "list.h"
 
-/* to do list:
-*   - solve free edge info problem.
-*/
-
 /* É um elemento matematico definido pelo par ordenado G = (V, E).
 *  V: conjunto de vertices.
 *  E: subconjunto de VxV.
@@ -19,11 +15,6 @@ typedef void* Graph;
 typedef void* Vertex;
 
 /*
-* Representa uma informacao generica.
-*/
-typedef void* Info;
-
-/*
 * Ponteiro para uma funcao que recebe uma informacao (que esta dentro de uma aresta) e retorna o campo da informacao que pode ser interpretado como o peso de uma aresta.
 */
 typedef double (*getEdgeWeight)(Info);
@@ -32,6 +23,11 @@ typedef double (*getEdgeWeight)(Info);
 * Ponteiro para uma funcao que desaloca uma informacao. 
 */
 typedef void (*freeFunction)(Info);
+
+/*
+* Ponteiro para uma funcao que recebe uma informacao (que esta dentro de um vertice/aresta) e a imprime na saida padrao.
+*/
+typedef void (*printInfo)(Info);
 
 /*
 * Cria e retorna uma nova instancia de grafo que ainda nao possui vertices nem arestas. 
@@ -51,8 +47,8 @@ int isVertexMemberOfGraph(Graph Gr, char* id);
 int insertVertex(Graph Gr, char* id, Info info);
 
 /*
-* Insere no grafo uma nova aresta que parte do vertice "sourceId" e vai até o vertice "targetId". Essa aresta é associada a informacao "info".
-  Retorna 1 se a insercao for bem sucedida, se nao retorna 0.
+* Insere no grafo uma nova aresta que parte do vertice "sourceId" e vai até o vertice "targetId". Essa aresta é associada a informacao "info" e a funcao de desalocamento da informacao da aresta "freeInfo".
+* Retorna 1 se a insercao for bem sucedida, se nao retorna 0.
 */
 int insertEdge(Graph Gr, char* sourceId, char* targetId, Info info, freeFunction freeInfo);
 
@@ -73,7 +69,7 @@ Info getEdgeInfo(Graph Gr, char* sourceId, char* targetId);
 
 /*
 * Remove a aresta que parte do vertice "sourceId" e vai até o vertice "targetId".
-  Se uma funcao de remover informacao for passada, a informacao associada a aresta é desalocada da memoria.
+  Se freeInfo == 1 a informacao associada a aresta é desalocada da memoria.
   Retorna 1 se a remocao for bem sucedida, se nao retorna 0.
 */
 int removeEdge(Graph Gr, char* sourceId, char* targetId, int freeInfo);
@@ -92,11 +88,12 @@ List getAdjacentVertices(Graph Gr, char* vertexId);
 /*
 * Imprime o grafo na saida padrao.
 */
-void printGraph(Graph Gr);
+void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo);
 
 /*
-* Desaloca a memoria utilizada pelo grafo. A passagem de funcoes de desalocar informacao e opcional.
-* Se as funcões de desalocar forem passadas, as suas correspondentes informacoes tambem sao desalocadas.
+* Desaloca a memoria utilizada pelo grafo. A passagem de funcao de desalocar informacao de vertices e opcional.
+* Se a funcao for passada, as informacoes de vertices tambem sao desalocadas.
+* Se freeEdgeInfo == 1, as informacoes das arestas tambem sao desalocadas
 */
 void freeGraph(Graph Gr, freeFunction freeVertexInfo, int freeEdgeInfo);
 

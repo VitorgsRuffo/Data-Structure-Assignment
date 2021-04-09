@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+#include "../../include/headers.h"
 #include "graph.h"
 #include "hashtable.h"
 
@@ -259,12 +256,14 @@ List getAdjacentVertices(Graph Gr, char* vertexId){
 }
 
 
-void printGraph(Graph Gr){
+void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo){
     if(Gr == NULL) return;
     graph* gr = (graph*) Gr;
 
     for(int i = 0; i<gr->order; i++){
         printf("\nvertex Id: %s\n", gr->vertices[i].id);
+        if(gr->vertices[i].info != NULL && printVertexInfo != NULL)
+            (*printVertexInfo)(gr->vertices[i].info);
         
         List edges = gr->vertices[i].edges;
         Node currentNode = getFirst(edges);
@@ -275,7 +274,10 @@ void printGraph(Graph Gr){
             currentEdge = (edge*) get(edges, currentNode);
 
             printf("edge: (%s, %s)\n", gr->vertices[i].id, currentEdge->target->id);
-
+            
+            if(printEdgeInfo != NULL && currentEdge->info != NULL)
+                (*printEdgeInfo)(currentEdge->info);
+                
             currentNode = getNext(edges, currentNode);
         }
     }

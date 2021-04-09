@@ -238,7 +238,7 @@ Graph getBikePath(City Ct){
 
 void setBikePath(City Ct, Graph bikePath){
     if(Ct == NULL || bikePath == NULL)
-        return NULL;
+        return;
     
     city *ct = (city*) Ct;
     ct->bikePath = bikePath;

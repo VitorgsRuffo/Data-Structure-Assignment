@@ -1,19 +1,11 @@
 #include "./include/headers.h"
 #include "./elements/urban-elements/city.h"
 #include "./include/util.h"
+//#include "./elements/urban-elements/street.h"
 
 /* To do list:
-*
-*   - input:
-        - ler o sistema viario e guardar na arvore e no grafo:
-            - itera no arquivo até ler o ultimo vertice: (obs: manter contador do numero de vertices)
-                p/ cada um cria um idedPoint e insere na arvore.
-            
-            - itera na arvore inserindo no grafo.
-        
-        - criar a arvore geradora minima (subgrafo).
-
-        - arrumar os comentarios do tad grafo.
+*    
+    - criar a arvore geradora minima (subgrafo).
 
     - query:
         - implementar o dijisktra.
@@ -72,6 +64,8 @@ int main(int argc, char* argv[]){
         closeInputFile(via);
     }
 
+    //printGraph(getRoadSystem(city), printPoint, printStreet);
+    //getchar();
 
     //Criando SVG do geo:
     Svg geoSvg = NULL;
