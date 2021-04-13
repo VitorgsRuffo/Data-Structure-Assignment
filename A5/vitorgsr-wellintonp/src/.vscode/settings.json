@@ -43,6 +43,8 @@
         "changeaddress.h": "c",
         "healthcenter.h": "c",
         "blockresidents.h": "c",
-        "idedpoint.h": "c"
+        "idedpoint.h": "c",
+        "*.tcc": "c",
+        "memory": "c"
     }
 }

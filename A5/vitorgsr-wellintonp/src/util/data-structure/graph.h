@@ -86,6 +86,16 @@ int isAdjacent(Graph Gr, char* vertex1Id, char* vertex2Id);
 List getAdjacentVertices(Graph Gr, char* vertexId);
 
 /*
+* Retorna uma lista contendo os identificadores de todos os vertices do grafo.
+*/
+List getVertices(Graph Gr);
+
+/*
+* Retorna a quantidade de vértices do grafo.
+*/
+int getGraphOrder(Graph Gr);
+
+/*
 * Imprime o grafo na saida padrao.
 */
 void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo);

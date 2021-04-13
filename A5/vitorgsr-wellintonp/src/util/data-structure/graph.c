@@ -256,6 +256,29 @@ List getAdjacentVertices(Graph Gr, char* vertexId){
 }
 
 
+List getVertices(Graph Gr){
+    if(Gr == NULL) return NULL;
+    graph* gr = (graph*) Gr;
+
+    List vertices = createList();
+    if(vertices == NULL) return NULL;
+
+    for(int i = 0; i<gr->order; i++)
+        insert(vertices, gr->vertices[i].id);
+
+    return vertices;
+}
+
+
+int getGraphOrder(Graph Gr){
+
+    if(Gr == NULL) return -1;
+    graph* gr = (graph*) Gr;
+
+    return gr->order;
+}
+
+
 void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo){
     if(Gr == NULL) return;
     graph* gr = (graph*) Gr;

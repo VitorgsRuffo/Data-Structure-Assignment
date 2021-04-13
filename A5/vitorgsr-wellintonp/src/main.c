@@ -6,9 +6,9 @@
 /* To do list:
 *    
     - criar a arvore geradora minima (subgrafo).
+    - implementar o dijisktra.
 
     - query:
-        - implementar o dijisktra.
         - queries dos registradores.
         - demais queries.
 *
