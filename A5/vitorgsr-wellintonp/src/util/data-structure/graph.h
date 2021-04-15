@@ -15,6 +15,11 @@ typedef void* Graph;
 typedef void* Vertex;
 
 /*
+* Representa uma aresta do grafo.
+*/
+typedef void* Edge;
+
+/*
 * Ponteiro para uma funcao que recebe uma informacao (que esta dentro de uma aresta) e retorna o campo da informacao que pode ser interpretado como o peso de uma aresta.
 */
 typedef double (*getEdgeWeight)(Info);
