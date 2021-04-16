@@ -3,7 +3,7 @@
 #include "../data-structure/list.h"
 
 /* 
- * Algoritmo de Prim (Árvore geradora mínima) 
+ * Algoritmo de Prim (Árvore geradora mínima).
  */
 
 Graph prim(Graph Gr, char* originId){
@@ -15,11 +15,11 @@ Graph prim(Graph Gr, char* originId){
 
     //inserindo o primeiro vertice da arvore geradora minima.
     if(originId == NULL){
-        List vertices = getVertices(Gr);
+        List vertices = getGraphVertices(Gr);
         originId = (char*) get(vertices, getFirst(vertices));
     }
 
-    Info vertexInfo = getVertexInfo(Gr, originId);
+    Info vertexInfo = getGraphVertexInfo(Gr, originId);
     if(vertexInfo == NULL) return NULL;
     
     insertVertex(mst, originId, vertexInfo);
@@ -40,10 +40,10 @@ Graph prim(Graph Gr, char* originId){
     while(mstInsertedVerticesAmount < order){
         
         //iterando na lista de arestas do ultimo vertice adicionado a arvore e salvando as arestas que possivelmente faram parte da arvore.
-        edges = getGraphVertexEdges(lastAddedVertex);
+        edges = getGraphVertexEdges(Gr, lastAddedVertex);
         currentNode = getFirst(edges);
         
-        sourceId = getGraphVertexId(lastAddedVertex);
+        sourceId = getGraphVertexId(Gr, lastAddedVertex);
 
         while(currentNode != NULL){
         
@@ -51,8 +51,10 @@ Graph prim(Graph Gr, char* originId){
             targetId = getGraphEdgeTargetId(Gr, currentEdge);
 
             //uma aresta (u,v) so podera fazer parte da lista de possiveis arestas se ela nao estiver na lista e se o vertice v ainda nao pertecer a arvore geradora minima. 
-            if(!isVertexMemberOfGraph(mst, targetId) &&
-                searchForNodeByInfo(possibleEdges, currentEdge) == NULL)
+            //uma aresta do tipo (u, u) nao pode fazer parte da lista de possiveis arestas.
+            if(!isVertexMemberOfGraph(mst, targetId)                    &&
+                searchForNodeByInfo(possibleEdges, currentEdge) == NULL &&
+                strcmp(sourceId, targetId) != 0)
                     insert(possibleEdges, currentEdge);
                     
             currentNode = getNext(edges, currentNode);
@@ -84,10 +86,10 @@ Graph prim(Graph Gr, char* originId){
         //inserindo o vertice v e as arestas (u,v) e (v,u) de menor custo na arvore:
         sourceId = getGraphEdgeSourceId(Gr, lowestCostEdge);                                    
         targetId = getGraphEdgeTargetId(Gr, lowestCostEdge);
-        Info edgeInfo = getEdgeInfo(Gr, sourceId, targetId);
-        freeFunction freeEdgeInfo = getGraphEdgeFreeFunction(Gr, sourceId, targetId);
+        Info edgeInfo = getGraphEdgeInfo(Gr, sourceId, targetId);
+        freeFunction freeEdgeInfo = getGraphEdgeFreeFunction(Gr, lowestCostEdge);
 
-        Info vertexInfo = getVertexInfo(Gr, targetId);
+        Info vertexInfo = getVertexGraphInfo(Gr, targetId);
         insertVertex(mst, targetId, vertexInfo);
 
         insertEdge(mst, sourceId, targetId, edgeInfo, freeEdgeInfo);
@@ -96,5 +98,6 @@ Graph prim(Graph Gr, char* originId){
         mstInsertedVerticesAmount++;
         lastAddedVertex = getGraphVertex(mst, targetId);
     }
+    
     return mst;
 }

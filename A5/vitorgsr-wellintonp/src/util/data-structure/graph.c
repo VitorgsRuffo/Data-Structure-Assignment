@@ -10,6 +10,7 @@ typedef struct {
 
 typedef struct {
     vertex* target;
+    vertex* source;
     Info info;
     freeFunction freeInfo;
 }edge;
@@ -84,6 +85,38 @@ Graph createGraph(int order){
 }
 
 
+int getGraphOrder(Graph Gr){
+
+    if(Gr == NULL) return -1;
+    graph* gr = (graph*) Gr;
+
+    return gr->order;
+}
+
+
+List getGraphVertices(Graph Gr){
+    if(Gr == NULL) return NULL;
+    graph* gr = (graph*) Gr;
+
+    List vertices = createList();
+    if(vertices == NULL) return NULL;
+
+    for(int i = 0; i<gr->order; i++)
+        insert(vertices, gr->vertices[i].id);
+
+    return vertices;
+}
+
+
+int setGetEdgeWeightFunction(Graph Gr, getEdgeWeight get){
+    if(Gr == NULL || get == NULL ) return 0;
+    graph* gr = (graph*) Gr;
+    
+    gr->get = get;
+    return 1;
+}
+
+
 int isVertexMemberOfGraph(Graph Gr, char* id){
     if(Gr == NULL || id == NULL) return 0;
     graph* gr = (graph*) Gr;
@@ -138,6 +171,7 @@ int insertEdge(Graph Gr, char* sourceId, char* targetId, Info info, freeFunction
     if(newEdge == NULL) return 0;
 
     newEdge->info = info;
+    newEdge->source = &(gr->vertices[sourceIndex]);
     newEdge->target = &(gr->vertices[targetIndex]);
     newEdge->freeInfo = freeInfo;
 
@@ -150,16 +184,7 @@ int insertEdge(Graph Gr, char* sourceId, char* targetId, Info info, freeFunction
 }
 
 
-int setGetEdgeWeightFunction(Graph Gr, getEdgeWeight get){
-    if(Gr == NULL || get == NULL ) return 0;
-    graph* gr = (graph*) Gr;
-    
-    gr->get = get;
-    return 1;
-}
-
-
-Info getVertexInfo(Graph Gr, char* id){
+Info getGraphVertexInfo(Graph Gr, char* id){
     if(Gr == NULL || id == NULL ) return 0;
     graph* gr = (graph*) Gr;
 
@@ -171,7 +196,50 @@ Info getVertexInfo(Graph Gr, char* id){
 }
 
 
-Info getEdgeInfo(Graph Gr, char* sourceId, char* targetId){
+char* getGraphVertexId(Graph Gr, Vertex Vt){
+    if(Gr == NULL || Vt == NULL) return NULL;
+    
+    vertex* vt = (vertex*) Vt;
+    return vt->id;
+}
+
+
+Vertex getGraphVertex(Graph Gr, char* originId){
+    
+    if(Gr == NULL) return NULL;
+    graph* gr = (graph*) Gr;
+
+    int index = getVertexIndex(gr->indicesTable, originId);
+    
+    if(index == -1)
+        return NULL;
+
+    int compare = strcmp(gr->vertices[index].id, originId);
+
+    if(!compare)
+        return &(gr->vertices[index]);
+
+    return NULL;
+}
+
+
+List getGraphVertexEdges(Graph Gr, Vertex Vt){
+
+    if(Gr == NULL || Vt == NULL) return;
+    
+    graph* gr = (graph*) Gr;
+    vertex* vt = (vertex*) Vt;
+
+    int index = getVertexIndex(Gr, vt->id);
+    
+    if(index == -1)
+        return NULL;
+
+    return gr->vertices[index].edges;
+}
+
+
+Info getGraphEdgeInfo(Graph Gr, char* sourceId, char* targetId){
     if(Gr == NULL || sourceId == NULL || targetId == NULL) return 0;
     graph* gr = (graph*) Gr;
 
@@ -179,6 +247,39 @@ Info getEdgeInfo(Graph Gr, char* sourceId, char* targetId){
     
     if(ed == NULL) return NULL;
     else           return ed->info; 
+}
+
+
+
+
+char* getGraphEdgeSourceId(Graph Gr, Edge Ed){
+    if(Gr == NULL || Ed == NULL) return NULL;
+    
+    edge* ed = (edge*) Ed;
+    return ed->source->id;
+}
+
+char* getGraphEdgeTargetId(Graph Gr, Edge Ed){
+    if(Gr == NULL || Ed == NULL) return NULL;
+    
+    edge* ed = (edge*) Ed;
+    return ed->target->id;
+}
+
+double getGraphEdgeWeight(Graph Gr, Edge Ed){
+    if(Gr == NULL || Ed == NULL) return -1.0;
+    
+    graph* gr = (graph*) Gr;
+    edge* ed = (edge*) Ed;
+
+    return (*(gr->get))(ed->info);
+}
+
+freeFunction getGraphEdgeFreeFunction(Graph Gr, Edge Ed){
+    if(Gr == NULL || Ed == NULL) return NULL;
+    
+    edge* ed = (edge*) Ed;
+    return ed->freeInfo;
 }
 
 
@@ -253,29 +354,6 @@ List getAdjacentVertices(Graph Gr, char* vertexId){
     }
 
     return adjacentVertices;
-}
-
-
-List getVertices(Graph Gr){
-    if(Gr == NULL) return NULL;
-    graph* gr = (graph*) Gr;
-
-    List vertices = createList();
-    if(vertices == NULL) return NULL;
-
-    for(int i = 0; i<gr->order; i++)
-        insert(vertices, gr->vertices[i].id);
-
-    return vertices;
-}
-
-
-int getGraphOrder(Graph Gr){
-
-    if(Gr == NULL) return -1;
-    graph* gr = (graph*) Gr;
-
-    return gr->order;
 }
 
 
