@@ -1,8 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "./graph-implementation/graph.h"
-#include "./graph-implementation/list.h"
+#include "../../include/headers.h"
+#include "../data-structure/graph.h"
+#include "../data-structure/list.h"
 
 /* 
  * Algoritmo de Prim (Árvore geradora mínima).
