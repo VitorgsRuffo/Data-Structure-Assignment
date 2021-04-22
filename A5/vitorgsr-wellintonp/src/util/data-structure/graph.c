@@ -1,4 +1,7 @@
-#include "../../include/headers.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
 #include "graph.h"
 #include "hashtable.h"
 
@@ -209,7 +212,7 @@ Vertex getGraphVertex(Graph Gr, char* originId){
     if(Gr == NULL) return NULL;
     graph* gr = (graph*) Gr;
 
-    int index = getVertexIndex(gr->indicesTable, originId);
+    int index = getVertexIndex(gr, originId);
     
     if(index == -1)
         return NULL;
@@ -225,7 +228,7 @@ Vertex getGraphVertex(Graph Gr, char* originId){
 
 List getGraphVertexEdges(Graph Gr, Vertex Vt){
 
-    if(Gr == NULL || Vt == NULL) return;
+    if(Gr == NULL || Vt == NULL) return NULL;
     
     graph* gr = (graph*) Gr;
     vertex* vt = (vertex*) Vt;
@@ -267,7 +270,8 @@ char* getGraphEdgeTargetId(Graph Gr, Edge Ed){
 }
 
 double getGraphEdgeWeight(Graph Gr, Edge Ed){
-    if(Gr == NULL || Ed == NULL) return -1.0;
+    if(Gr == NULL) return -1.0;
+    if(Ed == NULL) return 999999999;
     
     graph* gr = (graph*) Gr;
     edge* ed = (edge*) Ed;
@@ -451,6 +455,7 @@ void freeEdge(Info Ed){
 
 void freeEdgeAndInfo(Info Ed){
     edge* ed = (edge*) Ed;
-    (*ed->freeInfo)(ed->info);
+    if(ed->freeInfo != NULL)
+        (*ed->freeInfo)(ed->info);
     free(ed);
 }

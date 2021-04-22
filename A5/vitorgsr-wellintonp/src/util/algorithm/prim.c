@@ -1,6 +1,8 @@
-#include "../../include/headers.h"
-#include "../data-structure/graph.h"
-#include "../data-structure/list.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "./graph-implementation/graph.h"
+#include "./graph-implementation/list.h"
 
 /* 
  * Algoritmo de Prim (Árvore geradora mínima).
@@ -17,6 +19,7 @@ Graph prim(Graph Gr, char* originId){
     if(originId == NULL){
         List vertices = getGraphVertices(Gr);
         originId = (char*) get(vertices, getFirst(vertices));
+        freeList(vertices, NULL);
     }
 
     Info vertexInfo = getGraphVertexInfo(Gr, originId);
@@ -50,10 +53,9 @@ Graph prim(Graph Gr, char* originId){
             currentEdge = get(edges, currentNode);
             targetId = getGraphEdgeTargetId(Gr, currentEdge);
 
-            //uma aresta (u,v) so podera fazer parte da lista de possiveis arestas se ela nao estiver na lista e se o vertice v ainda nao pertecer a arvore geradora minima. 
+            //uma aresta (u,v) so podera fazer parte da lista de possiveis arestas se o vertice v ainda nao pertecer a arvore geradora minima. 
             //uma aresta do tipo (u, u) nao pode fazer parte da lista de possiveis arestas.
-            if(!isVertexMemberOfGraph(mst, targetId)                    &&
-                searchForNodeByInfo(possibleEdges, currentEdge) == NULL &&
+            if(!isVertexMemberOfGraph(mst, targetId) &&
                 strcmp(sourceId, targetId) != 0)
                     insert(possibleEdges, currentEdge);
                     
@@ -65,7 +67,7 @@ Graph prim(Graph Gr, char* originId){
         Edge lowestCostEdge = NULL;
         Node lowestCostNode;
         
-        while(currentNode != NULL){                                 /* MAS E SE FOR NULL? */
+        while(currentNode != NULL){                                 
             
             currentEdge = get(possibleEdges, currentNode);
             targetId = getGraphEdgeTargetId(Gr, currentEdge);
@@ -80,24 +82,29 @@ Graph prim(Graph Gr, char* originId){
             currentNode = getNext(possibleEdges, currentNode);
         }
 
-        //ao encontrarmos a aresta de menor peso devemos remove-la da lista de possiveis arestas.
-        removeNode(possibleEdges, lowestCostNode, NULL);
+        // Verificando se realmente foi encontrado uma lowestCostEdge
+        if(lowestCostEdge != NULL){
+            
+            //ao encontrarmos a aresta de menor peso devemos remove-la da lista de possiveis arestas.
+            removeNode(possibleEdges, lowestCostNode, NULL);
 
-        //inserindo o vertice v e as arestas (u,v) e (v,u) de menor custo na arvore:
-        sourceId = getGraphEdgeSourceId(Gr, lowestCostEdge);                                    
-        targetId = getGraphEdgeTargetId(Gr, lowestCostEdge);
-        Info edgeInfo = getGraphEdgeInfo(Gr, sourceId, targetId);
-        freeFunction freeEdgeInfo = getGraphEdgeFreeFunction(Gr, lowestCostEdge);
+            //inserindo o vertice v e as arestas (u,v) e (v,u) de menor custo na arvore:
+            sourceId = getGraphEdgeSourceId(Gr, lowestCostEdge);                                    
+            targetId = getGraphEdgeTargetId(Gr, lowestCostEdge);
+            Info edgeInfo = getGraphEdgeInfo(Gr, sourceId, targetId);
 
-        Info vertexInfo = getVertexGraphInfo(Gr, targetId);
-        insertVertex(mst, targetId, vertexInfo);
+            Info vertexInfo = getGraphVertexInfo(Gr, targetId);
+            insertVertex(mst, targetId, vertexInfo);
 
-        insertEdge(mst, sourceId, targetId, edgeInfo, freeEdgeInfo);
-        insertEdge(mst, targetId, sourceId, edgeInfo, freeEdgeInfo);
+            insertEdge(mst, sourceId, targetId, edgeInfo, NULL);
+            insertEdge(mst, targetId, sourceId, edgeInfo, NULL);
 
-        mstInsertedVerticesAmount++;
-        lastAddedVertex = getGraphVertex(mst, targetId);
+            mstInsertedVerticesAmount++;
+            lastAddedVertex = getGraphVertex(mst, targetId);
+        }
     }
+
+    freeList(possibleEdges, NULL);
     
     return mst;
 }

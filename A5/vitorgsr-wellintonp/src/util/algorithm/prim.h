@@ -2,6 +2,6 @@
 #define PRIM_H
 
 
-void prim();
+Graph prim(Graph Gr, char* originId);
 
 #endif

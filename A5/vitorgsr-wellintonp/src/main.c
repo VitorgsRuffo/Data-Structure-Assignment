@@ -4,11 +4,11 @@
 //#include "./elements/urban-elements/street.h"
 
 /* To do list:
-*    
-    - criar a arvore geradora minima (subgrafo).
     - implementar o dijisktra.
+    - testar o dijisktra.
 
     - query:
+        - atualizar catac e soc.
         - queries dos registradores.
         - demais queries.
 *
