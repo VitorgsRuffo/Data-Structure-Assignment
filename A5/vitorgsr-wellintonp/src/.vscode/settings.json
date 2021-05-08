@@ -47,6 +47,9 @@
         "*.tcc": "c",
         "memory": "c",
         "graph.h": "c",
-        "pquadtree.h": "c"
+        "pquadtree.h": "c",
+        "priorityqueue.h": "c",
+        "hashtable.h": "c",
+        "dijkstra.h": "c"
     }
 }

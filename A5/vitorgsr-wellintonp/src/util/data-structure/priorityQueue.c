@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+#include "../../include/headers.h"
+#include "../tools.h"
 #include "priorityQueue.h"
 #include "hashtable.h"
 
@@ -24,7 +22,6 @@ char* getKeyIndexKey(KeyIndex KI);
 void updateKeyIndexTableAfterSwappingElements(priorityQueue* pqueue, char* key1, char* key2);
 
 int isLess(priorityQueue* pqueue, int node1Index, int node2Index);
-void swapInformations(Info* info1, Info* info2);
 void increaseBinaryHeapCapacity(priorityQueue* pqueue);
 void sink(priorityQueue* pqueue, int elementToSinkIndex);
 void swim(priorityQueue* pqueue, int elementToSwimIndex);
@@ -232,14 +229,6 @@ void increaseBinaryHeapCapacity(priorityQueue* pqueue){
     pqueue->binaryHeap = newBinaryHeap;
     pqueue->capacity = newCapacity;
 }
-
-void swapInformations(Info* info1, Info* info2) { 
-    Info temp;
-
-    temp = *info1;
-    *info1 = *info2;
-    *info2 = temp;  
-} 
 
 void sink(priorityQueue* pqueue, int elementToSinkIndex){
     

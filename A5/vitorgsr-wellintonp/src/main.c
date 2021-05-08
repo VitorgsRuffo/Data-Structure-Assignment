@@ -4,13 +4,11 @@
 //#include "./elements/urban-elements/street.h"
 
 /* To do list:
-    - implementar o dijisktra.
-    - testar o dijisktra.
 
-    - query:
-        - atualizar catac e soc.
-        - queries dos registradores.
-        - demais queries.
+    - atualizar catac e soc.
+    - queries dos registradores.
+
+    - demais queries.
 *
 */
 
