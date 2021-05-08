@@ -2,7 +2,7 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o region.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o street.o idedPoint.o point.o text.o convexhull.o sort.o graph.o hashtable.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o via.o blockBorder.o blockResidents.o calculateArea.o changeAddress.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o establishmentInformation.o highlightEstablishment.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o urbanDeletion.o personalInfo.o urbanDeletionInRange.o printTree.o qry.o svg.o tools.o
+obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o region.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o street.o idedPoint.o point.o text.o convexhull.o sort.o graph.o hashtable.o priorityQueue.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o via.o blockBorder.o blockResidents.o calculateArea.o changeAddress.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o establishmentInformation.o highlightEstablishment.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o urbanDeletion.o personalInfo.o urbanDeletionInRange.o printTree.o qry.o svg.o tools.o
 
 #paths:
 elements = ./elements
@@ -105,7 +105,10 @@ graph.o: $(data_structure)/graph.c
 	$(CC) $(flags) -c $(data_structure)/graph.c 
 
 hashtable.o: $(data_structure)/hashtable.c 
-	$(CC) $(flags) -c $(data_structure)/hashtable.c 
+	$(CC) $(flags) -c $(data_structure)/hashtable.c
+
+priorityQueue.o: $(data_structure)/priorityQueue.c 
+	$(CC) $(flags) -c $(data_structure)/priorityQueue.c 
 
 
 #algorithms:

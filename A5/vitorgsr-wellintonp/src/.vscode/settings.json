@@ -45,6 +45,8 @@
         "blockresidents.h": "c",
         "idedpoint.h": "c",
         "*.tcc": "c",
-        "memory": "c"
+        "memory": "c",
+        "graph.h": "c",
+        "pquadtree.h": "c"
     }
 }
