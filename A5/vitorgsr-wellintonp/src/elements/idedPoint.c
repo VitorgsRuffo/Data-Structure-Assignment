@@ -35,6 +35,15 @@ Point getIdedPointCoordinates(IdedPoint IP){
     return iP->coordinates;   
 }
 
+char* idedPointToString(IdedPoint IP){
+   if(IP == NULL) return NULL;
+    idedPoint* ip = (idedPoint*) IP; 
+    
+    char* string = (char*) malloc(50 * sizeof(char));
+    sprintf(string, "(%s)(%.2lf, %.2lf)",ip->id, getPointX(ip->coordinates), getPointY(ip->coordinates));
+    return string;
+}
+
 void freeIdedPoint(IdedPoint IP){
     if(IP == NULL) return;
     idedPoint* iP = (idedPoint*) IP;

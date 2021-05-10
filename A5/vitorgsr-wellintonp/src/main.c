@@ -5,11 +5,12 @@
 
 /* To do list:
 
-    - atualizar catac e soc.
+    - atualizar catac.
     - queries dos registradores.
 
     - demais queries.
-*
+    - atualizar soc.
+    
 */
 
 int main(int argc, char* argv[]){
