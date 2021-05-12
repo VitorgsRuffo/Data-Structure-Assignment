@@ -103,6 +103,13 @@ Vertex getGraphVertex(Graph Gr, char* originId);
 */
 List getGraphVertexEdges(Graph Gr, Vertex Vt);
 
+/*
+* Remove o vertice, cujo id foi passado, do grafo. É necessario informar se o grafo é direcionado ou nao.
+* A passagem de funcao de desalocar informacao de vertices e opcional.
+* Se a funcao for passada, a informacão associada ao vertice tambem é desalocada.
+* Retorna 1 se a remocao for bem sucedida, se nao retorna 0.
+*/
+int removeVertex(Graph Gr, int graphIsDirected, char* id, freeFunction freeInfo);
 
 /*
 * Retorna a informacao associada a aresta que parte do vertice "sourceId" e vai até o vertice "targetId".

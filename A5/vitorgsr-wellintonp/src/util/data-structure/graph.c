@@ -1,4 +1,7 @@
-#include "../../include/headers.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
 #include "graph.h"
 #include "hashtable.h"
 
@@ -9,8 +12,8 @@ typedef struct {
 }vertex;
 
 typedef struct {
-    vertex* target;
-    vertex* source;
+    char targetId[50];
+    char sourceId[50];
     Info info;
     freeFunction freeInfo;
 }edge;
@@ -24,7 +27,7 @@ typedef struct {
 }graph;
 
 /* Tipo de dados que sera guardado na tabela hash.
-*  Vamos usar uma tabela hash para relacionar o id de um vertice á sua posicao no vetor de vertices do grafo. (Afim de facilitar consultas)
+*  Vamos usar uma tabela hash para relacionar o id de um vertice a sua posicao no vetor de vertices do grafo. (Afim de facilitar consultas)
 */
 typedef struct {
     char id[50];
@@ -170,9 +173,9 @@ int insertEdge(Graph Gr, char* sourceId, char* targetId, Info info, freeFunction
     edge* newEdge = (edge*) malloc(sizeof(edge));
     if(newEdge == NULL) return 0;
 
+    strcpy(newEdge->sourceId, sourceId);
+    strcpy(newEdge->targetId, targetId);
     newEdge->info = info;
-    newEdge->source = &(gr->vertices[sourceIndex]);
-    newEdge->target = &(gr->vertices[targetIndex]);
     newEdge->freeInfo = freeInfo;
 
     if(insert(gr->vertices[sourceIndex].edges, newEdge) == NULL){
@@ -204,22 +207,15 @@ char* getGraphVertexId(Graph Gr, Vertex Vt){
 }
 
 
-Vertex getGraphVertex(Graph Gr, char* originId){
+Vertex getGraphVertex(Graph Gr, char* id){
     
     if(Gr == NULL) return NULL;
     graph* gr = (graph*) Gr;
 
-    int index = getVertexIndex(gr, originId);
-    
-    if(index == -1)
-        return NULL;
+    int index = getVertexIndex(gr, id);
+    if(index == -1) return NULL;
 
-    int compare = strcmp(gr->vertices[index].id, originId);
-
-    if(!compare)
-        return &(gr->vertices[index]);
-
-    return NULL;
+    return &(gr->vertices[index]);
 }
 
 
@@ -230,14 +226,60 @@ List getGraphVertexEdges(Graph Gr, Vertex Vt){
     graph* gr = (graph*) Gr;
     vertex* vt = (vertex*) Vt;
 
-    int index = getVertexIndex(Gr, vt->id);
-    
-    if(index == -1)
-        return NULL;
+    int index = getVertexIndex(gr, vt->id);
+    if(index == -1) return NULL;
 
     return gr->vertices[index].edges;
 }
 
+int removeVertex(Graph Gr, int graphIsDirected, char* id, freeFunction freeInfo){
+    if(Gr == NULL || id == NULL ) return 0;
+    graph* gr = (graph*) Gr;
+
+    int index = getVertexIndex(gr, id);
+    if(index == -1) return 0;
+    
+    //removendo todas as arestas que saem ou chegam no vertice a ser removido:
+    List verticesIds = getGraphVertices(Gr);
+    Node currentIdNode = getFirst(verticesIds);
+    char* currentId;
+
+    while(currentIdNode != NULL){
+
+        currentId = get(verticesIds, currentIdNode);
+
+        removeEdge(Gr, id, currentId, 1);
+
+        if(graphIsDirected)
+            removeEdge(Gr, currentId, id, 1);
+        
+        else//se o grafo for nao-direcionado uma conexao entre vertices u e v sera representada por duas arestas: (u,v) (v,u). Ambas arestas guardam a mesma informacao, assim, nao queremos desalocar essa informacao duas vezes, portanto, ao desalocar a segunda aresta passamos o valor 0.  
+            removeEdge(Gr, currentId, id, 0);
+        
+
+        currentIdNode = getNext(verticesIds, currentIdNode);
+    }
+
+    //removendo o indice do vertice da tabela de indices:
+    removeHashTableInfo(gr->indicesTable, id, free);
+
+    //removendo o vertice do vetor de vertices e atualizando a tabela de indices:
+    if(freeInfo != NULL)
+        (*freeInfo)(gr->vertices[index].info);
+    
+    freeList(gr->vertices[index].edges, NULL); //todas as arestas que saem do vertice ja foram desalocadas entao desalocamos apenas a lista.
+
+    idIndex* vertexIdIndex;
+    for(int i = index; i<gr->insertedVerticesAmount-1; i++){
+        gr->vertices[i] = gr->vertices[i+1];
+        vertexIdIndex = (idIndex*) getHashTableInfo(gr->indicesTable, gr->vertices[i].id);
+        vertexIdIndex->index = i;
+    }
+
+    freeList(verticesIds, NULL);
+    gr->insertedVerticesAmount--;
+    return 1;
+}
 
 Info getGraphEdgeInfo(Graph Gr, char* sourceId, char* targetId){
     if(Gr == NULL || sourceId == NULL || targetId == NULL) return 0;
@@ -249,26 +291,22 @@ Info getGraphEdgeInfo(Graph Gr, char* sourceId, char* targetId){
     else           return ed->info; 
 }
 
-
-
-
 char* getGraphEdgeSourceId(Graph Gr, Edge Ed){
     if(Gr == NULL || Ed == NULL) return NULL;
     
     edge* ed = (edge*) Ed;
-    return ed->source->id;
+    return ed->sourceId;
 }
 
 char* getGraphEdgeTargetId(Graph Gr, Edge Ed){
     if(Gr == NULL || Ed == NULL) return NULL;
     
     edge* ed = (edge*) Ed;
-    return ed->target->id;
+    return ed->targetId;
 }
 
 double getGraphEdgeWeight(Graph Gr, Edge Ed){
-    if(Gr == NULL) return -1.0;
-    if(Ed == NULL) return 999999999;
+    if(Gr == NULL || Ed == NULL) return -1.0;
     
     graph* gr = (graph*) Gr;
     edge* ed = (edge*) Ed;
@@ -301,7 +339,7 @@ int removeEdge(Graph Gr, char* sourceId, char* targetId, int freeInfo){
 
         currentEdge = (edge*) get(edges, currentNode);
 
-        if(!strcmp(currentEdge->target->id, targetId)){
+        if(!strcmp(currentEdge->targetId, targetId)){
             
             removeNode(edges, currentNode, NULL);
 
@@ -349,7 +387,7 @@ List getAdjacentVertices(Graph Gr, char* vertexId){
 
         currentEdge = (edge*) get(edges, currentNode);
 
-        insert(adjacentVertices, (Info) currentEdge->target->id);
+        insert(adjacentVertices, (Info) currentEdge->targetId);
 
         currentNode = getNext(edges, currentNode);
     }
@@ -362,7 +400,7 @@ void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo){
     if(Gr == NULL) return;
     graph* gr = (graph*) Gr;
 
-    for(int i = 0; i<gr->order; i++){
+    for(int i = 0; i<gr->insertedVerticesAmount; i++){
         printf("\nvertex Id: %s\n", gr->vertices[i].id);
         if(gr->vertices[i].info != NULL && printVertexInfo != NULL)
             (*printVertexInfo)(gr->vertices[i].info);
@@ -375,7 +413,7 @@ void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo){
 
             currentEdge = (edge*) get(edges, currentNode);
 
-            printf("edge: (%s, %s)\n", gr->vertices[i].id, currentEdge->target->id);
+            printf("edge: (%s, %s)\n", gr->vertices[i].id, currentEdge->targetId);
             
             if(printEdgeInfo != NULL && currentEdge->info != NULL)
                 (*printEdgeInfo)(currentEdge->info);
@@ -390,7 +428,7 @@ void freeGraph(Graph Gr, freeFunction freeVertexInfo, int freeEdgeInfo){
     if(Gr == NULL) return;
     graph* gr = (graph*) Gr;
 
-    for(int i = 0; i<gr->order; i++){
+    for(int i = 0; i<gr->insertedVerticesAmount; i++){
         if(gr->vertices[i].info != NULL && freeVertexInfo != NULL)
             (*freeVertexInfo)(gr->vertices[i].info);
         
@@ -436,7 +474,7 @@ edge* findEdge(graph* gr, char* sourceId, char* targetId){
 
         currentEdge = (edge*) get(edges, currentNode);
 
-        if(!strcmp(currentEdge->target->id, targetId))
+        if(!strcmp(currentEdge->targetId, targetId))
             return currentEdge;
 
         currentNode = getNext(edges, currentNode);
@@ -452,7 +490,6 @@ void freeEdge(Info Ed){
 
 void freeEdgeAndInfo(Info Ed){
     edge* ed = (edge*) Ed;
-    if(ed->freeInfo != NULL)
-        (*ed->freeInfo)(ed->info);
+    (*ed->freeInfo)(ed->info);
     free(ed);
 }
