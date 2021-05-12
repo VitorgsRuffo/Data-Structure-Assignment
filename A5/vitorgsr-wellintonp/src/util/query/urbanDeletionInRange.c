@@ -30,6 +30,7 @@ void deleteBlocksInCircle(Variables variables);
 void deleteUrbanElementsInCircle(Variables variables);
 void deleteHousesInCircle(Variables variables);
 void deleteEstablishmentsInCircle(Variables variables);
+void deleteStreetsInCircle(Variables variables);
 char* buildUrbanElementsDeletionCircleTag(char* x, char* y, char* radius);
 
 
@@ -314,13 +315,7 @@ void deleteEstablishmentIfItsInsideCircle(Info establishment, ExtraInfo extraInf
 
         insert(variables->pointsToRemove, getEstablishmentCoordinates(establishment));
     }
-
 }
-
-
-/* to do:
-    - removeVertex (implementar separadamente).
-*/
 
 
 void deleteRoadIntersectionIfItsInsideCircle(Info roadIntersection, ExtraInfo extraInfo);
@@ -342,32 +337,10 @@ void deleteStreetsInCircle(Variables variables){
         IdedPoint roadIntersection = getPQuadTreeNodeInfo(variables.elements, nodeToRemove);
         char* roadIntersectionId = getIdedPointId(roadIntersection);
         
-        //removendo todas as ruas que estao ligadas a esquina a ser removida.
+        //removendo a esquina e todas as ruas que estao ligadas a esquina a ser removida.
         //em outras palavras: removendo todas as arestas que saem ou chegam no vertice a ser removido:
-        List verticesIds = getGraphVertices(variables.roadSystem);
-        Node currentIdNode = getFirst(verticesIds);
-        char* currentId;
-        while(currentIdNode != NULL){
-
-            currentId = get(verticesIds, currentIdNode);
-
-            // O roadSystem é um Grafo direcionado, portanto cada aresta que parte de um vertice é diferente. Sendo assim, freelamos cada uma delas.
-            removeEdge(variables.roadSystem, roadIntersectionId, currentId, 1);
-            removeEdge(variables.roadSystem, currentId, roadIntersectionId, 1);
-            
-            if(variables.bikePath != NULL){
-                // O bikePath é um Grafo nao direcionado, portanto a aresta de ambos os vertices é a mesma. Sendo assim, freelamos apenas uma vez.
-                removeEdge(variables.bikePath, roadIntersectionId, currentId, 1);
-                removeEdge(variables.bikePath, currentId, roadIntersectionId, 0);
-            }
-
-            currentIdNode = getNext(verticesIds, currentIdNode);
-        }
-        
-        //
-        removeVertex(variables.roadSystem, roadIntersectionId);
-        if(variables.bikePath != NULL)
-            removeVertex(variables.bikePath, roadIntersectionId);
+        removeVertex(variables.roadSystem, 1, roadIntersectionId, freePoint);
+        removeVertex(variables.bikePath, 0, roadIntersectionId, NULL); //os vertices de ambos os grafos sao correspondentes, e, estao associados a mesma informacao, portanto, desalocamos essa informacao apenas uma vez.
 
         //removendo a intersecao da arvore de intersecao de ruas:
         removePQuadTreeNode(variables.elements, nodeToRemove);
@@ -377,7 +350,6 @@ void deleteStreetsInCircle(Variables variables){
         currentNode = getFirst(variables.pointsToRemove);
     }
     //Obs: é necessario remover os nodes da tabela hash que correspondam as mesmas informacoes (caso exista uma tabela hash de quadras.), ou outras de estruturas que apontem para essas mesmas informacoes.
-
 }
 
 void deleteRoadIntersectionIfItsInsideCircle(Info roadIntersection, ExtraInfo extraInfo){
@@ -387,16 +359,13 @@ void deleteRoadIntersectionIfItsInsideCircle(Info roadIntersection, ExtraInfo ex
     Point roadIntersectionCoordinates = getIdedPointCoordinates(roadIntersection);
 
     if(isPointInsideCirc(variables->circle, roadIntersectionCoordinates)){
-        char* vertexString = (*variables->urbanElementToString)(roadIntersection);
+        char* vertexString = idedPointToString(roadIntersection);
         fprintf(variables->txt, "O vertice \"%s\" foi removido.\n\n", vertexString);
         free(vertexString);
 
         insert(variables->pointsToRemove, roadIntersectionCoordinates);
     }
 }
-
-
-
 
 
 char* buildUrbanElementsDeletionCircleTag(char* x, char* y, char* radius){

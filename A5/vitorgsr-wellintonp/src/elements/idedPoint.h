@@ -23,6 +23,12 @@ char* getIdedPointId(IdedPoint IP);
 */
 Point getIdedPointCoordinates(IdedPoint IP);
 
+/*  
+* Pré-Condição: requer o endereco de uma instancia de IdedPoint.
+* Pós-Condição: retorna uma string com as informacoes da instancia de ponto passada.
+*/
+char* idedPointToString(IdedPoint IP);
+
 /*
     Pré condição: Requer uma instancia do tipo IdedPoint.
     Pós condição: desaloca a memoria usada pelo tad.

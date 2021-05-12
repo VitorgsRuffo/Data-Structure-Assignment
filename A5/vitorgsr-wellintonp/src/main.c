@@ -5,7 +5,6 @@
 
 /* To do list:
 
-    - atualizar catac.
     - queries dos registradores.
 
     - demais queries.
