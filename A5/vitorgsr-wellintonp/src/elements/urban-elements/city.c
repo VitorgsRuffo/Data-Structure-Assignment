@@ -3,6 +3,7 @@
 #include "../../util/query/qry.h"
 #include "../../include/dataStructure.h"
 
+#define LOCATIONS_AMOUNT 11
 
 typedef struct city {
     PQuadTree circles;
@@ -25,6 +26,7 @@ typedef struct city {
     Graph roadSystem;
     PQuadTree roadIntersections;
     Graph bikePath;
+    Point* locations;
     List queryElements;
 }city;
 
@@ -58,6 +60,7 @@ City createCity(){
     ct->roadSystem = NULL;
     ct->roadIntersections = createPQuadTree(getIdedPointId, getIdedPointCoordinates);
     ct->bikePath = NULL;
+    ct->locations = (Point*) malloc(LOCATIONS_AMOUNT * sizeof(Point));
 
     ct->queryElements = createList();
 
@@ -242,6 +245,13 @@ void setBikePath(City Ct, Graph bikePath){
     
     city *ct = (city*) Ct;
     ct->bikePath = bikePath;
+}
+
+Point* getLocations(City Ct){
+    if(Ct == NULL) return NULL;
+
+    city *ct = (city*) Ct;
+    return ct->locations;
 }
 
 List getQueryElements(City Ct){

@@ -105,7 +105,7 @@ void levelOrderTraversal(PQuadTree Tree, nodeVisitingFunction function, ExtraInf
     
 /*
     Pré condição: Requer a referencia para uma p-quadtree, um function pointer do tipo nodeVisitingFunction (definido acima), e um void pointer para uma informacao extra.
-    Pós-condição: Percorre a arvore comparando as keys e retorna o node referente a key do parametro. Caso nao encontre, retoran NULL.
+    Pós-condição: Percorre a arvore comparando as keys e retorna o node referente a key do parametro. Caso nao encontre, retorna NULL.
 */
 PQuadTreeNode searchForObjectByKeyInPQuadTree(PQuadTree Tree, char* key);
 

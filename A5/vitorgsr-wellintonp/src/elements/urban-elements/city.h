@@ -160,6 +160,12 @@ void setBikePath(City Ct, Graph bikePath);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade.
+* Pós-Condição: retorna uma referencia do ponteiro para os registradores de referencias geograficas.
+*/
+Point* getLocations(City Ct);
+
+/*
+* Pré-Condição: requer a referencia para uma instancia de TAD cidade.
 * Pós-Condição: retorna uma referencia para a estrutura de elementos de query presente no TAD cidade.
 */
 List getQueryElements(City Ct);
