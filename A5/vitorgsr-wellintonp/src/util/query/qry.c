@@ -91,6 +91,12 @@ void executeQry(File qry, City Ct, Parameters Param){
         else if(!strcmp(commandType, "dmprbt"))
             executeTreeStatePrinting(command, Ct, Param);
       
+        else if(!strcmp(commandType, "@g?"))
+            saveUrbanEquipmentLocation(command, Ct);
+
+        else if(!strcmp(commandType, "@xy"))
+            saveLocation(command, Ct);
+      
         uniqueId++;
     }
     
