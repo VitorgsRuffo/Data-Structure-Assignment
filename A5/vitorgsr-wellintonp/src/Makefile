@@ -2,7 +2,7 @@ CC = gcc
 
 flags = -std=c99 -fstack-protector-all -g -Wall -Werror
 
-obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o region.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o street.o idedPoint.o point.o text.o prim.o dijkstra.o convexhull.o sort.o graph.o hashtable.o priorityQueue.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o via.o blockBorder.o blockResidents.o storeLocation.o calculateArea.o changeAddress.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o establishmentInformation.o highlightEstablishment.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o urbanDeletion.o personalInfo.o urbanDeletionInRange.o printTree.o qry.o svg.o tools.o
+obj = main.o circle.o rectangle.o address.o baseRadio.o block.o city.o covidAddress.o customization.o region.o establishment.o establishmentType.o healthCenter.o house.o hydrant.o person.o semaphore.o street.o idedPoint.o point.o text.o prim.o dijkstra.o convexhull.o sort.o graph.o hashtable.o priorityQueue.o list.o pquadtree.o queue.o stack.o ec.o geo.o openInput.o parameters.o pm.o via.o blockBorder.o blockResidents.o calculateArea.o changeAddress.o covidCases.o covidIncidence.o deleteBlocks.o deleteFigures.o establishmentInformation.o highlightEstablishment.o innerPoint.o medicalTreatment.o overlap.o paint.o printInfo.o urbanDeletion.o personalInfo.o urbanDeletionInRange.o printTree.o saveLocation.o qry.o svg.o tools.o
 
 #paths:
 elements = ./elements
@@ -206,8 +206,9 @@ printTree.o: $(query)/printTree.c
 blockResidents.o: $(query)/blockResidents.c
 	$(CC) $(flags) -c $(query)/blockResidents.c
 
-storeLocation.o: $(query)/storeLocation.c
-	$(CC) $(flags) -c $(query)/storeLocation.c
+saveLocation.o: $(query)/saveLocation.c
+	$(CC) $(flags) -c $(query)/saveLocation.c
+
 
 
 svg.o: $(util)/svg.c 

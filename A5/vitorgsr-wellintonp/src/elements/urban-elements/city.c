@@ -414,6 +414,7 @@ void freeCity(City Ct){
     freeGraph(ct->roadSystem, freePoint, 1);
     freePQuadTree(ct->roadIntersections, freeIdedPoint);
     freeGraph(ct->bikePath, freePoint, 1);
+    free(ct->locations);
 
     freeList(ct->queryElements, freeQueryElement);
     free(ct);
