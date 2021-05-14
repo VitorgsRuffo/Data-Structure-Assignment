@@ -50,6 +50,7 @@
         "pquadtree.h": "c",
         "priorityqueue.h": "c",
         "hashtable.h": "c",
-        "dijkstra.h": "c"
+        "dijkstra.h": "c",
+        "storelocation.h": "c"
     }
 }
