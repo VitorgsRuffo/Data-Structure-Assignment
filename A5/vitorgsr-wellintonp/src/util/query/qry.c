@@ -90,7 +90,16 @@ void executeQry(File qry, City Ct, Parameters Param){
         
         else if(!strcmp(commandType, "dmprbt"))
             executeTreeStatePrinting(command, Ct, Param);
-      
+
+        else if(!strcmp(commandType, "@m?"))
+            saveLocationByCpf(command, Ct);
+
+        else if(!strcmp(commandType, "@e?"))
+            saveLocationByAddress(command, Ct);
+
+
+
+
         uniqueId++;
     }
     
