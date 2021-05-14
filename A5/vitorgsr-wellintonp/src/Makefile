@@ -210,6 +210,7 @@ saveLocation.o: $(query)/saveLocation.c
 	$(CC) $(flags) -c $(query)/saveLocation.c
 
 
+
 svg.o: $(util)/svg.c 
 	$(CC) $(flags) -c $(util)/svg.c
 
