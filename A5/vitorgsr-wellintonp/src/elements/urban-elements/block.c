@@ -2,6 +2,13 @@
 #include "block.h"
 #include "house.h"
 
+typedef struct {
+    int northFace;
+    int southFace;
+    int eastFace;
+    int westFace;
+}CovidCases;
+
 typedef struct block{
     char* cep;  
     char* x;
@@ -16,6 +23,7 @@ typedef struct block{
     double demographicDensity;
     char* shadowColor;
     List housesInBlock;
+    CovidCases covidCases;
 }block;
 
 Block createBlock(char* cep, char* x, char* y, char* w, char* h, char* sw, char* cfill, char* cstrk){
@@ -45,6 +53,10 @@ Block createBlock(char* cep, char* x, char* y, char* w, char* h, char* sw, char*
     blk->demographicDensity = 0.0;
     blk->shadowColor = NULL;
     blk->housesInBlock = createList();
+    blk->covidCases.northFace = 0;
+    blk->covidCases.southFace = 0;
+    blk->covidCases.eastFace = 0;
+    blk->covidCases.westFace = 0;
 
     return blk;
 }
@@ -224,6 +236,47 @@ List getListOfHousesInBlock(Block Blk){
     block *blk = (block*) Blk;
     return blk->housesInBlock;
 }
+
+int getBlockCovidCases(Block Blk, char face){
+    if(Blk == NULL) return -1;
+    block *blk = (block*) Blk;
+
+    switch(face){
+        case 'n':
+            return blk->covidCases.northFace;
+            break;
+        case 's':
+            return blk->covidCases.southFace;
+            break;
+        case 'e':
+            return blk->covidCases.eastFace;
+            break;
+        case 'w':
+            return blk->covidCases.westFace;
+    }
+
+    return -1;
+}
+
+void incrementBlockCovidCases(Block Blk, char face, int newCases){
+    if(Blk == NULL || newCases <= 0) return;
+    block *blk = (block*) Blk;
+
+    switch(face){
+        case 'n':
+            blk->covidCases.northFace += newCases;
+            break;
+        case 's':
+            blk->covidCases.southFace += newCases;
+            break;
+        case 'e':
+            blk->covidCases.eastFace += newCases;
+            break;
+        case 'w':
+            blk->covidCases.westFace += newCases;
+    }
+}
+
 
 char* blockToString(Block Blk){
     if(Blk == NULL)

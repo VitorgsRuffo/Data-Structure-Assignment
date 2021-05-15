@@ -5,10 +5,10 @@
 
 /* To do list:
 
-    - queries dos registradores.
-
-    - demais queries.
-    - atualizar soc.
+    - bf
+    - p?
+    - sp?, pb?
+    - ccv, soc
     
 */
 

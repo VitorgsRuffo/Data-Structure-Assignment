@@ -51,6 +51,7 @@
         "priorityqueue.h": "c",
         "hashtable.h": "c",
         "dijkstra.h": "c",
-        "storelocation.h": "c"
+        "storelocation.h": "c",
+        "limits": "c"
     }
 }

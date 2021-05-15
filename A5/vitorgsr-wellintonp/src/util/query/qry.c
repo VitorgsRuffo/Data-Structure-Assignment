@@ -102,6 +102,9 @@ void executeQry(File qry, City Ct, Parameters Param){
 
         else if(!strcmp(commandType, "@e?"))
             saveLocationByAddress(command, Ct);
+        
+        else if(!strcmp(commandType, "bf"))
+            executeStreetIsolation(command, Ct, txt);
 
         uniqueId++;
     }

@@ -12,9 +12,14 @@ void executeCovidCasesReport(int id, char* command, City Ct){
     
     sscanf(&command[3], "%d %s %c %d", &casesNumber, cep, &face, &number);
     
-    
     CovidAddress covidAddress = createCovidAddress(id, cep, face, number, casesNumber, Ct);
 
     DataStructure covidAddresses = getCovidAddresses(Ct);
     insertPQuadTree(covidAddresses, getCovidAddressCoordinates(covidAddress), covidAddress);
+
+    Block blk = searchForBlockByCep(Ct, cep);
+    if(blk == NULL)
+        return;
+    
+    incrementBlockCovidCases(blk, face, casesNumber);
 }

@@ -130,6 +130,18 @@ double getBlockArea(Block Blk);
 List getListOfHousesInBlock(Block Blk);
 
 /*
+* Pré-condição: requer o endereço de uma instancia de quadra e um caracter representando a face da quadra a qual deseja o numero de casos de covid.
+* Pós-condição: retorna o numero de casos de covid da face desejada. Em caso de erro, retorna -1.
+*/
+int getBlockCovidCases(Block Blk, char face);
+
+/*
+* Pré-condição: requer o endereço de uma instancia de quadra, um caracter que representando a face da quadra e o numero de casos a ser incrementado. 
+* Pós-condição: Incrementa o numero de novos casos de covid na face informada no parametro.
+*/
+void incrementBlockCovidCases(Block Blk, char face, int newCases);
+
+/*
 * Pré-Condição: requer o endereco de uma instancia de quadra.
 * Pós-Condição: imprimir na saida padrão essa variavel.
 */
