@@ -21,6 +21,7 @@ typedef void* DijkstraVertex;
 * Em ambos os casos sempre sera retornado uma pilha extra (na posicao 0 do vetor) que contera todos os dijkstra vertices usados nos calculos. É recomendado que essa pilha não seja alterada, pois, ela sera necessaria no desalocamento do vetor de caminhos retornado pelo dijkstra.
 * O usuario tem acesso ao(s) caminho(s) a partir da pilha 1. Ele pode ter acesso ao(s) caminho(s) desempilhando os dijkstra vertices e acessando os seus ids e distancias da origem atraves das funcoes especificadas abaixo.
 * Apos o uso dos caminhos o usuario deve desalocar o vetor de caminhos utilizando a funcao "freeDijkstraPath".
+* Caso o tamanho de uma das pilhas seja 1 (o unico vertice ali dentro é o destino), não foi possivel achar um caminho até aquele vertice. Provavelmente nao existem arestas chegando naquele vertice. 
 */
 Stack* dijkstra(Graph Gr, char* sourceId, char* targetId);
 
