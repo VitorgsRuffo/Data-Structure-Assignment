@@ -324,6 +324,7 @@ void drawQueryElementsOnSvg(Svg svg, List elementsList){
 }
 
 void finishSvg(Svg svg){
+    if(svg == NULL) return;
     fprintf(svg, "</svg>");
     fclose(svg);
 }

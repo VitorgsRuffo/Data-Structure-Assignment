@@ -53,6 +53,7 @@
         "dijkstra.h": "c",
         "storelocation.h": "c",
         "limits": "c",
-        "isolatestreet.h": "c"
+        "isolatestreet.h": "c",
+        "svg.h": "c"
     }
 }

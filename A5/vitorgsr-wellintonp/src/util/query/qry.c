@@ -1,6 +1,7 @@
 #include "../../include/headers.h"
 #include "../../elements/urban-elements/city.h"
-#include "./qry.h"
+#include "qry.h"
+#include "../svg.h"
 
 File openTxt(Parameters Param);
 void closeTxt(File txt);
@@ -13,6 +14,8 @@ void executeQry(File qry, City Ct, Parameters Param){
     char* command = (char*) malloc((commandMaxLength + 1) * sizeof(char));     
     int commandLength;
     char commandType[10];
+
+    Svg minimumPaths = NULL;
 
     File txt = openTxt(Param);
     if(txt == NULL){
@@ -106,9 +109,16 @@ void executeQry(File qry, City Ct, Parameters Param){
         else if(!strcmp(commandType, "bf"))
             executeStreetIsolation(command, Ct, txt);
 
+        else if(!strcmp(commandType, "p?"))
+            findBestCarPath(&minimumPaths, command, Ct, Param, txt);
+
+        //findBestSecureCarPath
+        //findBestBikePath
+        
         uniqueId++;
     }
     
+    finishSvg(minimumPaths);
     closeTxt(txt);
     freeExecuteQryResources(command);
 }

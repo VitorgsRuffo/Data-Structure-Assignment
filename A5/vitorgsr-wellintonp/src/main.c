@@ -94,13 +94,3 @@ int main(int argc, char* argv[]){
     freeCity(city);
     return 0;
 }
-
-/*EXTRAS:
-
-    - Revisar os queries em busca de refatoracao. 
-    - Desalocar memoria em caso de erros (e.g, chamar o metodo de um tad passando null).
-    - pquadtree:
-        //1 - fix getObjectIfItsInsideShape. (we should not traverse the whole tree!!).
-        
-        //2 - is our current remove method maintaining the tree balanced? .
-*/
