@@ -52,6 +52,7 @@
         "hashtable.h": "c",
         "dijkstra.h": "c",
         "storelocation.h": "c",
-        "limits": "c"
+        "limits": "c",
+        "isolatestreet.h": "c"
     }
 }

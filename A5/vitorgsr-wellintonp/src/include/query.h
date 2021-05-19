@@ -22,5 +22,6 @@
 #include "../util/query/printTree.h"
 #include "../util/query/blockResidents.h"
 #include "../util/query/saveLocation.h"
+#include "../util/query/isolateStreet.h"
 
 #endif 
