@@ -110,7 +110,7 @@ void executeQry(File qry, City Ct, Parameters Param){
             executeStreetIsolation(command, Ct, txt);
 
         else if(!strcmp(commandType, "p?"))
-            findBestCarPath(&minimumPaths, command, Ct, Param, txt);
+            findBestCarPath(uniqueId, &minimumPaths, command, Ct, Param, txt);
 
         //findBestSecureCarPath
         //findBestBikePath

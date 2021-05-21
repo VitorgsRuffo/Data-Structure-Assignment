@@ -5,7 +5,7 @@
 
 /* To do list:
 
-    - p?
+    - fix p? errors
     - sp?, pb?
     - ccv, soc
     

@@ -23,5 +23,6 @@
 #include "../util/query/blockResidents.h"
 #include "../util/query/saveLocation.h"
 #include "../util/query/isolateStreet.h"
+#include "../util/query/paths.h"
 
 #endif 

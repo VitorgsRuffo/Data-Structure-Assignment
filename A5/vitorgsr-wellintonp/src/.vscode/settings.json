@@ -54,6 +54,9 @@
         "storelocation.h": "c",
         "limits": "c",
         "isolatestreet.h": "c",
-        "svg.h": "c"
+        "svg.h": "c",
+        "string_view": "c",
+        "paths.h": "c",
+        "list.h": "c"
     }
 }
