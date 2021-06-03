@@ -1,6 +1,7 @@
 #ifndef SVG_H
 #define SVG_H
 
+#include "../elements/urban-elements/city.h"
 
 /*
 *apontador para um arquivo.

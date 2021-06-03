@@ -1,10 +1,12 @@
 #include "../../include/headers.h"
+#include "../input/parameters.h"
 #include "../svg.h"
 #include "paths.h"
 #include "../data-structure/list.h"
 #include "../algorithm/sort.h"
 #include "../algorithm/dijkstra.h"
 #include "../../elements/urban-elements/street.h"
+
 
 typedef struct {
     char id[50];
@@ -23,16 +25,15 @@ void findBestCarPath(int pathId, Svg* minimumPaths, char* command, City Ct, Para
     sscanf(&command[3], "%s %s %s %s %s", sufix, r1, r2, cmc, cmr);
 
     //preparando svg para receber os resultados visuais:
-    if(strcmp(sufix, "-") == 0)
+    if(strcmp(sufix, "-") == 0){
         if(*minimumPaths == NULL)
             return;
-    else{
+    }else{
         finishSvg(*minimumPaths);
         *minimumPaths = createSvg(Param, Ct, "qry", sufix);
     }
 
     Graph roadSystem = getRoadSystem(Ct);
-    Graph bikePath = getBikePath(Ct);
     
     //
     Point* locations = getLocations(Ct);
@@ -144,9 +145,12 @@ int comparePossibleVertices(Info PVertex1, Info PVertex2){
         return 1;    
 }
 
+void writePathDescriptionOnTxt(Graph roadSystem, Point destLocation, File txt, Info* pathArray, int pathLength, char weightType);
+
+
 void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg minimumPaths, File txt, Stack path, char* pathColor, char weightType){
   
-    DijkstraVertex dijkstraVertex = stackPop(&path);
+    stackPop(&path);
     char* vertexId;
     Point vertexLocation;
     double x, y;
@@ -178,9 +182,9 @@ void calculateStreetDirection(Graph roadSystem, char* currentVertexId, char* nex
 
 void writePathDescriptionOnTxt(Graph roadSystem, Point destLocation, File txt, Info* pathArray, int pathLength, char weightType){
     
-    char* currentVertexId, nextVertexId, thirdVertexId;
+    char* currentVertexId, *nextVertexId, *thirdVertexId;
     char direction[10];
-    char* streetName, nextStreetName;
+    char* streetName, *nextStreetName;
     double x = getPointX(destLocation); 
     double y = getPointY(destLocation);
     double totalPathCost;
