@@ -112,8 +112,8 @@ void executeQry(File qry, City Ct, Parameters Param){
         else if(!strcmp(commandType, "p?"))
             findBestCarPath(uniqueId, &minimumPaths, command, Ct, Param, txt);
 
-        //findBestSecureCarPath
-        //findBestBikePath
+        else if(!strcmp(commandType, "pb?"))
+            findBestBikePath(uniqueId, &minimumPaths, command, Ct, Param, txt);
         
         uniqueId++;
     }

@@ -10,4 +10,9 @@
 */
 void findBestCarPath(int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt);
 
+/*
+*
+*/
+void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt);
+
 #endif

@@ -5,9 +5,12 @@
 
 /* To do list:
 
-    - fix p? errors
-    - sp?, pb?
     - ccv, soc
+    
+    - sp?: Vitor
+    - pb?: Wellinton
+
+    Comentar: prim.h, queu.h, paths.h
     
 */
 
