@@ -5,10 +5,11 @@
 
 /* To do list:
 
-    - fix p? errors
-    - sp?, pb?
-    - ccv, soc
-    
+    - Sp  (v), Pb  (w)
+    - Ccv (?), Soc (?)
+    - Testing.
+    - Last part.
+    - Testing.
 */
 
 int main(int argc, char* argv[]){

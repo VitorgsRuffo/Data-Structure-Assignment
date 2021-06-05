@@ -8,6 +8,6 @@
 /*
 *
 */
-void findBestCarPath(int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt);
+void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt);
 
 #endif

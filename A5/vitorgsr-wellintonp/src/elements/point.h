@@ -38,6 +38,11 @@ double getPointY(Point P);
 */
 void setPointY(Point P, double y);
 
+/*
+    Pré condição: Requer uma instancia do tipo Point e um vetor de pontos que representa um poligono.
+    Pós condição: retorna 1 se o ponto esta dentro do poligono, se nao retorna 0.
+*/
+int isPointInsidePolygon(Point P, Point* polygon, int polygonPointsAmount);
 
 /*
     Pré condição: Requer duas instancias do tipo Point.

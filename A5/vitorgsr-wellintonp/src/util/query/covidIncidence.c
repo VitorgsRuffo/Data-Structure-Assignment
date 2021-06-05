@@ -289,7 +289,6 @@ char* determineIncidenceRegionColor(char incidenceRegionCategory){
 }
 
 void checkIfHealthCenterIsInsidePolygon(Info healthCenterInfo, ExtraInfo extraInfo);
-int checkPointIrregularPolygonOverlap(Point healthCenterCoordinates, Point* convexHullPoints, int convexHullPointsAmount);
 Point calculatePolygonCentroid(Point* convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea);
 char* buildHealthCenterSuggestionTag(Point polygonCentroid);
 
@@ -315,50 +314,11 @@ void checkIfHealthCenterIsInsidePolygon(Info healthCenterInfo, ExtraInfo extraIn
 
     Point healthCenterCoordinates = getHealthCenterCoordinates(healthCenterInfo);
     
-    if(checkPointIrregularPolygonOverlap(healthCenterCoordinates, variables->convexHullPoints, variables->convexHullPointsAmount))
+    if(isPointInsidePolygon(healthCenterCoordinates, variables->convexHullPoints, variables->convexHullPointsAmount))
         variables->thereIsHealthCenterInPolygon = 1;
 
 }
 
-#define MIN(x,y) (x < y ? x : y)
-#define MAX(x,y) (x > y ? x : y)
-
-//colocar no tad point
-int checkPointIrregularPolygonOverlap(Point healthCenterCoordinates, Point* convexHullPoints, int convexHullPointsAmount){
-    
-    int counter = 0;
-    int i;
-    double xinters;
-    Point p1, p2;
-    p1 = *convexHullPoints;
-
-    for (i=1; i<=convexHullPointsAmount; i++) {
-        p2 = *(convexHullPoints + (i % convexHullPointsAmount));
-
-        if (getPointY(healthCenterCoordinates) > MIN(getPointY(p1), getPointY(p2))) {
-            
-            if (getPointY(healthCenterCoordinates)  <= MAX(getPointY(p1), getPointY(p2))) {
-                
-                if (getPointX(healthCenterCoordinates) <= MAX(getPointX(p1), getPointX(p2))) {
-                    
-                    if (getPointY(p1) != getPointY(p2)) {
-                        
-                        xinters = (getPointY(healthCenterCoordinates) - getPointY(p1)) * 
-                                  (getPointX(p2)-getPointX(p1))/(getPointY(p2)-getPointY(p1)) + getPointX(p1);
-                        if (getPointX(p1) == getPointX(p2) || getPointX(healthCenterCoordinates) <= xinters)
-                            counter++;
-                    }
-                }
-            }
-        }
-        p1 = p2;
-    }
-
-    if (counter % 2 == 0)
-        return 0; // O ponto esta fora
-    else
-        return 1; // O ponto esta dentro.
-}
 
 //obs: colocar no tad point
 Point calculatePolygonCentroid(Point* convexHullPoints, int convexHullPointsAmount, double incidenceRegionArea){
