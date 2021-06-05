@@ -110,7 +110,11 @@ void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Par
     }
 
     Graph bikePath = getBikePath(Ct);
-    Graph minimalSpanningTree = prim(bikePath, r1);
+
+    if(bikePath == NULL){
+        fprintf(txt, "Nao ha uma arvore geradora minima\n");
+        return;
+    }
 
     // Obtendo os pontos salvos nos registradores do parametro
     Point* locations = getLocations(Ct);
@@ -138,16 +142,16 @@ void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Par
     }
 
     //obtendo o id do vertice origem do caminho:  
-    char* sourceId = getNearestVertexId(possibleOriginVerticesIds, minimalSpanningTree, origin);
+    char* sourceId = getNearestVertexId(possibleOriginVerticesIds, bikePath, origin);
     freeList(possibleOriginVerticesIds, free);
 
     //obtendo o id do vertice destino do caminho:  
-    char* targetId = getNearestVertexId(possibleDestVerticesIds, minimalSpanningTree, destination);
+    char* targetId = getNearestVertexId(possibleDestVerticesIds, bikePath, destination);
     freeList(possibleDestVerticesIds, free);
 
     //calculando o menor caminho
-    setGetEdgeWeightFunction(minimalSpanningTree, getStreetLength);
-    Stack* shorterPath = dijkstra(minimalSpanningTree, sourceId, targetId);
+    setGetEdgeWeightFunction(bikePath, getStreetLength);
+    Stack* shorterPath = dijkstra(bikePath, sourceId, targetId);
 
     free(sourceId); 
     free(targetId);
@@ -160,14 +164,9 @@ void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Par
 
     //desenhando os resultados no svg:
     drawOnSvg(*minimumPaths, Ct);
-    drawPath(pathId, minimalSpanningTree, origin, destination, *minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
+    drawPath(pathId, bikePath, origin, destination, *minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
 
     freeDijkstraPath(shorterPath, 2);
-    
-    /*
-        * Verificar se precisa freelar a arvore gerador mínima
-        * Conferir logica 
-    */
 }
 
 
