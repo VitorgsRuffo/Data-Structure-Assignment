@@ -5,8 +5,7 @@
 
 /* To do list:
 
-    - Sp  (v), Pb  (w)
-    - Ccv (?), Soc (?)
+    - Ccv (v), Soc (w)
     - Testing.
     - Last part.
     - Testing.

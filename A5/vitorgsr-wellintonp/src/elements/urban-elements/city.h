@@ -154,7 +154,7 @@ Graph getBikePath(City Ct);
 
 /*
 * Pré-Condição: requer a referencia para uma instancia de TAD cidade e uma instancia de uma ciclovia.
-* Pós-Condição: define a ciclovia passado como sendo o a ciclovia da cidade.
+* Pós-Condição: define a ciclovia passada como sendo a ciclovia da cidade.
 */
 void setBikePath(City Ct, Graph bikePath);
 
