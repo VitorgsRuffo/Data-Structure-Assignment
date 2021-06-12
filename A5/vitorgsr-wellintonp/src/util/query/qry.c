@@ -68,7 +68,7 @@ void executeQry(File qry, City Ct, Parameters Param){
             executeCovidCasesReport(uniqueId, command, Ct);
 
         else if(!strcmp(commandType, "soc"))
-            executeMedicalTreatmentSearching(command, Ct, txt);
+            executeMedicalTreatmentSearching(command, Ct, txt, uniqueId);
 
         else if(!strcmp(commandType, "ci"))
             executeCovidIncidenceReportInRegion(command, Ct, txt);
