@@ -5,8 +5,8 @@
 #include "../data-structure/list.h"
 #include "../algorithm/sort.h"
 #include "../algorithm/dijkstra.h"
+#include "../algorithm/prim.h"
 #include "../../elements/urban-elements/street.h"
-
 
 typedef struct {
     char id[50];
@@ -92,6 +92,81 @@ void findBestCarPath(int pathId, Svg* minimumPaths, char* command, City Ct, Para
 
     freeDijkstraPath(shorterPath, 2);
     freeDijkstraPath(fasterPath, 2);
+}
+
+
+void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt){
+
+    char sufix[20], r1[5], r2[5], cmc[20];
+    sscanf(&command[4], "%s %s %s %s", sufix, r1, r2, cmc);
+
+    //preparando svg para receber os resultados visuais:
+    if(strcmp(sufix, "-") == 0){
+        if(*minimumPaths == NULL)
+            return;
+    }else{
+        finishSvg(*minimumPaths);
+        *minimumPaths = createSvg(Param, Ct, "qry", sufix);
+    }
+
+    Graph bikePath = getBikePath(Ct);
+
+    if(bikePath == NULL){
+        fprintf(txt, "Nao ha uma arvore geradora minima\n");
+        return;
+    }
+
+    // Obtendo os pontos salvos nos registradores do parametro
+    Point* locations = getLocations(Ct);
+    
+    int index1 = atoi(&r1[1]);
+    int index2 = atoi(&r2[1]);
+    
+    Point origin = locations[index1];
+    Point destination = locations[index2];
+
+    PQuadTree roadIntersections = getRoadIntersections(Ct);
+    double radius = 50;
+
+    List possibleOriginVerticesIds = getInRangeVerticesIds(roadIntersections, origin, radius);
+    if(length(possibleOriginVerticesIds) == 0){
+        freeList(possibleOriginVerticesIds, NULL);
+        return;
+    }
+
+    List possibleDestVerticesIds = getInRangeVerticesIds(roadIntersections, destination, radius);
+    if(length(possibleDestVerticesIds) == 0){
+        freeList(possibleOriginVerticesIds, free);
+        freeList(possibleDestVerticesIds, NULL);
+        return;
+    }
+
+    //obtendo o id do vertice origem do caminho:  
+    char* sourceId = getNearestVertexId(possibleOriginVerticesIds, bikePath, origin);
+    freeList(possibleOriginVerticesIds, free);
+
+    //obtendo o id do vertice destino do caminho:  
+    char* targetId = getNearestVertexId(possibleDestVerticesIds, bikePath, destination);
+    freeList(possibleDestVerticesIds, free);
+
+    //calculando o menor caminho
+    setGetEdgeWeightFunction(bikePath, getStreetLength);
+    Stack* shorterPath = dijkstra(bikePath, sourceId, targetId);
+
+    free(sourceId); 
+    free(targetId);
+
+    if(stackLength(shorterPath[1]) <= 1){
+        fprintf(txt, "Nao foi encontrado um caminho entre a origem () e o destino ().\n");
+        freeDijkstraPath(shorterPath, 2);
+        return;   
+    }
+
+    //desenhando os resultados no svg:
+    drawOnSvg(*minimumPaths, Ct);
+    drawPath(pathId, bikePath, origin, destination, *minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
+
+    freeDijkstraPath(shorterPath, 2);
 }
 
 
@@ -224,7 +299,6 @@ void determinePhysicalQuantity(char weightType, char* physicalQuantity, char* un
        strcpy(unit, "segundos");
     }  
 }
-
 
 void calculateStreetDirection(Graph roadSystem, char* currentVertexId, char* nextVertexId, char* direction){
         

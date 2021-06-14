@@ -57,6 +57,7 @@
         "svg.h": "c",
         "string_view": "c",
         "paths.h": "c",
-        "list.h": "c"
+        "list.h": "c",
+        "street.h": "c"
     }
 }
