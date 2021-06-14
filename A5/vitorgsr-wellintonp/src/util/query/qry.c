@@ -16,6 +16,7 @@ void executeQry(File qry, City Ct, Parameters Param){
     char commandType[10];
 
     Svg minimumPaths = NULL;
+    Svg minimumSecurePaths = NULL;
 
     File txt = openTxt(Param);
     if(txt == NULL){
@@ -110,8 +111,14 @@ void executeQry(File qry, City Ct, Parameters Param){
             executeStreetIsolation(command, Ct, txt);
 
         else if(!strcmp(commandType, "p?"))
-            findBestCarPath(uniqueId, &minimumPaths, command, Ct, Param, txt);
+            findBestCarPath(0, uniqueId, &minimumPaths, command, Ct, Param, txt);
 
+        else if(!strcmp(commandType, "sp?"))
+            findBestCarPath(1, uniqueId, &minimumSecurePaths, command, Ct, Param, txt);
+
+        else if(!strcmp(commandType, "ccv"))
+            createCityBikePath(command, Ct, Param);
+      
         else if(!strcmp(commandType, "pb?"))
             findBestBikePath(uniqueId, &minimumPaths, command, Ct, Param, txt);
         

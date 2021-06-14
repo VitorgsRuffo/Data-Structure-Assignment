@@ -47,6 +47,46 @@ void setPointY(Point P, double y){
     p->y = y;
 }
 
+#define MIN(x,y) (x < y ? x : y)
+#define MAX(x,y) (x > y ? x : y)
+
+int isPointInsidePolygon(Point P, Point* polygon, int polygonPointsAmount){
+    if(P == NULL || polygon == NULL || polygonPointsAmount <= 0) return 0;
+    point* p = (point*) P;
+
+    int counter = 0;
+    int i;
+    double xinters;
+    Point p1, p2;
+    p1 = *polygon;
+
+    for (i=1; i<=polygonPointsAmount; i++) {
+        p2 = *(polygon + (i % polygonPointsAmount));
+
+        if (p->y > MIN(getPointY(p1), getPointY(p2))) {
+            
+            if (p->y  <= MAX(getPointY(p1), getPointY(p2))) {
+                
+                if (p->x <= MAX(getPointX(p1), getPointX(p2))) {
+                    
+                    if (getPointY(p1) != getPointY(p2)) {
+                        
+                        xinters = (p->y - getPointY(p1)) * 
+                                  (getPointX(p2)-getPointX(p1))/(getPointY(p2)-getPointY(p1)) + getPointX(p1);
+                        if (getPointX(p1) == getPointX(p2) || p->x <= xinters)
+                            counter++;
+                    }
+                }
+            }
+        }
+        p1 = p2;
+    }
+
+    if (counter % 2 == 0)
+        return 0; // O ponto esta fora
+    else
+        return 1; // O ponto esta dentro.
+}
 
 double distanceBetweenPoints(Point P1, Point P2) { 
     if(P1 == NULL || P2 == NULL) return -1;

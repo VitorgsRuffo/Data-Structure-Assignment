@@ -5,8 +5,10 @@
 #include "../data-structure/list.h"
 #include "../algorithm/sort.h"
 #include "../algorithm/dijkstra.h"
+#include "../algorithm/convexhull.h"
 #include "../algorithm/prim.h"
 #include "../../elements/urban-elements/street.h"
+#include "../../elements/urban-elements/covidAddress.h"
 
 typedef struct {
     char id[50];
@@ -14,12 +16,14 @@ typedef struct {
     double distance;
 }PossibleVertex;
 
+Graph calculateSecureRoadSystem(City Ct, Point** covidRegionArray, int* covidRegionPointsAmount);
 List getInRangeVerticesIds(PQuadTree tree, Point location, double radius);
 char* getNearestVertexId(List possibleVerticesIds, Graph graph, Point location);
 int comparePossibleVertices(Info pVertex1, Info pVertex2);
 void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg minimumPaths, File txt, Stack path, char* pathColor, char weightType);
+void drawAvoidedCovidRegion(Svg minimumPaths, Point* covidRegion, int covidRegionPointsAmount);
 
-void findBestCarPath(int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt){
+void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt){
     
     char sufix[20], r1[5], r2[5], cmc[20], cmr[20];
     sscanf(&command[3], "%s %s %s %s %s", sufix, r1, r2, cmc, cmr);
@@ -33,8 +37,16 @@ void findBestCarPath(int pathId, Svg* minimumPaths, char* command, City Ct, Para
         *minimumPaths = createSvg(Param, Ct, "qry", sufix);
     }
 
-    Graph roadSystem = getRoadSystem(Ct);
-    
+    Graph roadSystem;
+    Point* covidRegion; int covidRegionPointsAmount;
+
+    if(isSecure)
+        roadSystem = calculateSecureRoadSystem(Ct, &covidRegion, &covidRegionPointsAmount);
+    else
+        roadSystem = getRoadSystem(Ct);
+
+    if(roadSystem == NULL) return;
+
     //
     Point* locations = getLocations(Ct);
     int index1 = atoi(&r1[1]);
@@ -90,8 +102,84 @@ void findBestCarPath(int pathId, Svg* minimumPaths, char* command, City Ct, Para
     drawPath(pathId, roadSystem, origin, destination, *minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
     drawPath(pathId, roadSystem, origin, destination, *minimumPaths, txt, fasterPath[1], cmr, 'f');  // 'f': faster path
 
+    if(isSecure)
+        drawAvoidedCovidRegion(*minimumPaths, covidRegion, covidRegionPointsAmount);
+    
+
     freeDijkstraPath(shorterPath, 2);
     freeDijkstraPath(fasterPath, 2);
+}
+
+Graph calculateSecureRoadSystem(City Ct, Point** covidRegionArray, int* covidRegionPointsAmount){
+    Graph roadSystem = getRoadSystem(Ct);
+
+    //Calculando a regiao de covid da cidade:
+    PQuadTree covidAddresses = getCovidAddresses(Ct);
+    
+    int covidAddressesAmount = PQuadTreeSize(covidAddresses);
+    CovidAddress* covidAdressesArray = PQuadTreeToArray(covidAddresses);
+
+    Point* covidPoints = (Point*) malloc(sizeof(Point) * covidAddressesAmount);
+    for(int i = 0; i<covidAddressesAmount; i++)
+        covidPoints[i] = getCovidAddressCoordinates(covidAdressesArray[i]);
+    
+    Stack covidRegion = convexHull(covidPoints, covidAddressesAmount);
+    if(covidRegion == NULL){
+        free(covidAdressesArray);
+        free(covidPoints);
+        return NULL;
+    } 
+
+    *covidRegionPointsAmount = stackLength(&covidRegion);
+    *covidRegionArray = stackToArray(&covidRegion); //vetor com os pontos que representam a regiao de covid da cidade (poligono)
+
+    free(covidAdressesArray);
+    free(covidPoints);
+
+    Graph secureRoadSystem = createGraph(getGraphOrder(roadSystem));
+
+    //Calculando os vertices do novo grafo que vai representar um sistema viario seguro, que evita a regiao de covid.
+    //Esses vertices não estao dentro da regiao de covid.
+    List verticesIds = getGraphVertices(roadSystem);
+    Node current = getFirst(verticesIds);
+    char* id; Point vertexCoordinates;
+
+    while(current != NULL){
+        id = (char*) get(verticesIds, current);
+        vertexCoordinates = getGraphVertexInfo(roadSystem, id);
+
+        if(!isPointInsidePolygon(vertexCoordinates, *covidRegionArray, *covidRegionPointsAmount))
+            insertVertex(secureRoadSystem, id, vertexCoordinates);
+        
+        current = getNext(verticesIds, current);
+    }
+
+    //Calculando as arestas desse novo grafo:
+    verticesIds = getGraphVertices(secureRoadSystem);
+    current = getFirst(verticesIds);
+    List adjacentVerticesIds; Node currentAdjacent; char* adjacentId; Info edgeInfo;
+
+    while(current != NULL){
+        //Para cada vertice do grafo seguro vamos tentar inserir as suas arestas do grafo original. 
+        //Caso o vertice destino da aresta nao esteja no grafo seguro, ela nao é inserida. (Pois parte da aresta esta na regiao de covid)
+
+        id = (char*) get(verticesIds, current);
+        adjacentVerticesIds = getAdjacentVertices(roadSystem, id);
+        currentAdjacent = getFirst(adjacentVerticesIds);
+
+        while(currentAdjacent != NULL){
+            
+            adjacentId = (char*) get(adjacentVerticesIds, currentAdjacent);
+            edgeInfo = getGraphEdgeInfo(roadSystem, id, adjacentId);
+            insertEdge(secureRoadSystem, id, adjacentId, edgeInfo, freeStreet);
+        
+            currentAdjacent = getNext(adjacentVerticesIds, currentAdjacent);
+        }
+
+        current = getNext(verticesIds, current);
+    }
+
+    return secureRoadSystem;
 }
 
 
@@ -322,4 +410,39 @@ void calculateStreetDirection(Graph roadSystem, char* currentVertexId, char* nex
         else
             strcpy(direction, "norte");
     }
+}
+/*
+void drawAvoidedCovidRegion(Svg minimumPaths, Point* covidRegion, int covidRegionPointsAmount){
+    char* covidRegionTag = (char*) malloc(10000 * sizeof(char));
+    if(covidRegionTag == NULL) return NULL;
+    
+    int stringLength = strlen("\t<polygon points=\"");
+    sprintf(covidRegionTag, "\t<polygon points=\"");
+
+    char* aux = covidRegionTag + stringLength;
+    char pointX[10], pointY[10];
+    
+    for(int i = 0; i<covidRegionPointsAmount; i++){
+        sprintf(pointX, "%.2f", getPointX(*(covidRegion + i)));
+        sprintf(pointY, "%.2f", getPointY(*(covidRegion + i)));
+        sprintf(aux, "%.2f,%.2f ", pointX, pointY);
+        aux += (strlen(pointX) + strlen(pointY) + 2);
+    }
+
+    char* covidRegionColor = "yellow"; 
+
+    sprintf(aux,"\" style=\"fill:%s;stroke:red;stroke-width:2;fill-opacity:0.6\" />\n", covidRegionColor);
+    
+    fprintf(minimumPaths, "%s", covidRegionTag);
+}*/
+
+
+void drawAvoidedCovidRegion(Svg minimumPaths, Point* covidRegion, int covidRegionPointsAmount){
+   
+    fprintf(minimumPaths, "\t<polygon points=\"");
+    
+    for(int i = 0; i<covidRegionPointsAmount; i++)
+        fprintf(minimumPaths, "%.2f,%.2f ", getPointX(*(covidRegion + i)), getPointY(*(covidRegion + i)));
+    
+    fprintf(minimumPaths,"\" style=\"fill:yellow;stroke:red;stroke-width:2;fill-opacity:0.6\" />\n");
 }
