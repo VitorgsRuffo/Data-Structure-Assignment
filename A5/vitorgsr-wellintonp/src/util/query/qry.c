@@ -69,7 +69,7 @@ void executeQry(File qry, City Ct, Parameters Param){
             executeCovidCasesReport(uniqueId, command, Ct);
 
         else if(!strcmp(commandType, "soc"))
-            executeMedicalTreatmentSearching(command, Ct, txt);
+            executeMedicalTreatmentSearching(command, Ct, txt, uniqueId);
 
         else if(!strcmp(commandType, "ci"))
             executeCovidIncidenceReportInRegion(command, Ct, txt);
@@ -118,9 +118,9 @@ void executeQry(File qry, City Ct, Parameters Param){
 
         else if(!strcmp(commandType, "ccv"))
             createCityBikePath(command, Ct, Param);
-
-
-        //findBestBikePath
+      
+        else if(!strcmp(commandType, "pb?"))
+            findBestBikePath(uniqueId, &minimumPaths, command, Ct, Param, txt);
         
         uniqueId++;
     }

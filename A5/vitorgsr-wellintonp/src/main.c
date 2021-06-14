@@ -5,10 +5,11 @@
 
 /* To do list:
 
-    - Ccv (v), Soc (w)
     - Testing.
     - Last part.
     - Testing.
+    
+    Comentar: prim.h, queu.h, paths.h
 */
 
 int main(int argc, char* argv[]){

@@ -3,6 +3,7 @@
 #include "../../include/dataStructure.h"
 #include "../input/openInput.h"
 #include "../algorithm/sort.h"
+#include "../algorithm/dijkstra.h"
 
 
 typedef struct {
@@ -10,6 +11,16 @@ typedef struct {
     double distance;
 }NearHealthCenter;
 
+typedef struct {
+    char id[50];
+    Point point;
+    double distance;
+}PossibleVertex;
+
+typedef struct {
+    Info* pathArray;
+    int size;
+}Path;
 
 char* buildBlueHouseTag(House H);
 void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter** nearHealthCenters, int healthCentersAmount);
@@ -17,50 +28,120 @@ int compareNearHealthCenters(Info Hc1, Info Hc2);
 char* buildLineSegmentTag(double x, double y, House H);
 void writeHealthCenterCoordinatesOnTxt(File txt, int i, double x, double y, double distance);
 
-void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
+List getVerticesIds(PQuadTree tree, Point location, double radius);
+char* getNearestVertex(List possibleVerticesIds, Graph graph, Point location);
 
+int isPathToHealthCenter(DijkstraVertex dv , List targetVerticesId);
+void drawHealthCentersPath(List pathsToHealthCenter, List queryElementsList, Point house, int pathId, Graph roadSystem);
+
+void executeMedicalTreatmentSearching(char* command, City Ct, File txt, int pathId){
+    
+    // Recebendo parametros do comando
     int K; char cep[30]; char face; int number;
-
     sscanf(&command[4], "%d %s %c %d", &K, cep, &face, &number);
 
+    // Criando o quadrado azul que representa o endereco
     House house = createHouse("none", cep, face, number, "none", Ct); 
-
     char* blueHouseTag = buildBlueHouseTag(house);
     List queryElementsList = getQueryElements(Ct);
     insert(queryElementsList, blueHouseTag);
 
+    // Pegando a arvore de postos e transformando-a em array
     DataStructure healthCenters = getHealthCenters(Ct);
     HealthCenter* healthCentersArray = PQuadTreeToArray(healthCenters);
 
-
+    // Pegando o tamanho da arvore
     int healthCentersAmount = PQuadTreeSize(healthCenters);
 
+    // Alocando ponteiro para vetor de NearHealthCenter (struct interna)
     NearHealthCenter** nearHealthCenters = (NearHealthCenter**) malloc(healthCentersAmount * sizeof(NearHealthCenter*));
-
+    
+    // Alocando conteudo de cada posicao do vetor
     for(int i = 0; i<healthCentersAmount; i++){
         *(nearHealthCenters + i) = (NearHealthCenter*) malloc(sizeof(NearHealthCenter));
         (**(nearHealthCenters + i)).healthCenter = healthCentersArray[i];
     }
 
+    // Freelando Array temporario
     free(healthCentersArray);
     
+    // Calculando a distancia da casa criada até cada um dos postos
     calculateDistanceFromHouseToHealthCenters(house, nearHealthCenters, healthCentersAmount);
     
+    // Ordenando os postos de acordo com a distancia da casa
     shellsort((Info*) nearHealthCenters, healthCentersAmount, compareNearHealthCenters);
 
     int healthCenterX, healthCenterY;
     char* lineSegmentTag;
     
-    if(K > healthCentersAmount) K = healthCentersAmount;
+    if(K > healthCentersAmount) 
+        K = healthCentersAmount;
     
     for(int i = 0; i < K; i++){
-
         healthCenterX = atof(getHealthCenterX((**(nearHealthCenters + i)).healthCenter));
         healthCenterY = atof(getHealthCenterY((**(nearHealthCenters + i)).healthCenter));
         lineSegmentTag = buildLineSegmentTag(healthCenterX, healthCenterY, house);
         insert(queryElementsList, lineSegmentTag);
         writeHealthCenterCoordinatesOnTxt(txt, i, healthCenterX, healthCenterY, (**(nearHealthCenters + i)).distance);
     }
+    
+    // Pegando o grafo e a arvore que representa o sistema viario da cidade
+    Graph roadSystem = getRoadSystem(Ct);
+    PQuadTree roadIntersections = getRoadIntersections(Ct);
+    
+    // Associando a casa a um vertice a um vertice mais proximo
+    double radius = 50;
+
+    List possibleOriginVerticesIds = getVerticesIds(roadIntersections, house, radius);
+    if(length(possibleOriginVerticesIds) == 0){
+        freeList(possibleOriginVerticesIds, NULL);
+        return;
+    }
+
+    char* originId = getNearestVertex(possibleOriginVerticesIds, roadSystem, house);
+    freeList(possibleOriginVerticesIds, free);
+
+    // Associando postos a vertices mais proximos
+    List targetVerticesId = createList();   // Lista que contem os id's dos vertices que sao associados a postos
+    
+    for(int i = 0; i<K; i++){
+        NearHealthCenter* currentNearHealthCenter = nearHealthCenters[i];
+        Point currentHcPoint = getHealthCenterCoordinates(currentNearHealthCenter->healthCenter);
+        List possibleHcVerticesIds = getVerticesIds(roadIntersections, currentHcPoint, radius);
+        
+        if(length(possibleHcVerticesIds) == 0){
+            freeList(possibleHcVerticesIds, NULL);
+            printf("Nenhum vertice perto do posto %s\n", getHealthCenterId(currentNearHealthCenter->healthCenter));
+            continue;
+        }
+
+        char* nearestHealthCenterId = getNearestVertex(possibleHcVerticesIds, roadSystem, currentHcPoint);        
+        insert(targetVerticesId, nearestHealthCenterId);
+    }
+
+    setGetEdgeWeightFunction(roadSystem, getStreetLength);
+    Stack* shorterPaths = dijkstra(roadSystem, originId, NULL);
+
+    int graphOrder = getGraphOrder(roadSystem);
+    List pathsToHealthCenter = createList();    // Criamos uma lista para salvar os arrays de dijkstraVertex que sao os caminhos ate os postos
+
+    // Andando nas pilhas e transformando-as em arrays
+    for(int i=1; i<graphOrder; i++){
+        int pathLength = stackLength(&shorterPaths[i]); // Pega o tamanho da pilha na posicao i
+        int indexLastItemOfArray = pathLength-1;        // Quando os elementos forem passados para um array, o ultimo elemento do array vai estar nessa posicao
+
+        Info* pathArray = stackToArray(&shorterPaths[i]);   // Passando os elementos da pilha e inserindo no array
+        
+        Path* path = (Path*) malloc(sizeof(Path));
+        path->pathArray = pathArray;
+        path->size = pathLength;
+
+        // Verificando se o ultimo id do array eh associado a algum posto  
+        if(isPathToHealthCenter(pathArray[indexLastItemOfArray], targetVerticesId))  // Se entrar no if significa que esse array tem o caminho para um posto, se nao só ignoramos pois nao sera util    
+            insert(pathsToHealthCenter, path);
+    }
+
+    drawHealthCentersPath(pathsToHealthCenter, queryElementsList, house, pathId, roadSystem);
 
     freeHouse(house);
 
@@ -69,6 +150,145 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt){
 
     free(nearHealthCenters);
 }
+
+
+void drawHealthCentersPath(List pathsToHealthCenter, List queryElementsList, Point house, int pathId, Graph roadSystem){
+
+    Node currentNode = getFirst(pathsToHealthCenter);
+
+    while(currentNode != NULL){
+
+        Path* path = get(pathsToHealthCenter, currentNode);
+        
+        Info* pathArray = path->pathArray;
+        int arraySize = path->size;
+
+        char* pathString = (char*) malloc(400 * sizeof(char));
+        sprintf(pathString, "<path id=\"path%d\" stroke=\"black\" stroke-width=\"2\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, getPointX(house), getPointY(house));
+        
+        char buffer[50]; 
+        
+        for(int i=0; i<arraySize; i++){
+            char* vertexId = getDijkstraVertexId(pathArray[i]);
+            Info vertexLocation = getGraphVertexInfo(roadSystem, vertexId);
+            double x = getPointX(vertexLocation);
+            double y = getPointY(vertexLocation);
+            sprintf(buffer, "L%.2lf %.2lf ", x, y);
+
+            strcat(pathString, buffer);
+        }
+
+        sprintf(pathString, "/>\n\t<circle cx=\"\" cy=\"\" r=\"5\" fill=\"green\">\n\t\t<animateMotion dur=\"6s\" repeatCount=\"indefinite\">\n\t\t\t<mpath href=\"#path%d\"/>\n\t\t</animateMotion>\n\t</circle>\n", pathId);
+
+        insert(queryElementsList, pathString);
+        getNext(pathsToHealthCenter, currentNode);
+    }
+}
+
+
+Info* checkShortestDistance(List pathsToHealthCenter){
+
+    Node currentNode = getFirst(pathsToHealthCenter);
+    Info* shortestPathArray = NULL;
+    double shortestDistance = 0; double currentDistance = 0;
+    Node nodeToRemove;
+
+    // Percorrendo a lista de path e dentro dela estao os pathArrays e o size de cada um deles
+    while(currentNode != NULL){
+
+        Path* currentArray = (Path*) get(pathsToHealthCenter, currentNode);
+
+        int indexOfLastDijkstraVertex = currentArray->size-1;
+        DijkstraVertex* lastDijkstraVertex = currentArray->pathArray[indexOfLastDijkstraVertex];
+    
+        currentDistance = getDijkstraVertexDistanceFromOrigin(lastDijkstraVertex);
+
+        if(shortestDistance < currentDistance){
+            shortestDistance = currentDistance;
+            nodeToRemove = currentNode;
+            shortestPathArray = currentArray->pathArray;
+        }
+
+        getNext(pathsToHealthCenter, currentNode);
+    }
+
+    removeNode(pathsToHealthCenter, nodeToRemove, NULL);
+    return shortestPathArray;
+}
+
+
+int isPathToHealthCenter(DijkstraVertex Dv , List targetVerticesId){
+    
+    Node currentNode = getFirst(targetVerticesId);
+    char* healthCenterVertexId = getDijkstraVertexId(Dv);
+
+    while(currentNode != NULL){
+        char* currentId = get(targetVerticesId, currentNode);
+        
+        if(!strcpy(healthCenterVertexId, currentId))
+            return 1;
+
+        getNext(targetVerticesId, currentNode);
+    }
+
+    return 0;
+}
+
+
+List getVerticesIds(PQuadTree tree, Point location, double radius){
+    double circX = getPointX(location);
+    double circY = getPointY(location);
+    return getInfoKeysLocatedInsideCircle(tree, circX, circY, radius);
+}
+
+
+int compareVertices(Info PVertex1, Info PVertex2);
+
+char* getNearestVertex(List possibleVerticesIds, Graph graph, Point location){
+    PossibleVertex* possibleVertex;
+    int possibleVerticesAmount = length(possibleVerticesIds);
+    Info* possibleVertices = (Info*) malloc(possibleVerticesAmount * sizeof(Info));
+
+    int i = 0;
+    Node current = getFirst(possibleVerticesIds);
+    while(current != NULL){
+        possibleVertex = (PossibleVertex*) malloc(sizeof(PossibleVertex));
+        strcpy(possibleVertex->id, get(possibleVerticesIds, current));
+        possibleVertex->point = getGraphVertexInfo(graph, possibleVertex->id);
+        possibleVertex->distance = distanceBetweenPoints(possibleVertex->point, location);
+        
+        possibleVertices[i] = possibleVertex;
+
+        current = getNext(possibleVerticesIds, current);
+        i++;
+    }
+
+    quicksort(possibleVertices, 0, possibleVerticesAmount-1, compareVertices);
+    
+    char* nearestVertexId = (char*) malloc(50*sizeof(char));
+    strcpy(nearestVertexId, ((PossibleVertex*) possibleVertices[0])->id);
+
+    for(int i = 0; i<possibleVerticesAmount; i++)
+        free(possibleVertices[i]);
+    free(possibleVertices);
+
+    return nearestVertexId;
+}
+
+
+int compareVertices(Info PVertex1, Info PVertex2){
+
+    PossibleVertex* pVertex1 = (PossibleVertex*) PVertex1;
+    PossibleVertex* pVertex2 = (PossibleVertex*) PVertex2;    
+
+    if(pVertex1->distance < pVertex2->distance)
+        return -1;
+    else if(pVertex1->distance == pVertex2->distance)
+        return 0;
+    else
+        return 1;    
+}
+
 
 char* buildBlueHouseTag(House H){
 
@@ -85,6 +305,7 @@ char* buildBlueHouseTag(House H){
     return houseTag;
 }
 
+
 void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter** nearHealthCenters, int healthCentersAmount){
     
     double healthCenterX, healthCenterY;
@@ -99,6 +320,7 @@ void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter** nearH
         (**(nearHealthCenters + i)).distance = sqrt(pow((healthCenterX - houseCenterOfMassX), 2) + pow((healthCenterY - houseCenterOfMassY), 2));
     }
 }
+
 
 int compareNearHealthCenters(Info Hc1, Info Hc2){
 
@@ -115,6 +337,7 @@ int compareNearHealthCenters(Info Hc1, Info Hc2){
         return 0;
 }
 
+
 char* buildLineSegmentTag(double x, double y, House H){
 
     char* lineSegmentTag = (char*) malloc(200 * sizeof(char));
@@ -126,6 +349,7 @@ char* buildLineSegmentTag(double x, double y, House H){
     sprintf(lineSegmentTag, "<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"%lf\" stroke=\"black\" stroke-width=\"0.8\" stroke-dasharray=\"5,5\"/>", houseCenterOfMassX, houseCenterOfMassY, x, y);
     return lineSegmentTag;
 }
+
 
 void writeHealthCenterCoordinatesOnTxt(File txt, int i, double x, double y, double distance){
     i++;
