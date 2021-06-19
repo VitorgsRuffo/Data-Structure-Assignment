@@ -40,6 +40,12 @@ Point getCovidAddressCoordinates(CovidAddress Ca);
 
 /*  
 * Pré-Condição: requer uma instancia de um endereço que possui casos de covid.
+* Pós-Condição: retorna uma string com as informacoes da instancia do endereco com casos de covid.
+*/
+char* covidAdressToString(CovidAddress Ca);
+
+/*  
+* Pré-Condição: requer uma instancia de um endereço que possui casos de covid.
 * Pós-Condição: desaloca a memoria usada pelo tad.
 */
 void freeCovidAddress(CovidAddress Ca);

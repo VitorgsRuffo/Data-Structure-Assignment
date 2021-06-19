@@ -18,9 +18,9 @@ HealthCenter createHealthCenter(int id, char* x, char* y){
     sprintf(idString, "%d", id);
     
     healthC->id = (char*) malloc(6 * sizeof(char));
-    healthC->x = (char*) malloc((strlen(x) + 1) * sizeof(char));
-    healthC->y = (char*) malloc((strlen(y) + 1) * sizeof(char));
-    healthC->radius = (char*) malloc(4 * sizeof(char));
+    healthC->x = (char*) malloc((strlen(x) + 10) * sizeof(char));
+    healthC->y = (char*) malloc((strlen(y) + 10) * sizeof(char));
+    healthC->radius = (char*) malloc(20 * sizeof(char));
 
     strcpy(healthC->id, idString);
     strcpy(healthC->x, x);

@@ -47,5 +47,6 @@ char* idedPointToString(IdedPoint IP){
 void freeIdedPoint(IdedPoint IP){
     if(IP == NULL) return;
     idedPoint* iP = (idedPoint*) IP;
+    freePoint(iP->coordinates);
     free(iP);
 }

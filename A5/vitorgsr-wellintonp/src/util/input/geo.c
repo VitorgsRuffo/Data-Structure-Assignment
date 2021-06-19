@@ -33,7 +33,7 @@ void freeReadGeoResources(char* command, char** commandParts, ElementsCustomizat
 void readGeo(File geo, City Ct){
     char* command = (char*) malloc((commandMaxLength + 1) * sizeof(char));     
     int commandLength;
-    char commandType[10];
+    char commandType[20];
     char** commandParts;
     commandParts = createCommandParts(maxNumberOfGeoCommandParts);
     

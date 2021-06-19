@@ -49,6 +49,19 @@ Point getCovidAddressCoordinates(CovidAddress Ca){
     return getAddressCoordinates(ca->address);
 }
 
+char* covidAdressToString(CovidAddress Ca){
+    if(Ca == NULL) return NULL;
+
+    covidaddress* ca = (covidaddress*) Ca;
+
+    char* string = (char*) malloc(200 * sizeof(char));
+
+    sprintf(string, "Id: %s\nAddress: %s\nCasesNumber: %d\n\n", ca->id, addressToString(ca->address), ca->casesNumber);
+
+    return string;
+
+}
+
 void freeCovidAddress(CovidAddress Ca){
     if(Ca == NULL) return;
     

@@ -1,4 +1,5 @@
 #include "../../include/headers.h"
+#include <unistd.h>
 #include "../input/parameters.h"
 #include "../svg.h"
 #include "paths.h"
@@ -20,7 +21,7 @@ Graph calculateSecureRoadSystem(City Ct, Point** covidRegionArray, int* covidReg
 List getInRangeVerticesIds(PQuadTree tree, Point location, double radius);
 char* getNearestVertexId(List possibleVerticesIds, Graph graph, Point location);
 int comparePossibleVertices(Info pVertex1, Info pVertex2);
-void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg minimumPaths, File txt, Stack path, char* pathColor, char weightType);
+void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg* minimumPaths, File txt, Stack path, char* pathColor, char weightType);
 void drawAvoidedCovidRegion(Svg minimumPaths, Point* covidRegion, int covidRegionPointsAmount);
 
 void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt){
@@ -47,7 +48,6 @@ void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command,
 
     if(roadSystem == NULL) return;
 
-    //
     Point* locations = getLocations(Ct);
     int index1 = atoi(&r1[1]);
     int index2 = atoi(&r2[1]);
@@ -55,17 +55,22 @@ void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command,
     Point origin = locations[index1];
     Point destination = locations[index2];
 
-    //
     PQuadTree roadIntersections = getRoadIntersections(Ct);
     double radius = 50;
 
     List possibleOriginVerticesIds = getInRangeVerticesIds(roadIntersections, origin, radius);
-    if(length(possibleOriginVerticesIds) == 0){
+    if(possibleOriginVerticesIds == NULL)
+        return;
+
+    if(length(possibleOriginVerticesIds) == 0 ){
         freeList(possibleOriginVerticesIds, NULL);
         return;
     }
 
     List possibleDestVerticesIds = getInRangeVerticesIds(roadIntersections, destination, radius);
+    if(possibleDestVerticesIds == NULL)
+        return;
+    
     if(length(possibleDestVerticesIds) == 0){
         freeList(possibleOriginVerticesIds, free);
         freeList(possibleDestVerticesIds, NULL);
@@ -80,31 +85,55 @@ void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command,
     char* targetId = getNearestVertexId(possibleDestVerticesIds, roadSystem, destination);
     freeList(possibleDestVerticesIds, free);
 
-
+        
     //calculando o menor caminho e o caminho mais rapido:
     setGetEdgeWeightFunction(roadSystem, getStreetLength); 
     Stack* shorterPath = dijkstra(roadSystem, sourceId, targetId);
+
+    if(shorterPath == NULL){
+        fprintf(txt, "Nao foi possivel calcular a rota, pois o ponto de destino esta indisponivel\n");
+        
+        drawOnSvg(*minimumPaths, Ct);
+
+        if(isSecure)
+            drawAvoidedCovidRegion(*minimumPaths, covidRegion, covidRegionPointsAmount);
+
+        finishSvg(*minimumPaths);
+
+        return;
+    }
     
     setGetEdgeWeightFunction(roadSystem, getStreetDisplacementTime);
     Stack* fasterPath = dijkstra(roadSystem, sourceId, targetId);
+
+    if(fasterPath == NULL)
+        return;
     
     free(sourceId); free(targetId);
-    
-    if(stackLength(shorterPath[1]) <= 1){
-        fprintf(txt, "Nao foi encontrado um caminho entre a origem () e o destino ().\n");
+
+    if(stackLength(&shorterPath[1]) <= 1){
+        fprintf(txt, "Nao foi encontrado um caminho entre a origem e o destino.\n");
+        
+        drawOnSvg(*minimumPaths, Ct);
+
+        if(isSecure)
+            drawAvoidedCovidRegion(*minimumPaths, covidRegion, covidRegionPointsAmount);
+
+        finishSvg(*minimumPaths);
+        
         freeDijkstraPath(shorterPath, 2);
         freeDijkstraPath(fasterPath, 2);
         return;   
     }
-    
-    //desenhando os resultados no svg:
-    drawOnSvg(*minimumPaths, Ct);
-    drawPath(pathId, roadSystem, origin, destination, *minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
-    drawPath(pathId, roadSystem, origin, destination, *minimumPaths, txt, fasterPath[1], cmr, 'f');  // 'f': faster path
 
+    drawOnSvg(*minimumPaths, Ct);
+    
     if(isSecure)
         drawAvoidedCovidRegion(*minimumPaths, covidRegion, covidRegionPointsAmount);
     
+    //desenhando os resultados no svg:
+    drawPath(pathId, roadSystem, origin, destination, minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
+    drawPath(pathId, roadSystem, origin, destination, minimumPaths, txt, fasterPath[1], cmr, 'f');  // 'f': faster path
 
     freeDijkstraPath(shorterPath, 2);
     freeDijkstraPath(fasterPath, 2);
@@ -156,6 +185,7 @@ Graph calculateSecureRoadSystem(City Ct, Point** covidRegionArray, int* covidReg
 
     //Calculando as arestas desse novo grafo:
     verticesIds = getGraphVertices(secureRoadSystem);
+
     current = getFirst(verticesIds);
     List adjacentVerticesIds; Node currentAdjacent; char* adjacentId; Info edgeInfo;
 
@@ -217,12 +247,18 @@ void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Par
     double radius = 50;
 
     List possibleOriginVerticesIds = getInRangeVerticesIds(roadIntersections, origin, radius);
+    if(possibleOriginVerticesIds == NULL)
+        return;
+
     if(length(possibleOriginVerticesIds) == 0){
         freeList(possibleOriginVerticesIds, NULL);
         return;
     }
 
     List possibleDestVerticesIds = getInRangeVerticesIds(roadIntersections, destination, radius);
+    if(possibleOriginVerticesIds == NULL)
+        return;
+    
     if(length(possibleDestVerticesIds) == 0){
         freeList(possibleOriginVerticesIds, free);
         freeList(possibleDestVerticesIds, NULL);
@@ -241,6 +277,12 @@ void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Par
     setGetEdgeWeightFunction(bikePath, getStreetLength);
     Stack* shorterPath = dijkstra(bikePath, sourceId, targetId);
 
+    if(shorterPath == NULL){
+        fprintf(txt, "Nao foi possivel calcular a rota para o caminho de bicicleta\n");
+        //remove(); remover o svg vazio criado
+        return;
+    }
+
     free(sourceId); 
     free(targetId);
 
@@ -252,13 +294,17 @@ void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Par
 
     //desenhando os resultados no svg:
     drawOnSvg(*minimumPaths, Ct);
-    drawPath(pathId, bikePath, origin, destination, *minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
+    drawPath(pathId, bikePath, origin, destination, minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
 
     freeDijkstraPath(shorterPath, 2);
 }
 
 
 List getInRangeVerticesIds(PQuadTree tree, Point location, double radius){
+
+    if(location == NULL)
+        return NULL;
+
     double circX = getPointX(location);
     double circY = getPointY(location);
     return getInfoKeysLocatedInsideCircle(tree, circX, circY, radius);
@@ -311,29 +357,31 @@ int comparePossibleVertices(Info PVertex1, Info PVertex2){
 void writePathDescriptionOnTxt(Graph roadSystem, Point destLocation, File txt, Info* pathArray, int pathLength, char weightType);
 
 
-void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg minimumPaths, File txt, Stack path, char* pathColor, char weightType){
+void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg* minimumPaths, File txt, Stack path, char* pathColor, char weightType){
   
     stackPop(&path);
+    
     char* vertexId;
     Point vertexLocation;
     double x, y;
-    
     int pathLength = stackLength(&path);
     Info* pathArray = stackToArray(&path);
-    
-    fprintf(minimumPaths, "<path id=\"path%d\" stroke=\"%s\" stroke-width=\"1\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, pathColor, getPointX(origin), getPointY(origin));
+
+    fprintf(*minimumPaths, "<path id=\"path%d\" stroke=\"%s\" stroke-width=\"2\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, pathColor, getPointX(origin), getPointY(origin));
 
     for(int i = 1; i<pathLength-1; i++){
         vertexId = getDijkstraVertexId(pathArray[i]);
         vertexLocation = getGraphVertexInfo(roadSystem, vertexId);
+        
         x = getPointX(vertexLocation);
         y = getPointY(vertexLocation);
         
-        fprintf(minimumPaths, "L%.2lf %.2lf ", x, y);
+        fprintf(*minimumPaths, "L%.2lf %.2lf ", x, y);
     }
-
+    
     //objeto animado que percorre o caminho:
-    fprintf(minimumPaths, "/>\n\t<circle cx=\"\" cy=\"\" r=\"5\" fill=\"red\">\n\t\t<animateMotion dur=\"6s\" repeatCount=\"indefinite\">\n\t\t\t<mpath href=\"#path%d\"/>\n\t\t</animateMotion>\n\t</circle>\n", pathId);
+    
+    fprintf(*minimumPaths, "\"/>\n\t<circle cx=\"\" cy=\"\" r=\"5\" fill=\"red\">\n\t\t<animateMotion dur=\"6s\" repeatCount=\"indefinite\">\n\t\t\t<mpath href=\"#path%d\"/>\n\t\t</animateMotion>\n\t</circle>\n", pathId);
     
     writePathDescriptionOnTxt(roadSystem, destination, txt, pathArray, pathLength, weightType);
     free(pathArray);
@@ -411,6 +459,7 @@ void calculateStreetDirection(Graph roadSystem, char* currentVertexId, char* nex
             strcpy(direction, "norte");
     }
 }
+
 /*
 void drawAvoidedCovidRegion(Svg minimumPaths, Point* covidRegion, int covidRegionPointsAmount){
     char* covidRegionTag = (char*) malloc(10000 * sizeof(char));

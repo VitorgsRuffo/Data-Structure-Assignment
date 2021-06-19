@@ -15,17 +15,23 @@ void createCityBikePath(char* command, City Ct, Parameters Param){
     Graph roadSystem = getRoadSystem(Ct);
     if(roadSystem == NULL) return;
 
+    printGraph(roadSystem, NULL, NULL);
+
     Graph undirectedRoadSystem = createUndirectedRoadSystem(roadSystem);
     if(undirectedRoadSystem == NULL) return;
 
+    printf("\n====================================================================================\n\n");
+    
+    printGraph(undirectedRoadSystem, NULL, NULL);
+
     Graph cityBikePath = prim(undirectedRoadSystem, NULL);
     if(cityBikePath == NULL) return;
-
+    
     setBikePath(Ct, cityBikePath);
 
     Svg bikePathSvg = createSvg(Param, Ct, "qry", sufix);
     drawCityBikePathOnSvg(bikePathSvg, cityBikePath);
-
+    
     freeGraph(undirectedRoadSystem, NULL, 0);
 }
 
@@ -34,6 +40,7 @@ Graph createUndirectedRoadSystem(Graph roadSystem){
 
     //adicionando os vertices no novo grafo:
     List verticesIds = getGraphVertices(roadSystem);
+    
     Node current = getFirst(verticesIds);
     char* currentVertexId; 
     Point currentVertexCoordinates;

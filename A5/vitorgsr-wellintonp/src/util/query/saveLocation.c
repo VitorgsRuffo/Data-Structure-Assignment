@@ -10,9 +10,9 @@ void saveLocationByCpf(char* command, City Ct){
     char reg[5], cpf[15];
     sscanf(&command[4], "%s %s", reg, cpf);
 
-    HashTable housesTable = getHousesTable(Ct);
+    HashTable* housesTable = getHousesTable(Ct);
 
-    House house = getHashTableInfo(housesTable, cpf);
+    Info house = getHashTableInfo(*housesTable, cpf);
     if(house == NULL) 
         return;
     
@@ -38,11 +38,11 @@ void saveLocationByCpf(char* command, City Ct){
 
 void saveLocationByAddress(char* command, City Ct){
 
-    char reg[5], cep[15], face, num[10];
-    sscanf(&command[4], "%s %s %c %s", reg, cep, &face, num);
+    char reg[5], cep[15], face[10], num[10];
+    sscanf(&command[4], "%s %s %s %s", reg, cep, face, num);
 
     int number = atoi(num);
-    Address address = createAddress(cep, face, number, "-", Ct);
+    Address address = createAddress(cep, face[5], number, "-", Ct);
 
     Point addressCoordinates = getAddressCoordinates(address);
 
@@ -87,6 +87,11 @@ void saveUrbanEquipmentLocation(char* command, City Ct){
         x = atof(getBaseRadioX(info)); y = atof(getBaseRadioY(info));
 
     }else return;
+
+    Point* locations = getLocations(Ct);
+    int index = atoi(&reg[1]);
+
+    *(locations + index) = createPoint(x, y);
 
     char* locationTag = buildLocationTag(reg, x, y);
     List queryElements = getQueryElements(Ct);

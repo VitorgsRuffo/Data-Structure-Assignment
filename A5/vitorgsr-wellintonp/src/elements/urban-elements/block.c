@@ -264,15 +264,19 @@ void incrementBlockCovidCases(Block Blk, char face, int newCases){
 
     switch(face){
         case 'n':
+        case 'N':
             blk->covidCases.northFace += newCases;
             break;
         case 's':
+        case 'S':
             blk->covidCases.southFace += newCases;
             break;
         case 'e':
+        case 'E':
             blk->covidCases.eastFace += newCases;
             break;
         case 'w':
+        case 'W':
             blk->covidCases.westFace += newCases;
     }
 }

@@ -7,6 +7,7 @@
 
 void readVertex(char* command, char** commandParts, City Ct);
 void readEdge(char* command, char** commandParts, City Ct);
+void removeIsolatedVertices(Graph roadSystem, PQuadTree roadIntersections);
 
 Graph createCityRoadSystem(City Ct, int readVerticesAmount);
 
@@ -49,6 +50,9 @@ void readVia(File via, City Ct){
         }
     }
 
+    //removendo vertices que nao possuem arestas:
+    removeIsolatedVertices(getRoadSystem(Ct), getRoadIntersections(Ct));
+
     freeReadViaResources(command, commandParts);
 }
 
@@ -90,6 +94,44 @@ void insertIntersectionOnRoadSystem(Info info, ExtraInfo ei){
     IdedPoint iP = info;
     
     insertVertex(newCityRoadSystem, getIdedPointId(iP), getIdedPointCoordinates(iP));
+}
+
+void printChar(void* ch){
+    printf("%s\n", (char*) ch);
+}
+
+void removeIsolatedVertices(Graph roadSystem, PQuadTree roadIntersections){
+
+    List vertices = getGraphVertices(roadSystem);
+
+    Node current = getFirst(vertices);
+    
+    while(current != NULL){
+        
+        char* currentId = (char*) get(vertices, current);
+        
+        List edges = getGraphVertexEdges(roadSystem, getGraphVertex(roadSystem, currentId));
+
+        if(length(edges) <= 0){
+            
+            printf("\n\ncurrentID: %s, edges: %p\n\n", currentId, edges);
+            Point currentPoint = getGraphVertexInfo(roadSystem, currentId);
+            
+            freeIdedPoint(removePQuadTreeNode(roadIntersections, 
+                                              getPQuadTreeNode(roadIntersections, 
+                                                               getPointX(currentPoint),
+                                                               getPointY(currentPoint)) ));
+
+            removeVertex(roadSystem, 1, currentId, NULL);
+        }
+
+        current = getNext(vertices, current);
+    }
+
+    vertices = getGraphVertices(roadSystem);
+    printList(vertices, printChar);
+
+    free(vertices);
 }
 
 void freeReadViaResources(char* command, char** commandParts){

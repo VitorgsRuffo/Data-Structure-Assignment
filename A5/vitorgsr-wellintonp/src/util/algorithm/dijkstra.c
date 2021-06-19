@@ -47,13 +47,13 @@ Stack* dijkstra(Graph Gr, char* sourceId, char* targetId){
     List vertices = getGraphVertices(Gr);
     Node currentNode = getFirst(vertices);
     Info currentInfo;
-
+    
     while(currentNode != NULL){
 
         currentInfo = get(vertices, currentNode);
 
         dijkstraVertex* vertex = (dijkstraVertex*) malloc(sizeof(dijkstraVertex)); 
-        
+
         strcpy(vertex->id, (char*) currentInfo);
 
         if(strcmp((char*) currentInfo, sourceId) == 0)
@@ -181,7 +181,7 @@ void freeDijkstraPath(Stack* path, int size){
     
     freeStack(path, free); //desaloca a primeira pilha e todos os dijkstra vertices.
 
-    for(int i = 1; i<size; i++)
+    for(int i = 1; i<size-1; i++)
         freeStack(path + i, NULL); //desaloca as demais pilhas.
     
     free(path);
@@ -204,7 +204,10 @@ Stack* preparingDijkstraResult(char* targetId, HashTable dijkstraInfoTable, int 
         *(path + 1) = createStack(); // a segunda stack contera apenas os dijstra vertex que compoem o caminho entre a origem e o destino.
 
         currentDijkstraVertex = (dijkstraVertex*) getHashTableInfo(dijkstraInfoTable, targetId);
-
+        
+        if(currentDijkstraVertex == NULL)
+            return NULL;
+        
         while(strcmp(currentDijkstraVertex->previousId, "-") != 0){
             
             stackPush(path + 1, currentDijkstraVertex);

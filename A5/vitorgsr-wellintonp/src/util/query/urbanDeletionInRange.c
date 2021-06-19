@@ -5,6 +5,7 @@
 typedef char* (*toString)(Info);
 typedef char* (*getUrbanElementX)(Info);
 typedef char* (*getUrbanElementY)(Info);
+typedef char* (*getUrbanElementRadius)(Info);
 typedef Point (*getUrbanElementCoordinates)(Info);
 typedef void (*freeInfo)(Info);
 
@@ -18,6 +19,7 @@ typedef struct {
     toString urbanElementToString;
     getUrbanElementX getX;
     getUrbanElementY getY;
+    getUrbanElementRadius getRadius;
     getUrbanElementCoordinates getCoordinates;
     freeInfo freeUrbanElement;
     List pointsToRemove;
@@ -36,34 +38,34 @@ char* buildUrbanElementsDeletionCircleTag(char* x, char* y, char* radius);
 
 void executeUrbanElementsDeletion(char* command, City Ct, File txt){
 
-    char x[15], y[15], r[15];
+    char x[20], y[20], r[20];
     sscanf(&command[6], "%s %s %s", x, y, r);
 
     Variables variables;
     variables.Ct = Ct;
 
     variables.circle = 
-        createCircle("..", r, x, y, "..", "..", "..");
+        createCircle("................", r, x, y, "................", "................", "................");
 
     variables.txt = txt;
 
     variables.pointsToRemove = createList();
 
     variables.building = 
-        createRectangle("..", "000000.000000","000000.000000","000000.000000","000000.000000","..", "..", "..");
+        createRectangle("........", "000000.000000000","000000.000000000","000000.000000000","000000.000000000","........", "........", "........");
     
     variables.urbanElement = 
-        createCircle("..", "000000.000000", "000000.000000", "000000.000000", "..", "..", "..");
+        createCircle("........", "000000.000000000", "000000.000000000", "000000.000000000", "........", "........", "........");
 
 
     variables.elements = getBlocks(Ct);
-
     deleteBlocksInCircle(variables);
     
     variables.elements = getHydrants(Ct);
     variables.urbanElementToString = hydrantToString;
     variables.getX = getHydrantX;
     variables.getY = getHydrantY;
+    variables.getRadius = getHydrantRadius;
     variables.freeUrbanElement = freeHydrant;
     variables.getCoordinates = getHydrantCoordinates;
     deleteUrbanElementsInCircle(variables);
@@ -72,6 +74,7 @@ void executeUrbanElementsDeletion(char* command, City Ct, File txt){
     variables.urbanElementToString = baseRadioToString;
     variables.getX = getBaseRadioX;
     variables.getY = getBaseRadioY;
+    variables.getRadius = getBaseRadioRadius;
     variables.freeUrbanElement = freeBaseRadio;
     variables.getCoordinates = getBaseRadioCoordinates;
     deleteUrbanElementsInCircle(variables);
@@ -80,14 +83,16 @@ void executeUrbanElementsDeletion(char* command, City Ct, File txt){
     variables.urbanElementToString = semaphoreToString;
     variables.getX = getSemaphoreX;
     variables.getY = getSemaphoreY;
+    variables.getRadius = getSemaphoreRadius;
     variables.freeUrbanElement = freeSemaphore;
     variables.getCoordinates = getSemaphoreCoordinates;
     deleteUrbanElementsInCircle(variables);
-
+    
     variables.elements = getHealthCenters(Ct);
     variables.urbanElementToString = healthCenterToString;
     variables.getX = getHealthCenterX;
     variables.getY = getHealthCenterY;
+    variables.getRadius = getHealthCenterRadius;
     variables.freeUrbanElement = freeHealthCenter;
     variables.getCoordinates = getHealthCenterCoordinates;
     deleteUrbanElementsInCircle(variables);
@@ -186,10 +191,17 @@ void deleteUrbanElementsInCircle(Variables variables){
 void deleteUrbanElementIfItsInsideCircle(Info urbanElement, ExtraInfo extraInfo){
 
     Variables* variables = (Variables*) extraInfo;
+    
+    Point urbanElementCoordinates = (*(variables->getCoordinates))(urbanElement);
 
-    setCircleX(variables->urbanElement, getBlockX(urbanElement));
-    setCircleY(variables->urbanElement, getBlockY(urbanElement));
-    setCircleRadius(variables->urbanElement, getBlockWidth(urbanElement));
+    char ueX[20], ueY[20];
+    sprintf(ueX, "%lf", getPointX(urbanElementCoordinates));
+    sprintf(ueY, "%lf", getPointY(urbanElementCoordinates));
+
+    setCircleX(variables->urbanElement, ueX);
+    setCircleY(variables->urbanElement, ueY);   
+
+    setCircleRadius(variables->urbanElement, (*(variables->getRadius))(urbanElement));
 
     if(isCircleInsideCircle(variables->urbanElement, variables->circle)){
         char* urbanElementString = (*variables->urbanElementToString)(urbanElement);
@@ -198,7 +210,6 @@ void deleteUrbanElementIfItsInsideCircle(Info urbanElement, ExtraInfo extraInfo)
 
         insert(variables->pointsToRemove, (*variables->getCoordinates)(urbanElement));
     }
-
 }
 
 

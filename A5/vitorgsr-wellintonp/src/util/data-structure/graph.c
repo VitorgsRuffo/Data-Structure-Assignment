@@ -101,7 +101,7 @@ List getGraphVertices(Graph Gr){
     List vertices = createList();
     if(vertices == NULL) return NULL;
 
-    for(int i = 0; i<gr->order; i++)
+    for(int i = 0; i<gr->insertedVerticesAmount; i++)
         insert(vertices, gr->vertices[i].id);
 
     return vertices;
@@ -418,6 +418,17 @@ void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo){
             currentNode = getNext(edges, currentNode);
         }
     }
+}
+
+void printVerticesId(Graph Gr){
+
+    //List verticesIds = getGraphVertices(Gr);
+
+    /*void printVertex(void* current){
+        printf("%s\n", (char*) current);
+    }*/
+
+    //printList(verticesIds, printVertex);
 }
 
 

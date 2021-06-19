@@ -20,7 +20,14 @@ typedef struct {
 typedef struct {
     Info* pathArray;
     int size;
+    int id;
 }Path;
+
+typedef struct {
+    int id;
+    double distance;
+}BestPath;
+
 
 char* buildBlueHouseTag(House H);
 void calculateDistanceFromHouseToHealthCenters(House H, NearHealthCenter** nearHealthCenters, int healthCentersAmount);
@@ -32,7 +39,7 @@ List getVerticesIds(PQuadTree tree, Point location, double radius);
 char* getNearestVertex(List possibleVerticesIds, Graph graph, Point location);
 
 int isPathToHealthCenter(DijkstraVertex dv , List targetVerticesId);
-void drawHealthCentersPath(List pathsToHealthCenter, List queryElementsList, Point house, int pathId, Graph roadSystem);
+void drawHealthCentersPath(List pathsToHealthCenter, int bestPathId, List queryElementsList, Point house, int pathId, Graph roadSystem);
 
 void executeMedicalTreatmentSearching(char* command, City Ct, File txt, int pathId){
     
@@ -77,28 +84,45 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt, int path
     if(K > healthCentersAmount) 
         K = healthCentersAmount;
     
-    for(int i = 0; i < K; i++){
-        healthCenterX = atof(getHealthCenterX((**(nearHealthCenters + i)).healthCenter));
-        healthCenterY = atof(getHealthCenterY((**(nearHealthCenters + i)).healthCenter));
-        lineSegmentTag = buildLineSegmentTag(healthCenterX, healthCenterY, house);
-        insert(queryElementsList, lineSegmentTag);
-        writeHealthCenterCoordinatesOnTxt(txt, i, healthCenterX, healthCenterY, (**(nearHealthCenters + i)).distance);
+
+    Graph roadSystem = getRoadSystem(Ct);
+
+    // Se o grafo for vazia, vamos executar o soc do jeito tradicional (Tracando apenas uma linha ate os postos)
+    if(roadSystem == NULL){
+        for(int i = 0; i < K; i++){
+            healthCenterX = atof(getHealthCenterX((**(nearHealthCenters + i)).healthCenter));
+            healthCenterY = atof(getHealthCenterY((**(nearHealthCenters + i)).healthCenter));
+            lineSegmentTag = buildLineSegmentTag(healthCenterX, healthCenterY, house);
+            insert(queryElementsList, lineSegmentTag);
+            writeHealthCenterCoordinatesOnTxt(txt, i, healthCenterX, healthCenterY, (**(nearHealthCenters + i)).distance);
+        }
+
+        freeHouse(house);
+
+        for(int i = 0; i<healthCentersAmount; i++)
+        free(*(nearHealthCenters + i));
+
+        free(nearHealthCenters);
+
+        return;
     }
     
+    
     // Pegando o grafo e a arvore que representa o sistema viario da cidade
-    Graph roadSystem = getRoadSystem(Ct);
     PQuadTree roadIntersections = getRoadIntersections(Ct);
     
+    Point houseCoordinates = getHouseCoordinates(house);
+
     // Associando a casa a um vertice a um vertice mais proximo
     double radius = 50;
 
-    List possibleOriginVerticesIds = getVerticesIds(roadIntersections, house, radius);
+    List possibleOriginVerticesIds = getVerticesIds(roadIntersections, houseCoordinates, radius);
     if(length(possibleOriginVerticesIds) == 0){
         freeList(possibleOriginVerticesIds, NULL);
         return;
     }
 
-    char* originId = getNearestVertex(possibleOriginVerticesIds, roadSystem, house);
+    char* originId = getNearestVertex(possibleOriginVerticesIds, roadSystem, houseCoordinates);
     freeList(possibleOriginVerticesIds, free);
 
     // Associando postos a vertices mais proximos
@@ -124,25 +148,45 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt, int path
 
     int graphOrder = getGraphOrder(roadSystem);
     List pathsToHealthCenter = createList();    // Criamos uma lista para salvar os arrays de dijkstraVertex que sao os caminhos ate os postos
+    
+    BestPath bestPath;
+    bestPath.distance = 9999999;
 
     // Andando nas pilhas e transformando-as em arrays
     for(int i=1; i<graphOrder; i++){
+        
+        Path* path = (Path*) malloc(sizeof(Path));
         int pathLength = stackLength(&shorterPaths[i]); // Pega o tamanho da pilha na posicao i
         int indexLastItemOfArray = pathLength-1;        // Quando os elementos forem passados para um array, o ultimo elemento do array vai estar nessa posicao
 
         Info* pathArray = stackToArray(&shorterPaths[i]);   // Passando os elementos da pilha e inserindo no array
         
-        Path* path = (Path*) malloc(sizeof(Path));
         path->pathArray = pathArray;
         path->size = pathLength;
+        path->id = i;
 
         // Verificando se o ultimo id do array eh associado a algum posto  
-        if(isPathToHealthCenter(pathArray[indexLastItemOfArray], targetVerticesId))  // Se entrar no if significa que esse array tem o caminho para um posto, se nao só ignoramos pois nao sera util    
+        if(isPathToHealthCenter(pathArray[indexLastItemOfArray], targetVerticesId)){  // Se entrar no if significa que esse array tem o caminho para um posto, se nao só ignoramos pois nao sera util    
             insert(pathsToHealthCenter, path);
+            int pathDistance = getDijkstraVertexDistanceFromOrigin(pathArray[indexLastItemOfArray]);
+            if(pathDistance < bestPath.distance)
+                bestPath.id = path->id;
+            
+        }else{
+            free(pathArray);
+            free(path);
+        }
+        
     }
 
-    drawHealthCentersPath(pathsToHealthCenter, queryElementsList, house, pathId, roadSystem);
+    drawHealthCentersPath(pathsToHealthCenter, bestPath.id, queryElementsList, houseCoordinates, pathId, roadSystem);
 
+    for(int i = 0; i < K; i++){
+        healthCenterX = atof(getHealthCenterX((**(nearHealthCenters + i)).healthCenter));
+        healthCenterY = atof(getHealthCenterY((**(nearHealthCenters + i)).healthCenter));
+        writeHealthCenterCoordinatesOnTxt(txt, i, healthCenterX, healthCenterY, (**(nearHealthCenters + i)).distance);
+    }
+    
     freeHouse(house);
 
     for(int i = 0; i<healthCentersAmount; i++)
@@ -152,36 +196,46 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt, int path
 }
 
 
-void drawHealthCentersPath(List pathsToHealthCenter, List queryElementsList, Point house, int pathId, Graph roadSystem){
+void drawHealthCentersPath(List pathsToHealthCenter, int bestPathId, List queryElementsList, Point houseCoordinates, int pathId, Graph roadSystem){
 
     Node currentNode = getFirst(pathsToHealthCenter);
-
+    
     while(currentNode != NULL){
 
-        Path* path = get(pathsToHealthCenter, currentNode);
+        Path* path = (Path*) get(pathsToHealthCenter, currentNode);
         
         Info* pathArray = path->pathArray;
         int arraySize = path->size;
+        char buffer[400]; 
+        char* pathString = (char*) malloc(10000 * sizeof(char));
 
-        char* pathString = (char*) malloc(400 * sizeof(char));
-        sprintf(pathString, "<path id=\"path%d\" stroke=\"black\" stroke-width=\"2\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, getPointX(house), getPointY(house));
+        char* offset = pathString;
         
-        char buffer[50]; 
+        if(path->id == bestPathId)
+            sprintf(buffer, "<path id=\"path%d\" stroke=\"blue\" stroke-width=\"6\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, getPointX(houseCoordinates), getPointY(houseCoordinates));
+        else
+            sprintf(buffer, "<path id=\"path%d\" stroke=\"black\" stroke-width=\"6\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, getPointX(houseCoordinates), getPointY(houseCoordinates));
+        
+        sprintf(offset, "%s", buffer);
+        offset += strlen(buffer);
         
         for(int i=0; i<arraySize; i++){
             char* vertexId = getDijkstraVertexId(pathArray[i]);
             Info vertexLocation = getGraphVertexInfo(roadSystem, vertexId);
             double x = getPointX(vertexLocation);
             double y = getPointY(vertexLocation);
-            sprintf(buffer, "L%.2lf %.2lf ", x, y);
 
-            strcat(pathString, buffer);
+            sprintf(buffer, "L%.2lf %.2lf ", x, y);
+            sprintf(offset, "%s", buffer);
+            offset += strlen(buffer);
+
         }
 
-        sprintf(pathString, "/>\n\t<circle cx=\"\" cy=\"\" r=\"5\" fill=\"green\">\n\t\t<animateMotion dur=\"6s\" repeatCount=\"indefinite\">\n\t\t\t<mpath href=\"#path%d\"/>\n\t\t</animateMotion>\n\t</circle>\n", pathId);
-
+        sprintf(buffer, "\"/>\n\t<circle cx=\"\" cy=\"\" r=\"5\" fill=\"green\">\n\t\t<animateMotion dur=\"6s\" repeatCount=\"indefinite\">\n\t\t\t<mpath href=\"#path%d\"/>\n\t\t</animateMotion>\n\t</circle>\n", pathId);
+        sprintf(offset, "%s", buffer);
         insert(queryElementsList, pathString);
-        getNext(pathsToHealthCenter, currentNode);
+        
+        currentNode = getNext(pathsToHealthCenter, currentNode);
     }
 }
 
@@ -209,7 +263,7 @@ Info* checkShortestDistance(List pathsToHealthCenter){
             shortestPathArray = currentArray->pathArray;
         }
 
-        getNext(pathsToHealthCenter, currentNode);
+        currentNode = getNext(pathsToHealthCenter, currentNode);
     }
 
     removeNode(pathsToHealthCenter, nodeToRemove, NULL);
@@ -223,12 +277,12 @@ int isPathToHealthCenter(DijkstraVertex Dv , List targetVerticesId){
     char* healthCenterVertexId = getDijkstraVertexId(Dv);
 
     while(currentNode != NULL){
-        char* currentId = get(targetVerticesId, currentNode);
+        char* currentId = (char*) get(targetVerticesId, currentNode);
         
-        if(!strcpy(healthCenterVertexId, currentId))
+        if(!strcmp(healthCenterVertexId, currentId))
             return 1;
 
-        getNext(targetVerticesId, currentNode);
+        currentNode = getNext(targetVerticesId, currentNode);
     }
 
     return 0;

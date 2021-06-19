@@ -88,6 +88,8 @@ void buildEstablishmentSvgTag(char* EstablishmentTag, Establishment est);
 
 void buildHouseSvgTag(char* houseTag, House H);
 
+void buildVerticeSvgTag(char* vertexTag, IdedPoint ip);
+
 void drawQueryElementsOnSvg(Svg svg, List elementsList);
 
 
@@ -128,8 +130,12 @@ int drawOnSvg(Svg svg, City Ct){
     DataStructure houses = getHousesTree(Ct);
     drawElementsOnSvg(svg, houses, &buildHouseSvgTag);
     
+    DataStructure roadIntersections = getRoadIntersections(Ct);
+    drawElementsOnSvg(svg, roadIntersections, &buildVerticeSvgTag);
+
     List queryElementsList = getQueryElements(Ct);
     drawQueryElementsOnSvg(svg, queryElementsList);
+
 
     return 1;
 }
@@ -164,7 +170,6 @@ void drawElementOnSvg(Info info, ExtraInfo extraInfo){
     (*exInfo->buildTag)(exInfo->elementTag, info);
     fprintf(exInfo->svg, "%s", exInfo->elementTag);
 }
-
 
 void buildCircleSvgTag(char* circleTag, Circle Circ){
     char* radius = getCircleRadius(Circ);
@@ -305,6 +310,17 @@ void buildHouseSvgTag(char* houseTag, House H){
     double centerOfMassY = getPointY(centerOfMass);
 
     sprintf(houseTag, "\t<rect width=\"%lf\" height=\"%lf\" x=\"%lf\" y=\"%lf\" stroke=\"gold\" stroke-width=\"1\" fill=\"olivedrab\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> CA </text>\n", w, h, x, y, centerOfMassX, centerOfMassY);
+}
+
+void buildVerticeSvgTag(char* vertexTag, IdedPoint ip){
+
+    //char* id = getIdedPointId(ip);
+    Point coordinates = getIdedPointCoordinates(ip);
+    double x = getPointX(coordinates);
+    double y = getPointY(coordinates);
+
+    //sprintf(vertexTag, "\t<circle cx=\"%lf\" cy=\"%lf\" r=\"10\" stroke=\"yellow\" stroke-width=\"2\" fill=\"black\" />\n\t<text x=\"%lf\" y=\"%lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> %s </text>\n", x, y, x, y, id);
+    sprintf(vertexTag, "\t<circle cx=\"%lf\" cy=\"%lf\" r=\"10\" stroke=\"yellow\" stroke-width=\"2\" fill=\"black\" />\n", x, y);
 }
 
 void drawQueryElementsOnSvg(Svg svg, List elementsList){

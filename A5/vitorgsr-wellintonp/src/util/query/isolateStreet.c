@@ -44,6 +44,26 @@ void isolateBlockStreetIfItsHighlyInfected(Info block, ExtraInfo extraInfo){
     int southFaceCases = getBlockCovidCases(block, 's');
     int eastFaceCases = getBlockCovidCases(block, 'e');
     int westFaceCases = getBlockCovidCases(block, 'w');
+    
+    //Apagar aqui depois
+    /*
+    if(northFaceCases != 0){
+        printf("max: %d\n", variables->max);
+        printf("N: %d\n", northFaceCases);
+    }
+    if(southFaceCases != 0){
+        printf("max: %d\n", variables->max);
+        printf("S: %d\n", southFaceCases);
+    }
+    if(eastFaceCases != 0){
+        printf("max: %d\n", variables->max);
+        printf("E: %d\n", eastFaceCases);
+    }
+    if(westFaceCases != 0){
+        printf("max: %d\n", variables->max);
+        printf("W: %d\n\n", westFaceCases);
+    }
+    */
 
     double blockX = atof(getBlockX(block));
     double blockY = atof(getBlockY(block));
@@ -195,13 +215,13 @@ int removeBlockStreet(Variables* variables, Point left, Point middle, Point righ
 void drawIsolationOnSvg(List queryElements, Point start, Point end){
 
     double x1 = getPointX(start);
-    double y1 = getPointY(start) + 10;
+    double y1 = getPointY(start);
     double x2 = getPointX(end);
-    double y2 = getPointY(end) + 10;
+    double y2 = getPointY(end);
 
     char* isolationTag = (char*) malloc(300*sizeof(char));
     if(isolationTag == NULL) return;
-    sprintf(isolationTag, "\t<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"%lf\" style=\"stroke:rgb(255,0,0);stroke-width:1.5\" />\n", x1, y1, x2, y2);
+    sprintf(isolationTag, "\t<line x1=\"%lf\" y1=\"%lf\" x2=\"%lf\" y2=\"%lf\" style=\"stroke:rgb(255,0,0);stroke-width:7\" />\n", x1, y1, x2, y2);
     insert(queryElements, isolationTag);    
 }
 

@@ -97,7 +97,7 @@ char* addressToString(Address Add){
         return NULL;
     address *add = (address*) Add;
 
-    char* string = (char*) malloc(100 * sizeof(char));
+    char* string = (char*) malloc(200 * sizeof(char));
     sprintf(string, "endereco - cep: %s, face: %c, num: %d, compl: %s.",
                     add->cep, add->face, add->number, add->compl);
     return string;

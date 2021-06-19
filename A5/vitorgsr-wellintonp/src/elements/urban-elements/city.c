@@ -411,8 +411,8 @@ void freeCity(City Ct){
     freeHashTable(ct->housesTable, NULL);
     freePQuadTree(ct->housesTree, freeHouse);
 
-    freeGraph(ct->roadSystem, freePoint, 1);
     freePQuadTree(ct->roadIntersections, freeIdedPoint);
+    freeGraph(ct->roadSystem, NULL, 1);
     freeGraph(ct->bikePath, NULL, 0);
     free(ct->locations);
 

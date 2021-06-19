@@ -167,6 +167,10 @@ List getAdjacentVertices(Graph Gr, char* vertexId);
 */
 void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo);
 
+/*
+* Imprime os id's dos vertices do grafo
+*/
+void printVerticesId(Graph Gr);
 
 /*
 * Desaloca a memoria utilizada pelo grafo. A passagem de funcao de desalocar informacao de vertices e opcional.
