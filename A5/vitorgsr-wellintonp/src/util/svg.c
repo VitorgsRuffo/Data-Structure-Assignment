@@ -58,7 +58,7 @@ Svg openSvg(char* filePath){
 
     if(svg == NULL) return NULL;
 
-    fprintf(svg, "<svg>\n");
+    fprintf(svg, "<svg version=\"1.1\" baseProfile=\"full\" width=\"10000\" height=\"10000\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n");
     return svg;
 }
 

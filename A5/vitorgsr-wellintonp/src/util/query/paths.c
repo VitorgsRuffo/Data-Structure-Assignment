@@ -133,7 +133,7 @@ void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command,
     
     //desenhando os resultados no svg:
     drawPath(pathId, roadSystem, origin, destination, minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
-    drawPath(pathId, roadSystem, origin, destination, minimumPaths, txt, fasterPath[1], cmr, 'f');  // 'f': faster path
+    drawPath(pathId+1, roadSystem, origin, destination, minimumPaths, txt, fasterPath[1], cmr, 'f');  // 'f': faster path
 
     //finishSvg(*minimumPaths);
 
@@ -387,8 +387,11 @@ void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg
     }
     
     //objeto animado que percorre o caminho:
-    
-    fprintf(*minimumPaths, "\"/>\n\t<circle cx=\"\" cy=\"\" r=\"5\" fill=\"red\">\n\t\t<animateMotion dur=\"6s\" repeatCount=\"indefinite\">\n\t\t\t<mpath href=\"#path%d\"/>\n\t\t</animateMotion>\n\t</circle>\n", pathId);
+    if(weightType == 'f')
+        fprintf(*minimumPaths, "\"/>\n\t<circle transform=\"translate(7,7)\" cx=\"\" cy=\"\" r=\"5\" fill=\"red\">\n\t\t<animateMotion dur=\"9s\" repeatCount=\"indefinite\">\n\t\t\t<mpath href=\"#path%d\"/>\n\t\t</animateMotion>\n\t</circle>\n", pathId);
+    else
+        fprintf(*minimumPaths, "\"/>\n\t<circle cx=\"\" cy=\"\" r=\"5\" fill=\"black\">\n\t\t<animateMotion dur=\"9s\" repeatCount=\"indefinite\">\n\t\t\t<mpath href=\"#path%d\"/>\n\t\t</animateMotion>\n\t</circle>\n", pathId);
+        
     
     writePathDescriptionOnTxt(roadSystem, destination, txt, pathArray, pathLength, weightType);
     free(pathArray);
