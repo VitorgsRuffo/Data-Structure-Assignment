@@ -135,6 +135,8 @@ void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command,
     drawPath(pathId, roadSystem, origin, destination, minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
     drawPath(pathId, roadSystem, origin, destination, minimumPaths, txt, fasterPath[1], cmr, 'f');  // 'f': faster path
 
+    finishSvg(*minimumPaths);
+
     freeDijkstraPath(shorterPath, 2);
     freeDijkstraPath(fasterPath, 2);
 }
