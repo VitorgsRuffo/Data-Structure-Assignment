@@ -15,14 +15,11 @@ void createCityBikePath(char* command, City Ct, Parameters Param){
     Graph roadSystem = getRoadSystem(Ct);
     if(roadSystem == NULL) return;
 
-    printGraph(roadSystem, NULL, NULL);
 
     Graph undirectedRoadSystem = createUndirectedRoadSystem(roadSystem);
     if(undirectedRoadSystem == NULL) return;
-
-    printf("\n====================================================================================\n\n");
     
-    printGraph(undirectedRoadSystem, NULL, NULL);
+    setGetEdgeWeightFunction(undirectedRoadSystem, getStreetLength);
 
     Graph cityBikePath = prim(undirectedRoadSystem, NULL);
     if(cityBikePath == NULL) return;
@@ -31,7 +28,8 @@ void createCityBikePath(char* command, City Ct, Parameters Param){
 
     Svg bikePathSvg = createSvg(Param, Ct, "qry", sufix);
     drawCityBikePathOnSvg(bikePathSvg, cityBikePath);
-    
+    finishSvg(bikePathSvg);
+
     freeGraph(undirectedRoadSystem, NULL, 0);
 }
 
@@ -92,12 +90,14 @@ Graph createUndirectedRoadSystem(Graph roadSystem){
     return undirectedRoadSystem;
 }
 
-#define vertex_radius 20.0 
-#define vertex_tag_length 200
+#define vertex_radius 5.0 
+#define vertex_tag_length 500
+
 
 void drawCityBikePathOnSvg(Svg bikePathSvg, Graph cityBikePath){
 
     char* verticesTags = (char*) malloc((getGraphOrder(cityBikePath)*vertex_tag_length)*sizeof(char));
+    char buffer[vertex_tag_length];
     int offset = 0;
 
     List verticesIds = getGraphVertices(cityBikePath);
@@ -107,17 +107,21 @@ void drawCityBikePathOnSvg(Svg bikePathSvg, Graph cityBikePath){
 
     while(currentIdNode != NULL){
         char* currentId = (char*) get(verticesIds, currentIdNode);
+        
         currentCoordinates = getGraphVertexInfo(cityBikePath, currentId);
         double vertex1X = getPointX(currentCoordinates);
         double vertex1Y = getPointY(currentCoordinates);
 
         //criando a tag svg do vertice atual:
-        sprintf(&verticesTags[offset], "\t<circle cx=\"%.2lf\" cy=\"%.2lf\" r=\"%.2lf\" stroke=\"red\" stroke-width=\"1\" fill=\"black\" />\n\t<text x=\"%.lf\" y=\"%.lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> %s </text>\n", vertex1X, vertex1Y, vertex_radius, vertex1X, vertex1Y, currentId);
-        offset += vertex_tag_length;
+        //sprintf(buffer, "\t<circle cx=\"%.2lf\" cy=\"%.2lf\" r=\"%.2lf\" stroke=\"red\" stroke-width=\"1\" fill=\"black\" />\n\t<text x=\"%.lf\" y=\"%.lf\" fill=\"white\" text-anchor=\"middle\" dy=\".3em\"> %s </text>\n", vertex1X, vertex1Y, vertex_radius, vertex1X, vertex1Y, currentId);
+        sprintf(buffer, "\t<circle cx=\"%.2lf\" cy=\"%.2lf\" r=\"%.2lf\" stroke=\"red\" stroke-width=\"1\" fill=\"black\" />\n", vertex1X, vertex1Y, vertex_radius);
+        sprintf(verticesTags+offset, "%s", buffer);
+        offset += strlen(buffer);
 
         //criando as tags svg das arestas do vertice atual:
         List adjacentVerticesIds = getAdjacentVertices(cityBikePath, currentId);
-        Node currentAdjacentIdNode = getFirst(verticesIds);
+        
+        Node currentAdjacentIdNode = getFirst(adjacentVerticesIds);
 
         while(currentAdjacentIdNode != NULL){
 
@@ -135,6 +139,7 @@ void drawCityBikePathOnSvg(Svg bikePathSvg, Graph cityBikePath){
 
         currentIdNode = getNext(verticesIds, currentIdNode);
     } 
+    
 
     fprintf(bikePathSvg, "%s", verticesTags);
     

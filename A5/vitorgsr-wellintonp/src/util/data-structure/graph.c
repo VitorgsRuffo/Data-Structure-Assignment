@@ -90,7 +90,7 @@ int getGraphOrder(Graph Gr){
     if(Gr == NULL) return -1;
     graph* gr = (graph*) Gr;
 
-    return gr->order;
+    return gr->insertedVerticesAmount;
 }
 
 
@@ -163,9 +163,24 @@ int insertEdge(Graph Gr, char* sourceId, char* targetId, Info info, freeFunction
     int sourceIndex = getVertexIndex(gr, sourceId);
     if(sourceIndex == -1) return 0;
 
+
+    //Checando se a aresta ja existe no grafo:
+    List edges = gr->vertices[sourceIndex].edges;
+    Node current = getFirst(edges);
+    while(current != NULL){
+
+        edge* currentEd = (edge*) get(edges, current);
+
+        if(!strcmp(targetId, currentEd->targetId))
+            return 0;
+
+        current = getNext(edges, current);
+    }
+
     //Obtendo o indice do vertice, no vetor de vertices do grafo, que sera o destino da nova aresta a ser inserida.
     int targetIndex = getVertexIndex(gr, targetId);
     if(targetIndex == -1) return 0;
+
 
     edge* newEdge = (edge*) malloc(sizeof(edge));
     if(newEdge == NULL) return 0;
@@ -303,8 +318,9 @@ char* getGraphEdgeTargetId(Graph Gr, Edge Ed){
 }
 
 double getGraphEdgeWeight(Graph Gr, Edge Ed){
-    if(Gr == NULL || Ed == NULL) return -1.0;
-    
+    if(Gr == NULL) return -1.0;
+    if(Ed == NULL) return 999999999;
+
     graph* gr = (graph*) Gr;
     edge* ed = (edge*) Ed;
 

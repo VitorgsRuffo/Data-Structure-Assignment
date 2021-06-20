@@ -17,7 +17,6 @@ Graph prim(Graph Gr, char* originId){
     if(originId == NULL){
         List vertices = getGraphVertices(Gr);
         originId = (char*) get(vertices, getFirst(vertices));
-        printf("\n\norigin : %s\n\n", originId);
         freeList(vertices, NULL);
     }
 
@@ -40,13 +39,12 @@ Graph prim(Graph Gr, char* originId){
     char* sourceId; char* targetId;
 
     while(mstInsertedVerticesAmount < order){
-                
+
         //iterando na lista de arestas do ultimo vertice adicionado a arvore e salvando as arestas que possivelmente faram parte da arvore.
         edges = getGraphVertexEdges(Gr, lastAddedVertex);
         currentNode = getFirst(edges);
         
         sourceId = getGraphVertexId(Gr, lastAddedVertex);
-        printf("\n\nLast added id: %s\n\n", sourceId);
 
         while(currentNode != NULL){
         
@@ -64,6 +62,7 @@ Graph prim(Graph Gr, char* originId){
 
         //iterando na lista de possiveis arestas para encontrar a aresta de menor custo:
         currentNode = getFirst(possibleEdges);
+       
         Edge lowestCostEdge = NULL;
         Node lowestCostNode;
         
@@ -101,7 +100,10 @@ Graph prim(Graph Gr, char* originId){
 
             mstInsertedVerticesAmount++;
             lastAddedVertex = getGraphVertex(mst, targetId);
+        }else{
+            break;
         }
+
     }
 
     freeList(possibleEdges, NULL);

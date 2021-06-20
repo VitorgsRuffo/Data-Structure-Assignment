@@ -96,26 +96,32 @@ void insertIntersectionOnRoadSystem(Info info, ExtraInfo ei){
     insertVertex(newCityRoadSystem, getIdedPointId(iP), getIdedPointCoordinates(iP));
 }
 
-void printChar(void* ch){
-    printf("%s\n", (char*) ch);
-}
-
 void removeIsolatedVertices(Graph roadSystem, PQuadTree roadIntersections){
 
     List vertices = getGraphVertices(roadSystem);
 
     Node current = getFirst(vertices);
-    
+
+    //
+    Point currentPoint = getGraphVertexInfo(roadSystem, "beS.SO");
+            
+    freeIdedPoint(removePQuadTreeNode(roadIntersections, 
+                                        getPQuadTreeNode(roadIntersections, 
+                                                        getPointX(currentPoint),
+                                                        getPointY(currentPoint)) ));
+
+    removeVertex(roadSystem, 1, "beS.SO", NULL);
+
     while(current != NULL){
         
         char* currentId = (char*) get(vertices, current);
         
         List edges = getGraphVertexEdges(roadSystem, getGraphVertex(roadSystem, currentId));
 
+
         if(length(edges) <= 0){
             
-            printf("\n\ncurrentID: %s, edges: %p\n\n", currentId, edges);
-            Point currentPoint = getGraphVertexInfo(roadSystem, currentId);
+            currentPoint = getGraphVertexInfo(roadSystem, currentId);
             
             freeIdedPoint(removePQuadTreeNode(roadIntersections, 
                                               getPQuadTreeNode(roadIntersections, 
@@ -127,9 +133,6 @@ void removeIsolatedVertices(Graph roadSystem, PQuadTree roadIntersections){
 
         current = getNext(vertices, current);
     }
-
-    vertices = getGraphVertices(roadSystem);
-    printList(vertices, printChar);
 
     free(vertices);
 }

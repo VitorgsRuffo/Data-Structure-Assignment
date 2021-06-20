@@ -286,7 +286,7 @@ void findBestBikePath(int pathId, Svg* minimumPaths, char* command, City Ct, Par
     free(sourceId); 
     free(targetId);
 
-    if(stackLength(shorterPath[1]) <= 1){
+    if(stackLength(&shorterPath[1]) <= 1){
         fprintf(txt, "Nao foi encontrado um caminho entre a origem () e o destino ().\n");
         freeDijkstraPath(shorterPath, 2);
         return;   
@@ -367,7 +367,7 @@ void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg
     int pathLength = stackLength(&path);
     Info* pathArray = stackToArray(&path);
 
-    fprintf(*minimumPaths, "<path id=\"path%d\" stroke=\"%s\" stroke-width=\"2\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, pathColor, getPointX(origin), getPointY(origin));
+    fprintf(*minimumPaths, "<path id=\"path%d\" stroke=\"%s\" stroke-width=\"6\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, pathColor, getPointX(origin), getPointY(origin));
 
     for(int i = 1; i<pathLength-1; i++){
         vertexId = getDijkstraVertexId(pathArray[i]);
