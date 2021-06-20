@@ -199,7 +199,7 @@ void executeMedicalTreatmentSearching(char* command, City Ct, File txt, int path
 void drawHealthCentersPath(List pathsToHealthCenter, int bestPathId, List queryElementsList, Point houseCoordinates, int pathId, Graph roadSystem){
 
     Node currentNode = getFirst(pathsToHealthCenter);
-    
+
     while(currentNode != NULL){
 
         Path* path = (Path*) get(pathsToHealthCenter, currentNode);
@@ -212,9 +212,9 @@ void drawHealthCentersPath(List pathsToHealthCenter, int bestPathId, List queryE
         char* offset = pathString;
         
         if(path->id == bestPathId)
-            sprintf(buffer, "<path id=\"path%d\" stroke=\"blue\" stroke-width=\"6\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, getPointX(houseCoordinates), getPointY(houseCoordinates));
+            sprintf(buffer, "<path transform=\"translate(7,7)\" id=\"path%d\" stroke=\"blue\" stroke-width=\"4\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, getPointX(houseCoordinates), getPointY(houseCoordinates));
         else
-            sprintf(buffer, "<path id=\"path%d\" stroke=\"black\" stroke-width=\"6\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, getPointX(houseCoordinates), getPointY(houseCoordinates));
+            sprintf(buffer, "<path id=\"path%d\" stroke=\"black\" stroke-width=\"4\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, getPointX(houseCoordinates), getPointY(houseCoordinates));
         
         sprintf(offset, "%s", buffer);
         offset += strlen(buffer);
@@ -236,6 +236,7 @@ void drawHealthCentersPath(List pathsToHealthCenter, int bestPathId, List queryE
         insert(queryElementsList, pathString);
         
         currentNode = getNext(pathsToHealthCenter, currentNode);
+
     }
 }
 

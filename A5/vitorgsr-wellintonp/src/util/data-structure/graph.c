@@ -436,17 +436,6 @@ void printGraph(Graph Gr, printInfo printVertexInfo, printInfo printEdgeInfo){
     }
 }
 
-void printVerticesId(Graph Gr){
-
-    //List verticesIds = getGraphVertices(Gr);
-
-    /*void printVertex(void* current){
-        printf("%s\n", (char*) current);
-    }*/
-
-    //printList(verticesIds, printVertex);
-}
-
 
 void freeGraph(Graph Gr, freeFunction freeVertexInfo, int freeEdgeInfo){
     if(Gr == NULL) return;

@@ -6,7 +6,8 @@
 #include "../input/openInput.h"
 
 /*
-*
+*  Executa comandos p? e sp?. Calcula o trajeto mais curto e o mais rapido entre a origem "r1" e o destino "r2". Caso esse seja um comando sp? (isSecure == 1) o trajeto evita toda a regiao com casos de covid.
+*  Ambos os trajetos sao representados em um novo svg com as cores indicadas no comando e uma descrição textual dos trajetos é escrita no .txt.
 */
 void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command, City Ct, Parameters Param, File txt);
 

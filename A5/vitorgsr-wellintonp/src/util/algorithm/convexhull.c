@@ -42,7 +42,6 @@ Stack convexHull(Point* points, int pointsAmount) {
         m++; 
     } 
 
-    
     if (m < 3) 
         return NULL; 
 
@@ -51,7 +50,6 @@ Stack convexHull(Point* points, int pointsAmount) {
     stackPush(&head, *(points)); 
     stackPush(&head, *(points + 1));
     stackPush(&head, *(points + 2));
-
     
     for (int i = 3; i < m; i++) { 
         while (findOrientationOfOrderedPoints(nextToTop(&head), stackTop(&head), *(points + i)) != 2)
@@ -81,7 +79,6 @@ int comparePoints(Info P1, Info P2) {
             return -1;
         else
             return 1;
-
     }
 
     else if(orientation == 2)

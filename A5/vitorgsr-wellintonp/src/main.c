@@ -1,16 +1,6 @@
 #include "./include/headers.h"
 #include "./elements/urban-elements/city.h"
 #include "./include/util.h"
-//#include "./elements/urban-elements/street.h"
-
-/* To do list:
-
-    - Testing.
-    - Last part.
-    - Testing.
-    
-    Comentar: prim.h, queu.h, paths.h
-*/
 
 int main(int argc, char* argv[]){
     
@@ -20,7 +10,6 @@ int main(int argc, char* argv[]){
 
     //Criando o TAD cidade:
     City city = createCity();
-
 
     //Abrindo o arquivo de entrada (.geo)
     File geo = openInputFile(parameters, getGeoName);
@@ -33,7 +22,6 @@ int main(int argc, char* argv[]){
     readGeo(geo, city);
     closeInputFile(geo);
     
-
     //Lendo e abrindo arquivos de entrada extras:
     if(!isEcNull(parameters)){
         //Abrindo o arquivo de entrada (.ec)
@@ -62,9 +50,6 @@ int main(int argc, char* argv[]){
         closeInputFile(via);
     }
 
-    //printGraph(getRoadSystem(city), printPoint, printStreet);
-    //getchar();
-
     //Criando SVG do geo:
     Svg geoSvg = NULL;
     geoSvg = createSvg(parameters, city, "geo", NULL);
@@ -72,7 +57,6 @@ int main(int argc, char* argv[]){
         drawOnSvg(geoSvg, city);
         finishSvg(geoSvg);
     }
-
     
     if(!isQryNull(parameters)){
         //Abrindo o arquivo de entrada (.qry)

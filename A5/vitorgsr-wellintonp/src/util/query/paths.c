@@ -98,7 +98,7 @@ void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command,
         if(isSecure)
             drawAvoidedCovidRegion(*minimumPaths, covidRegion, covidRegionPointsAmount);
 
-        finishSvg(*minimumPaths);
+        //finishSvg(*minimumPaths);
 
         return;
     }
@@ -119,7 +119,7 @@ void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command,
         if(isSecure)
             drawAvoidedCovidRegion(*minimumPaths, covidRegion, covidRegionPointsAmount);
 
-        finishSvg(*minimumPaths);
+        //finishSvg(*minimumPaths);
         
         freeDijkstraPath(shorterPath, 2);
         freeDijkstraPath(fasterPath, 2);
@@ -135,7 +135,7 @@ void findBestCarPath(int isSecure, int pathId, Svg* minimumPaths, char* command,
     drawPath(pathId, roadSystem, origin, destination, minimumPaths, txt, shorterPath[1], cmc, 's'); // 's': shorter path
     drawPath(pathId, roadSystem, origin, destination, minimumPaths, txt, fasterPath[1], cmr, 'f');  // 'f': faster path
 
-    finishSvg(*minimumPaths);
+    //finishSvg(*minimumPaths);
 
     freeDijkstraPath(shorterPath, 2);
     freeDijkstraPath(fasterPath, 2);
@@ -369,7 +369,12 @@ void drawPath(int pathId, Graph roadSystem, Point origin, Point destination, Svg
     int pathLength = stackLength(&path);
     Info* pathArray = stackToArray(&path);
 
-    fprintf(*minimumPaths, "<path id=\"path%d\" stroke=\"%s\" stroke-width=\"6\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, pathColor, getPointX(origin), getPointY(origin));
+    if(weightType == 'f')
+        fprintf(*minimumPaths, "<path transform=\"translate(7,7)\" ");
+    else
+        fprintf(*minimumPaths, "<path ");
+
+    fprintf(*minimumPaths, "id=\"path%d\" stroke=\"%s\" stroke-width=\"6\" fill=\"none\" d=\"M%.2lf %.2lf ", pathId, pathColor, getPointX(origin), getPointY(origin));
 
     for(int i = 1; i<pathLength-1; i++){
         vertexId = getDijkstraVertexId(pathArray[i]);

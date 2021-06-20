@@ -25,7 +25,6 @@ typedef struct pquadtree {
 
 pquadtreenode* findPointNodeInPQuadTree(pquadtreenode *node, double x, double y);
 
-// Obs: Confirmar se há necessidade ou não "*" no "get" (parâmetro de createPQuadTree)
 PQuadTree createPQuadTree(getInfoKey getKey, getInfoPoint getPoint){
 
     if(getKey == NULL)
@@ -76,7 +75,6 @@ List getNodesLocatedInsideRectangle(PQuadTree Tree, double x1, double y1, double
     return nodeList;
 }
 
-
 List getInfoKeysLocatedInsideCircle(PQuadTree Tree, double x, double y, double r){
     if(Tree == NULL) return NULL;
     List infoKeyList = getObjectsLocatedInsideCircle(Tree, x, y, r, saveInfoKeyOnListIfItsInsideShape);
@@ -94,7 +92,6 @@ List getNodesLocatedInsideCircle(PQuadTree Tree, double x, double y, double r){
     List nodeList = getObjectsLocatedInsideCircle(Tree, x, y, r, saveNodeOnListIfItsInsideShape);
     return nodeList;
 }
-
 
 typedef void* Shape;
 typedef int (*isPointInsideShape)(Shape, Point);
@@ -711,7 +708,6 @@ pquadtreenode* findPointNodeInPQuadTree(pquadtreenode *node, double x, double y)
                 return NULL; //o ponto nao se encontra na arvore. 
         }
     }
-
     return NULL;
 }
 
@@ -737,8 +733,6 @@ int balancedlyInsertObjectsInPQuadTree(PQuadTree Tree, Stack Objects){
         point = (*(*tree).getPoint)(info);     
         insertPQuadTree(Tree, point, info);
     }
-
-
     return 1;
 }
 
@@ -796,7 +790,6 @@ Stack preProcessObjects(PQuadTree Tree, Stack Objects){
             Node nodeToRemove = searchForNodeByInfo(pointsList, p);
             removeNode(pointsList, nodeToRemove, NULL);
         }  
-
     }
 
     free(pointsArray);

@@ -350,7 +350,7 @@ void deleteStreetsInCircle(Variables variables){
         
         //removendo a esquina e todas as ruas que estao ligadas a esquina a ser removida.
         //em outras palavras: removendo todas as arestas que saem ou chegam no vertice a ser removido:
-        removeVertex(variables.roadSystem, 1, roadIntersectionId, freePoint);
+        removeVertex(variables.roadSystem, 1, roadIntersectionId, NULL);
         removeVertex(variables.bikePath, 0, roadIntersectionId, NULL); //os vertices de ambos os grafos sao correspondentes, e, estao associados a mesma informacao, portanto, desalocamos essa informacao apenas uma vez.
 
         //removendo a intersecao da arvore de intersecao de ruas:

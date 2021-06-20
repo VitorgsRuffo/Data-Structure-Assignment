@@ -44,26 +44,6 @@ void isolateBlockStreetIfItsHighlyInfected(Info block, ExtraInfo extraInfo){
     int southFaceCases = getBlockCovidCases(block, 's');
     int eastFaceCases = getBlockCovidCases(block, 'e');
     int westFaceCases = getBlockCovidCases(block, 'w');
-    
-    //Apagar aqui depois
-    /*
-    if(northFaceCases != 0){
-        printf("max: %d\n", variables->max);
-        printf("N: %d\n", northFaceCases);
-    }
-    if(southFaceCases != 0){
-        printf("max: %d\n", variables->max);
-        printf("S: %d\n", southFaceCases);
-    }
-    if(eastFaceCases != 0){
-        printf("max: %d\n", variables->max);
-        printf("E: %d\n", eastFaceCases);
-    }
-    if(westFaceCases != 0){
-        printf("max: %d\n", variables->max);
-        printf("W: %d\n\n", westFaceCases);
-    }
-    */
 
     double blockX = atof(getBlockX(block));
     double blockY = atof(getBlockY(block));

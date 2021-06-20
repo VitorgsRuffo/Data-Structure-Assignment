@@ -126,6 +126,7 @@ void executeQry(File qry, City Ct, Parameters Param){
     }
     
     finishSvg(minimumPaths);
+    finishSvg(minimumSecurePaths);
     closeTxt(txt);
     freeExecuteQryResources(command);
 }

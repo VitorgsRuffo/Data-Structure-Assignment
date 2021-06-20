@@ -8,10 +8,6 @@ typedef void* Info;
 typedef void (*freeInfo)(Info); 
 
 /*
-
-*/
-
-/*
     Pré-condição: nenhuma.
     Pós-condição: cria e retorna uma fila vazia.
 */

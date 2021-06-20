@@ -17,10 +17,6 @@ typedef InfoKey (*getInfoKey)(Info);
 typedef void (*nodeVisitingFunction)(Info, ExtraInfo);
 
 /*
-    
-*/
-
-/*
     Pré-condição: É necessario receber uma funcao que retorna a chave de ordenação do dado armazenado e uma funcao que retorna o ponto que localiza esse dado.
     Pós-condição: Cria e retorna uma quadtree vazia. 
 */
