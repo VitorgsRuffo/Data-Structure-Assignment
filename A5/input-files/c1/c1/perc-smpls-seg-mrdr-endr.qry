@@ -1,0 +1,23 @@
+cv 2 b03.8 L 55
+cv 2 b07.10 L 40
+cv 2 b01.9 O 55
+cv 2 b06.1 S 10
+cv 2 b08.9 O 25
+cv 2 b010.8 O 10
+cv 2 b09.10 S 55
+cv 2 b06.4 L 55
+cv 2 b09.10 S 10
+cv 2 b02.7 L 55
+cv 4 b05.1 O 10
+cv 4 b01.9 S 100
+cv 4 b09.1 L 40
+cv 4 b010.3 O 55
+cv 4 b01.4 L 55
+cv 4 b03.7 N 85
+cv 4 b07.3 O 55
+cv 4 b09.10 L 25
+cv 4 b07.8 O 55
+cv 4 b08.3 S 25
+@m? R0 000.003.591-22
+@e? R2 b09.5 Face.N 50
+sp? perc-smpls-seg-mrdr-endr R0 R2 black orange

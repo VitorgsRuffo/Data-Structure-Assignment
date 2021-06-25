@@ -1,0 +1,26 @@
+cv 20 b03.4 N 40
+cv 20 b03.7 N 55
+cv 20 b01.9 O 55
+cv 20 b02.1 S 55
+cv 20 b05.2 N 70
+cv 20 b06.4 L 40
+cv 20 b01.8 L 40
+cv 20 b04.10 S 85
+cv 20 b08.5 L 10
+cv 20 b01.4 N 25
+cv 40 b02.10 N 55
+cv 40 b01.10 N 40
+cv 40 b09.3 S 70
+cv 40 b09.3 N 85
+cv 40 b05.9 L 55
+cv 40 b06.4 S 25
+cv 40 b02.8 O 55
+cv 40 b06.10 O 55
+cv 40 b05.3 S 25
+cv 40 b02.2 O 25
+cv 40 b06.1 O 40
+cv 40 b010.7 N 25
+bf 22
+@xy R3 124.800000 92.800000
+@xy R4 1404.000000 92.800000
+p? perc-smpls-interd-LO R3 R4 blue yellow

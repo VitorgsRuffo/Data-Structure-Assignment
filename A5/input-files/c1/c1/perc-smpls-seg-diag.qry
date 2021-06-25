@@ -1,0 +1,23 @@
+cv 2 b06.6 N 85
+cv 2 b09.4 L 25
+cv 2 b05.10 N 70
+cv 2 b08.6 L 25
+cv 2 b05.6 S 70
+cv 2 b010.10 O 25
+cv 2 b04.6 S 10
+cv 2 b04.1 S 100
+cv 2 b03.1 L 40
+cv 2 b07.7 N 10
+cv 4 b08.2 N 70
+cv 4 b02.6 N 85
+cv 4 b04.1 L 10
+cv 4 b05.8 N 10
+cv 4 b06.3 S 70
+cv 4 b07.3 N 85
+cv 4 b04.9 O 10
+cv 4 b03.4 N 10
+cv 4 b05.5 N 85
+cv 4 b06.6 S 100
+@xy R3 124.800000 92.800000
+@xy R5 1404.000000 1044.000000
+sp? perc-smpls-seg-diag R3 R5 darkgray orange

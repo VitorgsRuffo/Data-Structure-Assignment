@@ -1,0 +1,26 @@
+cv 20 b07.6 L 55
+cv 20 b05.5 S 100
+cv 20 b01.8 L 25
+cv 20 b02.8 N 25
+cv 20 b01.4 S 40
+cv 20 b03.1 O 40
+cv 20 b03.8 S 70
+cv 20 b09.5 N 40
+cv 20 b010.4 S 40
+cv 20 b09.9 L 25
+cv 40 b09.9 S 100
+cv 40 b07.3 S 70
+cv 40 b01.8 S 85
+cv 40 b03.9 L 25
+cv 40 b05.4 S 25
+cv 40 b08.6 L 55
+cv 40 b09.4 O 25
+cv 40 b010.6 N 85
+cv 40 b08.4 S 70
+cv 40 b07.2 S 70
+cv 40 b010.9 L 10
+cv 40 b05.7 N 25
+bf 22
+@g? R1 heb04.3
+@e? R2 b09.5 Face.N 50
+p? perc-smpls-interd-equrb-endr R1 R2 red green

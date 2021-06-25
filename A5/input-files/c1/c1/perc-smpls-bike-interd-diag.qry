@@ -1,0 +1,27 @@
+cv 20 b08.4 L 25
+cv 20 b08.1 L 25
+cv 20 b07.7 L 25
+cv 20 b010.7 S 10
+cv 20 b07.9 N 10
+cv 20 b010.5 N 85
+cv 20 b01.6 L 25
+cv 20 b01.10 L 55
+cv 20 b07.4 N 40
+cv 20 b09.5 O 25
+cv 40 b01.3 N 40
+cv 40 b010.3 L 25
+cv 40 b04.9 O 40
+cv 40 b05.6 S 55
+cv 40 b06.2 O 40
+cv 40 b02.10 L 55
+cv 40 b08.9 N 55
+cv 40 b02.3 S 25
+cv 40 b08.6 O 10
+cv 40 b010.2 N 40
+cv 40 b03.3 L 40
+cv 40 b09.1 N 10
+bf 22
+@xy R3 124.800000 92.800000
+@xy R5 1404.000000 1044.000000
+ccv -ccvperc-smpls-bike-interd-diag
+pb? perc-smpls-bike-interd-diag R3 R5 darkgray

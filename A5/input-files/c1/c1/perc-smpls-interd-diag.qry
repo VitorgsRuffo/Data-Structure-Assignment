@@ -1,0 +1,26 @@
+cv 20 b09.9 O 40
+cv 20 b010.3 L 10
+cv 20 b06.2 S 10
+cv 20 b06.8 L 10
+cv 20 b02.2 S 25
+cv 20 b09.8 O 40
+cv 20 b05.2 L 40
+cv 20 b04.1 S 70
+cv 20 b010.2 L 10
+cv 20 b01.3 S 70
+cv 40 b02.6 S 10
+cv 40 b04.4 L 25
+cv 40 b04.2 N 55
+cv 40 b05.6 N 10
+cv 40 b07.7 N 70
+cv 40 b05.6 O 25
+cv 40 b07.7 S 55
+cv 40 b02.6 L 40
+cv 40 b05.2 O 10
+cv 40 b03.9 N 10
+cv 40 b07.3 N 100
+cv 40 b09.2 L 55
+bf 22
+@xy R3 124.800000 92.800000
+@xy R5 1404.000000 1044.000000
+p? perc-smpls-interd-diag R3 R5 darkgray orange

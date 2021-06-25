@@ -1,3 +1,7 @@
 ### This is the fifth part of the assignment.
 
-![output-example-for-xxx-command](xxx-example.png)
+#Video on which we briefly explain the new algorithms and data structures. Moreover, we run some test cases:
+https://www.youtube.com/watch?v=R7fKZXhdmuY
+
+
+![output-example-for-sp-command](sp-example.png)

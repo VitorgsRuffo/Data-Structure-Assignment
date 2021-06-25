@@ -1,0 +1,23 @@
+cv 2 b07.7 S 100
+cv 2 b09.1 O 10
+cv 2 b01.9 O 55
+cv 2 b06.10 S 70
+cv 2 b04.5 L 40
+cv 2 b01.1 L 10
+cv 2 b03.5 S 100
+cv 2 b07.8 S 70
+cv 2 b08.5 O 25
+cv 2 b06.3 S 40
+cv 4 b01.4 N 100
+cv 4 b03.8 L 55
+cv 4 b02.10 N 100
+cv 4 b03.5 N 70
+cv 4 b08.7 L 25
+cv 4 b04.8 N 70
+cv 4 b05.8 S 55
+cv 4 b05.4 L 40
+cv 4 b02.5 S 10
+cv 4 b09.4 N 70
+@xy R3 124.800000 92.800000
+@xy R4 1404.000000 92.800000
+sp? perc-smpls-seg-LO R3 R4 blue yellow

@@ -1,0 +1,26 @@
+cv 20 b09.10 S 70
+cv 20 b03.9 S 85
+cv 20 b010.8 N 100
+cv 20 b08.1 O 55
+cv 20 b02.2 N 10
+cv 20 b04.8 O 25
+cv 20 b09.6 N 40
+cv 20 b03.8 N 55
+cv 20 b04.8 L 10
+cv 20 b06.4 S 25
+cv 40 b04.10 N 40
+cv 40 b01.2 N 55
+cv 40 b07.2 S 100
+cv 40 b08.3 O 10
+cv 40 b010.3 O 10
+cv 40 b08.3 N 55
+cv 40 b01.3 L 25
+cv 40 b09.4 O 40
+cv 40 b03.6 S 10
+cv 40 b03.2 S 40
+cv 40 b09.1 L 25
+cv 40 b05.9 O 55
+bf 22
+@m? R0 000.003.591-22
+@e? R2 b09.5 Face.N 50
+p? perc-smpls-interd-mrdr-endr R0 R2 black orange

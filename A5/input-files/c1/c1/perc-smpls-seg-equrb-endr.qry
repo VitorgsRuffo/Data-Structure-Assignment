@@ -1,0 +1,23 @@
+cv 2 b03.9 S 70
+cv 2 b09.2 N 100
+cv 2 b01.3 O 25
+cv 2 b08.9 S 100
+cv 2 b05.4 L 40
+cv 2 b07.10 S 55
+cv 2 b01.6 O 10
+cv 2 b09.10 N 55
+cv 2 b01.4 S 85
+cv 2 b09.10 O 55
+cv 4 b01.4 S 100
+cv 4 b04.7 N 10
+cv 4 b02.3 S 10
+cv 4 b05.1 N 55
+cv 4 b03.1 L 10
+cv 4 b06.6 O 25
+cv 4 b07.7 O 55
+cv 4 b08.2 O 55
+cv 4 b01.10 L 25
+cv 4 b02.8 O 10
+@g? R1 heb04.3
+@e? R2 b09.5 Face.N 50
+sp? perc-smpls-seg-equrb-endr R1 R2 red green

@@ -1,0 +1,27 @@
+cv 20 b07.5 O 25
+cv 20 b05.1 L 40
+cv 20 b010.9 L 40
+cv 20 b07.6 S 25
+cv 20 b09.10 O 25
+cv 20 b010.1 N 55
+cv 20 b09.5 N 85
+cv 20 b08.4 S 10
+cv 20 b02.7 S 100
+cv 20 b05.5 S 40
+cv 40 b02.5 L 40
+cv 40 b03.5 N 70
+cv 40 b05.7 S 55
+cv 40 b03.7 N 25
+cv 40 b03.5 L 55
+cv 40 b03.7 S 40
+cv 40 b02.8 S 25
+cv 40 b08.7 N 55
+cv 40 b09.9 S 85
+cv 40 b07.9 N 40
+cv 40 b09.9 L 40
+cv 40 b010.5 O 25
+bf 22
+@m? R0 000.003.591-22
+@e? R2 b09.5 Face.N 50
+ccv -ccvperc-smpls-bike-interd-mrdr-endr
+pb? perc-smpls-bike-interd-mrdr-endr R0 R2 orange
