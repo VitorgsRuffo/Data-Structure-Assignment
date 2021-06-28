@@ -86,9 +86,19 @@ The programs were made to run on linux distributions. It is a necessary to have 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+Let's see the assignment fifth part running. 
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources...
+1. Inside its source folder make sure that all files are compiled: 
+```sh
+  make
+```
+2. Run the program passing to it proper execution arguments. For more information on these arguments check the [assignment description](https://github.com/VitorgsRuffo/Data-Structures-Assignment/blob/master/A5/assignment-5-description(pt-BR).pdf).
+```sh
+  ./siguel -e /home/vitor/ED/Data-Structures-Assignment/A5/input-files/c1 -f c1.geo -pm c1.pm -ec c1.ec -v c1-v.via -q /c1/perc-smpls-seg-diag.qry -o /home/vitor/ED/Data-Structures-Assignment/A5/output-files/
+```
+3. The output files are going to be stored under the /A5/output-files/ directory. Below we can see one of the results of the program execution, it shows us two of the shortest paths between two locations in the city. Those paths avoid the area delimited by the polygon.
 
+![plot](./images/c1-perc-smpls-seg-diag-perc-smpls-seg-diag.svg)
 
 
 <!-- CONTRIBUTING -->
