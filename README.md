@@ -27,13 +27,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#first-part">First part</a></li>
-        <li><a href="#second-part">Second part</a></li>
-        <li><a href="#third-part">Third part</a></li>
-        <li><a href="#fourth-part">Fourth part</a></li>
-        <li><a href="#fifth-part">Fifth part</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -58,17 +51,9 @@
 
 This is a college assignment that aims to gradually implement a simplified geographic information system (GIS) using the C programming language. A geographic information system (GIS) is a computer system for capturing, storing, checking, and displaying data related to positions on Earth’s surface. GIS can show many different kinds of data on one map. This enables people to more easily see, analyze, and understand patterns and relationships [(NatGeo)](https://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/). The assignment is divided into five parts and each one is built upon the previous one.
 
-### First Part
 The first part's main goal is to build the foundations of the GIS, that is, the system's basic dynamics. Basically, the first assignment program takes some paths and file names as parameters and combines them. The program uses those parameters to build a path from which it can read input files. It also builds another path in which it can store files containing output information. The geo input files hold spatial data that must be stored for later processing. The query input files hold instructions for performing operations on data read from geo files. The program, after storing geo files information and performing query operations on them, creates output files that show the result of those operations. More specifically, the output files are [svg files](https://www.w3schools.com/graphics/svg_intro.asp). When outputting information the program writes svg tags to a file in order to show the results visually. Here, geo input information is stored on 3-dimensional arrays. 
 
-### Second Part
-
-### Third Part
-
-### Fourth Part
-
-### Fifth Part
-
+The other parts...
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -102,7 +87,7 @@ The programs were made to run on linux distributions. It is a necessary to have 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources...
 
 
 
