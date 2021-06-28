@@ -98,7 +98,7 @@ Let's see the assignment fifth part running.
 ```
 3. The output files are going to be stored under the /A5/output-files/ directory. Below we can see one of the results of the program execution, it shows us two of the shortest paths between two locations in the city. Those paths avoid the area delimited by the polygon.
 
-![plot](./images/c1-perc-smpls-seg-diag-perc-smpls-seg-diag.svg)
+![plot](./images/c1-perc-smpls-seg-diag-perc-smpls-seg-diag.png)
 
 
 <!-- CONTRIBUTING -->
