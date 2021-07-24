@@ -3,5 +3,3 @@
 ![output-example-for-dq-command](dq-example.png)
 
 ##### Obs: this assignment was made with a [partner](https://github.com/wellintonpiassa).
-
-##### Obs: the commits history for this assignment can be found on [another reposity](https://github.com/wellintonpiassa/Estrutura-de-Dados) hosted by my partner.
