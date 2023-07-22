@@ -9,7 +9,7 @@
   <h3 align="center">Data Structures Assignment</h3>
 
   <p align="center">
-    This is a college assignment that aims to gradually implement a simplified geographic information system (GIS). It is divided into five parts and each one is built upon the previous one.
+    This is a university assignment that aims to gradually implement a simplified geographic information system (GIS). It is divided into five parts and each one is built upon the previous one.
     <br />
   </p>
 </p>
